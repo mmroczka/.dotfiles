@@ -8,7 +8,6 @@
 - link:
     ~/.tmux.conf: tmux.conf
     ~/.tmux.conf.local: tmux.conf.local
-    ~/.bash_profile: bash/bash_profile
     ~/.bashrc: bash/bashrc
     ~/.config/alacritty: alacritty
     ~/.vim: vim
