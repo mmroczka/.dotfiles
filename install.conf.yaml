@@ -6,8 +6,8 @@
 - clean: ['~']
 
 - link:
-    ~/.tmux.conf: tmux.conf
-    ~/.tmux.conf.local: tmux.conf.local
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.tmux.conf.local: tmux/tmux.conf.local
     ~/.bashrc: bash/bashrc
     ~/.config/alacritty: alacritty
     ~/.config/karabiner: karabiner
