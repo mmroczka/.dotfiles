@@ -9,9 +9,7 @@
     ~/.tmux.conf: tmux/tmux.conf
     ~/.tmux.conf.local: tmux/tmux.conf.local
     ~/.bashrc: bash/bashrc
-    ~/.config/alacritty: alacritty
     ~/.config/karabiner: karabiner
-    ~/.config/karabiner/karabiner.json: karabiner/karabiner.json
     ~/.hammerspoon: hammerspoon
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
