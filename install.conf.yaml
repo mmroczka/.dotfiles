@@ -10,6 +10,8 @@
     ~/.tmux.conf.local: tmux.conf.local
     ~/.bashrc: bash/bashrc
     ~/.config/alacritty: alacritty
+    ~/.config/karabiner: karabiner
+    ~/.config/karabiner/karabiner.json: karabiner/karabiner.json
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
     ~/.ideavimrc: vim/ideavimrc
