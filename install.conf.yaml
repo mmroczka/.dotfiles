@@ -10,12 +10,13 @@
     ~/.tmux.conf.local: tmux/tmux.conf.local
     ~/.bashrc: bash/bashrc
     ~/.config/karabiner: karabiner
+    ~/.gitignore_global: git/gitignore_global
     ~/.hammerspoon: hammerspoon
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
     ~/.ideavimrc: vim/ideavimrc
     ~/.vrapperrc: vim/vrapperrc
-    ~/.zshrc: zshrc
+    ~/.zshrc: zsh/zshrc
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

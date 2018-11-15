@@ -8,10 +8,7 @@ export PATH=/usr/local/sbin:$PATH
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="miloshadzic"
 ZSH_THEME="agnoster"
-# export PATH=~/anaconda2/bin:$PATH
 
-# added by Anaconda3 4.3.1 installer
-export PATH="/Users/$USER/anaconda3/bin:$PATH"
 DEFAULT_USER=$USER
 
 # Uncomment the following line to use case-sensitive completion.
@@ -56,7 +53,13 @@ DEFAULT_USER=$USER
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git
+    git-open
+    vi-mode
+    zsh-autosuggestions
+    fzf-zsh
+)
 
 # User configuration
 
@@ -89,12 +92,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias dps="docker ps"
 alias vimrc="cd ~/.vim"
 alias howto="alias | grep $1"
 alias fz='vim $(fzf)'
-alias vi='mvim'
-alias daycare='cd ~/development/DaycareBackend'
 
 # parse_options.js
 # export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
