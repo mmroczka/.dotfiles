@@ -12,6 +12,7 @@
     ~/.config/alacritty: alacritty
     ~/.config/karabiner: karabiner
     ~/.config/karabiner/karabiner.json: karabiner/karabiner.json
+    ~/.hammerspoon: hammerspoon
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
     ~/.ideavimrc: vim/ideavimrc
