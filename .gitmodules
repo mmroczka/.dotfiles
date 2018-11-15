@@ -3,7 +3,4 @@
 	url = https://github.com/anishathalye/dotbot
 [submodule "vim"]
 	path = vim
-	url = https://github.com/JustinHoyt/.vim
-[submodule ".vim"]
-	path = .vim
-	url = https://github.com/mmroczka/.vim.git
+	url = https://github.com/mmroczka/vim
