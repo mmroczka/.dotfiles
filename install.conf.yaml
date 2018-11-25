@@ -9,6 +9,7 @@
     ~/.tmux.conf: tmux/tmux.conf
     ~/.tmux.conf.local: tmux/tmux.conf.local
     ~/.bashrc: bash/bashrc
+    ~/.bash_profile: bash/bash_profile
     ~/.config/karabiner: karabiner
     ~/.gitignore_global: git/gitignore_global
     ~/.hammerspoon: hammerspoon
