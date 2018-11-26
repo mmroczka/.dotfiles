@@ -4,4 +4,44 @@ echo "| | /| / / _ \\/ / ___/ __ \\/ __ \`__ \\/ _ \\   / /|_/ / ___/  / /|_/ / 
 echo "| |/ |/ /  __/ / /__/ /_/ / / / / / /  __/  / /  / / /     / /  / / /  / /_/ / /__  / /_/ ,< / /_/ / "
 echo "|__/|__/\\___/_/\\___/\\____/_/ /_/ /_/\\___/  /_/  /_/_(_)   /_/  /_/_/   \\____/\\___/ /___/_/|_|\\__,_/  "
 
+####### CUSTOM FUNCTIONS #######
+function origin_to_upstream(){
+    `git remote remove upstream`
+    `git remote rename origin upstream`
+    `git remote add origin $1`
+    echo `git remote -v`
+}
+
+function upstream_to_origin(){
+    `git remote remove origin`
+    `git remote rename upstream origin`
+    echo `git remote -v`
+}
+
+showFiles(){
+        defaults write com.apple.finder AppleShowAllFiles YES
+        killall Finder /System/Library/CoreServices/Finder.app
+}
+
+hideFiles(){
+        defaults write com.apple.finder AppleShowAllFiles NO
+        killall Finder /System/Library/CoreServices/Finder.app
+}
+
+####### CUSTOM EXPORTS #######
+
+
+####### CUSTOM ALIASES #######
 alias clear="source ~/.bashrc && clear"
+alias gitinfo='
+echo "Remotes";
+echo "-------";
+git remote -v;
+echo
+echo "Branches";
+echo "-------";
+git branch;
+echo
+echo "Status"
+echo "-------";
+git status'
