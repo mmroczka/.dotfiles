@@ -13,6 +13,7 @@
     ~/.config/karabiner: karabiner
     ~/.gitignore_global: git/gitignore_global
     ~/.hammerspoon: hammerspoon
+    ~/.npmrc: npm/npmrc
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
     ~/.ideavimrc: vim/ideavimrc
