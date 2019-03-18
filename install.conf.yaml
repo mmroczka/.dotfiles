@@ -17,6 +17,8 @@
     ~/.vimrc: vim/vimrc
     ~/.ideavimrc: vim/ideavimrc
     ~/.vrapperrc: vim/vrapperrc
+    #~/Library/Application\ Support/Code/User/settings.json: vim/vs_code_vim_settings
+    ~/.yarnrc: yarn/yarnrc
     ~/.zshrc: zsh/zshrc
 
 - shell:
