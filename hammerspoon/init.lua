@@ -34,4 +34,4 @@ end
 require('windows')
 require('panes')
 
-hs.notify.new({title='Hammerspoon', informativeText='Ready to rock 🤘'}):send()
+hs.notify.new({title='Hammerspoon', informativeText='Welcome back, Mr. Mroczka. Keyboard shortcuts have been enabled. 💪'}):send()
