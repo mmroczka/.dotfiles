@@ -9,16 +9,15 @@
     ~/.tmux.conf: tmux/tmux.conf
     ~/.tmux.conf.local: tmux/tmux.conf.local
     ~/.bashrc: bash/bashrc
-    ~/.bash_profile: bash/bash_profile
     ~/.config/karabiner: karabiner
     ~/.gitignore_global: git/gitignore_global
     ~/.hammerspoon: hammerspoon
-    ~/.npmrc: npm/npmrc
+    ~/.npmrc: npm/work_npmrc
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
     ~/.ideavimrc: vim/ideavimrc
     ~/.vrapperrc: vim/vrapperrc
-    #~/Library/Application\ Support/Code/User/settings.json: vim/vs_code_vim_settings
+    ~/Library/Application Support/Code/User/settings.json: vim/vs_code_vim_settings
     ~/.yarnrc: yarn/yarnrc
     ~/.zshrc: zsh/zshrc
 
