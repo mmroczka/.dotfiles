@@ -10,6 +10,7 @@
     ~/.tmux.conf.local: tmux/tmux.conf.local
     ~/.bashrc: bash/bashrc
     ~/.config/karabiner: karabiner
+    ~/.config/karabiner.edn: karabiner/karabiner.edn
     ~/.gitignore_global: git/gitignore_global
     ~/.hammerspoon: hammerspoon
     ~/.npmrc: npm/work_npmrc
