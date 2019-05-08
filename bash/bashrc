@@ -125,6 +125,13 @@ hideFiles(){
         killall Finder /System/Library/CoreServices/Finder.app
 }
 
+# checks for any files flagged w/ --skip-worktree alias
+check="git ls-files -v|grep '^S'"
+# add --skip-worktree flag to file
+skip() {  git update-index --skip-worktree "$@";  git status; }
+# remove --skip-worktree flag from file
+unskip() {  git update-index --no-skip-worktree "$@";  git status; }
+
 ####### CUSTOM EXPORTS #######
 export JAVA_HOME=$(/usr/libexec/java_home)
 export M2_HOME=/Users/mikemroczka/apache-maven-3.1.1
@@ -132,7 +139,7 @@ export PATH=$PATH:$M2_HOME/bin
 export PATH=$PATH:/Users/mikemroczka/Code/DTLP_3rd_Rotation/solr-6.6.0/server/scripts/cloud-scripts/zkcli.sh
 
 ####### CUSTOM ALIASES #######
-alias clear="source ~/.bashrc && clear"
+# alias clr="source ~/.bashrc && clear"
 alias gitinfo='
 echo "Remotes";
 echo "-------";
@@ -145,4 +152,11 @@ echo
 echo "Status"
 echo "-------";
 git status'
-alias jmeter='open /usr/local/bin/jmeter'
+
+# export PATH=$HOME/bin:$PATH
+NO_PROXY="github.build.ge.com, localhost, 127.0.0.1, api.grc-apps.svc.ice.ge.com,login.grc-apps.svc.ice.ge.com,loggregator.grc-apps.svc.ice.ge.com,uaa.grc-apps.svc.ice.ge.com,console.grc-apps.svc.ice.ge.com,grc-apps.svc.ice.ge.com"
+PROXY=http://3.28.29.241:88
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

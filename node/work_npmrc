@@ -1,0 +1,3 @@
+strict-ssl=false
+http-proxy=http://3.28.29.241:88
+registry=http://registry.npmjs.org/
