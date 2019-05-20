@@ -16,6 +16,7 @@
     ~/.npmrc: npm/work_npmrc
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
+    ~/Code/MacSettingsBackup: MacSettingsBackup
     ~/.ideavimrc: vim/ideavimrc
     ~/.vrapperrc: vim/vrapperrc
     ~/Library/Application Support/Code/User/settings.json: vim/vs_code_vim_settings

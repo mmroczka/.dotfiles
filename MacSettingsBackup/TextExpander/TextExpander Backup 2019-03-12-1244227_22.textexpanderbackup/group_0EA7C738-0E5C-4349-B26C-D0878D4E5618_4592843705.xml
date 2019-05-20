@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>expandAfterMode</key>
+	<integer>0</integer>
+	<key>expanderExceptionsMode</key>
+	<integer>4</integer>
+	<key>name</key>
+	<string>My Snippets</string>
+	<key>snippetPlists</key>
+	<array>
+		<dict>
+			<key>abbreviation</key>
+			<string>;sig</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2011-06-01T00:38:03Z</date>
+			<key>label</key>
+			<string>Default signature</string>
+			<key>modificationDate</key>
+			<date>2017-11-24T04:56:34Z</date>
+			<key>plainText</key>
+			<string>Sincerely,
+-Michael Mroczka</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>F7124F93-0B72-4696-8A2E-E44DB879B49F</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>;home</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2011-06-01T00:28:22Z</date>
+			<key>label</key>
+			<string>Home address</string>
+			<key>modificationDate</key>
+			<date>2011-06-01T00:28:22Z</date>
+			<key>plainText</key>
+			<string>5408 Kingsway Ct. WestCincinnati, Oh 45215United States</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>19A04825-34B2-4514-91F3-E9C31ECE7ADC</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>;ph</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2011-06-01T00:27:37Z</date>
+			<key>label</key>
+			<string>Phone number</string>
+			<key>modificationDate</key>
+			<date>2017-11-26T15:13:03Z</date>
+			<key>plainText</key>
+			<string>5133714598</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>4AEA8CB9-0360-4508-9DAB-EF22D91BB4C4</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>;mmgm</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2011-06-01T00:26:51Z</date>
+			<key>label</key>
+			<string>Email</string>
+			<key>modificationDate</key>
+			<date>2017-11-27T21:17:17Z</date>
+			<key>plainText</key>
+			<string>michael.mroczka@gmail.com</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>88A5859C-26A7-4D8D-904D-30AAAE53A5CB</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>;time</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2012-01-11T23:30:56Z</date>
+			<key>label</key>
+			<string>Current time</string>
+			<key>modificationDate</key>
+			<date>2018-03-08T22:45:17Z</date>
+			<key>plainText</key>
+			<string>%1I:%M %p</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>28CFFBFB-3224-4068-9DFB-73B242EFEEAA</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>;date</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2012-01-11T23:30:56Z</date>
+			<key>label</key>
+			<string>Today's date</string>
+			<key>modificationDate</key>
+			<date>2018-03-08T22:47:02Z</date>
+			<key>plainText</key>
+			<string>%m/%d/%y</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>CE101F5A-C5CC-43C0-B75D-81F13AC134B1</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>;ilr</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2017-11-24T05:25:21Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2017-11-24T05:25:21Z</date>
+			<key>plainText</key>
+			<string>iloverachelh@gmail.com</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>BA8CE89F-3F41-4EFA-9FC3-58BB1C0933CD</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>;card</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2017-11-24T20:41:08Z</date>
+			<key>extraInfo</key>
+			<dict>
+				<key>approvedSuggestionDate</key>
+				<date>2017-11-24T20:41:08Z</date>
+			</dict>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2017-11-24T20:41:41Z</date>
+			<key>plainText</key>
+			<string>4430440091247122</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>CE2FE6F4-21AA-4730-AA62-C55F73913EFA</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>;109</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2017-11-27T15:13:04Z</date>
+			<key>label</key>
+			<string>AWS Server 109</string>
+			<key>modificationDate</key>
+			<date>2017-11-28T19:41:54Z</date>
+			<key>plainText</key>
+			<string>10.230.209.109</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>0F1B98BB-97AA-4592-B107-37E7DB65FD22</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>;sso</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2017-11-27T16:13:18Z</date>
+			<key>extraInfo</key>
+			<dict>
+				<key>approvedSuggestionDate</key>
+				<date>2017-11-27T16:13:18Z</date>
+			</dict>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2017-11-27T16:13:38Z</date>
+			<key>plainText</key>
+			<string>212569002</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>967BA79E-CB8A-4224-85AE-8828858F2A78</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>;mmge</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2017-11-27T21:17:21Z</date>
+			<key>label</key>
+			<string>Work Email</string>
+			<key>modificationDate</key>
+			<date>2017-11-27T21:18:13Z</date>
+			<key>plainText</key>
+			<string>michael.mroczka@ge.com</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>51A5D22F-4F26-461F-815C-1643A7EE310F</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>;de109</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2017-11-28T19:57:19Z</date>
+			<key>label</key>
+			<string>ssh 109 login</string>
+			<key>modificationDate</key>
+			<date>2017-11-28T19:58:16Z</date>
+			<key>plainText</key>
+			<string>de569002@10.230.209.109</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>2C117A54-FE20-4E43-9371-DDCBB511992E</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>;shrug</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2017-11-30T17:01:14Z</date>
+			<key>label</key>
+			<string>shrug emoji</string>
+			<key>modificationDate</key>
+			<date>2017-11-30T17:01:32Z</date>
+			<key>plainText</key>
+			<string>¯\_(ツ)_/¯</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>B8E79212-8E9E-48F9-9B94-B593DE958884</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>;12wy</string>
+			<key>abbreviationMode</key>
+			<integer>1</integer>
+			<key>creationDate</key>
+			<date>2017-12-02T21:46:10Z</date>
+			<key>extraInfo</key>
+			<dict>
+				<key>approvedSuggestionDate</key>
+				<date>2017-12-02T21:46:10Z</date>
+			</dict>
+			<key>label</key>
+			<string>12 Week Year</string>
+			<key>modificationDate</key>
+			<date>2017-12-02T21:47:26Z</date>
+			<key>plainText</key>
+			<string>12 Week Year</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>CE269D7C-CC46-4AEE-90A0-AB48BD371829</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>;gti</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2018-02-07T21:29:21Z</date>
+			<key>label</key>
+			<string>Georgia Tech ID</string>
+			<key>modificationDate</key>
+			<date>2018-02-07T21:29:55Z</date>
+			<key>plainText</key>
+			<string>mmroczka3</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>C0842448-431C-49DB-887D-D029AA89742E</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>;gte</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2018-02-07T21:29:55Z</date>
+			<key>label</key>
+			<string>Georgia Tech Email</string>
+			<key>modificationDate</key>
+			<date>2018-02-07T21:30:28Z</date>
+			<key>plainText</key>
+			<string>mmroczka3@gatech.edu</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>CF63BBE2-66BF-48B6-970F-BE8F3553FB68</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>;tp</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2018-02-12T17:48:53Z</date>
+			<key>label</key>
+			<string>Telepresence Rooms in Van Buren Township</string>
+			<key>modificationDate</key>
+			<date>2018-02-12T17:49:39Z</date>
+			<key>plainText</key>
+			<string>~TP US Van Buren Township</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>A9B1AC8E-F9C3-495A-82B4-C76D52A19D10</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>;ct</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2018-02-25T17:51:33Z</date>
+			<key>label</key>
+			<string>Make Completed Task List</string>
+			<key>modificationDate</key>
+			<date>2018-02-25T17:52:57Z</date>
+			<key>plainText</key>
+			<string>//
+//  Build a summary of OmniFocus tasks completed today.
+//
+//  This is intended to be run as a TextExpander macro,
+//  but will work anywhere you can invoke a JS script.
+//
+//  v 1.0.2 (full release history at bottom)
+
+var NoProjectMarker = "No Project";
+
+getTaskSummary();
+
+function getTaskSummary() {
+	var doc = Application('OmniFocus').defaultDocument;
+
+	var thisMorning = startOfDay();
+
+	var tasks = doc.flattenedTasks.whose({completionDate: {'&gt;=':thisMorning} })();
+	if (tasks.length == 0) {
+		return "No tasks completed. Do something without writing it down?";
+	}
+	
+	// Group tasks by project, then extract progressed projects (projects with
+	// completed tasks) from allProjects. This gives us the list of projects
+	// in the same order as OmniFocus’s UI.
+	var groupedTasks = groupArrayByKey(tasks, function(v) {
+		var proj = v.containingProject();
+		if (proj) {
+			return proj.id();
+		}
+		return NoProjectMarker;
+	});
+
+	var allProjects = doc.flattenedProjects();
+	var progressedProjects = allProjects.filter(function(p) {
+		return p.id() in groupedTasks;
+	});
+	
+	// Build the summary
+	var summary = progressedProjects.reduce(function(s,p){
+		return s + summaryForProject(p);
+	}, "");
+	
+	var tasksWithNoProject = groupedTasks[NoProjectMarker];
+	if (tasksWithNoProject) {
+		summary += summaryForTasksWithTitle(tasksWithNoProject, "No Project\n");
+	}
+	
+	return summary;
+
+	// This needs to be in this scope because it captures groupedTasks
+	function summaryForProject(p) {
+		var projectID = p.id();
+		var tasks = groupedTasks[projectID].filter(function(t) {
+			return projectID != t.id(); // Don't include the project itself
+		});
+		return summaryForTasksWithTitle(tasks, projectSummaryLine(p));
+	}
+	function summaryForTasksWithTitle(tasks, title) {
+		return title + tasks.reduce(summaryForTasks,"") + "\n";
+	}
+}
+
+// Reducing function to summarize a list of tasks
+function summaryForTasks(s,t) {
+	return s + lineForTask(t);
+}
+
+// Create a summary line for a project
+function projectSummaryLine(project) {
+	var tokens = [];
+	tokens.push(project.name());
+	
+	var remainingStatus = remainingStatusForProject(project);
+	if (remainingStatus != "") {
+		tokens.push("(" + remainingStatus + ")");
+	}
+	
+	return tokens.join(" ") + "\n";
+}
+
+// This is appended to the end of a project line
+function remainingStatusForProject(project) {
+	if (!project.completedByChildren()) {
+		return "";
+	}
+	var remainingCount = project.numberOfTasks() - project.numberOfCompletedTasks();
+	if (remainingCount == 0) {
+		return "complete";
+	}
+	
+	return remainingCount + " remaining";
+}
+
+function lineForTask(task) {
+	return " ✓ " + task.name() + "\n";
+}
+
+// Group an array of items by the key returned by this function
+function groupArrayByKey(array,keyForValue) {
+	var dict = {};
+	for (var i = 0; i &lt; array.length; i++) {
+		var value = array[i];
+		var key = keyForValue(value);
+		if (!(key in dict)) {
+			dict[key] = [];
+		}
+		dict[key].push(value);
+	}
+	return dict;
+}
+
+function startOfDay() {
+// The day started at midnight this morning
+	var d = new Date();
+	d.setHours(0);
+	d.setMinutes(0);
+	d.setSeconds(0);
+	return d;
+}
+
+// Release History
+// 1.0   Initial release
+// 1.0.1 Fix for tasks without a project
+// 1.0.2 Relaxed the type checking (!== is too strict)</string>
+			<key>snippetType</key>
+			<integer>4</integer>
+			<key>uuidString</key>
+			<string>EAA53AA8-58EE-4E94-9C2D-2E327E3BC7A3</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>;sandeep</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2018-05-09T18:51:19Z</date>
+			<key>label</key>
+			<string>Sandeep</string>
+			<key>modificationDate</key>
+			<date>2018-05-09T18:52:02Z</date>
+			<key>plainText</key>
+			<string>Sandeep Varshney</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>AF415006-19D2-4641-91C0-613FC2DF1118</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>;varun</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2018-05-09T18:52:07Z</date>
+			<key>label</key>
+			<string>Varun</string>
+			<key>modificationDate</key>
+			<date>2018-05-09T18:52:48Z</date>
+			<key>plainText</key>
+			<string>Varun Purohit</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>41DC77EF-1648-48E3-8AD4-DE8854EF8E9A</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>;rama</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2018-05-10T16:01:54Z</date>
+			<key>label</key>
+			<string>Rama</string>
+			<key>modificationDate</key>
+			<date>2018-05-10T16:02:13Z</date>
+			<key>plainText</key>
+			<string>Rama Rao Srikakulapu</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>5D93B687-A455-491A-BCBE-B4B81A9B1233</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>;gtn</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2018-10-26T18:04:47Z</date>
+			<key>label</key>
+			<string>GT ID Number</string>
+			<key>modificationDate</key>
+			<date>2018-10-26T18:05:05Z</date>
+			<key>plainText</key>
+			<string>903388363</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>924A4098-2CEB-4DA0-886F-EE8F37FB9592</string>
+		</dict>
+	</array>
+	<key>snippetUUIDs</key>
+	<array>
+		<string>F7124F93-0B72-4696-8A2E-E44DB879B49F</string>
+		<string>19A04825-34B2-4514-91F3-E9C31ECE7ADC</string>
+		<string>4AEA8CB9-0360-4508-9DAB-EF22D91BB4C4</string>
+		<string>88A5859C-26A7-4D8D-904D-30AAAE53A5CB</string>
+		<string>28CFFBFB-3224-4068-9DFB-73B242EFEEAA</string>
+		<string>CE101F5A-C5CC-43C0-B75D-81F13AC134B1</string>
+		<string>BA8CE89F-3F41-4EFA-9FC3-58BB1C0933CD</string>
+		<string>CE2FE6F4-21AA-4730-AA62-C55F73913EFA</string>
+		<string>0F1B98BB-97AA-4592-B107-37E7DB65FD22</string>
+		<string>967BA79E-CB8A-4224-85AE-8828858F2A78</string>
+		<string>51A5D22F-4F26-461F-815C-1643A7EE310F</string>
+		<string>2C117A54-FE20-4E43-9371-DDCBB511992E</string>
+		<string>B8E79212-8E9E-48F9-9B94-B593DE958884</string>
+		<string>CE269D7C-CC46-4AEE-90A0-AB48BD371829</string>
+		<string>C0842448-431C-49DB-887D-D029AA89742E</string>
+		<string>CF63BBE2-66BF-48B6-970F-BE8F3553FB68</string>
+		<string>A9B1AC8E-F9C3-495A-82B4-C76D52A19D10</string>
+		<string>EAA53AA8-58EE-4E94-9C2D-2E327E3BC7A3</string>
+		<string>AF415006-19D2-4641-91C0-613FC2DF1118</string>
+		<string>41DC77EF-1648-48E3-8AD4-DE8854EF8E9A</string>
+		<string>5D93B687-A455-491A-BCBE-B4B81A9B1233</string>
+		<string>924A4098-2CEB-4DA0-886F-EE8F37FB9592</string>
+	</array>
+	<key>suggestAbbreviations</key>
+	<integer>1</integer>
+	<key>updateFrequency</key>
+	<integer>0</integer>
+	<key>uuidString</key>
+	<string>0EA7C738-0E5C-4349-B26C-D0878D4E5618</string>
+	<key>writable</key>
+	<integer>1</integer>
+</dict>
+</plist>

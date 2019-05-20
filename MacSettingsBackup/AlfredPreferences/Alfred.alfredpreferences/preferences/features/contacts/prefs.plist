@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customFields</key>
+	<array>
+		<dict>
+			<key>action</key>
+			<string>706E75AB-DD2E-475B-BF8D-5E60F428D3E8</string>
+			<key>schemeurl</key>
+			<string>http://maps.google.com/maps?q={query}</string>
+			<key>uid</key>
+			<string>alfred.contact.field.address</string>
+		</dict>
+	</array>
+	<key>openInAlfred</key>
+	<false/>
+	<key>showJobTitle</key>
+	<true/>
+	<key>urlHandler</key>
+	<string>busycontacts://show/{uid}</string>
+	<key>urlHandlerEnabled</key>
+	<true/>
+</dict>
+</plist>
