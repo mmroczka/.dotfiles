@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>01F52E5D-B45B-409A-B1A5-D9B8E80D0CD3</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>white noise</string>
+			<key>text</key>
+			<string>Play White Noise</string>
+			<key>url</key>
+			<string>http://bit.ly/2ErdeC1</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>6DFA3216-A5BB-42F1-BE86-934870DD13D8</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>cal</string>
+			<key>text</key>
+			<string>Google Calendar</string>
+			<key>url</key>
+			<string>http://calendar.google.com/calendar/render?tab=wc</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>9DEE8FFD-7920-4DC4-AAD4-44E5E3D64A81</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>twy</string>
+			<key>text</key>
+			<string>12 Week Year Tracker</string>
+			<key>url</key>
+			<string>https://docs.google.com/spreadsheets/d/1ejh10nq3dikdGFCT4KKQPKOKZMhSxIszI1YFfeHmO8k/edit#gid=1510715060</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

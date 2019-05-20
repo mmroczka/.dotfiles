@@ -15,11 +15,11 @@
     ~/.gitignore_global: git/gitignore_global
     ~/.hammerspoon: hammerspoon
     ~/.npmrc: node/work_npmrc
-    ~/.nvm: node/nvm/
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
     ~/.ideavimrc: vim/ideavimrc
     ~/.vrapperrc: vim/vrapperrc
+    ~/Code/MacSettingsBackup: MacSettingsBackup
     ~/Library/Application Support/Code/User/settings.json: vim/vs_code_vim_settings
     ~/.yarnrc: yarn/yarnrc
     ~/.zshrc: zsh/zshrc
