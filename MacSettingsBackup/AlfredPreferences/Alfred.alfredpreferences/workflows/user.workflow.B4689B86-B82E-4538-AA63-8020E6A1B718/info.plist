@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>net.turbare.switchBluetoothDevice</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>filter_bluetooth</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>switch_bluetooth</string>
+				<key>modifiers</key>
+				<string></string>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>switch_bluetooth</key>
+		<array/>
+	</dict>
+	<key>createdby</key>
+	<string>Akihiro Uchida</string>
+	<key>description</key>
+	<string>switch a bluetooth device pairing</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>alfred-switch-bluetooth</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>bluedev</string>
+				<key>runningsubtext</key>
+				<string>filtering bluetooth devices</string>
+				<key>script</key>
+				<string>#!/bin/bash
+
+shopt -s nocasematch
+
+query="{query}"
+[ $query = "{query}" ] &amp;&amp; query="$@"
+
+xml="$(system_profiler SPBluetoothDataType -xml | plutil -extract '0._items.0.device_title' xml1 -o - -)"
+xpath='xpath count(/plist/array/dict)'
+count=$(echo $xpath | xmllint --shell &lt;(echo $xml) | grep -E -o '\d+$')
+
+echo '&lt;?xml version="1.0"?&gt;'
+echo '&lt;items&gt;'
+for i in $(seq $count); do
+  device=$(echo "cat /plist/array/dict[$i]/key/text()" | xmllint --shell &lt;(echo $xml) | grep '^\w')
+  if [[ -n $query &amp;&amp; ! $device =~ $query ]]; then
+    continue
+  fi
+  connected=$(echo "cat /plist/array/dict[$i]/dict/key[.=\"device_isconnected\"]/following-sibling::*[1]/text()" |
+    xmllint --shell &lt;(echo $xml) | grep '^\w')
+  if [ "$connected" == "attrib_Yes" ]; then
+    action="Disconnect"
+  else
+    action="Connect"
+  fi
+  cat &lt;&lt;_END_OF_ITEM_
+  &lt;item uid="$device" arg="$device"&gt;
+    &lt;title&gt;$device&lt;/title&gt;
+    &lt;subtitle&gt;$action $device&lt;/subtitle&gt;
+  &lt;/item&gt;
+_END_OF_ITEM_
+done
+echo '&lt;/items&gt;'
+</string>
+				<key>subtext</key>
+				<string>Start typing a device name...</string>
+				<key>title</key>
+				<string>Toggle a bluetooth device</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>filter_bluetooth</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(query)
+  tell application "System Events"
+    tell process "SystemUIServer"
+      tell (menu bar item 1 of menu bar 1 where description is "bluetooth")
+        click
+        tell (menu item query of menu 1)
+          click
+          click menu item 1 of menu 1
+        end tell
+      end tell
+    end tell
+  end tell
+end alfred_script</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>switch_bluetooth</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string># alfred-switch-bluetooth
+
+![Version](https://img.shields.io/github/tag/uchida/alfred-switch-bluetooth.svg?maxAge=2592000)
+[![License](https://img.shields.io/github/license/uchida/alfred-switch-bluetooth.svg?maxAge=2592000)](https://tldrlegal.com/license/creative-commons-cc0-1.0-universal)
+[![CircleCI](https://img.shields.io/circleci/project/uchida/alfred-switch-bluetooth.svg?maxAge=2592000)](https://circleci.com/gh/uchida/alfred-switch-bluetooth)
+
+## Description
+
+This is an Alfred 2 workflow that makes it easy
+to manage bluetooth device pairing with bluetooth menu bar.
+
+## Usage
+
+0. (Preparation) Check "Show Bluetooth in menu bar" on the Bluetooth pane
+   in System Preferences.app 
+1. Type `bluetooth` into Alfred followed by a space.
+2. Begin typing the name of the device you want to switch pairing.
+3. When you see the device you want, select it from the list as usual.
+4. Press return to switch the device.
+
+## Installation
+
+Download latest `alfred-switch-bluetooth.alfredworkflow` from
+[Release page](https://github.com/uchida/alfred-switch-bluetooth/releases).
+Open `alfred-switch-bluetooth.alfredworkflow` with Alfred to install workflow.
+
+## License
+
+[CC0](http://creativecommons.org/publicdomain/zero/1.0/)
+dedicated to the public domain, no rights reserved.
+</string>
+	<key>uidata</key>
+	<dict>
+		<key>filter_bluetooth</key>
+		<dict>
+			<key>ypos</key>
+			<real>60</real>
+		</dict>
+		<key>switch_bluetooth</key>
+		<dict>
+			<key>ypos</key>
+			<real>60</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>github.com/uchida/alfred-switch-bluetooth</string>
+</dict>
+</plist>
