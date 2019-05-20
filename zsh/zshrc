@@ -59,6 +59,7 @@ plugins=(
     vi-mode
     zsh-autosuggestions
     fzf-zsh
+    z
 )
 
 # User configuration
@@ -110,3 +111,6 @@ brun() {
 set -o vi
 bindkey "^[OA" history-beginning-search-backward
 bindkey "^[OB" history-beginning-search-forward
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
