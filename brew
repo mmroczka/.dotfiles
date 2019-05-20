@@ -1,0 +1,2 @@
+# add fuzzy searching to commandline
+brew install fzf
