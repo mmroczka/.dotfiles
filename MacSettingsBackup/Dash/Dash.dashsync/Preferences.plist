@@ -108,43 +108,7 @@
 	<key>feeds</key>
 	<dict>
 		<key>installed</key>
-		<dict>
-			<key>http://kapeli.com/feeds/AppleScript.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2019-05-21T14:04:45Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Java_EE8.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2019-05-21T14:05:42Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Man_Pages.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2019-05-21T14:04:36Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Markdown.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2019-05-21T14:05:22Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/MomentJS.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2019-05-21T14:04:53Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/PostgreSQL.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2019-05-21T14:05:52Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Spring_Framework.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2019-05-21T14:06:52Z</date>
-			</dict>
-		</dict>
+		<dict/>
 		<key>uninstalled</key>
 		<dict/>
 	</dict>
