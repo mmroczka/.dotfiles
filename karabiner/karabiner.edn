@@ -75,7 +75,7 @@
                          [:d :!OSC1] ; Open Dash
                          [:e :!CTOSt] ; Open Trello
                          [:f [:km "open: Fantastical"]]
-                         [:r [:km "open: Franz"]]
+                         [:z [:km "open: Franz"]]
                          [:n [:km "open: Notes"]]
                          [:i [:km "open: iTerm"]]
                          [:w [:km "open: BitWarden"]]

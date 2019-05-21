@@ -2451,7 +2451,7 @@
           }
         }, {
           "from" : {
-            "key_code" : "r"
+            "key_code" : "z"
           },
           "to" : [ {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Franz\"'"
@@ -2479,7 +2479,7 @@
             "simultaneous" : [ {
               "key_code" : "l"
             }, {
-              "key_code" : "r"
+              "key_code" : "z"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,
