@@ -73,13 +73,13 @@
                          [:caps_lock [:km "open: Finder"]]
                          [:b [:km "open: BetterTouchTool"]]
                          [:d :!OSC1] ; Open Dash
-                         [:e :!CTOSt] ; Open Trello
+                         [:r :!CTOSt] ; Open Trello
                          [:f [:km "open: Fantastical"]]
                          [:z [:km "open: Franz"]]
                          [:n [:km "open: Notes"]]
                          [:i [:km "open: iTerm"]]
                          [:w [:km "open: BitWarden"]]
-                         [:y [:km "open: RubyMine"]]
+                         [:e [:km "open: Editor"]]
                          [:k [:km "open: Keyboard Maestro"]]]}
         {:des "ukey (media)"
          :rules [:u-mode
