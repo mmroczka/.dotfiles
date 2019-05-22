@@ -7,6 +7,8 @@
  :applications {:vim-mode-disabled-application ["^com\\.apple\\.Terminal$",
                                                 "^com\\.googlecode\\.iterm2$",
                                                 "^org\\.vim\\."]
+                :Chromes                       ["^com\\.google\\.Chrome$", "^org\\.chromium\\.Chromium$", "^com\\.google\\.Chrome\\.canary$"]
+                :Terminals                     ["^com\\.apple\\.Terminal$", "^com\\.googlecode\\.iterm2$", "^io\\.alacritty$"]
                }
  :templates {:alfred "osascript -e 'tell application \"Alfred 3\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
              :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"
@@ -17,6 +19,7 @@
              :semicolon-mode {:key :semicolon}
              :u-mode {:key :u}
              :w-mode {:key :w}
+             :g-mode {:key :g}
              :vi-mode {:key :spacebar}
              :vi-visual-mode {:key :v :condi :!vim-mode-disabled-application}}
  :main [{:des "capskey remapping to hyper for all keys",
@@ -77,6 +80,9 @@
                          [:f [:km "open: Fantastical"]]
                          [:z [:km "open: Franz"]]
                          [:n [:km "open: Notes"]]
+                         [:o [:km "open: Outlook"]]
+                         [:s [:km "open: Skype"]]
+                         [:t [:km "open: Teams"]]
                          [:i [:km "open: iTerm"]]
                          [:w [:km "open: BitWarden"]]
                          [:e [:km "open: Editor"]]
@@ -103,21 +109,41 @@
                 ]}
         {:des "Window Manipulation mode (wkey)"
 ;         USES BETTER TOUCH TOOL "OTHER" TRIGGERS TO CHANGE WINDOWS
+          ; :rules [:w-mode
+          ;        [:n [:btt "Maximize Window to Next Monitor"]]
+          ;        [:e [:btt "Smaller On Left"]]
+          ;        [:r [:btt "Smaller On Right"]]
+          ;        [:return_or_enter [:btt "Maximize Window"]]
+          ;        [:h [:btt "Maximize Window Left"]]
+          ;        [:j [:btt "Maximize Window to Bottom Half"]]
+          ;        [:k [:btt "Maximize Window to Top Half"]]
+          ;        [:l [:btt "Maximize Window Right"]]
+          ;        [:u [:btt "Resize Window to Top Left Quarter / Corner"]]
+          ;        [:i [:btt "Resize Window to Top Right Quarter / Corner"]]
+          ;        [:m [:btt "Resize Window to Bottom Left Quarter / Corner"]]
+          ;        [:comma [:btt "Resize Window to Bottom Right Quarter / Corner"]]
+          ;        ]}
+;         USES SPECTACLE TO CHANGE WINDOWS
           :rules [:w-mode
-                 [:n [:btt "Maximize Window to Next Monitor"]]
-                 [:e [:btt "Smaller On Left"]]
-                 [:r [:btt "Smaller On Right"]]
-                 [:return_or_enter [:btt "Maximize Window"]]
-                 [:h [:btt "Maximize Window Left"]]
-                 [:j [:btt "Maximize Window to Bottom Half"]]
-                 [:k [:btt "Maximize Window to Top Half"]]
-                 [:l [:btt "Maximize Window Right"]]
-                 [:u [:btt "Resize Window to Top Left Quarter / Corner"]]
-                 [:i [:btt "Resize Window to Top Right Quarter / Corner"]]
-                 [:m [:btt "Resize Window to Bottom Left Quarter / Corner"]]
-                 [:comma [:btt "Resize Window to Bottom Right Quarter / Corner"]]
+                 [:n :!TOSCf15]
+                 [:e :!TOSCf17]
+                 [:r :!TOSCf16]
+                 [:return_or_enter :!TOSCf19]
+                 [:t :!TOSCf20]
+                 [:h :!TOSCleft_arrow]
+                 [:j :!TOSCdown_arrow]
+                 [:k :!TOSCup_arrow]
+                 [:l :!TOSCright_arrow]
+                 [:i :!TOSCf11]
+                 [:o :!TOSCf13]
+                 [:comma :!TOSCf12]
+                 [:period :!TOSCf14]
                  ]}
-
+        {:des   "misc"
+                 ;; https://superuser.com/a/324267
+         :rules [
+                 [:!CSl [:!Cl :j :a :v :a :s :c :r :i :p :t :!Ssemicolon :return_or_enter] :Chromes]
+                 ]}
         {:des "Vi Mode Spacebar as Trigger Key]"
          :rules [[:##j :down_arrow :vi-mode]
                  [:##k :up_arrow :vi-mode]

@@ -3335,7 +3335,8 @@
             "key_code" : "n"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Maximize Window to Next Monitor\"'"
+            "key_code" : "f15",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "w-mode",
@@ -3354,7 +3355,8 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Maximize Window to Next Monitor\"'"
+            "key_code" : "f15",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -3380,7 +3382,8 @@
             "key_code" : "e"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Smaller On Left\"'"
+            "key_code" : "f17",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "w-mode",
@@ -3399,7 +3402,8 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Smaller On Left\"'"
+            "key_code" : "f17",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -3425,7 +3429,8 @@
             "key_code" : "r"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Smaller On Right\"'"
+            "key_code" : "f16",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "w-mode",
@@ -3444,7 +3449,8 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Smaller On Right\"'"
+            "key_code" : "f16",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -3470,7 +3476,8 @@
             "key_code" : "return_or_enter"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Maximize Window\"'"
+            "key_code" : "f19",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "w-mode",
@@ -3489,7 +3496,8 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Maximize Window\"'"
+            "key_code" : "f19",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -3512,10 +3520,11 @@
           }
         }, {
           "from" : {
-            "key_code" : "h"
+            "key_code" : "t"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Maximize Window Left\"'"
+            "key_code" : "f20",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "w-mode",
@@ -3534,7 +3543,55 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Maximize Window Left\"'"
+            "key_code" : "f20",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "w"
+            }, {
+              "key_code" : "t"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "w-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        }, {
+          "from" : {
+            "key_code" : "h"
+          },
+          "to" : [ {
+            "key_code" : "left_arrow",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "w-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "w-mode",
+              "value" : 1
+            }
+          }, {
+            "key_code" : "left_arrow",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -3560,7 +3617,8 @@
             "key_code" : "j"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Maximize Window to Bottom Half\"'"
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "w-mode",
@@ -3579,7 +3637,8 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Maximize Window to Bottom Half\"'"
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -3605,7 +3664,8 @@
             "key_code" : "k"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Maximize Window to Top Half\"'"
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "w-mode",
@@ -3624,7 +3684,8 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Maximize Window to Top Half\"'"
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -3650,7 +3711,8 @@
             "key_code" : "l"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Maximize Window Right\"'"
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "w-mode",
@@ -3669,7 +3731,8 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Maximize Window Right\"'"
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -3692,55 +3755,11 @@
           }
         }, {
           "from" : {
-            "key_code" : "u"
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Resize Window to Top Left Quarter / Corner\"'"
-          } ],
-          "conditions" : [ {
-            "name" : "w-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "w-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Resize Window to Top Left Quarter / Corner\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "w"
-            }, {
-              "key_code" : "u"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "w-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
             "key_code" : "i"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Resize Window to Top Right Quarter / Corner\"'"
+            "key_code" : "f11",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "w-mode",
@@ -3759,7 +3778,8 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Resize Window to Top Right Quarter / Corner\"'"
+            "key_code" : "f11",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -3782,10 +3802,11 @@
           }
         }, {
           "from" : {
-            "key_code" : "m"
+            "key_code" : "o"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Resize Window to Bottom Left Quarter / Corner\"'"
+            "key_code" : "f13",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "w-mode",
@@ -3804,13 +3825,14 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Resize Window to Bottom Left Quarter / Corner\"'"
+            "key_code" : "f13",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "from" : {
             "simultaneous" : [ {
               "key_code" : "w"
             }, {
-              "key_code" : "m"
+              "key_code" : "o"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,
@@ -3830,7 +3852,8 @@
             "key_code" : "comma"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Resize Window to Bottom Right Quarter / Corner\"'"
+            "key_code" : "f12",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "w-mode",
@@ -3849,7 +3872,8 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Resize Window to Bottom Right Quarter / Corner\"'"
+            "key_code" : "f12",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -3870,15 +3894,103 @@
               } ]
             }
           }
+        }, {
+          "from" : {
+            "key_code" : "period"
+          },
+          "to" : [ {
+            "key_code" : "f14",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "w-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "w-mode",
+              "value" : 1
+            }
+          }, {
+            "key_code" : "f14",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "w"
+            }, {
+              "key_code" : "period"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "w-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        } ]
+      }, {
+        "description" : "misc",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "l",
+            "modifiers" : [ "left_command" ]
+          }, {
+            "key_code" : "j"
+          }, {
+            "key_code" : "a"
+          }, {
+            "key_code" : "v"
+          }, {
+            "key_code" : "a"
+          }, {
+            "key_code" : "s"
+          }, {
+            "key_code" : "c"
+          }, {
+            "key_code" : "r"
+          }, {
+            "key_code" : "i"
+          }, {
+            "key_code" : "p"
+          }, {
+            "key_code" : "t"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "return_or_enter"
+          } ],
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com\\.google\\.Chrome$", "^org\\.chromium\\.Chromium$", "^com\\.google\\.Chrome\\.canary$" ],
+            "type" : "frontmost_application_if"
+          } ],
+          "type" : "basic"
         } ]
       }, {
         "description" : "Vi Mode Spacebar as Trigger Key]",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "j",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
+            "key_code" : "j"
           },
           "to" : [ {
             "key_code" : "down_arrow"
@@ -3923,10 +4035,7 @@
           }
         }, {
           "from" : {
-            "key_code" : "k",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
+            "key_code" : "k"
           },
           "to" : [ {
             "key_code" : "up_arrow"
@@ -3971,10 +4080,7 @@
           }
         }, {
           "from" : {
-            "key_code" : "h",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
+            "key_code" : "h"
           },
           "to" : [ {
             "key_code" : "left_arrow"
@@ -4019,10 +4125,7 @@
           }
         }, {
           "from" : {
-            "key_code" : "l",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
+            "key_code" : "l"
           },
           "to" : [ {
             "key_code" : "right_arrow"

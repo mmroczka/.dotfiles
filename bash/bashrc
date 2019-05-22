@@ -125,6 +125,7 @@ hideFiles(){
         killall Finder /System/Library/CoreServices/Finder.app
 }
 
+
 # checks for any files flagged w/ --skip-worktree alias
 check="git ls-files -v|grep '^S'"
 # add --skip-worktree flag to file
