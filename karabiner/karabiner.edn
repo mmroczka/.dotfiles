@@ -17,6 +17,7 @@
  :simlayers {:caps_lock-mode {:key :caps_lock}
              :l-mode {:key :l}
              :semicolon-mode {:key :semicolon}
+             :f-mode {:key :f}
              :u-mode {:key :u}
              :w-mode {:key :w}
              :g-mode {:key :g}
@@ -98,16 +99,36 @@
                  [:k :vk_consumer_play]]}
         {:des "right cmd -> Alfred"
                  :rules [[:right_command :right_command nil {:alone :!CTOSspacebar}]]}
-        {:des "Global macros"
+        {:des "GO TO mode"
+         :rules [:g-mode
+                [:semicolon [:km "hotkey: g+;"]] ; Fantastical [G]o to [;] (specific day)
+                [:a [:km "hotkey: g+a"]] ; Outlook [G]o to [A]rchive
+                [:c [:km "hotkey: g+c"]] ; Omnifocus [G]o to [C]hores
+                [:d [:km "hotkey: g+d"]] ; Fantastical [G]o to [D]ay
+                [:f [:km "hotkey: g+f"]] ; Omnifocus [G]o to [F]orecast
+                [:i [:km "hotkey: g+i"]] ; Omnifocus [G]o to [I]nbox
+                [:j [:km "hotkey: g+j"]] ; Outlook [G]o to [J]unk
+                [:c [:km "hotkey: g+c"]] ; Omnifocus [G]o to [C]hores
+                [:l [:km "hotkey: g+l"]] ; Omnifocus [G]o to p[L]anning actions
+                [:m [:km "hotkey: g+m"]] ; Fantastical [G]o to [M]onth
+                [:n [:km "hotkey: g+n"]] ; Omnifocus [G]o to [N]ow
+                [:p [:km "hotkey: g+p"]] ; Omnifocus [G]o to [P]rojects
+                [:r [:km "hotkey: g+r"]] ; Omnifocus [G]o to [R]outines
+                [:s [:km "hotkey: g+s"]] ; Omnifocus [G]o to [S]oon
+                [:t [:km "hotkey: g+t"]] ; Fantastical [G]o to [T]oday
+                [:w [:km "hotkey: g+w"]] ; Omnifocus [G]o to [W]ork | Fantastical [G]o to [W]eek
+                [:y [:km "hotkey: g+y"]] ; Fantastical [G]o to [Y]ear
+                ]}
+        {:des "Focus on part of window"
+         :rules [:f-mode
+                [:h [:km "hotkey: f+h"]] ; Omni/KM [F]ocus [h](left)
+                [:j [:km "hotkey: f+j"]] ; Omni/KM [F]ocus [j](center)
+                [:l [:km "hotkey: f+l"]] ; Omni/KM [F]ocus [l](right)
+                ]}
+        {:des "Semicolon macros"
          :rules [:semicolon-mode
-                [:s [:km "hotkey: ;+S"]]
-                [:i [:km "hotkey: ;+I"]]
-                [:f [:km "hotkey: ;+F"]]
-                [:c [:km "hotkey: ;+C"]]
-                [:j [:km "hotkey: ;+J"]]
-                [:h [:km "hotkey: ;+H"]]
-                [:l [:km "hotkey: ;+L"]]
-                [:k [:km "hotkey: ;+K"]]
+                [:s [:km "hotkey: ;+s"]]
+                [:i [:km "hotkey: ;+i"]]
                 ]}
         {:des "Window Manipulation mode (wkey)"
 ;         USES BETTER TOUCH TOOL "OTHER" TRIGGERS TO CHANGE WINDOWS
@@ -168,6 +189,8 @@
                  [:##b :!SOleft_arrow :vi-visual-mode]
                  [:##w :!SOright_arrow :vi-visual-mode]
                  [:##e :!SOright_arrow :vi-visual-mode]
+                 [:##i :!SCleft_arrow :vi-visual-mode]
+                 [:##a :!SCright_arrow :vi-visual-mode]
                  [:##0 :!SCleft_arrow :vi-visual-mode]
                  [:##4 :!SCright_arrow :vi-visual-mode]
                  [:##open_bracket :!SOup_arrow :vi-visual-mode]
