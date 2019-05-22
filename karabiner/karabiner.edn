@@ -91,6 +91,8 @@
          :rules [:u-mode
                  [:t :mute]
                  [:w :!OCT0] ; Turn on/off Noizio
+                 [:i :!TOSCclose_bracket] ; Switch to Internet
+                 [:b :!TOSCbackslash] ; Switch to BlueSSO
                  [:h :vk_consumer_previous]
                  [:l :vk_consumer_next]
                  [:k :vk_consumer_play]]}
