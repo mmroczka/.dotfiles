@@ -2,8 +2,8 @@
  {:MrStark {:default true
          :sim     50
          :delay   500
-         :alone   700
-         :held    700}}
+         :alone   500
+         :held    500}}
  :applications {:vim-mode-disabled-application ["^com\\.apple\\.Terminal$",
                                                 "^com\\.googlecode\\.iterm2$",
                                                 "^org\\.vim\\."]
@@ -23,52 +23,8 @@
              :g-mode {:key :g}
              :vi-mode {:key :spacebar}
              :vi-visual-mode {:key :v :condi :!vim-mode-disabled-application}}
- :main [{:des "capskey remapping to hyper for all keys",
-         :rules [:caps_lock-mode
-                 [:spacebar :!SCTOspacebar]
-                 [:open_bracket :!SCTOopen_bracket]
-                 [:close_bracket :!SCTOclose_bracket]
-                 [:semicolon :!SCTOsemicolon]
-                 [:quote :!SCTOquote]
-                 [:comma :!SCTOcomma]
-                 [:period :!SCTOperiod]
-                 [:slash :!SCTOslash]
-                 [:a :!SCTOa]
-                 [:b :!SCTOb]
-                 [:c :!SCTOc]
-                 [:d :!SCTOd]
-                 [:e :!SCTOe]
-                 [:f :!SCTOf]
-                 [:g :!SCTOg]
-                 [:h :!CStab]
-                 [:i :!SCTOi]
-                 [:j :!SCopen_bracket]
-                 [:k :!SCclose_bracket]
-                 [:l :!Ctab]
-                 [:m :!SCTOm]
-                 [:n :!SCTOn]
-                 [:o :!SCTOo]
-                 [:p :!SCTOp]
-                 [:q :!SCTOq]
-                 [:r :!SCTOr]
-                 [:s :!SCTOs]
-                 [:t :!SCTOt]
-                 [:u :!SCTOu]
-                 [:v :!SCTOv]
-                 [:w :!SCTOw]
-                 [:x :!SCTOx]
-                 [:y :!SCTOy]
-                 [:z :!SCTOz]
-                 [:1 :!SCTO1]
-                 [:2 :!SCTO2]
-                 [:3 :!SCTO3]
-                 [:4 :!SCTO4]
-                 [:5 :!SCTO5]
-                 [:6 :!SCTO6]
-                 [:7 :!SCTO7]
-                 [:8 :!SCTO8]
-                 [:9 :!SCTO9]
-                 [:0 :!SCTO0]]}
+ :main [{:des "Caps -> Hyper / Esc"
+          :rules [[:##caps_lock :!CTOleft_shift nil {:alone :escape}]]}
         {:des "lkey (launch mode)"
                  :rules [:l-mode
                          [:a [:km "open: Activity Monitor"]]
@@ -77,7 +33,6 @@
                          [:caps_lock [:km "open: Finder"]]
                          [:b [:km "open: BetterTouchTool"]]
                          [:d :!OSC1] ; Open Dash
-                         [:r :!CTOSt] ; Open Trello
                          [:f [:km "open: Fantastical"]]
                          [:z [:km "open: Franz"]]
                          [:n [:km "open: Notes"]]
@@ -86,7 +41,7 @@
                          [:t [:km "open: Teams"]]
                          [:i [:km "open: iTerm"]]
                          [:w [:km "open: BitWarden"]]
-                         [:e [:km "open: Editor"]]
+                         [:r [:km "open: Editor"]]
                          [:k [:km "open: Keyboard Maestro"]]]}
         {:des "ukey (media)"
          :rules [:u-mode
@@ -149,8 +104,11 @@
 ;         USES SPECTACLE TO CHANGE WINDOWS
           :rules [:w-mode
                  [:n :!TOSCf15]
-                 [:e :!TOSCf17]
-                 [:r :!TOSCf16]
+                 [:e [:km "hotkey: w+e"]]
+                 [:r [:km "hotkey: w+r"]]
+                 [:hyphen [:km "hotkey: w+hyphen"]]
+                 [:equal_sign [:km "hotkey: w+equal_sign"]]
+                 [:delete_or_backspace [:km "hotkey: w+delete_or_backspace"]]
                  [:return_or_enter :!TOSCf19]
                  [:t :!TOSCf20]
                  [:h :!TOSCleft_arrow]
@@ -168,19 +126,21 @@
                  [:!CSl [:!Cl :j :a :v :a :s :c :r :i :p :t :!Ssemicolon :return_or_enter] :Chromes]
                  ]}
         {:des "Vi Mode Spacebar as Trigger Key]"
-         :rules [[:##j :down_arrow :vi-mode]
-                 [:##k :up_arrow :vi-mode]
-                 [:##h :left_arrow :vi-mode]
-                 [:##l :right_arrow :vi-mode]
-                 [:##b :!Oleft_arrow :vi-mode]
-                 [:##w :!Oright_arrow :vi-mode]
-                 [:##e :!Oright_arrow :vi-mode]
-                 [:##i :!Cleft_arrow :vi-mode]
-                 [:##a :!Cright_arrow :vi-mode]
-                 [:##0 :!Ta :vi-mode]
-                 [:##4 :!Te :vi-mode]
-                 [:##open_bracket :!Oup_arrow :vi-mode]
-                 [:##close_bracket :!Odown_arrow :vi-mode]]}
+         :rules [:vi-mode
+                 [:left_shift :left_shift]
+                 [:##j :down_arrow]
+                 [:##k :up_arrow]
+                 [:##h :left_arrow]
+                 [:##l :right_arrow]
+                 [:##b :!Oleft_arrow]
+                 [:##w :!Oright_arrow]
+                 [:##e :!Oright_arrow]
+                 [:##i :!Cleft_arrow]
+                 [:##a :!Cright_arrow]
+                 [:##0 :!Ta]
+                 [:##4 :!Te]
+                 [:##open_bracket :!Oup_arrow]
+                 [:##close_bracket :!Odown_arrow]]}
         {:des "Vi Visual Mode"
          :rules [[:##j :!Sdown_arrow :vi-visual-mode]
                  [:##k :!Sup_arrow :vi-visual-mode]

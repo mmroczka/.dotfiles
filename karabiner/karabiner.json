@@ -9,2079 +9,26 @@
       "parameters" : {
         "basic.simultaneous_threshold_milliseconds" : 50,
         "basic.to_delayed_action_delay_milliseconds" : 500,
-        "basic.to_if_alone_timeout_milliseconds" : 700,
-        "basic.to_if_held_down_threshold_milliseconds" : 700
+        "basic.to_if_alone_timeout_milliseconds" : 500,
+        "basic.to_if_held_down_threshold_milliseconds" : 500
       },
       "rules" : [ {
-        "description" : "capskey remapping to hyper for all keys",
+        "description" : "Caps -> Hyper / Esc",
         "manipulators" : [ {
+          "to_if_alone" : [ {
+            "key_code" : "escape"
+          } ],
           "from" : {
-            "key_code" : "spacebar"
-          },
-          "to" : [ {
-            "key_code" : "spacebar",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
+            "key_code" : "caps_lock",
+            "modifiers" : {
+              "optional" : [ "any" ]
             }
-          }, {
-            "key_code" : "spacebar",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "spacebar"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "open_bracket"
           },
           "to" : [ {
-            "key_code" : "open_bracket",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
+            "key_code" : "left_shift",
+            "modifiers" : [ "left_command", "left_control", "left_option" ]
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "open_bracket",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "open_bracket"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "close_bracket"
-          },
-          "to" : [ {
-            "key_code" : "close_bracket",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "close_bracket",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "close_bracket"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "semicolon"
-          },
-          "to" : [ {
-            "key_code" : "semicolon",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "semicolon",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "semicolon"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "quote"
-          },
-          "to" : [ {
-            "key_code" : "quote",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "quote",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "quote"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "comma"
-          },
-          "to" : [ {
-            "key_code" : "comma",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "comma",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "comma"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "period"
-          },
-          "to" : [ {
-            "key_code" : "period",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "period",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "period"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "slash"
-          },
-          "to" : [ {
-            "key_code" : "slash",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "slash",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "slash"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "a"
-          },
-          "to" : [ {
-            "key_code" : "a",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "a",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "a"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "b"
-          },
-          "to" : [ {
-            "key_code" : "b",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "b",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "b"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "c"
-          },
-          "to" : [ {
-            "key_code" : "c",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "c",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "c"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "d"
-          },
-          "to" : [ {
-            "key_code" : "d",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "d",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "d"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "e"
-          },
-          "to" : [ {
-            "key_code" : "e",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "e",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "e"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "f"
-          },
-          "to" : [ {
-            "key_code" : "f",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "f",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "f"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "g"
-          },
-          "to" : [ {
-            "key_code" : "g",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "g",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "g"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "h"
-          },
-          "to" : [ {
-            "key_code" : "tab",
-            "modifiers" : [ "left_command", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "tab",
-            "modifiers" : [ "left_command", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "h"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "i"
-          },
-          "to" : [ {
-            "key_code" : "i",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "i",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "i"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "j"
-          },
-          "to" : [ {
-            "key_code" : "open_bracket",
-            "modifiers" : [ "left_command", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "open_bracket",
-            "modifiers" : [ "left_command", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "j"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "k"
-          },
-          "to" : [ {
-            "key_code" : "close_bracket",
-            "modifiers" : [ "left_command", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "close_bracket",
-            "modifiers" : [ "left_command", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "k"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "l"
-          },
-          "to" : [ {
-            "key_code" : "tab",
-            "modifiers" : [ "left_command" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "tab",
-            "modifiers" : [ "left_command" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "l"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "m"
-          },
-          "to" : [ {
-            "key_code" : "m",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "m",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "m"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "n"
-          },
-          "to" : [ {
-            "key_code" : "n",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "n",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "n"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "o"
-          },
-          "to" : [ {
-            "key_code" : "o",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "o",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "o"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "p"
-          },
-          "to" : [ {
-            "key_code" : "p",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "p",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "p"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "q"
-          },
-          "to" : [ {
-            "key_code" : "q",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "q",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "q"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "r"
-          },
-          "to" : [ {
-            "key_code" : "r",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "r",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "r"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "s"
-          },
-          "to" : [ {
-            "key_code" : "s",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "s",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "s"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "t"
-          },
-          "to" : [ {
-            "key_code" : "t",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "t",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "t"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "u"
-          },
-          "to" : [ {
-            "key_code" : "u",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "u",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "u"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "v"
-          },
-          "to" : [ {
-            "key_code" : "v",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "v",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "v"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "w"
-          },
-          "to" : [ {
-            "key_code" : "w",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "w",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "w"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "x"
-          },
-          "to" : [ {
-            "key_code" : "x",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "x",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "x"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "y"
-          },
-          "to" : [ {
-            "key_code" : "y",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "y",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "y"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "z"
-          },
-          "to" : [ {
-            "key_code" : "z",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "z",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "z"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "1"
-          },
-          "to" : [ {
-            "key_code" : "1",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "1",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "1"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "2"
-          },
-          "to" : [ {
-            "key_code" : "2",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "2",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "2"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "3"
-          },
-          "to" : [ {
-            "key_code" : "3",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "3",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "3"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "4"
-          },
-          "to" : [ {
-            "key_code" : "4",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "4",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "4"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "5"
-          },
-          "to" : [ {
-            "key_code" : "5",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "5",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "5"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "6"
-          },
-          "to" : [ {
-            "key_code" : "6",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "6",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "6"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "7"
-          },
-          "to" : [ {
-            "key_code" : "7",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "7",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "7"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "8"
-          },
-          "to" : [ {
-            "key_code" : "8",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "8",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "8"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "9"
-          },
-          "to" : [ {
-            "key_code" : "9",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "9",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "9"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "0"
-          },
-          "to" : [ {
-            "key_code" : "0",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "caps_lock-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "caps_lock-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "0",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "caps_lock"
-            }, {
-              "key_code" : "0"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "caps_lock-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         } ]
       }, {
         "description" : "lkey (launch mode)",
@@ -2359,53 +306,6 @@
           }
         }, {
           "from" : {
-            "key_code" : "r"
-          },
-          "to" : [ {
-            "key_code" : "t",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "l-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "l-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "t",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "l"
-            }, {
-              "key_code" : "r"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "l-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
             "key_code" : "f"
           },
           "to" : [ {
@@ -2766,7 +666,7 @@
           }
         }, {
           "from" : {
-            "key_code" : "e"
+            "key_code" : "r"
           },
           "to" : [ {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Editor\"'"
@@ -2794,7 +694,7 @@
             "simultaneous" : [ {
               "key_code" : "l"
             }, {
-              "key_code" : "e"
+              "key_code" : "r"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,
@@ -4247,8 +2147,7 @@
             "key_code" : "e"
           },
           "to" : [ {
-            "key_code" : "f17",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: w+e\"'"
           } ],
           "conditions" : [ {
             "name" : "w-mode",
@@ -4267,8 +2166,7 @@
               "value" : 1
             }
           }, {
-            "key_code" : "f17",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: w+e\"'"
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -4294,8 +2192,7 @@
             "key_code" : "r"
           },
           "to" : [ {
-            "key_code" : "f16",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: w+r\"'"
           } ],
           "conditions" : [ {
             "name" : "w-mode",
@@ -4314,14 +2211,148 @@
               "value" : 1
             }
           }, {
-            "key_code" : "f16",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: w+r\"'"
           } ],
           "from" : {
             "simultaneous" : [ {
               "key_code" : "w"
             }, {
               "key_code" : "r"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "w-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        }, {
+          "from" : {
+            "key_code" : "hyphen"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: w+hyphen\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "w-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "w-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: w+hyphen\"'"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "w"
+            }, {
+              "key_code" : "hyphen"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "w-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        }, {
+          "from" : {
+            "key_code" : "equal_sign"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: w+equal_sign\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "w-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "w-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: w+equal_sign\"'"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "w"
+            }, {
+              "key_code" : "equal_sign"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "w-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        }, {
+          "from" : {
+            "key_code" : "delete_or_backspace"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: w+delete_or_backspace\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "w-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "w-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: w+delete_or_backspace\"'"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "w"
+            }, {
+              "key_code" : "delete_or_backspace"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,
@@ -4854,6 +2885,51 @@
       }, {
         "description" : "Vi Mode Spacebar as Trigger Key]",
         "manipulators" : [ {
+          "from" : {
+            "key_code" : "left_shift"
+          },
+          "to" : [ {
+            "key_code" : "left_shift"
+          } ],
+          "conditions" : [ {
+            "name" : "vi-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "vi-mode",
+              "value" : 1
+            }
+          }, {
+            "key_code" : "left_shift"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "spacebar"
+            }, {
+              "key_code" : "left_shift"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "vi-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        }, {
           "from" : {
             "key_code" : "j",
             "modifiers" : {

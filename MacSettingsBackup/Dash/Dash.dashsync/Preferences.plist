@@ -5,7 +5,84 @@
 	<key>DHCheatRepo</key>
 	<dict>
 		<key>installed</key>
-		<dict/>
+		<dict>
+			<key>Chrome_Dev_Tools</key>
+			<dict>
+				<key>date</key>
+				<date>2019-05-23T14:46:26Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Chrome Dev Tools</string>
+					</array>
+					<key>name</key>
+					<string>Chrome Developer Tools</string>
+					<key>platform</key>
+					<string>cheatsheet</string>
+					<key>uniqueIdentifier</key>
+					<string>Chrome_Dev_Tools</string>
+				</dict>
+			</dict>
+			<key>Git</key>
+			<dict>
+				<key>date</key>
+				<date>2019-05-23T14:46:35Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>terminal</string>
+						<string>shell</string>
+						<string>bash</string>
+						<string>zsh</string>
+					</array>
+					<key>name</key>
+					<string>Git</string>
+					<key>platform</key>
+					<string>cheatsheet</string>
+					<key>uniqueIdentifier</key>
+					<string>Git</string>
+				</dict>
+			</dict>
+			<key>Vim</key>
+			<dict>
+				<key>date</key>
+				<date>2019-05-23T14:47:01Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array/>
+					<key>name</key>
+					<string>Vim</string>
+					<key>platform</key>
+					<string>cheatsheet</string>
+					<key>uniqueIdentifier</key>
+					<string>Vim</string>
+				</dict>
+			</dict>
+			<key>iTerm2</key>
+			<dict>
+				<key>date</key>
+				<date>2019-05-23T14:46:44Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>terminal</string>
+						<string>shell</string>
+						<string>bash</string>
+						<string>zsh</string>
+					</array>
+					<key>name</key>
+					<string>iTerm2</string>
+					<key>platform</key>
+					<string>cheatsheet</string>
+					<key>uniqueIdentifier</key>
+					<string>iTerm2</string>
+				</dict>
+			</dict>
+		</dict>
 		<key>uninstalled</key>
 		<dict/>
 	</dict>
@@ -58,6 +135,8 @@
 		<key>uninstalled</key>
 		<dict/>
 	</dict>
+	<key>DHHighlightedWebViewTextSizeMultiplier</key>
+	<real>0.83333331346511841</real>
 	<key>DHJavaRepo</key>
 	<dict>
 		<key>installed</key>
@@ -89,7 +168,59 @@
 	<key>DHStackOverflowRepo</key>
 	<dict>
 		<key>installed</key>
-		<dict/>
+		<dict>
+			<key>Java_EE_Online</key>
+			<dict>
+				<key>date</key>
+				<date>2019-05-23T15:41:22Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array/>
+					<key>name</key>
+					<string>Java EE (Online)</string>
+					<key>platform</key>
+					<string>soonline</string>
+					<key>uniqueIdentifier</key>
+					<string>Java_EE_Online</string>
+				</dict>
+			</dict>
+			<key>Python_Online</key>
+			<dict>
+				<key>date</key>
+				<date>2019-05-23T15:42:03Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array/>
+					<key>name</key>
+					<string>Python (Online)</string>
+					<key>platform</key>
+					<string>soonline</string>
+					<key>uniqueIdentifier</key>
+					<string>Python_Online</string>
+				</dict>
+			</dict>
+			<key>Spring_Framework_Online</key>
+			<dict>
+				<key>date</key>
+				<date>2019-05-23T15:41:36Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>spring.io</string>
+						<string>java</string>
+					</array>
+					<key>name</key>
+					<string>Spring Framework (Online)</string>
+					<key>platform</key>
+					<string>soonline</string>
+					<key>uniqueIdentifier</key>
+					<string>Spring_Framework_Online</string>
+				</dict>
+			</dict>
+		</dict>
 		<key>uninstalled</key>
 		<dict/>
 	</dict>
@@ -100,18 +231,45 @@
 		<key>uninstalled</key>
 		<dict/>
 	</dict>
+	<key>DHWebViewIsDark</key>
+	<false/>
+	<key>annotationsAreShown</key>
+	<true/>
 	<key>docsets</key>
 	<dict>
 		<key>keywords</key>
 		<dict>
 			<key>~/Library/Application Support/Dash/DocSets/Java_EE8/Java EE8.docset</key>
 			<string>java:</string>
+			<key>~/Library/Application Support/Dash/DocSets/Python_3/Python 3.docset</key>
+			<string>python:</string>
 		</dict>
 	</dict>
 	<key>feeds</key>
 	<dict>
 		<key>installed</key>
-		<dict/>
+		<dict>
+			<key>http://kapeli.com/feeds/Python_3.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-05-23T15:39:35Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/React.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-05-23T15:44:19Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Ruby_2.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-05-23T15:40:31Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Ruby_on_Rails_5.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-05-23T15:39:55Z</date>
+			</dict>
+		</dict>
 		<key>uninstalled</key>
 		<dict/>
 	</dict>
@@ -170,6 +328,8 @@
 	<true/>
 	<key>showInDock</key>
 	<true/>
+	<key>sortDocsetsAlphabetically</key>
+	<false/>
 	<key>versionedDHCheatRepo</key>
 	<dict>
 		<key>installed</key>
