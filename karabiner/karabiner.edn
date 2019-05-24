@@ -2,11 +2,13 @@
  {:MrStark {:default true
          :sim     50
          :delay   500
-         :alone   700
-         :held    700}}
+         :alone   500
+         :held    500}}
  :applications {:vim-mode-disabled-application ["^com\\.apple\\.Terminal$",
                                                 "^com\\.googlecode\\.iterm2$",
                                                 "^org\\.vim\\."]
+                :Chromes                       ["^com\\.google\\.Chrome$", "^org\\.chromium\\.Chromium$", "^com\\.google\\.Chrome\\.canary$"]
+                :Terminals                     ["^com\\.apple\\.Terminal$", "^com\\.googlecode\\.iterm2$", "^io\\.alacritty$"]
                }
  :templates {:alfred "osascript -e 'tell application \"Alfred 3\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
              :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"
@@ -15,56 +17,14 @@
  :simlayers {:caps_lock-mode {:key :caps_lock}
              :l-mode {:key :l}
              :semicolon-mode {:key :semicolon}
+             :f-mode {:key :f}
              :u-mode {:key :u}
              :w-mode {:key :w}
+             :g-mode {:key :g}
              :vi-mode {:key :spacebar}
              :vi-visual-mode {:key :v :condi :!vim-mode-disabled-application}}
- :main [{:des "capskey remapping to hyper for all keys",
-         :rules [:caps_lock-mode
-                 [:spacebar :!SCTOspacebar]
-                 [:open_bracket :!SCTOopen_bracket]
-                 [:close_bracket :!SCTOclose_bracket]
-                 [:semicolon :!SCTOsemicolon]
-                 [:quote :!SCTOquote]
-                 [:comma :!SCTOcomma]
-                 [:period :!SCTOperiod]
-                 [:slash :!SCTOslash]
-                 [:a :!SCTOa]
-                 [:b :!SCTOb]
-                 [:c :!SCTOc]
-                 [:d :!SCTOd]
-                 [:e :!SCTOe]
-                 [:f :!SCTOf]
-                 [:g :!SCTOg]
-                 [:h :!CStab]
-                 [:i :!SCTOi]
-                 [:j :!SCopen_bracket]
-                 [:k :!SCclose_bracket]
-                 [:l :!Ctab]
-                 [:m :!SCTOm]
-                 [:n :!SCTOn]
-                 [:o :!SCTOo]
-                 [:p :!SCTOp]
-                 [:q :!SCTOq]
-                 [:r :!SCTOr]
-                 [:s :!SCTOs]
-                 [:t :!SCTOt]
-                 [:u :!SCTOu]
-                 [:v :!SCTOv]
-                 [:w :!SCTOw]
-                 [:x :!SCTOx]
-                 [:y :!SCTOy]
-                 [:z :!SCTOz]
-                 [:1 :!SCTO1]
-                 [:2 :!SCTO2]
-                 [:3 :!SCTO3]
-                 [:4 :!SCTO4]
-                 [:5 :!SCTO5]
-                 [:6 :!SCTO6]
-                 [:7 :!SCTO7]
-                 [:8 :!SCTO8]
-                 [:9 :!SCTO9]
-                 [:0 :!SCTO0]]}
+ :main [{:des "Caps -> Hyper / Esc"
+          :rules [[:##caps_lock :!CTOleft_shift nil {:alone :escape}]]}
         {:des "lkey (launch mode)"
                  :rules [:l-mode
                          [:a [:km "open: Activity Monitor"]]
@@ -73,65 +33,114 @@
                          [:caps_lock [:km "open: Finder"]]
                          [:b [:km "open: BetterTouchTool"]]
                          [:d :!OSC1] ; Open Dash
-                         [:e :!CTOSt] ; Open Trello
                          [:f [:km "open: Fantastical"]]
                          [:z [:km "open: Franz"]]
                          [:n [:km "open: Notes"]]
+                         [:o [:km "open: Outlook"]]
+                         [:s [:km "open: Skype"]]
+                         [:t [:km "open: Teams"]]
                          [:i [:km "open: iTerm"]]
                          [:w [:km "open: BitWarden"]]
-                         [:y [:km "open: RubyMine"]]
+                         [:r [:km "open: Editor"]]
                          [:k [:km "open: Keyboard Maestro"]]]}
         {:des "ukey (media)"
          :rules [:u-mode
                  [:t :mute]
                  [:w :!OCT0] ; Turn on/off Noizio
+                 [:i :!TOSCclose_bracket] ; Switch to Internet
+                 [:b :!TOSCbackslash] ; Switch to BlueSSO
                  [:h :vk_consumer_previous]
                  [:l :vk_consumer_next]
                  [:k :vk_consumer_play]]}
         {:des "right cmd -> Alfred"
                  :rules [[:right_command :right_command nil {:alone :!CTOSspacebar}]]}
-        {:des "Global macros"
+        {:des "GO TO mode"
+         :rules [:g-mode
+                [:semicolon [:km "hotkey: g+;"]] ; Fantastical [G]o to [;] (specific day)
+                [:a [:km "hotkey: g+a"]] ; Outlook [G]o to [A]rchive
+                [:c [:km "hotkey: g+c"]] ; Omnifocus [G]o to [C]hores
+                [:d [:km "hotkey: g+d"]] ; Fantastical [G]o to [D]ay
+                [:f [:km "hotkey: g+f"]] ; Omnifocus [G]o to [F]orecast
+                [:i [:km "hotkey: g+i"]] ; Omnifocus [G]o to [I]nbox
+                [:j [:km "hotkey: g+j"]] ; Outlook [G]o to [J]unk
+                [:c [:km "hotkey: g+c"]] ; Omnifocus [G]o to [C]hores
+                [:l [:km "hotkey: g+l"]] ; Omnifocus [G]o to p[L]anning actions
+                [:m [:km "hotkey: g+m"]] ; Fantastical [G]o to [M]onth
+                [:n [:km "hotkey: g+n"]] ; Omnifocus [G]o to [N]ow
+                [:p [:km "hotkey: g+p"]] ; Omnifocus [G]o to [P]rojects
+                [:r [:km "hotkey: g+r"]] ; Omnifocus [G]o to [R]outines
+                [:s [:km "hotkey: g+s"]] ; Omnifocus [G]o to [S]oon
+                [:t [:km "hotkey: g+t"]] ; Fantastical [G]o to [T]oday
+                [:w [:km "hotkey: g+w"]] ; Omnifocus [G]o to [W]ork | Fantastical [G]o to [W]eek
+                [:y [:km "hotkey: g+y"]] ; Fantastical [G]o to [Y]ear
+                ]}
+        {:des "Focus on part of window"
+         :rules [:f-mode
+                [:h [:km "hotkey: f+h"]] ; Omni/KM [F]ocus [h](left)
+                [:j [:km "hotkey: f+j"]] ; Omni/KM [F]ocus [j](center)
+                [:l [:km "hotkey: f+l"]] ; Omni/KM [F]ocus [l](right)
+                ]}
+        {:des "Semicolon macros"
          :rules [:semicolon-mode
-                [:s [:km "hotkey: ;+S"]]
-                [:i [:km "hotkey: ;+I"]]
-                [:f [:km "hotkey: ;+F"]]
-                [:c [:km "hotkey: ;+C"]]
-                [:j [:km "hotkey: ;+J"]]
-                [:h [:km "hotkey: ;+H"]]
-                [:l [:km "hotkey: ;+L"]]
-                [:k [:km "hotkey: ;+K"]]
+                [:s [:km "hotkey: ;+s"]]
+                [:i [:km "hotkey: ;+i"]]
                 ]}
         {:des "Window Manipulation mode (wkey)"
 ;         USES BETTER TOUCH TOOL "OTHER" TRIGGERS TO CHANGE WINDOWS
+          ; :rules [:w-mode
+          ;        [:n [:btt "Maximize Window to Next Monitor"]]
+          ;        [:e [:btt "Smaller On Left"]]
+          ;        [:r [:btt "Smaller On Right"]]
+          ;        [:return_or_enter [:btt "Maximize Window"]]
+          ;        [:h [:btt "Maximize Window Left"]]
+          ;        [:j [:btt "Maximize Window to Bottom Half"]]
+          ;        [:k [:btt "Maximize Window to Top Half"]]
+          ;        [:l [:btt "Maximize Window Right"]]
+          ;        [:u [:btt "Resize Window to Top Left Quarter / Corner"]]
+          ;        [:i [:btt "Resize Window to Top Right Quarter / Corner"]]
+          ;        [:m [:btt "Resize Window to Bottom Left Quarter / Corner"]]
+          ;        [:comma [:btt "Resize Window to Bottom Right Quarter / Corner"]]
+          ;        ]}
+;         USES SPECTACLE TO CHANGE WINDOWS
           :rules [:w-mode
-                 [:n [:btt "Maximize Window to Next Monitor"]]
-                 [:e [:btt "Smaller On Left"]]
-                 [:r [:btt "Smaller On Right"]]
-                 [:return_or_enter [:btt "Maximize Window"]]
-                 [:h [:btt "Maximize Window Left"]]
-                 [:j [:btt "Maximize Window to Bottom Half"]]
-                 [:k [:btt "Maximize Window to Top Half"]]
-                 [:l [:btt "Maximize Window Right"]]
-                 [:u [:btt "Resize Window to Top Left Quarter / Corner"]]
-                 [:i [:btt "Resize Window to Top Right Quarter / Corner"]]
-                 [:m [:btt "Resize Window to Bottom Left Quarter / Corner"]]
-                 [:comma [:btt "Resize Window to Bottom Right Quarter / Corner"]]
+                 [:n :!TOSCf15]
+                 [:e [:km "hotkey: w+e"]]
+                 [:r [:km "hotkey: w+r"]]
+                 [:hyphen [:km "hotkey: w+hyphen"]]
+                 [:equal_sign [:km "hotkey: w+equal_sign"]]
+                 [:delete_or_backspace [:km "hotkey: w+delete_or_backspace"]]
+                 [:return_or_enter :!TOSCf19]
+                 [:t :!TOSCf20]
+                 [:h :!TOSCleft_arrow]
+                 [:j :!TOSCdown_arrow]
+                 [:k :!TOSCup_arrow]
+                 [:l :!TOSCright_arrow]
+                 [:i :!TOSCf11]
+                 [:o :!TOSCf13]
+                 [:comma :!TOSCf12]
+                 [:period :!TOSCf14]
                  ]}
-
+        {:des   "misc"
+                 ;; https://superuser.com/a/324267
+         :rules [
+                 [:!CSl [:!Cl :j :a :v :a :s :c :r :i :p :t :!Ssemicolon :return_or_enter] :Chromes]
+                 ]}
         {:des "Vi Mode Spacebar as Trigger Key]"
-         :rules [[:##j :down_arrow :vi-mode]
-                 [:##k :up_arrow :vi-mode]
-                 [:##h :left_arrow :vi-mode]
-                 [:##l :right_arrow :vi-mode]
-                 [:##b :!Oleft_arrow :vi-mode]
-                 [:##w :!Oright_arrow :vi-mode]
-                 [:##e :!Oright_arrow :vi-mode]
-                 [:##i :!Cleft_arrow :vi-mode]
-                 [:##a :!Cright_arrow :vi-mode]
-                 [:##0 :!Ta :vi-mode]
-                 [:##4 :!Te :vi-mode]
-                 [:##open_bracket :!Oup_arrow :vi-mode]
-                 [:##close_bracket :!Odown_arrow :vi-mode]]}
+         :rules [:vi-mode
+                 [:left_shift :left_shift]
+                 [:##j :down_arrow]
+                 [:##k :up_arrow]
+                 [:##h :left_arrow]
+                 [:##l :right_arrow]
+                 [:##b :!Oleft_arrow]
+                 [:##w :!Oright_arrow]
+                 [:##e :!Oright_arrow]
+                 [:##i :!Cleft_arrow]
+                 [:##a :!Cright_arrow]
+                 [:##0 :!Ta]
+                 [:##4 :!Te]
+                 [:##open_bracket :!Oup_arrow]
+                 [:##close_bracket :!Odown_arrow]]}
         {:des "Vi Visual Mode"
          :rules [[:##j :!Sdown_arrow :vi-visual-mode]
                  [:##k :!Sup_arrow :vi-visual-mode]
@@ -140,8 +149,11 @@
                  [:##b :!SOleft_arrow :vi-visual-mode]
                  [:##w :!SOright_arrow :vi-visual-mode]
                  [:##e :!SOright_arrow :vi-visual-mode]
+                 [:##i :!SCleft_arrow :vi-visual-mode]
+                 [:##a :!SCright_arrow :vi-visual-mode]
                  [:##0 :!SCleft_arrow :vi-visual-mode]
                  [:##4 :!SCright_arrow :vi-visual-mode]
                  [:##open_bracket :!SOup_arrow :vi-visual-mode]
                  [:##close_bracket :!SOdown_arrow :vi-visual-mode]]}
         ]}
+

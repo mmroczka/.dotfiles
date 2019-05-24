@@ -5,6 +5,103 @@ echo "| |/ |/ /  __/ / /__/ /_/ / / / / / /  __/  / /  / / /     / /  / / /  / /
 echo "|__/|__/\\___/_/\\___/\\____/_/ /_/ /_/\\___/  /_/  /_/_(_)   /_/  /_/_/   \\____/\\___/ /___/_/|_|\\__,_/  "
 
 ####### CUSTOM FUNCTIONS #######
+proxy_default ()
+{
+    export HTTP_PROXY=http://http-proxy.corporate.ge.com:80;
+    export HTTPS_PROXY=http://http-proxy.corporate.ge.com:80;
+    export http_proxy=http://http-proxy.corporate.ge.com:80;
+    export https_proxy=http://http-proxy.corporate.ge.com:80;
+    export NO_PROXY=localhost,127.0.1.1,*.ge.com;
+    export no_proxy=localhost,127.0.1.1,*.ge.com;
+}
+
+proxy_grc ()
+{
+    export HTTP_PROXY=http://proxy-src.research.ge.com:8080/;
+    export HTTPS_PROXY=http://proxy-src.research.ge.com:8080/;
+    export http_proxy=http://proxy-src.research.ge.com:8080/;
+    export https_proxy=http://proxy-src.research.ge.com:8080/;
+    export NO_PROXY=localhost,127.0.1.1,*.ge.com;
+    export no_proxy=localhost,127.0.1.1,*.ge.com;
+}
+
+proxy_pitc ()
+{
+    export HTTP_PROXY=http://PITC-Zscaler-Americas-Cincinnati3PR.proxy.corporate.ge.com:80;
+    export HTTPS_PROXY=http://PITC-Zscaler-Americas-Cincinnati3PR.proxy.corporate.ge.com:80;
+    export http_proxy=http://PITC-Zscaler-Americas-Cincinnati3PR.proxy.corporate.ge.com:80;
+    export https_proxy=http://PITC-Zscaler-Americas-Cincinnati3PR.proxy.corporate.ge.com:80;
+    export NO_PROXY=localhost,127.0.1.1,*.ge.com;
+    export no_proxy=localhost,127.0.1.1,*.ge.com;
+}
+
+proxy_detroit ()
+{
+    PROXY=http://PITC-Zscaler-US-SanRamon.proxy.corporate.ge.com:8080
+    NO_PROXY=localhost,127.0.0.1,192.168.1.254,api.grc-apps.svc.ice.ge.com,login.grc-apps.svc.ice.ge.com,loggregator.grc-apps.svc.ice.ge.com,uaa.grc-apps.svc.ice.ge.com,console.grc-apps.svc.ice.ge.com,grc-apps.svc.ice.ge.com
+    export HTTP_PROXY=$PROXY
+    export HTTPS_PROXY=$PROXY
+    export http_proxy=$PROXY
+    export https_proxy=$PROXY
+    export NO_PROXY=$NO_PROXY
+    export no_proxy=$NO_PROXY
+
+    echo "PROXY is now: " $PROXY
+    echo "NO_PROXY is now: " $NO_PROXY
+}
+
+proxy_detroit2(){
+    PROXY=http://sjc1intproxy01.crd.ge.com:8080
+    NO_PROXY="api.grc-apps.svc.ice.ge.com,login.grc-apps.svc.ice.ge.com,loggregator.grc-apps.svc.ice.ge.com,uaa.grc-apps.svc.ice.ge.com,console.grc-apps.svc.ice.ge.com,grc-apps.svc.ice.ge.com,github.build.ge.com,github.com"
+    SBT_OPTS="-Dhttp.proxyHost=proxy-src.research.ge.com -Dhttp.proxyPort=8080"
+    JAVA_OPTS="-Dhttp.proxyHost=proxy-src.research.ge.com -Dhttp.proxyPort=8080"
+
+    export HTTP_PROXY=$PROXY
+    export HTTPS_PROXY=$PROXY
+    export NO_PROXY=$NO_PROXY
+
+    export http_proxy=$PROXY
+    export https_proxy=$PROXY
+    export no_proxy=$NO_PROXY
+
+    export RSYNC_PROXY=$PROXY
+    export SBT_OPTS=$SBT_OPTS
+    export JAVA_OPTS=$JAVA_OPTS
+
+    git config --global http.proxy $PROXY
+    git config --global https.proxy $PROXY
+
+    echo "PROXY is now: " $PROXY
+    echo "NO_PROXY is now: " $NO_PROXY
+    echo "RSYNC_PROXY is now: " $PROXY
+    echo "SBT_OPTS is now: " $SBT_OPTS
+    echo "JAVA_OPTS is now: " $SBT_OPTS
+    echo "Set git config --global http.proxy to " $PROXY
+    echo "Set git config --global https.proxy to " $PROXY
+}
+
+proxy_sanramon ()
+{
+    export HTTP_PROXY=http://sjc1intproxy01.crd.ge.com:8080;
+    export HTTPS_PROXY=http://sjc1intproxy01.crd.ge.com:8080;
+    export http_proxy=http://sjc1intproxy01.crd.ge.com:8080;
+    export https_proxy=http://sjc1intproxy01.crd.ge.com:8080;
+    export NO_PROXY=localhost,127.0.1.1,*.ge.com;
+    export no_proxy=localhost,127.0.1.1,*.ge.com;
+}
+
+proxy_off ()
+{
+    unset HTTP_PROXY;
+    unset HTTPS_PROXY;
+    unset X_HTTP_PROXY;
+    unset X_HTTPS_PROXY;
+    unset http_proxy;
+    unset https_proxy;
+    unset NO_PROXY;
+    unset no_proxy;
+}
+
 function origin_to_upstream(){
     `git remote remove upstream`
     `git remote rename origin upstream`
@@ -28,11 +125,22 @@ hideFiles(){
         killall Finder /System/Library/CoreServices/Finder.app
 }
 
-####### CUSTOM EXPORTS #######
 
+# checks for any files flagged w/ --skip-worktree alias
+check="git ls-files -v|grep '^S'"
+# add --skip-worktree flag to file
+skip() {  git update-index --skip-worktree "$@";  git status; }
+# remove --skip-worktree flag from file
+unskip() {  git update-index --no-skip-worktree "$@";  git status; }
+
+####### CUSTOM EXPORTS #######
+export JAVA_HOME=$(/usr/libexec/java_home)
+export M2_HOME=/Users/mikemroczka/apache-maven-3.1.1
+export PATH=$PATH:$M2_HOME/bin
+export PATH=$PATH:/Users/mikemroczka/Code/DTLP_3rd_Rotation/solr-6.6.0/server/scripts/cloud-scripts/zkcli.sh
 
 ####### CUSTOM ALIASES #######
-alias clear="source ~/.bashrc && clear"
+# alias clr="source ~/.bashrc && clear"
 alias gitinfo='
 echo "Remotes";
 echo "-------";
@@ -46,17 +154,10 @@ echo "Status"
 echo "-------";
 git status'
 
-## Proxy Configuration --> proxy stuff from Brett
-#export http_proxy='http://http-proxy.corporate.gtm.ge.com:80'
-#export https_proxy=$http_proxy
-#export HTTP_PROXY=$http_proxy
-#export HTTPS_PROXY=$http_proxy
-#export NO_PROXY='*.ice.ge.com,ice.ge.com,localhost,openge.ge.com,.local,127.0.0.1,localhost,github.build.ge.com,api.grc-pr-apps.ice.ge.com,login.grc-pr-apps.svc.ice.ge.com,loggregator.grc-pr-apps.ice.ge.com,uaa.grc-pr-apps.ice.ge.com,console.grc-pr-apps.ice.ge.com'
-#export no_proxy=$NO_PROXY
-#npm config set proxy $http_proxy
-#npm config set https-proxy $https_proxy
+# export PATH=$HOME/bin:$PATH
+NO_PROXY="github.build.ge.com, localhost, 127.0.0.1, api.grc-apps.svc.ice.ge.com,login.grc-apps.svc.ice.ge.com,loggregator.grc-apps.svc.ice.ge.com,uaa.grc-apps.svc.ice.ge.com,console.grc-apps.svc.ice.ge.com,grc-apps.svc.ice.ge.com"
+PROXY=http://3.28.29.241:88
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

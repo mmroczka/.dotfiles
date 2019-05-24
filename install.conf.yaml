@@ -9,17 +9,19 @@
     ~/.tmux.conf: tmux/tmux.conf
     ~/.tmux.conf.local: tmux/tmux.conf.local
     ~/.bashrc: bash/bashrc
+    ~/.bash_profile: bash/bash_profile
     ~/.config/karabiner: karabiner
     ~/.config/karabiner.edn: karabiner/karabiner.edn
     ~/.gitignore_global: git/gitignore_global
     ~/.hammerspoon: hammerspoon
-    ~/.npmrc: npm/work_npmrc
+    ~/.npmrc: node/work_npmrc
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
     ~/Code/MacSettingsBackup: MacSettingsBackup
     ~/odrive/Dropbox/MacSettingsBackup: MacSettingsBackup
     ~/.ideavimrc: vim/ideavimrc
     ~/.vrapperrc: vim/vrapperrc
+    ~/Code/MacSettingsBackup: MacSettingsBackup
     ~/Library/Application Support/Code/User/settings.json: vim/vs_code_vim_settings
     ~/.yarnrc: yarn/yarnrc
     ~/.zshrc: zsh/zshrc
