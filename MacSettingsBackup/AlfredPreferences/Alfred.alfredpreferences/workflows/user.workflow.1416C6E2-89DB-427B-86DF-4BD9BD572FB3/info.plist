@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.troycurtisjr.alfred.donotdisturblimited</string>
+	<key>connections</key>
+	<dict>
+		<key>13B86EBF-398D-47BC-8AB8-256696D6B7BF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9B103CE1-1D5D-4191-9FB1-E374E6F6A86D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>2514FA74-04DA-4EDC-8B20-73340AFEBA37</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DFE4E4E7-9089-49B3-BBB7-F1A6D29F8F9A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>27131701-96ED-410F-BA6D-657327D4C76D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9360B32B-F712-49B1-A0AC-1476B94E3DD4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>2D022CF1-C0D6-4C00-8855-B4C57A02FB93</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>13B86EBF-398D-47BC-8AB8-256696D6B7BF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3E435725-836B-4634-BF9F-B8DBADDDEABF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2514FA74-04DA-4EDC-8B20-73340AFEBA37</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4F92B651-BA82-4E64-B62F-F5CE5B023B8A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2D022CF1-C0D6-4C00-8855-B4C57A02FB93</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>52138577-F9B4-4048-ADA8-C0472FB05726</key>
+		<array/>
+		<key>9360B32B-F712-49B1-A0AC-1476B94E3DD4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>93815A0B-DE67-4CE8-8EA0-D7B2099DB9E8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>52138577-F9B4-4048-ADA8-C0472FB05726</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>93815A0B-DE67-4CE8-8EA0-D7B2099DB9E8</key>
+		<array/>
+		<key>9B103CE1-1D5D-4191-9FB1-E374E6F6A86D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>27131701-96ED-410F-BA6D-657327D4C76D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A68C56C3-744E-41BE-B2DB-5D259A917D69</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2514FA74-04DA-4EDC-8B20-73340AFEBA37</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>DFE4E4E7-9089-49B3-BBB7-F1A6D29F8F9A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9B103CE1-1D5D-4191-9FB1-E374E6F6A86D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>4F92B651-BA82-4E64-B62F-F5CE5B023B8A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Troy Curtis</string>
+	<key>description</key>
+	<string>Do Not Disturb, optionally with a time limit</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Do Not Disturb, Limited</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>com.troycurtisjr.alfred.donotdisturblimited.toggle</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>A68C56C3-744E-41BE-B2DB-5D259A917D69</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Do Not Disturb has been {var:desiredState} {var:delayMsg}</string>
+				<key>title</key>
+				<string>Do Not Disturb</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>93815A0B-DE67-4CE8-8EA0-D7B2099DB9E8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>import sys
+import json
+import os
+
+desiredState = os.environ.get("dndDesiredState")
+timeLimitMin = int(os.environ.get("timeLimitMin", 0))
+
+if timeLimitMin &gt; 0:
+    delayMsg="for %d minutes" % timeLimitMin
+    timeLimitSec=timeLimitMin * 60
+    timeoutState="disabled" if desiredState == "enabled" else "enabled"
+else:
+    delayMsg=""
+    timeLimitSec=0
+    timeoutState=""
+
+sys.stdout.write(json.dumps(
+{
+  "alfredworkflow" : {
+    "config" : {},
+    "variables" : {
+  	  "delayMsg": delayMsg,
+      "desiredState": desiredState,
+      "timeoutState": timeoutState,
+      "timeLimitMin": timeLimitMin,
+      "timeLimitSec": timeLimitSec
+    }
+  }
+}))</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>DFE4E4E7-9089-49B3-BBB7-F1A6D29F8F9A</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>count</key>
+				<integer>1</integer>
+				<key>keychar</key>
+				<string>`</string>
+				<key>keycode</key>
+				<integer>-1</integer>
+				<key>keymod</key>
+				<integer>1966080</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.dispatchkeycombo</string>
+			<key>uid</key>
+			<string>9360B32B-F712-49B1-A0AC-1476B94E3DD4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>val=$(defaults -currentHost read "${HOME}/Library/Preferences/ByHost/com.apple.notificationcenterui doNotDisturb)
+if [ "$val" = 0 ]
+then
+  echo "disabled"
+else
+  echo "enabled"
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>dndenabled.sh</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>9B103CE1-1D5D-4191-9FB1-E374E6F6A86D</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string></string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>{var:desiredState}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>27131701-96ED-410F-BA6D-657327D4C76D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>2514FA74-04DA-4EDC-8B20-73340AFEBA37</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>dnd</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Getting status…</string>
+				<key>script</key>
+				<string>require 'json'
+require 'open3'
+
+script_filter_items = []
+dnd_active = Open3.capture2('./dndenabled.sh').first.strip == 'enabled' ? true : false
+
+if ARGV.length &gt; 0
+  sleeptimeMin = ARGV[0].to_i
+else
+  sleeptimeMin = 0
+end
+
+if sleeptimeMin &gt; 0
+  enabledSubtitle = 'Stop notifications for ' + ARGV[0] + ' minutes'
+else
+  enabledSubtitle = 'Stop notifications from going through until tomorrow'
+end
+  
+if dnd_active
+  script_filter_items.push(
+    title: 'Turn it off',
+    subtitle: 'Allow notifications again',
+    variables: {
+      dndDesiredState: 'disabled',
+      timeLimitMin: sleeptimeMin,
+    },
+  )
+else
+  script_filter_items.push(
+    title: 'Turn it on',
+    subtitle: enabledSubtitle,
+    variables: {
+      dndDesiredState: 'enabled',
+	  timeLimitMin: sleeptimeMin,
+    },
+  )
+end
+
+puts({ items: script_filter_items }.to_json)</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Toggle Do Not Disturb</string>
+				<key>title</key>
+				<string>Do Not Disturb</string>
+				<key>type</key>
+				<integer>2</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>3E435725-836B-4634-BF9F-B8DBADDDEABF</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>soundname</key>
+				<string>Glass</string>
+				<key>systemsound</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>52138577-F9B4-4048-ADA8-C0472FB05726</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>variables</key>
+				<dict>
+					<key>delayMsg</key>
+					<string></string>
+					<key>desiredState</key>
+					<string>{var:timeoutState}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>13B86EBF-398D-47BC-8AB8-256696D6B7BF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:timeLimitMin}</string>
+				<key>matchcasesensitive</key>
+				<false/>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>0</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>4F92B651-BA82-4E64-B62F-F5CE5B023B8A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>seconds</key>
+				<string>{var:timeLimitSec}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.delay</string>
+			<key>uid</key>
+			<string>2D022CF1-C0D6-4C00-8855-B4C57A02FB93</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>SETUP
+=======
+You must set the "Toggle Do Not Disturb" keyboard shortcut in the Mac Keyboard -&gt; Shortcuts settings pane to match the "Key Combo" element. I have defaulted it to Cmd+Opt+Ctrl+Shift+D, but you can change it to whatever you prefer. Note that I was never able to make the function keys (e.g. F1, F2, etc) to work in the Key Combo.
+
+More detailed instructions can be found at https://gitlab.com/troycurtisjr/do-not-disturb-limited
+
+ Usage
+=======
+Call `dnd` to toggle Do Not Disturb.
+
+Call `dnd &lt;number of minutes&gt;` to toggle Do Not Disturb for the specified number of minutes.
+
+ Explanation
+=============
+I chose to use a keyboard combination to toggle Do Not Disturb instead of writing to the plist file and killing the Notification Center because it seems cleaner, and the state is correctly indicated by the the noticication entry in the menu bar.
+
+
+ Credits
+=========
+I took great inspiration from Vítor Galvão's CalmNotifications workflow which you can find here:
+
+https://github.com/vitorgalvao/alfred-workflows/tree/master/CalmNotifications
+
+Icons made by Pixel perfect.
+https://www.flaticon.com/authors/pixel-perfect
+
+Creative Commons BY 3.0
+http://creativecommons.org/licenses/by/3.0/
+
+Licenced MIT</string>
+	<key>uidata</key>
+	<dict>
+		<key>13B86EBF-398D-47BC-8AB8-256696D6B7BF</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>6</integer>
+			<key>xpos</key>
+			<integer>570</integer>
+			<key>ypos</key>
+			<integer>220</integer>
+		</dict>
+		<key>2514FA74-04DA-4EDC-8B20-73340AFEBA37</key>
+		<dict>
+			<key>xpos</key>
+			<integer>190</integer>
+			<key>ypos</key>
+			<integer>120</integer>
+		</dict>
+		<key>27131701-96ED-410F-BA6D-657327D4C76D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>810</integer>
+			<key>ypos</key>
+			<integer>120</integer>
+		</dict>
+		<key>2D022CF1-C0D6-4C00-8855-B4C57A02FB93</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>6</integer>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<integer>220</integer>
+		</dict>
+		<key>3E435725-836B-4634-BF9F-B8DBADDDEABF</key>
+		<dict>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>150</integer>
+		</dict>
+		<key>4F92B651-BA82-4E64-B62F-F5CE5B023B8A</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>6</integer>
+			<key>xpos</key>
+			<integer>430</integer>
+			<key>ypos</key>
+			<integer>220</integer>
+		</dict>
+		<key>52138577-F9B4-4048-ADA8-C0472FB05726</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1240</integer>
+			<key>ypos</key>
+			<integer>200</integer>
+		</dict>
+		<key>9360B32B-F712-49B1-A0AC-1476B94E3DD4</key>
+		<dict>
+			<key>xpos</key>
+			<integer>880</integer>
+			<key>ypos</key>
+			<integer>90</integer>
+		</dict>
+		<key>93815A0B-DE67-4CE8-8EA0-D7B2099DB9E8</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1240</integer>
+			<key>ypos</key>
+			<integer>40</integer>
+		</dict>
+		<key>9B103CE1-1D5D-4191-9FB1-E374E6F6A86D</key>
+		<dict>
+			<key>note</key>
+			<string>dndenabled</string>
+			<key>xpos</key>
+			<integer>660</integer>
+			<key>ypos</key>
+			<integer>90</integer>
+		</dict>
+		<key>A68C56C3-744E-41BE-B2DB-5D259A917D69</key>
+		<dict>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>30</integer>
+		</dict>
+		<key>DFE4E4E7-9089-49B3-BBB7-F1A6D29F8F9A</key>
+		<dict>
+			<key>note</key>
+			<string>Variable Calculations</string>
+			<key>xpos</key>
+			<integer>260</integer>
+			<key>ypos</key>
+			<integer>90</integer>
+		</dict>
+	</dict>
+	<key>version</key>
+	<string>v0.1.2</string>
+	<key>webaddress</key>
+	<string>https://gitlab.com/troycurtisjr/do-not-disturb-limited</string>
+</dict>
+</plist>

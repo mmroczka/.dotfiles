@@ -19,6 +19,7 @@
     ~/.vimrc: vim/vimrc
     ~/Code/MacSettingsBackup: MacSettingsBackup
     ~/odrive/Dropbox/MacSettingsBackup: MacSettingsBackup
+    ~/odrive/OneDrive/MacSettingsBackup: MacSettingsBackup
     ~/.ideavimrc: vim/ideavimrc
     ~/.vrapperrc: vim/vrapperrc
     ~/Code/MacSettingsBackup: MacSettingsBackup

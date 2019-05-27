@@ -17,6 +17,32 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>18772BE7-C418-4539-90D6-ECD0D8C8B544</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>abb</string>
+			<key>text</key>
+			<string>audiobookbay</string>
+			<key>url</key>
+			<string>http://audiobookbay.nl/?s={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>2E444DBB-150C-4768-AD9A-9C8D4BA4D7B5</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>lbg</string>
+			<key>text</key>
+			<string>Library Genesis</string>
+			<key>url</key>
+			<string>http://gen.lib.rus.ec/search.php?req={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>6DFA3216-A5BB-42F1-BE86-934870DD13D8</key>
 		<dict>
 			<key>enabled</key>
@@ -27,6 +53,19 @@
 			<string>Google Calendar</string>
 			<key>url</key>
 			<string>http://calendar.google.com/calendar/render?tab=wc</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>89DEFA27-875F-45D7-ADE5-6E5A5CCEEC44</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>tpb</string>
+			<key>text</key>
+			<string>The Pirate Bay</string>
+			<key>url</key>
+			<string>https://thepiratebays3.com/search?q={query}</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
@@ -44,5 +83,7 @@
 			<true/>
 		</dict>
 	</dict>
+	<key>onlyShowEnabledInPrefs</key>
+	<true/>
 </dict>
 </plist>

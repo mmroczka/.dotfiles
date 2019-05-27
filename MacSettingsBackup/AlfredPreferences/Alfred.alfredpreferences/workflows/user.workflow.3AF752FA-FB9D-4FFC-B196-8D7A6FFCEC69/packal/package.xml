@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<workflow>
+  <name>Menubar-autohide</name>
+  <version>0.1</version>
+  <bundle>space.tsouhaieb.menubar-autohide</bundle>
+  <updated>1558198353</updated>
+  <file>menubar-autohide.alfredworkflow</file>
+</workflow>

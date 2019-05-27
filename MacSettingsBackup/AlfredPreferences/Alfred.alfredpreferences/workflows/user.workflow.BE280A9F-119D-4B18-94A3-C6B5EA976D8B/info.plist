@@ -67,12 +67,16 @@
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>pows</string>
+				<string>syn</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -110,12 +114,16 @@
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>powa</string>
+				<string>ant</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>

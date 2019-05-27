@@ -77,7 +77,7 @@
 	<key>description</key>
 	<string></string>
 	<key>disabled</key>
-	<false/>
+	<true/>
 	<key>name</key>
 	<string>Do Not Disturb Toggle</string>
 	<key>objects</key>
