@@ -17,8 +17,8 @@
  :simlayers {:caps_lock-mode {:key :caps_lock}
              :l-mode {:key :l}
              :semicolon-mode {:key :semicolon}
-             :superduper-mode {:key :f20} ; Bind an unused key
-             :a-mode {:key :f}
+             :navigation-mode {:key :f24} ; Bind an unused key
+             :f-mode {:key :f}
              :u-mode {:key :u}
              :w-mode {:key :w}
              :g-mode {:key :g}
@@ -75,12 +75,12 @@
                 [:w [:km "hotkey: g+w"]] ; Omnifocus [G]o to [W]ork | Fantastical [G]o to [W]eek
                 [:y [:km "hotkey: g+y"]] ; Fantastical [G]o to [Y]ear
                 ]}
-        ; {:des "Focus on part of window"
-        ;  :rules [:f-mode
-        ;         [:h [:km "hotkey: f+h"]] ; Omni/KM [F]ocus [h](left)
-        ;         [:j [:km "hotkey: f+j"]] ; Omni/KM [F]ocus [j](center)
-        ;         [:l [:km "hotkey: f+l"]] ; Omni/KM [F]ocus [l](right)
-        ;         ]}
+        {:des "Focus on part of window"
+         :rules [:f-mode
+                [:h [:km "hotkey: f+h"]] ; Omni/KM [F]ocus [h](left)
+                [:j [:km "hotkey: f+j"]] ; Omni/KM [F]ocus [j](center)
+                [:l [:km "hotkey: f+l"]] ; Omni/KM [F]ocus [l](right)
+                ]}
         {:des "Semicolon macros"
          :rules [:semicolon-mode
                 [:s [:km "hotkey: ;+s"]]
@@ -126,7 +126,6 @@
          :rules [
                  [:!CSl [:!Cl :j :a :v :a :s :c :r :i :p :t :!Ssemicolon :return_or_enter] :Chromes]
                  ]}
-        ; SuperDuper Mode with S+D
         {:des "SuperDuper <- S+D" :rules [[{:sim [:s :d]
                                      :simo {:interrupt true
                                             :dorder :insensitive
@@ -136,12 +135,11 @@
         {:des "SuperDuper J -> Down" :rules [:superduper-mode [:##j :down_arrow]]}
         {:des "SuperDuper K -> Up" :rules [:superduper-mode [:##k :up_arrow]]}
         {:des "SuperDuper L -> Right" :rules [:superduper-mode [:##l :right_arrow]]}
-        {:des "SuperDuper F -> Delete" :rules [:superduper-mode [:##f :delete_or_backspace]]}
-        {:des "SuperDuper ; -> Forward Delete" :rules [:superduper-mode [:##semicolon :delete_forward]]}
-        {:des "SuperDuper I -> Prev Tab" :rules [:superduper-mode [:##i :!CSopen_bracket]]}
-        {:des "SuperDuper O -> Next Tab" :rules [:superduper-mode [:##o :!CSclose_bracket]]}
-        {:des "SuperDuper A -> Option" :rules [:superduper-mode [:##a :left_option]]}
         {:des "SuperDuper V -> Shift" :rules [:superduper-mode [:##v :left_shift]]}
+        {:des "SuperDuper I -> Back to Beginning" :rules [:superduper-mode [:##i :!Cleft_arrow]]}
+        {:des "SuperDuper O -> Forward to Front" :rules [:superduper-mode [:##o :!Cright_arrow]]}
+        {:des "SuperDuper N -> Back 1 Word" :rules [:superduper-mode [:##n :!Oleft_arrow]]}
+        {:des "SuperDuper M -> Forward 1 Word" :rules [:superduper-mode [:##m :!Oright_arrow]]}
 
         {:des "Vi Mode Spacebar as Trigger Key]"
          :rules [:vi-mode
