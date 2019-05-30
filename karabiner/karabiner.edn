@@ -18,6 +18,7 @@
              :l-mode {:key :l}
              :semicolon-mode {:key :semicolon}
              :navigation-mode {:key :f24} ; Bind an unused key
+             :c-mode {:key :c}
              :f-mode {:key :f}
              :u-mode {:key :u}
              :w-mode {:key :w}
@@ -74,6 +75,17 @@
                 [:t [:km "hotkey: g+t"]] ; Fantastical [G]o to [T]oday
                 [:w [:km "hotkey: g+w"]] ; Omnifocus [G]o to [W]ork | Fantastical [G]o to [W]eek
                 [:y [:km "hotkey: g+y"]] ; Fantastical [G]o to [Y]ear
+                ]}
+        {:des "[C]hange property mode"
+         :rules [:c-mode
+                [:d [:km "hotkey: c+d"]] ; Omnifocus [C]hange [D]ue date
+                [:e [:km "hotkey: c+e"]] ; Omnifocus [C]hange [E]stimated Time
+                [:f [:km "hotkey: c+f"]] ; Omnifocus [C]hange [F]lag toggle
+                [:n [:km "hotkey: c+n"]] ; Omnifocus [C]hange [N]otes
+                [:p [:km "hotkey: c+p"]] ; Omnifocus [C]hange [P]roject
+                [:r [:km "hotkey: c+r"]] ; Omnifocus [C]hange [R]epeat
+                [:s [:km "hotkey: c+s"]] ; Omnifocus [C]hange [S]tart date (Defer date)
+                [:t [:km "hotkey: c+t"]] ; Omnifocus [C]hange [T]ags
                 ]}
         {:des "Focus on part of window"
          :rules [:f-mode
