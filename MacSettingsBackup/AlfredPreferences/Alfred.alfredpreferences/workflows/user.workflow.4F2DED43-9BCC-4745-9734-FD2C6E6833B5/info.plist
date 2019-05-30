@@ -42,6 +42,26 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>F52A0230-7EF0-400C-A869-5016BCB5C8D2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>00E56B89-C280-4862-8642-25DB6234114B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
@@ -62,7 +82,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>https://app.youneedabudget.com/0f2a34f9-2ddf-45a6-8e25-dca325f42990/budget</string>
+				<string>https://app.youneedabudget.com/5d0e21c9-e02a-4de1-bd0f-ee56d749ade6/budget</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -132,11 +152,56 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://global.americanexpress.com/login/en-US</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>F52A0230-7EF0-400C-A869-5016BCB5C8D2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://www.chase.com/</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>00E56B89-C280-4862-8642-25DB6234114B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>Created by the Alfred team!</string>
 	<key>uidata</key>
 	<dict>
+		<key>00E56B89-C280-4862-8642-25DB6234114B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>310</integer>
+			<key>ypos</key>
+			<integer>590</integer>
+		</dict>
 		<key>1D1A451A-281D-4417-BFFA-AB88A73A5D31</key>
 		<dict>
 			<key>xpos</key>
@@ -149,7 +214,7 @@
 			<key>xpos</key>
 			<integer>300</integer>
 			<key>ypos</key>
-			<integer>50</integer>
+			<integer>40</integer>
 		</dict>
 		<key>DCCA47C8-82B7-4E15-9A45-A109AE3A4796</key>
 		<dict>
@@ -158,12 +223,19 @@
 			<key>ypos</key>
 			<integer>170</integer>
 		</dict>
+		<key>F52A0230-7EF0-400C-A869-5016BCB5C8D2</key>
+		<dict>
+			<key>xpos</key>
+			<integer>305</integer>
+			<key>ypos</key>
+			<integer>450</integer>
+		</dict>
 		<key>F8C5D133-7C4D-44F2-845B-FAE1568A09E7</key>
 		<dict>
 			<key>xpos</key>
-			<integer>60</integer>
+			<integer>50</integer>
 			<key>ypos</key>
-			<integer>180</integer>
+			<integer>300</integer>
 		</dict>
 	</dict>
 	<key>version</key>
