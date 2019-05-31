@@ -38,7 +38,8 @@
                          [:i [:km "open: iTerm"]]
                          [:k [:km "open: Keyboard Maestro"]]
                          [:m [:km "open: Omnifocus"]]
-                         [:n [:km "open: Notes"]]
+                         ;[:n [:km "open: Notes"]]
+                         [:n [:km "open: nvALT"]]
                          [:o [:km "open: Outlook"]]
                          [:r [:km "open: Editor"]]
                          [:s [:km "open: Skype"]]
@@ -187,6 +188,6 @@
                  [:##open_bracket :!SOup_arrow :vi-visual-mode]
                  [:##close_bracket :!SOdown_arrow :vi-visual-mode]]}
         ]
-  :simlayer-threshold 250
+  :simlayer-threshold 150
 }
 
