@@ -854,8 +854,7 @@
             "key_code" : "i"
           },
           "to" : [ {
-            "key_code" : "close_bracket",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"WiFi -> Internet\"'"
           } ],
           "conditions" : [ {
             "name" : "u-mode",
@@ -874,8 +873,7 @@
               "value" : 1
             }
           }, {
-            "key_code" : "close_bracket",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"WiFi -> Internet\"'"
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -901,8 +899,7 @@
             "key_code" : "b"
           },
           "to" : [ {
-            "key_code" : "backslash",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"WiFi -> BLUESSO\"'"
           } ],
           "conditions" : [ {
             "name" : "u-mode",
@@ -921,14 +918,58 @@
               "value" : 1
             }
           }, {
-            "key_code" : "backslash",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"WiFi -> BLUESSO\"'"
           } ],
           "from" : {
             "simultaneous" : [ {
               "key_code" : "u"
             }, {
               "key_code" : "b"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "u-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        }, {
+          "from" : {
+            "key_code" : "d"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"WiFi -> Doxie\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "u-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "u-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"WiFi -> Doxie\"'"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "u"
+            }, {
+              "key_code" : "d"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,
