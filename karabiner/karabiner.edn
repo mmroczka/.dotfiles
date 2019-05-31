@@ -30,21 +30,23 @@
         {:des "lkey (launch mode)"
                  :rules [:l-mode
                          [:a [:km "open: Activity Monitor"]]
-                         [:c [:km "open: Chrome"]]
-                         [:m [:km "open: Omnifocus"]]
-                         [:caps_lock [:km "open: Finder"]]
                          [:b [:km "open: BetterTouchTool"]]
+                         [:c [:km "open: Chrome"]]
                          [:d :!OSC1] ; Open Dash
                          [:f [:km "open: Fantastical"]]
-                         [:z [:km "open: Franz"]]
+                         [:g [:km "open: Messages"]]
+                         [:i [:km "open: iTerm"]]
+                         [:k [:km "open: Keyboard Maestro"]]
+                         [:m [:km "open: Omnifocus"]]
                          [:n [:km "open: Notes"]]
                          [:o [:km "open: Outlook"]]
+                         [:r [:km "open: Editor"]]
                          [:s [:km "open: Skype"]]
                          [:t [:km "open: Teams"]]
-                         [:i [:km "open: iTerm"]]
                          [:w [:km "open: BitWarden"]]
-                         [:r [:km "open: Editor"]]
-                         [:k [:km "open: Keyboard Maestro"]]]}
+                         [:z [:km "open: Franz"]]
+                         [:caps_lock [:km "open: Finder"]]
+                         ]}
         {:des "ukey (media)"
          :rules [:u-mode
                  [:t :mute]

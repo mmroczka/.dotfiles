@@ -79,141 +79,6 @@
           }
         }, {
           "from" : {
-            "key_code" : "c"
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Chrome\"'"
-          } ],
-          "conditions" : [ {
-            "name" : "l-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "l-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Chrome\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "l"
-            }, {
-              "key_code" : "c"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "l-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "m"
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Omnifocus\"'"
-          } ],
-          "conditions" : [ {
-            "name" : "l-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "l-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Omnifocus\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "l"
-            }, {
-              "key_code" : "m"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "l-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "caps_lock"
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Finder\"'"
-          } ],
-          "conditions" : [ {
-            "name" : "l-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "l-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Finder\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "l"
-            }, {
-              "key_code" : "caps_lock"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "l-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
             "key_code" : "b"
           },
           "to" : [ {
@@ -243,6 +108,51 @@
               "key_code" : "l"
             }, {
               "key_code" : "b"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "l-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        }, {
+          "from" : {
+            "key_code" : "c"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Chrome\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "l-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "l-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Chrome\"'"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "l"
+            }, {
+              "key_code" : "c"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,
@@ -351,10 +261,10 @@
           }
         }, {
           "from" : {
-            "key_code" : "z"
+            "key_code" : "g"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Franz\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Messages\"'"
           } ],
           "conditions" : [ {
             "name" : "l-mode",
@@ -373,13 +283,148 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Franz\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Messages\"'"
           } ],
           "from" : {
             "simultaneous" : [ {
               "key_code" : "l"
             }, {
-              "key_code" : "z"
+              "key_code" : "g"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "l-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        }, {
+          "from" : {
+            "key_code" : "i"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: iTerm\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "l-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "l-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: iTerm\"'"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "l"
+            }, {
+              "key_code" : "i"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "l-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        }, {
+          "from" : {
+            "key_code" : "k"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Keyboard Maestro\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "l-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "l-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Keyboard Maestro\"'"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "l"
+            }, {
+              "key_code" : "k"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "l-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        }, {
+          "from" : {
+            "key_code" : "m"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Omnifocus\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "l-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "l-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Omnifocus\"'"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "l"
+            }, {
+              "key_code" : "m"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,
@@ -486,6 +531,51 @@
           }
         }, {
           "from" : {
+            "key_code" : "r"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Editor\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "l-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "l-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Editor\"'"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "l"
+            }, {
+              "key_code" : "r"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "l-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        }, {
+          "from" : {
             "key_code" : "s"
           },
           "to" : [ {
@@ -576,51 +666,6 @@
           }
         }, {
           "from" : {
-            "key_code" : "i"
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: iTerm\"'"
-          } ],
-          "conditions" : [ {
-            "name" : "l-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "l-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: iTerm\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "l"
-            }, {
-              "key_code" : "i"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "l-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
             "key_code" : "w"
           },
           "to" : [ {
@@ -666,10 +711,10 @@
           }
         }, {
           "from" : {
-            "key_code" : "r"
+            "key_code" : "z"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Editor\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Franz\"'"
           } ],
           "conditions" : [ {
             "name" : "l-mode",
@@ -688,13 +733,13 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Editor\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Franz\"'"
           } ],
           "from" : {
             "simultaneous" : [ {
               "key_code" : "l"
             }, {
-              "key_code" : "r"
+              "key_code" : "z"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,
@@ -711,10 +756,10 @@
           }
         }, {
           "from" : {
-            "key_code" : "k"
+            "key_code" : "caps_lock"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Keyboard Maestro\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Finder\"'"
           } ],
           "conditions" : [ {
             "name" : "l-mode",
@@ -733,13 +778,13 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Keyboard Maestro\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Finder\"'"
           } ],
           "from" : {
             "simultaneous" : [ {
               "key_code" : "l"
             }, {
-              "key_code" : "k"
+              "key_code" : "caps_lock"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,
