@@ -90,16 +90,6 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>93815A0B-DE67-4CE8-8EA0-D7B2099DB9E8</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>52138577-F9B4-4048-ADA8-C0472FB05726</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -109,8 +99,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>93815A0B-DE67-4CE8-8EA0-D7B2099DB9E8</key>
-		<array/>
 		<key>9B103CE1-1D5D-4191-9FB1-E374E6F6A86D</key>
 		<array>
 			<dict>
@@ -187,27 +175,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>Do Not Disturb has been {var:desiredState} {var:delayMsg}</string>
-				<key>title</key>
-				<string>Do Not Disturb</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>93815A0B-DE67-4CE8-8EA0-D7B2099DB9E8</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -262,7 +229,7 @@ sys.stdout.write(json.dumps(
 				<key>count</key>
 				<integer>1</integer>
 				<key>keychar</key>
-				<string>`</string>
+				<string>3</string>
 				<key>keycode</key>
 				<integer>-1</integer>
 				<key>keymod</key>
@@ -307,6 +274,21 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>soundname</key>
+				<string>Glass</string>
+				<key>systemsound</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>52138577-F9B4-4048-ADA8-C0472FB05726</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>inputstring</key>
 				<string></string>
 				<key>matchcasesensitive</key>
@@ -338,6 +320,8 @@ fi</string>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -414,22 +398,7 @@ puts({ items: script_filter_items }.to_json)</string>
 			<key>uid</key>
 			<string>3E435725-836B-4634-BF9F-B8DBADDDEABF</string>
 			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>soundname</key>
-				<string>Glass</string>
-				<key>systemsound</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.playsound</string>
-			<key>uid</key>
-			<string>52138577-F9B4-4048-ADA8-C0472FB05726</string>
-			<key>version</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -568,9 +537,9 @@ Licenced MIT</string>
 		<key>52138577-F9B4-4048-ADA8-C0472FB05726</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1240</integer>
+			<integer>1070</integer>
 			<key>ypos</key>
-			<integer>200</integer>
+			<integer>90</integer>
 		</dict>
 		<key>9360B32B-F712-49B1-A0AC-1476B94E3DD4</key>
 		<dict>
@@ -578,13 +547,6 @@ Licenced MIT</string>
 			<integer>880</integer>
 			<key>ypos</key>
 			<integer>90</integer>
-		</dict>
-		<key>93815A0B-DE67-4CE8-8EA0-D7B2099DB9E8</key>
-		<dict>
-			<key>xpos</key>
-			<integer>1240</integer>
-			<key>ypos</key>
-			<integer>40</integer>
 		</dict>
 		<key>9B103CE1-1D5D-4191-9FB1-E374E6F6A86D</key>
 		<dict>

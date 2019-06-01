@@ -1,16 +1,16 @@
 {:profiles
  {:MrStark {:default true
-         :sim     50
-         :delay   500
-         :alone   500
-         :held    500}}
+         :sim     10
+         :delay   100
+         :alone   100
+         :held    100}}
  :applications {:vim-mode-disabled-application ["^com\\.apple\\.Terminal$",
                                                 "^com\\.googlecode\\.iterm2$",
                                                 "^org\\.vim\\."]
                 :Chromes                       ["^com\\.google\\.Chrome$", "^org\\.chromium\\.Chromium$", "^com\\.google\\.Chrome\\.canary$"]
                 :Terminals                     ["^com\\.apple\\.Terminal$", "^com\\.googlecode\\.iterm2$", "^io\\.alacritty$"]
                }
- :templates {:alfred "osascript -e 'tell application \"Alfred 3\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
+ :templates {:alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
              :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"
              :btt "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"%s\"'"
              }
@@ -188,6 +188,6 @@
                  [:##open_bracket :!SOup_arrow :vi-visual-mode]
                  [:##close_bracket :!SOdown_arrow :vi-visual-mode]]}
         ]
-  :simlayer-threshold 150
+  :simlayer-threshold 50
 }
 
