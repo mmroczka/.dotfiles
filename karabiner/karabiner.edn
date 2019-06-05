@@ -15,39 +15,42 @@
              :btt "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"%s\"'"
              }
  :simlayers {:caps_lock-mode {:key :caps_lock}
-             :l-mode {:key :l}
-             :semicolon-mode {:key :semicolon}
+             ;:l-mode {:key :l}
+             ;:semicolon-mode {:key :semicolon}
              :navigation-mode {:key :f24} ; Bind an unused key
-             :c-mode {:key :c}
-             :f-mode {:key :f}
-             :u-mode {:key :u}
-             :w-mode {:key :w}
-             :g-mode {:key :g}
+             ;:c-mode {:key :c}
+             ;:f-mode {:key :f}
+             ;:u-mode {:key :u}
+             window_manipulation_mode {:key :f23}
+             ;:g-mode {:key :g}
              :vi-mode {:key :spacebar}
              :vi-visual-mode {:key :v :condi :!vim-mode-disabled-application}}
  :main [{:des "Caps -> Hyper / Esc"
           :rules [[:##caps_lock :!CTOleft_shift nil {:alone :escape}]]}
-        {:des "lkey (launch mode)"
-                 :rules [:l-mode
-                         [:a [:km "open: Activity Monitor"]]
-                         [:b [:km "open: BetterTouchTool"]]
-                         [:c [:km "open: Chrome"]]
-                         [:d :!OSC1] ; Open Dash
-                         [:f [:km "open: Fantastical"]]
-                         [:g [:km "open: Messages"]]
-                         [:i [:km "open: iTerm"]]
-                         [:k [:km "open: Keyboard Maestro"]]
-                         [:m [:km "open: Omnifocus"]]
-                         ;[:n [:km "open: Notes"]]
-                         [:n [:km "open: nvALT"]]
-                         [:o [:km "open: Outlook"]]
-                         [:r [:km "open: Editor"]]
-                         [:s [:km "open: Skype"]]
-                         [:t [:km "open: Teams"]]
-                         [:w [:km "open: BitWarden"]]
-                         [:z [:km "open: Franz"]]
-                         [:caps_lock [:km "open: Finder"]]
-                         ]}
+        {:des "Launch mode (l+;)" :rules [[{:sim [:l :semicolon]
+                                     :simo {:interrupt true
+                                            :dorder :insensitive
+                                            :uorder :insensitive
+                                            :afterup {:set ["launch_mode" 0]}}} {:set ["launch_mode" 1]}]]}
+        {:des "Launch mode -> a (Open Activity Monitor)" :rules [:launch_mode [:##a [:km "open: Activity Monitor"]]]}
+        {:des "Launch mode -> b (Open BetterTouchTool)" :rules [:launch_mode [:##b [:km "open: BetterTouchTool"]]]}
+        {:des "Launch mode -> c (Open Chrome)" :rules [:launch_mode [:##c [:km "open: Chrome"]]]}
+        {:des "Launch mode -> d (Open Dash)" :rules [:launch_mode [:##d :!!OSC1]]}
+        {:des "Launch mode -> f (Open Fantastical)" :rules [:launch_mode [:##f [:km "open: Fantastical"]]]}
+        {:des "Launch mode -> g (Open Fantastical)" :rules [:launch_mode [:##g [:km "open: Messages"]]]}
+        {:des "Launch mode -> h (Open Postman)" :rules [:launch_mode [:##h [:km "open: Postman"]]]}
+        {:des "Launch mode -> i (Open iTerm)" :rules [:launch_mode [:##i [:km "open: iTerm"]]]}
+        {:des "Launch mode -> k (Open Keyboard Maestro)" :rules [:launch_mode [:##k [:km "open: Keyboard Maestro"]]]}
+        {:des "Launch mode -> m (Open Omnifocus)" :rules [:launch_mode [:##m [:km "open: Omnifocus"]]]}
+        {:des "Launch mode -> n (Open nvALT)" :rules [:launch_mode [:##n [:km "open: nvALT"]]]}
+        {:des "Launch mode -> o (Open Outlook)" :rules [:launch_mode [:##o [:km "open: Outlook"]]]}
+        {:des "Launch mode -> e (Open Editor)" :rules [:launch_mode [:##e [:km "open: Editor"]]]}
+        {:des "Launch mode -> s (Open Skype)" :rules [:launch_mode [:##s [:km "open: Skype"]]]}
+        {:des "Launch mode -> t (Open Teams)" :rules [:launch_mode [:##t [:km "open: Teams"]]]}
+        {:des "Launch mode -> w (Open BitWarden)" :rules [:launch_mode [:##w [:km "open: BitWarden"]]]}
+        {:des "Launch mode -> z (Open Franz)" :rules [:launch_mode [:##z [:km "open: Franz"]]]}
+        {:des "Launch mode -> caps_lock (Open Franz)" :rules [:launch_mode [:##caps_lock [:km "open: Finder"]]]}
+
         {:des "ukey (media)"
          :rules [:u-mode
                  [:t :mute]
@@ -102,41 +105,31 @@
                 [:s [:km "hotkey: ;+s"]]
                 [:i [:km "hotkey: ;+i"]]
                 ]}
-        {:des "Window Manipulation mode (wkey)"
-;         USES BETTER TOUCH TOOL "OTHER" TRIGGERS TO CHANGE WINDOWS
-          ; :rules [:w-mode
-          ;        [:n [:btt "Maximize Window to Next Monitor"]]
-          ;        [:e [:btt "Smaller On Left"]]
-          ;        [:r [:btt "Smaller On Right"]]
-          ;        [:return_or_enter [:btt "Maximize Window"]]
-          ;        [:h [:btt "Maximize Window Left"]]
-          ;        [:j [:btt "Maximize Window to Bottom Half"]]
-          ;        [:k [:btt "Maximize Window to Top Half"]]
-          ;        [:l [:btt "Maximize Window Right"]]
-          ;        [:u [:btt "Resize Window to Top Left Quarter / Corner"]]
-          ;        [:i [:btt "Resize Window to Top Right Quarter / Corner"]]
-          ;        [:m [:btt "Resize Window to Bottom Left Quarter / Corner"]]
-          ;        [:comma [:btt "Resize Window to Bottom Right Quarter / Corner"]]
-          ;        ]}
+        {:des "Window Manipulation mode (q+w)" :rules [[{:sim [:w :q]
+                                     :simo {:interrupt true
+                                            :dorder :insensitive
+                                            :uorder :insensitive
+                                            :afterup {:set ["window_manipulation_mode" 0]}}} {:set ["window_manipulation_mode" 1]}]]}
+        ;{:des "Window Manipulation mode (wkey)"
 ;         USES SPECTACLE TO CHANGE WINDOWS
-          :rules [:w-mode
-                 [:n :!TOSCf15]
-                 [:e [:km "hotkey: w+e"]]
-                 [:r [:km "hotkey: w+r"]]
-                 [:hyphen [:km "hotkey: w+hyphen"]]
-                 [:equal_sign [:km "hotkey: w+equal_sign"]]
-                 [:delete_or_backspace [:km "hotkey: w+delete_or_backspace"]]
-                 [:return_or_enter :!TOSCf19]
-                 [:t :!TOSCf20]
-                 [:h :!TOSCleft_arrow]
-                 [:j :!TOSCdown_arrow]
-                 [:k :!TOSCup_arrow]
-                 [:l :!TOSCright_arrow]
-                 [:i :!TOSCf11]
-                 [:o :!TOSCf13]
-                 [:comma :!TOSCf12]
-                 [:period :!TOSCf14]
-                 ]}
+        {:des "Window Manipulation mode -> n (Spectacle move current window to next monitor)" :rules [:window_manipulation_mode [:##n :!TOSCf15]]}
+        {:des "Window Manipulation mode -> e (Spectacle shrink current window)" :rules [:window_manipulation_mode [:##e [:km "hotkey: window_manipulation_mode+e"]]]}
+        {:des "Window Manipulation mode -> r (Spectacle grow current window)" :rules [:window_manipulation_mode [:##r [:km "hotkey: window_manipulation_mode+r"]]]}
+        {:des "Window Manipulation mode -> - (Spectacle shrink vim split vertically)" :rules [:window_manipulation_mode [:##hyphen [:km "hotkey: window_manipulation_mode+hyphen"]]]}
+        {:des "Window Manipulation mode -> = (Spectacle equalize vim splits)" :rules [:window_manipulation_mode [:##equal_sign [:km "hotkey: window_manipulation_mode+equal_sign"]]]}
+        {:des "Window Manipulation mode -> delete (Spectacle grow vim split vertically)" :rules [:window_manipulation_mode [:##equal_sign [:km "hotkey: window_manipulation_mode+equal_sign"]]]}
+        {:des "Window Manipulation mode -> delete (Spectacle grow vim split vertically)" :rules [:window_manipulation_mode [:##delete_or_backspace [:km "hotkey: window_manipulation_mode+delete_or_backspace"]]]}
+        {:des "Window Manipulation mode -> return_or_enter (Spectacle maximize current window)" :rules [:window_manipulation_mode [:##return_or_enter :!TOSCf19]]}
+        {:des "Window Manipulation mode -> t (Spectacle resize current window to a third of the screen)" :rules [:window_manipulation_mode [:##t :!TOSCf20]]}
+        {:des "Window Manipulation mode -> h (Spectacle resize current window to left half of the screen)" :rules [:window_manipulation_mode [:##h :!TOSCleft_arrow]]}
+        {:des "Window Manipulation mode -> j (Spectacle resize current window to bottom half of the screen)" :rules [:window_manipulation_mode [:##j :!TOSCdown_arrow]]}
+        {:des "Window Manipulation mode -> k (Spectacle resize current window to upper half of the screen)" :rules [:window_manipulation_mode [:##k :!TOSCup_arrow]]}
+        {:des "Window Manipulation mode -> l (Spectacle resize current window to right half of the screen)" :rules [:window_manipulation_mode [:##l :!TOSCright_arrow]]}
+        {:des "Window Manipulation mode -> i (Spectacle resize current window to upper-left half of the screen)" :rules [:window_manipulation_mode [:##i :!TOSCf11]]}
+        {:des "Window Manipulation mode -> o (Spectacle resize current window to upper-right half of the screen)" :rules [:window_manipulation_mode [:##o :!TOSCf13]]}
+        {:des "Window Manipulation mode -> , (Spectacle resize current window to bottom-left half of the screen)" :rules [:window_manipulation_mode [:##comma :!TOSCf12]]}
+        {:des "Window Manipulation mode -> . (Spectacle resize current window to bottom-right half of the screen)" :rules [:window_manipulation_mode [:##period :!TOSCf14]]}
+
         {:des   "misc"
                  ;; https://superuser.com/a/324267
          :rules [
@@ -157,36 +150,6 @@
         {:des "SuperDuper N -> Back 1 Word" :rules [:superduper-mode [:##n :!Oleft_arrow]]}
         {:des "SuperDuper M -> Forward 1 Word" :rules [:superduper-mode [:##m :!Oright_arrow]]}
 
-        {:des "Vi Mode Spacebar as Trigger Key]"
-         :rules [:vi-mode
-                 [:left_shift :left_shift]
-                 [:##j :down_arrow]
-                 [:##k :up_arrow]
-                 [:##h :left_arrow]
-                 [:##l :right_arrow]
-                 [:##b :!Oleft_arrow]
-                 [:##w :!Oright_arrow]
-                 [:##e :!Oright_arrow]
-                 [:##i :!Cleft_arrow]
-                 [:##a :!Cright_arrow]
-                 [:##0 :!Ta]
-                 [:##4 :!Te]
-                 [:##open_bracket :!Oup_arrow]
-                 [:##close_bracket :!Odown_arrow]]}
-        {:des "Vi Visual Mode"
-         :rules [[:##j :!Sdown_arrow :vi-visual-mode]
-                 [:##k :!Sup_arrow :vi-visual-mode]
-                 [:##h :!Sleft_arrow :vi-visual-mode]
-                 [:##l :!Sright_arrow :vi-visual-mode]
-                 [:##b :!SOleft_arrow :vi-visual-mode]
-                 [:##w :!SOright_arrow :vi-visual-mode]
-                 [:##e :!SOright_arrow :vi-visual-mode]
-                 [:##i :!SCleft_arrow :vi-visual-mode]
-                 [:##a :!SCright_arrow :vi-visual-mode]
-                 [:##0 :!SCleft_arrow :vi-visual-mode]
-                 [:##4 :!SCright_arrow :vi-visual-mode]
-                 [:##open_bracket :!SOup_arrow :vi-visual-mode]
-                 [:##close_bracket :!SOdown_arrow :vi-visual-mode]]}
         ]
   :simlayer-threshold 150
 }
