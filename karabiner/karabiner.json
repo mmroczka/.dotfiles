@@ -7,10 +7,10 @@
   "profiles" : [ {
     "complex_modifications" : {
       "parameters" : {
-        "basic.simultaneous_threshold_milliseconds" : 10,
-        "basic.to_delayed_action_delay_milliseconds" : 100,
-        "basic.to_if_alone_timeout_milliseconds" : 100,
-        "basic.to_if_held_down_threshold_milliseconds" : 100
+        "basic.simultaneous_threshold_milliseconds" : 30,
+        "basic.to_delayed_action_delay_milliseconds" : 300,
+        "basic.to_if_alone_timeout_milliseconds" : 300,
+        "basic.to_if_held_down_threshold_milliseconds" : 300
       },
       "rules" : [ {
         "description" : "Caps -> Hyper / Esc",
@@ -46,38 +46,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "l-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Activity Monitor\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "l"
-            }, {
-              "key_code" : "a"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "l-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "b"
           },
@@ -91,38 +59,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "l-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: BetterTouchTool\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "l"
-            }, {
-              "key_code" : "b"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "l-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "c"
           },
@@ -135,38 +71,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "l-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Chrome\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "l"
-            }, {
-              "key_code" : "c"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "l-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         }, {
           "from" : {
             "key_code" : "d"
@@ -182,39 +86,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "l-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "1",
-            "modifiers" : [ "left_command", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "l"
-            }, {
-              "key_code" : "d"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "l-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "f"
           },
@@ -227,38 +98,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "l-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Fantastical\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "l"
-            }, {
-              "key_code" : "f"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "l-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         }, {
           "from" : {
             "key_code" : "g"
@@ -273,38 +112,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "l-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Messages\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "l"
-            }, {
-              "key_code" : "g"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "l-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "i"
           },
@@ -317,38 +124,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "l-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: iTerm\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "l"
-            }, {
-              "key_code" : "i"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "l-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         }, {
           "from" : {
             "key_code" : "k"
@@ -363,38 +138,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "l-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Keyboard Maestro\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "l"
-            }, {
-              "key_code" : "k"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "l-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "m"
           },
@@ -407,38 +150,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "l-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Omnifocus\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "l"
-            }, {
-              "key_code" : "m"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "l-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         }, {
           "from" : {
             "key_code" : "n"
@@ -453,38 +164,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "l-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: nvALT\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "l"
-            }, {
-              "key_code" : "n"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "l-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "o"
           },
@@ -497,38 +176,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "l-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Outlook\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "l"
-            }, {
-              "key_code" : "o"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "l-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         }, {
           "from" : {
             "key_code" : "r"
@@ -543,38 +190,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "l-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Editor\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "l"
-            }, {
-              "key_code" : "r"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "l-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "s"
           },
@@ -587,38 +202,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "l-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Skype\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "l"
-            }, {
-              "key_code" : "s"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "l-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         }, {
           "from" : {
             "key_code" : "t"
@@ -633,38 +216,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "l-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Teams\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "l"
-            }, {
-              "key_code" : "t"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "l-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "w"
           },
@@ -677,38 +228,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "l-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: BitWarden\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "l"
-            }, {
-              "key_code" : "w"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "l-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         }, {
           "from" : {
             "key_code" : "z"
@@ -723,38 +242,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "l-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Franz\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "l"
-            }, {
-              "key_code" : "z"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "l-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "caps_lock"
           },
@@ -767,38 +254,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "l-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Finder\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "l"
-            }, {
-              "key_code" : "caps_lock"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "l-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         } ]
       }, {
         "description" : "ukey (media)",
@@ -816,38 +271,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "u-mode",
-              "value" : 1
-            }
-          }, {
-            "consumer_key_code" : "mute"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "u"
-            }, {
-              "key_code" : "t"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "u-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "w"
           },
@@ -862,39 +285,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "u-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "0",
-            "modifiers" : [ "left_command", "left_control", "left_option" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "u"
-            }, {
-              "key_code" : "w"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "u-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "i"
           },
@@ -907,38 +297,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "u-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"WiFi -> Internet\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "u"
-            }, {
-              "key_code" : "i"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "u-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         }, {
           "from" : {
             "key_code" : "b"
@@ -953,38 +311,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "u-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"WiFi -> BLUESSO\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "u"
-            }, {
-              "key_code" : "b"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "u-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "d"
           },
@@ -997,38 +323,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "u-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"WiFi -> Doxie\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "u"
-            }, {
-              "key_code" : "d"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "u-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         }, {
           "from" : {
             "key_code" : "h"
@@ -1043,38 +337,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "u-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "vk_consumer_previous"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "u"
-            }, {
-              "key_code" : "h"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "u-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "l"
           },
@@ -1088,38 +350,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "u-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "vk_consumer_next"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "u"
-            }, {
-              "key_code" : "l"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "u-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "k"
           },
@@ -1132,38 +362,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "u-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "vk_consumer_play"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "u"
-            }, {
-              "key_code" : "k"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "u-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         } ]
       }, {
         "description" : "right cmd -> Alfred",
@@ -1196,38 +394,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "g-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: g+;\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "g"
-            }, {
-              "key_code" : "semicolon"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "g-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "a"
           },
@@ -1241,38 +407,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "g-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: g+a\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "g"
-            }, {
-              "key_code" : "a"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "g-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "c"
           },
@@ -1285,38 +419,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "g-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: g+c\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "g"
-            }, {
-              "key_code" : "c"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "g-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         }, {
           "from" : {
             "key_code" : "d"
@@ -1331,38 +433,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "g-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: g+d\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "g"
-            }, {
-              "key_code" : "d"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "g-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "f"
           },
@@ -1375,38 +445,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "g-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: g+f\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "g"
-            }, {
-              "key_code" : "f"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "g-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         }, {
           "from" : {
             "key_code" : "i"
@@ -1421,38 +459,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "g-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: g+i\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "g"
-            }, {
-              "key_code" : "i"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "g-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "j"
           },
@@ -1465,38 +471,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "g-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: g+j\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "g"
-            }, {
-              "key_code" : "j"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "g-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         }, {
           "from" : {
             "key_code" : "c"
@@ -1511,38 +485,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "g-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: g+c\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "g"
-            }, {
-              "key_code" : "c"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "g-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "l"
           },
@@ -1555,38 +497,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "g-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: g+l\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "g"
-            }, {
-              "key_code" : "l"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "g-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         }, {
           "from" : {
             "key_code" : "m"
@@ -1601,38 +511,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "g-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: g+m\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "g"
-            }, {
-              "key_code" : "m"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "g-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "n"
           },
@@ -1645,38 +523,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "g-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: g+n\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "g"
-            }, {
-              "key_code" : "n"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "g-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         }, {
           "from" : {
             "key_code" : "p"
@@ -1691,38 +537,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "g-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: g+p\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "g"
-            }, {
-              "key_code" : "p"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "g-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "r"
           },
@@ -1735,38 +549,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "g-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: g+r\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "g"
-            }, {
-              "key_code" : "r"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "g-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         }, {
           "from" : {
             "key_code" : "s"
@@ -1781,38 +563,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "g-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: g+s\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "g"
-            }, {
-              "key_code" : "s"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "g-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "t"
           },
@@ -1825,38 +575,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "g-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: g+t\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "g"
-            }, {
-              "key_code" : "t"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "g-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         }, {
           "from" : {
             "key_code" : "w"
@@ -1871,38 +589,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "g-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: g+w\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "g"
-            }, {
-              "key_code" : "w"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "g-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "y"
           },
@@ -1915,38 +601,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "g-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: g+y\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "g"
-            }, {
-              "key_code" : "y"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "g-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         } ]
       }, {
         "description" : "[C]hange property mode",
@@ -1966,7 +620,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -2011,7 +665,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -2056,7 +710,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -2101,7 +755,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -2146,7 +800,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -2191,7 +845,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -2236,7 +890,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -2281,7 +935,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -2327,38 +981,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "f-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: f+h\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "f"
-            }, {
-              "key_code" : "h"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "f-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "j"
           },
@@ -2372,38 +994,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "f-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: f+j\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "f"
-            }, {
-              "key_code" : "j"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "f-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "l"
           },
@@ -2416,38 +1006,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "f-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: f+l\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "f"
-            }, {
-              "key_code" : "l"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "f-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         } ]
       }, {
         "description" : "Semicolon macros",
@@ -2467,7 +1025,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -2512,7 +1070,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -2559,39 +1117,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "w-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "f15",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "w"
-            }, {
-              "key_code" : "n"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "w-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "e"
           },
@@ -2604,38 +1129,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "w-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: w+e\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "w"
-            }, {
-              "key_code" : "e"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "w-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         }, {
           "from" : {
             "key_code" : "r"
@@ -2650,38 +1143,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "w-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: w+r\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "w"
-            }, {
-              "key_code" : "r"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "w-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "hyphen"
           },
@@ -2694,38 +1155,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "w-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: w+hyphen\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "w"
-            }, {
-              "key_code" : "hyphen"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "w-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         }, {
           "from" : {
             "key_code" : "equal_sign"
@@ -2740,38 +1169,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "w-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: w+equal_sign\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "w"
-            }, {
-              "key_code" : "equal_sign"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "w-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "delete_or_backspace"
           },
@@ -2784,38 +1181,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "w-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: w+delete_or_backspace\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "w"
-            }, {
-              "key_code" : "delete_or_backspace"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "w-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         }, {
           "from" : {
             "key_code" : "return_or_enter"
@@ -2831,39 +1196,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "w-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "f19",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "w"
-            }, {
-              "key_code" : "return_or_enter"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "w-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "t"
           },
@@ -2877,39 +1209,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "w-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "f20",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "w"
-            }, {
-              "key_code" : "t"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "w-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         }, {
           "from" : {
             "key_code" : "h"
@@ -2925,39 +1224,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "w-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "left_arrow",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "w"
-            }, {
-              "key_code" : "h"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "w-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "j"
           },
@@ -2971,39 +1237,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "w-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "down_arrow",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "w"
-            }, {
-              "key_code" : "j"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "w-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         }, {
           "from" : {
             "key_code" : "k"
@@ -3019,39 +1252,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "w-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "up_arrow",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "w"
-            }, {
-              "key_code" : "k"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "w-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "l"
           },
@@ -3065,39 +1265,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "w-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "right_arrow",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "w"
-            }, {
-              "key_code" : "l"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "w-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         }, {
           "from" : {
             "key_code" : "i"
@@ -3113,39 +1280,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "w-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "f11",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "w"
-            }, {
-              "key_code" : "i"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "w-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "o"
           },
@@ -3159,39 +1293,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "w-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "f13",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "w"
-            }, {
-              "key_code" : "o"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "w-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         }, {
           "from" : {
             "key_code" : "comma"
@@ -3207,39 +1308,6 @@
           } ],
           "type" : "basic"
         }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "w-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "f12",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "w"
-            }, {
-              "key_code" : "comma"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "w-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
           "from" : {
             "key_code" : "period"
           },
@@ -3253,39 +1321,6 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "w-mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "f14",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "w"
-            }, {
-              "key_code" : "period"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "w-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
         } ]
       }, {
         "description" : "misc",
@@ -3379,6 +1414,38 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 80
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "superduper-mode",
+              "value" : 1
+            }
+          }, {
+            "key_code" : "left_arrow"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "f23"
+            }, {
+              "key_code" : "h"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "superduper-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
         } ]
       }, {
         "description" : "SuperDuper J -> Down",
@@ -3398,6 +1465,38 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 80
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "superduper-mode",
+              "value" : 1
+            }
+          }, {
+            "key_code" : "down_arrow"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "f23"
+            }, {
+              "key_code" : "j"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "superduper-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
         } ]
       }, {
         "description" : "SuperDuper K -> Up",
@@ -3417,6 +1516,38 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 80
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "superduper-mode",
+              "value" : 1
+            }
+          }, {
+            "key_code" : "up_arrow"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "f23"
+            }, {
+              "key_code" : "k"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "superduper-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
         } ]
       }, {
         "description" : "SuperDuper L -> Right",
@@ -3436,6 +1567,38 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 80
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "superduper-mode",
+              "value" : 1
+            }
+          }, {
+            "key_code" : "right_arrow"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "f23"
+            }, {
+              "key_code" : "l"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "superduper-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
         } ]
       }, {
         "description" : "SuperDuper V -> Shift",
@@ -3455,6 +1618,38 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 80
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "superduper-mode",
+              "value" : 1
+            }
+          }, {
+            "key_code" : "left_shift"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "f23"
+            }, {
+              "key_code" : "v"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "superduper-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
         } ]
       }, {
         "description" : "SuperDuper I -> Back to Beginning",
@@ -3475,6 +1670,39 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 80
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "superduper-mode",
+              "value" : 1
+            }
+          }, {
+            "key_code" : "left_arrow",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "f23"
+            }, {
+              "key_code" : "i"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "superduper-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
         } ]
       }, {
         "description" : "SuperDuper O -> Forward to Front",
@@ -3495,6 +1723,39 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 80
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "superduper-mode",
+              "value" : 1
+            }
+          }, {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "f23"
+            }, {
+              "key_code" : "o"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "superduper-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
         } ]
       }, {
         "description" : "SuperDuper N -> Back 1 Word",
@@ -3515,6 +1776,39 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 80
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "superduper-mode",
+              "value" : 1
+            }
+          }, {
+            "key_code" : "left_arrow",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "f23"
+            }, {
+              "key_code" : "n"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "superduper-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
         } ]
       }, {
         "description" : "SuperDuper M -> Forward 1 Word",
@@ -3535,6 +1829,39 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 80
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "superduper-mode",
+              "value" : 1
+            }
+          }, {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "f23"
+            }, {
+              "key_code" : "m"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "superduper-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
         } ]
       }, {
         "description" : "Vi Mode Spacebar as Trigger Key]",
@@ -3554,7 +1881,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -3602,7 +1929,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -3650,7 +1977,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -3698,7 +2025,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -3746,7 +2073,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -3795,7 +2122,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -3845,7 +2172,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -3895,7 +2222,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -3945,7 +2272,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -3995,7 +2322,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -4045,7 +2372,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -4095,7 +2422,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -4145,7 +2472,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -4195,7 +2522,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -4248,7 +2575,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -4302,7 +2629,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -4356,7 +2683,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -4410,7 +2737,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -4464,7 +2791,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -4518,7 +2845,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -4572,7 +2899,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -4626,7 +2953,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -4680,7 +3007,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -4734,7 +3061,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -4788,7 +3115,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -4842,7 +3169,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {
@@ -4896,7 +3223,7 @@
         }, {
           "type" : "basic",
           "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 50
+            "basic.simultaneous_threshold_milliseconds" : 80
           },
           "to" : [ {
             "set_variable" : {

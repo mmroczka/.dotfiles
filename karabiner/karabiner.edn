@@ -1,9 +1,9 @@
 {:profiles
  {:MrStark {:default true
-         :sim     10
-         :delay   100
-         :alone   100
-         :held    100}}
+         :sim     30
+         :delay   300
+         :alone   300
+         :held    300}}
  :applications {:vim-mode-disabled-application ["^com\\.apple\\.Terminal$",
                                                 "^com\\.googlecode\\.iterm2$",
                                                 "^org\\.vim\\."]
@@ -15,14 +15,15 @@
              :btt "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"%s\"'"
              }
  :simlayers {:caps_lock-mode {:key :caps_lock}
-             :l-mode {:key :l}
+             ;:l-mode {:key :l}
              :semicolon-mode {:key :semicolon}
              :navigation-mode {:key :f24} ; Bind an unused key
              :c-mode {:key :c}
-             :f-mode {:key :f}
-             :u-mode {:key :u}
-             :w-mode {:key :w}
-             :g-mode {:key :g}
+             ;:f-mode {:key :f}
+             ;:u-mode {:key :u}
+             :superduper-mode {:key :f23}
+             ;:w-mode {:key :w}
+             ;:g-mode {:key :g}
              :vi-mode {:key :spacebar}
              :vi-visual-mode {:key :v :condi :!vim-mode-disabled-application}}
  :main [{:des "Caps -> Hyper / Esc"
@@ -188,6 +189,6 @@
                  [:##open_bracket :!SOup_arrow :vi-visual-mode]
                  [:##close_bracket :!SOdown_arrow :vi-visual-mode]]}
         ]
-  :simlayer-threshold 50
+  :simlayer-threshold 80
 }
 
