@@ -15,23 +15,30 @@
              :btt "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"%s\"'"
              }
  :simlayers {:caps_lock-mode {:key :caps_lock}
-             ;:l-mode {:key :l}
              ;:semicolon-mode {:key :semicolon}
+             :change_mode {:key :f24}
+             :focus_mode {:key :f24}
+             :go_to_mode {:key :f24}
              :launch_mode {:key :f24} ; Bind an unused key
              :window_manipulation_mode {:key :f24}
              :utilities_mode {:key :f24}
-             ;:c-mode {:key :c}
-             ;:f-mode {:key :f}
-             ;:u-mode {:key :u}
-             ;:g-mode {:key :g}
              }
- :main [{:des "Caps -> Hyper / Esc"
-          :rules [[:##caps_lock :!CTOleft_shift nil {:alone :escape}]]}
-        {:des   "Shift+Command+L type javascript: and hit enter hack"
-                 ;; https://superuser.com/a/324267
-         :rules [
-                 [:!CSl [:!Cl :j :a :v :a :s :c :r :i :p :t :!Ssemicolon :return_or_enter] :Chromes]
-                 ]}
+ :main [
+        {:des "Caps -> Hyper / Esc"
+         :rules [[:##caps_lock :!CTOleft_shift nil {:alone :escape}]]}
+        {:des   "shift+cmd+l types javascript: and hits enter hack" ;; https://superuser.com/a/324267
+         :rules [ [:!CSl [:!Cl :j :a :v :a :s :c :r :i :p :t :!Ssemicolon :return_or_enter] :Chromes] ]}
+        {:des "Hold cmd+v for KM clipboard history"
+         :rules [ [:!Cv nil nil {:alone :!Cv :held [:km "Activate Clipboard History Switcher"] :repeat false :halt true :params{:alone 150 :held 150}} ] ]}
+        {:des "Right cmd -> Alfred"
+         :rules [[:right_command :right_command nil {:alone :!CTOSspacebar}]]}
+        {:des "DOUBLE PRESS: ⌘q² to quit"                   ;* Double Press Command Q to Quit
+         :rules[[:!C#Pq [ :!Cq ["⌘q" 0]] ["⌘q" 1]] 		;? when ⌘q is pressed the first time  > variable is set to 1 and nothing is sent
+				[:!C#Pq ["⌘q" 1] nil {:delayed {:invoked ["⌘q" 0] :canceled ["⌘q" 0]}}]]} ;? when pressed the second time send ⌘Q
+        {:des "DOUBLE PRESS: / for favorite search on per app basis"
+         :rules[[:!C#Pq [ :!Cq ["⌘q" 0]] ["⌘q" 1]] 		;? when ⌘q is pressed the first time  > variable is set to 1 and nothing is sent
+				[:!C#Pq ["⌘q" 1] nil {:delayed {:invoked ["⌘q" 0] :canceled ["⌘q" 0]}}]]} ;? when pressed the second time send ⌘Q
+
         {:des "Launch mode (l+;)" :rules [[{:sim [:l :semicolon]
                                      :simo {:interrupt true
                                             :dorder :insensitive
@@ -56,12 +63,12 @@
         {:des "Launch mode -> z (Open Franz)" :rules [:launch_mode [:##z [:km "open: Franz"]]]}
         {:des "Launch mode -> caps_lock (Open Franz)" :rules [:launch_mode [:##caps_lock [:km "open: Finder"]]]}
 
+;         USES SPECTACLE TO CHANGE WINDOWS
         {:des "Window Manipulation mode (q+w)" :rules [[{:sim [:w :q]
                                      :simo {:interrupt true
                                             :dorder :insensitive
                                             :uorder :insensitive
                                             :afterup {:set ["window_manipulation_mode" 0]}}} {:set ["window_manipulation_mode" 1]}]]}
-;         USES SPECTACLE TO CHANGE WINDOWS
         {:des "Window Manipulation mode -> n (Spectacle move current window to next monitor)" :rules [:window_manipulation_mode [:##n :!TOSCf15]]}
         {:des "Window Manipulation mode -> e (Spectacle shrink current window)" :rules [:window_manipulation_mode [:##e [:km "hotkey: window_manipulation_mode+e"]]]}
         {:des "Window Manipulation mode -> r (Spectacle grow current window)" :rules [:window_manipulation_mode [:##r [:km "hotkey: window_manipulation_mode+r"]]]}
@@ -94,6 +101,8 @@
         {:des "SuperDuper O -> Forward to Front" :rules [:superduper-mode [:##o :!Cright_arrow]]}
         {:des "SuperDuper N -> Back 1 Word" :rules [:superduper-mode [:##n :!Oleft_arrow]]}
         {:des "SuperDuper M -> Forward 1 Word" :rules [:superduper-mode [:##m :!Oright_arrow]]}
+        {:des "SuperDuper A -> Previous Tab" :rules [:superduper-mode [:##a :!CSopen_bracket]]}
+        {:des "SuperDuper F -> Next Tab" :rules [:superduper-mode [:##f :!CSclose_bracket]]}
 
         {:des "Utilities Mode (u+i)" :rules [[{:sim [:u :i]
                                      :simo {:interrupt true
@@ -106,59 +115,60 @@
         {:des "Utilities mode d -> Switch WIFI to Doxie" :rules [:utilities_mode [:##d [:km "Wifi -> Doxie"]]]}
         {:des "Utilities mode t -> Switch WIFI to Internet" :rules [:utilities_mode [:##t [:km "Wifi -> Internet"]]]}
 
-        {:des "ukey (media)"
-         :rules [:u-mode
-                 [:w :!OCT0] ; Turn on/off Noizio
-                 [:i [:km "WiFi -> Internet"]]
-                 [:b [:km "WiFi -> BLUESSO"]]
-                 [:d [:km "WiFi -> Doxie"]]
-                 ]}
-        {:des "right cmd -> Alfred"
-                 :rules [[:right_command :right_command nil {:alone :!CTOSspacebar}]]}
-        {:des "GO TO mode"
-         :rules [:g-mode
-                [:semicolon [:km "hotkey: g+;"]] ; Fantastical [G]o to [;] (specific day)
-                [:a [:km "hotkey: g+a"]] ; Outlook [G]o to [A]rchive
-                [:c [:km "hotkey: g+c"]] ; Omnifocus [G]o to [C]hores
-                [:d [:km "hotkey: g+d"]] ; Fantastical [G]o to [D]ay
-                [:f [:km "hotkey: g+f"]] ; Omnifocus [G]o to [F]orecast
-                [:i [:km "hotkey: g+i"]] ; Omnifocus [G]o to [I]nbox
-                [:j [:km "hotkey: g+j"]] ; Outlook [G]o to [J]unk
-                [:c [:km "hotkey: g+c"]] ; Omnifocus [G]o to [C]hores
-                [:l [:km "hotkey: g+l"]] ; Omnifocus [G]o to p[L]anning actions
-                [:m [:km "hotkey: g+m"]] ; Fantastical [G]o to [M]onth
-                [:n [:km "hotkey: g+n"]] ; Omnifocus [G]o to [N]ow
-                [:p [:km "hotkey: g+p"]] ; Omnifocus [G]o to [P]rojects
-                [:r [:km "hotkey: g+r"]] ; Omnifocus [G]o to [R]outines
-                [:s [:km "hotkey: g+s"]] ; Omnifocus [G]o to [S]oon
-                [:t [:km "hotkey: g+t"]] ; Fantastical [G]o to [T]oday
-                [:w [:km "hotkey: g+w"]] ; Omnifocus [G]o to [W]ork | Fantastical [G]o to [W]eek
-                [:y [:km "hotkey: g+y"]] ; Fantastical [G]o to [Y]ear
-                ]}
-        {:des "[C]hange property mode"
-         :rules [:c-mode
-                [:d [:km "hotkey: c+d"]] ; Omnifocus [C]hange [D]ue date
-                [:e [:km "hotkey: c+e"]] ; Omnifocus [C]hange [E]stimated Time
-                [:f [:km "hotkey: c+f"]] ; Omnifocus [C]hange [F]lag toggle
-                [:n [:km "hotkey: c+n"]] ; Omnifocus [C]hange [N]otes
-                [:p [:km "hotkey: c+p"]] ; Omnifocus [C]hange [P]roject
-                [:r [:km "hotkey: c+r"]] ; Omnifocus [C]hange [R]epeat
-                [:s [:km "hotkey: c+s"]] ; Omnifocus [C]hange [S]tart date (Defer date)
-                [:t [:km "hotkey: c+t"]] ; Omnifocus [C]hange [T]ags
-                ]}
-        {:des "Focus on part of window"
-         :rules [:f-mode
-                [:h [:km "hotkey: f+h"]] ; Omni/KM [F]ocus [h](left)
-                [:j [:km "hotkey: f+j"]] ; Omni/KM [F]ocus [j](center)
-                [:l [:km "hotkey: f+l"]] ; Omni/KM [F]ocus [l](right)
-                ]}
-        {:des "Semicolon macros"
-         :rules [:semicolon-mode
-                [:s [:km "hotkey: ;+s"]]
-                [:i [:km "hotkey: ;+i"]]
-                ]}
+        {:des "GO TO Mode (f+g)" :rules [[{:sim [:f :g]
+                                     :simo {:interrupt true
+                                            :dorder :insensitive
+                                            :uorder :insensitive
+                                            :afterup {:set ["go_to_mode" 0]}}} {:set ["go_to_mode" 1]}]]}
+        {:des "GO TO mode A -> (Outlook [G]o to [A]rchive)" :rules [:go_to_mode [:##a [:km "hotkey: go_to_mode+a"]]]}
+        {:des "GO TO mode C -> (Omnifocus [G]o to [C]hores)" :rules [:go_to_mode [:##c [:km "hotkey: go_to_mode+c"]]]}
+        {:des "GO TO mode D -> (Fantastical [G]o to [D]ay)" :rules [:go_to_mode [:##d [:km "hotkey: go_to_mode+d"]]]}
+        {:des "GO TO mode F -> (Omnifocus [G]o to [F]orcast)" :rules [:go_to_mode [:##f [:km "hotkey: go_to_mode+f"]]]}
+        {:des "GO TO mode F -> (Omnifocus [G]o to [I]nbox)" :rules [:go_to_mode [:##i [:km "hotkey: go_to_mode+i"]]]}
+        {:des "GO TO mode J -> (Outlook [G]o to [J]unk)" :rules [:go_to_mode [:##j [:km "hotkey: go_to_mode+j"]]]}
+        {:des "GO TO mode C -> (Omnifocus [G]o to [C]hores)" :rules [:go_to_mode [:##c [:km "hotkey: go_to_mode+c"]]]}
+        {:des "GO TO mode L -> (Omnifocus [G]o to p[L]anning)" :rules [:go_to_mode [:##l [:km "hotkey: go_to_mode+l"]]]}
+        {:des "GO TO mode M -> (Fantastical [G]o to [M]onth)" :rules [:go_to_mode [:##m [:km "hotkey: go_to_mode+m"]]]}
+        {:des "GO TO mode N -> (Omnifocus [G]o to [N]ow)" :rules [:go_to_mode [:##n [:km "hotkey: go_to_mode+n"]]]}
+        {:des "GO TO mode P -> (Omnifocus [G]o to [P]rojects)" :rules [:go_to_mode [:##p [:km "hotkey: go_to_mode+p"]]]}
+        {:des "GO TO mode R -> (Omnifocus [G]o to [R]outines)" :rules [:go_to_mode [:##r [:km "hotkey: go_to_mode+r"]]]}
+        {:des "GO TO mode S -> (Omnifocus [G]o to [S]oon)" :rules [:go_to_mode [:##s [:km "hotkey: go_to_mode+s"]]]}
+        {:des "GO TO mode T -> (Fantastical [G]o to [T]oday)(Omnifocus [G]o to [T]ags" :rules [:go_to_mode [:##t [:km "hotkey: go_to_mode+t"]]]}
+        {:des "GO TO mode W -> (Omnifocus [G]o to [W]ork)(Fantastical [G]o to [W]eek)" :rules [:go_to_mode [:##w [:km "hotkey: go_to_mode+w"]]]}
+        {:des "GO TO mode Y -> (Fantastical [G]o to [Y]ear)" :rules [:go_to_mode [:##y [:km "hotkey: go_to_mode+y"]]]}
 
-        ]
+        {:des "CHANGE Mode (x+c)" :rules [[{:sim [:x :c]
+                                     :simo {:interrupt true
+                                            :dorder :insensitive
+                                            :uorder :insensitive
+                                            :afterup {:set ["change_mode" 0]}}} {:set ["change_mode" 1]}]]}
+        {:des "CHANGE mode d -> (Omnifocus [C]hange [D]ue date)" :rules [:go_to_mode [:##d [:km "hotkey: change_mode+d"]]]}
+        {:des "CHANGE mode e -> (Omnifocus [C]hange [E]stimated time)" :rules [:go_to_mode [:##e [:km "hotkey: change_mode+e"]]]}
+        {:des "CHANGE mode f -> (Omnifocus [C]hange [F]lag )" :rules [:go_to_mode [:##f [:km "hotkey: change_mode+f"]]]}
+        {:des "CHANGE mode n -> (Omnifocus [C]hange [N]otes)" :rules [:go_to_mode [:##n [:km "hotkey: change_mode+n"]]]}
+        {:des "CHANGE mode p -> (Omnifocus [C]hange [P]roject)" :rules [:go_to_mode [:##p [:km "hotkey: change_mode+p"]]]}
+        {:des "CHANGE mode r -> (Omnifocus [C]hange [R]epeat)" :rules [:go_to_mode [:##r [:km "hotkey: change_mode+r"]]]}
+        {:des "CHANGE mode s -> (Omnifocus [C]hange [S]tart date (defer date))" :rules [:go_to_mode [:##s [:km "hotkey: change_mode+s"]]]}
+        {:des "CHANGE mode t -> (Omnifocus [C]hange [T]ags)" :rules [:go_to_mode [:##t [:km "hotkey: change_mode+t"]]]}
+
+
+        {:des "FOCUS Mode (d+f)" :rules [[{:sim [:d :f]
+                                     :simo {:interrupt true
+                                            :dorder :insensitive
+                                            :uorder :insensitive
+                                            :afterup {:set ["focus_mode" 0]}}} {:set ["focus_mode" 1]}]]}
+        {:des "FOCUS mode h -> (Omnifocus/Keyboard Maestro [H] (vim left))" :rules [:focus_mode [:##h [:km "hotkey: focus_mode+h"]]]}
+        {:des "FOCUS mode j -> (Omnifocus/Keyboard Maestro [J] (vim center))" :rules [:focus_mode [:##j [:km "hotkey: focus_mode+j"]]]}
+        {:des "FOCUS mode l -> (Omnifocus/Keyboard Maestro [L] (vim right))" :rules [:focus_mode [:##l [:km "hotkey: focus_mode+l"]]]}
+
+        {:des "Semicolon Mode (;+')(global cross application shortcuts)" :rules [[{:sim [:semicolon :quote]
+                                     :simo {:interrupt true
+                                            :dorder :insensitive
+                                            :uorder :insensitive
+                                            :afterup {:set ["focus_mode" 0]}}} {:set ["focus_mode" 1]}]]}
+        {:des "Semicolon mode s -> (Global toggle for left sidebar)" :rules [:focus_mode [:##s [:km "hotkey: semicolon_mode+s"]]]}
+        {:des "Semicolon mode i -> (Global toggle for right sidebar)" :rules [:focus_mode [:##i [:km "hotkey: semicolon_mode+i"]]]}
+  ]
   :simlayer-threshold 150
 }
 
