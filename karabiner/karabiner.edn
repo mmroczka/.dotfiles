@@ -10,7 +10,7 @@
                 :Chromes                       ["^com\\.google\\.Chrome$", "^org\\.chromium\\.Chromium$", "^com\\.google\\.Chrome\\.canary$"]
                 :Terminals                     ["^com\\.apple\\.Terminal$", "^com\\.googlecode\\.iterm2$", "^io\\.alacritty$"]
                }
- :templates {:alfred "osascript -e 'tell application \"Alfred 3\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
+ :templates {:alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
              :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"
              :btt "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"%s\"'"
              }
@@ -123,8 +123,8 @@
         {:des "GO TO mode A -> (Outlook [G]o to [A]rchive)" :rules [:go_to_mode [:##a [:km "hotkey: go_to_mode+a"]]]}
         {:des "GO TO mode C -> (Omnifocus [G]o to [C]hores)" :rules [:go_to_mode [:##c [:km "hotkey: go_to_mode+c"]]]}
         {:des "GO TO mode D -> (Fantastical [G]o to [D]ay)" :rules [:go_to_mode [:##d [:km "hotkey: go_to_mode+d"]]]}
-        {:des "GO TO mode F -> (Omnifocus [G]o to [F]orcast)" :rules [:go_to_mode [:##f [:km "hotkey: go_to_mode+f"]]]}
-        {:des "GO TO mode F -> (Omnifocus [G]o to [I]nbox)" :rules [:go_to_mode [:##i [:km "hotkey: go_to_mode+i"]]]}
+        {:des "GO TO mode O -> (Omnifocus [G]o to f[O]rcast)" :rules [:go_to_mode [:##o [:km "hotkey: go_to_mode+o"]]]}
+        {:des "GO TO mode I -> (Omnifocus [G]o to [I]nbox)" :rules [:go_to_mode [:##i [:km "hotkey: go_to_mode+i"]]]}
         {:des "GO TO mode J -> (Outlook [G]o to [J]unk)" :rules [:go_to_mode [:##j [:km "hotkey: go_to_mode+j"]]]}
         {:des "GO TO mode C -> (Omnifocus [G]o to [C]hores)" :rules [:go_to_mode [:##c [:km "hotkey: go_to_mode+c"]]]}
         {:des "GO TO mode L -> (Omnifocus [G]o to p[L]anning)" :rules [:go_to_mode [:##l [:km "hotkey: go_to_mode+l"]]]}
@@ -142,14 +142,14 @@
                                             :dorder :insensitive
                                             :uorder :insensitive
                                             :afterup {:set ["change_mode" 0]}}} {:set ["change_mode" 1]}]]}
-        {:des "CHANGE mode d -> (Omnifocus [C]hange [D]ue date)" :rules [:go_to_mode [:##d [:km "hotkey: change_mode+d"]]]}
-        {:des "CHANGE mode e -> (Omnifocus [C]hange [E]stimated time)" :rules [:go_to_mode [:##e [:km "hotkey: change_mode+e"]]]}
-        {:des "CHANGE mode f -> (Omnifocus [C]hange [F]lag )" :rules [:go_to_mode [:##f [:km "hotkey: change_mode+f"]]]}
-        {:des "CHANGE mode n -> (Omnifocus [C]hange [N]otes)" :rules [:go_to_mode [:##n [:km "hotkey: change_mode+n"]]]}
-        {:des "CHANGE mode p -> (Omnifocus [C]hange [P]roject)" :rules [:go_to_mode [:##p [:km "hotkey: change_mode+p"]]]}
-        {:des "CHANGE mode r -> (Omnifocus [C]hange [R]epeat)" :rules [:go_to_mode [:##r [:km "hotkey: change_mode+r"]]]}
-        {:des "CHANGE mode s -> (Omnifocus [C]hange [S]tart date (defer date))" :rules [:go_to_mode [:##s [:km "hotkey: change_mode+s"]]]}
-        {:des "CHANGE mode t -> (Omnifocus [C]hange [T]ags)" :rules [:go_to_mode [:##t [:km "hotkey: change_mode+t"]]]}
+        {:des "CHANGE mode d -> (Omnifocus [C]hange [D]ue date)" :rules [:change_mode [:##d [:km "hotkey: change_mode+d"]]]}
+        {:des "CHANGE mode e -> (Omnifocus [C]hange [E]stimated time)" :rules [:change_mode [:##e [:km "hotkey: change_mode+e"]]]}
+        {:des "CHANGE mode f -> (Omnifocus [C]hange [F]lag )" :rules [:change_mode [:##f [:km "hotkey: change_mode+f"]]]}
+        {:des "CHANGE mode n -> (Omnifocus [C]hange [N]otes)" :rules [:change_mode [:##n [:km "hotkey: change_mode+n"]]]}
+        {:des "CHANGE mode p -> (Omnifocus [C]hange [P]roject)" :rules [:change_mode [:##p [:km "hotkey: change_mode+p"]]]}
+        {:des "CHANGE mode r -> (Omnifocus [C]hange [R]epeat)" :rules [:change_mode [:##r [:km "hotkey: change_mode+r"]]]}
+        {:des "CHANGE mode s -> (Omnifocus [C]hange [S]tart date (defer date))" :rules [:change_mode [:##s [:km "hotkey: change_mode+s"]]]}
+        {:des "CHANGE mode t -> (Omnifocus [C]hange [T]ags)" :rules [:change_mode [:##t [:km "hotkey: change_mode+t"]]]}
 
 
         {:des "FOCUS Mode (d+f)" :rules [[{:sim [:d :f]
@@ -166,8 +166,8 @@
                                             :dorder :insensitive
                                             :uorder :insensitive
                                             :afterup {:set ["focus_mode" 0]}}} {:set ["focus_mode" 1]}]]}
-        {:des "Semicolon mode s -> (Global toggle for left sidebar)" :rules [:focus_mode [:##s [:km "hotkey: semicolon_mode+s"]]]}
-        {:des "Semicolon mode i -> (Global toggle for right sidebar)" :rules [:focus_mode [:##i [:km "hotkey: semicolon_mode+i"]]]}
+        {:des "Semicolon mode s -> (Global toggle for left sidebar)" :rules [:semicolon_mode [:##s [:km "hotkey: semicolon_mode+s"]]]}
+        {:des "Semicolon mode i -> (Global toggle for right sidebar)" :rules [:semicolon_mode [:##i [:km "hotkey: semicolon_mode+i"]]]}
   ]
   :simlayer-threshold 150
 }
