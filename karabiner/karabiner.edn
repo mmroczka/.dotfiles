@@ -47,7 +47,7 @@
         {:des "Launch mode -> a (Open Activity Monitor)" :rules [:launch_mode [:##a [:km "open: Activity Monitor"]]]}
         {:des "Launch mode -> b (Open BetterTouchTool)" :rules [:launch_mode [:##b [:km "open: BetterTouchTool"]]]}
         {:des "Launch mode -> c (Open Chrome)" :rules [:launch_mode [:##c [:km "open: Chrome"]]]}
-        {:des "Launch mode -> d (Open Dash)" :rules [:launch_mode [:##d :!!OSC1]]}
+        {:des "Launch mode -> d (Open Dash)" :rules [:launch_mode [:##d :!TSC1]]}
         {:des "Launch mode -> f (Open Fantastical)" :rules [:launch_mode [:##f [:km "open: Fantastical"]]]}
         {:des "Launch mode -> g (Open Fantastical)" :rules [:launch_mode [:##g [:km "open: Messages"]]]}
         {:des "Launch mode -> h (Open Postman)" :rules [:launch_mode [:##h [:km "open: Postman"]]]}
