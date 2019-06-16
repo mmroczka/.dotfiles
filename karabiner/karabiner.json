@@ -86,7 +86,7 @@
           } ],
           "parameters" : {
             "basic.to_if_alone_timeout_milliseconds" : 150,
-            "basic.to_if_held_down_threshold_milliseconds" : 150
+            "basic.to_if_held_down_threshold_milliseconds" : 200
           },
           "from" : {
             "key_code" : "v",
@@ -113,61 +113,6 @@
         } ]
       }, {
         "description" : "DOUBLE PRESS: ⌘q² to quit",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "q",
-            "modifiers" : {
-              "mandatory" : [ "left_command" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "q",
-            "modifiers" : [ "left_command" ]
-          }, {
-            "set_variable" : {
-              "name" : "⌘q",
-              "value" : 0
-            }
-          } ],
-          "conditions" : [ {
-            "name" : "⌘q",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "to_delayed_action" : {
-            "to_if_invoked" : [ {
-              "set_variable" : {
-                "name" : "⌘q",
-                "value" : 0
-              }
-            } ],
-            "to_if_canceled" : [ {
-              "set_variable" : {
-                "name" : "⌘q",
-                "value" : 0
-              }
-            } ]
-          },
-          "from" : {
-            "key_code" : "q",
-            "modifiers" : {
-              "mandatory" : [ "left_command" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "⌘q",
-              "value" : 1
-            }
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "DOUBLE PRESS: / for favorite search on per app basis",
         "manipulators" : [ {
           "from" : {
             "key_code" : "q",
@@ -4099,7 +4044,7 @@
               "key_up_when" : "any",
               "to_after_key_up" : [ {
                 "set_variable" : {
-                  "name" : "focus_mode",
+                  "name" : "semicolon_mode",
                   "value" : 0
                 }
               } ]
@@ -4107,7 +4052,7 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "focus_mode",
+              "name" : "semicolon_mode",
               "value" : 1
             }
           } ],
