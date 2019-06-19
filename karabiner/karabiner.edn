@@ -106,11 +106,15 @@
                                             :dorder :insensitive
                                             :uorder :insensitive
                                             :afterup {:set ["utilities_mode" 0]}}} {:set ["utilities_mode" 1]}]]}
-        {:des "Utilities mode f -> mute" :rules [:utilities_mode [:##f :mute]]}
-        {:des "Utilities mode w -> Toggle Noizio on/off" :rules [:utilities_mode [:##w :!OCT0]]}
+        {:des "Utilities mode n -> Toggle Noizio on/off" :rules [:utilities_mode [:##n :!OCT0]]}
         {:des "Utilities mode b -> Switch WIFI to BLUESSO" :rules [:utilities_mode [:##b [:km "Wifi -> BLUESSO"]]]}
         {:des "Utilities mode d -> Switch WIFI to Doxie" :rules [:utilities_mode [:##d [:km "Wifi -> Doxie"]]]}
         {:des "Utilities mode t -> Switch WIFI to Internet" :rules [:utilities_mode [:##t [:km "Wifi -> Internet"]]]}
+        {:des "Utilities mode w -> Volume Up" :rules [:utilities_mode [:##w :volume_increment]]}
+        {:des "Utilities mode s -> Volume Down" :rules [:utilities_mode [:##s :volume_decrement]]}
+        {:des "Utilities mode x -> Mute" :rules [:utilities_mode [:##x :mute]]}
+        {:des "Utilities mode r -> Brightness Up" :rules [:utilities_mode [:##r :display_brightness_increment]]}
+        {:des "Utilities mode q -> Brightness Down" :rules [:utilities_mode [:##q :display_brightness_decrement]]}
 
         {:des "GO TO Mode (f+g)" :rules [[{:sim [:f :g]
                                      :simo {:interrupt true
