@@ -137,7 +137,6 @@ unskip() {  git update-index --no-skip-worktree "$@";  git status; }
 export JAVA_HOME=$(/usr/libexec/java_home)
 export M2_HOME=/Users/mikemroczka/apache-maven-3.1.1
 export PATH=$PATH:$M2_HOME/bin
-export PATH=$PATH:/Users/mikemroczka/Code/DTLP_3rd_Rotation/solr-6.6.0/server/scripts/cloud-scripts/zkcli.sh
 
 ####### CUSTOM ALIASES #######
 # alias clr="source ~/.bashrc && clear"
