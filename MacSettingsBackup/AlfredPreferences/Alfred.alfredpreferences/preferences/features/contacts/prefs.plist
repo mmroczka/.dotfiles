@@ -13,13 +13,9 @@
 			<string>alfred.contact.field.address</string>
 		</dict>
 	</array>
-	<key>openInAlfred</key>
-	<false/>
 	<key>showJobTitle</key>
 	<true/>
 	<key>urlHandler</key>
 	<string>busycontacts://show/{uid}</string>
-	<key>urlHandlerEnabled</key>
-	<true/>
 </dict>
 </plist>
