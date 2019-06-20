@@ -2667,10 +2667,10 @@
           }
         } ]
       }, {
-        "description" : "Utilities mode r -> Brightness Up",
+        "description" : "Utilities mode e -> Brightness Up",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "r",
+            "key_code" : "e",
             "modifiers" : {
               "optional" : [ "any" ]
             }
@@ -2701,7 +2701,7 @@
             "simultaneous" : [ {
               "key_code" : "f24"
             }, {
-              "key_code" : "r"
+              "key_code" : "e"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,

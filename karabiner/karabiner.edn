@@ -113,7 +113,7 @@
         {:des "Utilities mode w -> Volume Up" :rules [:utilities_mode [:##w :volume_increment]]}
         {:des "Utilities mode s -> Volume Down" :rules [:utilities_mode [:##s :volume_decrement]]}
         {:des "Utilities mode x -> Mute" :rules [:utilities_mode [:##x :mute]]}
-        {:des "Utilities mode r -> Brightness Up" :rules [:utilities_mode [:##r :display_brightness_increment]]}
+        {:des "Utilities mode e -> Brightness Up" :rules [:utilities_mode [:##e :display_brightness_increment]]}
         {:des "Utilities mode q -> Brightness Down" :rules [:utilities_mode [:##q :display_brightness_decrement]]}
 
         {:des "GO TO Mode (f+g)" :rules [[{:sim [:f :g]
