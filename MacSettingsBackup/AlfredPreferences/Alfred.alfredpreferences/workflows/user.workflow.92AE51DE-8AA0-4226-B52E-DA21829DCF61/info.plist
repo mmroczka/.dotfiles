@@ -1,0 +1,2545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>gbCardhop</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>069162C6-4CD4-4C98-84AA-E219EAEE7D1F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>130D6640-AAE6-45F1-BE6B-C30716D808AB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>0DAA19E5-FBDA-4B60-8A3B-BC0336A09529</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1993EFCA-8227-4526-B371-24496EA3659B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>E74E76CD-984A-4BC3-AEC6-1906BFEAA31E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>130D6640-AAE6-45F1-BE6B-C30716D808AB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>911FE14E-58E5-4E1E-BEE2-41F528DC6304</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>EE892030-9E14-430F-B3DF-8AB819631C1B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B333DB63-4306-4475-8AB6-70DBFBB31B52</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>89DFAE30-3D36-465B-A557-6190FDFFF67B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>16BF3D03-5A90-4355-B17B-FA0463FF258B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CB6C1AE8-2A5F-412F-A0B6-0E88947A9376</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>18EFF533-69FB-475C-B228-37D40C661A9B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EE892030-9E14-430F-B3DF-8AB819631C1B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B333DB63-4306-4475-8AB6-70DBFBB31B52</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>89DFAE30-3D36-465B-A557-6190FDFFF67B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>1993EFCA-8227-4526-B371-24496EA3659B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B0ED516C-AE1C-45DF-9A3C-0B130D77CF26</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>23283DBD-B25B-4DFC-8427-8C13F6364F3B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>323D5A15-386A-4389-8881-14D9A87FA708</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>27317C12-0940-4EA4-8270-80446BE2D182</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EE892030-9E14-430F-B3DF-8AB819631C1B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>323D5A15-386A-4389-8881-14D9A87FA708</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F7E2ACC1-0511-463D-A204-7B781D00E6BB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3C20E9AE-523F-488F-B022-68D7683097BE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CADD7948-0499-4DB9-94F8-711FC1ACBDC8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3D027A3F-F365-4049-B6F2-D777E8D30634</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9ABEA8A5-697F-4211-B582-D392AA4B911D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>477DE4AB-1CFA-497E-9C32-A8BB8B951247</key>
+		<array/>
+		<key>5202290C-6EE0-4B43-AD2B-0E2162E03CEF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EE892030-9E14-430F-B3DF-8AB819631C1B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6BD74F20-A959-4448-8521-F67422DDFD19</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D18F0F74-B211-41A4-88DA-808568C559AE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>72422000-B180-4CBA-8515-F033A30E8D35</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CB83A158-1D9E-4A88-ABEA-52465A133F15</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>73AB0C73-92F3-41FB-B284-E70F3D69CBFF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FB3C5D64-C974-49FA-A82A-7D7A1D036FB2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>8680F123-FE8A-4184-988E-EC0CAA277E80</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3D027A3F-F365-4049-B6F2-D777E8D30634</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>89DFAE30-3D36-465B-A557-6190FDFFF67B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C2E9E995-BC7A-49B9-9136-1314FA0B82A6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>911FE14E-58E5-4E1E-BEE2-41F528DC6304</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A1ABF233-EF49-4DBF-B399-B82F15C80C0B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>94C7EC0A-CF78-447A-A94D-3D900D69E334</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>16BF3D03-5A90-4355-B17B-FA0463FF258B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>98A75292-61D1-4AE2-B40E-5BDDD47449F6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CB83A158-1D9E-4A88-ABEA-52465A133F15</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>C2E9E995-BC7A-49B9-9136-1314FA0B82A6</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Use this item with another send action</string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>27317C12-0940-4EA4-8270-80446BE2D182</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Append extra string before sending</string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>5202290C-6EE0-4B43-AD2B-0E2162E03CEF</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string>Prepend extra string before sending</string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+		</array>
+		<key>A86C089C-26DD-457B-942E-FB2B1FD547A2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FB3C5D64-C974-49FA-A82A-7D7A1D036FB2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B0ED516C-AE1C-45DF-9A3C-0B130D77CF26</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FF56415A-D9EE-49C4-8AE2-A11D88632913</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B333DB63-4306-4475-8AB6-70DBFBB31B52</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CB83A158-1D9E-4A88-ABEA-52465A133F15</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C8C19BDD-11C9-44C9-B118-952B48764004</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6BD74F20-A959-4448-8521-F67422DDFD19</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>CB6C1AE8-2A5F-412F-A0B6-0E88947A9376</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EE892030-9E14-430F-B3DF-8AB819631C1B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B333DB63-4306-4475-8AB6-70DBFBB31B52</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>89DFAE30-3D36-465B-A557-6190FDFFF67B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D0555A91-63CC-459D-9842-5999618C1FB8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8680F123-FE8A-4184-988E-EC0CAA277E80</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D18F0F74-B211-41A4-88DA-808568C559AE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EE892030-9E14-430F-B3DF-8AB819631C1B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B333DB63-4306-4475-8AB6-70DBFBB31B52</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>89DFAE30-3D36-465B-A557-6190FDFFF67B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>DCA06927-CD5B-4E7D-B007-61A244FA5470</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3C20E9AE-523F-488F-B022-68D7683097BE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>911FE14E-58E5-4E1E-BEE2-41F528DC6304</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>EE892030-9E14-430F-B3DF-8AB819631C1B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B333DB63-4306-4475-8AB6-70DBFBB31B52</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>DEE5EC87-C07C-424D-99B7-45D43DB5DE0E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>069162C6-4CD4-4C98-84AA-E219EAEE7D1F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E74E76CD-984A-4BC3-AEC6-1906BFEAA31E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3C20E9AE-523F-488F-B022-68D7683097BE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>911FE14E-58E5-4E1E-BEE2-41F528DC6304</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>EE892030-9E14-430F-B3DF-8AB819631C1B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B333DB63-4306-4475-8AB6-70DBFBB31B52</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EE892030-9E14-430F-B3DF-8AB819631C1B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4090EFFC-984B-43D0-86B4-E0E24AB8904F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F69523E1-014B-4D62-BD1A-2D7191C56550</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CB83A158-1D9E-4A88-ABEA-52465A133F15</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F7E2ACC1-0511-463D-A204-7B781D00E6BB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>94C7EC0A-CF78-447A-A94D-3D900D69E334</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>18EFF533-69FB-475C-B228-37D40C661A9B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>FB3C5D64-C974-49FA-A82A-7D7A1D036FB2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0DAA19E5-FBDA-4B60-8A3B-BC0336A09529</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>FF56415A-D9EE-49C4-8AE2-A11D88632913</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DCA06927-CD5B-4E7D-B007-61A244FA5470</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Guillaume Barrette</string>
+	<key>description</key>
+	<string>Cardhop Workflow</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>gbCardhop</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>x-cardhop://show?id={query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>9ABEA8A5-697F-4211-B582-D392AA4B911D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>echo -n "$1" | sed -e 's/.*Metadata\/\(.*\)\:ABPerson.*/\1/'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>8680F123-FE8A-4184-988E-EC0CAA277E80</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>anchorfields</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>daterange</key>
+				<integer>0</integer>
+				<key>fields</key>
+				<array>
+					<dict>
+						<key>field</key>
+						<string>kMDItemDisplayName</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<true/>
+						<key>value</key>
+						<string>{query}</string>
+						<key>words</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>field</key>
+						<string>kMDItemTextContent</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<true/>
+						<key>value</key>
+						<string>{query}</string>
+						<key>words</key>
+						<true/>
+					</dict>
+				</array>
+				<key>includesystem</key>
+				<false/>
+				<key>keyword</key>
+				<string>chc</string>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>scopes</key>
+				<array>
+					<string>~/Library/Application Support/AddressBook</string>
+				</array>
+				<key>subtext</key>
+				<string>Search for contact and open in Cardhop</string>
+				<key>title</key>
+				<string>Contact Search to Cardhop</string>
+				<key>types</key>
+				<array>
+					<string>com.apple.addressbook.person</string>
+				</array>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.filefilter</string>
+			<key>uid</key>
+			<string>D0555A91-63CC-459D-9842-5999618C1FB8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.transform</string>
+			<key>uid</key>
+			<string>3D027A3F-F365-4049-B6F2-D777E8D30634</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>send_to_cardhop_favorites</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>CADD7948-0499-4DB9-94F8-711FC1ACBDC8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>count</key>
+				<integer>1</integer>
+				<key>keychar</key>
+				<string>c</string>
+				<key>keycode</key>
+				<integer>-1</integer>
+				<key>keymod</key>
+				<integer>1048576</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.dispatchkeycombo</string>
+			<key>uid</key>
+			<string>B0ED516C-AE1C-45DF-9A3C-0B130D77CF26</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{clipboard}</string>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>DCA06927-CD5B-4E7D-B007-61A244FA5470</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>seconds</key>
+				<string>0.2</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.delay</string>
+			<key>uid</key>
+			<string>FF56415A-D9EE-49C4-8AE2-A11D88632913</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>1993EFCA-8227-4526-B371-24496EA3659B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:action}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>favorites</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>3C20E9AE-523F-488F-B022-68D7683097BE</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>keyword</key>
+				<string>chs</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>import sys, json, os, unicodedata
+
+query = sys.argv[1] or os.getenv('mainStr','')
+query = unicodedata.normalize('NFC', query.decode('utf-8', 'ignore'))
+
+modsKeys = {
+        'alt': {
+            'arg': query,
+            'subtitle': 'Append extra string before sending',
+            'variables': { 'mainStr': query, 'action': 'append' },
+        },
+        'ctrl': {
+            'arg': query,
+            'subtitle': 'Prepend extra string before sending',
+            'variables': { 'mainStr': query, 'action': 'prepend' },
+        },
+    }
+
+data = { 'items': [] }
+
+data['items'].append({
+    'title': 'Send to Cardhop',
+    'arg': query,
+    'variables': { 'mainStr': query, 'action': 'send' },
+    'mods': modsKeys
+})
+
+data['items'].append({
+    'title': 'Favorites',
+    'subtitle': 'Use the query with an item in the Favorites list',
+    'arg': query,
+    'variables': { 'mainStr': query, 'action': 'favorites' },
+    'mods': modsKeys
+})
+
+data['items'].append({
+    'title': 'Actions',
+    'subtitle': 'Use the query with a Cardhop Action',
+    'arg': query,
+    'variables': { 'mainStr': query, 'action': 'ch-actions' },
+    'mods': modsKeys
+})
+
+json.dump(data, sys.stdout)</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Send to Cardhop</string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>0DAA19E5-FBDA-4B60-8A3B-BC0336A09529</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>send_to_cardhop_list</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>A86C089C-26DD-457B-942E-FB2B1FD547A2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict>
+					<key>mainStr</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>FB3C5D64-C974-49FA-A82A-7D7A1D036FB2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>E74E76CD-984A-4BC3-AEC6-1906BFEAA31E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>send_to_cardhop_actions</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>A1ABF233-EF49-4DBF-B399-B82F15C80C0B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:action}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>ch-actions</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>911FE14E-58E5-4E1E-BEE2-41F528DC6304</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>1</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>2</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>73AB0C73-92F3-41FB-B284-E70F3D69CBFF</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>import sys, json, os, unicodedata
+
+query = sys.argv[1]
+query = unicodedata.normalize('NFC', query.decode('utf-8', 'ignore'))
+mainStr = os.getenv('mainStr',"")
+mainStr = unicodedata.normalize('NFC', mainStr.decode('utf-8', 'ignore'))
+
+if query:
+    mainStr = mainStr.replace('{q}', query)
+
+def modsKeys(item):
+    return {
+        'alt': {
+            'arg': item,
+            'subtitle': 'Append extra string before sending',
+            'variables': { 'mainStr': item, 'action': 'append' },
+        },
+        'ctrl': {
+            'arg': item,
+            'subtitle': 'Prepend extra string before sending',
+            'variables': { 'mainStr': item, 'action': 'prepend' },
+        },
+        'cmd': {
+            'arg': item,
+            'subtitle': 'Use this item with another action',
+            'variables': { 'mainStr': item, 'action': 'list' },
+        },
+    }
+
+data = { 'items': [] }
+data['items'].append({
+    'title': 'Replace {q} in string',
+    'subtitle': mainStr,
+    'arg': mainStr,
+    'variables': { 'mainStr': mainStr, 'action': 'send' },
+    'text' : {
+        'copy' : mainStr,
+        'largetype' : mainStr
+    },
+    'mods': modsKeys(mainStr)
+})
+
+json.dump(data, sys.stdout)</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>CB6C1AE8-2A5F-412F-A0B6-0E88947A9376</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>send_to_cardhop_with_appended_string</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>4090EFFC-984B-43D0-86B4-E0E24AB8904F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:action}</string>
+				<key>matchcasesensitive</key>
+				<false/>
+				<key>matchmode</key>
+				<integer>2</integer>
+				<key>matchstring</key>
+				<string>prepend|append</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>EE892030-9E14-430F-B3DF-8AB819631C1B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>16BF3D03-5A90-4355-B17B-FA0463FF258B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<false/>
+				<key>matchmode</key>
+				<integer>2</integer>
+				<key>matchstring</key>
+				<string>\{q\}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>94C7EC0A-CF78-447A-A94D-3D900D69E334</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:action}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>send</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>B333DB63-4306-4475-8AB6-70DBFBB31B52</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>send_to_cardhop_favorites</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>23283DBD-B25B-4DFC-8427-8C13F6364F3B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>keyword</key>
+				<string>chf</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>import sys, json, os, unicodedata
+
+strList = os.getenv("Favorites","").split(";")
+mainStr = os.getenv('mainStr',"")
+mainStr = unicodedata.normalize('NFC', mainStr.decode('utf-8', 'ignore'))
+
+def modsKeys(item):
+    return {
+        'alt': {
+            'arg': item,
+            'subtitle': 'Append extra string before sending',
+            'variables': { 'mainStr': item, 'action': 'append' },
+        },
+        'ctrl': {
+            'arg': item,
+            'subtitle': 'Prepend extra string before sending',
+            'variables': { 'mainStr': item, 'action': 'prepend' },
+        },
+        'cmd': {
+            'arg': item,
+            'subtitle': 'Use this item with another send action',
+            'variables': { 'mainStr': item, 'action': 'list' },
+        },
+    }
+
+data = { 'items': [] }
+if strList[0] == "":
+	data['items'].append({
+        'title': "Empty Favorites list",
+        'subtitle': "Go into the Workflow's preference to add items",
+        'variables': { 'mainStr': item, 'action': '' },
+        'mods': modsKeys(item)
+    })
+else:
+    for item in strList:
+        item = unicodedata.normalize('NFC', item.decode('utf-8', 'ignore'))
+        if mainStr != "":
+            item = item.replace('{q}', mainStr)
+        data['items'].append({
+            'title': item,
+            'arg': item,
+            'variables': { 'mainStr': item, 'action': 'send' },
+            'uid': item,
+            'autocomplete': item,
+            'text' : {
+                'copy' : item,
+                'largetype' : item
+            },
+            'mods': modsKeys(item)
+        })
+
+json.dump(data, sys.stdout)</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Open Cardhop with a string from the favorites list</string>
+				<key>title</key>
+				<string>Cardhop Favorites</string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>F7E2ACC1-0511-463D-A204-7B781D00E6BB</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>x-cardhop://parse?s={query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>CB83A158-1D9E-4A88-ABEA-52465A133F15</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<false/>
+				<key>matchmode</key>
+				<integer>2</integer>
+				<key>matchstring</key>
+				<string>^(?!.*\{q\}).*$</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>18EFF533-69FB-475C-B228-37D40C661A9B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict>
+					<key>mainStr</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>323D5A15-386A-4389-8881-14D9A87FA708</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:action}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>list</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>89DFAE30-3D36-465B-A557-6190FDFFF67B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>send_to_cardhop_list</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>C2E9E995-BC7A-49B9-9136-1314FA0B82A6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>send_to_cardhop_actions</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>DEE5EC87-C07C-424D-99B7-45D43DB5DE0E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>keyword</key>
+				<string>cha</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>function run(argv) {
+	//var query = argv[0];
+	var app = Application('Cardhop')
+	app.includeStandardAdditions = true
+
+	curApp = Application.currentApplication()
+	curApp.includeStandardAdditions = true
+	
+	var actionsList = [
+		["Call", "dial,call,phone", "Call a contact using your phone. Uses your iPhone through Continuity or Wi-Fi Calling, or a phone paired with your Mac with Bluetooth. You can choose whether you use Continuity and Wi-Fi Calling or Bluetooth in the preferences."],
+		
+		["Copy", "copy", "Copy a contact’s information. You can copy specific properties by typing something like “copy Alexis address” or “copy Alexis work email”."],
+		
+		["Directions", "map,maps,direction,directions,route", "Compose an email to a contact or group."],
+		
+		["FaceTime", "facetime,ft", "Start a FaceTime video call with a contact."],
+		
+		["FaceTime Audio", "facetimeaudio,audio,facetime audio,fta", "Start a FaceTime Audio call with a contact."],
+		
+		["Large Type", "large,banner,show,big,large type", "Show information about a contact in large type so you can read it from far away. You can show phone numbers and addresses in large type."],
+		
+		["Print", "print", "Print mailing labels, envelopes, or a list of information for a contact or group."],
+		
+		["Message", "imessage,message,text,txt,im,ping,sms", "Start an iMessage text message with a contact."],
+		
+		["Skype", "skype", "Start a Skype call with a contact."],
+		
+		["Skype for Business", "skypefb,skypeb,sfb", "Start a Skype for Business call with a contact."],
+		
+		["Telegram", "telegram,tg", "Send a Telegram message to a contact."],
+		
+		["Twitter", "tweet,twitter", "Send a tweet to a contact."],
+		
+		["URL", "website,webpage,url,web", "Open the URL associated with a contact."],
+		
+		["VoIP", "voip", "Start a Voice over IP call with a contact. This action sends the phone number to an app that supports callto:// or sip:// URLs."]
+	]
+	
+	var data = { 'items': [] };
+	var actionItem
+	for (var i = 0; i &lt; actionsList.length; i++) {
+		actionItem = app.localizedString(actionsList[i][1]).split(",")[0] + " " + curApp.systemAttribute("mainStr")
+		data.items.push({
+			'title': app.localizedString(actionsList[i][0]) + " : " + app.localizedString(actionsList[i][1]).replace(/,/g, ", "), 
+			'subtitle': app.localizedString(actionsList[i][2]),
+			'arg': actionItem,
+			'variables': {'action': 'send' },
+			'text' : {
+	        	'copy' : 'copy',
+	        	'largetype' : app.localizedString(actionsList[i][2])
+	    	},
+			'mods': {
+		        'alt': {
+		            'arg': actionItem,
+		            'subtitle': 'Append extra string before sending',
+		            'variables': { 'mainStr': actionItem, 'action': 'append' },
+		        },
+		        'ctrl': {
+		            'arg': actionItem,
+		            'subtitle': 'Prepend extra string before sending',
+		            'variables': { 'mainStr': actionItem, 'action': 'prepend' },
+		        },
+		        'cmd': {
+		            'arg': actionItem,
+		            'subtitle': 'Use this item with another send action',
+		            'variables': { 'mainStr': actionItem, 'action': 'list' },
+		        },
+		    }
+		})
+	}
+	return JSON.stringify(data);
+}</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Cardhop Actions</string>
+				<key>type</key>
+				<integer>7</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>130D6640-AAE6-45F1-BE6B-C30716D808AB</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict>
+					<key>mainStr</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>069162C6-4CD4-4C98-84AA-E219EAEE7D1F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>import sys, unicodedata
+
+query = unicodedata.normalize('NFC', sys.argv[1].decode('utf-8', 'ignore'))
+
+sys.stdout.write(query)</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>1308EA9B-68B1-4181-9F02-A2E4829CD625</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>import sys, json, os, unicodedata
+
+query = sys.argv[1]
+query = unicodedata.normalize('NFC', query.decode('utf-8', 'ignore'))
+mainStr = os.getenv("mainStr","")
+mainStr = unicodedata.normalize('NFC', mainStr.decode('utf-8', 'ignore'))
+action = os.getenv("action","")
+strList = (os.getenv("PrependToSend","") if action == "prepend" else os.getenv("AppendToSend","")).split(";")
+
+def modsKeys(outStr):
+    return {
+        'alt': {
+            'arg': outStr,
+            'subtitle': 'Append extra string before sending',
+            'variables': { 'mainStr': outStr, 'action': 'append' },
+        },
+        'ctrl': {
+            'arg': outStr,
+            'subtitle': 'Prepend extra string before sending',
+            'variables': { 'mainStr': outStr, 'action': 'prepend' },
+        },
+        'cmd': {
+            'arg': outStr,
+            'subtitle': 'Use this item with another send action',
+            'variables': { 'mainStr': outStr, 'action': 'list' },
+        },
+    }
+
+data = { 'items': [] }
+
+def prependItemToOutput(txt, item):
+    outStr = item + " " + mainStr
+    data['items'].append({
+        'title': txt+item,
+        'arg': outStr,
+        'variables': { 'mainStr': outStr, 'action': 'send' },
+        'uid': item,
+        'autocomplete': item,
+        'text' : {
+            'copy' : outStr,
+            'largetype' : outStr
+        },
+        'mods': modsKeys(outStr)
+    })
+
+def appendItemToOutput(txt, item):
+    outStr = mainStr + " " + item
+    data['items'].append({
+        'title': txt+item,
+        'arg': outStr,
+        'variables': { 'mainStr': outStr, 'action': 'send' },
+        'uid': item,
+        'autocomplete': item,
+        'text' : {
+            'copy' : outStr,
+            'largetype' : outStr
+        },
+        'mods': modsKeys(outStr)
+    })
+
+addItemToOutput = prependItemToOutput if action == "prepend" else appendItemToOutput
+
+for item in strList:
+	if (query and query not in item):
+		continue
+	addItemToOutput("",item)
+
+if query:
+	addItemToOutput('Add: ', query)
+
+json.dump(data, sys.stdout)</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Cardhop : Append String Before Sending</string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>D18F0F74-B211-41A4-88DA-808568C559AE</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>send_to_cardhop_with_appended_string</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>C8C19BDD-11C9-44C9-B118-952B48764004</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict>
+					<key>mainStr</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>6BD74F20-A959-4448-8521-F67422DDFD19</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>keyword</key>
+				<string>chaold</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>import sys, json, os, unicodedata
+
+mainStr = os.getenv('mainStr', "")
+mainStr = unicodedata.normalize('NFC', mainStr.decode('utf-8', 'ignore'))
+
+def modsKeys(item):
+    return {
+        'alt': {
+            'arg': item,
+            'subtitle': 'Append extra string before sending',
+            'variables': { 'mainStr': item, 'action': 'append' },
+        },
+        'ctrl': {
+            'arg': item,
+            'subtitle': 'Prepend extra string before sending',
+            'variables': { 'mainStr': item, 'action': 'prepend' },
+        },
+        'cmd': {
+            'arg': item,
+            'subtitle': 'Use this item with another send action',
+            'variables': { 'mainStr': item, 'action': 'list' },
+        },
+    }
+
+data = { 'items' : [] }
+
+data['items'].append({
+    'title': 'Call : dial / call / phone',
+    'subtitle': 'Call a contact using your phone',
+    'arg': 'call '+mainStr,
+    'variables': { 'action': 'send' },
+    'text' : {
+        'copy' : 'call',
+        'largetype' : 'Call a contact using your phone'
+    },
+    'mods': modsKeys('call '+mainStr)
+})
+
+data['items'].append({
+    'title': 'Copy : copy',
+    'subtitle': """Copy a contact's information. You can copy a specific properties by typing something like "copy Alexis address" or "copy Alexis work email" """,
+    'arg': 'copy '+mainStr,
+    'variables': { 'action': 'send' },
+    'text' : {
+        'copy' : 'copy',
+        'largetype' : """Copy a contact's information. You can copy a specific properties by typing something like "copy Alexis address" or "copy Alexis work email" """
+    },
+    'mods': modsKeys('copy '+mainStr)
+})
+
+data['items'].append({
+    'title': 'Directions : map / maps / direction / directions / route',
+    'subtitle': """Show a map of a contact's address. You can choose to open maps in Apple Maps or Google Maps in Cardhop's preferences""",
+    'arg': 'direction '+mainStr,
+    'variables': { 'action': 'send' },
+    'text' : {
+        'copy' : 'direction',
+        'largetype' : """Show a map of a contact's address. You can choose to open maps in Apple Maps or Google Maps in Cardhop's preferences"""
+    },
+    'mods': modsKeys('direction '+mainStr)
+})
+
+data['items'].append({
+    'title': 'Email : mail / email',
+    'subtitle': 'Compose an email to a contact',
+    'arg': 'email '+mainStr,
+    'variables': { 'action': 'send' },
+    'text' : {
+        'copy' : 'email',
+        'largetype' : 'Compose an email to a contact'
+    },
+    'mods': modsKeys('email '+mainStr)
+})
+
+data['items'].append({
+    'title': 'FaceTime : facetime / ft',
+    'subtitle': 'Start a FaceTime video call with a contact',
+    'arg': 'facetime '+mainStr,
+    'variables': { 'action': 'send' },
+    'text' : {
+        'copy' : 'facetime',
+        'largetype' : 'Start a FaceTime video call with a contact'
+    },
+    'mods': modsKeys('facetime '+mainStr)
+})
+
+data['items'].append({
+    'title': 'FaceTime Audio : facetimeaudio / audio / facetime audio / fta',
+    'subtitle': 'Start a FaceTime Audio call with a contact',
+    'arg': 'facetimeaudio '+mainStr,
+    'variables': { 'action': 'send' },
+    'text' : {
+        'copy' : 'facetimeaudio',
+        'largetype' : 'Start a FaceTime Audio call with a contact'
+    },
+    'mods': modsKeys('facetimeaudio '+mainStr)
+})
+
+data['items'].append({
+    'title': 'Large Type : large / banner / show / big / large type',
+    'subtitle': 'Show information about a contact in large type so you can read it from far away. You can show phone numbers and addresses in large type',
+    'arg': 'facetimeaudio '+mainStr,
+    'variables': { 'action': 'send' },
+    'text' : {
+        'copy' : 'large',
+        'largetype' : 'Show information about a contact in large type so you can read it from far away. You can show phone numbers and addresses in large type'
+    },
+    'mods': modsKeys('large '+mainStr)
+})
+
+data['items'].append({
+    'title': 'Message : imessage / message / text / txt / im / ping',
+    'subtitle': 'Start an iMessage text message with a contact',
+    'arg': 'message '+mainStr,
+    'variables': { 'action': 'send' },
+    'text' : {
+        'copy' : 'message',
+        'largetype' : 'Start an iMessage text message with a contact'
+    },
+    'mods': modsKeys('message '+mainStr)
+})
+
+data['items'].append({
+    'title': 'Skype : skype',
+    'subtitle': 'Start a Skype call with a contact',
+    'arg': 'skype '+mainStr,
+    'variables': { 'action': 'send' },
+    'text' : {
+        'copy' : 'skype',
+        'largetype' : 'Start a Skype call with a contact'
+    },
+    'mods': modsKeys('skype '+mainStr)
+})
+
+data['items'].append({
+    'title': 'Skype for Business : skypefb / skypeb / sfb',
+    'subtitle': 'Start a Skype for Business call with a contact',
+    'arg': 'skypefb '+mainStr,
+    'variables': { 'action': 'send' },
+    'text' : {
+        'copy' : 'skypefb',
+        'largetype' : 'Start a Skype for Business call with a contact'
+    },
+    'mods': modsKeys('skypefb '+mainStr)
+})
+
+data['items'].append({
+    'title': 'Telegram : telegram / tg',
+    'subtitle': 'Send a Telegram message to a contact',
+    'arg': 'telegram '+mainStr,
+    'variables': { 'action': 'send' },
+    'text' : {
+        'copy' : 'telegram',
+        'largetype' : 'Send a Telegram message to a contact'
+    },
+    'mods': modsKeys('telegram '+mainStr)
+})
+
+data['items'].append({
+    'title': 'Tweet : tweet / twitter',
+    'subtitle': 'Send a tweet to a contact',
+    'arg': 'tweet '+mainStr,
+    'variables': { 'action': 'send' },
+    'text' : {
+        'copy' : 'tweet',
+        'largetype' : 'Send a tweet to a contact'
+    },
+    'mods': modsKeys('tweet '+mainStr)
+})
+
+data['items'].append({
+    'title': 'URL : website / webpage / url / web',
+    'subtitle': 'Open the URL associated with a contact',
+    'arg': 'website '+mainStr,
+    'variables': { 'action': 'send' },
+    'text' : {
+        'copy' : 'website',
+        'largetype' : 'Open the URL associated with a contact'
+    },
+    'mods': modsKeys('website '+mainStr)
+})
+
+data['items'].append({
+    'title': 'VoIP : voip',
+    'subtitle': 'Start a Voice over IP call with a contact. This action uses Skype if there is no app that supports callto:// or sip:// URLs',
+    'arg': 'voip '+mainStr,
+    'variables': { 'action': 'send' },
+    'text' : {
+        'copy' : 'voip',
+        'largetype' : 'Start a Voice over IP call with a contact. This action uses Skype if there is no app that supports callto:// or sip:// URLs'
+    },
+    'mods': modsKeys('voip '+mainStr)
+})
+
+sys.stdout.write(json.dumps(data))</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Cardhop Actions</string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>477DE4AB-1CFA-497E-9C32-A8BB8B951247</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>variables</key>
+				<dict>
+					<key>action</key>
+					<string>append</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>27317C12-0940-4EA4-8270-80446BE2D182</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>text</key>
+				<string>Send to Cardhop</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.fallback</string>
+			<key>uid</key>
+			<string>98A75292-61D1-4AE2-B40E-5BDDD47449F6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>variables</key>
+				<dict>
+					<key>action</key>
+					<string>prepend</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>5202290C-6EE0-4B43-AD2B-0E2162E03CEF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>1</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>2</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>72422000-B180-4CBA-8515-F033A30E8D35</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>send_to_cardhop</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>F69523E1-014B-4D62-BD1A-2D7191C56550</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>To use Cardhop as default contact application in Alfred:
+Insert "x-cardhop://show?id={uid}" into "Features/Contacts/Advanced/URL Handler" instead of "addressbook://{uid}"
+
+
+Features:
+
+    - Keyword "chc" : Search a contact in Alfred and open it in Cardhop
+
+    - Keyword "chs" or hotkey : Send the query to Cardhop. If the query is empty, it tries to get the selection from the front application and send it to Carhop (In short, you can select the contact information on it's website or email and call "chs" from Alfred and the selection should be sent directly to Cardhop). You can use this action to send the selection or pass a string to your Favorites list (alternative to keyword: chf) or to the Cardhop's Actions (alternative to keyword: cha).
+
+    - Keyword "chf" : Send a string from your Favorites list directly to Cardhop (could be used as a Snippets/Bookmarks list to rapidly write a query to Cardhop that you know gives you the right information in it without the need to write it all). Write your list in the Workflow Environment Variables "Favorites" (here on the right) and separated by semicolon (";"). Ex: Call mom home;Mail boss work;facetime Complicated Name;website businessName;/MyTag;Direction dentist... A variable "{q}" could be used to have a placeholder for a string that you want to set just before sending to Cardhop (ex: "Email {q} work" where {q} could be changed to any name at the time that you invoke the workflow). Tip: To directly activate an action in Cardhop, it seems to delay the input until it has done parsing the query, so you can rapidly press Enter a second time when you select an item from your Favorites list in Alfred and it should run the first action that Cardhop returns.
+
+    - Keyword "cha" : Show a list of possible Carhop actions. If arriving to this function using the Send feature (chs), then the selection or query would be appended to the Cardhop action before sending it.
+
+    - Hotkey to Send selection to Cardhop : If you prefer to send the selection directly to Cardhop with a hotkey instead of a keyword
+
+    - Fallback search to send the query to Cardhop : If you want to write the information directly in Alfred without any keyword before. To make it works, you would need to add the Fallback search into the Alfred Preferences at: "Features/Default Results/Setup fallback results/+/Workflow Trigger/Send to Cardhop"
+
+    - External trigger to send a string to Cardhop from an external script. Other external triggers are set if you want to pop the Favorites list or Actions list from an external script.
+
+    - Append/Prepend string : Add a string before or after the main string before sending using a predefined list or any string if the query doesn't match an item in the list (Could be useful to have a list of predefined group/tags) (See "Workflow Environment Variables" and "Navigation" lists below)
+
+
+Workflow Environment Variables:
+    - Favorites List: See keyword "chf" above
+    - AppendToSend : Set a predefined list of string to append using the Append feature (ALT key)
+    - PrependToSend : Set a predefined list of string to prepend using the Prepend feature (CTRL key)
+
+
+Navigation:
+    - CMD key : Go to the Send feature Actions List (chs)
+    - ALT key : Activate the selected item and append extra string (using the AppendToSend list)
+    - CTRL key : Activate the selected item and prepend extra string (using the PrependToSend list)</string>
+	<key>uidata</key>
+	<dict>
+		<key>069162C6-4CD4-4C98-84AA-E219EAEE7D1F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>160</integer>
+			<key>ypos</key>
+			<integer>640</integer>
+		</dict>
+		<key>0DAA19E5-FBDA-4B60-8A3B-BC0336A09529</key>
+		<dict>
+			<key>note</key>
+			<string>Send Action's List</string>
+			<key>xpos</key>
+			<integer>220</integer>
+			<key>ypos</key>
+			<integer>160</integer>
+		</dict>
+		<key>1308EA9B-68B1-4181-9F02-A2E4829CD625</key>
+		<dict>
+			<key>xpos</key>
+			<integer>910</integer>
+			<key>ypos</key>
+			<integer>710</integer>
+		</dict>
+		<key>130D6640-AAE6-45F1-BE6B-C30716D808AB</key>
+		<dict>
+			<key>xpos</key>
+			<integer>220</integer>
+			<key>ypos</key>
+			<integer>610</integer>
+		</dict>
+		<key>16BF3D03-5A90-4355-B17B-FA0463FF258B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>390</integer>
+			<key>ypos</key>
+			<integer>370</integer>
+		</dict>
+		<key>18EFF533-69FB-475C-B228-37D40C661A9B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>360</integer>
+			<key>ypos</key>
+			<integer>490</integer>
+		</dict>
+		<key>1993EFCA-8227-4526-B371-24496EA3659B</key>
+		<dict>
+			<key>note</key>
+			<string>Query is Empty</string>
+			<key>xpos</key>
+			<integer>390</integer>
+			<key>ypos</key>
+			<integer>150</integer>
+		</dict>
+		<key>23283DBD-B25B-4DFC-8427-8C13F6364F3B</key>
+		<dict>
+			<key>note</key>
+			<string>Favorites</string>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>460</integer>
+		</dict>
+		<key>27317C12-0940-4EA4-8270-80446BE2D182</key>
+		<dict>
+			<key>xpos</key>
+			<integer>470</integer>
+			<key>ypos</key>
+			<integer>930</integer>
+		</dict>
+		<key>323D5A15-386A-4389-8881-14D9A87FA708</key>
+		<dict>
+			<key>xpos</key>
+			<integer>160</integer>
+			<key>ypos</key>
+			<integer>490</integer>
+		</dict>
+		<key>3C20E9AE-523F-488F-B022-68D7683097BE</key>
+		<dict>
+			<key>note</key>
+			<string>Go to Favorites</string>
+			<key>xpos</key>
+			<integer>780</integer>
+			<key>ypos</key>
+			<integer>150</integer>
+		</dict>
+		<key>3D027A3F-F365-4049-B6F2-D777E8D30634</key>
+		<dict>
+			<key>xpos</key>
+			<integer>380</integer>
+			<key>ypos</key>
+			<integer>40</integer>
+		</dict>
+		<key>4090EFFC-984B-43D0-86B4-E0E24AB8904F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>860</integer>
+			<key>ypos</key>
+			<integer>340</integer>
+		</dict>
+		<key>477DE4AB-1CFA-497E-9C32-A8BB8B951247</key>
+		<dict>
+			<key>note</key>
+			<string>Cardhop Actions List</string>
+			<key>xpos</key>
+			<integer>730</integer>
+			<key>ypos</key>
+			<integer>920</integer>
+		</dict>
+		<key>5202290C-6EE0-4B43-AD2B-0E2162E03CEF</key>
+		<dict>
+			<key>xpos</key>
+			<integer>470</integer>
+			<key>ypos</key>
+			<integer>980</integer>
+		</dict>
+		<key>6BD74F20-A959-4448-8521-F67422DDFD19</key>
+		<dict>
+			<key>xpos</key>
+			<integer>160</integer>
+			<key>ypos</key>
+			<integer>790</integer>
+		</dict>
+		<key>72422000-B180-4CBA-8515-F033A30E8D35</key>
+		<dict>
+			<key>note</key>
+			<string>Send selection directly to Cardhop</string>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>1040</integer>
+		</dict>
+		<key>73AB0C73-92F3-41FB-B284-E70F3D69CBFF</key>
+		<dict>
+			<key>note</key>
+			<string>Send to Cardhop with extra</string>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>310</integer>
+		</dict>
+		<key>8680F123-FE8A-4184-988E-EC0CAA277E80</key>
+		<dict>
+			<key>xpos</key>
+			<integer>220</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
+		<key>89DFAE30-3D36-465B-A557-6190FDFFF67B</key>
+		<dict>
+			<key>note</key>
+			<string>Send List</string>
+			<key>xpos</key>
+			<integer>780</integer>
+			<key>ypos</key>
+			<integer>580</integer>
+		</dict>
+		<key>911FE14E-58E5-4E1E-BEE2-41F528DC6304</key>
+		<dict>
+			<key>note</key>
+			<string>Go to Cardhop Actions list</string>
+			<key>xpos</key>
+			<integer>780</integer>
+			<key>ypos</key>
+			<integer>260</integer>
+		</dict>
+		<key>94C7EC0A-CF78-447A-A94D-3D900D69E334</key>
+		<dict>
+			<key>xpos</key>
+			<integer>340</integer>
+			<key>ypos</key>
+			<integer>370</integer>
+		</dict>
+		<key>98A75292-61D1-4AE2-B40E-5BDDD47449F6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>930</integer>
+		</dict>
+		<key>9ABEA8A5-697F-4211-B582-D392AA4B911D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>460</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
+		<key>A1ABF233-EF49-4DBF-B399-B82F15C80C0B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>860</integer>
+			<key>ypos</key>
+			<integer>230</integer>
+		</dict>
+		<key>A86C089C-26DD-457B-942E-FB2B1FD547A2</key>
+		<dict>
+			<key>note</key>
+			<string>Workflow send action's list</string>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>160</integer>
+		</dict>
+		<key>B0ED516C-AE1C-45DF-9A3C-0B130D77CF26</key>
+		<dict>
+			<key>xpos</key>
+			<integer>460</integer>
+			<key>ypos</key>
+			<integer>120</integer>
+		</dict>
+		<key>B333DB63-4306-4475-8AB6-70DBFBB31B52</key>
+		<dict>
+			<key>note</key>
+			<string>Send</string>
+			<key>xpos</key>
+			<integer>780</integer>
+			<key>ypos</key>
+			<integer>460</integer>
+		</dict>
+		<key>C2E9E995-BC7A-49B9-9136-1314FA0B82A6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>860</integer>
+			<key>ypos</key>
+			<integer>590</integer>
+		</dict>
+		<key>C8C19BDD-11C9-44C9-B118-952B48764004</key>
+		<dict>
+			<key>note</key>
+			<string>Append (default) / Prepend</string>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>760</integer>
+		</dict>
+		<key>CADD7948-0499-4DB9-94F8-711FC1ACBDC8</key>
+		<dict>
+			<key>xpos</key>
+			<integer>860</integer>
+			<key>ypos</key>
+			<integer>120</integer>
+		</dict>
+		<key>CB6C1AE8-2A5F-412F-A0B6-0E88947A9376</key>
+		<dict>
+			<key>note</key>
+			<string>Replace {q} in string</string>
+			<key>xpos</key>
+			<integer>440</integer>
+			<key>ypos</key>
+			<integer>340</integer>
+		</dict>
+		<key>CB83A158-1D9E-4A88-ABEA-52465A133F15</key>
+		<dict>
+			<key>xpos</key>
+			<integer>860</integer>
+			<key>ypos</key>
+			<integer>470</integer>
+		</dict>
+		<key>D0555A91-63CC-459D-9842-5999618C1FB8</key>
+		<dict>
+			<key>note</key>
+			<string>Search contact and open in Cardhop</string>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
+		<key>D18F0F74-B211-41A4-88DA-808568C559AE</key>
+		<dict>
+			<key>note</key>
+			<string>Add a string from the "AppendToSend" or "PrependToSend" lists</string>
+			<key>xpos</key>
+			<integer>220</integer>
+			<key>ypos</key>
+			<integer>760</integer>
+		</dict>
+		<key>DCA06927-CD5B-4E7D-B007-61A244FA5470</key>
+		<dict>
+			<key>xpos</key>
+			<integer>640</integer>
+			<key>ypos</key>
+			<integer>150</integer>
+		</dict>
+		<key>DEE5EC87-C07C-424D-99B7-45D43DB5DE0E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>610</integer>
+		</dict>
+		<key>E74E76CD-984A-4BC3-AEC6-1906BFEAA31E</key>
+		<dict>
+			<key>note</key>
+			<string>Query is not Empty</string>
+			<key>xpos</key>
+			<integer>390</integer>
+			<key>ypos</key>
+			<integer>230</integer>
+		</dict>
+		<key>EE892030-9E14-430F-B3DF-8AB819631C1B</key>
+		<dict>
+			<key>note</key>
+			<string>Prepend or Append</string>
+			<key>xpos</key>
+			<integer>780</integer>
+			<key>ypos</key>
+			<integer>370</integer>
+		</dict>
+		<key>F69523E1-014B-4D62-BD1A-2D7191C56550</key>
+		<dict>
+			<key>note</key>
+			<string>Direct Send</string>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>1190</integer>
+		</dict>
+		<key>F7E2ACC1-0511-463D-A204-7B781D00E6BB</key>
+		<dict>
+			<key>note</key>
+			<string>Send a string from the "Favorites" list</string>
+			<key>xpos</key>
+			<integer>220</integer>
+			<key>ypos</key>
+			<integer>460</integer>
+		</dict>
+		<key>FB3C5D64-C974-49FA-A82A-7D7A1D036FB2</key>
+		<dict>
+			<key>xpos</key>
+			<integer>160</integer>
+			<key>ypos</key>
+			<integer>190</integer>
+		</dict>
+		<key>FF56415A-D9EE-49C4-8AE2-A11D88632913</key>
+		<dict>
+			<key>xpos</key>
+			<integer>590</integer>
+			<key>ypos</key>
+			<integer>150</integer>
+		</dict>
+	</dict>
+	<key>variables</key>
+	<dict>
+		<key>AppendToSend</key>
+		<string></string>
+		<key>Favorites</key>
+		<string></string>
+		<key>PrependToSend</key>
+		<string></string>
+	</dict>
+	<key>variablesdontexport</key>
+	<array>
+		<string>PrependToSend</string>
+		<string>AppendToSend</string>
+		<string>Favorites</string>
+	</array>
+	<key>version</key>
+	<string>1.2.5</string>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>

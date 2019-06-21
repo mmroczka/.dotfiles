@@ -112,6 +112,21 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Right option -> Cardhop",
+        "manipulators" : [ {
+          "to_if_alone" : [ {
+            "key_code" : "1",
+            "modifiers" : [ "left_command", "left_control", "left_option" ]
+          } ],
+          "from" : {
+            "key_code" : "right_option"
+          },
+          "to" : [ {
+            "key_code" : "right_option"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "DOUBLE PRESS: ⌘q² to quit",
         "manipulators" : [ {
           "from" : {
