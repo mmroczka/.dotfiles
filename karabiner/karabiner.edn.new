@@ -45,8 +45,8 @@
                          [:f :!S0 :period-mode] ;; .f insert )
                          [:a [:!Sgrave_accent_and_tilde :slash] :period-mode] ;; .a insert ~/
                          [:s [:period :!S8] :period-mode]
-                         [:i nil :period-mode :afterup ["period-mode" 0]]
-                         [:o nil :period-mode :afterup ["period-mode" 1]]
+                         [:i nil :period-mode {:afterup ["period-mode" 0]}]
+                         [:o nil :period-mode {:afterup ["period-mode" 1]}]
                          ]}
 
 ;         USES SPECTACLE TO CHANGE WINDOWS
