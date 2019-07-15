@@ -1,29 +1,36 @@
 #!/usr/bin/env bash
 
 # Install Homebrew
-which -s brew
-if [[ $? != 0 ]] ; then
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
+echo "Installing Homebrew because this machine didn't come packaged with it for some crazy reason..."
+# which -s brew
+# if [[ $? != 0 ]] ; then
+#    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# fi
 
 # Update Homebrew and install packages
-brew update
-brew tap caskroom/versions
-brew bundle
+echo "Updating Homebrew..."
+#brew update
+echo "Tapping caskroom/versions..."
+# brew tap caskroom/versions
+echo "Running brew bundle - installing brew packages..."
+printf '%b\n' "$(cat brew)"
+# brew bundle
 
 # If this user's login shell is not already "zsh", attempt to switch.
-TEST_CURRENT_SHELL=$(expr "$SHELL" : '.*/\(.*\)')
-if [ "$TEST_CURRENT_SHELL" != "zsh" ]; then
-    printf "${BLUE}Changing your default shell to zsh since it's not the 80's anymore and we aren't barbarians.${NORMAL}\n"
-    chsh -s $(grep /zsh$ /etc/shells | tail -1)
-    env zsh -l
-fi
+# TEST_CURRENT_SHELL=$(expr "$SHELL" : '.*/\(.*\)')
+# if [ "$TEST_CURRENT_SHELL" != "zsh" ]; then
+#     printf "${BLUE}Changing your default shell to zsh since it's not the 80's anymore and we aren't barbarians.${NORMAL}\n"
+#     chsh -s $(grep /zsh$ /etc/shells | tail -1)
+#     env zsh -l
+# fi
 
-# Download latest copy of antigen file (if non exists currently)
-ANTIGEN=/antigen.zsh
-if test -f "$ANTIGEN"; then
-	curl -L git.io/antigen > antigen.zsh
-fi
+# # Download latest copy of antigen file (if non exists currently)
+# ANTIGEN=/antigen.zsh
+# if test ! -f "$ANTIGEN"; then
+#     printf "${BLUE}Installing antigen - the ZSH plugin manager.${NORMAL}\n"
+# 	curl -L git.io/antigen > antigen.zsh
+# fi
 
-# Symbolically link all dotfiles
-~/.dotfiles/install_dotfiles
+# printf "${BLUE}Running dotfiles installation.${NORMAL}\n"
+# # Symbolically link all dotfiles
+# ~/.dotfiles/install_dotfiles
