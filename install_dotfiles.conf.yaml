@@ -10,12 +10,14 @@
   - if [[ ! -f proxy_url ]]       ; then touch proxy_url; echo "proxy_url=" > proxy_url; fi
   - if [[ ! -d ~/.config ]]       ; then mkdir ~/.config; fi
   - if [[ ! -d ~/.config/nvim ]]  ; then mkdir ~/.config/nvim; fi
+  - if [[ ! -d ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch ]]; then mkdir ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch; fi
 
 - link:
     ~/.tmux.conf: tmux/tmux.conf
     ~/.tmux.conf.local: tmux/tmux.conf.local
     ~/.bashrc: bash/bashrc
     ~/.bash_profile: bash/bash_profile
+    ~/.config/antigen.zsh: antigen.zsh
     ~/.config/karabiner: karabiner
     ~/.config/karabiner.edn: karabiner/karabiner.edn
     ~/.gitignore_global: git/gitignore_global
@@ -26,12 +28,16 @@
     ~/Code/MacSettingsBackup: MacSettingsBackup
     ~/odrive/Dropbox/MacSettingsBackup: MacSettingsBackup
     ~/odrive/OneDrive/MacSettingsBackup: MacSettingsBackup
+    ~/.proxy_url: proxy_url
     ~/.ideavimrc: vim/ideavimrc
     ~/.vrapperrc: vim/vrapperrc
     ~/Code/MacSettingsBackup: MacSettingsBackup
     ~/Library/Application Support/Code/User/settings.json: vim/vs_code_vim_settings
+    "~/Library/Application\ Support/iterm2/Scripts/AutoLaunch/theme.py": theme.py
+    ~/Library/Preferences/com.googlecode.iterm2.plist:
     ~/.yarnrc: yarn/yarnrc
     ~/.zshrc: zsh/zshrc
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+
