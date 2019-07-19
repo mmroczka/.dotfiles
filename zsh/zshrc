@@ -1,4 +1,3 @@
-
 source ~/.proxy_url
 # Turns Proxy on
 proxy() {
@@ -20,7 +19,7 @@ noproxy() {
 
 # Set Proxy if on GE Network
 noproxy
-wget -q --spider http://google.com
+wget -q --spider https://my.ge.com
 if [[ $? != 0 ]]; then
     echo "On GE network. Setting proxy"
     proxy
