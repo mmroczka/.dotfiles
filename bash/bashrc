@@ -4,23 +4,6 @@ echo "| | /| / / _ \\/ / ___/ __ \\/ __ \`__ \\/ _ \\   / /|_/ / ___/  / /|_/ / 
 echo "| |/ |/ /  __/ / /__/ /_/ / / / / / /  __/  / /  / / /     / /  / / /  / /_/ / /__  / /_/ ,< / /_/ / "
 echo "|__/|__/\\___/_/\\___/\\____/_/ /_/ /_/\\___/  /_/  /_/_(_)   /_/  /_/_/   \\____/\\___/ /___/_/|_|\\__,_/  "
 
-####### CUSTOM FUNCTIONS #######
-showFiles(){
-        defaults write com.apple.finder AppleShowAllFiles YES
-        killall Finder /System/Library/CoreServices/Finder.app
-}
-
-hideFiles(){
-        defaults write com.apple.finder AppleShowAllFiles NO
-        killall Finder /System/Library/CoreServices/Finder.app
-}
-
-
-# add --skip-worktree flag to file
-skip() {  git update-index --skip-worktree "$@";  git status; }
-# remove --skip-worktree flag from file
-unskip() {  git update-index --no-skip-worktree "$@";  git status; }
-
 ####### CUSTOM EXPORTS #######
 export JAVA_HOME=$(/usr/libexec/java_home)
 export M2_HOME=/Users/mikemroczka/apache-maven-3.1.1

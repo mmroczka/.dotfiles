@@ -16,11 +16,12 @@
     ~/.tmux.conf: tmux/tmux.conf
     ~/.tmux.conf.local: tmux/tmux.conf.local
     ~/.bashrc: bash/bashrc
-    ~/.aliases: zsh/aliases
+    ~/.aliases: aliases
     ~/.bash_profile: bash/bash_profile
     ~/.config/antigen.zsh: antigen.zsh
     ~/.config/karabiner: karabiner
     ~/.config/karabiner.edn: karabiner/karabiner.edn
+    ~/.functions: functions
     ~/.gitignore_global: git/gitignore_global
     ~/.hammerspoon: hammerspoon
     ~/.npmrc: node/work_npmrc
