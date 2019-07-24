@@ -16,6 +16,7 @@
     ~/.tmux.conf: tmux/tmux.conf
     ~/.tmux.conf.local: tmux/tmux.conf.local
     ~/.bashrc: bash/bashrc
+    ~/.aliases: zsh/aliases
     ~/.bash_profile: bash/bash_profile
     ~/.config/antigen.zsh: antigen.zsh
     ~/.config/karabiner: karabiner

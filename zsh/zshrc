@@ -1,25 +1,29 @@
 source ~/.proxy_url
 # Turns Proxy on
 proxy() {
-    export http_proxy=$proxy_url
-    export https_proxy=$proxy_url
-    export HTTP_PROXY=$proxy_url
-    export HTTPS_PROXY=$proxy_url
-    export no_proxy=.ge.com,localhost,127.0.0.1,204.130.41.105*
+    export HTTP_PROXY=$PROXY_URL
+    export HTTPS_PROXY=$PROXY_URL
+    export HTTP_PROXY=$PROXY_URL
+    export HTTPS_PROXY=$PROXY_URL
+    export NO_PROXY=.ge.com,localhost,127.0.0.1,204.130.41.105*
+	npm config set PROXY $PROXY_URL
+	npm config set HTTPS-PROXY $PROXY_URL
 }
 
 # Turns Proxy off
 noproxy() {
-    unset http_proxy
-    unset https_proxy
     unset HTTP_PROXY
     unset HTTPS_PROXY
-    unset no_proxy
+    unset HTTP_PROXY
+    unset HTTPS_PROXY
+    unset NO_PROXY
 }
 
-# Set Proxy if on GE Network
+NO_PROXY="github.build.ge.com, localhost, 127.0.0.1, api.grc-apps.svc.ice.ge.com,login.grc-apps.svc.ice.ge.com,loggregator.grc-apps.svc.ice.ge.com,uaa.grc-apps.svc.ice.ge.com,console.grc-apps.svc.ice.ge.com,grc-apps.svc.ice.ge.com"
+
+# Ping google.com. If command fails it's because we're behind the proxy, so set the GE network proxy
 noproxy
-wget -q --spider https://my.ge.com
+wget -q --spider https://google.com
 if [[ $? != 0 ]]; then
     echo "On GE network. Setting proxy"
     proxy
@@ -94,29 +98,10 @@ bindkey -M viins "^[OB"  down-line-or-search
 bindkey "^ " autosuggest-accept
 export KEYTIMEOUT=25
 
-
-# Aliases
-alias init-venv="python -m venv venv"
-alias activate="source venv/bin/activate"
-alias python="python3"
-alias pip="pip3"
-alias stop="pkill -f "
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
-alias howto="alias | grep $1"
-alias fz='vim $(fzf)'
-alias vi='vim'
-alias dps='docker ps'
-alias dc='docker-compose'
-alias dcu='docker-compose up'
-alias dcb='docker-compose build'
-alias dcd='docker-compose down'
-alias dcs='docker-compose stop'
-alias rm-containers='docker container rm $(docker container ls -aq)'
-alias rm-images='docker image prune -a'
-alias slack-dark-theme='cat ~/.slack_darkmode.js >> /Applications/Slack.app/Contents/Resources/app.asar.unpacked/src/static/ssb-interop.js'
-unalias rg 2>/dev/null
-
+if [[ -f ~/.dotfiles/zsh/aliases ]]; then
+    source ~/.dotfiles/zsh/aliases
+	echo "Adding aliases"
+fi
 
 pfind(){
     lsof -t -i :$1

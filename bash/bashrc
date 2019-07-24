@@ -102,19 +102,6 @@ proxy_off ()
     unset no_proxy;
 }
 
-function origin_to_upstream(){
-    `git remote remove upstream`
-    `git remote rename origin upstream`
-    `git remote add origin $1`
-    echo `git remote -v`
-}
-
-function upstream_to_origin(){
-    `git remote remove origin`
-    `git remote rename upstream origin`
-    echo `git remote -v`
-}
-
 showFiles(){
         defaults write com.apple.finder AppleShowAllFiles YES
         killall Finder /System/Library/CoreServices/Finder.app
@@ -154,8 +141,6 @@ echo "-------";
 git status'
 
 # export PATH=$HOME/bin:$PATH
-NO_PROXY="github.build.ge.com, localhost, 127.0.0.1, api.grc-apps.svc.ice.ge.com,login.grc-apps.svc.ice.ge.com,loggregator.grc-apps.svc.ice.ge.com,uaa.grc-apps.svc.ice.ge.com,console.grc-apps.svc.ice.ge.com,grc-apps.svc.ice.ge.com"
-PROXY=http://3.28.29.241:88
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

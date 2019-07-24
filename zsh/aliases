@@ -1,0 +1,22 @@
+# Aliases
+alias init-venv="python -m venv venv"
+alias activate="source venv/bin/activate"
+alias python="python3"
+alias pip="pip3"
+alias stop="pkill -f "
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+alias howto="~/.aliases | grep $1"
+alias fz='vim $(fzf)'
+alias vi='vim'
+alias rt='redis-cli ping' # test if redis is working
+alias dps='docker ps'
+alias dc='docker-compose'
+alias dcu='docker-compose up'
+alias dcb='docker-compose build'
+alias dcd='docker-compose down'
+alias dcs='docker-compose stop'
+alias rm-containers='docker container rm $(docker container ls -aq)'
+alias rm-images='docker image prune -a'
+alias slack-dark-theme='cat ~/.slack_darkmode.js >> /Applications/Slack.app/Contents/Resources/app.asar.unpacked/src/static/ssb-interop.js'
+unalias rg 2>/dev/null
