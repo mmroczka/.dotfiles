@@ -56,9 +56,9 @@ antigen apply
 export ZSH=/Users/$USER/.oh-my-zsh
 export PATH=$HOME/bin:/usr/local/bin:~/.composer/vendor/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
-export VISUAL=nvim
-export EDITOR="$VISUAL"
-export NVM_AUTO_USE=true
+# export VISUAL=nvim
+# export EDITOR="$VISUAL"
+# export NVM_AUTO_USE=true
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 HYPHEN_INSENSITIVE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
@@ -112,10 +112,6 @@ pfind(){
     lsof -t -i :$1
 }
 
-z() {
-  [ $# -gt 0 ] && _z "$*" && return
-  cd "$(_z -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
-}
 j() {
   [ $# -gt 0 ] && _z "$*" && return
   cd "$(_z -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
