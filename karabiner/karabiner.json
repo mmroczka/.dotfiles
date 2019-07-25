@@ -8,9 +8,9 @@
     "complex_modifications" : {
       "parameters" : {
         "basic.simultaneous_threshold_milliseconds" : 50,
-        "basic.to_delayed_action_delay_milliseconds" : 100,
-        "basic.to_if_alone_timeout_milliseconds" : 100,
-        "basic.to_if_held_down_threshold_milliseconds" : 100
+        "basic.to_delayed_action_delay_milliseconds" : 500,
+        "basic.to_if_alone_timeout_milliseconds" : 500,
+        "basic.to_if_held_down_threshold_milliseconds" : 500
       },
       "rules" : [ {
         "description" : "Caps -> Hyper / Esc",
@@ -127,7 +127,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "DOUBLE PRESS: ⌘q² to quit",
+        "description" : "Quit application by pressing ⌘q twice",
         "manipulators" : [ {
           "from" : {
             "key_code" : "q",
