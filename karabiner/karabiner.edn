@@ -8,6 +8,7 @@
                                                 "^com\\.googlecode\\.iterm2$",
                                                 "^org\\.vim\\."]
                 :Chromes                       ["^com\\.google\\.Chrome$", "^org\\.chromium\\.Chromium$", "^com\\.google\\.Chrome\\.canary$"]
+                :Brave                         ["^com\\.brave\\.Browser"]
                 :Terminals                     ["^com\\.apple\\.Terminal$", "^com\\.googlecode\\.iterm2$", "^io\\.alacritty$"]
                }
  :templates {:alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
@@ -22,14 +23,12 @@
              :launch_mode {:key :f24} ; Bind an unused key
              :window_manipulation_mode {:key :f24}
              :utilities_mode {:key :f24}
-             :period-mode {:key :period}
              }
  :main [
-
         {:des "Caps -> Hyper / Esc"
          :rules [[:##caps_lock :!CTOleft_shift nil {:alone :escape}]]}
         {:des   "shift+cmd+l types javascript: and hits enter hack" ;; https://superuser.com/a/324267
-         :rules [ [:!CSl [:!Cl :j :a :v :a :s :c :r :i :p :t :!Ssemicolon :return_or_enter] :Chromes] ]}
+         :rules [ [:!CSl [:!Cl :j :a :v :a :s :c :r :i :p :t :!Ssemicolon :return_or_enter] :Brave] ]}
         {:des "Hold cmd+v for KM clipboard history"
          :rules [ [:!Cv nil nil {:alone :!Cv :held [:km "Activate Clipboard History Switcher"] :repeat false :halt true :params{:alone 150 :held 200}} ] ]}
         {:des "Right cmd -> Alfred"
@@ -40,14 +39,29 @@
          :rules[[:!C#Pq [ :!Cq ["⌘q" 0]] ["⌘q" 1]] 		;? when ⌘q is pressed the first time  > variable is set to 1 and nothing is sent
 				[:!C#Pq ["⌘q" 1] nil {:delayed {:invoked ["⌘q" 0] :canceled ["⌘q" 0]}}]]} ;? when pressed the second time send ⌘Q
 
-        {:des "period mode"
-                 :rules [[:d :!S9 :period-mode] ;; .d insert (
-                         [:f :!S0 :period-mode] ;; .f insert )
-                         [:a [:!Sgrave_accent_and_tilde :slash] :period-mode] ;; .a insert ~/
-                         [:s [:period :!S8] :period-mode]
-                         [:i nil :period-mode :afterup ["period-mode" 0]]
-                         [:o nil :period-mode :afterup ["period-mode" 1]]
-                         ]}
+        {:des "Launch mode (l+;)" :rules [[{:sim [:l :semicolon]
+                                     :simo {:interrupt true
+                                            :dorder :insensitive
+                                            :uorder :insensitive
+                                            :afterup {:set ["launch_mode" 0]}}} {:set ["launch_mode" 1]}]]}
+        {:des "Launch mode -> a (Open Activity Monitor)" :rules [:launch_mode [:##a [:km "open: Activity Monitor"]]]}
+        {:des "Launch mode -> b (Open BetterTouchTool)" :rules [:launch_mode [:##b [:km "open: BetterTouchTool"]]]}
+        {:des "Launch mode -> c (Open Chrome)" :rules [:launch_mode [:##c [:km "open: Chrome"]]]}
+        {:des "Launch mode -> d (Open Dash)" :rules [:launch_mode [:##d :!TSC1]]}
+        {:des "Launch mode -> f (Open Fantastical)" :rules [:launch_mode [:##f [:km "open: Fantastical"]]]}
+        {:des "Launch mode -> g (Open Fantastical)" :rules [:launch_mode [:##g [:km "open: Messages"]]]}
+        {:des "Launch mode -> h (Open Postman)" :rules [:launch_mode [:##h [:km "open: Postman"]]]}
+        {:des "Launch mode -> i (Open iTerm)" :rules [:launch_mode [:##i [:km "open: iTerm"]]]}
+        {:des "Launch mode -> k (Open Keyboard Maestro)" :rules [:launch_mode [:##k [:km "open: Keyboard Maestro"]]]}
+        {:des "Launch mode -> m (Open Omnifocus)" :rules [:launch_mode [:##m [:km "open: Omnifocus"]]]}
+        {:des "Launch mode -> n (Open nvALT)" :rules [:launch_mode [:##n [:km "open: nvALT"]]]}
+        {:des "Launch mode -> o (Open Outlook)" :rules [:launch_mode [:##o [:km "open: Outlook"]]]}
+        {:des "Launch mode -> e (Open Editor)" :rules [:launch_mode [:##e [:km "open: Editor"]]]}
+        {:des "Launch mode -> s (Open Skype)" :rules [:launch_mode [:##s [:km "open: Skype"]]]}
+        {:des "Launch mode -> t (Open Teams)" :rules [:launch_mode [:##t [:km "open: Teams"]]]}
+        {:des "Launch mode -> w (Open BitWarden)" :rules [:launch_mode [:##w [:km "open: BitWarden"]]]}
+        {:des "Launch mode -> z (Open Franz)" :rules [:launch_mode [:##z [:km "open: Franz"]]]}
+        {:des "Launch mode -> caps_lock (Open Franz)" :rules [:launch_mode [:##caps_lock [:km "open: Finder"]]]}
 
 ;         USES SPECTACLE TO CHANGE WINDOWS
         {:des "Window Manipulation mode (q+w)" :rules [[{:sim [:w :q]
@@ -73,6 +87,83 @@
         {:des "Window Manipulation mode -> , (Spectacle resize current window to bottom-left half of the screen)" :rules [:window_manipulation_mode [:##comma :!TOSCf12]]}
         {:des "Window Manipulation mode -> . (Spectacle resize current window to bottom-right half of the screen)" :rules [:window_manipulation_mode [:##period :!TOSCf14]]}
 
+        {:des "SuperDuper <- S+D" :rules [[{:sim [:s :d]
+                                     :simo {:interrupt true
+                                            :dorder :insensitive
+                                            :uorder :insensitive
+                                            :afterup {:set ["superduper-mode" 0]}}} {:set ["superduper-mode" 1]}]]}
+        {:des "SuperDuper H -> Left" :rules [:superduper-mode [:##h :left_arrow]]}
+        {:des "SuperDuper J -> Down" :rules [:superduper-mode [:##j :down_arrow]]}
+        {:des "SuperDuper K -> Up" :rules [:superduper-mode [:##k :up_arrow]]}
+        {:des "SuperDuper L -> Right" :rules [:superduper-mode [:##l :right_arrow]]}
+        {:des "SuperDuper V -> Shift" :rules [:superduper-mode [:##v :left_shift]]}
+        {:des "SuperDuper I -> Back to Beginning" :rules [:superduper-mode [:##i :!Cleft_arrow]]}
+        {:des "SuperDuper O -> Forward to Front" :rules [:superduper-mode [:##o :!Cright_arrow]]}
+        {:des "SuperDuper N -> Back 1 Word" :rules [:superduper-mode [:##n :!Oleft_arrow]]}
+        {:des "SuperDuper M -> Forward 1 Word" :rules [:superduper-mode [:##m :!Oright_arrow]]}
+        {:des "SuperDuper A -> Previous Tab" :rules [:superduper-mode [:##a :!CSopen_bracket]]}
+        {:des "SuperDuper F -> Next Tab" :rules [:superduper-mode [:##f :!CSclose_bracket]]}
+
+        {:des "Utilities Mode (u+i)" :rules [[{:sim [:u :i]
+                                     :simo {:interrupt true
+                                            :dorder :insensitive
+                                            :uorder :insensitive
+                                            :afterup {:set ["utilities_mode" 0]}}} {:set ["utilities_mode" 1]}]]}
+        {:des "Utilities mode n -> Toggle Noizio on/off" :rules [:utilities_mode [:##n :!OCT0]]}
+        {:des "Utilities mode b -> Switch WIFI to BLUESSO" :rules [:utilities_mode [:##b [:km "Wifi -> BLUESSO"]]]}
+        {:des "Utilities mode d -> Switch WIFI to Doxie" :rules [:utilities_mode [:##d [:km "Wifi -> Doxie"]]]}
+        {:des "Utilities mode t -> Switch WIFI to Internet" :rules [:utilities_mode [:##t [:km "Wifi -> Internet"]]]}
+        {:des "Utilities mode w -> Volume Up" :rules [:utilities_mode [:##w :volume_increment]]}
+        {:des "Utilities mode s -> Volume Down" :rules [:utilities_mode [:##s :volume_decrement]]}
+        {:des "Utilities mode x -> Mute" :rules [:utilities_mode [:##x :mute]]}
+        {:des "Utilities mode e -> Brightness Up" :rules [:utilities_mode [:##e :display_brightness_increment]]}
+        {:des "Utilities mode q -> Brightness Down" :rules [:utilities_mode [:##q :display_brightness_decrement]]}
+
+        {:des "GO TO Mode (f+g)" :rules [[{:sim [:f :g]
+                                     :simo {:interrupt true
+                                            :dorder :insensitive
+                                            :uorder :insensitive
+                                            :afterup {:set ["go_to_mode" 0]}}} {:set ["go_to_mode" 1]}]]}
+        {:des "GO TO mode A -> (Outlook [G]o to [A]rchive)" :rules [:go_to_mode [:##a [:km "hotkey: go_to_mode+a"]]]}
+        {:des "GO TO mode C -> (Omnifocus [G]o to [C]hores)" :rules [:go_to_mode [:##c [:km "hotkey: go_to_mode+c"]]]}
+        {:des "GO TO mode D -> (Fantastical [G]o to [D]ay)" :rules [:go_to_mode [:##d [:km "hotkey: go_to_mode+d"]]]}
+        {:des "GO TO mode O -> (Omnifocus [G]o to f[O]rcast)" :rules [:go_to_mode [:##o [:km "hotkey: go_to_mode+o"]]]}
+        {:des "GO TO mode I -> (Omnifocus [G]o to [I]nbox)" :rules [:go_to_mode [:##i [:km "hotkey: go_to_mode+i"]]]}
+        {:des "GO TO mode J -> (Outlook [G]o to [J]unk)" :rules [:go_to_mode [:##j [:km "hotkey: go_to_mode+j"]]]}
+        {:des "GO TO mode C -> (Omnifocus [G]o to [C]hores)" :rules [:go_to_mode [:##c [:km "hotkey: go_to_mode+c"]]]}
+        {:des "GO TO mode L -> (Omnifocus [G]o to p[L]anning)" :rules [:go_to_mode [:##l [:km "hotkey: go_to_mode+l"]]]}
+        {:des "GO TO mode M -> (Fantastical [G]o to [M]onth)" :rules [:go_to_mode [:##m [:km "hotkey: go_to_mode+m"]]]}
+        {:des "GO TO mode N -> (Omnifocus [G]o to [N]ow)" :rules [:go_to_mode [:##n [:km "hotkey: go_to_mode+n"]]]}
+        {:des "GO TO mode P -> (Omnifocus [G]o to [P]rojects)" :rules [:go_to_mode [:##p [:km "hotkey: go_to_mode+p"]]]}
+        {:des "GO TO mode R -> (Omnifocus [G]o to [R]outines)" :rules [:go_to_mode [:##r [:km "hotkey: go_to_mode+r"]]]}
+        {:des "GO TO mode S -> (Omnifocus [G]o to [S]oon)" :rules [:go_to_mode [:##s [:km "hotkey: go_to_mode+s"]]]}
+        {:des "GO TO mode T -> (Fantastical [G]o to [T]oday)(Omnifocus [G]o to [T]ags" :rules [:go_to_mode [:##t [:km "hotkey: go_to_mode+t"]]]}
+        {:des "GO TO mode W -> (Omnifocus [G]o to [W]ork)(Fantastical [G]o to [W]eek)" :rules [:go_to_mode [:##w [:km "hotkey: go_to_mode+w"]]]}
+        {:des "GO TO mode Y -> (Fantastical [G]o to [Y]ear)" :rules [:go_to_mode [:##y [:km "hotkey: go_to_mode+y"]]]}
+
+        {:des "CHANGE Mode (x+c)" :rules [[{:sim [:x :c]
+                                     :simo {:interrupt true
+                                            :dorder :insensitive
+                                            :uorder :insensitive
+                                            :afterup {:set ["change_mode" 0]}}} {:set ["change_mode" 1]}]]}
+        {:des "CHANGE mode d -> (Omnifocus [C]hange [D]ue date)" :rules [:change_mode [:##d [:km "hotkey: change_mode+d"]]]}
+        {:des "CHANGE mode e -> (Omnifocus [C]hange [E]stimated time)" :rules [:change_mode [:##e [:km "hotkey: change_mode+e"]]]}
+        {:des "CHANGE mode f -> (Omnifocus [C]hange [F]lag )" :rules [:change_mode [:##f [:km "hotkey: change_mode+f"]]]}
+        {:des "CHANGE mode n -> (Omnifocus [C]hange [N]otes)" :rules [:change_mode [:##n [:km "hotkey: change_mode+n"]]]}
+        {:des "CHANGE mode p -> (Omnifocus [C]hange [P]roject)" :rules [:change_mode [:##p [:km "hotkey: change_mode+p"]]]}
+        {:des "CHANGE mode r -> (Omnifocus [C]hange [R]epeat)" :rules [:change_mode [:##r [:km "hotkey: change_mode+r"]]]}
+        {:des "CHANGE mode s -> (Omnifocus [C]hange [S]tart date (defer date))" :rules [:change_mode [:##s [:km "hotkey: change_mode+s"]]]}
+        {:des "CHANGE mode t -> (Omnifocus [C]hange [T]ags)" :rules [:change_mode [:##t [:km "hotkey: change_mode+t"]]]}
+
+
+        {:des "FOCUS Mode (d+f)" :rules [[{:sim [:d :f]
+                                     :simo {:interrupt true
+                                            :dorder :insensitive
+                                            :uorder :insensitive
+                                            :afterup {:set ["focus_mode" 0]}}} {:set ["focus_mode" 1]}]]}
+        {:des "FOCUS mode h -> (Omnifocus/Keyboard Maestro [H] (vim left))" :rules [:focus_mode [:##h [:km "hotkey: focus_mode+h"]]]}
+        {:des "FOCUS mode j -> (Omnifocus/Keyboard Maestro [J] (vim center))" :rules [:focus_mode [:##j [:km "hotkey: focus_mode+j"]]]}
+        {:des "FOCUS mode l -> (Omnifocus/Keyboard Maestro [L] (vim right))" :rules [:focus_mode [:##l [:km "hotkey: focus_mode+l"]]]}
 
         {:des "Semicolon Mode (;+')(global cross application shortcuts)" :rules [[{:sim [:semicolon :quote]
                                      :simo {:interrupt true

@@ -8,9 +8,9 @@
     "complex_modifications" : {
       "parameters" : {
         "basic.simultaneous_threshold_milliseconds" : 50,
-        "basic.to_delayed_action_delay_milliseconds" : 500,
-        "basic.to_if_alone_timeout_milliseconds" : 500,
-        "basic.to_if_held_down_threshold_milliseconds" : 500
+        "basic.to_delayed_action_delay_milliseconds" : 100,
+        "basic.to_if_alone_timeout_milliseconds" : 100,
+        "basic.to_if_held_down_threshold_milliseconds" : 100
       },
       "rules" : [ {
         "description" : "Caps -> Hyper / Esc",
@@ -69,7 +69,7 @@
             "key_code" : "return_or_enter"
           } ],
           "conditions" : [ {
-            "bundle_identifiers" : [ "^com\\.google\\.Chrome$", "^org\\.chromium\\.Chromium$", "^com\\.google\\.Chrome\\.canary$" ],
+            "bundle_identifiers" : [ "^com\\.brave\\.Browser" ],
             "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
