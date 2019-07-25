@@ -1,0 +1,22 @@
+showFiles(){
+        defaults write com.apple.finder AppleShowAllFiles YES
+        killall Finder /System/Library/CoreServices/Finder.app
+}
+
+hideFiles(){
+        defaults write com.apple.finder AppleShowAllFiles NO
+        killall Finder /System/Library/CoreServices/Finder.app
+}
+
+
+
+skip() {   # add --skip-worktree flag to file
+	git update-index --skip-worktree "$@";  git status;
+}
+
+
+unskip() { # remove --skip-worktree flag from file
+	git update-index --no-skip-worktree "$@";  git status;
+}
+
+

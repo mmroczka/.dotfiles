@@ -10,16 +10,18 @@
   - if [[ ! -f proxy_url ]]       ; then touch proxy_url; echo "proxy_url=" > proxy_url; fi
   - if [[ ! -d ~/.config ]]       ; then mkdir ~/.config; fi
   - if [[ ! -d ~/.config/nvim ]]  ; then mkdir ~/.config/nvim; fi
-  - if [[ ! -d "~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch" ]]; then mkdir "~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch"; fi
+  - if [[ ! -d ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch ]]; then mkdir ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch; fi
 
 - link:
     ~/.tmux.conf: tmux/tmux.conf
     ~/.tmux.conf.local: tmux/tmux.conf.local
     ~/.bashrc: bash/bashrc
+    ~/.aliases: aliases
     ~/.bash_profile: bash/bash_profile
     ~/.config/antigen.zsh: antigen.zsh
     ~/.config/karabiner: karabiner
     ~/.config/karabiner.edn: karabiner/karabiner.edn
+    ~/.functions: functions
     ~/.gitignore_global: git/gitignore_global
     ~/.hammerspoon: hammerspoon
     ~/.npmrc: node/work_npmrc
