@@ -11,14 +11,6 @@ if [[ $? != 0 ]] ; then
    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-# Update Homebrew and install packages
-printf  "\n%s\n" "${BLUE}Updating Homebrew...${NORMAL}"
-brew update
-printf "\n%s\n" "${BLUE}Tapping caskroom/versions...${NORMAL}"
-brew tap caskroom/versions
-printf "\n%s\n" "${BLUE}Running brew bundle - installing brew packages...${NORMAL}"
-printf "\n%s\n" "${BLUE}$(cat Brewfile)${NORMAL}"
-brew bundle
 
 # If this user's login shell is not already "zsh", attempt to switch.
 TEST_CURRENT_SHELL=$(expr "$SHELL" : '.*/\(.*\)')
@@ -34,6 +26,9 @@ if test ! -f "$ANTIGEN"; then
     printf "\n%s\n" "${BLUE}Installing antigen - the ZSH plugin manager.${NORMAL}"
 	curl -L git.io/antigen > antigen.zsh
 fi
+
+# Set up mac defaults (increase key repeat frequency)
+osascript mac_defaults.scpt
 
 printf "\n%s\n"  "${BLUE}Running dotfiles installation.${NORMAL}\n"
 # Symbolically link all dotfiles
