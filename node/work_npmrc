@@ -1,4 +1,4 @@
 strict-ssl=false
-http-proxy=$PROXY_URL
-proxy=$PROXY_URL
-https-proxy=$PROXY_URL
+http-proxy=http://3.28.29.241:88
+PROXY=http://3.28.29.241:88
+HTTPS-PROXY=http://3.28.29.241:88
