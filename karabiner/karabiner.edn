@@ -15,6 +15,12 @@
              :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"
              :btt "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"%s\"'"
              }
+
+ :layers {
+          space-mode {:key :spacebar}
+          }
+
+
  :simlayers {:caps_lock-mode {:key :caps_lock}
              :semicolon-mode {:key :f24}
              :change_mode {:key :f24}
@@ -37,6 +43,20 @@
          :rules [[:right_option :right_option nil {:alone :!OCT1}]]}
         {:des "Quit application by pressing ⌘q twice" :rules[ [:!C#Pq [:!Cq ["⌘q" 0]] ["⌘q" 1]]
 			[:!C#Pq ["⌘q" 1] nil {:delayed {:invoked ["⌘q" 0] :canceled ["⌘q" 0]}}] ]}
+
+        ;=========================== SPACE MODE ==========================
+      {:des "space-mode"
+       :rules [[:spacebar["space-mode" 1] nil {:afterup ["space-mode" 0]
+                                                         :alone :spacebar}]
+
+               [:##h :left_arrow ["space-mode" 1]] ;* cursor navigation
+               [:##l :right_arrow ["space-mode" 1]]
+               [:##k :up_arrow ["space-mode" 1]]
+               [:##j :down_arrow ["space-mode" 1]]
+               [:##a :!CSopen_bracket ["space-mode" 1]]
+               [:##f :!CSclose_bracket ["space-mode" 1]]
+            ]
+      }
 
         {:des "Launch mode (l+;)" :rules [[{:sim [:l :semicolon]
                                      :simo {:interrupt true
@@ -86,22 +106,22 @@
         {:des "Window Manipulation mode -> , (Spectacle resize current window to bottom-left half of the screen)" :rules [:window_manipulation_mode [:##comma :!TOSCf12]]}
         {:des "Window Manipulation mode -> . (Spectacle resize current window to bottom-right half of the screen)" :rules [:window_manipulation_mode [:##period :!TOSCf14]]}
 
-        {:des "SuperDuper <- S+D" :rules [[{:sim [:s :d]
-                                     :simo {:interrupt true
-                                            :dorder :insensitive
-                                            :uorder :insensitive
-                                            :afterup {:set ["superduper-mode" 0]}}} {:set ["superduper-mode" 1]}]]}
-        {:des "SuperDuper H -> Left" :rules [:superduper-mode [:##h :left_arrow]]}
-        {:des "SuperDuper J -> Down" :rules [:superduper-mode [:##j :down_arrow]]}
-        {:des "SuperDuper K -> Up" :rules [:superduper-mode [:##k :up_arrow]]}
-        {:des "SuperDuper L -> Right" :rules [:superduper-mode [:##l :right_arrow]]}
-        {:des "SuperDuper V -> Shift" :rules [:superduper-mode [:##v :left_shift]]}
-        {:des "SuperDuper I -> Back to Beginning" :rules [:superduper-mode [:##i :!Cleft_arrow]]}
-        {:des "SuperDuper O -> Forward to Front" :rules [:superduper-mode [:##o :!Cright_arrow]]}
-        {:des "SuperDuper N -> Back 1 Word" :rules [:superduper-mode [:##n :!Oleft_arrow]]}
-        {:des "SuperDuper M -> Forward 1 Word" :rules [:superduper-mode [:##m :!Oright_arrow]]}
-        {:des "SuperDuper A -> Previous Tab" :rules [:superduper-mode [:##a :!CSopen_bracket]]}
-        {:des "SuperDuper F -> Next Tab" :rules [:superduper-mode [:##f :!CSclose_bracket]]}
+        ; {:des "SuperDuper <- S+D" :rules [[{:sim [:s :d]
+        ;                              :simo {:interrupt true
+        ;                                     :dorder :insensitive
+        ;                                     :uorder :insensitive
+        ;                                     :afterup {:set ["superduper-mode" 0]}}} {:set ["superduper-mode" 1]}]]}
+        ; {:des "SuperDuper H -> Left" :rules [:superduper-mode [:##h :left_arrow]]}
+        ; {:des "SuperDuper J -> Down" :rules [:superduper-mode [:##j :down_arrow]]}
+        ; {:des "SuperDuper K -> Up" :rules [:superduper-mode [:##k :up_arrow]]}
+        ; {:des "SuperDuper L -> Right" :rules [:superduper-mode [:##l :right_arrow]]}
+        ; {:des "SuperDuper V -> Shift" :rules [:superduper-mode [:##v :left_shift]]}
+        ; {:des "SuperDuper I -> Back to Beginning" :rules [:superduper-mode [:##i :!Cleft_arrow]]}
+        ; {:des "SuperDuper O -> Forward to Front" :rules [:superduper-mode [:##o :!Cright_arrow]]}
+        ; {:des "SuperDuper N -> Back 1 Word" :rules [:superduper-mode [:##n :!Oleft_arrow]]}
+        ; {:des "SuperDuper M -> Forward 1 Word" :rules [:superduper-mode [:##m :!Oright_arrow]]}
+        ; {:des "SuperDuper A -> Previous Tab" :rules [:superduper-mode [:##a :!CSopen_bracket]]}
+        ; {:des "SuperDuper F -> Next Tab" :rules [:superduper-mode [:##f :!CSclose_bracket]]}
 
         {:des "Utilities Mode (u+i)" :rules [[{:sim [:u :i]
                                      :simo {:interrupt true
@@ -171,6 +191,7 @@
                                             :afterup {:set ["semicolon_mode" 0]}}} {:set ["semicolon_mode" 1]}]]}
         {:des "Semicolon mode s -> (Global toggle for left sidebar)" :rules [:semicolon_mode [:##s [:km "hotkey: semicolon_mode+s"]]]}
         {:des "Semicolon mode i -> (Global toggle for right sidebar)" :rules [:semicolon_mode [:##i [:km "hotkey: semicolon_mode+i"]]]}
+
   ]
   :simlayer-threshold 150
 }
