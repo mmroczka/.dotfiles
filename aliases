@@ -4,7 +4,7 @@ alias ls='exa'
 alias ll='exa -l'
 alias lll='exa -l | less'
 alias lla='exa -la'
-alias llt='exa -T'
+alias llt='exa -T' # recurse into folder and create tree structure
 alias llfu='exa -bghHliS --git'
 
 alias init-venv="python -m venv venv"
@@ -58,3 +58,5 @@ echo "-------";
 git status'
 unalias rg 2>/dev/null
 unalias z
+
+alias writeinclipboard='[[ -x `which xclip 2>/dev/null` ]] && cat << EOF | xclip -selection clipboard '

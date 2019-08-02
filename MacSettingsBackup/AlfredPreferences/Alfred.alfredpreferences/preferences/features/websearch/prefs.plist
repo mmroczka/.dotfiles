@@ -82,6 +82,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>D4A92845-6F31-43D6-80C5-A159FA88F975</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>boxing</string>
+			<key>text</key>
+			<string>West Loop Boxing Schedule</string>
+			<key>url</key>
+			<string>https://titleboxingclub.com/chicago-west-loop-il/</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>onlyShowEnabledInPrefs</key>
 	<true/>
