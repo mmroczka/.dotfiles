@@ -100,12 +100,10 @@ export KEYTIMEOUT=25
 
 if [[ -f ~/.aliases ]]; then
     source ~/.aliases
-	echo "Adding aliases"
 fi
 
 if [[ -f ~/.functions ]]; then
     source ~/.functions
-	echo "Adding functions"
 fi
 
 pfind(){

@@ -1,11 +1,34 @@
 # Aliases
+# ls
+alias ls='exa'
+alias ll='exa -l'
+alias lll='exa -l | less'
+alias lla='exa -la'
+alias llt='exa -T'
+alias llfu='exa -bghHliS --git'
+
 alias init-venv="python -m venv venv"
 alias activate="source venv/bin/activate"
 alias python="python3"
 alias pip="pip3"
 alias stop="pkill -f "
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
+
+# EDIT QUICKLY WITH VIM
+alias valias="vim ~/.dotfiles/aliases"
+alias vfunctions="vim ~/.dotfiles/functions"
+alias vkarabiner="vim ~/.dotfiles/karabiner/karabiner.edn"
+alias vohmyzsh="vim ~/.oh-my-zsh"
+alias vzsh="vim ~/.zshrc"
+alias vvimrc="vim ~/.vimrc"
+
+# SOURCE QUICKLY
+alias salias="source ~/.dotfiles/aliases"
+alias sfunctions="source ~/.dotfiles/functions"
+alias skarabiner="goku" # sources karabiner.edn -to-> karabiner.json
+alias sohmyzsh="source ~/.oh-my-zsh"
+alias szsh="source ~/.zshrc"
+alias svimrc="source ~/.vimrc"
+
 alias howto="cat ~/.aliases ~/.functions | grep $1"
 alias fz='vim $(fzf)'
 alias vi='vim'
