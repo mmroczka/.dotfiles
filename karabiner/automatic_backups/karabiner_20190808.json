@@ -39,7 +39,10 @@
         "description" : "FN from UHK",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "f23"
+            "key_code" : "f24",
+            "modifiers" : {
+              "optional" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
           },
           "to" : [ {
             "key_code" : "fn"
