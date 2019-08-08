@@ -204,6 +204,10 @@
           } ],
           "type" : "basic"
         }, {
+          "parameters" : {
+            "basic.to_if_alone_timeout_milliseconds" : 50,
+            "basic.to_if_held_down_threshold_milliseconds" : 5000
+          },
           "from" : {
             "key_code" : "h",
             "modifiers" : {
@@ -220,6 +224,10 @@
           } ],
           "type" : "basic"
         }, {
+          "parameters" : {
+            "basic.to_if_alone_timeout_milliseconds" : 50,
+            "basic.to_if_held_down_threshold_milliseconds" : 5000
+          },
           "from" : {
             "key_code" : "l",
             "modifiers" : {
@@ -236,6 +244,10 @@
           } ],
           "type" : "basic"
         }, {
+          "parameters" : {
+            "basic.to_if_alone_timeout_milliseconds" : 50,
+            "basic.to_if_held_down_threshold_milliseconds" : 5000
+          },
           "from" : {
             "key_code" : "k",
             "modifiers" : {
@@ -252,6 +264,10 @@
           } ],
           "type" : "basic"
         }, {
+          "parameters" : {
+            "basic.to_if_alone_timeout_milliseconds" : 50,
+            "basic.to_if_held_down_threshold_milliseconds" : 5000
+          },
           "from" : {
             "key_code" : "j",
             "modifiers" : {
@@ -268,6 +284,10 @@
           } ],
           "type" : "basic"
         }, {
+          "parameters" : {
+            "basic.to_if_alone_timeout_milliseconds" : 50,
+            "basic.to_if_held_down_threshold_milliseconds" : 5000
+          },
           "from" : {
             "key_code" : "a",
             "modifiers" : {
@@ -285,6 +305,10 @@
           } ],
           "type" : "basic"
         }, {
+          "parameters" : {
+            "basic.to_if_alone_timeout_milliseconds" : 50,
+            "basic.to_if_held_down_threshold_milliseconds" : 5000
+          },
           "from" : {
             "key_code" : "f",
             "modifiers" : {
@@ -299,6 +323,24 @@
             "name" : "space-mode",
             "value" : 1,
             "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "global C-h to backspace",
+        "manipulators" : [ {
+          "parameters" : {
+            "basic.to_if_alone_timeout_milliseconds" : 500,
+            "basic.to_if_held_down_threshold_milliseconds" : 500
+          },
+          "from" : {
+            "key_code" : "h",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "delete_or_backspace"
           } ],
           "type" : "basic"
         } ]
@@ -2167,6 +2209,251 @@
               } ]
             }
           }
+        } ]
+      }, {
+        "description" : "SuperDuper <- S+D",
+        "manipulators" : [ {
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "s"
+            }, {
+              "key_code" : "d"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "insensitive",
+              "key_up_order" : "insensitive",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "superduper-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "superduper-mode",
+              "value" : 1
+            }
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "SuperDuper H -> Left",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "h",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "left_arrow"
+          } ],
+          "conditions" : [ {
+            "name" : "superduper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "SuperDuper J -> Down",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "down_arrow"
+          } ],
+          "conditions" : [ {
+            "name" : "superduper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "SuperDuper K -> Up",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "up_arrow"
+          } ],
+          "conditions" : [ {
+            "name" : "superduper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "SuperDuper L -> Right",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "right_arrow"
+          } ],
+          "conditions" : [ {
+            "name" : "superduper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "SuperDuper V -> Shift",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "v",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "left_shift"
+          } ],
+          "conditions" : [ {
+            "name" : "superduper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "SuperDuper I -> Back to Beginning",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "i",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "left_arrow",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "conditions" : [ {
+            "name" : "superduper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "SuperDuper O -> Forward to Front",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "o",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "conditions" : [ {
+            "name" : "superduper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "SuperDuper N -> Back 1 Word",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "n",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "left_arrow",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "name" : "superduper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "SuperDuper M -> Forward 1 Word",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "m",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "name" : "superduper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "SuperDuper A -> Previous Tab",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "a",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "open_bracket",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "superduper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "SuperDuper F -> Next Tab",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "f",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "close_bracket",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "superduper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
         } ]
       }, {
         "description" : "Utilities Mode (u+i)",

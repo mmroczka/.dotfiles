@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string></string>
+	<key>connections</key>
+	<dict>
+		<key>65E5F1E2-F067-4B7C-94C1-0BEE2111CF1B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5CF3C34B-1156-453D-92AC-0DA8FB864696</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string></string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Clear Notifications</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>var app = Application("System Events")
+
+notificationCenter = app.processes.byName('NotificationCenter')
+
+function closeWindow(window){
+    window.buttons.whose({
+        _or: [
+            {name: "Close"},
+            {name: "OK"}
+        ]
+    })().forEach(function(button){button.click()})
+	delay(0.1)
+	return
+}
+
+notificationCenter.windows().reverse().forEach(closeWindow)</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>7</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>5CF3C34B-1156-453D-92AC-0DA8FB864696</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>clear</string>
+				<key>subtext</key>
+				<string>Clear all popup notifications</string>
+				<key>text</key>
+				<string>Clear Notifications</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>65E5F1E2-F067-4B7C-94C1-0BEE2111CF1B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>5CF3C34B-1156-453D-92AC-0DA8FB864696</key>
+		<dict>
+			<key>xpos</key>
+			<integer>530</integer>
+			<key>ypos</key>
+			<integer>200</integer>
+		</dict>
+		<key>65E5F1E2-F067-4B7C-94C1-0BEE2111CF1B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>245</integer>
+			<key>ypos</key>
+			<integer>205</integer>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
