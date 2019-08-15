@@ -33,6 +33,7 @@ end
 
 -- Vim = require('vim_bindings')
 -- local v = Vim:new()
+-- v:start()
 
 vim = hs.loadSpoon('VimMode')
 

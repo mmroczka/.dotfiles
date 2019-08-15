@@ -227,7 +227,28 @@
 	<key>DHUserRepo</key>
 	<dict>
 		<key>installed</key>
-		<dict/>
+		<dict>
+			<key>Hammerspoon</key>
+			<dict>
+				<key>date</key>
+				<date>2019-08-14T17:58:28Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array/>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Hammerspoon#readme</string>
+					<key>authorLinkText</key>
+					<string>Hammerspoon Team</string>
+					<key>name</key>
+					<string>Hammerspoon</string>
+					<key>platform</key>
+					<string>usercontribHammerspoon</string>
+					<key>uniqueIdentifier</key>
+					<string>Hammerspoon</string>
+				</dict>
+			</dict>
+		</dict>
 		<key>uninstalled</key>
 		<dict/>
 	</dict>
