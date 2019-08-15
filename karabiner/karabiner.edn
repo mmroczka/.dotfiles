@@ -20,21 +20,17 @@
              :btt "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"%s\"'"
              }
 
- ; :layers {
- ;          space-mode {:key :spacebar}
- ;          }
 
 
  :simlayers {:caps_lock-mode {:key :caps_lock}
              :semicolon-mode {:key :f24}
-             ; :superduper_mode{:key :f24}
              :change_mode {:key :f24}
              :focus_mode {:key :f24}
              :go_to_mode {:key :f24}
              :launch_mode {:key :f24} ; Bind an unused key
              :window_manipulation_mode {:key :f24}
              :utilities_mode {:key :f24}
-             :spacebar-mode {:key :spacebar}
+             :spacebar_command_mode {:key :f24}
              }
  :main [
         {:des "Caps -> Hyper / Esc"
@@ -53,19 +49,8 @@
          :rules [[:right_option :right_option nil {:alone :!OCT1}]]}
         {:des "Quit application by pressing ⌘q twice" :rules[ [:!C#Pq [:!Cq ["⌘q" 0]] ["⌘q" 1]]
 			[:!C#Pq ["⌘q" 1] nil {:delayed {:invoked ["⌘q" 0] :canceled ["⌘q" 0]}}] ]}
+        {:des "simultaneous f dl press to Contrl+[" :rules [[[:d :f] :!Topen_bracket]]}
 
-        ;=========================== SPACE MODE ==========================
-      ; {:des "space-mode"
-      ;  :rules [[:spacebar["space-mode" 1] nil {:afterup ["space-mode" 0]
-      ;                                          :alone :spacebar}]
-      ;          [:##h :left_arrow ["space-mode" 1] {:params {:alone 50 :held 5000}}] ;* cursor navigation
-      ;          [:##l :right_arrow ["space-mode" 1] {:params {:alone 50 :held 5000}}]
-      ;          [:##k :up_arrow ["space-mode" 1] {:params {:alone 50 :held 5000}}]
-      ;          [:##j :down_arrow ["space-mode" 1] {:params {:alone 50 :held 5000}}]
-      ;          [:##a :!CSopen_bracket ["space-mode" 1] {:params {:alone 50 :held 5000}}]
-      ;          [:##f :!CSclose_bracket ["space-mode" 1]  {:params {:alone 50 :held 5000}}]
-      ;       ]
-      ; }
 
       ; {:des "global C-h to backspace" :rules [ [:!Th :delete_or_backspace nil {:params {:alone 500 :held 500} } ] ] }
 
@@ -124,8 +109,9 @@
         {:des "Window Manipulation mode -> delete (Spectacle grow vim split vertically)" :rules [:window_manipulation_mode [:##equal_sign [:km "hotkey: window_manipulation_mode+equal_sign"]]]}
         {:des "Window Manipulation mode -> delete (Spectacle grow vim split vertically)" :rules [:window_manipulation_mode [:##delete_or_backspace [:km "hotkey: window_manipulation_mode+delete_or_backspace"]]]}
         {:des "Window Manipulation mode -> return_or_enter (Spectacle maximize current window)" :rules [:window_manipulation_mode [:##return_or_enter :!TOSCf19]]}
+        {:des "Window Manipulation mode -> caps_lock (Spectacle center current window)" :rules [:window_manipulation_mode [:##backslash :!TOSCf18]]}
         {:des "Window Manipulation mode -> t (Spectacle resize current window to a third of the screen)" :rules [:window_manipulation_mode [:##t :!TOSCf20]]}
-        {:des "Window Manipulation mode -> h (Spectacle resize current window to left half of the screen)" :rules [:window_manipulation_mode [:##h [:btt "Maximize Window Left"]]]}
+        {:des "Window Manipulation mode -> h (Spectacle resize current window to left half of the screen)" :rules [:window_manipulation_mode [:##h :!TOSCleft_arrow]]}
         {:des "Window Manipulation mode -> j (Spectacle resize current window to bottom half of the screen)" :rules [:window_manipulation_mode [:##j :!TOSCdown_arrow]]}
         {:des "Window Manipulation mode -> k (Spectacle resize current window to upper half of the screen)" :rules [:window_manipulation_mode [:##k :!TOSCup_arrow]]}
         {:des "Window Manipulation mode -> l (Spectacle resize current window to right half of the screen)" :rules [:window_manipulation_mode [:##l :!TOSCright_arrow]]}
@@ -134,46 +120,27 @@
         {:des "Window Manipulation mode -> , (Spectacle resize current window to bottom-left half of the screen)" :rules [:window_manipulation_mode [:##comma :!TOSCf12]]}
         {:des "Window Manipulation mode -> . (Spectacle resize current window to bottom-right half of the screen)" :rules [:window_manipulation_mode [:##period :!TOSCf14]]}
 
-        ; {:des "SuperDuper <- S+D" :rules [[{:sim [:s :d]
-        ;                              :simo {:interrupt true
-        ;                                     :dorder :insensitive
-        ;                                     :uorder :insensitive
-        ;                                     :afterup {:set ["superduper-mode" 0]}}} {:set ["superduper-mode" 1]}
-        ;                                    ]]}
-        ; {:des "SuperDuper H -> Left" :rules [:superduper-mode [:##h :left_arrow]]}
-        ; {:des "SuperDuper J -> Down" :rules [:superduper-mode [:##j :down_arrow]]}
-        ; {:des "SuperDuper K -> Up" :rules [:superduper-mode [:##k :up_arrow]]}
-        ; {:des "SuperDuper L -> Right" :rules [:superduper-mode [:##l :right_arrow]]}
-        ; {:des "SuperDuper V -> Shift" :rules [:superduper-mode [:##v :left_shift]]}
-        ; {:des "SuperDuper I -> Back to Beginning" :rules [:superduper-mode [:##i :!Cleft_arrow]]}
-        ; {:des "SuperDuper O -> Forward to Front" :rules [:superduper-mode [:##o :!Cright_arrow]]}
-        ; {:des "SuperDuper N -> Back 1 Word" :rules [:superduper-mode [:##n :!Oleft_arrow]]}
-        ; {:des "SuperDuper M -> Forward 1 Word" :rules [:superduper-mode [:##m :!Oright_arrow]]}
-        ; {:des "SuperDuper A -> Previous Tab" :rules [:superduper-mode [:##a :!CSopen_bracket]]}
-        ; {:des "SuperDuper F -> Next Tab" :rules [:superduper-mode [:##f :!CSclose_bracket]]}
 
-        {:des "Spacebar Mode"
-                 :rules [:spacebar-mode
-                         [:##j :down_arrow nill {:params {:alone 500 :held 500}}]
-                         [:##k :up_arrow nill {:params {:alone 500 :held 500}}]
-                         [:##h :left_arrow nill {:params {:alone 500 :held 500}}]
-                         [:##l :right_arrow nill {:params {:alone 500 :held 500}}]
-                         [:##caps_lock :!SCopen_bracket nill {:params {:alone 500 :held 500}}]
-                         [:##g :!SCclose_bracket nill {:params {:alone 500 :held 500}}]
-                         [:##b :!Oleft_arrow nill {:params {:alone 500 :held 500}}]
-                         [:##w :!Oright_arrow nill {:params {:alone 500 :held 500}}]
-                         [:##e :!Oright_arrow nill {:params {:alone 500 :held 500}}]
-                         [:##i :!Cleft_arrow nill {:params {:alone 500 :held 500}}]
-                         [:##a :!Cright_arrow nill {:params {:alone 500 :held 500}}]
-                         [:##u :!Cz nill {:params {:alone 500 :held 500}}]
-                         [:##r :!CSz nill {:params {:alone 500 :held 500}}]
-                         [:##y :!Cc nill {:params {:alone 500 :held 500}}]
-                         [:##p :!Cv nill {:params {:alone 500 :held 500}}]
-                         ; [:##0 :!Ta]
-                         ; [:##4 :!Te]
-                         ; [:##open_bracket :!Oup_arrow]
-                         ; [:##close_bracket :!Odown_arrow]
-                         ]}
+        {:des "Spacebar+Command Mode" :rules [[{:sim [:left_command :spacebar]
+                                     :simo {:interrupt true
+                                            :dorder :insensitive
+                                            :uorder :insensitive
+                                            :afterup {:set ["spacebar_command_mode" 0]}}} {:set ["spacebar_command_mode" 1]}]]}
+        {:des "Spacebar+Command mode j -> " :rules [:spacebar_command_mode [:##j :down_arrow]]}
+        {:des "Spacebar+Command mode k -> " :rules [:spacebar_command_mode [:##k :up_arrow]]}
+        {:des "Spacebar+Command mode h -> " :rules [:spacebar_command_mode [:##h :left_arrow]]}
+        {:des "Spacebar+Command mode l -> " :rules [:spacebar_command_mode [:##l :right_arrow]]}
+        {:des "Spacebar+Command mode caps_lock -> " :rules [:spacebar_command_mode [:##caps_lock :!SCopen_bracket]]}
+        {:des "Spacebar+Command mode g -> " :rules [:spacebar_command_mode [:##g :!OSCopen_bracket]]}
+        {:des "Spacebar+Command mode b -> " :rules [:spacebar_command_mode [:##b :!Oleft_arrow]]}
+        {:des "Spacebar+Command mode w -> " :rules [:spacebar_command_mode [:##w :!Oright_arrow]]}
+        {:des "Spacebar+Command mode e -> " :rules [:spacebar_command_mode [:##e :!Oright_arrow]]}
+        {:des "Spacebar+Command mode i -> " :rules [:spacebar_command_mode [:##i :!Cleft_arrow]]}
+        {:des "Spacebar+Command mode a -> " :rules [:spacebar_command_mode [:##a :!Cright_arrow]]}
+        {:des "Spacebar+Command mode u -> " :rules [:spacebar_command_mode [:##u :!Cz]]}
+        {:des "Spacebar+Command mode r -> " :rules [:spacebar_command_mode [:##r :!CSz]]}
+        {:des "Spacebar+Command mode y -> " :rules [:spacebar_command_mode [:##y :!Cc]]}
+        {:des "Spacebar+Command mode p -> " :rules [:spacebar_command_mode [:##p :!Cv]]}
 
         {:des "Utilities Mode (u+i)" :rules [[{:sim [:u :spacebar]
                                      :simo {:interrupt true
@@ -227,14 +194,14 @@
         {:des "CHANGE mode t -> (Omnifocus [C]hange [T]ags)" :rules [:change_mode [:##t [:km "hotkey: change_mode+t"]]]}
 
 
-        {:des "FOCUS Mode (d+f)" :rules [[{:sim [:d :f]
-                                     :simo {:interrupt true
-                                            :dorder :insensitive
-                                            :uorder :insensitive
-                                            :afterup {:set ["focus_mode" 0]}}} {:set ["focus_mode" 1]}]]}
-        {:des "FOCUS mode h -> (Omnifocus/Keyboard Maestro [H] (vim left))" :rules [:focus_mode [:##h [:km "hotkey: focus_mode+h"]]]}
-        {:des "FOCUS mode j -> (Omnifocus/Keyboard Maestro [J] (vim center))" :rules [:focus_mode [:##j [:km "hotkey: focus_mode+j"]]]}
-        {:des "FOCUS mode l -> (Omnifocus/Keyboard Maestro [L] (vim right))" :rules [:focus_mode [:##l [:km "hotkey: focus_mode+l"]]]}
+        ; {:des "FOCUS Mode (d+f)" :rules [[{:sim [:d :f]
+        ;                              :simo {:interrupt true
+        ;                                     :dorder :insensitive
+        ;                                     :uorder :insensitive
+        ;                                     :afterup {:set ["focus_mode" 0]}}} {:set ["focus_mode" 1]}]]}
+        ; {:des "FOCUS mode h -> (Omnifocus/Keyboard Maestro [H] (vim left))" :rules [:focus_mode [:##h [:km "hotkey: focus_mode+h"]]]}
+        ; {:des "FOCUS mode j -> (Omnifocus/Keyboard Maestro [J] (vim center))" :rules [:focus_mode [:##j [:km "hotkey: focus_mode+j"]]]}
+        ; {:des "FOCUS mode l -> (Omnifocus/Keyboard Maestro [L] (vim right))" :rules [:focus_mode [:##l [:km "hotkey: focus_mode+l"]]]}
 
         {:des "Semicolon Mode (;+')(global cross application shortcuts)" :rules [[{:sim [:semicolon :quote]
                                      :simo {:interrupt true

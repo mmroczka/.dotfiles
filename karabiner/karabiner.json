@@ -205,6 +205,28 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "simultaneous f dl press to Contrl+[",
+        "manipulators" : [ {
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "d"
+            }, {
+              "key_code" : "f"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : false,
+              "key_down_order" : "insensitive",
+              "key_up_order" : "insensitive",
+              "key_up_when" : "any"
+            }
+          },
+          "to" : [ {
+            "key_code" : "open_bracket",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Launch mode (l+;)",
         "manipulators" : [ {
           "from" : {
@@ -1594,6 +1616,59 @@
           }
         } ]
       }, {
+        "description" : "Window Manipulation mode -> caps_lock (Spectacle center current window)",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "backslash",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "f18",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "window_manipulation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 150
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "window_manipulation_mode",
+              "value" : 1
+            }
+          }, {
+            "key_code" : "f18",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "f24"
+            }, {
+              "key_code" : "backslash"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "window_manipulation_mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        } ]
+      }, {
         "description" : "Window Manipulation mode -> t (Spectacle resize current window to a third of the screen)",
         "manipulators" : [ {
           "from" : {
@@ -1656,7 +1731,8 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Maximize Window Left\"'"
+            "key_code" : "left_arrow",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "window_manipulation_mode",
@@ -1675,7 +1751,8 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"Maximize Window Left\"'"
+            "key_code" : "left_arrow",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -2069,12 +2146,38 @@
           }
         } ]
       }, {
-        "description" : "Spacebar Mode",
+        "description" : "Spacebar+Command Mode",
         "manipulators" : [ {
-          "parameters" : {
-            "basic.to_if_alone_timeout_milliseconds" : 500,
-            "basic.to_if_held_down_threshold_milliseconds" : 500
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "left_command"
+            }, {
+              "key_code" : "spacebar"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "insensitive",
+              "key_up_order" : "insensitive",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "spacebar_command_mode",
+                  "value" : 0
+                }
+              } ]
+            }
           },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "spacebar_command_mode",
+              "value" : 1
+            }
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Spacebar+Command mode j -> ",
+        "manipulators" : [ {
           "from" : {
             "key_code" : "j",
             "modifiers" : {
@@ -2085,7 +2188,7 @@
             "key_code" : "down_arrow"
           } ],
           "conditions" : [ {
-            "name" : "spacebar-mode",
+            "name" : "spacebar_command_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -2097,7 +2200,7 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "spacebar-mode",
+              "name" : "spacebar_command_mode",
               "value" : 1
             }
           }, {
@@ -2105,7 +2208,7 @@
           } ],
           "from" : {
             "simultaneous" : [ {
-              "key_code" : "spacebar"
+              "key_code" : "f24"
             }, {
               "key_code" : "j"
             } ],
@@ -2116,17 +2219,16 @@
               "key_up_when" : "any",
               "to_after_key_up" : [ {
                 "set_variable" : {
-                  "name" : "spacebar-mode",
+                  "name" : "spacebar_command_mode",
                   "value" : 0
                 }
               } ]
             }
           }
-        }, {
-          "parameters" : {
-            "basic.to_if_alone_timeout_milliseconds" : 500,
-            "basic.to_if_held_down_threshold_milliseconds" : 500
-          },
+        } ]
+      }, {
+        "description" : "Spacebar+Command mode k -> ",
+        "manipulators" : [ {
           "from" : {
             "key_code" : "k",
             "modifiers" : {
@@ -2137,7 +2239,7 @@
             "key_code" : "up_arrow"
           } ],
           "conditions" : [ {
-            "name" : "spacebar-mode",
+            "name" : "spacebar_command_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -2149,7 +2251,7 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "spacebar-mode",
+              "name" : "spacebar_command_mode",
               "value" : 1
             }
           }, {
@@ -2157,7 +2259,7 @@
           } ],
           "from" : {
             "simultaneous" : [ {
-              "key_code" : "spacebar"
+              "key_code" : "f24"
             }, {
               "key_code" : "k"
             } ],
@@ -2168,17 +2270,16 @@
               "key_up_when" : "any",
               "to_after_key_up" : [ {
                 "set_variable" : {
-                  "name" : "spacebar-mode",
+                  "name" : "spacebar_command_mode",
                   "value" : 0
                 }
               } ]
             }
           }
-        }, {
-          "parameters" : {
-            "basic.to_if_alone_timeout_milliseconds" : 500,
-            "basic.to_if_held_down_threshold_milliseconds" : 500
-          },
+        } ]
+      }, {
+        "description" : "Spacebar+Command mode h -> ",
+        "manipulators" : [ {
           "from" : {
             "key_code" : "h",
             "modifiers" : {
@@ -2189,7 +2290,7 @@
             "key_code" : "left_arrow"
           } ],
           "conditions" : [ {
-            "name" : "spacebar-mode",
+            "name" : "spacebar_command_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -2201,7 +2302,7 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "spacebar-mode",
+              "name" : "spacebar_command_mode",
               "value" : 1
             }
           }, {
@@ -2209,7 +2310,7 @@
           } ],
           "from" : {
             "simultaneous" : [ {
-              "key_code" : "spacebar"
+              "key_code" : "f24"
             }, {
               "key_code" : "h"
             } ],
@@ -2220,17 +2321,16 @@
               "key_up_when" : "any",
               "to_after_key_up" : [ {
                 "set_variable" : {
-                  "name" : "spacebar-mode",
+                  "name" : "spacebar_command_mode",
                   "value" : 0
                 }
               } ]
             }
           }
-        }, {
-          "parameters" : {
-            "basic.to_if_alone_timeout_milliseconds" : 500,
-            "basic.to_if_held_down_threshold_milliseconds" : 500
-          },
+        } ]
+      }, {
+        "description" : "Spacebar+Command mode l -> ",
+        "manipulators" : [ {
           "from" : {
             "key_code" : "l",
             "modifiers" : {
@@ -2241,7 +2341,7 @@
             "key_code" : "right_arrow"
           } ],
           "conditions" : [ {
-            "name" : "spacebar-mode",
+            "name" : "spacebar_command_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -2253,7 +2353,7 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "spacebar-mode",
+              "name" : "spacebar_command_mode",
               "value" : 1
             }
           }, {
@@ -2261,7 +2361,7 @@
           } ],
           "from" : {
             "simultaneous" : [ {
-              "key_code" : "spacebar"
+              "key_code" : "f24"
             }, {
               "key_code" : "l"
             } ],
@@ -2272,17 +2372,16 @@
               "key_up_when" : "any",
               "to_after_key_up" : [ {
                 "set_variable" : {
-                  "name" : "spacebar-mode",
+                  "name" : "spacebar_command_mode",
                   "value" : 0
                 }
               } ]
             }
           }
-        }, {
-          "parameters" : {
-            "basic.to_if_alone_timeout_milliseconds" : 500,
-            "basic.to_if_held_down_threshold_milliseconds" : 500
-          },
+        } ]
+      }, {
+        "description" : "Spacebar+Command mode caps_lock -> ",
+        "manipulators" : [ {
           "from" : {
             "key_code" : "caps_lock",
             "modifiers" : {
@@ -2294,7 +2393,7 @@
             "modifiers" : [ "left_command", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "spacebar-mode",
+            "name" : "spacebar_command_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -2306,7 +2405,7 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "spacebar-mode",
+              "name" : "spacebar_command_mode",
               "value" : 1
             }
           }, {
@@ -2315,7 +2414,7 @@
           } ],
           "from" : {
             "simultaneous" : [ {
-              "key_code" : "spacebar"
+              "key_code" : "f24"
             }, {
               "key_code" : "caps_lock"
             } ],
@@ -2326,17 +2425,16 @@
               "key_up_when" : "any",
               "to_after_key_up" : [ {
                 "set_variable" : {
-                  "name" : "spacebar-mode",
+                  "name" : "spacebar_command_mode",
                   "value" : 0
                 }
               } ]
             }
           }
-        }, {
-          "parameters" : {
-            "basic.to_if_alone_timeout_milliseconds" : 500,
-            "basic.to_if_held_down_threshold_milliseconds" : 500
-          },
+        } ]
+      }, {
+        "description" : "Spacebar+Command mode g -> ",
+        "manipulators" : [ {
           "from" : {
             "key_code" : "g",
             "modifiers" : {
@@ -2344,11 +2442,11 @@
             }
           },
           "to" : [ {
-            "key_code" : "close_bracket",
-            "modifiers" : [ "left_command", "left_shift" ]
+            "key_code" : "open_bracket",
+            "modifiers" : [ "left_command", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "spacebar-mode",
+            "name" : "spacebar_command_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -2360,16 +2458,16 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "spacebar-mode",
+              "name" : "spacebar_command_mode",
               "value" : 1
             }
           }, {
-            "key_code" : "close_bracket",
-            "modifiers" : [ "left_command", "left_shift" ]
+            "key_code" : "open_bracket",
+            "modifiers" : [ "left_command", "left_option", "left_shift" ]
           } ],
           "from" : {
             "simultaneous" : [ {
-              "key_code" : "spacebar"
+              "key_code" : "f24"
             }, {
               "key_code" : "g"
             } ],
@@ -2380,17 +2478,16 @@
               "key_up_when" : "any",
               "to_after_key_up" : [ {
                 "set_variable" : {
-                  "name" : "spacebar-mode",
+                  "name" : "spacebar_command_mode",
                   "value" : 0
                 }
               } ]
             }
           }
-        }, {
-          "parameters" : {
-            "basic.to_if_alone_timeout_milliseconds" : 500,
-            "basic.to_if_held_down_threshold_milliseconds" : 500
-          },
+        } ]
+      }, {
+        "description" : "Spacebar+Command mode b -> ",
+        "manipulators" : [ {
           "from" : {
             "key_code" : "b",
             "modifiers" : {
@@ -2402,7 +2499,7 @@
             "modifiers" : [ "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "spacebar-mode",
+            "name" : "spacebar_command_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -2414,7 +2511,7 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "spacebar-mode",
+              "name" : "spacebar_command_mode",
               "value" : 1
             }
           }, {
@@ -2423,7 +2520,7 @@
           } ],
           "from" : {
             "simultaneous" : [ {
-              "key_code" : "spacebar"
+              "key_code" : "f24"
             }, {
               "key_code" : "b"
             } ],
@@ -2434,17 +2531,16 @@
               "key_up_when" : "any",
               "to_after_key_up" : [ {
                 "set_variable" : {
-                  "name" : "spacebar-mode",
+                  "name" : "spacebar_command_mode",
                   "value" : 0
                 }
               } ]
             }
           }
-        }, {
-          "parameters" : {
-            "basic.to_if_alone_timeout_milliseconds" : 500,
-            "basic.to_if_held_down_threshold_milliseconds" : 500
-          },
+        } ]
+      }, {
+        "description" : "Spacebar+Command mode w -> ",
+        "manipulators" : [ {
           "from" : {
             "key_code" : "w",
             "modifiers" : {
@@ -2456,7 +2552,7 @@
             "modifiers" : [ "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "spacebar-mode",
+            "name" : "spacebar_command_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -2468,7 +2564,7 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "spacebar-mode",
+              "name" : "spacebar_command_mode",
               "value" : 1
             }
           }, {
@@ -2477,7 +2573,7 @@
           } ],
           "from" : {
             "simultaneous" : [ {
-              "key_code" : "spacebar"
+              "key_code" : "f24"
             }, {
               "key_code" : "w"
             } ],
@@ -2488,17 +2584,16 @@
               "key_up_when" : "any",
               "to_after_key_up" : [ {
                 "set_variable" : {
-                  "name" : "spacebar-mode",
+                  "name" : "spacebar_command_mode",
                   "value" : 0
                 }
               } ]
             }
           }
-        }, {
-          "parameters" : {
-            "basic.to_if_alone_timeout_milliseconds" : 500,
-            "basic.to_if_held_down_threshold_milliseconds" : 500
-          },
+        } ]
+      }, {
+        "description" : "Spacebar+Command mode e -> ",
+        "manipulators" : [ {
           "from" : {
             "key_code" : "e",
             "modifiers" : {
@@ -2510,7 +2605,7 @@
             "modifiers" : [ "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "spacebar-mode",
+            "name" : "spacebar_command_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -2522,7 +2617,7 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "spacebar-mode",
+              "name" : "spacebar_command_mode",
               "value" : 1
             }
           }, {
@@ -2531,7 +2626,7 @@
           } ],
           "from" : {
             "simultaneous" : [ {
-              "key_code" : "spacebar"
+              "key_code" : "f24"
             }, {
               "key_code" : "e"
             } ],
@@ -2542,17 +2637,16 @@
               "key_up_when" : "any",
               "to_after_key_up" : [ {
                 "set_variable" : {
-                  "name" : "spacebar-mode",
+                  "name" : "spacebar_command_mode",
                   "value" : 0
                 }
               } ]
             }
           }
-        }, {
-          "parameters" : {
-            "basic.to_if_alone_timeout_milliseconds" : 500,
-            "basic.to_if_held_down_threshold_milliseconds" : 500
-          },
+        } ]
+      }, {
+        "description" : "Spacebar+Command mode i -> ",
+        "manipulators" : [ {
           "from" : {
             "key_code" : "i",
             "modifiers" : {
@@ -2564,7 +2658,7 @@
             "modifiers" : [ "left_command" ]
           } ],
           "conditions" : [ {
-            "name" : "spacebar-mode",
+            "name" : "spacebar_command_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -2576,7 +2670,7 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "spacebar-mode",
+              "name" : "spacebar_command_mode",
               "value" : 1
             }
           }, {
@@ -2585,7 +2679,7 @@
           } ],
           "from" : {
             "simultaneous" : [ {
-              "key_code" : "spacebar"
+              "key_code" : "f24"
             }, {
               "key_code" : "i"
             } ],
@@ -2596,17 +2690,16 @@
               "key_up_when" : "any",
               "to_after_key_up" : [ {
                 "set_variable" : {
-                  "name" : "spacebar-mode",
+                  "name" : "spacebar_command_mode",
                   "value" : 0
                 }
               } ]
             }
           }
-        }, {
-          "parameters" : {
-            "basic.to_if_alone_timeout_milliseconds" : 500,
-            "basic.to_if_held_down_threshold_milliseconds" : 500
-          },
+        } ]
+      }, {
+        "description" : "Spacebar+Command mode a -> ",
+        "manipulators" : [ {
           "from" : {
             "key_code" : "a",
             "modifiers" : {
@@ -2618,7 +2711,7 @@
             "modifiers" : [ "left_command" ]
           } ],
           "conditions" : [ {
-            "name" : "spacebar-mode",
+            "name" : "spacebar_command_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -2630,7 +2723,7 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "spacebar-mode",
+              "name" : "spacebar_command_mode",
               "value" : 1
             }
           }, {
@@ -2639,7 +2732,7 @@
           } ],
           "from" : {
             "simultaneous" : [ {
-              "key_code" : "spacebar"
+              "key_code" : "f24"
             }, {
               "key_code" : "a"
             } ],
@@ -2650,17 +2743,16 @@
               "key_up_when" : "any",
               "to_after_key_up" : [ {
                 "set_variable" : {
-                  "name" : "spacebar-mode",
+                  "name" : "spacebar_command_mode",
                   "value" : 0
                 }
               } ]
             }
           }
-        }, {
-          "parameters" : {
-            "basic.to_if_alone_timeout_milliseconds" : 500,
-            "basic.to_if_held_down_threshold_milliseconds" : 500
-          },
+        } ]
+      }, {
+        "description" : "Spacebar+Command mode u -> ",
+        "manipulators" : [ {
           "from" : {
             "key_code" : "u",
             "modifiers" : {
@@ -2672,7 +2764,7 @@
             "modifiers" : [ "left_command" ]
           } ],
           "conditions" : [ {
-            "name" : "spacebar-mode",
+            "name" : "spacebar_command_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -2684,7 +2776,7 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "spacebar-mode",
+              "name" : "spacebar_command_mode",
               "value" : 1
             }
           }, {
@@ -2693,7 +2785,7 @@
           } ],
           "from" : {
             "simultaneous" : [ {
-              "key_code" : "spacebar"
+              "key_code" : "f24"
             }, {
               "key_code" : "u"
             } ],
@@ -2704,17 +2796,16 @@
               "key_up_when" : "any",
               "to_after_key_up" : [ {
                 "set_variable" : {
-                  "name" : "spacebar-mode",
+                  "name" : "spacebar_command_mode",
                   "value" : 0
                 }
               } ]
             }
           }
-        }, {
-          "parameters" : {
-            "basic.to_if_alone_timeout_milliseconds" : 500,
-            "basic.to_if_held_down_threshold_milliseconds" : 500
-          },
+        } ]
+      }, {
+        "description" : "Spacebar+Command mode r -> ",
+        "manipulators" : [ {
           "from" : {
             "key_code" : "r",
             "modifiers" : {
@@ -2726,7 +2817,7 @@
             "modifiers" : [ "left_command", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "spacebar-mode",
+            "name" : "spacebar_command_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -2738,7 +2829,7 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "spacebar-mode",
+              "name" : "spacebar_command_mode",
               "value" : 1
             }
           }, {
@@ -2747,7 +2838,7 @@
           } ],
           "from" : {
             "simultaneous" : [ {
-              "key_code" : "spacebar"
+              "key_code" : "f24"
             }, {
               "key_code" : "r"
             } ],
@@ -2758,17 +2849,16 @@
               "key_up_when" : "any",
               "to_after_key_up" : [ {
                 "set_variable" : {
-                  "name" : "spacebar-mode",
+                  "name" : "spacebar_command_mode",
                   "value" : 0
                 }
               } ]
             }
           }
-        }, {
-          "parameters" : {
-            "basic.to_if_alone_timeout_milliseconds" : 500,
-            "basic.to_if_held_down_threshold_milliseconds" : 500
-          },
+        } ]
+      }, {
+        "description" : "Spacebar+Command mode y -> ",
+        "manipulators" : [ {
           "from" : {
             "key_code" : "y",
             "modifiers" : {
@@ -2780,7 +2870,7 @@
             "modifiers" : [ "left_command" ]
           } ],
           "conditions" : [ {
-            "name" : "spacebar-mode",
+            "name" : "spacebar_command_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -2792,7 +2882,7 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "spacebar-mode",
+              "name" : "spacebar_command_mode",
               "value" : 1
             }
           }, {
@@ -2801,7 +2891,7 @@
           } ],
           "from" : {
             "simultaneous" : [ {
-              "key_code" : "spacebar"
+              "key_code" : "f24"
             }, {
               "key_code" : "y"
             } ],
@@ -2812,17 +2902,16 @@
               "key_up_when" : "any",
               "to_after_key_up" : [ {
                 "set_variable" : {
-                  "name" : "spacebar-mode",
+                  "name" : "spacebar_command_mode",
                   "value" : 0
                 }
               } ]
             }
           }
-        }, {
-          "parameters" : {
-            "basic.to_if_alone_timeout_milliseconds" : 500,
-            "basic.to_if_held_down_threshold_milliseconds" : 500
-          },
+        } ]
+      }, {
+        "description" : "Spacebar+Command mode p -> ",
+        "manipulators" : [ {
           "from" : {
             "key_code" : "p",
             "modifiers" : {
@@ -2834,7 +2923,7 @@
             "modifiers" : [ "left_command" ]
           } ],
           "conditions" : [ {
-            "name" : "spacebar-mode",
+            "name" : "spacebar_command_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -2846,7 +2935,7 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "spacebar-mode",
+              "name" : "spacebar_command_mode",
               "value" : 1
             }
           }, {
@@ -2855,7 +2944,7 @@
           } ],
           "from" : {
             "simultaneous" : [ {
-              "key_code" : "spacebar"
+              "key_code" : "f24"
             }, {
               "key_code" : "p"
             } ],
@@ -2866,7 +2955,7 @@
               "key_up_when" : "any",
               "to_after_key_up" : [ {
                 "set_variable" : {
-                  "name" : "spacebar-mode",
+                  "name" : "spacebar_command_mode",
                   "value" : 0
                 }
               } ]
@@ -4639,189 +4728,6 @@
               "to_after_key_up" : [ {
                 "set_variable" : {
                   "name" : "change_mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        } ]
-      }, {
-        "description" : "FOCUS Mode (d+f)",
-        "manipulators" : [ {
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "d"
-            }, {
-              "key_code" : "f"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "insensitive",
-              "key_up_order" : "insensitive",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "focus_mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "focus_mode",
-              "value" : 1
-            }
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "FOCUS mode h -> (Omnifocus/Keyboard Maestro [H] (vim left))",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "h",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: focus_mode+h\"'"
-          } ],
-          "conditions" : [ {
-            "name" : "focus_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 150
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "focus_mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: focus_mode+h\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "f24"
-            }, {
-              "key_code" : "h"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "focus_mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        } ]
-      }, {
-        "description" : "FOCUS mode j -> (Omnifocus/Keyboard Maestro [J] (vim center))",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "j",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: focus_mode+j\"'"
-          } ],
-          "conditions" : [ {
-            "name" : "focus_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 150
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "focus_mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: focus_mode+j\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "f24"
-            }, {
-              "key_code" : "j"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "focus_mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        } ]
-      }, {
-        "description" : "FOCUS mode l -> (Omnifocus/Keyboard Maestro [L] (vim right))",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "l",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: focus_mode+l\"'"
-          } ],
-          "conditions" : [ {
-            "name" : "focus_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 150
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "focus_mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"hotkey: focus_mode+l\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "f24"
-            }, {
-              "key_code" : "l"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "focus_mode",
                   "value" : 0
                 }
               } ]

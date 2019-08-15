@@ -1,3 +1,17 @@
+local message = require('status-message')
+local messageNormal = message.new('normal mode')
+local messageVisual = message.new('visual mode')
+displayStatus = function(text)
+	if text == 'normal' then
+		messageNormal:show()
+	elseif text == 'visual' then
+		messageVisual:show()
+	else
+		messageNormal:hide()
+		messageVisual:hide()
+	end
+end
+
 function mergeArrays(ar1, ar2)
 	-- add each array value to a table, and send the iteration at the end
 	local tmp = {}
@@ -82,7 +96,7 @@ function Vim:start()
 	self.tapWatcher = hs.eventtap.new({hs.eventtap.event.types.keyDown}, function(evt)
 		return self:eventWatcher(evt)
 	end)
-	self.modal = hs.hotkey.modal.new({"alt"}, "escape")
+	self.modal = hs.hotkey.modal.new({"control"}, "[")
 	function self.modal:entered()
 		-- reset to the normal mode
 		selfPointer.tapWatcher:start()

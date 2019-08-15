@@ -31,7 +31,20 @@ enableHotkeyForWindowsMatchingFilter = function(windowFilter, hotkey)
   end)
 end
 
-require('windows')
-require('panes')
+-- Vim = require('vim_bindings')
+-- local v = Vim:new()
 
-hs.notify.new({title='Hammerspoon', informativeText='Welcome back, Mr. Mroczka. Keyboard shortcuts have been enabled. 💪'}):send()
+vim = hs.loadSpoon('VimMode')
+
+
+hs.hotkey.bind({'ctrl'}, ';', function()
+  vim:enter()
+end)
+
+vim = hs.loadSpoon('VimMode')
+vim:enableKeySequence('j', 'k')
+vim:disableForApp('iTerm2')
+-- require('windows')
+-- require('panes')
+
+hs.notify.new({title='Hammerspoon', informativeText='Welcome back, Mr. Stark. Keyboard shortcuts have been enabled. 💪'}):send()
