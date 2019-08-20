@@ -27,9 +27,6 @@
     ~/.npmrc: node/work_npmrc
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
-    ~/Code/MacSettingsBackup: MacSettingsBackup
-    ~/odrive/Dropbox/MacSettingsBackup: MacSettingsBackup
-    ~/odrive/OneDrive/MacSettingsBackup: MacSettingsBackup
     ~/.proxy_url: proxy_url
     ~/.ideavimrc: vim/ideavimrc
     ~/.vrapperrc: vim/vrapperrc
