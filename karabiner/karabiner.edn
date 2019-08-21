@@ -11,8 +11,7 @@
  :applications {:vim-mode-disabled-application ["^com\\.apple\\.Terminal$",
                                                 "^com\\.googlecode\\.iterm2$",
                                                 "^org\\.vim\\."]
-                :Chromes                       ["^com\\.google\\.Chrome$", "^org\\.chromium\\.Chromium$", "^com\\.google\\.Chrome\\.canary$"]
-                :Brave                         ["^com\\.brave\\.Browser"]
+                :Chromes                       ["^com\\.google\\.Chrome$", "^org\\.chromium\\.Chromium$", "^com\\.google\\.Chrome\\.canary$", "^com\\.brave\\.Browser"]
                 :Terminals                     ["^com\\.apple\\.Terminal$", "^com\\.googlecode\\.iterm2$", "^io\\.alacritty$"]
                }
  :templates {:alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
@@ -40,7 +39,7 @@
         {:des "FN from UHK" :rules [[:f23 :fn [:uhk-keyboard] ]]} ;* UHK FN as mac fn via UHK hardcoded f24 > fn in KE but only for uhk
 
         {:des   "shift+cmd+l types javascript: and hits enter hack" ;; https://superuser.com/a/324267
-         :rules [ [:!CSl [:!Cl :j :a :v :a :s :c :r :i :p :t :!Ssemicolon :return_or_enter] :Brave] ]}
+         :rules [ [:!CSl [:!Cl :j :a :v :a :s :c :r :i :p :t :!Ssemicolon :return_or_enter] :Chromes] ]}
         {:des "Hold cmd+v for KM clipboard history"
          :rules [ [:!Cv nil nil {:alone :!Cv :held [:km "Activate Clipboard History Switcher"] :repeat false :halt true :params{:alone 150 :held 200}} ] ]}
         {:des "Right cmd -> Alfred"
@@ -50,6 +49,8 @@
         {:des "Quit application by pressing ⌘q twice" :rules[ [:!C#Pq [:!Cq ["⌘q" 0]] ["⌘q" 1]]
 			[:!C#Pq ["⌘q" 1] nil {:delayed {:invoked ["⌘q" 0] :canceled ["⌘q" 0]}}] ]}
         {:des "simultaneous f dl press to Contrl+[" :rules [[[:d :f] :!Topen_bracket]]}
+        {:des "Cmd + Esc to go to previous tab" :rules [[:!CSOTa :!CSopen_bracket]]}
+        {:des "Cmd + g to go to next tab" :rules [[:!CSOTs :!CSclose_bracket]]}
 
 
       ; {:des "global C-h to backspace" :rules [ [:!Th :delete_or_backspace nil {:params {:alone 500 :held 500} } ] ] }
