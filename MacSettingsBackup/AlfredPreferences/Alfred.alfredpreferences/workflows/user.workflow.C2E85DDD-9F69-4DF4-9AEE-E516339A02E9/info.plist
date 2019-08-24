@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.jyeakley.stands4</string>
+	<key>connections</key>
+	<dict>
+		<key>21579119-8683-49A9-B297-BD1F96B18A83</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6D44B2DC-D8EF-45C7-85D5-9B55CD6A2EA8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>30837BC0-093C-4AE7-B203-2AFB8480A8FA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E3A5C7B0-4D28-45B6-BB6D-ACD0BA6E42BD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4742A4ED-B53D-4341-993C-A0A0A7DAC12E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7D50D560-06C4-47B3-A106-6A292199227E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>581B6C56-A410-4EE6-BE4C-482D4EBF9B88</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2141A413-18B2-41DA-8F6D-2E8927E78092</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5DF2EFF6-67A4-4B72-80BB-7B0310E10A89</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>69C083DB-E6E8-4237-8591-86CFE3B37945</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>63F60794-BB56-4415-9372-BAF974C3A7E1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E338A624-8F74-4878-955E-C93CC67D7980</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9434C6D8-647B-4BC6-86DD-AB4FB336A269</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0494DC82-C402-4C04-9B69-C456B761726A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>99737670-6115-4AEB-AD4E-44073DB7DDCF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D3B301C2-8949-4483-99C8-6D7AED92B8A5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>BE5156BD-B2EB-4A2F-B1BB-F5600AD41D54</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9CC095B3-7396-4D18-894A-890D10261DF0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D77ACAD3-16FC-4A46-BB9E-28B02104A444</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3B4CA40E-D15A-4C60-BBBC-27DB67D4373B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E3A5C7B0-4D28-45B6-BB6D-ACD0BA6E42BD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0A474F2F-D45F-4500-88D4-16F01B599D30</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Justin Yeakley</string>
+	<key>description</key>
+	<string>Stands4 API Integration</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>STANDS4</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>require( 'workflows.php' );
+$w = new Workflows();
+$query = "{query}";
+
+exec( 'touch settings.plist' );
+$tokens = explode("  ", $query);
+
+$in = "$tokens[0]";
+$type = "$tokens[1]";
+
+if ( $type == 'token' ):
+	$w-&gt;set( 'token', $in, 'settings.plist' );
+	echo 'Set Token to '.$in;
+else:
+	$w-&gt;set( 'userID', $in, 'settings.plist' );
+	echo 'Set User ID to '.$in;
+endif;</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E3A5C7B0-4D28-45B6-BB6D-ACD0BA6E42BD</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>API Info set</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>0A474F2F-D45F-4500-88D4-16F01B599D30</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>100</integer>
+				<key>keyword</key>
+				<string>s4info</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Please Wait</string>
+				<key>script</key>
+				<string>$query = "{query}";
+
+require( 'workflows.php' );
+$w = new Workflows();
+
+$w-&gt;result( 'userId', "$query  userId", "$query", 'Set your user ID to '.$query, 'icon.png', 'yes', "$query" );
+$w-&gt;result( 'token', "$query  token", "$query", 'Set your token to '.$query, 'icon.png', 'yes', "$query" );
+
+echo $w-&gt;toxml();</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Set STANDS4 API Info</string>
+				<key>title</key>
+				<string>Set STANDS4 API Info</string>
+				<key>type</key>
+				<integer>1</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>30837BC0-093C-4AE7-B203-2AFB8480A8FA</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>keyword</key>
+				<string>s4abbrev</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Retrieving STANDS4 Abbreviation suggestions ...</string>
+				<key>script</key>
+				<string>require_once('workflows.php');
+$wf = new Workflows();
+
+$orig = "{query}";
+$token = $wf-&gt;get( 'token', 'settings.plist' );
+$userId = $wf-&gt;get( 'userID', 'settings.plist' );
+$xml = $wf-&gt;request( "http://www.stands4.com/services/v2/abbr.php?uid=$userId&amp;tokenid=$token&amp;term=".urlencode( $orig ) );
+$xml = simplexml_load_string( utf8_encode($xml) );
+$int = 1;
+
+foreach( $xml as $sugg ):
+	$term = $sugg-&gt;term;
+	$answer = $sugg-&gt;definition;
+	$wf-&gt;result( $int.'.'.time(), "$orig", "$answer", 'Search STANDS4 Abbreviations for '.$orig, 'icon.png'  );
+	$int++;
+endforeach;
+
+$results = $wf-&gt;results();
+if ( count( $results ) == 0 ):
+	$wf-&gt;result( 'stands4suggest', $orig, 'No Suggestions', 'No search suggestions found. Search STANDS4 Abbreviations for '.$orig, 'icon.png' );
+endif;
+
+echo $wf-&gt;toxml();</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Search STANDS4 Abbreviations</string>
+				<key>title</key>
+				<string>Search STANDS4 Abbreviations</string>
+				<key>type</key>
+				<integer>1</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>63F60794-BB56-4415-9372-BAF974C3A7E1</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>http://www.abbreviations.com/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>E338A624-8F74-4878-955E-C93CC67D7980</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>keyword</key>
+				<string>s4zip</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Retrieving STANDS4 Zip Code suggestions ...</string>
+				<key>script</key>
+				<string>require_once('workflows.php');
+$wf = new Workflows();
+
+$orig = "{query}";
+$token = $wf-&gt;get( 'token', 'settings.plist' );
+$userId = $wf-&gt;get( 'userID', 'settings.plist' );
+$xml = $wf-&gt;request( "http://www.stands4.com/services/v2/zip.php?uid=$userId&amp;tokenid=$token&amp;zip=".urlencode( $orig ) );
+$xml = simplexml_load_string( utf8_encode($xml) );
+$int = 1;
+
+$location = $xml-&gt;location;
+$longitude = $xml-&gt;longitude;
+$latitude = $xml-&gt;latitude;
+$wf-&gt;result( $int.'.'.time(), "$orig", "$location: Latitude: $latitude, Longitude: $longitude", 'Search STANDS4 Zip Codes for '.$orig, 'icon.png');
+
+$results = $wf-&gt;results();
+if ( count( $results ) == 0 ):
+	$wf-&gt;result( 'stands4suggest', $orig, 'No Suggestions', 'No search suggestions found. Search STANDS4 Zip Codes for '.$orig, 'icon.png' );
+endif;
+
+echo $wf-&gt;toxml();</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Search STANDS4 Zip Codes</string>
+				<key>title</key>
+				<string>Search STANDS4 Zip Codes</string>
+				<key>type</key>
+				<integer>1</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>BE5156BD-B2EB-4A2F-B1BB-F5600AD41D54</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>http://www.uszip.com/zip/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>9CC095B3-7396-4D18-894A-890D10261DF0</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>http://www.definitions.net/definition/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>69C083DB-E6E8-4237-8591-86CFE3B37945</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>keyword</key>
+				<string>s4def</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Retrieving STANDS4 Definition suggestions ...</string>
+				<key>script</key>
+				<string>require_once('workflows.php');
+$wf = new Workflows();
+
+$orig = "{query}";
+$token = $wf-&gt;get( 'token', 'settings.plist' );
+$userId = $wf-&gt;get( 'userID', 'settings.plist' );
+$xml = $wf-&gt;request( "http://www.stands4.com/services/v2/defs.php?uid=$userId&amp;tokenid=$token&amp;word=".urlencode( $orig ) );
+$xml = simplexml_load_string( utf8_encode($xml) );
+$int = 1;
+
+foreach( $xml as $sugg ):
+	$term = $sugg-&gt;term;
+	$definition = $sugg-&gt;definition;
+	$wf-&gt;result( $int.'.'.time(), "$orig", "$definition", 'Search STANDS4 Definitions for '.$orig, 'icon.png'  );
+	$int++;
+endforeach;
+
+$results = $wf-&gt;results();
+if ( count( $results ) == 0 ):
+	$wf-&gt;result( 'stands4suggest', $orig, 'No Suggestions', 'No search suggestions found. Search STANDS4 Definitions for '.$orig, 'icon.png' );
+endif;
+
+echo $wf-&gt;toxml();</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Search STANDS4 Definitions</string>
+				<key>title</key>
+				<string>Search STANDS4 Definitions</string>
+				<key>type</key>
+				<integer>1</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>5DF2EFF6-67A4-4B72-80BB-7B0310E10A89</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>http://www.rhymes.net/rhyme/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>2141A413-18B2-41DA-8F6D-2E8927E78092</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>keyword</key>
+				<string>s4rhyme</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Retrieving STANDS4 Rhyme suggestions ...</string>
+				<key>script</key>
+				<string>require_once('workflows.php');
+$wf = new Workflows();
+
+$orig = "{query}";
+$token = $wf-&gt;get( 'token', 'settings.plist' );
+$userId = $wf-&gt;get( 'userID', 'settings.plist' );
+$xml = $wf-&gt;request( "http://www.stands4.com/services/v2/rhymes.php?uid=$userId&amp;tokenid=$token&amp;term=".urlencode( $orig ) );
+$xml = simplexml_load_string( utf8_encode($xml) );
+$int = 1;
+
+$rhymes = $xml-&gt;rhymes;
+$wf-&gt;result( $int.'.'.time(), "$orig", "Rhymes: $rhymes", 'Search STANDS4 Rhymes for '.$orig, 'icon.png');
+
+$results = $wf-&gt;results();
+if ( count( $results ) == 0 ):
+	$wf-&gt;result( 'stands4suggest', $orig, 'No Suggestions', 'No search suggestions found. Search STANDS4 Rhymes for '.$orig, 'icon.png' );
+endif;
+
+echo $wf-&gt;toxml();</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Search STANDS4 Rhymes</string>
+				<key>title</key>
+				<string>Search STANDS4 Rhymes</string>
+				<key>type</key>
+				<integer>1</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>581B6C56-A410-4EE6-BE4C-482D4EBF9B88</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>http://www.convert.net/category.php?c=MATH&amp;val={query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>3B4CA40E-D15A-4C60-BBBC-27DB67D4373B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>keyword</key>
+				<string>s4conv</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Retrieving STANDS4 Conversion suggestions ...</string>
+				<key>script</key>
+				<string>require_once('workflows.php');
+$wf = new Workflows();
+
+$orig = "{query}";
+$token = $wf-&gt;get( 'token', 'settings.plist' );
+$userId = $wf-&gt;get( 'userID', 'settings.plist' );
+$xml = $wf-&gt;request( "http://www.stands4.com/services/v2/conv.php?uid=$userId&amp;tokenid=$token&amp;expression=".urlencode( $orig ) );
+$xml = simplexml_load_string( utf8_encode($xml) );
+$int = 1;
+
+$result = $xml-&gt;result;
+$category = $xml-&gt;category;
+$wf-&gt;result( $int.'.'.time(), "$orig", html_entity_decode("$category: $result"), 'Search STANDS4 Conversions for '.$orig, 'icon.png');
+
+$results = $wf-&gt;results();
+if ( count( $results ) == 0 ):
+	$wf-&gt;result( 'stands4suggest', $orig, 'No Suggestions', 'No search suggestions found. Search STANDS4 Conversions for '.$orig, 'icon.png' );
+endif;
+
+echo $wf-&gt;toxml();</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Search STANDS4 Conversions</string>
+				<key>title</key>
+				<string>Search STANDS4 Conversions</string>
+				<key>type</key>
+				<integer>1</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>D77ACAD3-16FC-4A46-BB9E-28B02104A444</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>http://www.synonyms.net/synonym/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>7D50D560-06C4-47B3-A106-6A292199227E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>keyword</key>
+				<string>s4syn</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Retrieving STANDS4 Synonyms suggestions ...</string>
+				<key>script</key>
+				<string>require_once('workflows.php');
+$wf = new Workflows();
+
+$orig = "{query}";
+$token = $wf-&gt;get( 'token', 'settings.plist' );
+$userId = $wf-&gt;get( 'userID', 'settings.plist' );
+$xml = $wf-&gt;request( "http://www.stands4.com/services/v2/syno.php?uid=$userId&amp;tokenid=$token&amp;word=".urlencode( $orig ) );
+$xml = simplexml_load_string( utf8_encode($xml) );
+$int = 1;
+
+foreach( $xml as $sugg ):
+	$term = $sugg-&gt;term;
+	$synonyms = $sugg-&gt;synonyms;
+	$wf-&gt;result( $int.'.'.time(), "$orig", "$synonyms", 'Search STANDS4 Synonyms for '.$orig, 'icon.png'  );
+	$int++;
+endforeach;
+
+$results = $wf-&gt;results();
+if ( count( $results ) == 0 ):
+	$wf-&gt;result( 'stands4suggest', $orig, 'No Suggestions', 'No search suggestions found. Search STANDS4 Synonyms for '.$orig, 'icon.png' );
+endif;
+
+echo $wf-&gt;toxml();</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Search STANDS4 Synonyms</string>
+				<key>title</key>
+				<string>Search STANDS4 Synonyms</string>
+				<key>type</key>
+				<integer>1</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>4742A4ED-B53D-4341-993C-A0A0A7DAC12E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>keyword</key>
+				<string>s4phr</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Retrieving STANDS4 Phrase suggestions ...</string>
+				<key>script</key>
+				<string>require_once('workflows.php');
+$wf = new Workflows();
+
+$orig = "{query}";
+$token = $wf-&gt;get( 'token', 'settings.plist' );
+$userId = $wf-&gt;get( 'userID', 'settings.plist' );
+$xml = $wf-&gt;request( "http://www.stands4.com/services/v2/phrases.php?uid=$userId&amp;tokenid=$token&amp;phrase=".urlencode( $orig ) );
+$xml = simplexml_load_string( utf8_encode($xml) );
+$int = 1;
+
+foreach( $xml as $sugg ):
+	$explanation = $sugg-&gt;explanation;
+	$wf-&gt;result( $int.'.'.time(), "$orig", "$explanation", 'Search STANDS4 Phrases for '.$orig, 'icon.png'  );
+	$int++;
+endforeach;
+
+$results = $wf-&gt;results();
+if ( count( $results ) == 0 ):
+	$wf-&gt;result( 'stands4suggest', $orig, 'No Suggestions', 'No search suggestions found. Search STANDS4 Phrases for '.$orig, 'icon.png' );
+endif;
+
+echo $wf-&gt;toxml();</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Search STANDS4 Phrases</string>
+				<key>title</key>
+				<string>Search STANDS4 Phrases</string>
+				<key>type</key>
+				<integer>1</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>9434C6D8-647B-4BC6-86DD-AB4FB336A269</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string>+</string>
+				<key>url</key>
+				<string>http://www.phrases.net/psearch/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>0494DC82-C402-4C04-9B69-C456B761726A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>keyword</key>
+				<string>s4quoteauthor</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Retrieving STANDS4 Quote By Author suggestions ...</string>
+				<key>script</key>
+				<string>require_once('workflows.php');
+$wf = new Workflows();
+
+$orig = "{query}";
+$token = $wf-&gt;get( 'token', 'settings.plist' );
+$userId = $wf-&gt;get( 'userID', 'settings.plist' );
+$xml = $wf-&gt;request( "http://www.stands4.com/services/v2/quotes.php?uid=$userId&amp;tokenid=$token&amp;searchtype=AUTHOR&amp;query=".urlencode( $orig ) );
+$xml = simplexml_load_string( utf8_encode($xml) );
+$int = 1;
+
+foreach( $xml as $sugg ):
+	$quote = $sugg-&gt;quote;
+	$author = $sugg-&gt;author;
+	$wf-&gt;result( $int.'.'.time(), "$orig", "$author: $quote", 'Search STANDS4 Quotes for '.$orig, 'icon.png'  );
+	$int++;
+endforeach;
+
+$results = $wf-&gt;results();
+if ( count( $results ) == 0 ):
+	$wf-&gt;result( 'stands4suggest', $orig, 'No Suggestions', 'No search suggestions found. Search STANDS4 Quotes for '.$orig, 'icon.png' );
+endif;
+
+echo $wf-&gt;toxml();</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Search STANDS4 Quotes By Author</string>
+				<key>title</key>
+				<string>Search STANDS4 Quotes By Author</string>
+				<key>type</key>
+				<integer>1</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>21579119-8683-49A9-B297-BD1F96B18A83</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string>+</string>
+				<key>url</key>
+				<string>http://www.quotes.net/quotations/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>6D44B2DC-D8EF-45C7-85D5-9B55CD6A2EA8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string>+</string>
+				<key>url</key>
+				<string>http://www.quotes.net/quotations/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>D3B301C2-8949-4483-99C8-6D7AED92B8A5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>keyword</key>
+				<string>s4quote</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Retrieving STANDS4 Quote suggestions ...</string>
+				<key>script</key>
+				<string>require_once('workflows.php');
+$wf = new Workflows();
+
+$orig = "{query}";
+$token = $wf-&gt;get( 'token', 'settings.plist' );
+$userId = $wf-&gt;get( 'userID', 'settings.plist' );
+$xml = $wf-&gt;request( "http://www.stands4.com/services/v2/quotes.php?uid=$userId&amp;tokenid=$token&amp;searchtype=SEARCH&amp;query=".urlencode( $orig ) );
+$xml = simplexml_load_string( utf8_encode($xml) );
+$int = 1;
+
+foreach( $xml as $sugg ):
+	$quote = $sugg-&gt;quote;
+	$author = $sugg-&gt;author;
+	$wf-&gt;result( $int.'.'.time(), "$orig", "$author: $quote", 'Search STANDS4 Quotes for '.$orig, 'icon.png'  );
+	$int++;
+endforeach;
+
+$results = $wf-&gt;results();
+if ( count( $results ) == 0 ):
+	$wf-&gt;result( 'stands4suggest', $orig, 'No Suggestions', 'No search suggestions found. Search STANDS4 Quotes for '.$orig, 'icon.png' );
+endif;
+
+echo $wf-&gt;toxml();</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Search STANDS4 Quotes</string>
+				<key>title</key>
+				<string>Search STANDS4 Quotes</string>
+				<key>type</key>
+				<integer>1</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>99737670-6115-4AEB-AD4E-44073DB7DDCF</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Credit STANDS4
+http://www.abbreviations.com/</string>
+	<key>uidata</key>
+	<dict>
+		<key>0494DC82-C402-4C04-9B69-C456B761726A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<real>850</real>
+		</dict>
+		<key>0A474F2F-D45F-4500-88D4-16F01B599D30</key>
+		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>2141A413-18B2-41DA-8F6D-2E8927E78092</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<real>490</real>
+		</dict>
+		<key>21579119-8683-49A9-B297-BD1F96B18A83</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<real>970</real>
+		</dict>
+		<key>30837BC0-093C-4AE7-B203-2AFB8480A8FA</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>3B4CA40E-D15A-4C60-BBBC-27DB67D4373B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<real>610</real>
+		</dict>
+		<key>4742A4ED-B53D-4341-993C-A0A0A7DAC12E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<real>730</real>
+		</dict>
+		<key>581B6C56-A410-4EE6-BE4C-482D4EBF9B88</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<real>490</real>
+		</dict>
+		<key>5DF2EFF6-67A4-4B72-80BB-7B0310E10A89</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<real>370</real>
+		</dict>
+		<key>63F60794-BB56-4415-9372-BAF974C3A7E1</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>69C083DB-E6E8-4237-8591-86CFE3B37945</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<real>370</real>
+		</dict>
+		<key>6D44B2DC-D8EF-45C7-85D5-9B55CD6A2EA8</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<real>970</real>
+		</dict>
+		<key>7D50D560-06C4-47B3-A106-6A292199227E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<real>730</real>
+		</dict>
+		<key>9434C6D8-647B-4BC6-86DD-AB4FB336A269</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<real>850</real>
+		</dict>
+		<key>99737670-6115-4AEB-AD4E-44073DB7DDCF</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<real>1090</real>
+		</dict>
+		<key>9CC095B3-7396-4D18-894A-890D10261DF0</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
+		<key>BE5156BD-B2EB-4A2F-B1BB-F5600AD41D54</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
+		<key>D3B301C2-8949-4483-99C8-6D7AED92B8A5</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<real>1090</real>
+		</dict>
+		<key>D77ACAD3-16FC-4A46-BB9E-28B02104A444</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<real>610</real>
+		</dict>
+		<key>E338A624-8F74-4878-955E-C93CC67D7980</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>E3A5C7B0-4D28-45B6-BB6D-ACD0BA6E42BD</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
