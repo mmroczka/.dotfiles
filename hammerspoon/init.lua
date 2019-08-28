@@ -45,6 +45,7 @@ end)
 vim = hs.loadSpoon('VimMode')
 vim:enableKeySequence('j', 'k')
 vim:disableForApp('iTerm2')
+vim:disableForApp('Code')
 require('windows')
 require('panes')
 

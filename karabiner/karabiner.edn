@@ -143,7 +143,7 @@
         {:des "Spacebar+Command mode y -> " :rules [:spacebar_command_mode [:##y :!Cc]]}
         {:des "Spacebar+Command mode p -> " :rules [:spacebar_command_mode [:##p :!Cv]]}
 
-        {:des "Utilities Mode (u+i)" :rules [[{:sim [:u :spacebar]
+        {:des "Utilities Mode (u+i)" :rules [[{:sim [:8 :spacebar]
                                      :simo {:interrupt true
                                             :dorder :insensitive
                                             :uorder :insensitive
