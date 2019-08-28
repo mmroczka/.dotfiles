@@ -2997,7 +2997,7 @@
         "manipulators" : [ {
           "from" : {
             "simultaneous" : [ {
-              "key_code" : "u"
+              "key_code" : "8"
             }, {
               "key_code" : "spacebar"
             } ],
