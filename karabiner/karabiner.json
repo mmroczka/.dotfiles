@@ -799,7 +799,7 @@
           }
         } ]
       }, {
-        "description" : "Launch mode -> n (Open nvALT)",
+        "description" : "Launch mode -> n (Open Evernote)",
         "manipulators" : [ {
           "from" : {
             "key_code" : "n",
@@ -808,7 +808,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: nvALT\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Evernote\"'"
           } ],
           "conditions" : [ {
             "name" : "launch_mode",
@@ -827,7 +827,7 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: nvALT\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Evernote\"'"
           } ],
           "from" : {
             "simultaneous" : [ {

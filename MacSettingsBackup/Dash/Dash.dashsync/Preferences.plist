@@ -9,7 +9,7 @@
 			<key>Chrome_Dev_Tools</key>
 			<dict>
 				<key>date</key>
-				<date>2019-05-24T17:46:32Z</date>
+				<date>2019-09-05T18:43:04Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -27,7 +27,7 @@
 			<key>Git</key>
 			<dict>
 				<key>date</key>
-				<date>2019-05-24T17:46:32Z</date>
+				<date>2019-09-05T18:43:04Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -48,7 +48,7 @@
 			<key>Vim</key>
 			<dict>
 				<key>date</key>
-				<date>2019-05-23T14:47:01Z</date>
+				<date>2019-09-05T18:43:04Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -64,7 +64,7 @@
 			<key>iTerm2</key>
 			<dict>
 				<key>date</key>
-				<date>2019-05-24T17:46:30Z</date>
+				<date>2019-09-05T18:43:04Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -172,7 +172,7 @@
 			<key>Java_EE_Online</key>
 			<dict>
 				<key>date</key>
-				<date>2019-06-10T23:59:49Z</date>
+				<date>2019-09-05T18:43:07Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -188,7 +188,7 @@
 			<key>Python_Online</key>
 			<dict>
 				<key>date</key>
-				<date>2019-06-10T23:59:54Z</date>
+				<date>2019-09-05T18:44:38Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -204,7 +204,7 @@
 			<key>Spring_Framework_Online</key>
 			<dict>
 				<key>date</key>
-				<date>2019-06-10T23:59:49Z</date>
+				<date>2019-09-05T18:43:24Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -231,7 +231,7 @@
 			<key>Hammerspoon</key>
 			<dict>
 				<key>date</key>
-				<date>2019-08-14T17:58:28Z</date>
+				<date>2019-09-05T18:43:08Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -260,6 +260,8 @@
 	<dict>
 		<key>keywords</key>
 		<dict>
+			<key>~/Library/Application Support/Dash/DocSets/JavaScript/JavaScript.docset</key>
+			<string>js:</string>
 			<key>~/Library/Application Support/Dash/DocSets/Java_EE8/Java EE8.docset</key>
 			<string>java:</string>
 			<key>~/Library/Application Support/Dash/DocSets/Python_3/Python 3.docset</key>
@@ -270,25 +272,30 @@
 	<dict>
 		<key>installed</key>
 		<dict>
+			<key>http://kapeli.com/feeds/JavaScript.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-09-05T18:56:43Z</date>
+			</dict>
 			<key>http://kapeli.com/feeds/Python_3.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2019-05-23T15:39:35Z</date>
+				<date>2019-09-05T18:43:40Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/React.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2019-05-23T15:44:19Z</date>
+				<date>2019-09-05T18:43:20Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Ruby_2.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2019-05-23T15:40:31Z</date>
+				<date>2019-09-05T18:44:43Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Ruby_on_Rails_5.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2019-05-23T15:39:55Z</date>
+				<date>2019-09-05T18:44:11Z</date>
 			</dict>
 		</dict>
 		<key>uninstalled</key>
@@ -461,6 +468,28 @@
 	<key>webSearches</key>
 	<array>
 		<dict>
+			<key>icon</key>
+			<string>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAO5JREFUOBGlk8ENgkAQRV1jA1jCWgIHewDr0JNX490LevWkdWgBHj1YgpQgJeB/uENMjKuEn3wGdv58MgPj6roe9IHLs4z6u+jFxel8PnLwDbM8nyt3EEtpJ0PdpCLFt0CFKEznZZZikAT5VpFkFHorGrQgwcBQ2c0fsdW+G/xR9ynBgBmA1vX1GL2atplBIakNJlplyTAHaopRKPaKyXS1rzaX0nRf43W3ZPDU3GiBiXJgrfBnxah0o6Vmi4H1Q6IrKgx64d3AWnByjJEXmnbALtDLg1Ohyy6gH/MVmMFa9OLPXzloWDiWqXJ91/kJQV5Gz5pgqdIAAAAASUVORK5CYII=</string>
+			<key>isEnabled</key>
+			<true/>
+			<key>name</key>
+			<string>Stack Snippet</string>
+			<key>url</key>
+			<string>http://www.stacksnippet.com/#gsc.tab=0&amp;gsc.q={query}</string>
+		</dict>
+		<dict>
+			<key>iconName</key>
+			<string>Stack Overflow</string>
+			<key>isDefault</key>
+			<true/>
+			<key>isEnabled</key>
+			<true/>
+			<key>name</key>
+			<string>Stack Overflow</string>
+			<key>url</key>
+			<string>https://stackoverflow.com/search?q={query}</string>
+		</dict>
+		<dict>
 			<key>iconName</key>
 			<string>Google</string>
 			<key>isDefault</key>
@@ -483,18 +512,6 @@
 			<string>DuckDuckGo</string>
 			<key>url</key>
 			<string>https://duckduckgo.com/?q={query}&amp;ia=web</string>
-		</dict>
-		<dict>
-			<key>iconName</key>
-			<string>Stack Overflow</string>
-			<key>isDefault</key>
-			<true/>
-			<key>isEnabled</key>
-			<true/>
-			<key>name</key>
-			<string>Stack Overflow</string>
-			<key>url</key>
-			<string>https://stackoverflow.com/search?q={query}</string>
 		</dict>
 	</array>
 	<key>windowStyle</key>

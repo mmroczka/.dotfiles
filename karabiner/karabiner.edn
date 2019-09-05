@@ -70,7 +70,7 @@
         {:des "Launch mode -> i (Open iTerm)" :rules [:launch_mode [:##i [:km "open: iTerm"]]]}
         {:des "Launch mode -> k (Open Keyboard Maestro)" :rules [:launch_mode [:##k [:km "open: Keyboard Maestro"]]]}
         {:des "Launch mode -> m (Open Omnifocus)" :rules [:launch_mode [:##m [:km "open: Omnifocus"]]]}
-        {:des "Launch mode -> n (Open nvALT)" :rules [:launch_mode [:##n [:km "open: nvALT"]]]}
+        {:des "Launch mode -> n (Open Evernote)" :rules [:launch_mode [:##n [:km "open: Evernote"]]]}
         {:des "Launch mode -> o (Open Outlook)" :rules [:launch_mode [:##o [:km "open: Outlook"]]]}
         {:des "Launch mode -> e (Open Editor)" :rules [:launch_mode [:##e [:km "open: Editor"]]]}
         {:des "Launch mode -> s (Open Skype)" :rules [:launch_mode [:##s [:km "open: Skype"]]]}
