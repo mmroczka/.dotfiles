@@ -43,9 +43,10 @@ hs.hotkey.bind({'ctrl'}, ';', function()
 end)
 
 vim = hs.loadSpoon('VimMode')
-vim:enableKeySequence('j', 'k')
 vim:disableForApp('iTerm2')
+vim:enableKeySequence('j', 'k')
 vim:disableForApp('Code')
+
 require('windows')
 require('panes')
 
