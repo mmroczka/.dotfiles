@@ -212,6 +212,7 @@
         {:des "Semicolon mode s -> (Global toggle for left sidebar)" :rules [:semicolon_mode [:##s [:km "hotkey: semicolon_mode+s"]]]}
         {:des "Semicolon mode i -> (Global toggle for right sidebar)" :rules [:semicolon_mode [:##i [:km "hotkey: semicolon_mode+i"]]]}
 
+
   ]
   :simlayer-threshold 150
 }
