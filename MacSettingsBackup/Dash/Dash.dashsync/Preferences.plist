@@ -228,6 +228,32 @@
 	<dict>
 		<key>installed</key>
 		<dict>
+			<key>Flow</key>
+			<dict>
+				<key>date</key>
+				<date>2019-09-17T18:51:02Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Flow</string>
+						<string>Facebook</string>
+						<string>JavaScript</string>
+						<string>UI</string>
+						<string>type</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Flow#readme</string>
+					<key>authorLinkText</key>
+					<string>Michael Sharer</string>
+					<key>name</key>
+					<string>Flow</string>
+					<key>platform</key>
+					<string>usercontribFlow</string>
+					<key>uniqueIdentifier</key>
+					<string>Flow</string>
+				</dict>
+			</dict>
 			<key>Hammerspoon</key>
 			<dict>
 				<key>date</key>
@@ -246,6 +272,35 @@
 					<string>usercontribHammerspoon</string>
 					<key>uniqueIdentifier</key>
 					<string>Hammerspoon</string>
+				</dict>
+			</dict>
+			<key>Redux</key>
+			<dict>
+				<key>date</key>
+				<date>2019-09-17T18:50:52Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Redux</string>
+						<string>React</string>
+						<string>Facebook</string>
+						<string>JavaScript</string>
+						<string>Reactjs</string>
+						<string>UI</string>
+						<string>iOS</string>
+						<string>Android</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Redux#readme</string>
+					<key>authorLinkText</key>
+					<string>Michael Sharer</string>
+					<key>name</key>
+					<string>Redux</string>
+					<key>platform</key>
+					<string>usercontribRedux</string>
+					<key>uniqueIdentifier</key>
+					<string>Redux</string>
 				</dict>
 			</dict>
 		</dict>
@@ -276,6 +331,11 @@
 			<dict>
 				<key>date</key>
 				<date>2019-09-05T18:56:43Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Lo-Dash.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-09-17T19:06:10Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Python_3.xml</key>
 			<dict>
@@ -326,6 +386,38 @@
 			<string>Search Snippets</string>
 			<key>searchSnippets</key>
 			<true/>
+		</dict>
+		<dict>
+			<key>docsets</key>
+			<array>
+				<string>~/Library/Application Support/Dash/User Contributed/Flow/Flow.docset</string>
+				<string>~/Library/Application Support/Dash/DocSets/JavaScript/JavaScript.docset</string>
+				<string>~/Library/Application Support/Dash/DocSets/React/React.docset</string>
+				<string>~/Library/Application Support/Dash/User Contributed/Redux/Redux.docset</string>
+				<string>~/Library/Application Support/Dash/Cheat Sheets/Chrome Developer Tools/Chrome_Dev_Tools.docset</string>
+				<string>~/Library/Application Support/Dash/DocSets/Lo-Dash/Lo-Dash.docset</string>
+			</array>
+			<key>name</key>
+			<string>Front End</string>
+			<key>placeholder</key>
+			<string>Search React, Recompose, Redux, JS, and Flow</string>
+			<key>searchSnippets</key>
+			<true/>
+			<key>triggers</key>
+			<array>
+				<dict>
+					<key>appPath</key>
+					<string>/Applications/Visual Studio Code.app</string>
+					<key>bundle</key>
+					<string>com.microsoft.VSCode</string>
+					<key>description</key>
+					<string>Code becomes active</string>
+					<key>image</key>
+					<string>generalAppIcon</string>
+					<key>isAppTrigger</key>
+					<true/>
+				</dict>
+			</array>
 		</dict>
 	</array>
 	<key>searchKey</key>
@@ -467,6 +559,18 @@
 	</dict>
 	<key>webSearches</key>
 	<array>
+		<dict>
+			<key>icon</key>
+			<string>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAiVJREFUOBGFUz2L1FAUfR/JJqvJ5GsWFewEwUKw9HvFcsHCRrDYwtZ/YGMp2ClaiAoWU+wWIja2oruKhY1grYso7LqTTDLDbpzMJHmeG/JkcZV5EM6995xz3yP3Pc7+Wr7vX5RSXkf5MlfqCNGK803A66qqVrIsW6OaXlwHQNkNgmfSMJb31PaFVVn24jS9AaIiUjeQURStG0Kc2ef4R6Gs6w9JklwAVUnisXPPkHJpWpZrk+n02iBNN4WURwXnfaVUohhz+nF8C9xtwzCOm1Ken7esY/l4/IJ1Op3ThxYWFH1hGD5qN3SAB9qYgPLmtKTRevKKOSlvaiF+0tM23gHmug6kHAdhrK7rVUJa5BUMx6GkqusJIKF4xtqAtmg08ArWjopxvjUcDjdmmBnG+A3an40OXoGgORrQw0f5rEWb+q1ICbi/UyI59zDKK7PcQRAsSSE6pIP3h8Co1mul2HYcV3VZPg9c99z/moSuexbmJ5rHiN8IzP7hpJjiVKrKRqPRcHf3nRAipxFpoW3bl1Drm7b9Hg0O6zo8DwR+yifTMh9jtnO+aS46jrPsuu5Hzvm2FlqWtYOGXZ0TVkrdS9P0s77KLAyCt9jlJEZ0Cp1HaJztMbjdKNrC7s3lwnt4ifdwlfg/fx3XdxHjWYXoK671F3DNS2ybHNTmsizvaDNxzVtoRSzP81fztj1Go65pmr2iKH4R53meiad9ombsfjIY3NV6wt8l7toF34hj6AAAAABJRU5ErkJggg==</string>
+			<key>icon@2x</key>
+			<string>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABN1JREFUWAmtV11oHFUUnntnsk2TZiUls7vdbJcYVihZbR9iG0Qk+iKKWn0S8angg5FSkVr0QWiTahR80IpFfRAfBcmDIShirZQWFGOt+ENUcJG4u9m/adK6mw3Nbnav35nsDJOZu5tskwuzc+ec75zv3DNn7j3LlC2OeDzuWzKMh4SiHFWEGIJZWDAWJnMmRAa3jMLYH0xRZvbq+qW5ubkK6TYbwLceA7oeusXYGSHEs0D6W6NtbZEx9mmnEBPzhpGzpZJJ0wBisdiu5WLxNdicBHm3xHZTEYIoA/TOHr9/MpFIrMoMpAE0Vj0N4hGZUbsyBDKLbDwly4YngEggcHBNiC/xriPtErXCgyitMfZYulD4zYnbEIC5ckW5utPkFiEF0akoh52Z4JaS3jmKbdpJDoM/cX2GFC5auDbuN2E7hetny4Z8EwdxWTI7ACo49ztnnJ/LGcYzB4aGQgrnz+EzW69oxpYx/x3Or+C6jDml9T9yimCXIDvRFwgEYfs0nictMroTR6O4TTGwitIouoS72pmqHsnlcldNJH7iur5nUVWjY2Njf42Pj9ctOd1hyyKRyF2qqhrJZPKGpQsGg3cq9fo/1jPdEVQZRRmjV2EGEAoEPoSDMSeI5lzT7s1ms9fc8naew+FwtFat/uu2QRAf5QqFFzjtcCCnTcY7ajXa8bY16vV6XOaAOImb0/YKgGeHozQpqnpFZtyODK/kR/i6LrHxEzdHZR6VKEl0Fun3pK4Jtql4YWFhEQXyigxA3LxxsHj0ms/3uUd4m4LO7m65Lxxq9BmaJ5rTN6U/lUolnLLtzOfn52/CZ1LiI8ytI9WlLMAAGdrBIUTe7Y24Ob5DezOyAKjQPmu+Y3fGPD6Jm8hlFdqDDSSwU+QDAwM4AryvGjKDAljfXl1sXIiHXaLbflxdWRlFVu393+Eox9FO/eAQ2FMYvIgLWdr+QDG9JPMC7lmOjfmyTAmjw/uCwZdlunZkIV0/hoU8IrUBN/f39n4DZUkGgOHbOCfODg8Pd8j0rWQ4rDhsT2EhHzfBlfYKccFMMYDnQXbcBDL2rsrYTzUhXsUmdZBkAKWQqU9QMN9xn+9aOp1ekjkdHBy8o1wuDwN3X12IY7CPyXCmT87P5/L5E1SEiibEOXz3ZhuN90KGRp8Q94P0F9JjFfsR4BkEdaFaqczQ6kjuHiul0jSO3m9xAL3Rkpyx1Q5wkr1dZMjCBEhON5wWsRXHEdTutUrle8jtb1jl/MlMPj/jJqfnUCj0oKjVLsl0Thn8TuAoHieZvRK0zm9ixVbD6K9VKhNI9d9oHO6BwSlg3+OcP9/V0/M1GcqGpmmWvUy9LgMHuN6yAHYGSIDmYT+ah1lM9+GqoSN6Ah3RV6Tb6gjqehVYrQk+q3Z0jGQymZSl3xAACfsDgUNoy4l0PQjGLmJ+EcASaiH4wOjo5NTUVI2wsoEA1iBXJbos2vJHFwqFX506TwCk7O/vj6xVq1+gkA45wTRHs7mr1f8+BEDB2a/WtEcDq2ra41h50nx2/GwENhRoItI9fv8IFQuuDX+p8JlJbRw+7UXBtoLr9d1dXUdk5GTT1Bn9l6NKxQ4UR3v+PrBFFOkyDhZKcdMBwhuEw/0DfEl3w8dp9AO3mhpsVUEteTQa7d0MT68Pfzz8m+Es/f+ZDNV1OgrJewAAAABJRU5ErkJggg==</string>
+			<key>isEnabled</key>
+			<true/>
+			<key>name</key>
+			<string>Recompose API</string>
+			<key>url</key>
+			<string>https://github.com/acdlite/recompose/blob/master/docs/API.md</string>
+		</dict>
 		<dict>
 			<key>icon</key>
 			<string>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAO5JREFUOBGlk8ENgkAQRV1jA1jCWgIHewDr0JNX490LevWkdWgBHj1YgpQgJeB/uENMjKuEn3wGdv58MgPj6roe9IHLs4z6u+jFxel8PnLwDbM8nyt3EEtpJ0PdpCLFt0CFKEznZZZikAT5VpFkFHorGrQgwcBQ2c0fsdW+G/xR9ynBgBmA1vX1GL2atplBIakNJlplyTAHaopRKPaKyXS1rzaX0nRf43W3ZPDU3GiBiXJgrfBnxah0o6Vmi4H1Q6IrKgx64d3AWnByjJEXmnbALtDLg1Ohyy6gH/MVmMFa9OLPXzloWDiWqXJ91/kJQV5Gz5pgqdIAAAAASUVORK5CYII=</string>
