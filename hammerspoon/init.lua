@@ -54,4 +54,8 @@ require('panes')
 -- Bypass programs that won't let you paste into them by grabbing the clipboard's top contents and typing them "manually" with hammerspoon
 hs.hotkey.bind({"cmd", "ctrl"}, "V", function() hs.eventtap.keyStrokes(hs.pasteboard.getContents()) end)
 
+-- automatic configuration reload
+hs.loadSpoon("ReloadConfiguration")
+spoon.ReloadConfiguration:start()
+
 hs.notify.new({title='Hammerspoon', informativeText='Welcome back, Mr. Mroczka. Keyboard shortcuts have been enabled. 💪'}):send()
