@@ -43,10 +43,10 @@ hs.hotkey.bind({'ctrl'}, ';', function()
 end)
 
 vim = hs.loadSpoon('VimMode')
-vim:disableForApp('iTerm2')
--- vim:enableKeySequence('j', 'k', {'shift'})
+-- vim:disableForApp('iTerm2')
+-- below sequence is actually tied to left command single press through karabiner
 vim:enableKeySequence('j', 'q')
-vim:disableForApp('Code')
+-- vim:disableForApp('Code')
 
 require('windows')
 require('panes')
