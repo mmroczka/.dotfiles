@@ -44,8 +44,8 @@
          :rules [ [:!Cv nil nil {:alone :!Cv :held [:km "Activate Clipboard History Switcher"] :repeat false :halt true :params{:alone 150 :held 200}} ] ]}
         {:des "Right cmd -> Alfred"
          :rules [[:right_command :right_command nil {:alone :!CTOSspacebar}]]}
-        {:des "Left cmd -> Contexts"
-         :rules [[:left_command :left_command nil {:alone :!Tspacebar}]]}
+        {:des "Left cmd -> KM: If Exists Trigger Action Menu"
+         :rules [[:left_command :left_command nil {:alone [:km "If Exists Trigger Action Menu"] }]]}
         {:des "Right option -> Cardhop"
          :rules [[:right_option :right_option nil {:alone :!OCT1}]]}
         {:des "Quit application by pressing ⌘q twice" :rules[ [:!C#Pq [:!Cq ["⌘q" 0]] ["⌘q" 1]]
@@ -53,6 +53,7 @@
         {:des "simultaneous f dl press to Contrl+[" :rules [[[:d :f] :!Topen_bracket]]}
         {:des "Cmd + Esc to go to previous tab" :rules [[:!CSOTa :!CSopen_bracket]]}
         {:des "Cmd + g to go to next tab" :rules [[:!CSOTs :!CSclose_bracket]]}
+        {:des "simultaneous j k press to F19" :rules [[[:j :k] :f19]]} ; toggles navigation commands in KM
 
 
       ; {:des "global C-h to backspace" :rules [ [:!Th :delete_or_backspace nil {:params {:alone 500 :held 500} } ] ] }
@@ -98,102 +99,97 @@
         ;          ]}
 
 ;         USES SPECTACLE TO CHANGE WINDOWS
-       {:des "Window Manipulation mode (spacebar+w)" :rules [[{:sim [:w :spacebar]
-                                   :simo {:interrupt true
-                                            :dorder :insensitive
-                                            :uorder :insensitive
-                                            :afterup {:set ["window_manipulation_mode" 0]}}} {:set ["window_manipulation_mode" 1]}]]}
-        {:des "Window Manipulation mode -> n (Spectacle move current window to next monitor)" :rules [:window_manipulation_mode [:##n :!TOSCf15]]}
-        {:des "Window Manipulation mode -> e (Spectacle shrink current window)" :rules [:window_manipulation_mode [:##e [:km "hotkey: window_manipulation_mode+e"]]]}
-        {:des "Window Manipulation mode -> r (Spectacle grow current window)" :rules [:window_manipulation_mode [:##r [:km "hotkey: window_manipulation_mode+r"]]]}
-        {:des "Window Manipulation mode -> - (Spectacle shrink vim split vertically)" :rules [:window_manipulation_mode [:##hyphen [:km "hotkey: window_manipulation_mode+hyphen"]]]}
-        {:des "Window Manipulation mode -> = (Spectacle equalize vim splits)" :rules [:window_manipulation_mode [:##equal_sign [:km "hotkey: window_manipulation_mode+equal_sign"]]]}
-        {:des "Window Manipulation mode -> delete (Spectacle grow vim split vertically)" :rules [:window_manipulation_mode [:##equal_sign [:km "hotkey: window_manipulation_mode+equal_sign"]]]}
-        {:des "Window Manipulation mode -> delete (Spectacle grow vim split vertically)" :rules [:window_manipulation_mode [:##delete_or_backspace [:km "hotkey: window_manipulation_mode+delete_or_backspace"]]]}
-        {:des "Window Manipulation mode -> return_or_enter (Spectacle maximize current window)" :rules [:window_manipulation_mode [:##return_or_enter :!TOSCf19]]}
-        {:des "Window Manipulation mode -> caps_lock (Spectacle center current window)" :rules [:window_manipulation_mode [:##backslash :!TOSCf18]]}
-        {:des "Window Manipulation mode -> t (Spectacle resize current window to a third of the screen)" :rules [:window_manipulation_mode [:##t :!TOSCf20]]}
-        {:des "Window Manipulation mode -> h (Spectacle resize current window to left half of the screen)" :rules [:window_manipulation_mode [:##h :!TOSCleft_arrow]]}
-        {:des "Window Manipulation mode -> j (Spectacle resize current window to bottom half of the screen)" :rules [:window_manipulation_mode [:##j :!TOSCdown_arrow]]}
-        {:des "Window Manipulation mode -> k (Spectacle resize current window to upper half of the screen)" :rules [:window_manipulation_mode [:##k :!TOSCup_arrow]]}
-        {:des "Window Manipulation mode -> l (Spectacle resize current window to right half of the screen)" :rules [:window_manipulation_mode [:##l :!TOSCright_arrow]]}
-        {:des "Window Manipulation mode -> i (Spectacle resize current window to upper-left half of the screen)" :rules [:window_manipulation_mode [:##i :!TOSCf11]]}
-        {:des "Window Manipulation mode -> o (Spectacle resize current window to upper-right half of the screen)" :rules [:window_manipulation_mode [:##o :!TOSCf13]]}
-        {:des "Window Manipulation mode -> , (Spectacle resize current window to bottom-left half of the screen)" :rules [:window_manipulation_mode [:##comma :!TOSCf12]]}
-        {:des "Window Manipulation mode -> . (Spectacle resize current window to bottom-right half of the screen)" :rules [:window_manipulation_mode [:##period :!TOSCf14]]}
+       ; {:des "Window Manipulation mode (spacebar+w)" :rules [[{:sim [:w :spacebar]
+       ;                             :simo {:interrupt true
+       ;                                      :dorder :insensitive
+       ;                                      :uorder :insensitive
+       ;                                      :afterup {:set ["window_manipulation_mode" 0]}}} {:set ["window_manipulation_mode" 1]}]]}
+       ;  {:des "Window Manipulation mode -> n (Spectacle move current window to next monitor)" :rules [:window_manipulation_mode [:##n :!TOSCf15]]}
+       ;  {:des "Window Manipulation mode -> e (Spectacle shrink current window)" :rules [:window_manipulation_mode [:##e [:km "hotkey: window_manipulation_mode+e"]]]}
+       ;  {:des "Window Manipulation mode -> r (Spectacle grow current window)" :rules [:window_manipulation_mode [:##r [:km "hotkey: window_manipulation_mode+r"]]]}
+       ;  {:des "Window Manipulation mode -> - (Spectacle shrink vim split vertically)" :rules [:window_manipulation_mode [:##hyphen [:km "hotkey: window_manipulation_mode+hyphen"]]]}
+       ;  {:des "Window Manipulation mode -> = (Spectacle equalize vim splits)" :rules [:window_manipulation_mode [:##equal_sign [:km "hotkey: window_manipulation_mode+equal_sign"]]]}
+       ;  {:des "Window Manipulation mode -> delete (Spectacle grow vim split vertically)" :rules [:window_manipulation_mode [:##equal_sign [:km "hotkey: window_manipulation_mode+equal_sign"]]]}
+       ;  {:des "Window Manipulation mode -> delete (Spectacle grow vim split vertically)" :rules [:window_manipulation_mode [:##delete_or_backspace [:km "hotkey: window_manipulation_mode+delete_or_backspace"]]]}
+       ;  {:des "Window Manipulation mode -> return_or_enter (Spectacle maximize current window)" :rules [:window_manipulation_mode [:##return_or_enter :!TOSCf19]]}
+       ;  {:des "Window Manipulation mode -> caps_lock (Spectacle center current window)" :rules [:window_manipulation_mode [:##backslash :!TOSCf18]]}
+       ;  {:des "Window Manipulation mode -> t (Spectacle resize current window to a third of the screen)" :rules [:window_manipulation_mode [:##t :!TOSCf20]]}
+       ;  {:des "Window Manipulation mode -> h (Spectacle resize current window to left half of the screen)" :rules [:window_manipulation_mode [:##h :!TOSCleft_arrow]]}
+       ;  {:des "Window Manipulation mode -> j (Spectacle resize current window to bottom half of the screen)" :rules [:window_manipulation_mode [:##j :!TOSCdown_arrow]]}
+       ;  {:des "Window Manipulation mode -> k (Spectacle resize current window to upper half of the screen)" :rules [:window_manipulation_mode [:##k :!TOSCup_arrow]]}
+       ;  {:des "Window Manipulation mode -> l (Spectacle resize current window to right half of the screen)" :rules [:window_manipulation_mode [:##l :!TOSCright_arrow]]}
+       ;  {:des "Window Manipulation mode -> i (Spectacle resize current window to upper-left half of the screen)" :rules [:window_manipulation_mode [:##i :!TOSCf11]]}
+       ;  {:des "Window Manipulation mode -> o (Spectacle resize current window to upper-right half of the screen)" :rules [:window_manipulation_mode [:##o :!TOSCf13]]}
+       ;  {:des "Window Manipulation mode -> , (Spectacle resize current window to bottom-left half of the screen)" :rules [:window_manipulation_mode [:##comma :!TOSCf12]]}
+       ;  {:des "Window Manipulation mode -> . (Spectacle resize current window to bottom-right half of the screen)" :rules [:window_manipulation_mode [:##period :!TOSCf14]]}
 
 
-        {:des "Spacebar+Command Mode" :rules [[{:sim [:left_command :spacebar]
-                                     :simo {:interrupt true
-                                            :dorder :insensitive
-                                            :uorder :insensitive
-                                            :afterup {:set ["spacebar_command_mode" 0]}}} {:set ["spacebar_command_mode" 1]}]]}
-        {:des "Spacebar+Command mode j -> " :rules [:spacebar_command_mode [:##j :down_arrow]]}
-        {:des "Spacebar+Command mode k -> " :rules [:spacebar_command_mode [:##k :up_arrow]]}
-        {:des "Spacebar+Command mode h -> " :rules [:spacebar_command_mode [:##h :left_arrow]]}
-        {:des "Spacebar+Command mode l -> " :rules [:spacebar_command_mode [:##l :right_arrow]]}
-        {:des "Spacebar+Command mode caps_lock -> " :rules [:spacebar_command_mode [:##caps_lock :!SCopen_bracket]]}
-        {:des "Spacebar+Command mode g -> " :rules [:spacebar_command_mode [:##g :!OSCopen_bracket]]}
-        {:des "Spacebar+Command mode b -> " :rules [:spacebar_command_mode [:##b :!Oleft_arrow]]}
-        {:des "Spacebar+Command mode w -> " :rules [:spacebar_command_mode [:##w :!Oright_arrow]]}
-        {:des "Spacebar+Command mode e -> " :rules [:spacebar_command_mode [:##e :!Oright_arrow]]}
-        {:des "Spacebar+Command mode i -> " :rules [:spacebar_command_mode [:##i :!Cleft_arrow]]}
-        {:des "Spacebar+Command mode a -> " :rules [:spacebar_command_mode [:##a :!Cright_arrow]]}
-        {:des "Spacebar+Command mode u -> " :rules [:spacebar_command_mode [:##u :!Cz]]}
-        {:des "Spacebar+Command mode r -> " :rules [:spacebar_command_mode [:##r :!CSz]]}
-        {:des "Spacebar+Command mode y -> " :rules [:spacebar_command_mode [:##y :!Cc]]}
-        {:des "Spacebar+Command mode p -> " :rules [:spacebar_command_mode [:##p :!Cv]]}
-
-        {:des "Utilities Mode (u+i)" :rules [[{:sim [:8 :spacebar]
-                                     :simo {:interrupt true
-                                            :dorder :insensitive
-                                            :uorder :insensitive
-                                            :afterup {:set ["utilities_mode" 0]}}} {:set ["utilities_mode" 1]}]]}
-        {:des "Utilities mode n -> Toggle Noizio on/off" :rules [:utilities_mode [:##n :!OCT0]]}
-        {:des "Utilities mode b -> Switch WIFI to BLUESSO" :rules [:utilities_mode [:##b [:km "Wifi -> BLUESSO"]]]}
-        {:des "Utilities mode d -> Switch WIFI to Doxie" :rules [:utilities_mode [:##d [:km "Wifi -> Doxie"]]]}
-        {:des "Utilities mode t -> Switch WIFI to Internet" :rules [:utilities_mode [:##t [:km "Wifi -> Internet"]]]}
-        {:des "Utilities mode w -> Volume Up" :rules [:utilities_mode [:##w :volume_increment]]}
-        {:des "Utilities mode s -> Volume Down" :rules [:utilities_mode [:##s :volume_decrement]]}
-        {:des "Utilities mode x -> Mute" :rules [:utilities_mode [:##x :mute]]}
-        {:des "Utilities mode e -> Brightness Up" :rules [:utilities_mode [:##e :display_brightness_increment]]}
-        {:des "Utilities mode q -> Brightness Down" :rules [:utilities_mode [:##q :display_brightness_decrement]]}
+        ; {:des "Spacebar+Command Mode" :rules [[{:sim [:left_command :spacebar]
+        ;                              :simo {:interrupt true
+        ;                                     :dorder :insensitive
+        ;                                     :uorder :insensitive
+        ;                                     :afterup {:set ["spacebar_command_mode" 0]}}} {:set ["spacebar_command_mode" 1]}]]}
+        ; {:des "Spacebar+Command mode j -> " :rules [:spacebar_command_mode [:##j :down_arrow]]}
+        ; {:des "Spacebar+Command mode k -> " :rules [:spacebar_command_mode [:##k :up_arrow]]}
+        ; {:des "Spacebar+Command mode h -> " :rules [:spacebar_command_mode [:##h :left_arrow]]}
+        ; {:des "Spacebar+Command mode l -> " :rules [:spacebar_command_mode [:##l :right_arrow]]}
+        ; {:des "Spacebar+Command mode caps_lock -> " :rules [:spacebar_command_mode [:##caps_lock :!SCopen_bracket]]}
+        ; {:des "Spacebar+Command mode g -> " :rules [:spacebar_command_mode [:##g :!OSCopen_bracket]]}
+        ; {:des "Spacebar+Command mode b -> " :rules [:spacebar_command_mode [:##b :!Oleft_arrow]]}
+        ; {:des "Spacebar+Command mode w -> " :rules [:spacebar_command_mode [:##w :!Oright_arrow]]}
+        ; {:des "Spacebar+Command mode e -> " :rules [:spacebar_command_mode [:##e :!Oright_arrow]]}
+        ; {:des "Spacebar+Command mode i -> " :rules [:spacebar_command_mode [:##i :!Cleft_arrow]]}
+        ; {:des "Spacebar+Command mode a -> " :rules [:spacebar_command_mode [:##a :!Cright_arrow]]}
+        ; {:des "Spacebar+Command mode u -> " :rules [:spacebar_command_mode [:##u :!Cz]]}
+        ; {:des "Spacebar+Command mode r -> " :rules [:spacebar_command_mode [:##r :!CSz]]}
+        ; {:des "Spacebar+Command mode y -> " :rules [:spacebar_command_mode [:##y :!Cc]]}
+        ; {:des "Spacebar+Command mode p -> " :rules [:spacebar_command_mode [:##p :!Cv]]}
 
         {:des "GO TO Mode (f+g)" :rules [[{:sim [:f :g]
                                      :simo {:interrupt true
                                             :dorder :insensitive
                                             :uorder :insensitive
                                             :afterup {:set ["go_to_mode" 0]}}} {:set ["go_to_mode" 1]}]]}
-        {:des "GO TO mode A -> (Outlook [G]o to [A]rchive)" :rules [:go_to_mode [:##a [:km "hotkey: go_to_mode+a"]]]}
-        {:des "GO TO mode C -> (Omnifocus [G]o to [C]hores)" :rules [:go_to_mode [:##c [:km "hotkey: go_to_mode+c"]]]}
-        {:des "GO TO mode D -> (Fantastical [G]o to [D]ay)" :rules [:go_to_mode [:##d [:km "hotkey: go_to_mode+d"]]]}
-        {:des "GO TO mode O -> (Omnifocus [G]o to f[O]rcast)" :rules [:go_to_mode [:##o [:km "hotkey: go_to_mode+o"]]]}
-        {:des "GO TO mode I -> (Omnifocus [G]o to [I]nbox)" :rules [:go_to_mode [:##i [:km "hotkey: go_to_mode+i"]]]}
-        {:des "GO TO mode J -> (Outlook [G]o to [J]unk)" :rules [:go_to_mode [:##j [:km "hotkey: go_to_mode+j"]]]}
-        {:des "GO TO mode C -> (Omnifocus [G]o to [C]hores)" :rules [:go_to_mode [:##c [:km "hotkey: go_to_mode+c"]]]}
-        {:des "GO TO mode L -> (Omnifocus [G]o to p[L]anning)" :rules [:go_to_mode [:##l [:km "hotkey: go_to_mode+l"]]]}
-        {:des "GO TO mode M -> (Fantastical [G]o to [M]onth)" :rules [:go_to_mode [:##m [:km "hotkey: go_to_mode+m"]]]}
-        {:des "GO TO mode N -> (Omnifocus [G]o to [N]ow)" :rules [:go_to_mode [:##n [:km "hotkey: go_to_mode+n"]]]}
-        {:des "GO TO mode P -> (Omnifocus [G]o to [P]rojects)" :rules [:go_to_mode [:##p [:km "hotkey: go_to_mode+p"]]]}
-        {:des "GO TO mode R -> (Omnifocus [G]o to [R]outines)" :rules [:go_to_mode [:##r [:km "hotkey: go_to_mode+r"]]]}
-        {:des "GO TO mode S -> (Omnifocus [G]o to [S]oon)" :rules [:go_to_mode [:##s [:km "hotkey: go_to_mode+s"]]]}
-        {:des "GO TO mode T -> (Fantastical [G]o to [T]oday)(Omnifocus [G]o to [T]ags" :rules [:go_to_mode [:##t [:km "hotkey: go_to_mode+t"]]]}
-        {:des "GO TO mode W -> (Omnifocus [G]o to [W]ork)(Fantastical [G]o to [W]eek)" :rules [:go_to_mode [:##w [:km "hotkey: go_to_mode+w"]]]}
-        {:des "GO TO mode Y -> (Fantastical [G]o to [Y]ear)" :rules [:go_to_mode [:##y [:km "hotkey: go_to_mode+y"]]]}
+        {:des "GO TO mode A" :rules [:go_to_mode [:##a [:km "hotkey: go_to_mode+a"]]]}
+        {:des "GO TO mode B" :rules [:go_to_mode [:##b [:km "hotkey: go_to_mode+b"]]]}
+        {:des "GO TO mode C" :rules [:go_to_mode [:##c [:km "hotkey: go_to_mode+c"]]]}
+        {:des "GO TO mode D" :rules [:go_to_mode [:##d [:km "hotkey: go_to_mode+d"]]]}
+        {:des "GO TO mode E" :rules [:go_to_mode [:##e [:km "hotkey: go_to_mode+e"]]]}
+        {:des "GO TO mode F" :rules [:go_to_mode [:##f [:km "hotkey: go_to_mode+f"]]]}
+        {:des "GO TO mode G" :rules [:go_to_mode [:##g [:km "hotkey: go_to_mode+g"]]]}
+        {:des "GO TO mode H" :rules [:go_to_mode [:##h [:km "hotkey: go_to_mode+h"]]]}
+        {:des "GO TO mode I" :rules [:go_to_mode [:##i [:km "hotkey: go_to_mode+i"]]]}
+        {:des "GO TO mode J" :rules [:go_to_mode [:##j [:km "hotkey: go_to_mode+j"]]]}
+        {:des "GO TO mode K" :rules [:go_to_mode [:##k [:km "hotkey: go_to_mode+k"]]]}
+        {:des "GO TO mode L" :rules [:go_to_mode [:##l [:km "hotkey: go_to_mode+l"]]]}
+        {:des "GO TO mode M" :rules [:go_to_mode [:##m [:km "hotkey: go_to_mode+m"]]]}
+        {:des "GO TO mode N" :rules [:go_to_mode [:##n [:km "hotkey: go_to_mode+n"]]]}
+        {:des "GO TO mode O" :rules [:go_to_mode [:##o [:km "hotkey: go_to_mode+o"]]]}
+        {:des "GO TO mode P" :rules [:go_to_mode [:##p [:km "hotkey: go_to_mode+p"]]]}
+        {:des "GO TO mode Q" :rules [:go_to_mode [:##q [:km "hotkey: go_to_mode+q"]]]}
+        {:des "GO TO mode R" :rules [:go_to_mode [:##r [:km "hotkey: go_to_mode+r"]]]}
+        {:des "GO TO mode S" :rules [:go_to_mode [:##s [:km "hotkey: go_to_mode+s"]]]}
+        {:des "GO TO mode T" :rules [:go_to_mode [:##t [:km "hotkey: go_to_mode+t"]]]}
+        {:des "GO TO mode U" :rules [:go_to_mode [:##u [:km "hotkey: go_to_mode+u"]]]}
+        {:des "GO TO mode V" :rules [:go_to_mode [:##v [:km "hotkey: go_to_mode+v"]]]}
+        {:des "GO TO mode W" :rules [:go_to_mode [:##w [:km "hotkey: go_to_mode+w"]]]}
+        {:des "GO TO mode X" :rules [:go_to_mode [:##x [:km "hotkey: go_to_mode+x"]]]}
+        {:des "GO TO mode Y" :rules [:go_to_mode [:##y [:km "hotkey: go_to_mode+y"]]]}
+        {:des "GO TO mode Z" :rules [:go_to_mode [:##z [:km "hotkey: go_to_mode+z"]]]}
 
         {:des "CHANGE Mode (x+c)" :rules [[{:sim [:x :c]
                                      :simo {:interrupt true
                                             :dorder :insensitive
                                             :uorder :insensitive
                                             :afterup {:set ["change_mode" 0]}}} {:set ["change_mode" 1]}]]}
-        {:des "CHANGE mode d -> (Omnifocus [C]hange [D]ue date)" :rules [:change_mode [:##d [:km "hotkey: change_mode+d"]]]}
-        {:des "CHANGE mode e -> (Omnifocus [C]hange [E]stimated time)" :rules [:change_mode [:##e [:km "hotkey: change_mode+e"]]]}
-        {:des "CHANGE mode f -> (Omnifocus [C]hange [F]lag )" :rules [:change_mode [:##f [:km "hotkey: change_mode+f"]]]}
-        {:des "CHANGE mode n -> (Omnifocus [C]hange [N]otes)" :rules [:change_mode [:##n [:km "hotkey: change_mode+n"]]]}
-        {:des "CHANGE mode p -> (Omnifocus [C]hange [P]roject)" :rules [:change_mode [:##p [:km "hotkey: change_mode+p"]]]}
-        {:des "CHANGE mode r -> (Omnifocus [C]hange [R]epeat)" :rules [:change_mode [:##r [:km "hotkey: change_mode+r"]]]}
-        {:des "CHANGE mode s -> (Omnifocus [C]hange [S]tart date (defer date))" :rules [:change_mode [:##s [:km "hotkey: change_mode+s"]]]}
-        {:des "CHANGE mode t -> (Omnifocus [C]hange [T]ags)" :rules [:change_mode [:##t [:km "hotkey: change_mode+t"]]]}
+        {:des "CHANGE mode d" :rules [:change_mode [:##d [:km "hotkey: change_mode+d"]]]}
+        {:des "CHANGE mode e" :rules [:change_mode [:##e [:km "hotkey: change_mode+e"]]]}
+        {:des "CHANGE mode f" :rules [:change_mode [:##f [:km "hotkey: change_mode+f"]]]}
+        {:des "CHANGE mode n" :rules [:change_mode [:##n [:km "hotkey: change_mode+n"]]]}
+        {:des "CHANGE mode p" :rules [:change_mode [:##p [:km "hotkey: change_mode+p"]]]}
+        {:des "CHANGE mode r" :rules [:change_mode [:##r [:km "hotkey: change_mode+r"]]]}
+        {:des "CHANGE mode s" :rules [:change_mode [:##s [:km "hotkey: change_mode+s"]]]}
+        {:des "CHANGE mode t" :rules [:change_mode [:##t [:km "hotkey: change_mode+t"]]]}
 
 
         ; {:des "FOCUS Mode (d+f)" :rules [[{:sim [:d :f]
@@ -210,9 +206,12 @@
                                             :dorder :insensitive
                                             :uorder :insensitive
                                             :afterup {:set ["semicolon_mode" 0]}}} {:set ["semicolon_mode" 1]}]]}
-        {:des "Semicolon mode s -> (Global toggle for left sidebar)" :rules [:semicolon_mode [:##s [:km "hotkey: semicolon_mode+s"]]]}
-        {:des "Semicolon mode i -> (Global toggle for right sidebar)" :rules [:semicolon_mode [:##i [:km "hotkey: semicolon_mode+i"]]]}
-
+        {:des "Semicolon mode f -> Volume Up" :rules [:semicolon_mode [:##f [:##f :volume_increment]]]}
+        {:des "Semicolon mode d -> Volume Down" :rules [:semicolon_mode [:##d [:##d :volume_decrement]]]}
+        {:des "Semicolon mode g -> Toggle Noizio on/off" :rules [:semicolon_mode [:##g :!OCT0]]}
+        {:des "Semicolon mode a -> Mute" :rules [:semicolon_mode [:##a :mute]]}
+        {:des "Semicolon mode r -> Brightness Up" :rules [:semicolon_mode [:##r :display_brightness_increment]]}
+        {:des "Semicolon mode e -> Brightness Down" :rules [:semicolon_mode [:##e :display_brightness_decrement]]}
 
   ]
   :simlayer-threshold 150

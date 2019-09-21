@@ -35,17 +35,17 @@ end
 -- local v = Vim:new()
 -- v:start()
 
-vim = hs.loadSpoon('VimMode')
+-- vim = hs.loadSpoon('VimMode')
 
 
-hs.hotkey.bind({'ctrl'}, ';', function()
-  vim:enter()
-end)
+-- hs.hotkey.bind({'ctrl'}, ';', function()
+--   vim:enter()
+-- end)
 
-vim = hs.loadSpoon('VimMode')
-vim:disableForApp('iTerm2')
-vim:enableKeySequence('j', 'k')
-vim:disableForApp('Code')
+-- vim = hs.loadSpoon('VimMode')
+-- vim:disableForApp('iTerm2')
+-- vim:enableKeySequence('j', 'k')
+-- vim:disableForApp('Code')
 
 require('windows')
 require('panes')
