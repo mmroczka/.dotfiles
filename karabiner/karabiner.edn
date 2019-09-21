@@ -44,8 +44,10 @@
          :rules [ [:!Cv nil nil {:alone :!Cv :held [:km "Activate Clipboard History Switcher"] :repeat false :halt true :params{:alone 150 :held 200}} ] ]}
         {:des "Right cmd -> Alfred"
          :rules [[:right_command :right_command nil {:alone :!CTOSspacebar}]]}
-        {:des "Left cmd -> KM: If Exists Trigger Action Menu"
-         :rules [[:left_command :left_command nil {:alone [:km "If Exists Trigger Action Menu"] }]]}
+        {:des "Left option -> KM: If Exists Trigger Action Menu"
+         :rules [[:left_option :left_option nil {:alone [:km "If Exists Trigger Action Menu"]}]]}
+        {:des "Left cmd -> Simulatneously press j and q which triggers VimSpoon naviagtion in Hammerspoon"
+         :rules [[:left_command :left_command nil {:alone [:j :q]}]]}
         {:des "Right option -> Cardhop"
          :rules [[:right_option :right_option nil {:alone :!OCT1}]]}
         {:des "Quit application by pressing ⌘q twice" :rules[ [:!C#Pq [:!Cq ["⌘q" 0]] ["⌘q" 1]]
@@ -53,7 +55,6 @@
         {:des "simultaneous f dl press to Contrl+[" :rules [[[:d :f] :!Topen_bracket]]}
         {:des "Cmd + Esc to go to previous tab" :rules [[:!CSOTa :!CSopen_bracket]]}
         {:des "Cmd + g to go to next tab" :rules [[:!CSOTs :!CSclose_bracket]]}
-        {:des "simultaneous j k press to F19" :rules [[[:j :k] :f19]]} ; toggles navigation commands in KM
 
 
       ; {:des "global C-h to backspace" :rules [ [:!Th :delete_or_backspace nil {:params {:alone 500 :held 500} } ] ] }

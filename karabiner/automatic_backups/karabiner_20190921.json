@@ -135,26 +135,10 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left option -> KM: If Exists Trigger Action Menu",
+        "description" : "Left cmd -> enter naviagtion mode",
         "manipulators" : [ {
           "to_if_alone" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"If Exists Trigger Action Menu\"'"
-          } ],
-          "from" : {
-            "key_code" : "left_option"
-          },
-          "to" : [ {
-            "key_code" : "left_option"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Left cmd -> Simulatneously press j and q which triggers VimSpoon naviagtion in Hammerspoon",
-        "manipulators" : [ {
-          "to_if_alone" : [ {
-            "key_code" : "j"
-          }, {
-            "key_code" : "q"
+            "key_code" : "f1"
           } ],
           "from" : {
             "key_code" : "left_command"
@@ -3169,7 +3153,7 @@
         "key_code" : "f1"
       },
       "to" : {
-        "key_code" : "f1"
+        "consumer_key_code" : "display_brightness_decrement"
       }
     }, {
       "from" : {
