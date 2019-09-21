@@ -27,6 +27,9 @@ if test ! -f "$ANTIGEN"; then
 	curl -L git.io/antigen > antigen.zsh
 fi
 
+# Recursively add all submodules in this folder (add Spoons and separate Vim repo)
+git submodule update --init --recursive
+
 # Set up mac defaults (increase key repeat frequency)
 osascript mac_defaults.scpt
 
