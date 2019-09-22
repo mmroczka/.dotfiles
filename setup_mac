@@ -31,7 +31,7 @@ fi
 git submodule update --init --recursive
 
 # Set up mac defaults (increase key repeat frequency)
-osascript mac_defaults.scpt
+./mac_defaults
 
 printf "\n%s\n"  "${BLUE}Running dotfiles installation.${NORMAL}\n"
 # Symbolically link all dotfiles

@@ -22,6 +22,7 @@
 
 
  :simlayers {:caps_lock-mode {:key :caps_lock}
+             :spacebar_mode {:key :spacebar}
              :semicolon-mode {:key :f24}
              :change_mode {:key :f24}
              :focus_mode {:key :f24}
@@ -33,8 +34,7 @@
              }
  :main [
         {:des "Caps -> Hyper / Esc"
-         :rules [[:condi :!spacebar-mode]
-                 [:##caps_lock :!!CTOleft_shift nil {:alone :escape}]]}
+         :rules [ [:##caps_lock :!!CTOleft_shift nil {:alone :escape}]]}
 
         {:des "FN from UHK" :rules [[:f23 :fn [:uhk-keyboard] ]]} ;* UHK FN as mac fn via UHK hardcoded f24 > fn in KE but only for uhk
 
@@ -57,7 +57,22 @@
         {:des "Cmd + g to go to next tab" :rules [[:!CSOTs :!CSclose_bracket]]}
 
 
+        {:des "spacebar_mode"
+         :rules [:spacebar_mode
+                 [:3 :!CSopen_bracket]
+                 [:4 :!CSclose_bracket]
+                 ]}
+
       ; {:des "global C-h to backspace" :rules [ [:!Th :delete_or_backspace nil {:params {:alone 500 :held 500} } ] ] }
+
+       ; SUPER mode was problematic in the past because it wouldn't register when you'd quickly type words like 'worDS' it'd just type 'wor'
+        ; {:des "Super mode (s+d)" :rules [[{:sim [:s :d]
+        ;                              :simo {:interrupt true
+        ;                                     :dorder :insensitive
+        ;                                     :uorder :insensitive
+        ;                                     :afterup {:set ["super_mode" 0]}}} {:set ["super_mode" 1]}]]}
+        ; {:des "Super mode -> a (Tab Previous)" :rules [:super_mode [:##a :!CSopen_bracket]]}
+        ; {:des "Super mode -> f (Tab Next)" :rules [:super_mode [:##f :!CSclose_bracket]]}
 
         {:des "Launch mode (l+;)" :rules [[{:sim [:l :semicolon]
                                      :simo {:interrupt true
@@ -134,8 +149,8 @@
         ; {:des "Spacebar+Command mode k -> " :rules [:spacebar_command_mode [:##k :up_arrow]]}
         ; {:des "Spacebar+Command mode h -> " :rules [:spacebar_command_mode [:##h :left_arrow]]}
         ; {:des "Spacebar+Command mode l -> " :rules [:spacebar_command_mode [:##l :right_arrow]]}
-        ; {:des "Spacebar+Command mode caps_lock -> " :rules [:spacebar_command_mode [:##caps_lock :!SCopen_bracket]]}
-        ; {:des "Spacebar+Command mode g -> " :rules [:spacebar_command_mode [:##g :!OSCopen_bracket]]}
+        ; {:des "Spacebar+Command mode caps_lock -> " :rules [:spacebar_command_mode [:##4 :!SCopen_bracket]]}
+        ; {:des "Spacebar+Command mode g -> " :rules [:spacebar_command_mode [:##3 :!OSCopen_bracket]]}
         ; {:des "Spacebar+Command mode b -> " :rules [:spacebar_command_mode [:##b :!Oleft_arrow]]}
         ; {:des "Spacebar+Command mode w -> " :rules [:spacebar_command_mode [:##w :!Oright_arrow]]}
         ; {:des "Spacebar+Command mode e -> " :rules [:spacebar_command_mode [:##e :!Oright_arrow]]}
