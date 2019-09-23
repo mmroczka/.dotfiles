@@ -252,40 +252,10 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Cmd + Esc to go to previous tab",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "a",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "open_bracket",
-            "modifiers" : [ "left_command", "left_shift" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Cmd + g to go to next tab",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "s",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "close_bracket",
-            "modifiers" : [ "left_command", "left_shift" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
         "description" : "spacebar_mode",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "3"
+            "key_code" : "4"
           },
           "to" : [ {
             "key_code" : "open_bracket",
@@ -315,7 +285,7 @@
             "simultaneous" : [ {
               "key_code" : "spacebar"
             }, {
-              "key_code" : "3"
+              "key_code" : "4"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,
@@ -332,7 +302,7 @@
           }
         }, {
           "from" : {
-            "key_code" : "4"
+            "key_code" : "5"
           },
           "to" : [ {
             "key_code" : "close_bracket",
@@ -362,7 +332,7 @@
             "simultaneous" : [ {
               "key_code" : "spacebar"
             }, {
-              "key_code" : "4"
+              "key_code" : "5"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,
