@@ -31,16 +31,16 @@ enableHotkeyForWindowsMatchingFilter = function(windowFilter, hotkey)
   end)
 end
 
-Vim = require('vim_bindings')
-local v = Vim:new()
-v:start()
+-- Vim = require('vim_bindings')
+-- local v = Vim:new()
+-- v:start()
 
-vim = hs.loadSpoon('VimMode')
+-- vim = hs.loadSpoon('VimMode')
 
 
-hs.hotkey.bind({'ctrl'}, ';', function()
-  vim:enter()
-end)
+-- hs.hotkey.bind({'ctrl'}, ';', function()
+--   vim:enter()
+-- end)
 
 vim = hs.loadSpoon('VimMode')
 -- vim:disableForApp('iTerm2')
