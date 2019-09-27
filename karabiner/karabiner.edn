@@ -220,8 +220,8 @@
                                             :dorder :insensitive
                                             :uorder :insensitive
                                             :afterup {:set ["semicolon_mode" 0]}}} {:set ["semicolon_mode" 1]}]]}
-        {:des "Semicolon mode f -> Volume Up" :rules [:semicolon_mode [:##f [:##f :volume_increment]]]}
-        {:des "Semicolon mode d -> Volume Down" :rules [:semicolon_mode [:##d [:##d :volume_decrement]]]}
+        {:des "Semicolon mode f -> Volume Up" :rules [:semicolon_mode [:##f :volume_increment]]}
+        {:des "Semicolon mode d -> Volume Down" :rules [:semicolon_mode [:##d :volume_decrement]]}
         {:des "Semicolon mode g -> Toggle Noizio on/off" :rules [:semicolon_mode [:##g :!OCT0]]}
         {:des "Semicolon mode a -> Mute" :rules [:semicolon_mode [:##a :mute]]}
         {:des "Semicolon mode r -> Brightness Up" :rules [:semicolon_mode [:##r :display_brightness_increment]]}
