@@ -23,7 +23,8 @@
 
  :simlayers {:caps_lock-mode {:key :caps_lock}
              :spacebar_mode {:key :spacebar}
-             :semicolon-mode {:key :f24}
+             :semicolon_mode {:key :f24}
+             :programming_mode {:key :period}
              :change_mode {:key :f24}
              :focus_mode {:key :f24}
              :go_to_mode {:key :f24}
@@ -55,11 +56,6 @@
         {:des "simultaneous f dl press to Contrl+[" :rules [[[:d :f] :!Topen_bracket]]}
 
 
-        {:des "spacebar_mode"
-         :rules [:spacebar_mode
-                 [:4 :!CSopen_bracket]
-                 [:5 :!CSclose_bracket]
-                 ]}
 
       ; {:des "global C-h to backspace" :rules [ [:!Th :delete_or_backspace nil {:params {:alone 500 :held 500} } ] ] }
 
@@ -71,6 +67,23 @@
         ;                                     :afterup {:set ["super_mode" 0]}}} {:set ["super_mode" 1]}]]}
         ; {:des "Super mode -> a (Tab Previous)" :rules [:super_mode [:##a :!CSopen_bracket]]}
         ; {:des "Super mode -> f (Tab Next)" :rules [:super_mode [:##f :!CSclose_bracket]]}
+
+        {:des "spacebar_mode"
+         :rules [:spacebar_mode
+                 [:4 :!CSopen_bracket]
+                 [:5 :!CSclose_bracket]
+                 ]}
+
+        {:des "Programming Mode"
+         :rules [:programming_mode
+                 [:c [:km "open: Chrome"]]
+                 [:i [:km "open: iTerm"]]
+                 [:j [:km "open: IntelliJ"]]
+                 [:p [:km "open: Postman"]]
+                 [:t [:km "open: Tower"]]
+                 [:v [:km "open: VS Code"]]
+                 [:z [:km "open: Franz"]]
+                 ]}
 
         {:des "Launch mode (l+;)" :rules [[{:sim [:l :semicolon]
                                      :simo {:interrupt true
@@ -94,6 +107,18 @@
         {:des "Launch mode -> w (Open BitWarden)" :rules [:launch_mode [:##w [:km "open: BitWarden"]]]}
         {:des "Launch mode -> z (Open Franz)" :rules [:launch_mode [:##z [:km "open: Franz"]]]}
         {:des "Launch mode -> caps_lock (Open Franz)" :rules [:launch_mode [:##caps_lock [:km "open: Finder"]]]}
+
+        {:des "Semicolon Mode (;+')(global cross application shortcuts)" :rules [[{:sim [:semicolon :quote]
+                                     :simo {:interrupt true
+                                            :dorder :insensitive
+                                            :uorder :insensitive
+                                            :afterup {:set ["semicolon_mode" 0]}}} {:set ["semicolon_mode" 1]}]]}
+        {:des "Semicolon mode f -> Volume Up" :rules [:semicolon_mode [:##f :volume_increment]]}
+        {:des "Semicolon mode d -> Volume Down" :rules [:semicolon_mode [:##d :volume_decrement]]}
+        {:des "Semicolon mode g -> Toggle Noizio on/off" :rules [:semicolon_mode [:##g :!OCT0]]}
+        {:des "Semicolon mode a -> Mute" :rules [:semicolon_mode [:##a :mute]]}
+        {:des "Semicolon mode r -> Brightness Up" :rules [:semicolon_mode [:##r :display_brightness_increment]]}
+        {:des "Semicolon mode e -> Brightness Down" :rules [:semicolon_mode [:##e :display_brightness_decrement]]}
 
         ; {:des "Window Manipulation mode (wkey)"
         ; ; USES BETTER TOUCH TOOL "OTHER" TRIGGERS TO CHANGE WINDOWS
@@ -214,18 +239,6 @@
         ; {:des "FOCUS mode h -> (Omnifocus/Keyboard Maestro [H] (vim left))" :rules [:focus_mode [:##h [:km "hotkey: focus_mode+h"]]]}
         ; {:des "FOCUS mode j -> (Omnifocus/Keyboard Maestro [J] (vim center))" :rules [:focus_mode [:##j [:km "hotkey: focus_mode+j"]]]}
         ; {:des "FOCUS mode l -> (Omnifocus/Keyboard Maestro [L] (vim right))" :rules [:focus_mode [:##l [:km "hotkey: focus_mode+l"]]]}
-
-        {:des "Semicolon Mode (;+')(global cross application shortcuts)" :rules [[{:sim [:semicolon :quote]
-                                     :simo {:interrupt true
-                                            :dorder :insensitive
-                                            :uorder :insensitive
-                                            :afterup {:set ["semicolon_mode" 0]}}} {:set ["semicolon_mode" 1]}]]}
-        {:des "Semicolon mode f -> Volume Up" :rules [:semicolon_mode [:##f :volume_increment]]}
-        {:des "Semicolon mode d -> Volume Down" :rules [:semicolon_mode [:##d :volume_decrement]]}
-        {:des "Semicolon mode g -> Toggle Noizio on/off" :rules [:semicolon_mode [:##g :!OCT0]]}
-        {:des "Semicolon mode a -> Mute" :rules [:semicolon_mode [:##a :mute]]}
-        {:des "Semicolon mode r -> Brightness Up" :rules [:semicolon_mode [:##r :display_brightness_increment]]}
-        {:des "Semicolon mode e -> Brightness Down" :rules [:semicolon_mode [:##e :display_brightness_decrement]]}
 
   ]
   :simlayer-threshold 150
