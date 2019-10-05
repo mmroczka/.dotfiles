@@ -85,6 +85,11 @@
         {:des "vim mode"
            :rules [:vim_mode
                     [:i [["vim_mode" 0] ["visual_mode" 0]]]
+                    [:w [:!Oright_arrow :right_arrow]]
+                    [:e :!Oright_arrow]
+                    [:b :!Oleft_arrow]
+                    [:x :delete_forward]
+                    [:!Sx :delete_or_backspace]
                     [:h :left_arrow]
                     [:j :down_arrow]
                     [:k :up_arrow]
@@ -95,6 +100,11 @@
         {:des "visual mode"
            :rules [:visual_mode
                     [:i [["vim_mode" 0]["visual_mode" 0]]]
+                    [:w [:!SOright_arrow :!Sright_arrow]]
+                    [:e :!SOright_arrow]
+                    [:b :!SOleft_arrow]
+                    [:x [:delete_forward ["vim_mode" 1]["visual_mode" 0]]]
+                    [:!Sx [:delete_or_backspace ["vim_mode" 1]["visual_mode" 0]]]
                     [:h :!Sleft_arrow]
                     [:j :!Sdown_arrow]
                     [:k :!Sup_arrow]
