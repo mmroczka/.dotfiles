@@ -32,6 +32,7 @@
              :window_manipulation_mode {:key :f24}
              :utilities_mode {:key :f24}
              :spacebar_command_mode {:key :f24}
+             ; :double-right-shift-mode {:key :f24}
              }
  :main [
         {:des "Caps -> Hyper / Esc"
@@ -41,14 +42,16 @@
 
         {:des   "shift+cmd+l types javascript: and hits enter hack" ;; https://superuser.com/a/324267
          :rules [ [:!CSl [:!Cl :j :a :v :a :s :c :r :i :p :t :!Ssemicolon :return_or_enter] :Chromes] ]}
-        {:des "Hold cmd+v for KM clipboard history"
-         :rules [ [:!Cv nil nil {:alone :!Cv :held [:km "Activate Clipboard History Switcher"] :repeat false :halt true :params{:alone 150 :held 200}} ] ]}
+        ; {:des "Hold cmd+v for KM clipboard history"
+        ;  :rules [ [:!Cv nil nil {:alone :!Cv :held [:km "Activate Clipboard History Switcher"] :repeat false :halt true :params{:alone 150 :held 200}} ] ]}
+        {:des "Hold cmd+v for PASTE2 clipboard history"
+         :rules [ [:!Cv nil nil {:alone :!Cv :held :!TSz :repeat false :halt true :params{:alone 150 :held 200}} ] ]}
         {:des "Right cmd -> Alfred"
          :rules [[:right_command :right_command nil {:alone :!CTOSspacebar}]]}
         {:des "Left option -> KM: If Exists Trigger Action Menu"
          :rules [[:left_option :left_option nil {:alone [:km "If Exists Trigger Action Menu"]}]]}
         {:des "Left cmd -> Simulatneously press j and q which triggers VimSpoon naviagtion in Hammerspoon"
-         :rules [[:left_command :left_command nil {:alone [:j :q]}]]}
+         :rules [[:left_command :left_command nil {:alone [["vim_mode" 1] ["visual_mode" 0]]}]]}
         {:des "Right option -> Cardhop"
          :rules [[:right_option :right_option nil {:alone :!OCT1}]]}
         {:des "Quit application by pressing ⌘q twice" :rules[ [:!C#Pq [:!Cq ["⌘q" 0]] ["⌘q" 1]]
@@ -67,6 +70,37 @@
         ;                                     :afterup {:set ["super_mode" 0]}}} {:set ["super_mode" 1]}]]}
         ; {:des "Super mode -> a (Tab Previous)" :rules [:super_mode [:##a :!CSopen_bracket]]}
         ; {:des "Super mode -> f (Tab Next)" :rules [:super_mode [:##f :!CSclose_bracket]]}
+
+        ; {:des   "Press right_shift twice to enter douvle shift mode, press right_shift once to leave it"
+        ;  :rules [[:right_shift ["double-right-shift-mode" 1] ["shift-pressed-once" 1]]
+        ;          [:right_shift [:right_shift ["shift-pressed-once" 1]] ["double-right-shift-mode" 0] {:delayed {:invoked ["shift-pressed-once" 0] :canceled ["shift-pressed-once" 0] } :held [:right_shift]} {:params {:alone 50 :held 200}}]
+        ;          :double-right-shift-mode
+        ;            [:i ["double-right-shift-mode" 0]]
+        ;            [:h :left_arrow]
+        ;            [:j :down_arrow]
+        ;            [:k :up_arrow]
+        ;            [:l :right_arrow]
+        ;            [:a "say 'now we are in double shift mode'"]]}
+
+        {:des "vim mode"
+           :rules [:vim_mode
+                    [:i [["vim_mode" 0] ["visual_mode" 0]]]
+                    [:h :left_arrow]
+                    [:j :down_arrow]
+                    [:k :up_arrow]
+                    [:l :right_arrow]
+                    [:v [["vim_mode" 0] ["visual_mode" 1]]]
+                    ]}
+
+        {:des "visual mode"
+           :rules [:visual_mode
+                    [:i [["vim_mode" 0]["visual_mode" 0]]]
+                    [:h :!Sleft_arrow]
+                    [:j :!Sdown_arrow]
+                    [:k :!Sup_arrow]
+                    [:l :!Sright_arrow]
+                    [:v [["vim_mode" 1] ["visual_mode" 0]]]
+                    ]}
 
         {:des "spacebar_mode"
          :rules [:spacebar_mode
