@@ -86,6 +86,8 @@
            :rules [:vim_mode
                     [:i [["vim_mode" 0] ["visual_mode" 0]]]
                     [:w [:!Oright_arrow :right_arrow]]
+                    [:!Td [:down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow ]]
+                    [:!Tu [:up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow ]]
                     [:e :!Oright_arrow]
                     [:b :!Oleft_arrow]
                     [:o [:!Cright_arrow :return_or_enter]]
