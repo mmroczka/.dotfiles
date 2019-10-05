@@ -88,12 +88,16 @@
                     [:w [:!Oright_arrow :right_arrow]]
                     [:e :!Oright_arrow]
                     [:b :!Oleft_arrow]
+                    [:o [:!Cright_arrow :return_or_enter]]
+                    [:!So [:up_arrow :!Cright_arrow :return_or_enter]]
                     [:x :delete_forward]
                     [:!Sx :delete_or_backspace]
                     [:h :left_arrow]
                     [:j :down_arrow]
                     [:k :up_arrow]
                     [:l :right_arrow]
+                    [:u :!Cz]
+                    [:r :!SCz]
                     [:v [["vim_mode" 0] ["visual_mode" 1]]]
                     ]}
 
