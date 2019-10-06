@@ -76,6 +76,8 @@
 
         {:des "vim mode"
            :rules [:vim_mode
+                    [:!Sa [:!Cright_arrow ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]]
+                    [:!Ra [:!Cright_arrow ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]] ; make sure it works with right shift too
                     [:b :!Oleft_arrow]
                     [:c :!Cc]
                     [:d ["delete_mode" 1]]
@@ -85,11 +87,13 @@
                     [:e :!Oright_arrow]
                     [:h :left_arrow]
                     [:i [["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]]
+                    [:!Si [:!Cleft_arrow ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]]
+                    [:!Ri [:!Cleft_arrow ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]] ; make sure it works with right shift too
                     [:j :down_arrow]
                     [:k :up_arrow]
                     [:l :right_arrow]
-                    [:o [:!Cright_arrow :return_or_enter]] ; add a line above yourself then drop into typing
-                    [:!So [:up_arrow :!Cright_arrow :return_or_enter]] ; add a line below yourself then drop into typing
+                    [:o [:!Cright_arrow :return_or_enter ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]] ; add a line above yourself then drop into typing
+                    [:!So [:up_arrow :!Cright_arrow :return_or_enter ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]] ; add a line below yourself then drop into typing
                     [:p :!Cv]
                     [:!Tr :!SCz]
                     [:u :!Cz]
@@ -105,6 +109,7 @@
                     [:w nil nil {:held :!Oright_arrow :afterup [:!Oright_arrow :right_arrow] :params{:held 150}}]
                     [:x :delete_forward]
                     [:!Sx :delete_or_backspace]
+                    [:!Sy [:!SCright_arrow :!Cc]]
 
                     [:left_arrow :vk_none]
                     [:down_arrow :vk_none]
@@ -119,8 +124,8 @@
                     [:j [:!Sdown_arrow :!SCright_arrow]]
                     [:k [:!Sup_arrow :!SCright_arrow]]
                     [:v [["vim_mode" 0] ["visual_mode" 1] ["visual_block_mode" 0] :!SCOTf18]]
-                    [:x [:delete_forward ["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf20]]
-                    [:!Sx [:delete_or_backspace ["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf20]]
+                    [:x [:delete_forward ["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf19]]
+                    [:!Sx [:delete_or_backspace ["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf19]]
                     [:y [["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!Cc :!SCOTf19]]
                     ]}
 
@@ -142,8 +147,8 @@
                            :!SCright_arrow] ; hold shift and go to very right of the line
                      ]
                     [:w [:!SOright_arrow :!Sright_arrow]]
-                    [:x [:delete_forward ["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf20]]
-                    [:!Sx [:delete_or_backspace ["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf20]]
+                    [:x [:delete_forward ["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf19]]
+                    [:!Sx [:delete_or_backspace ["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf19]]
                     [:y [["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!Cc :!SCOTf19]]
                     ]}
 
