@@ -66,6 +66,7 @@
         {:des "delete mode"
            :rules [:delete_mode
                     [:b [:!SOleft_arrow :delete_or_backspace ["delete_mode" 0]]]
+                    [:d [:!Cleft_arrow :!SCright_arrow :delete_or_backspace ["delete_mode" 0]]]
                     [:e [:!SOright_arrow :delete_or_backspace ["delete_mode" 0]]]
                     [:h [:!Sleft_arrow :delete_or_backspace ["delete_mode" 0]]]
                     [:j [:!Sdown_arrow :delete_or_backspace ["delete_mode" 0]]]
@@ -76,6 +77,9 @@
 
         {:des "vim mode"
            :rules [:vim_mode
+                    [:a :vk_none]
+                    [:!S4 :!Cright_arrow]
+                    [:!S6 :!Cleft_arrow]
                     [:!Sa [:!Cright_arrow ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]]
                     [:!Ra [:!Cright_arrow ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]] ; make sure it works with right shift too
                     [:b :!Oleft_arrow]
@@ -115,7 +119,7 @@
                     [:down_arrow :vk_none]
                     [:up_arrow :vk_none]
                     [:right_arrow :vk_none]
-
+                    [:spacebar :vk_none]
                     ]}
 
         {:des "visual BLOCK mode"
