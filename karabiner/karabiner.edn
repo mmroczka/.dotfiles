@@ -65,7 +65,19 @@
         ; https://github.com/calvinwyoung/.dotfiles/blob/master/darwin/hammerspoon/flux.lua
 
         {:des "Left cmd -> Simulatneously press j and q which triggers VimSpoon naviagtion in Hammerspoon"
-         :rules [[:left_command :left_command nil {:alone [["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0]["delete_mode" 0]:!SCOTf19]}]]}
+         :rules [[:left_command :left_command nil {:alone [["vim_mode" 1]
+                                                           ["visual_mode" 0]
+                                                           ["visual_block_mode" 0]
+                                                           ["delete_mode" 0]
+                                                           ["go_to_mode" 0]
+                                                           :!SCOTf19]}]]}
+
+        {:des "go to mode"
+           :rules [:go_to_mode
+                   [:g [:!Cup_arrow ["go_to_mode" 0]]]
+                   [:!Sg [:!Cdown_arrow ["go_to_mode" 0]]]
+                   [:!Rg [:!Cdown_arrow ["go_to_mode" 0]]]
+                    ]}
 
         {:des "delete mode"
            :rules [:delete_mode
@@ -93,6 +105,9 @@
                     [:!Rd [:!SCright_arrow :delete_or_backspace]] ; make above also work with right shift
                     [:!Td [:down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow ]] ; go down 15 lines
                     [:e :!Oright_arrow]
+                    [:g ["go_to_mode" 1]]
+                    [:!Sg :!Cdown_arrow]
+                    [:!Rg :!Cdown_arrow]
                     [:h :left_arrow]
                     [:i [["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]]
                     [:!Si [:!Cleft_arrow ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]]
