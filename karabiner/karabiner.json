@@ -452,22 +452,9 @@
         "description" : "vim mode",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "a"
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "conditions" : [ {
-            "name" : "vim_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
             "key_code" : "4",
             "modifiers" : {
-              "mandatory" : [ "left_shift" ]
+              "mandatory" : [ "right_shift" ]
             }
           },
           "to" : [ {
@@ -490,6 +477,19 @@
           "to" : [ {
             "key_code" : "left_arrow",
             "modifiers" : [ "left_command" ]
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "a"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
           } ],
           "conditions" : [ {
             "name" : "vim_mode",
@@ -1112,6 +1112,8 @@
           }, {
             "key_code" : "c",
             "modifiers" : [ "left_command" ]
+          }, {
+            "key_code" : "left_arrow"
           } ],
           "conditions" : [ {
             "name" : "vim_mode",
@@ -1380,6 +1382,40 @@
       }, {
         "description" : "visual mode",
         "manipulators" : [ {
+          "from" : {
+            "key_code" : "4",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "6",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "left_arrow",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
           "from" : {
             "key_code" : "b"
           },
