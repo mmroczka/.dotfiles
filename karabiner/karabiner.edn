@@ -85,47 +85,65 @@
         ; SCOTf22 == vimMode dimmer red on
 
         {:des "Left cmd -> Simulatneously press j and q which triggers VimSpoon naviagtion in Hammerspoon"
-         :rules [[:left_command :left_command nil {:alone [["vim_mode" 1] ["visual_mode" 0] :!SCOTf19]}]]}
+         :rules [[:left_command :left_command nil {:alone [["vim_mode" 1] ["visual_mode" 0] ["delete_mode" 0]:!SCOTf19]}]]}
+         ; :rules [ [:!Cv nil nil {:alone :!Cv :held :!TSz :repeat false :halt true :params{:alone 150 :held 200}} ] ]}
+
+        {:des "delete mode"
+           :rules [:delete_mode
+                    [:b [:!SOleft_arrow :delete_or_backspace ["delete_mode" 0]]]
+                    [:e [:!SOright_arrow :delete_or_backspace ["delete_mode" 0]]]
+                    [:h [:!Sleft_arrow :delete_or_backspace ["delete_mode" 0]]]
+                    [:j [:!Sdown_arrow :delete_or_backspace ["delete_mode" 0]]]
+                    [:k [:!Sup_arrow :delete_or_backspace ["delete_mode" 0]]]
+                    [:l [:!Sright_arrow :delete_or_backspace ["delete_mode" 0]]]
+                    [:w [:!SOright_arrow :!Sright_arrow :delete_or_backspace ["delete_mode" 0]]]
+                    ]}
 
         {:des "vim mode"
            :rules [:vim_mode
-                    [:i [["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]]
-                    [:w [:!Oright_arrow :right_arrow]]
-                    [:!Td [:down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow ]]
-                    [:!Tu [:up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow ]]
-                    [:e :!Oright_arrow]
                     [:b :!Oleft_arrow]
-                    [:o [:!Cright_arrow :return_or_enter]]
-                    [:!So [:up_arrow :!Cright_arrow :return_or_enter]]
-                    [:x :delete_forward]
-                    [:!Sx :delete_or_backspace]
+                    [:c :!Cc]
+                    [:d ["delete_mode" 1]]
+                    [:!Td [:down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow ]] ; go down 15 lines
+                    [:e :!Oright_arrow]
                     [:h :left_arrow]
+                    [:i [["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]]
                     [:j :down_arrow]
                     [:k :up_arrow]
+                    [:l :right_arrow]
+                    [:o [:!Cright_arrow :return_or_enter]] ; add a line above yourself then drop into typing
+                    [:!So [:up_arrow :!Cright_arrow :return_or_enter]] ; add a line below yourself then drop into typing
+                    [:p :!Cv]
+                    [:r :!SCz]
+                    [:u :!Cz]
+                    [:!Tu [:up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow ]] ; go up 15 lines
+                    [:v [["vim_mode" 0] ["visual_mode" 1] :!SCOTf18]]
+                    [:w nil nil {:held :!Oright_arrow :afterup [:!Oright_arrow :right_arrow] :params{:held 150}}]
+                    [:x :delete_forward]
+                    [:!Sx :delete_or_backspace]
+
                     [:left_arrow :vk_none]
                     [:down_arrow :vk_none]
                     [:up_arrow :vk_none]
                     [:right_arrow :vk_none]
-                    [:l :right_arrow]
-                    [:u :!Cz]
-                    [:r :!SCz]
-                    [:v [["vim_mode" 0] ["visual_mode" 1] :!SCOTf18]]
+
                     ]}
 
         {:des "visual mode"
            :rules [:visual_mode
-                    [:i [["vim_mode" 0]["visual_mode" 0] :!SCOTf20]]
-                    [:w [:!SOright_arrow :!Sright_arrow]]
-                    [:e :!SOright_arrow]
                     [:b :!SOleft_arrow]
-                    [:x [:delete_forward ["vim_mode" 1]["visual_mode" 0] :!SCOTf20]]
-                    [:!Sx [:delete_or_backspace ["vim_mode" 1]["visual_mode" 0] :!SCOTf20]]
+                    [:e :!SOright_arrow]
                     [:h :!Sleft_arrow]
+                    [:i [["vim_mode" 0]["visual_mode" 0] :!SCOTf20]]
                     [:j :!Sdown_arrow]
                     [:k :!Sup_arrow]
                     [:l :!Sright_arrow]
                     [:v [["vim_mode" 1] ["visual_mode" 0] :!SCOTf19]]
+                    [:w [:!SOright_arrow :!Sright_arrow]]
+                    [:x [:delete_forward ["vim_mode" 1]["visual_mode" 0] :!SCOTf20]]
+                    [:!Sx [:delete_or_backspace ["vim_mode" 1]["visual_mode" 0] :!SCOTf20]]
                     ]}
+
 
         {:des "spacebar_mode"
          :rules [:spacebar_mode
