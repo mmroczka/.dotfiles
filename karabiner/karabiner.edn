@@ -50,8 +50,6 @@
          :rules [[:right_command :right_command nil {:alone :!CTOSspacebar}]]}
         {:des "Left option -> KM: If Exists Trigger Action Menu"
          :rules [[:left_option :left_option nil {:alone [:km "If Exists Trigger Action Menu"]}]]}
-        {:des "Left cmd -> Simulatneously press j and q which triggers VimSpoon naviagtion in Hammerspoon"
-         :rules [[:left_command :left_command nil {:alone [["vim_mode" 1] ["visual_mode" 0]]}]]}
         {:des "Right option -> Cardhop"
          :rules [[:right_option :right_option nil {:alone :!OCT1}]]}
         {:des "Quit application by pressing ⌘q twice" :rules[ [:!C#Pq [:!Cq ["⌘q" 0]] ["⌘q" 1]]
@@ -82,9 +80,16 @@
         ;            [:l :right_arrow]
         ;            [:a "say 'now we are in double shift mode'"]]}
 
+        ; SCOTf20 == vimMode dimmer off
+        ; SCOTf21 == vimMode dimmer blue on
+        ; SCOTf22 == vimMode dimmer red on
+
+        {:des "Left cmd -> Simulatneously press j and q which triggers VimSpoon naviagtion in Hammerspoon"
+         :rules [[:left_command :left_command nil {:alone [["vim_mode" 1] ["visual_mode" 0] :!SCOTf19]}]]}
+
         {:des "vim mode"
            :rules [:vim_mode
-                    [:i [["vim_mode" 0] ["visual_mode" 0]]]
+                    [:i [["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]]
                     [:w [:!Oright_arrow :right_arrow]]
                     [:!Td [:down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow ]]
                     [:!Tu [:up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow ]]
@@ -97,25 +102,29 @@
                     [:h :left_arrow]
                     [:j :down_arrow]
                     [:k :up_arrow]
+                    [:left_arrow :vk_none]
+                    [:down_arrow :vk_none]
+                    [:up_arrow :vk_none]
+                    [:right_arrow :vk_none]
                     [:l :right_arrow]
                     [:u :!Cz]
                     [:r :!SCz]
-                    [:v [["vim_mode" 0] ["visual_mode" 1]]]
+                    [:v [["vim_mode" 0] ["visual_mode" 1] :!SCOTf18]]
                     ]}
 
         {:des "visual mode"
            :rules [:visual_mode
-                    [:i [["vim_mode" 0]["visual_mode" 0]]]
+                    [:i [["vim_mode" 0]["visual_mode" 0] :!SCOTf20]]
                     [:w [:!SOright_arrow :!Sright_arrow]]
                     [:e :!SOright_arrow]
                     [:b :!SOleft_arrow]
-                    [:x [:delete_forward ["vim_mode" 1]["visual_mode" 0]]]
-                    [:!Sx [:delete_or_backspace ["vim_mode" 1]["visual_mode" 0]]]
+                    [:x [:delete_forward ["vim_mode" 1]["visual_mode" 0] :!SCOTf20]]
+                    [:!Sx [:delete_or_backspace ["vim_mode" 1]["visual_mode" 0] :!SCOTf20]]
                     [:h :!Sleft_arrow]
                     [:j :!Sdown_arrow]
                     [:k :!Sup_arrow]
                     [:l :!Sright_arrow]
-                    [:v [["vim_mode" 1] ["visual_mode" 0]]]
+                    [:v [["vim_mode" 1] ["visual_mode" 0] :!SCOTf19]]
                     ]}
 
         {:des "spacebar_mode"

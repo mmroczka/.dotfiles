@@ -1,3 +1,4 @@
+local flux = require "flux"
 local log = hs.logger.new('init.lua', 'debug')
 
 -- Use Control+` to reload Hammerspoon config
@@ -42,11 +43,22 @@ end
 --   vim:enter()
 -- end)
 
-vim = hs.loadSpoon('VimMode')
+-- vim = hs.loadSpoon('VimMode')
 -- vim:disableForApp('iTerm2')
 -- below sequence is actually tied to left command single press through karabiner
-vim:enableKeySequence('j', 'q')
+-- vim:enableKeySequence('j', 'q')
 -- vim:disableForApp('Code')
+local HYPER = {"ctrl", "option", "cmd", "shift"}
+
+local configs = {
+    {HYPER, "f20", flux.restoreScreen},
+	{HYPER, "f19", flux.vimMode},
+	{HYPER, "f18", flux.visualMode}
+}
+
+for i, config in ipairs(configs) do
+	hs.hotkey.bind(table.unpack(config))
+end
 
 require('windows')
 require('panes')
