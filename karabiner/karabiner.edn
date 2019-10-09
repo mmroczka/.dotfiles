@@ -70,6 +70,7 @@
                                                            ["visual_block_mode" 0]
                                                            ["delete_mode" 0]
                                                            ["go_to_mode" 0]
+                                                           ["go_to_visual_mode" 0]
                                                            :!SCOTf19]}]]}
 
         {:des "go to mode"
@@ -91,10 +92,22 @@
                     [:w [:!SOright_arrow :!Sright_arrow :delete_or_backspace ["delete_mode" 0]]]
                     ]}
 
+        {:des "outdent_mode"
+           :rules [:outdent_mode
+                    [:!Scomma [:!SCopen_bracket ["outdent_mode" 0]]]
+                    ]}
+
+        {:des "indent_mode"
+           :rules [:indent_mode
+                    [:!Speriod [:!SCclose_bracket ["indent_mode" 0]]]
+                    ]}
+
         {:des "vim mode"
            :rules [:vim_mode
                     [:!R4 :!Cright_arrow]
                     [:!S6 :!Cleft_arrow]
+                    [:!Scomma ["outdent_mode" 1]]
+                    [:!Speriod ["indent_mode" 1]]
                     [:a :vk_none]
                     [:!Sa [:!Cright_arrow ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]]
                     [:!Ra [:!Cright_arrow ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]] ; make sure it works with right shift too
@@ -113,6 +126,7 @@
                     [:!Si [:!Cleft_arrow ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]]
                     [:!Ri [:!Cleft_arrow ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]] ; make sure it works with right shift too
                     [:j :down_arrow]
+                    [:!Sj [:!Cright_arrow :right_arrow :delete_or_backspace]]
                     [:k :up_arrow]
                     [:l :right_arrow]
                     [:o [:!Cright_arrow :return_or_enter ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]] ; add a line above yourself then drop into typing
@@ -143,6 +157,9 @@
 
         {:des "visual BLOCK mode"
            :rules [:visual_block_mode
+                    [:!Sg :!SCdown_arrow]
+                    [:!Rg :!SCdown_arrow]
+                    [:g [["go_to_visual_mode" 1]]]
                     [:i [["vim_mode" 0] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf20]]
                     [:j [:!Sdown_arrow :!SCright_arrow]]
                     [:k [:!Sup_arrow :!SCright_arrow]]
@@ -152,12 +169,20 @@
                     [:y [["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!Cc :!SCOTf19]]
                     ]}
 
+        {:des "go to visual mode"
+           :rules [:go_to_visual_mode
+                    [:g [:!SCup_arrow ["go_to_visual_mode" 0]]]
+                    ]}
+
         {:des "visual mode"
            :rules [:visual_mode
                     [:!R4 :!SCright_arrow]
                     [:!S6 :!SCleft_arrow]
                     [:b :!SOleft_arrow]
                     [:e :!SOright_arrow]
+                    [:g [["go_to_visual_mode" 1]]]
+                    [:!Sg :!SCdown_arrow]
+                    [:!Rg :!SCdown_arrow]
                     [:h :!Sleft_arrow]
                     [:i [["vim_mode" 0] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf20]]
                     [:j :!Sdown_arrow]

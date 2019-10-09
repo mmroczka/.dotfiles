@@ -265,6 +265,11 @@
               "value" : 0
             }
           }, {
+            "set_variable" : {
+              "name" : "go_to_visual_mode",
+              "value" : 0
+            }
+          }, {
             "key_code" : "f19",
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
@@ -634,6 +639,56 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "outdent_mode",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "comma",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "open_bracket",
+            "modifiers" : [ "left_command", "left_shift" ]
+          }, {
+            "set_variable" : {
+              "name" : "outdent_mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "outdent_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "indent_mode",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "period",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "close_bracket",
+            "modifiers" : [ "left_command", "left_shift" ]
+          }, {
+            "set_variable" : {
+              "name" : "indent_mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "indent_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "vim mode",
         "manipulators" : [ {
           "from" : {
@@ -662,6 +717,44 @@
           "to" : [ {
             "key_code" : "left_arrow",
             "modifiers" : [ "left_command" ]
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "outdent_mode",
+              "value" : 1
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "indent_mode",
+              "value" : 1
+            }
           } ],
           "conditions" : [ {
             "name" : "vim_mode",
@@ -1035,6 +1128,27 @@
           },
           "to" : [ {
             "key_code" : "down_arrow"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_command" ]
+          }, {
+            "key_code" : "right_arrow"
+          }, {
+            "key_code" : "delete_or_backspace"
           } ],
           "conditions" : [ {
             "name" : "vim_mode",
@@ -1426,6 +1540,56 @@
         "description" : "visual BLOCK mode",
         "manipulators" : [ {
           "from" : {
+            "key_code" : "g",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "g",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "g"
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "go_to_visual_mode",
+              "value" : 1
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "i"
           },
           "to" : [ {
@@ -1615,6 +1779,28 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "go to visual mode",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "g"
+          },
+          "to" : [ {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_command", "left_shift" ]
+          }, {
+            "set_variable" : {
+              "name" : "go_to_visual_mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "go_to_visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "visual mode",
         "manipulators" : [ {
           "from" : {
@@ -1671,6 +1857,56 @@
           "to" : [ {
             "key_code" : "right_arrow",
             "modifiers" : [ "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "g"
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "go_to_visual_mode",
+              "value" : 1
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "g",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "g",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_command", "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "visual_mode",
