@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string></string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>ED8CAC4D-AA57-45CD-A9EE-68D9F8213E16</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4E21852D-4AFE-4464-B7C6-D78B42FF4146</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string></string>
+	<key>description</key>
+	<string>Saves and brings up current display settings</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>DisplaySaver</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+
+/usr/local/Cellar/displayplacer/1.2.0/bin/displayplacer "id:84A419E6-690A-16DD-8C22-190B394F6CBA res:2560x1440 hz:60 color_depth:4 scaling:on origin:(0,0) degree:0" "id:9FCF5AD5-636F-7613-E5AA-8656E41884AB res:1680x1050 color_depth:4 scaling:on origin:(0,1440) degree:0" "id:E78A0DED-4A42-1D2A-7E56-C97C8346B91E res:2560x1440 hz:30 color_depth:4 scaling:on origin:(-2560,0) degree:0"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>4E21852D-4AFE-4464-B7C6-D78B42FF4146</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>displaysaver</string>
+				<key>subtext</key>
+				<string>Changes displays to preconfigured resolutions</string>
+				<key>text</key>
+				<string>Display Saver</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>ED8CAC4D-AA57-45CD-A9EE-68D9F8213E16</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>4E21852D-4AFE-4464-B7C6-D78B42FF4146</key>
+		<dict>
+			<key>xpos</key>
+			<integer>410</integer>
+			<key>ypos</key>
+			<integer>275</integer>
+		</dict>
+		<key>ED8CAC4D-AA57-45CD-A9EE-68D9F8213E16</key>
+		<dict>
+			<key>xpos</key>
+			<integer>185</integer>
+			<key>ypos</key>
+			<integer>275</integer>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
