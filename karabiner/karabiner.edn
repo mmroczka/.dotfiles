@@ -8,11 +8,14 @@
 				; :macbook-internal [{:product_id 631 :vendor_id 1452}]
 				:uhk-keyboard [{:product_id 24866 :vendor_id 7504}]
 			}
- :applications {:vim-mode-disabled-application ["^com\\.apple\\.Terminal$",
+ :applications {
+                ; you can find these com.* package names using Karabiner Viewer tool installed by default with Karabiner
+                :vim-mode-disabled-application ["^com\\.apple\\.Terminal$",
                                                 "^com\\.googlecode\\.iterm2$",
                                                 "^org\\.vim\\."]
                 :Chromes                       ["^com\\.google\\.Chrome$", "^org\\.chromium\\.Chromium$", "^com\\.google\\.Chrome\\.canary$", "^com\\.brave\\.Browser"]
                 :Terminals                     ["^com\\.apple\\.Terminal$", "^com\\.googlecode\\.iterm2$", "^io\\.alacritty$"]
+                :Omnifocus                     ["^com\\.omnigroup\\.OmniFocus3$"]
                }
  :templates {:alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
              :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"
@@ -153,6 +156,15 @@
                     [:up_arrow :vk_none]
                     [:right_arrow :vk_none]
                     [:spacebar :vk_none]
+
+;                   OMNIFOCUS SPECIFIC
+                    [:!Tj :!CTdown_arrow :Omnifocus]
+                    [:!Tk :!CTup_arrow :Omnifocus]
+                    [:!Th :!CTleft_arrow :Omnifocus]
+                    [:!Tl :!CTright_arrow :Omnifocus]
+                    [:!Tg :!COg :Omnifocus]
+
+
                     ]}
 
         {:des "visual BLOCK mode"
@@ -200,6 +212,14 @@
                     [:x [:delete_forward ["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf19]]
                     [:!Sx [:delete_or_backspace ["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf19]]
                     [:y [["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!Cc :!SCOTf19]]
+
+
+;                   OMNIFOCUS SPECIFIC
+                    [:!Tj :!CTdown_arrow :Omnifocus]
+                    [:!Tk :!CTup_arrow :Omnifocus]
+                    [:!Th :!CTleft_arrow :Omnifocus]
+                    [:!Tl :!CTright_arrow :Omnifocus]
+
                     ]}
 
 

@@ -61,7 +61,7 @@ for i, config in ipairs(configs) do
 end
 
 require('windows')
-require('panes')
+-- require('panes')
 
 -- Bypass programs that won't let you paste into them by grabbing the clipboard's top contents and typing them "manually" with hammerspoon
 hs.hotkey.bind({"cmd", "ctrl"}, "V", function() hs.eventtap.keyStrokes(hs.pasteboard.getContents()) end)

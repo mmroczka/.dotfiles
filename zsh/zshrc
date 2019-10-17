@@ -90,6 +90,7 @@ done
 zle -N delete-surround surround
 zle -N add-surround surround
 zle -N change-surround surround
+bindkey '^r' history-incremental-search-backward
 bindkey -a cs change-surround
 bindkey -a ds delete-surround
 bindkey -a ys add-surround

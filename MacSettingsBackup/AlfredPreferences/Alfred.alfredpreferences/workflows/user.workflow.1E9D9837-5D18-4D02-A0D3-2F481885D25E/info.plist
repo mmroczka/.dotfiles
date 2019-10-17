@@ -8,6 +8,19 @@
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
+		<key>90D47379-3939-467C-8182-4CF02E91CE6B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A287B4A1-85BF-4586-96F4-72C2B38F1617</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>ED8CAC4D-AA57-45CD-A9EE-68D9F8213E16</key>
 		<array>
 			<dict>
@@ -78,6 +91,52 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>displaysaver2</string>
+				<key>subtext</key>
+				<string>Changes displays to preconfigured resolutions</string>
+				<key>text</key>
+				<string>Display Saver</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>90D47379-3939-467C-8182-4CF02E91CE6B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+
+/usr/local/Cellar/displayplacer/1.2.0/bin/displayplacer "id:84A419E6-690A-16DD-8C22-190B394F6CBA res:2560x1440 hz:30 color_depth:4 scaling:on origin:(0,0) degree:0" "id:E78A0DED-4A42-1D2A-7E56-C97C8346B91E res:2560x1440 hz:60 color_depth:4 scaling:on origin:(-2560,0) degree:0"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A287B4A1-85BF-4586-96F4-72C2B38F1617</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -89,6 +148,20 @@
 			<integer>410</integer>
 			<key>ypos</key>
 			<integer>275</integer>
+		</dict>
+		<key>90D47379-3939-467C-8182-4CF02E91CE6B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>190</integer>
+			<key>ypos</key>
+			<integer>455</integer>
+		</dict>
+		<key>A287B4A1-85BF-4586-96F4-72C2B38F1617</key>
+		<dict>
+			<key>xpos</key>
+			<integer>415</integer>
+			<key>ypos</key>
+			<integer>455</integer>
 		</dict>
 		<key>ED8CAC4D-AA57-45CD-A9EE-68D9F8213E16</key>
 		<dict>
