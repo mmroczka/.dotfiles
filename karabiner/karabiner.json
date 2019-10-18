@@ -217,10 +217,10 @@
       }, {
         "description" : "Press spacebar twice to enter vim mode, press i once to leave it",
         "manipulators" : [ {
-          "from" : {
+          "to_if_alone" : [ {
             "key_code" : "spacebar"
-          },
-          "to" : [ {
+          } ],
+          "to_if_held_down" : [ {
             "set_variable" : {
               "name" : "vim_mode",
               "value" : 1
@@ -254,9 +254,16 @@
             "key_code" : "f19",
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
+          "parameters" : {
+            "basic.to_if_alone_timeout_milliseconds" : 150,
+            "basic.to_if_held_down_threshold_milliseconds" : 200
+          },
+          "from" : {
+            "key_code" : "spacebar"
+          },
           "conditions" : [ {
-            "name" : "spacebar_pressed_once",
-            "value" : 1,
+            "name" : "vim_mode",
+            "value" : 0,
             "type" : "variable_if"
           } ],
           "type" : "basic"
