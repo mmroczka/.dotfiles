@@ -58,6 +58,12 @@
         {:des "Quit application by pressing ⌘q twice" :rules[ [:!C#Pq [:!Cq ["⌘q" 0]] ["⌘q" 1]]
 			[:!C#Pq ["⌘q" 1] nil {:delayed {:invoked ["⌘q" 0] :canceled ["⌘q" 0]}}] ]}
 
+        {:des "spacebar_mode"
+         :rules [:spacebar_mode
+                 [:4 :!CSopen_bracket]
+                 [:5 :!CSclose_bracket]
+                 ]}
+
         ; Here I'm trigger hammerspoon's flux module to dim my screen based on the mode I'm in.
         ; SCOTf20 == vimMode dimmer off
         ; SCOTf19 == vimMode dimmer blue on
@@ -107,7 +113,7 @@
         {:des "delete mode"
            :rules [:delete_mode
                     [:b [:!SOleft_arrow :delete_or_backspace ["delete_mode" 0]]]
-                    [:d [:!Cleft_arrow :!SCright_arrow :delete_or_backspace ["delete_mode" 0]]]
+                    [:d [:!Cleft_arrow :!SCright_arrow :delete_or_backspace :delete_forward ["delete_mode" 0]]]
                     [:e [:!SOright_arrow :delete_or_backspace ["delete_mode" 0]]]
                     [:h [:!Sleft_arrow :delete_or_backspace ["delete_mode" 0]]]
                     [:j [:!Sdown_arrow :delete_or_backspace ["delete_mode" 0]]]
@@ -128,6 +134,7 @@
 
         {:des "vim mode"
            :rules [:vim_mode
+                    [:slash [["vim_mode" 0] ["visual_mode" 0] :!SCOTf20 :!Cf]]
                     [:!R4 :!Cright_arrow]
                     [:!S6 :!Cleft_arrow]
                     [:!Scomma ["outdent_mode" 1]]
@@ -151,14 +158,12 @@
                     [:!Ri [:!Cleft_arrow ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]] ; make sure it works with right shift too
                     [:j :down_arrow]
                     [:!Sj [:!Cright_arrow :right_arrow :delete_or_backspace]]
-                    [:!Tj [:!Cleft_arrow :!CSright_arrow :!Cc :delete_or_backspace :delete_or_backspace :down_arrow :!Cright_arrow :return_or_enter :!Cv]]
                     [:k :up_arrow]
-                    [:!Tk [:!Cleft_arrow :!CSright_arrow :!Cc :delete_or_backspace :delete_or_backspace :!Cleft_arrow :return_or_enter :up_arrow :!Cv]]
                     [:l :right_arrow]
                     [:o [:!Cright_arrow :return_or_enter ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]] ; add a line above yourself then drop into typing
                     [:!So [:up_arrow :!Cright_arrow :return_or_enter ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]] ; add a line below yourself then drop into typing
                     [:p :!Cv]
-                    [:!Sp [:return_or_enter :!Cv]]
+                    [:!Sp [:!Cright_arrow :return_or_enter :!Cv]]
                     [:!Tr :!SCz]
                     [:u :!Cz]
                     [:!Tu [:up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow ]] ; go up 15 lines
@@ -174,6 +179,7 @@
                     [:x :delete_forward]
                     [:!Sx :delete_or_backspace]
                     [:!Sy [:!SCright_arrow :!Cc :left_arrow]]
+                    [:y :!Cy]
 
 ;                   OMNIFOCUS SPECIFIC
                     [:!Tj :!CTdown_arrow :Omnifocus]
@@ -194,6 +200,7 @@
 
         {:des "visual BLOCK mode"
            :rules [:visual_block_mode
+                    [:d [["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :delete_forward :delete_forward :!SCOTf19] ]
                     [:!Sg :!SCdown_arrow]
                     [:!Rg :!SCdown_arrow]
                     [:g [["go_to_visual_mode" 1]]]
@@ -202,7 +209,7 @@
                     [:!Ssemicolon [:!Cc ["vim_mode" 0] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf20 [:km "findAndReplaceClipboardContents"]]]
                     [:k nil nil {:held :!Sup_arrow :afterup [:!Sup_arrow :!SCright_arrow] :params{:held 150}}]
                     [:v [["vim_mode" 0] ["visual_mode" 1] ["visual_block_mode" 0] :!SCOTf18]]
-                    [:x [:delete_forward ["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf19]]
+                    [:x [:delete_forward :delete_forward ["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf19]]
                     [:!Sx [:delete_or_backspace ["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf19]]
                     [:y [["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!Cc :!SCOTf19]]
                     ]}
@@ -249,12 +256,6 @@
 
                     ]}
 
-
-        {:des "spacebar_mode"
-         :rules [:spacebar_mode
-                 [:4 :!CSopen_bracket]
-                 [:5 :!CSclose_bracket]
-                 ]}
 
         {:des "Programming Mode"
          :rules [:programming_mode
