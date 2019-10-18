@@ -34,7 +34,6 @@
     "~/Library/Application Support/Code/User/settings.json": vim/vs_code_vim_settings
     "~/Library/Application\ Support/iterm2/Scripts/AutoLaunch/theme.py": iterm2/iterm2_theme.py
     ~/Library/Preferences/com.googlecode.iterm2.plist: iterm2/iterm2_preferences.plist
-    ~/.yarnrc: yarn/yarnrc
     ~/.zshrc: zsh/zshrc
 
 - shell:

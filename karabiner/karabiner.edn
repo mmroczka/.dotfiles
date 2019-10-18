@@ -153,20 +153,21 @@
                     [:!Sx :delete_or_backspace]
                     [:!Sy [:!SCright_arrow :!Cc :left_arrow]]
 
-                    [:left_arrow :vk_none]
-                    [:down_arrow :vk_none]
-                    [:up_arrow :vk_none]
-                    [:right_arrow :vk_none]
-                    [:spacebar :vk_none]
-
 ;                   OMNIFOCUS SPECIFIC
                     [:!Tj :!CTdown_arrow :Omnifocus]
                     [:!Tk :!CTup_arrow :Omnifocus]
                     [:!Th :!CTleft_arrow :Omnifocus]
                     [:!Tl :!CTright_arrow :Omnifocus]
                     [:!Tg :!COg :Omnifocus]
+                    [:spacebar :!COg :Omnifocus {:alone :spacebar :held :!COspacebar :repeat false :halt true :params{:alone 150 :held 200}}]
 
 
+;                   DEAD KEYS (Keys I purposefully want to not work or do anything while in this mode)
+                    [:left_arrow :vk_none]
+                    [:down_arrow :vk_none]
+                    [:up_arrow :vk_none]
+                    [:right_arrow :vk_none]
+                    [:spacebar :vk_none]
                     ]}
 
         {:des "visual BLOCK mode"
