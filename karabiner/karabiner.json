@@ -13,6 +13,24 @@
         "basic.to_if_held_down_threshold_milliseconds" : 300
       },
       "rules" : [ {
+        "description" : "Caps -> Hyper / Esc",
+        "manipulators" : [ {
+          "to_if_alone" : [ {
+            "key_code" : "escape"
+          } ],
+          "from" : {
+            "key_code" : "caps_lock",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "left_shift",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "FN from UHK",
         "manipulators" : [ {
           "from" : {
@@ -197,32 +215,10 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "simultaneous f dl press to Contrl+[",
+        "description" : "Press spacebar twice to enter vim mode, press i once to leave it",
         "manipulators" : [ {
           "from" : {
-            "simultaneous" : [ {
-              "key_code" : "d"
-            }, {
-              "key_code" : "f"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : false,
-              "key_down_order" : "insensitive",
-              "key_up_order" : "insensitive",
-              "key_up_when" : "any"
-            }
-          },
-          "to" : [ {
-            "key_code" : "open_bracket",
-            "modifiers" : [ "left_control" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Press caps_lock twice to enter vim mode, press i once to leave it",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "caps_lock"
+            "key_code" : "spacebar"
           },
           "to" : [ {
             "set_variable" : {
@@ -259,37 +255,37 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "shift-pressed-once",
+            "name" : "spacebar_pressed_once",
             "value" : 1,
             "type" : "variable_if"
           } ],
           "type" : "basic"
         }, {
-          "to_if_alone" : [ {
-            "key_code" : "escape"
+          "to_if_held_down" : [ {
+            "key_code" : "spacebar"
           } ],
           "to_delayed_action" : {
             "to_if_invoked" : [ {
               "set_variable" : {
-                "name" : "shift-pressed-once",
+                "name" : "spacebar_pressed_once",
                 "value" : 0
               }
             } ],
             "to_if_canceled" : [ {
               "set_variable" : {
-                "name" : "shift-pressed-once",
+                "name" : "spacebar_pressed_once",
                 "value" : 0
               }
             } ]
           },
           "from" : {
-            "key_code" : "caps_lock"
+            "key_code" : "spacebar"
           },
           "to" : [ {
-            "key_code" : "caps_lock"
+            "key_code" : "spacebar"
           }, {
             "set_variable" : {
-              "name" : "shift-pressed-once",
+              "name" : "spacebar_pressed_once",
               "value" : 1
             }
           } ],
@@ -1848,6 +1844,43 @@
           }, {
             "key_code" : "right_arrow",
             "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "semicolon",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "c",
+            "modifiers" : [ "left_command" ]
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "key_code" : "f20",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"findAndReplaceClipboardContents\"'"
           } ],
           "conditions" : [ {
             "name" : "visual_block_mode",
