@@ -13,24 +13,6 @@
         "basic.to_if_held_down_threshold_milliseconds" : 300
       },
       "rules" : [ {
-        "description" : "Caps -> Hyper / Esc",
-        "manipulators" : [ {
-          "to_if_alone" : [ {
-            "key_code" : "escape"
-          } ],
-          "from" : {
-            "key_code" : "caps_lock",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "left_shift",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
         "description" : "FN from UHK",
         "manipulators" : [ {
           "from" : {
@@ -237,9 +219,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left cmd -> Simulatneously press j and q which triggers VimSpoon naviagtion in Hammerspoon",
+        "description" : "Press caps_lock twice to enter vim mode, press i once to leave it",
         "manipulators" : [ {
-          "to_if_alone" : [ {
+          "from" : {
+            "key_code" : "caps_lock"
+          },
+          "to" : [ {
             "set_variable" : {
               "name" : "vim_mode",
               "value" : 1
@@ -273,11 +258,45 @@
             "key_code" : "f19",
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
+          "conditions" : [ {
+            "name" : "shift-pressed-once",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_if_alone" : [ {
+            "key_code" : "escape"
+          } ],
+          "to_delayed_action" : {
+            "to_if_invoked" : [ {
+              "set_variable" : {
+                "name" : "shift-pressed-once",
+                "value" : 0
+              }
+            } ],
+            "to_if_canceled" : [ {
+              "set_variable" : {
+                "name" : "shift-pressed-once",
+                "value" : 0
+              }
+            } ]
+          },
           "from" : {
-            "key_code" : "left_command"
+            "key_code" : "caps_lock"
           },
           "to" : [ {
-            "key_code" : "left_command"
+            "key_code" : "caps_lock"
+          }, {
+            "set_variable" : {
+              "name" : "shift-pressed-once",
+              "value" : 1
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 0,
+            "type" : "variable_if"
           } ],
           "type" : "basic"
         } ]

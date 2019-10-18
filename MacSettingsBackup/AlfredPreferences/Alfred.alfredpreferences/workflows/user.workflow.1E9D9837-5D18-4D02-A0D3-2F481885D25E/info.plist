@@ -21,6 +21,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>C0383D67-A2CF-4E51-B146-9F400C1463D1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A287B4A1-85BF-4586-96F4-72C2B38F1617</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>ED8CAC4D-AA57-45CD-A9EE-68D9F8213E16</key>
 		<array>
 			<dict>
@@ -45,6 +58,27 @@
 	<string>DisplaySaver</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>displaysaver3</string>
+				<key>subtext</key>
+				<string>Changes displays to preconfigured resolutions</string>
+				<key>text</key>
+				<string>3 Monitor Display Saver Setting</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>ED8CAC4D-AA57-45CD-A9EE-68D9F8213E16</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -73,48 +107,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>displaysaver</string>
-				<key>subtext</key>
-				<string>Changes displays to preconfigured resolutions</string>
-				<key>text</key>
-				<string>Display Saver</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>ED8CAC4D-AA57-45CD-A9EE-68D9F8213E16</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>displaysaver2</string>
-				<key>subtext</key>
-				<string>Changes displays to preconfigured resolutions</string>
-				<key>text</key>
-				<string>Display Saver</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>90D47379-3939-467C-8182-4CF02E91CE6B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -136,6 +128,48 @@
 			<string>A287B4A1-85BF-4586-96F4-72C2B38F1617</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>displaysaver</string>
+				<key>subtext</key>
+				<string>Changes displays to preconfigured resolutions</string>
+				<key>text</key>
+				<string>2 Monitor Display Saver Settings</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>90D47379-3939-467C-8182-4CF02E91CE6B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>ds</string>
+				<key>subtext</key>
+				<string>Changes displays to preconfigured resolutions</string>
+				<key>text</key>
+				<string>2 Monitor Display Saver Settings</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>C0383D67-A2CF-4E51-B146-9F400C1463D1</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -162,6 +196,13 @@
 			<integer>415</integer>
 			<key>ypos</key>
 			<integer>455</integer>
+		</dict>
+		<key>C0383D67-A2CF-4E51-B146-9F400C1463D1</key>
+		<dict>
+			<key>xpos</key>
+			<integer>195</integer>
+			<key>ypos</key>
+			<integer>585</integer>
 		</dict>
 		<key>ED8CAC4D-AA57-45CD-A9EE-68D9F8213E16</key>
 		<dict>

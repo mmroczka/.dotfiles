@@ -38,8 +38,8 @@
              ; :double-right-shift-mode {:key :f24}
              }
  :main [
-        {:des "Caps -> Hyper / Esc"
-         :rules [ [:##caps_lock :!!CTOleft_shift nil {:alone :escape}]]}
+        ; {:des "Caps -> Hyper / Esc"
+        ;  :rules [ [:##caps_lock :!!CTOleft_shift nil {:alone :escape}]]}
 
         {:des "FN from UHK" :rules [[:f23 :fn [:uhk-keyboard] ]]} ;* UHK FN as mac fn via UHK hardcoded f24 > fn in KE but only for uhk
 
@@ -67,14 +67,37 @@
         ; https://github.com/dbalatero/VimMode.spoon
         ; https://github.com/calvinwyoung/.dotfiles/blob/master/darwin/hammerspoon/flux.lua
 
-        {:des "Left cmd -> Simulatneously press j and q which triggers VimSpoon naviagtion in Hammerspoon"
-         :rules [[:left_command :left_command nil {:alone [["vim_mode" 1]
-                                                           ["visual_mode" 0]
-                                                           ["visual_block_mode" 0]
-                                                           ["delete_mode" 0]
-                                                           ["go_to_mode" 0]
-                                                           ["go_to_visual_mode" 0]
-                                                           :!SCOTf19]}]]}
+        ; {:des "Left cmd -> Simulatneously press j and q which triggers VimSpoon naviagtion in Hammerspoon"
+        ;  :rules [[:left_command :left_command nil {:alone [["vim_mode" 1]
+        ;                                                    ["visual_mode" 0]
+        ;                                                    ["visual_block_mode" 0]
+        ;                                                    ["delete_mode" 0]
+        ;                                                    ["go_to_mode" 0]
+        ;                                                    ["go_to_visual_mode" 0]
+        ;                                                    :!SCOTf19]}]]}
+
+        {:des   "Press caps_lock twice to enter vim mode, press i once to leave it"
+                       :rules [[:caps_lock [["vim_mode" 1]
+                                            ["visual_mode" 0]
+                                            ["visual_block_mode" 0]
+                                            ["delete_mode" 0]
+                                            ["go_to_mode" 0]
+                                            ["go_to_visual_mode" 0]
+                                            :!SCOTf19] ["shift-pressed-once" 1]]
+                               [:caps_lock [:caps_lock ["shift-pressed-once" 1]] ["vim_mode" 0] {:delayed {:invoked ["shift-pressed-once" 0] :canceled ["shift-pressed-once" 0]} :alone :escape}]
+                               ]}
+
+
+        ; {:des   "Press capslock twice to enter vim mode, press i once to leave it"
+;                        :rules [[:caps_lock [["vim_mode" 1]
+        ;                                     ["visual_mode" 0]
+        ;                                     ["visual_block_mode" 0]
+        ;                                     ["delete_mode" 0]
+        ;                                     ["go_to_mode" 0]
+        ;                                     ["go_to_visual_mode" 0]
+        ;                                     :!SCOTf19]                ["caps_lock_pressed_once" 1]]
+;                                [:caps_lock [:caps_lock ["caps_lock_pressed_once" 1]] ["vim_mode" 0] {:delayed {:invoked ["caps_lock_pressed_once" 0] :canceled ["caps_lock_pressed_once" 0]}}]]}
+
 
         {:des "go to mode"
            :rules [:go_to_mode
