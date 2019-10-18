@@ -158,6 +158,7 @@
                     [:o [:!Cright_arrow :return_or_enter ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]] ; add a line above yourself then drop into typing
                     [:!So [:up_arrow :!Cright_arrow :return_or_enter ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]] ; add a line below yourself then drop into typing
                     [:p :!Cv]
+                    [:!Sp [:return_or_enter :!Cv]]
                     [:!Tr :!SCz]
                     [:u :!Cz]
                     [:!Tu [:up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow ]] ; go up 15 lines
@@ -197,9 +198,9 @@
                     [:!Rg :!SCdown_arrow]
                     [:g [["go_to_visual_mode" 1]]]
                     [:i [["vim_mode" 0] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf20]]
-                    [:j [:!Sdown_arrow :!SCright_arrow]]
+                    [:j nil nil {:held :!Sdown_arrow :afterup [:!Sdown_arrow :!SCright_arrow] :params{:held 150}} ]
                     [:!Ssemicolon [:!Cc ["vim_mode" 0] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf20 [:km "findAndReplaceClipboardContents"]]]
-                    [:k [:!Sup_arrow :!SCright_arrow]]
+                    [:k nil nil {:held :!Sup_arrow :afterup [:!Sup_arrow :!SCright_arrow] :params{:held 150}}]
                     [:v [["vim_mode" 0] ["visual_mode" 1] ["visual_block_mode" 0] :!SCOTf18]]
                     [:x [:delete_forward ["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf19]]
                     [:!Sx [:delete_or_backspace ["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf19]]
