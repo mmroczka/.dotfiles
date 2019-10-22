@@ -217,7 +217,7 @@
                     [:x :delete_forward]
                     [:!Sx :delete_or_backspace]
                     [:!Sy [:!SCright_arrow :!Cc :left_arrow]]
-                    [:y :!Cy]
+                    [:y :!Cc]
 
 ;                   OMNIFOCUS SPECIFIC
                     [:!Tj :!CTdown_arrow :Omnifocus]

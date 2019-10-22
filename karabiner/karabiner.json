@@ -3053,7 +3053,7 @@
             "key_code" : "y"
           },
           "to" : [ {
-            "key_code" : "y",
+            "key_code" : "c",
             "modifiers" : [ "left_command" ]
           } ],
           "conditions" : [ {
