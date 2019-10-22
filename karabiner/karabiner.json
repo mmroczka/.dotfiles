@@ -1454,6 +1454,10 @@
             "key_code" : "left_command"
           } ],
           "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
             "name" : "vim_mode",
             "value" : 1,
             "type" : "variable_unless"
@@ -1473,6 +1477,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1486,6 +1494,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1499,6 +1511,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1512,6 +1528,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1525,6 +1545,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1538,6 +1562,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1551,6 +1579,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1564,6 +1596,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1577,6 +1613,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1590,6 +1630,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1603,6 +1647,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1616,6 +1664,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1629,6 +1681,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1645,6 +1701,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1661,6 +1721,30 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "c",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1677,6 +1761,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1693,6 +1781,150 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "g",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "i",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1709,6 +1941,50 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "o",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "p",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1725,6 +2001,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1741,6 +2021,30 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1757,6 +2061,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1773,6 +2081,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1789,6 +2101,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1805,6 +2121,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1821,6 +2141,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1837,6 +2161,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1853,6 +2181,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1869,6 +2201,30 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "c",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1885,6 +2241,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1901,6 +2261,150 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "g",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "i",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1917,6 +2421,50 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "o",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "p",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1933,6 +2481,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1949,6 +2501,30 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1965,6 +2541,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1981,6 +2561,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -1997,6 +2581,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2013,6 +2601,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2029,6 +2621,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2045,6 +2641,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2058,6 +2658,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2071,6 +2675,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2084,6 +2692,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2097,6 +2709,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2110,6 +2726,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2123,6 +2743,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2136,6 +2760,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2149,6 +2777,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2162,6 +2794,507 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "1",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "2",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "3",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "4",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "5",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "6",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "7",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "8",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "9",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "slash",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "1",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "2",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "3",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "4",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "5",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "6",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "7",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "8",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "9",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "slash",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2176,6 +3309,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2190,6 +3327,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2204,6 +3345,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2218,6 +3363,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2232,6 +3381,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2246,6 +3399,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2260,6 +3417,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2274,6 +3435,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2288,6 +3453,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2302,6 +3471,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2316,6 +3489,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2333,6 +3510,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2350,6 +3531,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2364,6 +3549,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2381,6 +3570,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2398,6 +3591,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2419,6 +3616,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2433,6 +3634,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2462,6 +3667,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -2491,6 +3700,10 @@
             "name" : "navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         } ]
@@ -2511,7 +3724,7 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "d"
+            "key_code" : "c"
           },
           "to" : [ {
             "key_code" : "vk_none"
@@ -2524,7 +3737,33 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "e"
+            "key_code" : "f"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "g"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "i"
           },
           "to" : [ {
             "key_code" : "vk_none"
@@ -2538,6 +3777,45 @@
         }, {
           "from" : {
             "key_code" : "m"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "n"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "o"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "p"
           },
           "to" : [ {
             "key_code" : "vk_none"
@@ -2576,6 +3854,32 @@
           "type" : "basic"
         }, {
           "from" : {
+            "key_code" : "s"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "t"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "u"
           },
           "to" : [ {
@@ -2590,19 +3894,6 @@
         }, {
           "from" : {
             "key_code" : "v"
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "conditions" : [ {
-            "name" : "delete_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "w"
           },
           "to" : [ {
             "key_code" : "vk_none"
@@ -2686,6 +3977,22 @@
           "type" : "basic"
         }, {
           "from" : {
+            "key_code" : "c",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "d",
             "modifiers" : {
               "mandatory" : [ "left_shift" ]
@@ -2718,7 +4025,167 @@
           "type" : "basic"
         }, {
           "from" : {
+            "key_code" : "f",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "g",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "i",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "m",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "n",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "o",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "p",
             "modifiers" : {
               "mandatory" : [ "left_shift" ]
             }
@@ -2751,6 +4218,38 @@
         }, {
           "from" : {
             "key_code" : "r",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "t",
             "modifiers" : {
               "mandatory" : [ "left_shift" ]
             }
@@ -2894,6 +4393,22 @@
           "type" : "basic"
         }, {
           "from" : {
+            "key_code" : "c",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "d",
             "modifiers" : {
               "mandatory" : [ "right_shift" ]
@@ -2926,7 +4441,167 @@
           "type" : "basic"
         }, {
           "from" : {
+            "key_code" : "f",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "g",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "i",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "m",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "n",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "o",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "p",
             "modifiers" : {
               "mandatory" : [ "right_shift" ]
             }
@@ -2959,6 +4634,38 @@
         }, {
           "from" : {
             "key_code" : "r",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "t",
             "modifiers" : {
               "mandatory" : [ "right_shift" ]
             }
@@ -3175,6 +4882,429 @@
         }, {
           "from" : {
             "key_code" : "9"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "slash"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "1",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "2",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "3",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "4",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "5",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "6",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "7",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "8",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "9",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "slash",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "1",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "2",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "3",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "4",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "5",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "6",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "7",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "8",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "9",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "slash",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
           },
           "to" : [ {
             "key_code" : "vk_none"
@@ -3365,6 +5495,1163 @@
       }, {
         "description" : "vim mode",
         "manipulators" : [ {
+          "from" : {
+            "key_code" : "a"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "m"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "n"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "q"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "r"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "t"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "z"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "b",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "c",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "e",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "m",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "n",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "q",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "r",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "t",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "w",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "z",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "b",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "c",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "e",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "m",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "n",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "q",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "r",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "t",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "w",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "z",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "1"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "2"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "3"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "4"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "5"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "6"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "7"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "8"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "9"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "1",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "2",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "3",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "4",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "5",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "7",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "8",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "9",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "slash",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "1",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "2",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "3",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "5",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "6",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "7",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "8",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "9",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "slash",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "left_arrow"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "down_arrow"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "up_arrow"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_arrow"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "spacebar"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
           "from" : {
             "key_code" : "left_command"
           },
@@ -3565,19 +6852,6 @@
               "name" : "indent_mode",
               "value" : 1
             }
-          } ],
-          "conditions" : [ {
-            "name" : "vim_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "a"
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
           } ],
           "conditions" : [ {
             "name" : "vim_mode",
@@ -4005,6 +7279,27 @@
           "type" : "basic"
         }, {
           "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_command" ]
+          }, {
+            "key_code" : "right_arrow"
+          }, {
+            "key_code" : "delete_or_backspace"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "k"
           },
           "to" : [ {
@@ -4094,6 +7389,40 @@
           "type" : "basic"
         }, {
           "from" : {
+            "key_code" : "o",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "up_arrow"
+          }, {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_command" ]
+          }, {
+            "key_code" : "return_or_enter"
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "visual_mode",
+              "value" : 0
+            }
+          }, {
+            "key_code" : "f20",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "p"
           },
           "to" : [ {
@@ -4111,6 +7440,28 @@
             "key_code" : "p",
             "modifiers" : {
               "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_command" ]
+          }, {
+            "key_code" : "return_or_enter"
+          }, {
+            "key_code" : "v",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "p",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
             }
           },
           "to" : [ {
@@ -4266,6 +7617,44 @@
           } ],
           "type" : "basic"
         }, {
+          "from" : {
+            "key_code" : "v",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "visual_block_mode",
+              "value" : 1
+            }
+          }, {
+            "key_code" : "f18",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          }, {
+            "key_code" : "left_arrow",
+            "modifiers" : [ "left_command" ]
+          }, {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
           "to_if_held_down" : [ {
             "key_code" : "right_arrow",
             "modifiers" : [ "left_option" ]
@@ -4319,9 +7708,47 @@
           "type" : "basic"
         }, {
           "from" : {
+            "key_code" : "x",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "delete_or_backspace"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "y",
             "modifiers" : {
               "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_command", "left_shift" ]
+          }, {
+            "key_code" : "c",
+            "modifiers" : [ "left_command" ]
+          }, {
+            "key_code" : "left_arrow"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "y",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
             }
           },
           "to" : [ {
@@ -4525,75 +7952,1568 @@
             "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "left_arrow"
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "conditions" : [ {
-            "name" : "vim_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "down_arrow"
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "conditions" : [ {
-            "name" : "vim_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "up_arrow"
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "conditions" : [ {
-            "name" : "vim_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "right_arrow"
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "conditions" : [ {
-            "name" : "vim_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "spacebar"
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "conditions" : [ {
-            "name" : "vim_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
         } ]
       }, {
         "description" : "visual BLOCK mode",
         "manipulators" : [ {
+          "from" : {
+            "key_code" : "a"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "b"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "c"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "e"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "m"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "n"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "o"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "p"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "q"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "r"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "t"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "w"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "z"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "a",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "b",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "c",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "d",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "e",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "i",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "m",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "n",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "o",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "p",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "q",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "r",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "t",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "v",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "w",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "y",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "z",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "a",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "b",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "c",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "d",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "e",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "i",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "m",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "n",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "o",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "p",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "q",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "r",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "t",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "v",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "w",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "x",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "y",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "z",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "1"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "2"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "3"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "4"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "5"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "6"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "7"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "8"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "9"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "slash"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "1",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "2",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "3",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "4",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "5",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "6",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "7",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "8",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "9",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "slash",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "1",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "2",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "3",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "4",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "5",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "6",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "7",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "8",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "9",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "slash",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
           "from" : {
             "key_code" : "d"
           },
@@ -4960,6 +9880,1419 @@
         "description" : "visual mode",
         "manipulators" : [ {
           "from" : {
+            "key_code" : "a"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "c"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "d"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "m"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "n"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "o"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "q"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "r"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "t"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "z"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "a",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "b",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "c",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "d",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "e",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "i",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "m",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "n",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "o",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "p",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "q",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "r",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "t",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "w",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "y",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "z",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "a",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "b",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "c",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "d",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "e",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "i",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "m",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "n",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "o",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "p",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "q",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "r",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "t",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "w",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "y",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "z",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "1"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "2"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "3"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "4"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "5"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "6"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "7"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "8"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "9"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "slash"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "1",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "2",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "3",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "4",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "5",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "7",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "8",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "9",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "slash",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "1",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "2",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "3",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "5",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "6",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "7",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "8",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "9",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "slash",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "4",
             "modifiers" : {
               "mandatory" : [ "right_shift" ]
@@ -5251,6 +11584,44 @@
           "type" : "basic"
         }, {
           "from" : {
+            "key_code" : "v",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "visual_block_mode",
+              "value" : 1
+            }
+          }, {
+            "key_code" : "f18",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          }, {
+            "key_code" : "left_arrow",
+            "modifiers" : [ "left_command" ]
+          }, {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "w"
           },
           "to" : [ {
@@ -5302,6 +11673,40 @@
             "key_code" : "x",
             "modifiers" : {
               "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "delete_or_backspace"
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "key_code" : "f19",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "x",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
             }
           },
           "to" : [ {
