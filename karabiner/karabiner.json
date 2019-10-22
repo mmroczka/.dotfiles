@@ -1420,27 +1420,27 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "visual_block_mode",
+              "name" : "vim_visual_block_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "delete_mode",
+              "name" : "vim_delete_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "go_to_mode",
+              "name" : "vim_go_to_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "go_to_visual_mode",
+              "name" : "vim_go_to_visual_mode",
               "value" : 0
             }
           }, {
@@ -1454,7 +1454,7 @@
             "key_code" : "left_command"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_unless"
           }, {
@@ -1604,7 +1604,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -1621,7 +1621,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -1638,7 +1638,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -1655,7 +1655,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -1672,7 +1672,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -1689,7 +1689,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -1706,7 +1706,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -1723,7 +1723,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -1740,7 +1740,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -1757,7 +1757,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -1774,7 +1774,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -1791,7 +1791,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -1808,7 +1808,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -1828,7 +1828,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -1848,7 +1848,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -1868,7 +1868,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -1888,7 +1888,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -1908,7 +1908,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -1928,7 +1928,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -1948,7 +1948,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -1968,7 +1968,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -1988,7 +1988,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2008,7 +2008,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2028,7 +2028,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2048,7 +2048,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2068,7 +2068,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2088,7 +2088,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2108,7 +2108,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2128,7 +2128,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2148,7 +2148,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2168,7 +2168,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2188,7 +2188,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2208,7 +2208,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2228,7 +2228,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2248,7 +2248,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2268,7 +2268,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2288,7 +2288,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2308,7 +2308,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2328,7 +2328,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2348,7 +2348,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2368,7 +2368,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2388,7 +2388,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2408,7 +2408,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2428,7 +2428,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2448,7 +2448,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2468,7 +2468,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2488,7 +2488,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2508,7 +2508,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2528,7 +2528,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2548,7 +2548,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2568,7 +2568,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2588,7 +2588,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2608,7 +2608,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2628,7 +2628,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2648,7 +2648,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2668,7 +2668,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2688,7 +2688,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2708,7 +2708,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2728,7 +2728,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2748,7 +2748,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2768,7 +2768,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2785,7 +2785,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2802,7 +2802,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2819,7 +2819,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2836,7 +2836,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2853,7 +2853,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2870,7 +2870,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2887,7 +2887,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2904,7 +2904,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2921,7 +2921,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2938,7 +2938,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2958,7 +2958,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2978,7 +2978,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -2998,7 +2998,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3018,7 +3018,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3038,7 +3038,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3058,7 +3058,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3078,7 +3078,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3098,7 +3098,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3118,7 +3118,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3138,7 +3138,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3158,7 +3158,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3178,7 +3178,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3198,7 +3198,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3218,7 +3218,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3238,7 +3238,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3258,7 +3258,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3278,7 +3278,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3298,7 +3298,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3318,7 +3318,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3338,7 +3338,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3358,7 +3358,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3378,7 +3378,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3398,7 +3398,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3418,7 +3418,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3436,7 +3436,7 @@
             "modifiers" : [ "left_command", "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3454,7 +3454,7 @@
             "modifiers" : [ "left_command", "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3472,7 +3472,7 @@
             "modifiers" : [ "left_command", "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3490,7 +3490,7 @@
             "modifiers" : [ "left_command", "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3508,7 +3508,7 @@
             "modifiers" : [ "left_command", "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3526,7 +3526,7 @@
             "modifiers" : [ "left_command", "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3544,7 +3544,7 @@
             "modifiers" : [ "left_command", "left_control" ]
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3562,7 +3562,7 @@
             "modifiers" : [ "left_command", "left_control" ]
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3580,7 +3580,7 @@
             "modifiers" : [ "left_command", "left_control", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3598,7 +3598,7 @@
             "modifiers" : [ "left_command", "left_control", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3616,7 +3616,7 @@
             "modifiers" : [ "left_command", "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3637,7 +3637,7 @@
             "modifiers" : [ "left_command", "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3658,7 +3658,7 @@
             "modifiers" : [ "left_command", "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3676,7 +3676,7 @@
             "modifiers" : [ "left_command", "left_control", "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3697,7 +3697,7 @@
             "modifiers" : [ "left_command", "left_control", "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3718,7 +3718,7 @@
             "modifiers" : [ "left_command", "left_control", "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3743,7 +3743,7 @@
             "modifiers" : [ "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3761,7 +3761,7 @@
             "modifiers" : [ "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3776,7 +3776,7 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "navigation_mode",
+              "name" : "vim_navigation_mode",
               "value" : 0
             }
           }, {
@@ -3786,7 +3786,7 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
@@ -3794,7 +3794,7 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3809,7 +3809,7 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "navigation_mode",
+              "name" : "vim_navigation_mode",
               "value" : 0
             }
           }, {
@@ -3819,7 +3819,7 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
@@ -3827,7 +3827,7 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -3847,7 +3847,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -3860,7 +3860,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -3873,7 +3873,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -3886,7 +3886,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -3899,7 +3899,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -3912,7 +3912,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -3925,7 +3925,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -3938,7 +3938,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -3951,7 +3951,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -3964,7 +3964,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -3977,7 +3977,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -3990,7 +3990,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4003,7 +4003,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4016,7 +4016,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4029,7 +4029,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4042,7 +4042,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4055,7 +4055,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4068,7 +4068,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4084,7 +4084,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4100,7 +4100,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4116,7 +4116,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4132,7 +4132,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4148,7 +4148,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4164,7 +4164,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4180,7 +4180,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4196,7 +4196,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4212,7 +4212,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4228,7 +4228,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4244,7 +4244,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4260,7 +4260,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4276,7 +4276,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4292,7 +4292,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4308,7 +4308,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4324,7 +4324,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4340,7 +4340,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4356,7 +4356,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4372,7 +4372,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4388,7 +4388,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4404,7 +4404,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4420,7 +4420,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4436,7 +4436,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4452,7 +4452,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4468,7 +4468,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4484,7 +4484,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4500,7 +4500,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4516,7 +4516,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4532,7 +4532,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4548,7 +4548,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4564,7 +4564,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4580,7 +4580,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4596,7 +4596,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4612,7 +4612,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4628,7 +4628,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4644,7 +4644,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4660,7 +4660,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4676,7 +4676,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4692,7 +4692,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4708,7 +4708,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4724,7 +4724,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4740,7 +4740,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4756,7 +4756,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4772,7 +4772,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4788,7 +4788,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4804,7 +4804,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4820,7 +4820,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4836,7 +4836,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4852,7 +4852,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4868,7 +4868,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4884,7 +4884,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4900,7 +4900,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4913,7 +4913,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4926,7 +4926,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4939,7 +4939,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4952,7 +4952,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4965,7 +4965,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4978,7 +4978,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -4991,7 +4991,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5004,7 +5004,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5017,7 +5017,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5030,7 +5030,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5043,7 +5043,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5056,7 +5056,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5072,7 +5072,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5088,7 +5088,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5104,7 +5104,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5120,7 +5120,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5136,7 +5136,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5152,7 +5152,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5168,7 +5168,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5184,7 +5184,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5200,7 +5200,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5216,7 +5216,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5232,7 +5232,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5248,7 +5248,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5264,7 +5264,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5280,7 +5280,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5296,7 +5296,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5312,7 +5312,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5328,7 +5328,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5344,7 +5344,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5360,7 +5360,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5376,7 +5376,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5392,7 +5392,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5408,7 +5408,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5424,7 +5424,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5440,7 +5440,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5456,12 +5456,12 @@
             "key_code" : "delete_or_backspace"
           }, {
             "set_variable" : {
-              "name" : "delete_mode",
+              "name" : "vim_delete_mode",
               "value" : 0
             }
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5482,12 +5482,12 @@
             "key_code" : "delete_forward"
           }, {
             "set_variable" : {
-              "name" : "delete_mode",
+              "name" : "vim_delete_mode",
               "value" : 0
             }
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5503,12 +5503,12 @@
             "key_code" : "delete_or_backspace"
           }, {
             "set_variable" : {
-              "name" : "delete_mode",
+              "name" : "vim_delete_mode",
               "value" : 0
             }
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5524,12 +5524,12 @@
             "key_code" : "delete_or_backspace"
           }, {
             "set_variable" : {
-              "name" : "delete_mode",
+              "name" : "vim_delete_mode",
               "value" : 0
             }
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5545,12 +5545,12 @@
             "key_code" : "delete_or_backspace"
           }, {
             "set_variable" : {
-              "name" : "delete_mode",
+              "name" : "vim_delete_mode",
               "value" : 0
             }
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5566,12 +5566,12 @@
             "key_code" : "delete_or_backspace"
           }, {
             "set_variable" : {
-              "name" : "delete_mode",
+              "name" : "vim_delete_mode",
               "value" : 0
             }
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5587,12 +5587,12 @@
             "key_code" : "delete_or_backspace"
           }, {
             "set_variable" : {
-              "name" : "delete_mode",
+              "name" : "vim_delete_mode",
               "value" : 0
             }
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -5611,12 +5611,12 @@
             "key_code" : "delete_or_backspace"
           }, {
             "set_variable" : {
-              "name" : "delete_mode",
+              "name" : "vim_delete_mode",
               "value" : 0
             }
           } ],
           "conditions" : [ {
-            "name" : "delete_mode",
+            "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -6787,7 +6787,7 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "navigation_mode",
+              "name" : "vim_navigation_mode",
               "value" : 1
             }
           }, {
@@ -6797,7 +6797,7 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
@@ -6821,7 +6821,7 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
@@ -6883,7 +6883,7 @@
             "modifiers" : [ "left_command", "left_shift" ]
           }, {
             "set_variable" : {
-              "name" : "outdent_mode",
+              "name" : "vim_outdent_mode",
               "value" : 0
             }
           } ],
@@ -6892,7 +6892,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "name" : "outdent_mode",
+            "name" : "vim_outdent_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -6901,13 +6901,13 @@
           "to_delayed_action" : {
             "to_if_invoked" : [ {
               "set_variable" : {
-                "name" : "outdent_mode",
+                "name" : "vim_outdent_mode",
                 "value" : 0
               }
             } ],
             "to_if_canceled" : [ {
               "set_variable" : {
-                "name" : "outdent_mode",
+                "name" : "vim_outdent_mode",
                 "value" : 0
               }
             } ]
@@ -6920,7 +6920,7 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "outdent_mode",
+              "name" : "vim_outdent_mode",
               "value" : 1
             }
           } ],
@@ -6942,7 +6942,7 @@
             "modifiers" : [ "left_command", "left_shift" ]
           }, {
             "set_variable" : {
-              "name" : "indent_mode",
+              "name" : "vim_indent_mode",
               "value" : 0
             }
           } ],
@@ -6951,7 +6951,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "name" : "indent_mode",
+            "name" : "vim_indent_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -6960,13 +6960,13 @@
           "to_delayed_action" : {
             "to_if_invoked" : [ {
               "set_variable" : {
-                "name" : "indent_mode",
+                "name" : "vim_indent_mode",
                 "value" : 0
               }
             } ],
             "to_if_canceled" : [ {
               "set_variable" : {
-                "name" : "indent_mode",
+                "name" : "vim_indent_mode",
                 "value" : 0
               }
             } ]
@@ -6979,7 +6979,7 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "indent_mode",
+              "name" : "vim_indent_mode",
               "value" : 1
             }
           } ],
@@ -7006,7 +7006,7 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
@@ -7036,7 +7036,7 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
@@ -7069,7 +7069,7 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "delete_mode",
+              "name" : "vim_delete_mode",
               "value" : 1
             }
           } ],
@@ -7184,7 +7184,7 @@
             "modifiers" : [ "left_command" ]
           }, {
             "set_variable" : {
-              "name" : "go_to_mode",
+              "name" : "vim_go_to_mode",
               "value" : 0
             }
           } ],
@@ -7193,7 +7193,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "name" : "go_to_mode",
+            "name" : "vim_go_to_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -7202,13 +7202,13 @@
           "to_delayed_action" : {
             "to_if_invoked" : [ {
               "set_variable" : {
-                "name" : "go_to_mode",
+                "name" : "vim_go_to_mode",
                 "value" : 0
               }
             } ],
             "to_if_canceled" : [ {
               "set_variable" : {
-                "name" : "go_to_mode",
+                "name" : "vim_go_to_mode",
                 "value" : 0
               }
             } ]
@@ -7218,7 +7218,7 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "go_to_mode",
+              "name" : "vim_go_to_mode",
               "value" : 1
             }
           } ],
@@ -7286,7 +7286,7 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
@@ -7316,7 +7316,7 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
@@ -7346,7 +7346,7 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
@@ -7456,7 +7456,7 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
@@ -7490,7 +7490,7 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
@@ -7524,7 +7524,7 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
@@ -7681,7 +7681,7 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 1
             }
           }, {
@@ -7708,12 +7708,12 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "visual_block_mode",
+              "name" : "vim_visual_block_mode",
               "value" : 1
             }
           }, {
@@ -7746,12 +7746,12 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "visual_block_mode",
+              "name" : "vim_visual_block_mode",
               "value" : 1
             }
           }, {
@@ -7897,7 +7897,7 @@
             "modifiers" : [ "left_command" ]
           }, {
             "set_variable" : {
-              "name" : "yank_mode",
+              "name" : "vim_yank_mode",
               "value" : 0
             }
           } ],
@@ -7906,7 +7906,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "name" : "yank_mode",
+            "name" : "vim_yank_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -7915,13 +7915,13 @@
           "to_delayed_action" : {
             "to_if_invoked" : [ {
               "set_variable" : {
-                "name" : "yank_mode",
+                "name" : "vim_yank_mode",
                 "value" : 0
               }
             } ],
             "to_if_canceled" : [ {
               "set_variable" : {
-                "name" : "yank_mode",
+                "name" : "vim_yank_mode",
                 "value" : 0
               }
             } ]
@@ -7934,7 +7934,7 @@
             "modifiers" : [ "left_command" ]
           }, {
             "set_variable" : {
-              "name" : "yank_mode",
+              "name" : "vim_yank_mode",
               "value" : 1
             }
           } ],
@@ -7955,7 +7955,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -7968,7 +7968,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -7981,7 +7981,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -7994,7 +7994,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8007,7 +8007,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8020,7 +8020,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8033,7 +8033,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8046,7 +8046,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8059,7 +8059,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8072,7 +8072,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8085,7 +8085,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8098,7 +8098,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8111,7 +8111,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8124,7 +8124,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8137,7 +8137,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8150,7 +8150,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8163,7 +8163,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8176,7 +8176,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8192,7 +8192,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8208,7 +8208,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8224,7 +8224,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8240,7 +8240,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8256,7 +8256,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8272,7 +8272,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8288,7 +8288,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8304,7 +8304,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8320,7 +8320,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8336,7 +8336,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8352,7 +8352,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8368,7 +8368,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8384,7 +8384,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8400,7 +8400,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8416,7 +8416,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8432,7 +8432,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8448,7 +8448,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8464,7 +8464,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8480,7 +8480,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8496,7 +8496,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8512,7 +8512,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8528,7 +8528,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8544,7 +8544,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8560,7 +8560,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8576,7 +8576,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8592,7 +8592,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8608,7 +8608,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8624,7 +8624,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8640,7 +8640,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8656,7 +8656,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8672,7 +8672,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8688,7 +8688,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8704,7 +8704,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8720,7 +8720,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8736,7 +8736,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8752,7 +8752,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8768,7 +8768,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8784,7 +8784,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8800,7 +8800,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8816,7 +8816,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8832,7 +8832,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8848,7 +8848,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8864,7 +8864,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8880,7 +8880,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8896,7 +8896,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8912,7 +8912,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8928,7 +8928,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8944,7 +8944,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8960,7 +8960,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8973,7 +8973,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8986,7 +8986,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -8999,7 +8999,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9012,7 +9012,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9025,7 +9025,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9038,7 +9038,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9051,7 +9051,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9064,7 +9064,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9077,7 +9077,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9090,7 +9090,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9103,7 +9103,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9116,7 +9116,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9132,7 +9132,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9148,7 +9148,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9164,7 +9164,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9180,7 +9180,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9196,7 +9196,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9212,7 +9212,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9228,7 +9228,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9244,7 +9244,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9260,7 +9260,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9276,7 +9276,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9292,7 +9292,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9308,7 +9308,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9324,7 +9324,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9340,7 +9340,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9356,7 +9356,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9372,7 +9372,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9388,7 +9388,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9404,7 +9404,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9420,7 +9420,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9436,7 +9436,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9452,7 +9452,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9468,7 +9468,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9485,7 +9485,7 @@
             "modifiers" : [ "left_command", "left_shift" ]
           }, {
             "set_variable" : {
-              "name" : "outdent_mode",
+              "name" : "vim_outdent_mode",
               "value" : 0
             }
           }, {
@@ -9495,12 +9495,12 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "visual_block_mode",
+              "name" : "vim_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -9508,11 +9508,11 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "name" : "outdent_mode",
+            "name" : "vim_outdent_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9521,13 +9521,13 @@
           "to_delayed_action" : {
             "to_if_invoked" : [ {
               "set_variable" : {
-                "name" : "outdent_mode",
+                "name" : "vim_outdent_mode",
                 "value" : 0
               }
             } ],
             "to_if_canceled" : [ {
               "set_variable" : {
-                "name" : "outdent_mode",
+                "name" : "vim_outdent_mode",
                 "value" : 0
               }
             } ]
@@ -9540,12 +9540,12 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "outdent_mode",
+              "name" : "vim_outdent_mode",
               "value" : 1
             }
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9562,7 +9562,7 @@
             "modifiers" : [ "left_command", "left_shift" ]
           }, {
             "set_variable" : {
-              "name" : "indent_mode",
+              "name" : "vim_indent_mode",
               "value" : 0
             }
           }, {
@@ -9572,12 +9572,12 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "visual_block_mode",
+              "name" : "vim_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -9585,11 +9585,11 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "name" : "indent_mode",
+            "name" : "vim_indent_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9598,13 +9598,13 @@
           "to_delayed_action" : {
             "to_if_invoked" : [ {
               "set_variable" : {
-                "name" : "indent_mode",
+                "name" : "vim_indent_mode",
                 "value" : 0
               }
             } ],
             "to_if_canceled" : [ {
               "set_variable" : {
-                "name" : "indent_mode",
+                "name" : "vim_indent_mode",
                 "value" : 0
               }
             } ]
@@ -9617,12 +9617,12 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "indent_mode",
+              "name" : "vim_indent_mode",
               "value" : 1
             }
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9638,12 +9638,12 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "visual_block_mode",
+              "name" : "vim_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -9655,7 +9655,7 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9669,16 +9669,16 @@
             "modifiers" : [ "left_command", "left_shift" ]
           }, {
             "set_variable" : {
-              "name" : "go_to_visual_mode",
+              "name" : "vim_go_to_visual_mode",
               "value" : 0
             }
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "name" : "go_to_visual_mode",
+            "name" : "vim_go_to_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9687,13 +9687,13 @@
           "to_delayed_action" : {
             "to_if_invoked" : [ {
               "set_variable" : {
-                "name" : "go_to_visual_mode",
+                "name" : "vim_go_to_visual_mode",
                 "value" : 0
               }
             } ],
             "to_if_canceled" : [ {
               "set_variable" : {
-                "name" : "go_to_visual_mode",
+                "name" : "vim_go_to_visual_mode",
                 "value" : 0
               }
             } ]
@@ -9703,12 +9703,12 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "go_to_visual_mode",
+              "name" : "vim_go_to_visual_mode",
               "value" : 1
             }
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9725,7 +9725,7 @@
             "modifiers" : [ "left_command", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9742,7 +9742,7 @@
             "modifiers" : [ "left_command", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9758,12 +9758,12 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "visual_block_mode",
+              "name" : "vim_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -9771,7 +9771,7 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9795,7 +9795,7 @@
             "key_code" : "j"
           },
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9817,12 +9817,12 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "visual_block_mode",
+              "name" : "vim_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -9832,7 +9832,7 @@
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"findAndReplaceClipboardContents\"'"
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9856,7 +9856,7 @@
             "key_code" : "k"
           },
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9872,12 +9872,12 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 1
             }
           }, {
             "set_variable" : {
-              "name" : "visual_block_mode",
+              "name" : "vim_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -9885,7 +9885,7 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9905,12 +9905,12 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "visual_block_mode",
+              "name" : "vim_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -9918,7 +9918,7 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9939,12 +9939,12 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "visual_block_mode",
+              "name" : "vim_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -9952,7 +9952,7 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -9968,12 +9968,12 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "visual_block_mode",
+              "name" : "vim_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -9984,7 +9984,7 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_block_mode",
+            "name" : "vim_visual_block_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10000,7 +10000,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10013,7 +10013,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10026,7 +10026,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10039,7 +10039,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10052,7 +10052,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10065,7 +10065,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10078,7 +10078,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10091,7 +10091,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10104,7 +10104,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10117,7 +10117,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10130,7 +10130,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10143,7 +10143,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10156,7 +10156,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10172,7 +10172,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10188,7 +10188,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10204,7 +10204,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10220,7 +10220,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10236,7 +10236,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10252,7 +10252,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10268,7 +10268,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10284,7 +10284,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10300,7 +10300,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10316,7 +10316,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10332,7 +10332,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10348,7 +10348,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10364,7 +10364,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10380,7 +10380,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10396,7 +10396,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10412,7 +10412,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10428,7 +10428,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10444,7 +10444,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10460,7 +10460,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10476,7 +10476,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10492,7 +10492,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10508,7 +10508,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10524,7 +10524,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10540,7 +10540,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10556,7 +10556,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10572,7 +10572,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10588,7 +10588,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10604,7 +10604,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10620,7 +10620,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10636,7 +10636,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10652,7 +10652,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10668,7 +10668,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10684,7 +10684,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10700,7 +10700,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10716,7 +10716,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10732,7 +10732,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10748,7 +10748,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10764,7 +10764,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10780,7 +10780,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10796,7 +10796,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10812,7 +10812,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10828,7 +10828,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10844,7 +10844,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10860,7 +10860,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10876,7 +10876,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10892,7 +10892,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10905,7 +10905,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10918,7 +10918,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10931,7 +10931,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10944,7 +10944,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10957,7 +10957,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10970,7 +10970,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10983,7 +10983,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -10996,7 +10996,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11009,7 +11009,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11022,7 +11022,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11035,7 +11035,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11048,7 +11048,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11064,7 +11064,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11080,7 +11080,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11096,7 +11096,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11112,7 +11112,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11128,7 +11128,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11144,7 +11144,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11160,7 +11160,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11176,7 +11176,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11192,7 +11192,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11208,7 +11208,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11224,7 +11224,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11240,7 +11240,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11256,7 +11256,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11272,7 +11272,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11288,7 +11288,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11304,7 +11304,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11320,7 +11320,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11336,7 +11336,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11352,7 +11352,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11368,7 +11368,7 @@
             "key_code" : "vk_none"
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11385,7 +11385,7 @@
             "modifiers" : [ "left_command", "left_shift" ]
           }, {
             "set_variable" : {
-              "name" : "outdent_mode",
+              "name" : "vim_outdent_mode",
               "value" : 0
             }
           }, {
@@ -11395,12 +11395,12 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "visual_block_mode",
+              "name" : "vim_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -11408,11 +11408,11 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "name" : "outdent_mode",
+            "name" : "vim_outdent_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11421,13 +11421,13 @@
           "to_delayed_action" : {
             "to_if_invoked" : [ {
               "set_variable" : {
-                "name" : "outdent_mode",
+                "name" : "vim_outdent_mode",
                 "value" : 0
               }
             } ],
             "to_if_canceled" : [ {
               "set_variable" : {
-                "name" : "outdent_mode",
+                "name" : "vim_outdent_mode",
                 "value" : 0
               }
             } ]
@@ -11440,12 +11440,12 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "outdent_mode",
+              "name" : "vim_outdent_mode",
               "value" : 1
             }
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11462,7 +11462,7 @@
             "modifiers" : [ "left_command", "left_shift" ]
           }, {
             "set_variable" : {
-              "name" : "indent_mode",
+              "name" : "vim_indent_mode",
               "value" : 0
             }
           }, {
@@ -11472,12 +11472,12 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "visual_block_mode",
+              "name" : "vim_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -11485,11 +11485,11 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "name" : "indent_mode",
+            "name" : "vim_indent_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11498,13 +11498,13 @@
           "to_delayed_action" : {
             "to_if_invoked" : [ {
               "set_variable" : {
-                "name" : "indent_mode",
+                "name" : "vim_indent_mode",
                 "value" : 0
               }
             } ],
             "to_if_canceled" : [ {
               "set_variable" : {
-                "name" : "indent_mode",
+                "name" : "vim_indent_mode",
                 "value" : 0
               }
             } ]
@@ -11517,12 +11517,12 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "indent_mode",
+              "name" : "vim_indent_mode",
               "value" : 1
             }
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11539,7 +11539,7 @@
             "modifiers" : [ "left_command", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11556,7 +11556,7 @@
             "modifiers" : [ "left_command", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11570,7 +11570,7 @@
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11584,7 +11584,7 @@
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11595,12 +11595,12 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "go_to_visual_mode",
+              "name" : "vim_go_to_visual_mode",
               "value" : 1
             }
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11617,7 +11617,7 @@
             "modifiers" : [ "left_command", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11634,7 +11634,7 @@
             "modifiers" : [ "left_command", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11648,7 +11648,7 @@
             "modifiers" : [ "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11664,12 +11664,12 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "visual_block_mode",
+              "name" : "vim_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -11677,7 +11677,7 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11691,7 +11691,7 @@
             "modifiers" : [ "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11705,7 +11705,7 @@
             "modifiers" : [ "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11719,7 +11719,7 @@
             "modifiers" : [ "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11738,7 +11738,7 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
@@ -11746,7 +11746,7 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11762,12 +11762,12 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "visual_block_mode",
+              "name" : "vim_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -11775,7 +11775,7 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11794,12 +11794,12 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "visual_block_mode",
+              "name" : "vim_visual_block_mode",
               "value" : 1
             }
           }, {
@@ -11813,7 +11813,7 @@
             "modifiers" : [ "left_command", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11832,12 +11832,12 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "visual_block_mode",
+              "name" : "vim_visual_block_mode",
               "value" : 1
             }
           }, {
@@ -11851,7 +11851,7 @@
             "modifiers" : [ "left_command", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11868,7 +11868,7 @@
             "modifiers" : [ "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11886,12 +11886,12 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "visual_block_mode",
+              "name" : "vim_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -11899,7 +11899,7 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11920,12 +11920,12 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "visual_block_mode",
+              "name" : "vim_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -11933,7 +11933,7 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11954,12 +11954,12 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "visual_block_mode",
+              "name" : "vim_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -11967,7 +11967,7 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -11983,12 +11983,12 @@
             }
           }, {
             "set_variable" : {
-              "name" : "visual_mode",
+              "name" : "vim_visual_mode",
               "value" : 0
             }
           }, {
             "set_variable" : {
-              "name" : "visual_block_mode",
+              "name" : "vim_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -11999,7 +11999,7 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -12016,7 +12016,7 @@
             "modifiers" : [ "left_command", "left_control" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -12036,7 +12036,7 @@
             "modifiers" : [ "left_command", "left_control" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -12056,7 +12056,7 @@
             "modifiers" : [ "left_command", "left_control" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
@@ -12076,7 +12076,7 @@
             "modifiers" : [ "left_command", "left_control" ]
           } ],
           "conditions" : [ {
-            "name" : "visual_mode",
+            "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
