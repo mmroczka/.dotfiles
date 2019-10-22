@@ -22,6 +22,15 @@
              :btt "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"%s\"'"
              }
 
+           ; DEADKEYS
+             ; lowercase deadkeys
+             ; [:a :vk_none] [:b :vk_none] [:c :vk_none] [:d :vk_none] [:e :vk_none] [:m :vk_none] [:q :vk_none] [:r :vk_none] [:u :vk_none] [:v :vk_none] [:w :vk_none] [:x :vk_none] [:y :vk_none] [:z :vk_none]
+             ; uppercase deadkeys with left shift
+             ; [:!Sa :vk_none] [:!Sb :vk_none] [:!Sd :vk_none] [:!Se :vk_none] [:!Sm :vk_none] [:!Sq :vk_none] [:!Sr :vk_none] [:!Su :vk_none] [:!Sv :vk_none] [:!Sw :vk_none] [:!Sx :vk_none] [:!Sy :vk_none] [:!Sz :vk_none]
+             ; uppercase deadkeys with right shift
+             ; [:!Ra :vk_none] [:!Rb :vk_none] [:!Rd :vk_none] [:!Re :vk_none] [:!Rm :vk_none] [:!Rq :vk_none] [:!Rr :vk_none] [:!Ru :vk_none] [:!Rv :vk_none] [:!Rw :vk_none] [:!Rx :vk_none] [:!Ry :vk_none] [:!Rz :vk_none]
+             ; numbers deadkeys
+             ; [:1 :vk_none] [:2 :vk_none] [:3 :vk_none] [:4 :vk_none] [:5 :vk_none] [:6 :vk_none] [:7 :vk_none] [:8 :vk_none] [:9 :vk_none]
 
 
  :simlayers {:caps_lock-mode {:key :caps_lock}
@@ -60,6 +69,7 @@
 
         {:des "spacebar_mode"
          :rules [:spacebar_mode
+                 [:grave_accent_and_tilde :!Cgrave_accent_and_tilde]
                  [:1 [:!COtab :!SCOtab :left_option]]
                  [:2 :!CStab]
                  [:3 :!Ctab]
@@ -112,6 +122,17 @@
 
         {:des "navigation mode"
            :rules [:navigation_mode
+
+                   ; DEADKEYS
+                     ; lowercase deadkeys
+                     [:a :vk_none] [:b :vk_none] [:d :vk_none] [:e :vk_none] [:m :vk_none] [:q :vk_none] [:r :vk_none] [:u :vk_none] [:v :vk_none] [:w :vk_none] [:x :vk_none] [:y :vk_none] [:z :vk_none]
+                     ; uppercase deadkeys with left shift
+                     [:!Sa :vk_none] [:!Sb :vk_none] [:!Sd :vk_none] [:!Se :vk_none] [:!Sm :vk_none] [:!Sq :vk_none] [:!Sr :vk_none] [:!Su :vk_none] [:!Sv :vk_none] [:!Sw :vk_none] [:!Sx :vk_none] [:!Sy :vk_none] [:!Sz :vk_none]
+                     ; uppercase deadkeys with right shift
+                     [:!Ra :vk_none] [:!Rb :vk_none] [:!Rd :vk_none] [:!Re :vk_none] [:!Rm :vk_none] [:!Rq :vk_none] [:!Rr :vk_none] [:!Ru :vk_none] [:!Rv :vk_none] [:!Rw :vk_none] [:!Rx :vk_none] [:!Ry :vk_none] [:!Rz :vk_none]
+                     ; numbers deadkeys
+                     [:1 :vk_none] [:2 :vk_none] [:3 :vk_none] [:4 :vk_none] [:5 :vk_none] [:6 :vk_none] [:7 :vk_none] [:8 :vk_none] [:9 :vk_none]
+
                    [:c :!COc] ; center
                    [:f :!COf] ; fullscreen
 
@@ -142,6 +163,16 @@
 
         {:des "delete mode"
            :rules [:delete_mode
+                    ; DEADKEYS
+                      ; lowercase deadkeys
+                      [:a :vk_none] [:d :vk_none] [:e :vk_none] [:m :vk_none] [:q :vk_none] [:r :vk_none] [:u :vk_none] [:v :vk_none] [:w :vk_none] [:x :vk_none] [:y :vk_none] [:z :vk_none]
+                      ; uppercase deadkeys with left shift
+                      [:!Sa :vk_none] [:!Sb :vk_none] [:!Sd :vk_none] [:!Se :vk_none] [:!Sm :vk_none] [:!Sq :vk_none] [:!Sr :vk_none] [:!Su :vk_none] [:!Sv :vk_none] [:!Sw :vk_none] [:!Sx :vk_none] [:!Sy :vk_none] [:!Sz :vk_none]
+                      ; uppercase deadkeys with right shift
+                      [:!Ra :vk_none] [:!Rb :vk_none] [:!Rd :vk_none] [:!Re :vk_none] [:!Rm :vk_none] [:!Rq :vk_none] [:!Rr :vk_none] [:!Ru :vk_none] [:!Rv :vk_none] [:!Rw :vk_none] [:!Rx :vk_none] [:!Ry :vk_none] [:!Rz :vk_none]
+                      ; numbers deadkeys
+                      [:1 :vk_none] [:2 :vk_none] [:3 :vk_none] [:4 :vk_none] [:5 :vk_none] [:6 :vk_none] [:7 :vk_none] [:8 :vk_none] [:9 :vk_none]
+
                     [:b [:!SOleft_arrow :delete_or_backspace ["delete_mode" 0]]]
                     [:d [:!Cleft_arrow :!SCright_arrow :delete_or_backspace :delete_forward ["delete_mode" 0]]]
                     [:e [:!SOright_arrow :delete_or_backspace ["delete_mode" 0]]]
