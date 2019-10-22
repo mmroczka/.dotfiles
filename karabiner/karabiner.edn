@@ -98,24 +98,15 @@
         ; https://github.com/dbalatero/VimMode.spoon
         ; https://github.com/calvinwyoung/.dotfiles/blob/master/darwin/hammerspoon/flux.lua
 
-
-        {:des   "Press spacebar twice to enter vim mode, press i once to leave it"
-                       :rules [[:spacebar nil ["vim_mode" 0] {:alone :spacebar
-                                                              :held [
-                                                                     ["vim_mode" 1]
-                                                                     ["visual_mode" 0]
-                                                                     ["visual_block_mode" 0]
-                                                                     ["delete_mode" 0]
-                                                                     ["go_to_mode" 0]
-                                                                     ["go_to_visual_mode" 0]
-                                                                     :!SCOTf19
-                                                                     ]
-                                                                     :repeat false :halt true
-                                                              :params{:alone 100 :held 150}}]
-                               [:spacebar [:spacebar ["spacebar_pressed_once" 1]] ["vim_mode" 0] {:delayed {:invoked ["spacebar_pressed_once" 0] :canceled ["spacebar_pressed_once" 0]} :held :spacebar :repeat false :halt true }]
-                               ]}
-
-
+      {:des "Left cmd -> Simulatneously press j and q which triggers VimSpoon naviagtion in Hammerspoon"
+               :rules [:!vim_mode
+                       [:left_command :left_command nil {:alone [["vim_mode" 1]
+                                                                 ["visual_mode" 0]
+                                                                 ["visual_block_mode" 0]
+                                                                 ["delete_mode" 0]
+                                                                 ["go_to_mode" 0]
+                                                                 ["go_to_visual_mode" 0]
+                                                                 :!SCOTf19]}]]}
 
 
         {:des "go to mode"
@@ -152,8 +143,8 @@
                    [:s :!SOTleft_arrow] ; shrink
 
                    [:i [["navigation_mode" 0] ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]]
-                   ; [:left_command [["navigation_mode" 1] ["vim_mode" 0] ["visual_mode" 0] :!SCOTf19]]
-                    ]}
+                   [:left_command [["navigation_mode" 1] ["vim_mode" 0] ["visual_mode" 0] :!SCOTf19]]
+                  ]}
 
         {:des "delete mode"
            :rules [:delete_mode

@@ -1364,12 +1364,9 @@
           }
         } ]
       }, {
-        "description" : "Press spacebar twice to enter vim mode, press i once to leave it",
+        "description" : "Left cmd -> Simulatneously press j and q which triggers VimSpoon naviagtion in Hammerspoon",
         "manipulators" : [ {
           "to_if_alone" : [ {
-            "key_code" : "spacebar"
-          } ],
-          "to_if_held_down" : [ {
             "set_variable" : {
               "name" : "vim_mode",
               "value" : 1
@@ -1403,52 +1400,16 @@
             "key_code" : "f19",
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
-          "parameters" : {
-            "basic.to_if_alone_timeout_milliseconds" : 100,
-            "basic.to_if_held_down_threshold_milliseconds" : 150
-          },
           "from" : {
-            "key_code" : "spacebar"
-          },
-          "conditions" : [ {
-            "name" : "vim_mode",
-            "value" : 0,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "to_if_held_down" : [ {
-            "key_code" : "spacebar"
-          } ],
-          "to_delayed_action" : {
-            "to_if_invoked" : [ {
-              "set_variable" : {
-                "name" : "spacebar_pressed_once",
-                "value" : 0
-              }
-            } ],
-            "to_if_canceled" : [ {
-              "set_variable" : {
-                "name" : "spacebar_pressed_once",
-                "value" : 0
-              }
-            } ]
-          },
-          "from" : {
-            "key_code" : "spacebar"
+            "key_code" : "left_command"
           },
           "to" : [ {
-            "key_code" : "spacebar"
-          }, {
-            "set_variable" : {
-              "name" : "spacebar_pressed_once",
-              "value" : 1
-            }
+            "key_code" : "left_command"
           } ],
           "conditions" : [ {
             "name" : "vim_mode",
-            "value" : 0,
-            "type" : "variable_if"
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         } ]
@@ -1926,6 +1887,35 @@
             }
           }, {
             "key_code" : "f20",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "left_command"
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "navigation_mode",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "visual_mode",
+              "value" : 0
+            }
+          }, {
+            "key_code" : "f19",
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
