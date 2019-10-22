@@ -2074,6 +2074,46 @@
             }
           },
           "to" : [ {
+            "key_code" : "close_bracket",
+            "modifiers" : [ "left_command", "left_shift" ]
+          }, {
+            "set_variable" : {
+              "name" : "outdent_mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "outdent_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_delayed_action" : {
+            "to_if_invoked" : [ {
+              "set_variable" : {
+                "name" : "outdent_mode",
+                "value" : 0
+              }
+            } ],
+            "to_if_canceled" : [ {
+              "set_variable" : {
+                "name" : "outdent_mode",
+                "value" : 0
+              }
+            } ]
+          },
+          "from" : {
+            "key_code" : "comma",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
             "set_variable" : {
               "name" : "outdent_mode",
               "value" : 1
@@ -2086,6 +2126,46 @@
           } ],
           "type" : "basic"
         }, {
+          "from" : {
+            "key_code" : "period",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "close_bracket",
+            "modifiers" : [ "left_command", "left_shift" ]
+          }, {
+            "set_variable" : {
+              "name" : "indent_mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "indent_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_delayed_action" : {
+            "to_if_invoked" : [ {
+              "set_variable" : {
+                "name" : "indent_mode",
+                "value" : 0
+              }
+            } ],
+            "to_if_canceled" : [ {
+              "set_variable" : {
+                "name" : "indent_mode",
+                "value" : 0
+              }
+            } ]
+          },
           "from" : {
             "key_code" : "period",
             "modifiers" : {

@@ -168,8 +168,12 @@
                     [:slash [["vim_mode" 0] ["visual_mode" 0] :!SCOTf20 :!Cf]]
                     [:!R4 :!Cright_arrow]
                     [:!S6 :!Cleft_arrow]
-                    [:!Scomma ["outdent_mode" 1]]
-                    [:!Speriod ["indent_mode" 1]]
+
+                    [:!Scomma [:!SCclose_bracket  ["outdent_mode" 0]] ["outdent_mode" 1]]  ; double > to outdent line or at least trigger SHIFT+CMD+[
+                    [:!Scomma ["outdent_mode" 1] nil {:delayed {:invoked ["outdent_mode" 0] :canceled ["outdent_mode" 0]}}]
+                    [:!Speriod [:!SCclose_bracket  ["indent_mode" 0]] ["indent_mode" 1]]  ; double > to indent line or at least trigger SHIFT+CMD+]
+                    [:!Speriod ["indent_mode" 1] nil {:delayed {:invoked ["indent_mode" 0] :canceled ["indent_mode" 0]}}]
+
                     [:a :vk_none]
                     [:!Sa [:!Cright_arrow ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]]
                     [:!Ra [:!Cright_arrow ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]] ; make sure it works with right shift too
