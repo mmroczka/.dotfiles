@@ -110,13 +110,6 @@
                                                                  :!SCOTf19]}]]}
 
 
-        {:des "go to mode"
-           :rules [:go_to_mode
-                   [:g [:!Cup_arrow ["go_to_mode" 0] ["vim_mode" 1]]]
-                   [:!Sg [:!Cdown_arrow ["go_to_mode" 0] ["vim_mode" 1]]]
-                   [:!Rg [:!Cdown_arrow ["go_to_mode" 0] ["vim_mode" 1]]]
-                    ]}
-
         {:des "navigation mode"
            :rules [:navigation_mode
                    [:c :!COc] ; center
@@ -187,7 +180,10 @@
                     [:!Rd [:!SCright_arrow :delete_or_backspace]] ; make above also work with right shift
                     [:!Td [:down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow ]] ; go down 15 lines
                     [:e :!Oright_arrow]
-                    [:g ["go_to_mode" 1] ["vim_mode" 0]]
+
+                    [:g [:!Cup_arrow ["go_to_mode" 0]] ["go_to_mode" 1]]  ; double tap g to jump to the top of the file
+                    [:g ["go_to_mode" 1] nil {:delayed {:invoked ["go_to_mode" 0] :canceled ["go_to_mode" 0]}}]
+
                     [:!Sg :!Cdown_arrow]
                     [:!Rg :!Cdown_arrow]
                     [:h :left_arrow]
@@ -217,7 +213,9 @@
                     [:x :delete_forward]
                     [:!Sx :delete_or_backspace]
                     [:!Sy [:!SCright_arrow :!Cc :left_arrow]]
-                    [:y :!Cc]
+
+                    [:y [:!Cleft_arrow :!CSright_arrow :!Cc ["yank_mode" 0]] ["yank_mode" 1]]  ; double tap y to copy the current line
+                    [:y [:!Cc ["yank_mode" 1]] nil {:delayed {:invoked ["yank_mode" 0] :canceled ["yank_mode" 0]}}] ; tap y once for CMD+C
 
 ;                   OMNIFOCUS SPECIFIC
                     [:!Tj :!CTdown_arrow :Omnifocus]
