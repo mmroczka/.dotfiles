@@ -3163,9 +3163,6 @@
           } ],
           "type" : "basic"
         }, {
-          "to_if_alone" : [ {
-            "key_code" : "spacebar"
-          } ],
           "to_if_held_down" : [ {
             "key_code" : "spacebar",
             "modifiers" : [ "left_command", "left_option" ]
@@ -3178,8 +3175,7 @@
             "key_code" : "spacebar"
           },
           "to" : [ {
-            "key_code" : "g",
-            "modifiers" : [ "left_command", "left_option" ]
+            "key_code" : "spacebar"
           } ],
           "conditions" : [ {
             "name" : "vim_mode",

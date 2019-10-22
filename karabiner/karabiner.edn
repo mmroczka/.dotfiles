@@ -225,7 +225,7 @@
                     [:!Th :!CTleft_arrow :Omnifocus]
                     [:!Tl :!CTright_arrow :Omnifocus]
                     [:!Tg :!COg :Omnifocus]
-                    [:spacebar :!COg :Omnifocus {:alone :spacebar :held :!COspacebar :repeat false :halt true :params{:alone 150 :held 200}}]
+                    [:spacebar :spacebar :Omnifocus {:held :!COspacebar :repeat false :halt true :params{:alone 150 :held 200}}]
 
 
 ;                   DEAD KEYS (Keys I purposefully want to not work or do anything while in this mode)
