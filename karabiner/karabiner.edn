@@ -152,16 +152,6 @@
                     [:w [:!SOright_arrow :!Sright_arrow :delete_or_backspace ["delete_mode" 0]]]
                     ]}
 
-        {:des "outdent_mode"
-           :rules [:outdent_mode
-                    [:!Scomma [:!SCopen_bracket ["outdent_mode" 0]]]
-                    ]}
-
-        {:des "indent_mode"
-           :rules [:indent_mode
-                    [:!Speriod [:!SCclose_bracket ["indent_mode" 0]]]
-                    ]}
-
         {:des "vim mode"
            :rules [:vim_mode
                     [:left_command [["navigation_mode" 1] ["vim_mode" 0] ["visual_mode" 0] :!SCOTf17]]
@@ -241,9 +231,10 @@
         {:des "visual BLOCK mode"
            :rules [:visual_block_mode
                     [:d [["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :delete_forward :delete_forward :!SCOTf19] ]
+                    [:g [:!SCup_arrow ["go_to_visual_mode" 0]] ["go_to_visual_mode" 1]]  ; double tap g to jump to top of file
+                    [:g ["go_to_visual_mode" 1] nil {:delayed {:invoked ["go_to_visual_mode" 0] :canceled ["go_to_visual_mode" 0]}}]
                     [:!Sg :!SCdown_arrow]
                     [:!Rg :!SCdown_arrow]
-                    [:g [["go_to_visual_mode" 1]]]
                     [:i [["vim_mode" 0] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf20]]
                     [:j nil nil {:held :!Sdown_arrow :afterup [:!Sdown_arrow :!SCright_arrow] :params{:held 150}} ]
                     [:!Ssemicolon [:!Cc ["vim_mode" 0] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf20 [:km "findAndReplaceClipboardContents"]]]
@@ -254,10 +245,6 @@
                     [:y [["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!Cc :!SCOTf19]]
                     ]}
 
-        {:des "go to visual mode"
-           :rules [:go_to_visual_mode
-                    [:g [:!SCup_arrow ["go_to_visual_mode" 0]]]
-                    ]}
 
         {:des "visual mode"
            :rules [:visual_mode
