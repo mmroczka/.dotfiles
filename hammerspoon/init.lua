@@ -53,7 +53,8 @@ local HYPER = {"ctrl", "option", "cmd", "shift"}
 local configs = {
     {HYPER, "f20", flux.restoreScreen},
 	{HYPER, "f19", flux.vimMode},
-	{HYPER, "f18", flux.visualMode}
+	{HYPER, "f18", flux.visualMode},
+	{HYPER, "f17", flux.navigationMode}
 }
 
 for i, config in ipairs(configs) do

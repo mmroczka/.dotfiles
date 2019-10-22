@@ -125,7 +125,7 @@ function flux.increaseLevel()
     end
 end
 
--- Vim Mode - blue color
+-- VIM MODE - BLUE COLOR
 function flux.vimMode()
 	whiteShift = {
 		alpha = 1.0,
@@ -140,13 +140,11 @@ function flux.vimMode()
 		green = 0,
 		blue = 0,
 	}
-    -- for i, screen in ipairs(hs.screen.allScreens()) do
-    --     screen:setGamma(whiteShift, blackShift)
-    -- end
+
 	for i,v in ipairs(hs.screen.allScreens()) do v:setGamma(whiteShift, blackShift) end
 end
 
--- Visual Mode - red color
+-- VISUAL MODE - RED COLOR
 function flux.visualMode()
 	whiteShift = {
 		alpha = 1.0,
@@ -162,9 +160,25 @@ function flux.visualMode()
 		blue = 0,
 	}
 
-    -- for i, screen in ipairs(hs.screen.allScreens()) do
-    --     screen:setGamma(whiteShift, blackShift)
-    -- end
+	for i,v in ipairs(hs.screen.allScreens()) do v:setGamma(whiteShift, blackShift) end
+end
+
+-- VISUAL MODE - GREEN COLOR
+function flux.navigationMode()
+	whiteShift = {
+		alpha = 1.0,
+		red = 0.639,
+		green = 0.924,
+		blue = 0.65201559,
+	}
+
+	blackShift = {
+		alpha = 1.0,
+		red = 0,
+		green = 0,
+		blue = 0,
+	}
+
 	for i,v in ipairs(hs.screen.allScreens()) do v:setGamma(whiteShift, blackShift) end
 end
 

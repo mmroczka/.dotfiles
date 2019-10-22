@@ -92,8 +92,9 @@
 
         ; Here I'm trigger hammerspoon's flux module to dim my screen based on the mode I'm in.
         ; SCOTf20 == vimMode dimmer off
-        ; SCOTf19 == vimMode dimmer blue on
-        ; SCOTf18 == vimMode dimmer red on
+        ; SCOTf19 == vimMode dimmer (vim mode) blue on
+        ; SCOTf18 == vimMode dimmer red (visual mode) on
+        ; SCOTf17 == vimMode dimmer green (navigation mode) on
         ; This is possible through the brilliant work of these folks:
         ; https://github.com/dbalatero/VimMode.spoon
         ; https://github.com/calvinwyoung/.dotfiles/blob/master/darwin/hammerspoon/flux.lua
@@ -111,9 +112,9 @@
 
         {:des "go to mode"
            :rules [:go_to_mode
-                   [:g [:!Cup_arrow ["go_to_mode" 0]]]
-                   [:!Sg [:!Cdown_arrow ["go_to_mode" 0]]]
-                   [:!Rg [:!Cdown_arrow ["go_to_mode" 0]]]
+                   [:g [:!Cup_arrow ["go_to_mode" 0] ["vim_mode" 1]]]
+                   [:!Sg [:!Cdown_arrow ["go_to_mode" 0] ["vim_mode" 1]]]
+                   [:!Rg [:!Cdown_arrow ["go_to_mode" 0] ["vim_mode" 1]]]
                     ]}
 
         {:des "navigation mode"
@@ -143,7 +144,7 @@
                    [:s :!SOTleft_arrow] ; shrink
 
                    [:i [["navigation_mode" 0] ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]]
-                   [:left_command [["navigation_mode" 1] ["vim_mode" 0] ["visual_mode" 0] :!SCOTf19]]
+                   [:left_command [["navigation_mode" 0] ["vim_mode" 1] ["visual_mode" 0] :!SCOTf19]]
                   ]}
 
         {:des "delete mode"
@@ -170,7 +171,7 @@
 
         {:des "vim mode"
            :rules [:vim_mode
-                    [:left_command [["navigation_mode" 1] ["vim_mode" 0] ["visual_mode" 0]]]
+                    [:left_command [["navigation_mode" 1] ["vim_mode" 0] ["visual_mode" 0] :!SCOTf17]]
                     [:slash [["vim_mode" 0] ["visual_mode" 0] :!SCOTf20 :!Cf]]
                     [:!R4 :!Cright_arrow]
                     [:!S6 :!Cleft_arrow]
@@ -186,7 +187,7 @@
                     [:!Rd [:!SCright_arrow :delete_or_backspace]] ; make above also work with right shift
                     [:!Td [:down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow ]] ; go down 15 lines
                     [:e :!Oright_arrow]
-                    [:g ["go_to_mode" 1]]
+                    [:g ["go_to_mode" 1] ["vim_mode" 0]]
                     [:!Sg :!Cdown_arrow]
                     [:!Rg :!Cdown_arrow]
                     [:h :left_arrow]
@@ -317,70 +318,6 @@
         {:des "Semicolon mode r -> Brightness Up" :rules [:semicolon_mode [:##r :display_brightness_increment]]}
         {:des "Semicolon mode e -> Brightness Down" :rules [:semicolon_mode [:##e :display_brightness_decrement]]}
 
-        ; {:des "Window Manipulation mode (wkey)"
-        ; ; USES BETTER TOUCH TOOL "OTHER" TRIGGERS TO CHANGE WINDOWS
-        ;   :rules [:w-mode
-        ;          [:n [:btt "Maximize Window to Next Monitor"]]
-        ;          [:e [:btt "Smaller On Left"]]
-        ;          [:r [:btt "Smaller On Right"]]
-        ;          [:return_or_enter [:btt "Maximize Window"]]
-        ;          [:h [:btt "Maximize Window Left"]]
-        ;          [:j [:btt "Maximize Window to Bottom Half"]]
-        ;          [:k [:btt "Maximize Window to Top Half"]]
-        ;          [:l [:btt "Maximize Window Right"]]
-        ;          [:u [:btt "Resize Window to Top Left Quarter / Corner"]]
-        ;          [:i [:btt "Resize Window to Top Right Quarter / Corner"]]
-        ;          [:m [:btt "Resize Window to Bottom Left Quarter / Corner"]]
-        ;          [:comma [:btt "Resize Window to Bottom Right Quarter / Corner"]]
-        ;          ]}
-
-;         USES SPECTACLE TO CHANGE WINDOWS
-       ; {:des "Window Manipulation mode (spacebar+w)" :rules [[{:sim [:w :spacebar]
-       ;                             :simo {:interrupt true
-       ;                                      :dorder :insensitive
-       ;                                      :uorder :insensitive
-       ;                                      :afterup {:set ["window_manipulation_mode" 0]}}} {:set ["window_manipulation_mode" 1]}]]}
-       ;  {:des "Window Manipulation mode -> n (Spectacle move current window to next monitor)" :rules [:window_manipulation_mode [:##n :!TOSCf15]]}
-       ;  {:des "Window Manipulation mode -> e (Spectacle shrink current window)" :rules [:window_manipulation_mode [:##e [:km "hotkey: window_manipulation_mode+e"]]]}
-       ;  {:des "Window Manipulation mode -> r (Spectacle grow current window)" :rules [:window_manipulation_mode [:##r [:km "hotkey: window_manipulation_mode+r"]]]}
-       ;  {:des "Window Manipulation mode -> - (Spectacle shrink vim split vertically)" :rules [:window_manipulation_mode [:##hyphen [:km "hotkey: window_manipulation_mode+hyphen"]]]}
-       ;  {:des "Window Manipulation mode -> = (Spectacle equalize vim splits)" :rules [:window_manipulation_mode [:##equal_sign [:km "hotkey: window_manipulation_mode+equal_sign"]]]}
-       ;  {:des "Window Manipulation mode -> delete (Spectacle grow vim split vertically)" :rules [:window_manipulation_mode [:##equal_sign [:km "hotkey: window_manipulation_mode+equal_sign"]]]}
-       ;  {:des "Window Manipulation mode -> delete (Spectacle grow vim split vertically)" :rules [:window_manipulation_mode [:##delete_or_backspace [:km "hotkey: window_manipulation_mode+delete_or_backspace"]]]}
-       ;  {:des "Window Manipulation mode -> return_or_enter (Spectacle maximize current window)" :rules [:window_manipulation_mode [:##return_or_enter :!TOSCf19]]}
-       ;  {:des "Window Manipulation mode -> caps_lock (Spectacle center current window)" :rules [:window_manipulation_mode [:##backslash :!TOSCf18]]}
-       ;  {:des "Window Manipulation mode -> t (Spectacle resize current window to a third of the screen)" :rules [:window_manipulation_mode [:##t :!TOSCf20]]}
-       ;  {:des "Window Manipulation mode -> h (Spectacle resize current window to left half of the screen)" :rules [:window_manipulation_mode [:##h :!TOSCleft_arrow]]}
-       ;  {:des "Window Manipulation mode -> j (Spectacle resize current window to bottom half of the screen)" :rules [:window_manipulation_mode [:##j :!TOSCdown_arrow]]}
-       ;  {:des "Window Manipulation mode -> k (Spectacle resize current window to upper half of the screen)" :rules [:window_manipulation_mode [:##k :!TOSCup_arrow]]}
-       ;  {:des "Window Manipulation mode -> l (Spectacle resize current window to right half of the screen)" :rules [:window_manipulation_mode [:##l :!TOSCright_arrow]]}
-       ;  {:des "Window Manipulation mode -> i (Spectacle resize current window to upper-left half of the screen)" :rules [:window_manipulation_mode [:##i :!TOSCf11]]}
-       ;  {:des "Window Manipulation mode -> o (Spectacle resize current window to upper-right half of the screen)" :rules [:window_manipulation_mode [:##o :!TOSCf13]]}
-       ;  {:des "Window Manipulation mode -> , (Spectacle resize current window to bottom-left half of the screen)" :rules [:window_manipulation_mode [:##comma :!TOSCf12]]}
-       ;  {:des "Window Manipulation mode -> . (Spectacle resize current window to bottom-right half of the screen)" :rules [:window_manipulation_mode [:##period :!TOSCf14]]}
-
-
-        ; {:des "Spacebar+Command Mode" :rules [[{:sim [:left_command :spacebar]
-        ;                              :simo {:interrupt true
-        ;                                     :dorder :insensitive
-        ;                                     :uorder :insensitive
-        ;                                     :afterup {:set ["spacebar_command_mode" 0]}}} {:set ["spacebar_command_mode" 1]}]]}
-        ; {:des "Spacebar+Command mode j -> " :rules [:spacebar_command_mode [:##j :down_arrow]]}
-        ; {:des "Spacebar+Command mode k -> " :rules [:spacebar_command_mode [:##k :up_arrow]]}
-        ; {:des "Spacebar+Command mode h -> " :rules [:spacebar_command_mode [:##h :left_arrow]]}
-        ; {:des "Spacebar+Command mode l -> " :rules [:spacebar_command_mode [:##l :right_arrow]]}
-        ; {:des "Spacebar+Command mode caps_lock -> " :rules [:spacebar_command_mode [:##4 :!SCopen_bracket]]}
-        ; {:des "Spacebar+Command mode g -> " :rules [:spacebar_command_mode [:##3 :!OSCopen_bracket]]}
-        ; {:des "Spacebar+Command mode b -> " :rules [:spacebar_command_mode [:##b :!Oleft_arrow]]}
-        ; {:des "Spacebar+Command mode w -> " :rules [:spacebar_command_mode [:##w :!Oright_arrow]]}
-        ; {:des "Spacebar+Command mode e -> " :rules [:spacebar_command_mode [:##e :!Oright_arrow]]}
-        ; {:des "Spacebar+Command mode i -> " :rules [:spacebar_command_mode [:##i :!Cleft_arrow]]}
-        ; {:des "Spacebar+Command mode a -> " :rules [:spacebar_command_mode [:##a :!Cright_arrow]]}
-        ; {:des "Spacebar+Command mode u -> " :rules [:spacebar_command_mode [:##u :!Cz]]}
-        ; {:des "Spacebar+Command mode r -> " :rules [:spacebar_command_mode [:##r :!CSz]]}
-        ; {:des "Spacebar+Command mode y -> " :rules [:spacebar_command_mode [:##y :!Cc]]}
-        ; {:des "Spacebar+Command mode p -> " :rules [:spacebar_command_mode [:##p :!Cv]]}
-
         {:des "GO TO Mode (f+g)" :rules [[{:sim [:f :g]
                                      :simo {:interrupt true
                                             :dorder :insensitive
@@ -427,15 +364,6 @@
         {:des "CHANGE mode s" :rules [:change_mode [:##s [:km "hotkey: change_mode+s"]]]}
         {:des "CHANGE mode t" :rules [:change_mode [:##t [:km "hotkey: change_mode+t"]]]}
 
-
-        ; {:des "FOCUS Mode (d+f)" :rules [[{:sim [:d :f]
-        ;                              :simo {:interrupt true
-        ;                                     :dorder :insensitive
-        ;                                     :uorder :insensitive
-        ;                                     :afterup {:set ["focus_mode" 0]}}} {:set ["focus_mode" 1]}]]}
-        ; {:des "FOCUS mode h -> (Omnifocus/Keyboard Maestro [H] (vim left))" :rules [:focus_mode [:##h [:km "hotkey: focus_mode+h"]]]}
-      ; {:des "FOCUS mode j -> (Omnifocus/Keyboard Maestro [J] (vim center))" :rules [:focus_mode [:##j [:km "hotkey: focus_mode+j"]]]}
-      ; {:des "FOCUS mode l -> (Omnifocus/Keyboard Maestro [L] (vim right))" :rules [:focus_mode [:##l [:km "hotkey: focus_mode+l"]]]}
 
 ]
 :simlayer-threshold 150

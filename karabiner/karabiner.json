@@ -1427,6 +1427,11 @@
               "name" : "go_to_mode",
               "value" : 0
             }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
+            }
           } ],
           "conditions" : [ {
             "name" : "go_to_mode",
@@ -1451,6 +1456,11 @@
             "set_variable" : {
               "name" : "go_to_mode",
               "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
             }
           } ],
           "from" : {
@@ -1487,6 +1497,11 @@
               "name" : "go_to_mode",
               "value" : 0
             }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
+            }
           } ],
           "conditions" : [ {
             "name" : "go_to_mode",
@@ -1511,6 +1526,11 @@
             "set_variable" : {
               "name" : "go_to_mode",
               "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
             }
           } ],
           "from" : {
@@ -1547,6 +1567,11 @@
               "name" : "go_to_mode",
               "value" : 0
             }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
+            }
           } ],
           "conditions" : [ {
             "name" : "go_to_mode",
@@ -1571,6 +1596,11 @@
             "set_variable" : {
               "name" : "go_to_mode",
               "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
             }
           } ],
           "from" : {
@@ -1902,12 +1932,12 @@
           "to" : [ {
             "set_variable" : {
               "name" : "navigation_mode",
-              "value" : 1
+              "value" : 0
             }
           }, {
             "set_variable" : {
               "name" : "vim_mode",
-              "value" : 0
+              "value" : 1
             }
           }, {
             "set_variable" : {
@@ -2175,6 +2205,9 @@
               "name" : "visual_mode",
               "value" : 0
             }
+          }, {
+            "key_code" : "f17",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "vim_mode",
@@ -2507,6 +2540,10 @@
           "conditions" : [ {
             "name" : "vim_mode",
             "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 0,
             "type" : "variable_if"
           } ],
           "type" : "basic"
