@@ -123,6 +123,16 @@
                                                                  ["go_to_visual_mode" 0]
                                                                  :!SCOTf19]}]]}
 
+        {:des "VIM MODE APPLICATION OVERRIDE: Omnifocus"
+           :rules [[:condi :vim_mode :Omnifocus]
+;                   OMNIFOCUS SPECIFIC
+                    [:!Tj :!CTdown_arrow]
+                    [:!Tk :!CTup_arrow]
+                    [:!Th :!CTleft_arrow]
+                    [:!Tl :!CTright_arrow]
+                    [:!Tg :!COg]
+                    [:spacebar :spacebar :Omnifocus {:held :!COspacebar :repeat false :halt true :params{:alone 150 :held 200}}]
+                    ]}
 
         {:des "navigation mode"
            :rules [[:condi :!vim_mode :navigation_mode]
@@ -169,7 +179,21 @@
                    [:left_command [["navigation_mode" 0] ["vim_mode" 1] ["visual_mode" 0] :!SCOTf19]]
                   ]}
 
-        {:des "delete mode"
+        ; {:des "VIM: change mode"
+        ;    :rules [:vim_change_mode
+
+
+        ;             ; [:b [:!SOleft_arrow :delete_or_backspace ["delete_mode" 0]]]
+        ;             [:w [:!Oleft_arrow :!SOright_arrow :delete_or_backspace ["vim_change_mode" 0]]]
+        ;             ; [:e [:!SOright_arrow :delete_or_backspace ["delete_mode" 0]]]
+        ;             ; [:h [:!Sleft_arrow :delete_or_backspace ["delete_mode" 0]]]
+        ;             ; [:j [:!Sdown_arrow :delete_or_backspace ["delete_mode" 0]]]
+        ;             ; [:k [:!Sup_arrow :delete_or_backspace ["delete_mode" 0]]]
+        ;             ; [:l [:!Sright_arrow :delete_or_backspace ["delete_mode" 0]]]
+        ;             ; [:w [:!SOright_arrow :!Sright_arrow :delete_or_backspace ["delete_mode" 0]]]
+        ;             ]}
+
+        {:des "VIM: delete mode"
            :rules [:delete_mode
                    ; DEADKEYS
                      ; lowercase deadkeys
@@ -220,7 +244,7 @@
                     [:!R4 :!Cright_arrow]
                     [:!S6 :!Cleft_arrow]
 
-                    [:!Scomma [:!SCclose_bracket  ["outdent_mode" 0]] ["outdent_mode" 1]]  ; double > to outdent line or at least trigger SHIFT+CMD+[
+                    [:!Scomma [:!SCopen_bracket  ["outdent_mode" 0]] ["outdent_mode" 1]]  ; double > to outdent line or at least trigger SHIFT+CMD+[
                     [:!Scomma ["outdent_mode" 1] nil {:delayed {:invoked ["outdent_mode" 0] :canceled ["outdent_mode" 0]}}]
                     [:!Speriod [:!SCclose_bracket  ["indent_mode" 0]] ["indent_mode" 1]]  ; double > to indent line or at least trigger SHIFT+CMD+]
                     [:!Speriod ["indent_mode" 1] nil {:delayed {:invoked ["indent_mode" 0] :canceled ["indent_mode" 0]}}]
@@ -228,7 +252,10 @@
                     [:!Sa [:!Cright_arrow ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]]
                     [:!Ra [:!Cright_arrow ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]] ; make sure it works with right shift too
                     [:b :!Oleft_arrow]
-                    [:c :!Cc]
+
+                    ; [:c [:!Cright_arrow :!SCleft_arrow :delete_or_backspace ["vim_change_mode" 0]] ["vim_change_mode" 1]]  ; double tap c to change current line
+                    ; [:c ["vim_change_mode" 1] nil {:delayed {:invoked ["vim_change_mode" 0] :canceled ["vim_change_mode" 0]}}] ; single tap c to enter change mode
+
                     [:d ["delete_mode" 1]]
                     [:!Sd [:!SCright_arrow :delete_or_backspace]]
                     [:!Rd [:!SCright_arrow :delete_or_backspace]] ; make above also work with right shift
@@ -283,15 +310,6 @@
                     [:y [:!Cleft_arrow :!CSright_arrow :!Cc ["yank_mode" 0]] ["yank_mode" 1]]  ; double tap y to copy the current line
                     [:y [:!Cc ["yank_mode" 1]] nil {:delayed {:invoked ["yank_mode" 0] :canceled ["yank_mode" 0]}}] ; tap y once for CMD+C
 
-;                   OMNIFOCUS SPECIFIC
-                    [:!Tj :!CTdown_arrow :Omnifocus]
-                    [:!Tk :!CTup_arrow :Omnifocus]
-                    [:!Th :!CTleft_arrow :Omnifocus]
-                    [:!Tl :!CTright_arrow :Omnifocus]
-                    [:!Tg :!COg :Omnifocus]
-                    [:spacebar :spacebar :Omnifocus {:held :!COspacebar :repeat false :halt true :params{:alone 150 :held 200}}]
-
-
                     ]}
 
         {:des "visual BLOCK mode"
@@ -306,11 +324,15 @@
                    ; numbers deadkeys
                    [:1 :vk_none] [:2 :vk_none] [:3 :vk_none] [:4 :vk_none] [:5 :vk_none] [:6 :vk_none] [:7 :vk_none] [:8 :vk_none] [:9 :vk_none] [:comma :vk_none] [:period :vk_none] [:slash :vk_none]
                    ; special key deadkeys with left shift
-                   [:!S1 :vk_none] [:!S2 :vk_none] [:!S3 :vk_none] [:!S4 :vk_none] [:!S5 :vk_none] [:!S6 :vk_none] [:!S7 :vk_none] [:!S8 :vk_none] [:!S9 :vk_none] [:!Scomma :vk_none] [:!Speriod :vk_none] [:!Sslash :vk_none]
+                   [:!S1 :vk_none] [:!S2 :vk_none] [:!S3 :vk_none] [:!S4 :vk_none] [:!S5 :vk_none] [:!S6 :vk_none] [:!S7 :vk_none] [:!S8 :vk_none] [:!S9 :vk_none] [:!Sslash :vk_none]
                    ; special key deadkeys with right shift
                    [:!R1 :vk_none] [:!R2 :vk_none] [:!R3 :vk_none] [:!R4 :vk_none] [:!R5 :vk_none] [:!R6 :vk_none] [:!R7 :vk_none] [:!R8 :vk_none] [:!R9 :vk_none] [:!Rcomma :vk_none] [:!Rperiod :vk_none] [:!Rslash :vk_none]
                    ; =====================================================================================================================================
 
+                    [:!Scomma [:!SCopen_bracket  ["outdent_mode" 0] ["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf19] ["outdent_mode" 1]]  ; double > to outdent line or at least trigger SHIFT+CMD+[
+                    [:!Scomma ["outdent_mode" 1] nil {:delayed {:invoked ["outdent_mode" 0] :canceled ["outdent_mode" 0]}}]
+                    [:!Speriod [:!SCclose_bracket  ["indent_mode" 0] ["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf19] ["indent_mode" 1]]  ; double > to indent line or at least trigger SHIFT+CMD+]
+                    [:!Speriod ["indent_mode" 1] nil {:delayed {:invoked ["indent_mode" 0] :canceled ["indent_mode" 0]}}]
                     [:d [["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :delete_forward :delete_forward :!SCOTf19] ]
                     [:g [:!SCup_arrow ["go_to_visual_mode" 0]] ["go_to_visual_mode" 1]]  ; double tap g to jump to top of file
                     [:g ["go_to_visual_mode" 1] nil {:delayed {:invoked ["go_to_visual_mode" 0] :canceled ["go_to_visual_mode" 0]}}]
@@ -339,11 +361,15 @@
                     ; numbers deadkeys
                     [:1 :vk_none] [:2 :vk_none] [:3 :vk_none] [:4 :vk_none] [:5 :vk_none] [:6 :vk_none] [:7 :vk_none] [:8 :vk_none] [:9 :vk_none] [:comma :vk_none] [:period :vk_none] [:slash :vk_none]
                     ; special key deadkeys with left shift
-                    [:!S1 :vk_none] [:!S2 :vk_none] [:!S3 :vk_none] [:!S4 :vk_none] [:!S5 :vk_none] [:!S7 :vk_none] [:!S8 :vk_none] [:!S9 :vk_none] [:!Scomma :vk_none] [:!Speriod :vk_none] [:!Sslash :vk_none]
+                    [:!S1 :vk_none] [:!S2 :vk_none] [:!S3 :vk_none] [:!S4 :vk_none] [:!S5 :vk_none] [:!S7 :vk_none] [:!S8 :vk_none] [:!S9 :vk_none] [:!Sslash :vk_none]
                     ; special key deadkeys with right shift
                     [:!R1 :vk_none] [:!R2 :vk_none] [:!R3 :vk_none] [:!R5 :vk_none] [:!R6 :vk_none] [:!R7 :vk_none] [:!R8 :vk_none] [:!R9 :vk_none] [:!Rcomma :vk_none] [:!Rperiod :vk_none] [:!Rslash :vk_none]
                    ; =====================================================================================================================================
 
+                    [:!Scomma [:!SCopen_bracket  ["outdent_mode" 0] ["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf19] ["outdent_mode" 1]]  ; double > to outdent line or at least trigger SHIFT+CMD+[
+                    [:!Scomma ["outdent_mode" 1] nil {:delayed {:invoked ["outdent_mode" 0] :canceled ["outdent_mode" 0]}}]
+                    [:!Speriod [:!SCclose_bracket  ["indent_mode" 0] ["vim_mode" 1] ["visual_mode" 0] ["visual_block_mode" 0] :!SCOTf19] ["indent_mode" 1]]  ; double > to indent line or at least trigger SHIFT+CMD+]
+                    [:!Speriod ["indent_mode" 1] nil {:delayed {:invoked ["indent_mode" 0] :canceled ["indent_mode" 0]}}]
                     [:!R4 :!SCright_arrow]
                     [:!S6 :!SCleft_arrow]
                     [:b :!SOleft_arrow]

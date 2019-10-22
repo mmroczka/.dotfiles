@@ -1465,6 +1465,136 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "VIM MODE APPLICATION OVERRIDE: Omnifocus",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_command", "left_control" ]
+          } ],
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
+            "type" : "frontmost_application_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_command", "left_control" ]
+          } ],
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
+            "type" : "frontmost_application_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "left_arrow",
+            "modifiers" : [ "left_command", "left_control" ]
+          } ],
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
+            "type" : "frontmost_application_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_command", "left_control" ]
+          } ],
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
+            "type" : "frontmost_application_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "g",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g",
+            "modifiers" : [ "left_command", "left_option" ]
+          } ],
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
+            "type" : "frontmost_application_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_if_held_down" : [ {
+            "key_code" : "spacebar",
+            "modifiers" : [ "left_command", "left_option" ]
+          } ],
+          "parameters" : {
+            "basic.to_if_alone_timeout_milliseconds" : 150,
+            "basic.to_if_held_down_threshold_milliseconds" : 200
+          },
+          "from" : {
+            "key_code" : "spacebar"
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          } ],
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
+            "type" : "frontmost_application_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
+            "type" : "frontmost_application_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "navigation mode",
         "manipulators" : [ {
           "from" : {
@@ -3708,7 +3838,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "delete mode",
+        "description" : "VIM: delete mode",
         "manipulators" : [ {
           "from" : {
             "key_code" : "a"
@@ -6749,7 +6879,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "close_bracket",
+            "key_code" : "open_bracket",
             "modifiers" : [ "left_command", "left_shift" ]
           }, {
             "set_variable" : {
@@ -6926,20 +7056,6 @@
           "to" : [ {
             "key_code" : "left_arrow",
             "modifiers" : [ "left_option" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "c"
-          },
-          "to" : [ {
-            "key_code" : "c",
-            "modifiers" : [ "left_command" ]
           } ],
           "conditions" : [ {
             "name" : "vim_mode",
@@ -7826,130 +7942,6 @@
             "name" : "vim_mode",
             "value" : 1,
             "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "j",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "down_arrow",
-            "modifiers" : [ "left_command", "left_control" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          }, {
-            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
-            "type" : "frontmost_application_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "k",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "up_arrow",
-            "modifiers" : [ "left_command", "left_control" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          }, {
-            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
-            "type" : "frontmost_application_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "h",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "left_arrow",
-            "modifiers" : [ "left_command", "left_control" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          }, {
-            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
-            "type" : "frontmost_application_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "l",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "right_arrow",
-            "modifiers" : [ "left_command", "left_control" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          }, {
-            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
-            "type" : "frontmost_application_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "g",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "g",
-            "modifiers" : [ "left_command", "left_option" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          }, {
-            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
-            "type" : "frontmost_application_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "to_if_held_down" : [ {
-            "key_code" : "spacebar",
-            "modifiers" : [ "left_command", "left_option" ]
-          } ],
-          "parameters" : {
-            "basic.to_if_alone_timeout_milliseconds" : 150,
-            "basic.to_if_held_down_threshold_milliseconds" : 200
-          },
-          "from" : {
-            "key_code" : "spacebar"
-          },
-          "to" : [ {
-            "key_code" : "spacebar"
-          } ],
-          "conditions" : [ {
-            "name" : "vim_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          }, {
-            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
-            "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
         } ]
@@ -9275,38 +9267,6 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "comma",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "conditions" : [ {
-            "name" : "visual_block_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "period",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "conditions" : [ {
-            "name" : "visual_block_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
             "key_code" : "slash",
             "modifiers" : {
               "mandatory" : [ "left_shift" ]
@@ -9506,6 +9466,160 @@
           },
           "to" : [ {
             "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "open_bracket",
+            "modifiers" : [ "left_command", "left_shift" ]
+          }, {
+            "set_variable" : {
+              "name" : "outdent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "key_code" : "f19",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "outdent_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_delayed_action" : {
+            "to_if_invoked" : [ {
+              "set_variable" : {
+                "name" : "outdent_mode",
+                "value" : 0
+              }
+            } ],
+            "to_if_canceled" : [ {
+              "set_variable" : {
+                "name" : "outdent_mode",
+                "value" : 0
+              }
+            } ]
+          },
+          "from" : {
+            "key_code" : "comma",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "outdent_mode",
+              "value" : 1
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "close_bracket",
+            "modifiers" : [ "left_command", "left_shift" ]
+          }, {
+            "set_variable" : {
+              "name" : "indent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "key_code" : "f19",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "indent_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_delayed_action" : {
+            "to_if_invoked" : [ {
+              "set_variable" : {
+                "name" : "indent_mode",
+                "value" : 0
+              }
+            } ],
+            "to_if_canceled" : [ {
+              "set_variable" : {
+                "name" : "indent_mode",
+                "value" : 0
+              }
+            } ]
+          },
+          "from" : {
+            "key_code" : "period",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "indent_mode",
+              "value" : 1
+            }
           } ],
           "conditions" : [ {
             "name" : "visual_block_mode",
@@ -11069,38 +11183,6 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "comma",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "conditions" : [ {
-            "name" : "visual_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "period",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "conditions" : [ {
-            "name" : "visual_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
             "key_code" : "slash",
             "modifiers" : {
               "mandatory" : [ "left_shift" ]
@@ -11284,6 +11366,160 @@
           },
           "to" : [ {
             "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "open_bracket",
+            "modifiers" : [ "left_command", "left_shift" ]
+          }, {
+            "set_variable" : {
+              "name" : "outdent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "key_code" : "f19",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "outdent_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_delayed_action" : {
+            "to_if_invoked" : [ {
+              "set_variable" : {
+                "name" : "outdent_mode",
+                "value" : 0
+              }
+            } ],
+            "to_if_canceled" : [ {
+              "set_variable" : {
+                "name" : "outdent_mode",
+                "value" : 0
+              }
+            } ]
+          },
+          "from" : {
+            "key_code" : "comma",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "outdent_mode",
+              "value" : 1
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "close_bracket",
+            "modifiers" : [ "left_command", "left_shift" ]
+          }, {
+            "set_variable" : {
+              "name" : "indent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "key_code" : "f19",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "indent_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_delayed_action" : {
+            "to_if_invoked" : [ {
+              "set_variable" : {
+                "name" : "indent_mode",
+                "value" : 0
+              }
+            } ],
+            "to_if_canceled" : [ {
+              "set_variable" : {
+                "name" : "indent_mode",
+                "value" : 0
+              }
+            } ]
+          },
+          "from" : {
+            "key_code" : "period",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "indent_mode",
+              "value" : 1
+            }
           } ],
           "conditions" : [ {
             "name" : "visual_mode",
