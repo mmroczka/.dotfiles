@@ -179,24 +179,17 @@
                    [:left_command [["vim_navigation_mode" 0] ["vim_mode" 1] ["vim_visual_mode" 0] :!SCOTf19]]
                   ]}
 
-        ; {:des "VIM: change mode"
-        ;    :rules [:vim_change_mode
-
-        ;             ; [:b [:!SOleft_arrow :delete_or_backspace ["vim_delete_mode" 0]]]
-        ;             [:w [:!Oleft_arrow :!SOright_arrow :delete_or_backspace ["vim_change_mode" 0]]]
-        ;             ; [:e [:!SOright_arrow :delete_or_backspace ["vim_delete_mode" 0]]]
-        ;             ; [:h [:!Sleft_arrow :delete_or_backspace ["vim_delete_mode" 0]]]
-        ;             ; [:j [:!Sdown_arrow :delete_or_backspace ["vim_delete_mode" 0]]]
-        ;             ; [:k [:!Sup_arrow :delete_or_backspace ["vim_delete_mode" 0]]]
-        ;             ; [:l [:!Sright_arrow :delete_or_backspace ["vim_delete_mode" 0]]]
-        ;             ; [:w [:!SOright_arrow :!Sright_arrow :delete_or_backspace ["vim_delete_mode" 0]]]
-        ;             ]}
+        {:des "VIM: change mode"
+           :rules [[:condi :!vim_in_mode :vim_change_mode]
+                    [:i ["vim_in_mode" 1]]
+                    [:c [:!Cleft_arrow :!SCright_arrow :delete_or_backspace ["vim_change_mode" 0] ["vim_in_mode" 0]]]
+                    ]}
 
         {:des "VIM: delete mode"
-           :rules [:vim_delete_mode
+           :rules [[:condi :!vim_in_mode :vim_delete_mode]
                    ; DEADKEYS
                      ; lowercase deadkeys
-                     [:a :vk_none] [:c :vk_none] [:f :vk_none] [:g :vk_none] [:i :vk_none] [:m :vk_none] [:n :vk_none] [:o :vk_none] [:p :vk_none] [:q :vk_none] [:r :vk_none] [:s :vk_none] [:t :vk_none] [:u :vk_none] [:v :vk_none] [:x :vk_none] [:y :vk_none] [:z :vk_none]
+                     [:a :vk_none] [:c :vk_none] [:f :vk_none] [:g :vk_none] [:m :vk_none] [:n :vk_none] [:o :vk_none] [:p :vk_none] [:q :vk_none] [:r :vk_none] [:s :vk_none] [:t :vk_none] [:u :vk_none] [:v :vk_none] [:x :vk_none] [:y :vk_none] [:z :vk_none]
                      ; uppercase deadkeys with left shift
                      [:!Sa :vk_none] [:!Sb :vk_none] [:!Sc :vk_none] [:!Sd :vk_none] [:!Se :vk_none] [:!Sf :vk_none] [:!Sg :vk_none] [:!Sh :vk_none] [:!Si :vk_none] [:!Sj :vk_none] [:!Sk :vk_none] [:!Sl :vk_none] [:!Sm :vk_none] [:!Sn :vk_none] [:!So :vk_none] [:!Sp :vk_none] [:!Sq :vk_none] [:!Sr :vk_none] [:!Ss :vk_none] [:!St :vk_none] [:!Su :vk_none] [:!Sv :vk_none] [:!Sw :vk_none] [:!Sx :vk_none] [:!Sy :vk_none] [:!Sz :vk_none]
                      ; uppercase deadkeys with right shift
@@ -209,14 +202,21 @@
                      [:!R1 :vk_none] [:!R2 :vk_none] [:!R3 :vk_none] [:!R4 :vk_none] [:!R5 :vk_none] [:!R6 :vk_none] [:!R7 :vk_none] [:!R8 :vk_none] [:!R9 :vk_none] [:!Rcomma :vk_none] [:!Rperiod :vk_none] [:!Rslash :vk_none]
 
 
-                    [:b [:!SOleft_arrow :delete_or_backspace ["vim_delete_mode" 0]]]
-                    [:d [:!Cleft_arrow :!SCright_arrow :delete_or_backspace :delete_forward ["vim_delete_mode" 0]]]
-                    [:e [:!SOright_arrow :delete_or_backspace ["vim_delete_mode" 0]]]
-                    [:h [:!Sleft_arrow :delete_or_backspace ["vim_delete_mode" 0]]]
-                    [:j [:!Sdown_arrow :delete_or_backspace ["vim_delete_mode" 0]]]
-                    [:k [:!Sup_arrow :delete_or_backspace ["vim_delete_mode" 0]]]
-                    [:l [:!Sright_arrow :delete_or_backspace ["vim_delete_mode" 0]]]
-                    [:w [:!SOright_arrow :!Sright_arrow :delete_or_backspace ["vim_delete_mode" 0]]]
+                    [:b [:!SOleft_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0]]]
+                    [:d [:!Cleft_arrow :!SCright_arrow :delete_or_backspace :delete_forward ["vim_delete_mode" 0] ["vim_in_mode" 0]]]
+                    [:e [:!SOright_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0]]]
+                    [:h [:!Sleft_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0]]]
+                    [:i ["vim_in_mode" 1]]
+                    [:j [:!Sdown_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0]]]
+                    [:k [:!Sup_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0]]]
+                    [:l [:!Sright_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0]]]
+                    [:w [:!SOright_arrow :!Sright_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0]]]
+                    ]}
+
+        {:des "VIM: IN mode"
+           :rules [:vim_in_mode
+                    [:w [:!Oleft_arrow :!SOright_arrow :delete_or_backspace ["vim_change_mode" 0] ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]] ["vim_delete_mode" 1]]
+                    [:w [:!Oleft_arrow :!SOright_arrow :delete_or_backspace ["vim_change_mode" 0] ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]] ["vim_change_mode" 1]]
                     ]}
 
         {:des "vim mode"
@@ -251,10 +251,7 @@
                     [:!Sa [:!Cright_arrow ["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf20]]
                     [:!Ra [:!Cright_arrow ["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf20]] ; make sure it works with right shift too
                     [:b :!Oleft_arrow]
-
-                    ; [:c [:!Cright_arrow :!SCleft_arrow :delete_or_backspace ["vim_change_mode" 0]] ["vim_change_mode" 1]]  ; double tap c to change current line
-                    ; [:c ["vim_change_mode" 1] nil {:delayed {:invoked ["vim_change_mode" 0] :canceled ["vim_change_mode" 0]}}] ; single tap c to enter change mode
-
+                    [:c ["vim_change_mode" 1]] ; single tap c to enter change mode
                     [:d ["vim_delete_mode" 1]]
                     [:!Sd [:!SCright_arrow :delete_or_backspace]]
                     [:!Rd [:!SCright_arrow :delete_or_backspace]] ; make above also work with right shift

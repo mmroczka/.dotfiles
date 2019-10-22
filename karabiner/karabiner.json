@@ -3838,6 +3838,62 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "VIM: change mode",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "i"
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 1
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_change_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "c"
+          },
+          "to" : [ {
+            "key_code" : "left_arrow",
+            "modifiers" : [ "left_command" ]
+          }, {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_command", "left_shift" ]
+          }, {
+            "key_code" : "delete_or_backspace"
+          }, {
+            "set_variable" : {
+              "name" : "vim_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_change_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "VIM: delete mode",
         "manipulators" : [ {
           "from" : {
@@ -3850,6 +3906,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -3863,6 +3923,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -3876,6 +3940,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -3889,19 +3957,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "i"
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "conditions" : [ {
-            "name" : "vim_delete_mode",
+          }, {
+            "name" : "vim_in_mode",
             "value" : 1,
-            "type" : "variable_if"
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -3915,6 +3974,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -3928,6 +3991,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -3941,6 +4008,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -3954,6 +4025,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -3967,6 +4042,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -3980,6 +4059,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -3993,6 +4076,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4006,6 +4093,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4019,6 +4110,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4032,6 +4127,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4045,6 +4144,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4058,6 +4161,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4071,6 +4178,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4087,6 +4198,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4103,6 +4218,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4119,6 +4238,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4135,6 +4258,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4151,6 +4278,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4167,6 +4298,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4183,6 +4318,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4199,6 +4338,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4215,6 +4358,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4231,6 +4378,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4247,6 +4398,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4263,6 +4418,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4279,6 +4438,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4295,6 +4458,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4311,6 +4478,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4327,6 +4498,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4343,6 +4518,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4359,6 +4538,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4375,6 +4558,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4391,6 +4578,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4407,6 +4598,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4423,6 +4618,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4439,6 +4638,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4455,6 +4658,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4471,6 +4678,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4487,6 +4698,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4503,6 +4718,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4519,6 +4738,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4535,6 +4758,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4551,6 +4778,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4567,6 +4798,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4583,6 +4818,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4599,6 +4838,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4615,6 +4858,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4631,6 +4878,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4647,6 +4898,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4663,6 +4918,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4679,6 +4938,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4695,6 +4958,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4711,6 +4978,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4727,6 +4998,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4743,6 +5018,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4759,6 +5038,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4775,6 +5058,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4791,6 +5078,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4807,6 +5098,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4823,6 +5118,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4839,6 +5138,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4855,6 +5158,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4871,6 +5178,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4887,6 +5198,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4903,6 +5218,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4916,6 +5235,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4929,6 +5252,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4942,6 +5269,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4955,6 +5286,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4968,6 +5303,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4981,6 +5320,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -4994,6 +5337,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5007,6 +5354,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5020,6 +5371,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5033,6 +5388,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5046,6 +5405,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5059,6 +5422,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5075,6 +5442,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5091,6 +5462,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5107,6 +5482,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5123,6 +5502,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5139,6 +5522,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5155,6 +5542,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5171,6 +5562,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5187,6 +5582,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5203,6 +5602,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5219,6 +5622,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5235,6 +5642,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5251,6 +5662,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5267,6 +5682,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5283,6 +5702,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5299,6 +5722,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5315,6 +5742,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5331,6 +5762,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5347,6 +5782,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5363,6 +5802,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5379,6 +5822,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5395,6 +5842,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5411,6 +5862,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5427,6 +5882,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5443,6 +5902,10 @@
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5459,11 +5922,20 @@
               "name" : "vim_delete_mode",
               "value" : 0
             }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
           } ],
           "conditions" : [ {
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5485,11 +5957,20 @@
               "name" : "vim_delete_mode",
               "value" : 0
             }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
           } ],
           "conditions" : [ {
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5506,11 +5987,20 @@
               "name" : "vim_delete_mode",
               "value" : 0
             }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
           } ],
           "conditions" : [ {
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5527,11 +6017,40 @@
               "name" : "vim_delete_mode",
               "value" : 0
             }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
           } ],
           "conditions" : [ {
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "i"
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 1
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5548,11 +6067,20 @@
               "name" : "vim_delete_mode",
               "value" : 0
             }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
           } ],
           "conditions" : [ {
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5569,11 +6097,20 @@
               "name" : "vim_delete_mode",
               "value" : 0
             }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
           } ],
           "conditions" : [ {
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5590,11 +6127,20 @@
               "name" : "vim_delete_mode",
               "value" : 0
             }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
           } ],
           "conditions" : [ {
             "name" : "vim_delete_mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {
@@ -5614,9 +6160,97 @@
               "name" : "vim_delete_mode",
               "value" : 0
             }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
           } ],
           "conditions" : [ {
             "name" : "vim_delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "VIM: IN mode",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "w"
+          },
+          "to" : [ {
+            "key_code" : "left_arrow",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_option", "left_shift" ]
+          }, {
+            "key_code" : "delete_or_backspace"
+          }, {
+            "set_variable" : {
+              "name" : "vim_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "w"
+          },
+          "to" : [ {
+            "key_code" : "left_arrow",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_option", "left_shift" ]
+          }, {
+            "key_code" : "delete_or_backspace"
+          }, {
+            "set_variable" : {
+              "name" : "vim_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_change_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -7056,6 +7690,22 @@
           "to" : [ {
             "key_code" : "left_arrow",
             "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "c"
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "vim_change_mode",
+              "value" : 1
+            }
           } ],
           "conditions" : [ {
             "name" : "vim_mode",
