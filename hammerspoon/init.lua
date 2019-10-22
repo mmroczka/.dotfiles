@@ -60,8 +60,26 @@ for i, config in ipairs(configs) do
 	hs.hotkey.bind(table.unpack(config))
 end
 
-require('windows')
+-- require('windows')
 -- require('panes')
+
+
+hs.loadSpoon("Lunette")
+
+-- customBindings = {
+--   leftHalf = {
+--     {{"Q", "W"}, "E"},
+--     {{"cmd", "alt"}, "left"},
+--   },
+--   rightHalf = {
+--     {{"A", "S"}, "D"},
+--   },
+--   undo = false,
+--   redo = false
+-- }
+
+spoon.Lunette:bindHotkeys()
+-- spoon.Lunette:bindHotkeys(customBindings)
 
 -- Bypass programs that won't let you paste into them by grabbing the clipboard's top contents and typing them "manually" with hammerspoon
 hs.hotkey.bind({"cmd", "ctrl"}, "V", function() hs.eventtap.keyStrokes(hs.pasteboard.getContents()) end)

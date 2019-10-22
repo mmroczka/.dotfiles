@@ -60,9 +60,35 @@
 
         {:des "spacebar_mode"
          :rules [:spacebar_mode
-                 [:4 :!CSopen_bracket]
-                 [:5 :!CSclose_bracket]
+                 [:1 [:!COtab :!SCOtab :left_option]]
+                 [:2 :!CStab]
+                 [:3 :!Ctab]
+                 [:4 :!SCopen_bracket]
+                 [:5 :!SCclose_bracket]
                  ]}
+
+        {:des "Launch mode (l+;)" :rules [[{:sim [:l :semicolon]
+                                     :simo {:interrupt true
+                                            :dorder :insensitive
+                                            :uorder :insensitive
+                                            :afterup {:set ["launch_mode" 0]}}} {:set ["launch_mode" 1]}]]}
+        {:des "Launch mode -> a (Open Activity Monitor)" :rules [:launch_mode [:##a [:km "open: Activity Monitor"]]]}
+        {:des "Launch mode -> b (Open BetterTouchTool)" :rules [:launch_mode [:##b [:km "open: BetterTouchTool"]]]}
+        {:des "Launch mode -> c (Open Chrome)" :rules [:launch_mode [:##c [:km "open: Chrome"]]]}
+        {:des "Launch mode -> d (Open Dash)" :rules [:launch_mode [:##d :!TSC1]]}
+        {:des "Launch mode -> f (Open Fantastical)" :rules [:launch_mode [:##f [:km "open: Fantastical"]]]}
+        {:des "Launch mode -> g (Open Messages)" :rules [:launch_mode [:##g [:km "open: Messages"]]]}
+        {:des "Launch mode -> h (Open Postman)" :rules [:launch_mode [:##h [:km "open: Postman"]]]}
+        {:des "Launch mode -> i (Open iTerm)" :rules [:launch_mode [:##i [:km "open: iTerm"]]]}
+        {:des "Launch mode -> k (Open Keyboard Maestro)" :rules [:launch_mode [:##k [:km "open: Keyboard Maestro"]]]}
+        {:des "Launch mode -> m (Open Omnifocus)" :rules [:launch_mode [:##m [:km "open: Omnifocus"]]]}
+        {:des "Launch mode -> n (Open Evernote)" :rules [:launch_mode [:##n [:km "open: Evernote"]]]}
+        {:des "Launch mode -> e (Open Editor)" :rules [:launch_mode [:##e [:km "open: Editor"]]]}
+        {:des "Launch mode -> s (Open Snippets)" :rules [:launch_mode [:##s :!TSC2]]}
+        {:des "Launch mode -> t (Open Teams)" :rules [:launch_mode [:##t [:km "open: Teams"]]]}
+        {:des "Launch mode -> w (Open BitWarden)" :rules [:launch_mode [:##w [:km "open: BitWarden"]]]}
+        {:des "Launch mode -> z (Open Franz)" :rules [:launch_mode [:##z [:km "open: Franz"]]]}
+        {:des "Launch mode -> caps_lock (Open Franz)" :rules [:launch_mode [:##caps_lock [:km "open: Finder"]]]}
 
         ; Here I'm trigger hammerspoon's flux module to dim my screen based on the mode I'm in.
         ; SCOTf20 == vimMode dimmer off
@@ -72,17 +98,6 @@
         ; https://github.com/dbalatero/VimMode.spoon
         ; https://github.com/calvinwyoung/.dotfiles/blob/master/darwin/hammerspoon/flux.lua
 
-
-        ; {:des   "Press spacebar twice to enter vim mode, press i once to leave it"
-        ;                :rules [[:spacebar [["vim_mode" 1]
-        ;                                    ["visual_mode" 0]
-        ;                                    ["visual_block_mode" 0]
-        ;                                    ["delete_mode" 0]
-        ;                                    ["go_to_mode" 0]
-        ;                                    ["go_to_visual_mode" 0]
-        ;                                    :!SCOTf19] ["spacebar_pressed_once" 1]]
-        ;                        [:spacebar [:spacebar ["spacebar_pressed_once" 1]] ["vim_mode" 0] {:delayed {:invoked ["spacebar_pressed_once" 0] :canceled ["spacebar_pressed_once" 0]} :held :spacebar :repeat false :halt true }]
-        ;                        ]}
 
         {:des   "Press spacebar twice to enter vim mode, press i once to leave it"
                        :rules [[:spacebar nil ["vim_mode" 0] {:alone :spacebar
@@ -96,7 +111,7 @@
                                                                      :!SCOTf19
                                                                      ]
                                                                      :repeat false :halt true
-                                                              :params{:alone 150 :held 200}}]
+                                                              :params{:alone 100 :held 150}}]
                                [:spacebar [:spacebar ["spacebar_pressed_once" 1]] ["vim_mode" 0] {:delayed {:invoked ["spacebar_pressed_once" 0] :canceled ["spacebar_pressed_once" 0]} :held :spacebar :repeat false :halt true }]
                                ]}
 
@@ -108,6 +123,36 @@
                    [:g [:!Cup_arrow ["go_to_mode" 0]]]
                    [:!Sg [:!Cdown_arrow ["go_to_mode" 0]]]
                    [:!Rg [:!Cdown_arrow ["go_to_mode" 0]]]
+                    ]}
+
+        {:des "navigation mode"
+           :rules [:navigation_mode
+                   [:c :!COc] ; center
+                   [:f :!COf] ; fullscreen
+
+                   [:h :!COleft_arrow] ; left
+                   [:j :!COdown_arrow] ; down
+                   [:k :!COup_arrow] ; up
+                   [:l :!COright_arrow] ; right
+
+                   [:o :!CTleft_arrow] ; TOP left
+                   [:p :!CTright_arrow] ; TOP right
+                   [:period :!SCTleft_arrow] ; BOTTOM left
+                   [:slash :!SCTright_arrow] ; BOTTOM right
+
+                   [:t :!COright_arrow] ; next third
+                   [:!St :!COleft_arrow] ; previous third
+                   [:!Rt :!COleft_arrow] ; previous third
+
+                   [:n :!COTright_arrow] ; next display
+                   [:!Sn :!COTleft_arrow] ; previous display
+                   [:!Rn :!COTleft_arrow] ; previous display
+
+                   [:g :!SOTright_arrow nil {:held :!SOTright_arrow :params{:held 150}}] ; grow
+                   [:s :!SOTleft_arrow] ; shrink
+
+                   [:i [["navigation_mode" 0] ["vim_mode" 0] ["visual_mode" 0] :!SCOTf20]]
+                   ; [:left_command [["navigation_mode" 1] ["vim_mode" 0] ["visual_mode" 0] :!SCOTf19]]
                     ]}
 
         {:des "delete mode"
@@ -134,6 +179,7 @@
 
         {:des "vim mode"
            :rules [:vim_mode
+                    [:left_command [["navigation_mode" 1] ["vim_mode" 0] ["visual_mode" 0]]]
                     [:slash [["vim_mode" 0] ["visual_mode" 0] :!SCOTf20 :!Cf]]
                     [:!R4 :!Cright_arrow]
                     [:!S6 :!Cleft_arrow]
@@ -268,29 +314,6 @@
                  [:z [:km "open: Franz"]]
                  ]}
 
-        {:des "Launch mode (l+;)" :rules [[{:sim [:l :semicolon]
-                                     :simo {:interrupt true
-                                            :dorder :insensitive
-                                            :uorder :insensitive
-                                            :afterup {:set ["launch_mode" 0]}}} {:set ["launch_mode" 1]}]]}
-        {:des "Launch mode -> a (Open Activity Monitor)" :rules [:launch_mode [:##a [:km "open: Activity Monitor"]]]}
-        {:des "Launch mode -> b (Open BetterTouchTool)" :rules [:launch_mode [:##b [:km "open: BetterTouchTool"]]]}
-        {:des "Launch mode -> c (Open Chrome)" :rules [:launch_mode [:##c [:km "open: Chrome"]]]}
-        {:des "Launch mode -> d (Open Dash)" :rules [:launch_mode [:##d :!TSC1]]}
-        {:des "Launch mode -> f (Open Fantastical)" :rules [:launch_mode [:##f [:km "open: Fantastical"]]]}
-        {:des "Launch mode -> g (Open Messages)" :rules [:launch_mode [:##g [:km "open: Messages"]]]}
-        {:des "Launch mode -> h (Open Postman)" :rules [:launch_mode [:##h [:km "open: Postman"]]]}
-        {:des "Launch mode -> i (Open iTerm)" :rules [:launch_mode [:##i [:km "open: iTerm"]]]}
-        {:des "Launch mode -> k (Open Keyboard Maestro)" :rules [:launch_mode [:##k [:km "open: Keyboard Maestro"]]]}
-        {:des "Launch mode -> m (Open Omnifocus)" :rules [:launch_mode [:##m [:km "open: Omnifocus"]]]}
-        {:des "Launch mode -> n (Open Evernote)" :rules [:launch_mode [:##n [:km "open: Evernote"]]]}
-        {:des "Launch mode -> e (Open Editor)" :rules [:launch_mode [:##e [:km "open: Editor"]]]}
-        {:des "Launch mode -> s (Open Snippets)" :rules [:launch_mode [:##s :!TSC2]]}
-        {:des "Launch mode -> t (Open Teams)" :rules [:launch_mode [:##t [:km "open: Teams"]]]}
-        {:des "Launch mode -> w (Open BitWarden)" :rules [:launch_mode [:##w [:km "open: BitWarden"]]]}
-        {:des "Launch mode -> z (Open Franz)" :rules [:launch_mode [:##z [:km "open: Franz"]]]}
-        {:des "Launch mode -> caps_lock (Open Franz)" :rules [:launch_mode [:##caps_lock [:km "open: Finder"]]]}
-
         {:des "Semicolon Mode (;+')(global cross application shortcuts)" :rules [[{:sim [:semicolon :quote]
                                      :simo {:interrupt true
                                             :dorder :insensitive
@@ -420,10 +443,23 @@
         ;                                     :uorder :insensitive
         ;                                     :afterup {:set ["focus_mode" 0]}}} {:set ["focus_mode" 1]}]]}
         ; {:des "FOCUS mode h -> (Omnifocus/Keyboard Maestro [H] (vim left))" :rules [:focus_mode [:##h [:km "hotkey: focus_mode+h"]]]}
-        ; {:des "FOCUS mode j -> (Omnifocus/Keyboard Maestro [J] (vim center))" :rules [:focus_mode [:##j [:km "hotkey: focus_mode+j"]]]}
-        ; {:des "FOCUS mode l -> (Omnifocus/Keyboard Maestro [L] (vim right))" :rules [:focus_mode [:##l [:km "hotkey: focus_mode+l"]]]}
+      ; {:des "FOCUS mode j -> (Omnifocus/Keyboard Maestro [J] (vim center))" :rules [:focus_mode [:##j [:km "hotkey: focus_mode+j"]]]}
+      ; {:des "FOCUS mode l -> (Omnifocus/Keyboard Maestro [L] (vim right))" :rules [:focus_mode [:##l [:km "hotkey: focus_mode+l"]]]}
 
-  ]
-  :simlayer-threshold 150
+]
+:simlayer-threshold 150
+;; !  | means mandatory
+;; #  | means optional
+;; C  | left_command
+;; T  | left_control
+;; O  | left_option
+;; S  | left_shift
+;; F  | fn
+;; Q  | right_command
+;; W  | right_control
+;; E  | right_option
+;; R  | right_shift
+;; !! | mandatory command + control + optional + shift (hyper)
+;; ## | optional any
 }
 
