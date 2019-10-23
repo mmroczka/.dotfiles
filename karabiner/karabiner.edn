@@ -217,8 +217,8 @@
 
         {:des "VIM: IN mode"
            :rules [:vim_in_mode
-                    [:w [:!Oleft_arrow :!SOright_arrow :delete_or_backspace ["vim_change_mode" 0] ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]] ["vim_delete_mode" 1]]
-                    [:w [:!Oleft_arrow :!SOright_arrow :delete_or_backspace ["vim_change_mode" 0] ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]] ["vim_change_mode" 1]]
+                    [:w [:!Oleft_arrow :!SOright_arrow :delete_or_backspace ["vim_change_mode" 0] ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 0] :!SCOTf20] ["vim_delete_mode" 1]]
+                    [:w [:!Oleft_arrow :!SOright_arrow :delete_or_backspace ["vim_change_mode" 0] ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 0] :!SCOTf20] ["vim_change_mode" 1]]
                     ]}
 
         {:des "VIM: GO TO mode"
@@ -286,7 +286,6 @@
                     [:!Td [:down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow ]] ; go down 15 lines
                     [:e :!Oright_arrow]
 
-                    ; [:g [:!Cup_arrow ["vim_go_to_mode" 0]] ["vim_go_to_mode" 1]]  ; double tap g to jump to the top of the file
                     [:g ["vim_go_to_mode" 1]]
 
                     [:!Sg :!Cdown_arrow]

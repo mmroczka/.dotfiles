@@ -6214,8 +6214,11 @@
           }, {
             "set_variable" : {
               "name" : "vim_mode",
-              "value" : 1
+              "value" : 0
             }
+          }, {
+            "key_code" : "f20",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "vim_in_mode",
@@ -6257,8 +6260,11 @@
           }, {
             "set_variable" : {
               "name" : "vim_mode",
-              "value" : 1
+              "value" : 0
             }
+          }, {
+            "key_code" : "f20",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "vim_in_mode",
