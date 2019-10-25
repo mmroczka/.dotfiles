@@ -178,7 +178,7 @@
                    [:s :!SOTleft_arrow] ; shrink
 
                    [:i [["vim_navigation_mode" 0] ["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf20]]
-                   [:left_command [["vim_navigation_mode" 0] ["vim_mode" 1] ["vim_visual_mode" 0] :!SCOTf19]]
+                   [:left_command nil nil {:afterup [["vim_navigation_mode" 0] ["vim_mode" 1] ["vim_visual_mode" 0] :!SCOTf19] :held :left_command :repeat false :halt true :params{:alone 150 :held 200}}]
                   ]}
 
         {:des "VIM: change mode"
@@ -266,7 +266,7 @@
                     [:!Sgrave_accent_and_tilde [:!Sright_arrow :!Cc :delete_or_backspace [:km "toggleCaseClipboardContentsThenPaste"]]]
                     [:!Rgrave_accent_and_tilde [:!Sright_arrow :!Cc :delete_or_backspace [:km "toggleCaseClipboardContentsThenPaste"]]]
 
-                    [:left_command [["vim_navigation_mode" 1] ["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf17]]
+                    [:left_command nil nil {:afterup [["vim_navigation_mode" 1] ["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf17] :held :left_command :repeat false :halt true :params{:alone 150 :held 200}}]
                     [:slash [["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf20 :!Cf]]
                     [:!R4 :!Cright_arrow]
                     [:!S6 :!Cleft_arrow]
@@ -278,6 +278,7 @@
 
                     [:!Sa [:!Cright_arrow ["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf20]]
                     [:!Ra [:!Cright_arrow ["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf20]] ; make sure it works with right shift too
+                    [:!Ta [:!SCright_arrow :!Cc [:km "incrementClipboardContentsFirstNumberThenPaste"]]]
                     [:b :!Oleft_arrow]
                     [:c ["vim_change_mode" 1]] ; single tap c to enter change mode
                     [:d ["vim_delete_mode" 1]]
@@ -328,6 +329,7 @@
                     ]
                     [:w nil nil {:held :!Oright_arrow :afterup [:!Oright_arrow :right_arrow] :params{:held 150}}]
                     [:x :delete_forward]
+                    [:!Tx [:!SCright_arrow :!Cc [:km "decrementClipboardContentsFirstNumberThenPaste"]]]
                     [:!Sx :delete_or_backspace]
                     [:!Rx :delete_or_backspace]
                     [:!Sy [:!SCright_arrow :!Cc :left_arrow]]

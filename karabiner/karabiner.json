@@ -3809,10 +3809,10 @@
           } ],
           "type" : "basic"
         }, {
-          "from" : {
+          "to_if_held_down" : [ {
             "key_code" : "left_command"
-          },
-          "to" : [ {
+          } ],
+          "to_after_key_up" : [ {
             "set_variable" : {
               "name" : "vim_navigation_mode",
               "value" : 0
@@ -3831,6 +3831,13 @@
             "key_code" : "f19",
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
+          "parameters" : {
+            "basic.to_if_alone_timeout_milliseconds" : 150,
+            "basic.to_if_held_down_threshold_milliseconds" : 200
+          },
+          "from" : {
+            "key_code" : "left_command"
+          },
           "conditions" : [ {
             "name" : "vim_navigation_mode",
             "value" : 1,
@@ -8510,10 +8517,10 @@
           } ],
           "type" : "basic"
         }, {
-          "from" : {
+          "to_if_held_down" : [ {
             "key_code" : "left_command"
-          },
-          "to" : [ {
+          } ],
+          "to_after_key_up" : [ {
             "set_variable" : {
               "name" : "vim_navigation_mode",
               "value" : 1
@@ -8532,6 +8539,13 @@
             "key_code" : "f17",
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
+          "parameters" : {
+            "basic.to_if_alone_timeout_milliseconds" : 150,
+            "basic.to_if_held_down_threshold_milliseconds" : 200
+          },
+          "from" : {
+            "key_code" : "left_command"
+          },
           "conditions" : [ {
             "name" : "vim_replace_single_letter_mode",
             "value" : 1,
@@ -8842,6 +8856,36 @@
           }, {
             "key_code" : "f20",
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "vim_replace_single_letter_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_replace_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "a",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_command", "left_shift" ]
+          }, {
+            "key_code" : "c",
+            "modifiers" : [ "left_command" ]
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"incrementClipboardContentsFirstNumberThenPaste\"'"
           } ],
           "conditions" : [ {
             "name" : "vim_replace_single_letter_mode",
@@ -9946,6 +9990,36 @@
           },
           "to" : [ {
             "key_code" : "delete_forward"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_replace_single_letter_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_replace_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "x",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_command", "left_shift" ]
+          }, {
+            "key_code" : "c",
+            "modifiers" : [ "left_command" ]
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"decrementClipboardContentsFirstNumberThenPaste\"'"
           } ],
           "conditions" : [ {
             "name" : "vim_replace_single_letter_mode",

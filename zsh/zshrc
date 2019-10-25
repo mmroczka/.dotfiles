@@ -19,16 +19,6 @@ noproxy() {
     unset NO_PROXY
 }
 
-NO_PROXY="github.build.ge.com, localhost, 127.0.0.1, api.grc-apps.svc.ice.ge.com,login.grc-apps.svc.ice.ge.com,loggregator.grc-apps.svc.ice.ge.com,uaa.grc-apps.svc.ice.ge.com,console.grc-apps.svc.ice.ge.com,grc-apps.svc.ice.ge.com"
-
-# Ping google.com. If command fails it's because we're behind the proxy (or potentially just have no internet), so set the GE network proxy
-noproxy
-wget -q --spider https://google.com
-if [[ $? != 0 ]]; then
-    echo "On GE network. Setting proxy"
-    proxy
-fi
-
 
 # Package Manager
 source ~/.config/antigen.zsh
@@ -57,7 +47,7 @@ export ZSH=/Users/$USER/.oh-my-zsh
 export PATH=$HOME/bin:/usr/local/bin:~/.composer/vendor/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+# export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # export VISUAL=nvim
 # export EDITOR="$VISUAL"
 # export NVM_AUTO_USE=true
@@ -180,7 +170,11 @@ if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
 fi
 
+# Source makana if it exists
 if [ -d ~/Code/salesforce/makana-platform/ ]; then
     source ~/Code/salesforce/makana-platform/bin/makana
 fi
+
+# Add docker autocompletion to bash
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
