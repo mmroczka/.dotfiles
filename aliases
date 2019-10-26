@@ -1,5 +1,6 @@
 # Aliases
 # ls
+alias camera='sudo killall AppleCameraAssistant;sudo killall VDCAssistant'
 alias ls='exa'
 alias ll='exa -l'
 alias lll='exa -l | less'
