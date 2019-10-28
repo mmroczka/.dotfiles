@@ -220,6 +220,65 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Double colon triggers emoji search",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "semicolon",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "delete_or_backspace"
+          }, {
+            "key_code" : "spacebar",
+            "modifiers" : [ "left_command", "left_control" ]
+          }, {
+            "set_variable" : {
+              "name" : "emoji_mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "emoji_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_if_alone" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "to_delayed_action" : {
+            "to_if_invoked" : [ {
+              "set_variable" : {
+                "name" : "emoji_mode",
+                "value" : 0
+              }
+            } ],
+            "to_if_canceled" : [ {
+              "set_variable" : {
+                "name" : "emoji_mode",
+                "value" : 0
+              }
+            } ]
+          },
+          "from" : {
+            "key_code" : "semicolon",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "emoji_mode",
+              "value" : 1
+            }
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "spacebar_mode",
         "manipulators" : [ {
           "from" : {
