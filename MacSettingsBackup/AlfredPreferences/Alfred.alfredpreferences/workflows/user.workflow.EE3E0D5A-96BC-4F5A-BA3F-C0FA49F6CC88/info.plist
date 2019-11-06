@@ -78,6 +78,29 @@
 				<false/>
 			</dict>
 		</array>
+		<key>686E0253-60E5-4AAE-AD94-65DBFD5769FB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>82301AFA-8982-4D55-9D04-9790E094DE33</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>7CA423A3-04EC-427D-A864-A120A3FD6800</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>7CA423A3-04EC-427D-A864-A120A3FD6800</key>
 		<array>
 			<dict>
@@ -157,6 +180,55 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>giphy</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>Searching Giphy...</string>
+				<key>script</key>
+				<string>./target/release/giphy-alfredworkflow</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>./giphy-alfredworkflow</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Giphy</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>63178F25-7718-4704-A5A4-A092D70B1D7A</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string>{query}</string>
 				<key>variables</key>
@@ -187,7 +259,7 @@
 			<key>uid</key>
 			<string>8E42C033-455B-4903-9159-27D8D3714DD1</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -232,53 +304,6 @@
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>9B2E595D-F5A2-418B-91DD-370480080083</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>giphy</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<false/>
-				<key>queuedelaymode</key>
-				<integer>1</integer>
-				<key>queuemode</key>
-				<integer>2</integer>
-				<key>runningsubtext</key>
-				<string>Searching Giphy...</string>
-				<key>script</key>
-				<string>./target/release/giphy-alfredworkflow</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>./giphy-alfredworkflow</string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Search Giphy</string>
-				<key>type</key>
-				<integer>8</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>63178F25-7718-4704-A5A4-A092D70B1D7A</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -337,6 +362,55 @@
 			<string>7CA423A3-04EC-427D-A864-A120A3FD6800</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>gif</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>Searching Giphy...</string>
+				<key>script</key>
+				<string>./target/release/giphy-alfredworkflow</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>./giphy-alfredworkflow</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Giphy</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>686E0253-60E5-4AAE-AD94-65DBFD5769FB</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -409,9 +483,16 @@
 		<key>63178F25-7718-4704-A5A4-A092D70B1D7A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>20</integer>
+			<integer>10</integer>
 			<key>ypos</key>
-			<integer>200</integer>
+			<integer>125</integer>
+		</dict>
+		<key>686E0253-60E5-4AAE-AD94-65DBFD5769FB</key>
+		<dict>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>310</integer>
 		</dict>
 		<key>7CA423A3-04EC-427D-A864-A120A3FD6800</key>
 		<dict>

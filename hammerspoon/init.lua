@@ -67,17 +67,17 @@ end
 
 hs.loadSpoon("Lunette")
 
--- customBindings = {
---   leftHalf = {
---     {{"Q", "W"}, "E"},
---     {{"cmd", "alt"}, "left"},
---   },
---   rightHalf = {
---     {{"A", "S"}, "D"},
---   },
---   undo = false,
---   redo = false
--- }
+customBindings = {
+  leftHalf = {
+    {{"Q", "W"}, "E"},
+    {{"cmd", "alt"}, "left"},
+  },
+  rightHalf = {
+    {{"A", "S"}, "D"},
+  },
+  undo = false,
+  redo = false
+}
 
 spoon.Lunette:bindHotkeys()
 -- spoon.Lunette:bindHotkeys(customBindings)
