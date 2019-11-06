@@ -1475,6 +1475,60 @@
           }
         } ]
       }, {
+        "description" : "Left Shift + Left Cmd -> VIM Navigation mode",
+        "manipulators" : [ {
+          "to_if_alone" : [ {
+            "key_code" : "f17",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          }, {
+            "set_variable" : {
+              "name" : "vim_navigation_mode",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_visual_mode",
+              "value" : 0
+            }
+          } ],
+          "from" : {
+            "key_code" : "left_command",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "left_command",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Left cmd -> Simulatneously press j and q which triggers VimSpoon naviagtion in Hammerspoon",
         "manipulators" : [ {
           "to_if_alone" : [ {
@@ -3857,46 +3911,6 @@
             "key_code" : "f20",
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
-          "conditions" : [ {
-            "name" : "vim_navigation_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          }, {
-            "name" : "vim_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          } ],
-          "type" : "basic"
-        }, {
-          "to_if_held_down" : [ {
-            "key_code" : "left_command"
-          } ],
-          "to_after_key_up" : [ {
-            "set_variable" : {
-              "name" : "vim_navigation_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_mode",
-              "value" : 1
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_visual_mode",
-              "value" : 0
-            }
-          }, {
-            "key_code" : "f19",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "parameters" : {
-            "basic.to_if_alone_timeout_milliseconds" : 150,
-            "basic.to_if_held_down_threshold_milliseconds" : 200
-          },
-          "from" : {
-            "key_code" : "left_command"
-          },
           "conditions" : [ {
             "name" : "vim_navigation_mode",
             "value" : 1,
@@ -8841,50 +8855,6 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"toggleCaseClipboardContentsThenPaste\"'"
           } ],
-          "conditions" : [ {
-            "name" : "vim_replace_single_letter_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_replace_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "to_if_held_down" : [ {
-            "key_code" : "left_command"
-          } ],
-          "to_after_key_up" : [ {
-            "set_variable" : {
-              "name" : "vim_navigation_mode",
-              "value" : 1
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_visual_mode",
-              "value" : 0
-            }
-          }, {
-            "key_code" : "f17",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "parameters" : {
-            "basic.to_if_alone_timeout_milliseconds" : 150,
-            "basic.to_if_held_down_threshold_milliseconds" : 200
-          },
-          "from" : {
-            "key_code" : "left_command"
-          },
           "conditions" : [ {
             "name" : "vim_replace_single_letter_mode",
             "value" : 1,

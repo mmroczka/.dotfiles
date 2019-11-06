@@ -117,6 +117,17 @@
         ; https://github.com/dbalatero/VimMode.spoon
         ; https://github.com/calvinwyoung/.dotfiles/blob/master/darwin/hammerspoon/flux.lua
 
+      {:des "Left Shift + Left Cmd -> VIM Navigation mode"
+               :rules [[:!Sleft_command :!Sleft_command nil {:alone [:!SCOTf17
+                                                                     ["vim_navigation_mode" 1]
+                                                                     ["vim_mode" 0]
+                                                                     ["vim_visual_mode" 0]
+                                                                     ["vim_visual_block_mode" 0]
+                                                                     ["vim_delete_mode" 0]
+                                                                     ["vim_go_to_mode" 0]
+                                                                     ["vim_go_to_visual_mode" 0]
+                                                                    ]}]]}
+
       {:des "Left cmd -> Simulatneously press j and q which triggers VimSpoon naviagtion in Hammerspoon"
                :rules [[:condi :!vim_mode :!vim_navigation_mode]
                        [:left_command :left_command nil {:alone [["vim_mode" 1]
@@ -180,7 +191,7 @@
                    [:s :!SOTleft_arrow] ; shrink
 
                    [:i [["vim_navigation_mode" 0] ["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf20]]
-                   [:left_command nil nil {:afterup [["vim_navigation_mode" 0] ["vim_mode" 1] ["vim_visual_mode" 0] :!SCOTf19] :held :left_command :repeat false :halt true :params{:alone 150 :held 200}}]
+                   ; [:left_command nil nil {:afterup [["vim_navigation_mode" 0] ["vim_mode" 1] ["vim_visual_mode" 0] :!SCOTf19] :held :left_command :repeat false :halt true :params{:alone 150 :held 200}}]
                   ]}
 
         {:des "VIM: change mode"
@@ -282,7 +293,7 @@
                     [:!Sgrave_accent_and_tilde [:!Sright_arrow :!Cc :delete_or_backspace [:km "toggleCaseClipboardContentsThenPaste"]]]
                     [:!Rgrave_accent_and_tilde [:!Sright_arrow :!Cc :delete_or_backspace [:km "toggleCaseClipboardContentsThenPaste"]]]
 
-                    [:left_command nil nil {:afterup [["vim_navigation_mode" 1] ["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf17] :held :left_command :repeat false :halt true :params{:alone 150 :held 200}}]
+                    ; [:left_command nil nil {:afterup [["vim_navigation_mode" 1] ["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf17] :held :left_command :repeat false :halt true :params{:alone 150 :held 200}}]
                     [:slash [["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf20 :!Cf]]
                     [:!R4 :!Cright_arrow]
                     [:!S6 :!Cleft_arrow]
