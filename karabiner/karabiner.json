@@ -3977,6 +3977,47 @@
             "type" : "variable_unless"
           } ],
           "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s"
+          },
+          "to" : [ {
+            "key_code" : "left_arrow",
+            "modifiers" : [ "left_command", "left_shift" ]
+          }, {
+            "key_code" : "c",
+            "modifiers" : [ "left_command" ]
+          }, {
+            "key_code" : "right_arrow"
+          }, {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_command", "left_shift" ]
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"surroundWithChange\"'"
+          }, {
+            "set_variable" : {
+              "name" : "vim_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
+          }, {
+            "key_code" : "f20",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "vim_change_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
         } ]
       }, {
         "description" : "VIM: delete mode",
@@ -6594,7 +6635,7 @@
             "key_code" : "f20",
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"surroundWith\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"surroundWithNewLine\"'"
           } ],
           "conditions" : [ {
             "name" : "vim_yank_mode",
@@ -9241,6 +9282,11 @@
               "name" : "vim_change_mode",
               "value" : 1
             }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 0
+            }
           } ],
           "conditions" : [ {
             "name" : "vim_replace_single_letter_mode",
@@ -9253,10 +9299,6 @@
           }, {
             "name" : "vim_mode",
             "value" : 1,
-            "type" : "variable_if"
-          }, {
-            "name" : "vim_mode",
-            "value" : 0,
             "type" : "variable_if"
           } ],
           "type" : "basic"

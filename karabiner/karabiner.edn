@@ -198,7 +198,7 @@
            :rules [[:condi :!vim_in_mode :vim_change_mode]
                     [:i ["vim_in_mode" 1]]
                     [:c [:!Cleft_arrow :!SCright_arrow :delete_or_backspace ["vim_change_mode" 0] ["vim_in_mode" 0]]]
-                    ; [:s [:!SCleft_arrow :!Cc :right_arrow :!SCright_arrow :!Cc :left_arrow :!Cleft_arrow :!SCright_arrow ["vim_change_mode" 0] ["vim_in_mode" 0]]]
+                    [:s [:!SCleft_arrow :!Cc :right_arrow :!SCright_arrow [:km "surroundWithChange"] ["vim_change_mode" 0] ["vim_in_mode" 0] :!SCOTf20]]
                     ]}
 
         {:des "VIM: delete mode"
@@ -244,7 +244,7 @@
                     [:y [:!Cleft_arrow :!CSright_arrow :!Cc :left_arrow ["vim_yank_mode" 0] ["vim_mode" 1]]]
 
 
-                    [:s [:!Cleft_arrow :!SCright_arrow :!Cc ["vim_surround_mode" 0] ["vim_yank_mode" 0] :!SCOTf20 [:km "surroundWith"] ] ["vim_surround_mode" 1]]  ; double > to indent line or at least trigger SHIFT+CMD+]
+                    [:s [:!Cleft_arrow :!SCright_arrow :!Cc ["vim_surround_mode" 0] ["vim_yank_mode" 0] :!SCOTf20 [:km "surroundWithNewLine"] ] ["vim_surround_mode" 1]]  ; double > to indent line or at least trigger SHIFT+CMD+]
                     [:s ["vim_surround_mode" 1] nil {:delayed {:invoked ["vim_surround_mode" 0] :canceled ["vim_surround_mode" 0]}}]
                     ]}
 
@@ -307,7 +307,7 @@
                     [:!Ra [:!Cright_arrow ["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf20]] ; make sure it works with right shift too
                     [:!Ta [:!SCright_arrow :!Cc [:km "incrementClipboardContentsFirstNumberThenPaste"]]]
                     [:b :!Oleft_arrow]
-                    [:c ["vim_change_mode" 1] ["vim_mode" 0]] ; single tap c to enter change mode
+                    [:c [["vim_change_mode" 1] ["vim_mode" 0]]] ; single tap c to enter change mode
                     [:d ["vim_delete_mode" 1]]
                     [:!Sd [:!SCright_arrow :delete_or_backspace]]
                     [:!Rd [:!SCright_arrow :delete_or_backspace]] ; make above also work with right shift
