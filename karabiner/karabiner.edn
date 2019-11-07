@@ -244,7 +244,7 @@
                     [:y [:!Cleft_arrow :!CSright_arrow :!Cc :left_arrow ["vim_yank_mode" 0] ["vim_mode" 1]]]
 
 
-                    [:s [:!Cleft_arrow :!SCright_arrow :!Cc ["vim_surround_mode" 0] ["vim_yank_mode" 0] :!SCOTf20 [:km "surroundWithNewLine"] ] ["vim_surround_mode" 1]]  ; double > to indent line or at least trigger SHIFT+CMD+]
+                    [:s [:!Cleft_arrow :!SCright_arrow :!Cc ["vim_surround_mode" 0] ["vim_yank_mode" 0] :!SCOTf20 [:km "surroundWith"] ] ["vim_surround_mode" 1]]  ; double 's' to surround sentence with <char>
                     [:s ["vim_surround_mode" 1] nil {:delayed {:invoked ["vim_surround_mode" 0] :canceled ["vim_surround_mode" 0]}}]
                     ]}
 
@@ -337,6 +337,7 @@
                     [:!Sr [["vim_replace_mode" 1] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf20]]
                     [:!Rr [["vim_replace_mode" 1] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf20]]
                     [:!Tr :!SCz]
+
                     [:u :!Cz]
                     [:!Tu [:up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow ]] ; go up 15 lines
                     [:v [["vim_mode" 0] ["vim_visual_mode" 1] :!SCOTf18]]
@@ -410,9 +411,9 @@
                     ; lowercase deadkeys
                     [:a :vk_none] [:c :vk_none] [:d :vk_none] [:f :vk_none] [:m :vk_none] [:n :vk_none] [:o :vk_none] [:q :vk_none] [:r :vk_none] [:s :vk_none] [:t :vk_none] [:u :vk_none] [:z :vk_none]
                     ; uppercase deadkeys with left shift
-                    [:!Sa :vk_none] [:!Sb :vk_none] [:!Sc :vk_none] [:!Sd :vk_none] [:!Se :vk_none] [:!Sf :vk_none] [:!Sh :vk_none] [:!Si :vk_none] [:!Sj :vk_none] [:!Sk :vk_none] [:!Sl :vk_none] [:!Sm :vk_none] [:!Sn :vk_none] [:!So :vk_none] [:!Sp :vk_none] [:!Sq :vk_none] [:!Sr :vk_none] [:!Ss :vk_none] [:!St :vk_none] [:!Su :vk_none] [:!Sw :vk_none] [:!Sy :vk_none] [:!Sz :vk_none]
+                    [:!Sa :vk_none] [:!Sb :vk_none] [:!Sc :vk_none] [:!Sd :vk_none] [:!Se :vk_none] [:!Sf :vk_none] [:!Sh :vk_none] [:!Si :vk_none] [:!Sj :vk_none] [:!Sk :vk_none] [:!Sl :vk_none] [:!Sm :vk_none] [:!Sn :vk_none] [:!So :vk_none] [:!Sp :vk_none] [:!Sq :vk_none] [:!Sr :vk_none] [:!St :vk_none] [:!Su :vk_none] [:!Sw :vk_none] [:!Sy :vk_none] [:!Sz :vk_none]
                     ; uppercase deadkeys with right shift
-                    [:!Ra :vk_none] [:!Rb :vk_none] [:!Rc :vk_none] [:!Rd :vk_none] [:!Re :vk_none] [:!Rf :vk_none] [:!Rh :vk_none] [:!Ri :vk_none] [:!Rj :vk_none] [:!Rk :vk_none] [:!Rl :vk_none] [:!Rm :vk_none] [:!Rn :vk_none] [:!Ro :vk_none] [:!Rp :vk_none] [:!Rq :vk_none] [:!Rr :vk_none] [:!Rs :vk_none] [:!Rt :vk_none] [:!Ru :vk_none] [:!Rw :vk_none] [:!Ry :vk_none] [:!Rz :vk_none]
+                    [:!Ra :vk_none] [:!Rb :vk_none] [:!Rc :vk_none] [:!Rd :vk_none] [:!Re :vk_none] [:!Rf :vk_none] [:!Rh :vk_none] [:!Ri :vk_none] [:!Rj :vk_none] [:!Rk :vk_none] [:!Rl :vk_none] [:!Rm :vk_none] [:!Rn :vk_none] [:!Ro :vk_none] [:!Rp :vk_none] [:!Rq :vk_none] [:!Rr :vk_none] [:!Rt :vk_none] [:!Ru :vk_none] [:!Rw :vk_none] [:!Ry :vk_none] [:!Rz :vk_none]
                     ; numbers deadkeys
                     [:1 :vk_none] [:2 :vk_none] [:3 :vk_none] [:4 :vk_none] [:5 :vk_none] [:6 :vk_none] [:7 :vk_none] [:8 :vk_none] [:9 :vk_none] [:comma :vk_none] [:period :vk_none] [:slash :vk_none]
                     ; special key deadkeys with left shift
@@ -438,6 +439,10 @@
                     [:k :!Sup_arrow]
                     [:l :!Sright_arrow]
                     [:p [:!Cv ["vim_mode" 1] ["vim_visual_mode" 0] :!SCOTf19]]
+
+                    [:!Ss [:!Cc [:km "surroundWith"] ["vim_mode" 0] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf20]]
+                    [:!Rs [:!Cc [:km "surroundWith"] ["vim_mode" 0] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf20]]
+
                     [:v [["vim_mode" 1] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf19]]
                     [:!Sv [["vim_mode" 0]
                            ["vim_visual_mode" 0]
