@@ -9275,6 +9275,30 @@
           "type" : "basic"
         }, {
           "from" : {
+            "key_code" : "b",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "page_up"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_replace_single_letter_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_replace_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "c"
           },
           "to" : [ {
@@ -9439,6 +9463,30 @@
           "to" : [ {
             "key_code" : "right_arrow",
             "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "name" : "vim_replace_single_letter_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_replace_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "page_down"
           } ],
           "conditions" : [ {
             "name" : "vim_replace_single_letter_mode",

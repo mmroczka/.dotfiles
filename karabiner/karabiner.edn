@@ -307,12 +307,14 @@
                     [:!Ra [:!Cright_arrow ["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf20]] ; make sure it works with right shift too
                     [:!Ta [:!SCright_arrow :!Cc [:km "incrementClipboardContentsFirstNumberThenPaste"]]]
                     [:b :!Oleft_arrow]
+                    [:!Tb :page_up]
                     [:c [["vim_change_mode" 1] ["vim_mode" 0]]] ; single tap c to enter change mode
                     [:d ["vim_delete_mode" 1]]
                     [:!Sd [:!SCright_arrow :delete_or_backspace]]
                     [:!Rd [:!SCright_arrow :delete_or_backspace]] ; make above also work with right shift
                     [:!Td [:down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow ]] ; go down 15 lines
                     [:e :!Oright_arrow]
+                    [:!Tf :page_down]
 
                     [:g ["vim_go_to_mode" 1]]
 
