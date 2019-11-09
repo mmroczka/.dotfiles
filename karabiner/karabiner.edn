@@ -197,7 +197,7 @@
         {:des "VIM: change mode"
            :rules [[:condi :!vim_in_mode :vim_change_mode]
                     [:i ["vim_in_mode" 1]]
-                    [:c [:!Cleft_arrow :!SCright_arrow :delete_or_backspace ["vim_change_mode" 0] ["vim_in_mode" 0]]]
+                    [:c [:!Cleft_arrow :!SCright_arrow :delete_or_backspace ["vim_change_mode" 0] ["vim_in_mode" 0] :!SCOTf20]]
                     [:s [:!SCleft_arrow :!Cc :right_arrow :!SCright_arrow [:km "surroundWithChange"] ["vim_change_mode" 0] ["vim_in_mode" 0] :!SCOTf20]]
                     ]}
 
@@ -283,15 +283,20 @@
                     ; numbers deadkeys
                     [:1 :vk_none] [:2 :vk_none] [:3 :vk_none] [:4 :vk_none] [:5 :vk_none] [:6 :vk_none] [:7 :vk_none] [:8 :vk_none] [:9 :vk_none] [:comma :vk_none] [:period :vk_none]
                     ; special key deadkeys with left shift
-                    [:!S1 :vk_none] [:!S2 :vk_none] [:!S3 :vk_none] [:!S4 :vk_none] [:!S5 :vk_none] [:!S7 :vk_none] [:!S8 :vk_none] [:!S9 :vk_none] [:!Sslash :vk_none]
+                    [:!S1 :vk_none] [:!S2 :vk_none] [:!S4 :vk_none] [:!S5 :vk_none] [:!S7 :vk_none] [:!S9 :vk_none] [:!Sslash :vk_none]
                     ; special key deadkeys with right shift
-                    [:!R1 :vk_none] [:!R2 :vk_none] [:!R3 :vk_none] [:!R5 :vk_none] [:!R6 :vk_none] [:!R7 :vk_none] [:!R8 :vk_none] [:!R9 :vk_none] [:!Rcomma :vk_none] [:!Rperiod :vk_none] [:!Rslash :vk_none]
+                    [:!R1 :vk_none] [:!R2 :vk_none] [:!R5 :vk_none] [:!R6 :vk_none] [:!R7 :vk_none] [:!R9 :vk_none] [:!Rcomma :vk_none] [:!Rperiod :vk_none] [:!Rslash :vk_none]
                     ; DEAD KEYS (KEYS I PURPOSEFULLY WANT TO NOT WORK OR DO ANYTHING WHILE IN THIS MODE)
                     [:left_arrow :vk_none] [:down_arrow :vk_none] [:up_arrow :vk_none] [:right_arrow :vk_none] [:spacebar :vk_none]
                     ; ============================================================================================================
 
                     [:!Sgrave_accent_and_tilde [:!Sright_arrow :!Cc :delete_or_backspace [:km "toggleCaseClipboardContentsThenPaste"]]]
                     [:!Rgrave_accent_and_tilde [:!Sright_arrow :!Cc :delete_or_backspace [:km "toggleCaseClipboardContentsThenPaste"]]]
+                    [:!S3 [:!Oleft_arrow :!SOright_arrow :!Cc [:km "findNext"]]] ; use '#' to find next occurence of word under the cursor
+                    [:!R3 [:!Oleft_arrow :!SOright_arrow :!Cc [:km "findNext"]]] ; use '#' to find next occurence of word under the cursor
+
+                    [:!S8 [:!Oleft_arrow :!SOright_arrow :!Cc [:km "findPrevious"]]] ; use '*' to find the previous occurence of word under the cursor
+                    [:!R8 [:!Oleft_arrow :!SOright_arrow :!Cc [:km "findPrevious"]]] ; use '*' to find the previous occurence of word under the cursor
 
                     ; [:left_command nil nil {:afterup [["vim_navigation_mode" 1] ["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf17] :held :left_command :repeat false :halt true :params{:alone 150 :held 200}}]
                     [:slash [["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf20 :!Cf]]
@@ -374,9 +379,9 @@
                    ; lowercase deadkeys
                    [:a :vk_none] [:b :vk_none] [:c :vk_none] [:e :vk_none] [:f :vk_none] [:h :vk_none] [:l :vk_none] [:m :vk_none] [:n :vk_none] [:o :vk_none] [:p :vk_none] [:q :vk_none] [:r :vk_none] [:s :vk_none] [:t :vk_none] [:u :vk_none] [:w :vk_none] [:z :vk_none]
                    ; uppercase deadkeys with left shift
-                   [:!Sa :vk_none] [:!Sb :vk_none] [:!Sc :vk_none] [:!Sd :vk_none] [:!Se :vk_none] [:!Sf :vk_none] [:!Sh :vk_none] [:!Si :vk_none] [:!Sj :vk_none] [:!Sk :vk_none] [:!Sl :vk_none] [:!Sm :vk_none] [:!Sn :vk_none] [:!So :vk_none] [:!Sp :vk_none] [:!Sq :vk_none] [:!Sr :vk_none] [:!Ss :vk_none] [:!St :vk_none] [:!Su :vk_none] [:!Sv :vk_none] [:!Sw :vk_none] [:!Sy :vk_none] [:!Sz :vk_none]
+                   [:!Sa :vk_none] [:!Sb :vk_none] [:!Sc :vk_none] [:!Sd :vk_none] [:!Se :vk_none] [:!Sf :vk_none] [:!Sh :vk_none] [:!Si :vk_none] [:!Sj :vk_none] [:!Sk :vk_none] [:!Sl :vk_none] [:!Sm :vk_none] [:!Sn :vk_none] [:!So :vk_none] [:!Sp :vk_none] [:!Sq :vk_none] [:!Sr :vk_none] [:!St :vk_none] [:!Su :vk_none] [:!Sv :vk_none] [:!Sw :vk_none] [:!Sy :vk_none] [:!Sz :vk_none]
                    ; uppercase deadkeys with right shift
-                   [:!Ra :vk_none] [:!Rb :vk_none] [:!Rc :vk_none] [:!Rd :vk_none] [:!Re :vk_none] [:!Rf :vk_none] [:!Rh :vk_none] [:!Ri :vk_none] [:!Rj :vk_none] [:!Rk :vk_none] [:!Rl :vk_none] [:!Rm :vk_none] [:!Rn :vk_none] [:!Ro :vk_none] [:!Rp :vk_none] [:!Rq :vk_none] [:!Rr :vk_none] [:!Rs :vk_none] [:!Rt :vk_none] [:!Ru :vk_none] [:!Rv :vk_none] [:!Rw :vk_none] [:!Rx :vk_none] [:!Ry :vk_none] [:!Rz :vk_none]
+                   [:!Ra :vk_none] [:!Rb :vk_none] [:!Rc :vk_none] [:!Rd :vk_none] [:!Re :vk_none] [:!Rf :vk_none] [:!Rh :vk_none] [:!Ri :vk_none] [:!Rj :vk_none] [:!Rk :vk_none] [:!Rl :vk_none] [:!Rm :vk_none] [:!Rn :vk_none] [:!Ro :vk_none] [:!Rp :vk_none] [:!Rq :vk_none] [:!Rr :vk_none] [:!Rt :vk_none] [:!Ru :vk_none] [:!Rv :vk_none] [:!Rw :vk_none] [:!Rx :vk_none] [:!Ry :vk_none] [:!Rz :vk_none]
                    ; numbers deadkeys
                    [:1 :vk_none] [:2 :vk_none] [:3 :vk_none] [:4 :vk_none] [:5 :vk_none] [:6 :vk_none] [:7 :vk_none] [:8 :vk_none] [:9 :vk_none] [:comma :vk_none] [:period :vk_none] [:slash :vk_none]
                    ; special key deadkeys with left shift
@@ -398,6 +403,8 @@
                     [:j nil nil {:held :!Sdown_arrow :afterup [:!Sdown_arrow :!SCright_arrow] :params{:held 150}} ]
                     [:!Ssemicolon [:!Cc ["vim_mode" 0] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf20 [:km "findAndReplaceClipboardContents"]]]
                     [:k nil nil {:held :!Sup_arrow :afterup [:!Sup_arrow :!SCright_arrow] :params{:held 150}}]
+                    [:!Ss [:!Cc [:km "surroundWith"] ["vim_mode" 0] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf20]]
+                    [:!Rs [:!Cc [:km "surroundWith"] ["vim_mode" 0] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf20]]
                     [:v [["vim_mode" 0] ["vim_visual_mode" 1] ["vim_visual_block_mode" 0] :!SCOTf18]]
                     [:x [:delete_forward :delete_forward ["vim_mode" 1] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf19]]
                     [:!Sx [:delete_or_backspace ["vim_mode" 1] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf19]]
