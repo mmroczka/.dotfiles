@@ -303,6 +303,7 @@
                     [:!Speriod [:!SCclose_bracket  ["vim_indent_mode" 0]] ["vim_indent_mode" 1]]  ; double > to indent line or at least trigger SHIFT+CMD+]
                     [:!Speriod ["vim_indent_mode" 1] nil {:delayed {:invoked ["vim_indent_mode" 0] :canceled ["vim_indent_mode" 0]}}]
 
+                    [:a [["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf20]
                     [:!Sa [:!Cright_arrow ["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf20]]
                     [:!Ra [:!Cright_arrow ["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf20]] ; make sure it works with right shift too
                     [:!Ta [:!SCright_arrow :!Cc [:km "incrementClipboardContentsFirstNumberThenPaste"]]]
