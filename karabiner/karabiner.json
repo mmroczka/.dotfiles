@@ -7147,27 +7147,6 @@
         "description" : "vim mode",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "a"
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "conditions" : [ {
-            "name" : "vim_replace_single_letter_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_replace_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
             "key_code" : "f"
           },
           "to" : [ {
@@ -8761,15 +8740,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "right_arrow",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "c",
-            "modifiers" : [ "left_command" ]
-          }, {
-            "key_code" : "delete_or_backspace"
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"toggleCaseClipboardContentsThenPaste\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"tildeVimCommand\"'"
           } ],
           "conditions" : [ {
             "name" : "vim_replace_single_letter_mode",
@@ -8793,15 +8764,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "right_arrow",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "c",
-            "modifiers" : [ "left_command" ]
-          }, {
-            "key_code" : "delete_or_backspace"
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"toggleCaseClipboardContentsThenPaste\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"tildeVimCommand\"'"
           } ],
           "conditions" : [ {
             "name" : "vim_replace_single_letter_mode",
@@ -8900,7 +8863,7 @@
             "key_code" : "c",
             "modifiers" : [ "left_command" ]
           }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"findNext\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"findPrevious\"'"
           } ],
           "conditions" : [ {
             "name" : "vim_replace_single_letter_mode",
@@ -8933,7 +8896,7 @@
             "key_code" : "c",
             "modifiers" : [ "left_command" ]
           }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"findNext\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"findPrevious\"'"
           } ],
           "conditions" : [ {
             "name" : "vim_replace_single_letter_mode",
@@ -9169,6 +9132,40 @@
               "name" : "vim_indent_mode",
               "value" : 1
             }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_replace_single_letter_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_replace_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "a"
+          },
+          "to" : [ {
+            "key_code" : "right_arrow"
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "key_code" : "f20",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "vim_replace_single_letter_mode",

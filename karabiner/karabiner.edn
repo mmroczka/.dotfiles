@@ -275,7 +275,7 @@
            :rules [[:condi :vim_mode :!vim_replace_mode :!vim_replace_single_letter_mode]
                   ; DEADKEYS
                     ; lowercase deadkeys
-                    [:a :vk_none] [:f :vk_none] [:m :vk_none] [:n :vk_none] [:q :vk_none] [:s :vk_none] [:t :vk_none] [:z :vk_none]
+                    [:f :vk_none] [:m :vk_none] [:n :vk_none] [:q :vk_none] [:s :vk_none] [:t :vk_none] [:z :vk_none]
                     ; uppercase deadkeys with left shift
                     [:!Sb :vk_none] [:!Sc :vk_none] [:!Se :vk_none] [:!Sf :vk_none] [:!Sh :vk_none] [:!Sk :vk_none] [:!Sl :vk_none] [:!Sm :vk_none] [:!Sn :vk_none] [:!Sq :vk_none] [:!Ss :vk_none] [:!St :vk_none] [:!Su :vk_none] [:!Sw :vk_none] [:!Sz :vk_none]
                     ; uppercase deadkeys with right shift
@@ -290,8 +290,8 @@
                     [:left_arrow :vk_none] [:down_arrow :vk_none] [:up_arrow :vk_none] [:right_arrow :vk_none] [:spacebar :vk_none]
                     ; ============================================================================================================
 
-                    [:!Sgrave_accent_and_tilde [:!Sright_arrow :!Cc :delete_or_backspace [:km "toggleCaseClipboardContentsThenPaste"]]]
-                    [:!Rgrave_accent_and_tilde [:!Sright_arrow :!Cc :delete_or_backspace [:km "toggleCaseClipboardContentsThenPaste"]]]
+                    [:!Sgrave_accent_and_tilde [:km "tildeVimCommand"]]
+                    [:!Rgrave_accent_and_tilde [:km "tildeVimCommand"]]
                     [:!S3 [:!Oleft_arrow :!SOright_arrow :!Cc [:km "findNext"]]] ; use '#' to find next occurence of word under the cursor
                     [:!R3 [:!Oleft_arrow :!SOright_arrow :!Cc [:km "findNext"]]] ; use '#' to find next occurence of word under the cursor
 
@@ -308,7 +308,7 @@
                     [:!Speriod [:!SCclose_bracket  ["vim_indent_mode" 0]] ["vim_indent_mode" 1]]  ; double > to indent line or at least trigger SHIFT+CMD+]
                     [:!Speriod ["vim_indent_mode" 1] nil {:delayed {:invoked ["vim_indent_mode" 0] :canceled ["vim_indent_mode" 0]}}]
 
-                    [:a [["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf20]
+                    [:a [:right_arrow ["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf20]]
                     [:!Sa [:!Cright_arrow ["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf20]]
                     [:!Ra [:!Cright_arrow ["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf20]] ; make sure it works with right shift too
                     [:!Ta [:!SCright_arrow :!Cc [:km "incrementClipboardContentsFirstNumberThenPaste"]]]
