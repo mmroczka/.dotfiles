@@ -2139,7 +2139,15 @@
             "any" : "key_code"
           },
           "to" : [ {
-            "key_code" : "1"
+            "set_variable" : {
+              "name" : "vim_navigation_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
+            }
           } ],
           "conditions" : [ {
             "name" : "test-anykey-mode",
@@ -2299,6 +2307,11 @@
               "name" : "vim_in_mode",
               "value" : 0
             }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
+            }
           } ],
           "conditions" : [ {
             "name" : "vim_delete_mode",
@@ -2334,6 +2347,11 @@
               "name" : "vim_in_mode",
               "value" : 0
             }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
+            }
           } ],
           "conditions" : [ {
             "name" : "vim_delete_mode",
@@ -2363,6 +2381,11 @@
             "set_variable" : {
               "name" : "vim_in_mode",
               "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
             }
           } ],
           "conditions" : [ {
@@ -2394,6 +2417,11 @@
               "name" : "vim_in_mode",
               "value" : 0
             }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
+            }
           } ],
           "conditions" : [ {
             "name" : "vim_delete_mode",
@@ -2417,6 +2445,11 @@
           }, {
             "set_variable" : {
               "name" : "vim_in_mode",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
               "value" : 1
             }
           } ],
@@ -2449,6 +2482,11 @@
               "name" : "vim_in_mode",
               "value" : 0
             }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
+            }
           } ],
           "conditions" : [ {
             "name" : "vim_delete_mode",
@@ -2478,6 +2516,11 @@
             "set_variable" : {
               "name" : "vim_in_mode",
               "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
             }
           } ],
           "conditions" : [ {
@@ -2509,6 +2552,52 @@
               "name" : "vim_in_mode",
               "value" : 0
             }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_delete_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s"
+          },
+          "to" : [ {
+            "key_code" : "left_arrow",
+            "modifiers" : [ "left_command", "left_shift" ]
+          }, {
+            "key_code" : "c",
+            "modifiers" : [ "left_command" ]
+          }, {
+            "key_code" : "right_arrow"
+          }, {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_command", "left_shift" ]
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"surroundWithDelete\"'"
+          }, {
+            "set_variable" : {
+              "name" : "vim_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
+          }, {
+            "key_code" : "f20",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "vim_delete_mode",
@@ -2541,6 +2630,11 @@
             "set_variable" : {
               "name" : "vim_in_mode",
               "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
             }
           } ],
           "conditions" : [ {
@@ -4258,6 +4352,11 @@
             "set_variable" : {
               "name" : "vim_delete_mode",
               "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 0
             }
           } ],
           "conditions" : [ {

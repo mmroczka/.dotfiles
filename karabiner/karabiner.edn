@@ -17,13 +17,13 @@
                 :Terminals                     ["^com\\.apple\\.Terminal$", "^com\\.googlecode\\.iterm2$", "^io\\.alacritty$"]
                 :Omnifocus                     ["^com\\.omnigroup\\.OmniFocus3$"]
                }
- :templates {:alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
+ :templates {
+             :alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
              :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"
              :btt "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"%s\"'"
-             }
+            }
+
  :froms { :anykey {:any :key_code} }
-
-
 
  :simlayers {:caps_lock-mode {:key :caps_lock}
              :spacebar_mode {:key :spacebar}
@@ -169,7 +169,7 @@
                    [:a ["test-anykey-mode" 0] ["test-anykey-mode" 1]]
                    [:b ["test-anykey-mode" 1]]
                     :test-anykey-mode
-                    [:anykey :1]
+                    [:anykey [["vim_navigation_mode" 0] ["vim_mode" 1]]]
                   ]}
 
         {:des "VIM: change mode"
@@ -183,15 +183,17 @@
 
         {:des "VIM: delete mode"
            :rules [[:condi :!vim_in_mode :vim_delete_mode]
-                    [:b [:!SOleft_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0]]]
-                    [:d [:!Cleft_arrow :!SCright_arrow :delete_or_backspace :delete_forward ["vim_delete_mode" 0] ["vim_in_mode" 0]]]
-                    [:e [:!SOright_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0]]]
-                    [:h [:!Sleft_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0]]]
-                    [:i [["vim_from_delete_mode" 1] ["vim_in_mode" 1]]]
-                    [:j [:!Sdown_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0]]]
-                    [:k [:!Sup_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0]]]
-                    [:l [:!Sright_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0]]]
-                    [:w [:!SOright_arrow :!Sright_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0]]]
+
+                    [:b [:!SOleft_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
+                    [:d [:!Cleft_arrow :!SCright_arrow :delete_or_backspace :delete_forward ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
+                    [:e [:!SOright_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
+                    [:h [:!Sleft_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
+                    [:i [["vim_from_delete_mode" 1] ["vim_in_mode" 1] ["vim_mode" 1]]]
+                    [:j [:!Sdown_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
+                    [:k [:!Sup_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
+                    [:l [:!Sright_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
+                    [:s [:!SCleft_arrow :!Cc :right_arrow :!SCright_arrow [:km "surroundWithDelete"] ["vim_delete_mode" 0] ["vim_in_mode" 0] :!SCOTf20]] ; delete surround character...
+                    [:w [:!SOright_arrow :!Sright_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
 
                     [:any [["vim_delete_mode" 0] ["vim_mode" 1]]]
                     ]}
@@ -276,7 +278,7 @@
                     [:b :!Oleft_arrow]
                     [:!Tb :page_up]
                     [:c [["vim_change_mode" 1] ["vim_mode" 0]]] ; single tap c to enter change mode
-                    [:d ["vim_delete_mode" 1]]
+                    [:d [["vim_delete_mode" 1] ["vim_mode" 0]]] ; single tap d to enter delete mode
                     [:!Sd [:!SCright_arrow :delete_or_backspace]]
                     [:!Rd [:!SCright_arrow :delete_or_backspace]] ; make above also work with right shift
                     [:!Td [:down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow ]] ; go down 15 lines
