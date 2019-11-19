@@ -52,12 +52,15 @@
                                {:set ["vim_from_change_mode" 0]}
                                {:set ["vim_go_to_mode" 0]}
                                {:set ["vim_go_to_visual_mode" 0]}
+                               {:set ["vim_lowercase_mode" 0]}
+                               {:set ["vim_movement_mode" 0]}
                                {:set ["vim_outdent_mode" 0]}
                                {:set ["vim_surround_mode" 0]}
                                {:set ["vim_replace_mode" 0]}
                                {:set ["vim_visual_mode" 0]}
                                {:set ["vim_visual_block_mode" 0]}
                                {:set ["vim_yank_mode" 0]}
+                               {:set ["vim_uppercase_mode" 0]}
                                ]
 
        :TURN_ON_VIM_AND_CLEAR_VARS [{:key :f19 :modi [:left_shift :left_option :left_command :left_control] :lazy true} ; CMD+SHIFT+CTRL+OPT+f19 toggles hammerspoon to toggle screen to blue state
@@ -72,12 +75,15 @@
                                {:set ["vim_from_change_mode" 0]}
                                {:set ["vim_go_to_mode" 0]}
                                {:set ["vim_go_to_visual_mode" 0]}
+                               {:set ["vim_lowercase_mode" 0]}
+                               {:set ["vim_movement_mode" 0]}
                                {:set ["vim_outdent_mode" 0]}
                                {:set ["vim_surround_mode" 0]}
                                {:set ["vim_replace_mode" 0]}
                                {:set ["vim_visual_mode" 0]}
                                {:set ["vim_visual_block_mode" 0]}
                                {:set ["vim_yank_mode" 0]}
+                               {:set ["vim_uppercase_mode" 0]}
                                ]
        }
 
@@ -225,16 +231,16 @@
 
         {:des "VIM: delete mode"
            :rules [:vim_delete_mode
-                    [:b [:!SOleft_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
-                    [:d [:!Cleft_arrow :!SCright_arrow :delete_or_backspace :delete_forward ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
-                    [:e [:!SOright_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
-                    [:h [:!Sleft_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
-                    [:i [["vim_from_delete_mode" 1] ["vim_in_mode" 1] ["vim_mode" 1] ["vim_delete_mode" 0]]]
-                    [:j [:!Sdown_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
-                    [:k [:!Sup_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
-                    [:l [:!Sright_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
-                    [:s [:!SCleft_arrow :!Cc :right_arrow :!SCright_arrow [:km "surroundWithDelete"] :TURN_OFF_VIM]] ; delete surround character...
-                    [:w [:!SOright_arrow :!Sright_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
+                    [:b [:!SOleft_arrow :delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:d [:!Cleft_arrow :!SCright_arrow :delete_or_backspace :delete_forward :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:e [:!SOright_arrow :delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:h [:!Sleft_arrow :delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:i [:TURN_ON_VIM_AND_CLEAR_VARS ["vim_from_delete_mode" 1] ["vim_in_mode" 1]]]
+                    [:j [:!Sdown_arrow :delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:k [:!Sup_arrow :delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:l [:!Sright_arrow :delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:s [:!SCleft_arrow :!Cc :right_arrow :!SCright_arrow [:km "surroundWithDelete"] :TURN_OFF_VIM]] ; delete surround character...  TODO: FIX ME
+                    [:w [:!SOright_arrow :!Sright_arrow :delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
 
                     ; [:condi :vim_delete_mode :any_key_not_defined_above]
                     ; [:anykey [["vim_delete_mode" 0] ["vim_mode" 1]]]
@@ -253,11 +259,11 @@
 
         {:des "VIM: YANK mode"
            :rules [:vim_yank_mode
-                    [:w [:!SOright_arrow :!Cc :left_arrow ["vim_yank_mode" 0] ["vim_change_mode" 0] ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
-                    [:b [:!SOleft_arrow :!Cc :right_arrow ["vim_yank_mode" 0] ["vim_change_mode" 0] ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
-                    [:h [:!Sleft_arrow :!Cc :right_arrow ["vim_yank_mode" 0] ["vim_change_mode" 0] ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
-                    [:l [:!Sright_arrow :!Cc :left_arrow ["vim_yank_mode" 0] ["vim_change_mode" 0] ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
-                    [:y [:!Cleft_arrow :!CSright_arrow :!Cc :left_arrow ["vim_yank_mode" 0] ["vim_mode" 1]]]
+                    [:w [:!SOright_arrow :!Cc :left_arrow :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:b [:!SOleft_arrow :!Cc :right_arrow :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:h [:!Sleft_arrow :!Cc :right_arrow  :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:l [:!Sright_arrow :!Cc :left_arrow  :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:y [:!Cleft_arrow :!CSright_arrow :!Cc :left_arrow :TURN_ON_VIM_AND_CLEAR_VARS]]
 
                     [:s [:!Cleft_arrow :!SCright_arrow :!Cc :TURN_OFF_VIM [:km "surroundWith"] ] ["vim_surround_mode" 1]]  ; double 's' to surround sentence with <char>
                     [:s ["vim_surround_mode" 1] nil {:delayed {:invoked ["vim_surround_mode" 0] :canceled ["vim_surround_mode" 0]}}]
@@ -404,7 +410,7 @@
                     [:k nil nil {:held :!Sup_arrow :afterup [:!Sup_arrow :!SCright_arrow] :params{:held 150}}]
                     [:!Ss [:!Cc [:km "surroundWith"] :TURN_OFF_VIM]]
                     [:!Rs [:!Cc [:km "surroundWith"] :TURN_OFF_VIM]]
-                    [:v [["vim_mode" 0] ["any_key_not_defined_above_while_in_visual_mode" 1] ["vim_visual_mode" 1] ["vim_visual_block_mode" 0] ["any_key_not_defined_above_while_in_visual_block_mode" 0] :!SCOTf18]]
+                    [:v [["vim_mode" 0] ["vim_visual_mode" 1] ["vim_visual_block_mode" 0] :!SCOTf18]]
                     [:x [:delete_forward :delete_forward :TURN_ON_VIM_AND_CLEAR_VARS]]
                     [:!Sx [:delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
                     [:y [:TURN_ON_VIM_AND_CLEAR_VARS :!Cc]]
