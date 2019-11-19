@@ -21,20 +21,8 @@
              :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"
              :btt "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"%s\"'"
              }
+ :froms { :anykey {:any :key_code} }
 
-           ; DEADKEYS
-             ; lowercase deadkeys
-             ; [:a :vk_none] [:b :vk_none] [:c :vk_none] [:d :vk_none] [:e :vk_none] [:f :vk_none] [:g :vk_none] [:h :vk_none] [:i :vk_none] [:j :vk_none] [:k :vk_none] [:l :vk_none] [:m :vk_none] [:n :vk_none] [:o :vk_none] [:p :vk_none] [:q :vk_none] [:r :vk_none] [:s :vk_none] [:t :vk_none] [:u :vk_none] [:v :vk_none] [:w :vk_none] [:x :vk_none] [:y :vk_none] [:z :vk_none]
-             ; uppercase deadkeys with left shift
-             ; [:!Sa :vk_none] [:!Sb :vk_none] [:!Sc :vk_none] [:!Sd :vk_none] [:!Se :vk_none] [:!Sf :vk_none] [:!Sg :vk_none] [:!Sh :vk_none] [:!Si :vk_none] [:!Sj :vk_none] [:!Sk :vk_none] [:!Sl :vk_none] [:!Sm :vk_none] [:!Sn :vk_none] [:!So :vk_none] [:!Sp :vk_none] [:!Sq :vk_none] [:!Sr :vk_none] [:!Ss :vk_none] [:!St :vk_none] [:!Su :vk_none] [:!Sv :vk_none] [:!Sw :vk_none] [:!Sx :vk_none] [:!Sy :vk_none] [:!Sz :vk_none]
-             ; uppercase deadkeys with right shift
-             ; [:!Ra :vk_none] [:!Rb :vk_none] [:!Rc :vk_none] [:!Rd :vk_none] [:!Re :vk_none] [:!Rf :vk_none] [:!Rg :vk_none] [:!Rh :vk_none] [:!Ri :vk_none] [:!Rj :vk_none] [:!Rk :vk_none] [:!Rl :vk_none] [:!Rm :vk_none] [:!Rn :vk_none] [:!Ro :vk_none] [:!Rp :vk_none] [:!Rq :vk_none] [:!Rr :vk_none] [:!Rs :vk_none] [:!Rt :vk_none] [:!Ru :vk_none] [:!Rv :vk_none] [:!Rw :vk_none] [:!Rx :vk_none] [:!Ry :vk_none] [:!Rz :vk_none]
-             ; numbers deadkeys
-             ; [:1 :vk_none] [:2 :vk_none] [:3 :vk_none] [:4 :vk_none] [:5 :vk_none] [:6 :vk_none] [:7 :vk_none] [:8 :vk_none] [:9 :vk_none] [:comma :vk_none] [:period :vk_none] [:slash :vk_none]
-             ; special key deadkeys with left shift
-             ; [:!S1 :vk_none] [:!S2 :vk_none] [:!S3 :vk_none] [:!S4 :vk_none] [:!S5 :vk_none] [:!S6 :vk_none] [:!S7 :vk_none] [:!S8 :vk_none] [:!S9 :vk_none] [:!Scomma :vk_none] [:!Speriod :vk_none] [:!Sslash :vk_none]
-             ; special key deadkeys with right shift
-             ; [:!R1 :vk_none] [:!R2 :vk_none] [:!R3 :vk_none] [:!R4 :vk_none] [:!R5 :vk_none] [:!R6 :vk_none] [:!R7 :vk_none] [:!R8 :vk_none] [:!R9 :vk_none] [:!Rcomma :vk_none] [:!Rperiod :vk_none] [:!Rslash :vk_none]
 
 
  :simlayers {:caps_lock-mode {:key :caps_lock}
@@ -151,21 +139,6 @@
 
         {:des "navigation mode"
            :rules [[:condi :!vim_mode :vim_navigation_mode]
-                 ; DEADKEYS
-                   ; lowercase deadkeys
-                   [:a :vk_none] [:b :vk_none] [:d :vk_none] [:e :vk_none] [:m :vk_none] [:q :vk_none] [:r :vk_none] [:u :vk_none] [:v :vk_none] [:w :vk_none] [:x :vk_none] [:y :vk_none] [:z :vk_none]
-                   ; uppercase deadkeys with left shift
-                   [:!Sa :vk_none] [:!Sb :vk_none] [:!Sc :vk_none] [:!Sd :vk_none] [:!Se :vk_none] [:!Sf :vk_none] [:!Sg :vk_none] [:!Sh :vk_none] [:!Si :vk_none] [:!Sj :vk_none] [:!Sk :vk_none] [:!Sl :vk_none] [:!Sm :vk_none] [:!So :vk_none] [:!Sp :vk_none] [:!Sq :vk_none] [:!Sr :vk_none] [:!Ss :vk_none] [:!Su :vk_none] [:!Sv :vk_none] [:!Sw :vk_none] [:!Sx :vk_none] [:!Sy :vk_none] [:!Sz :vk_none]
-                   ; uppercase deadkeys with right shift
-                   [:!Ra :vk_none] [:!Rb :vk_none] [:!Rc :vk_none] [:!Rd :vk_none] [:!Re :vk_none] [:!Rf :vk_none] [:!Rg :vk_none] [:!Rh :vk_none] [:!Ri :vk_none] [:!Rj :vk_none] [:!Rk :vk_none] [:!Rl :vk_none] [:!Rm :vk_none] [:!Ro :vk_none] [:!Rp :vk_none] [:!Rq :vk_none] [:!Rr :vk_none] [:!Rs :vk_none] [:!Ru :vk_none] [:!Rv :vk_none] [:!Rw :vk_none] [:!Rx :vk_none] [:!Ry :vk_none] [:!Rz :vk_none]
-                   ; numbers deadkeys
-                   [:1 :vk_none] [:2 :vk_none] [:3 :vk_none] [:4 :vk_none] [:5 :vk_none] [:6 :vk_none] [:7 :vk_none] [:8 :vk_none] [:9 :vk_none] [:comma :vk_none]
-                   ; special key deadkeys with left shift
-                   [:!S1 :vk_none] [:!S2 :vk_none] [:!S3 :vk_none] [:!S4 :vk_none] [:!S5 :vk_none] [:!S6 :vk_none] [:!S7 :vk_none] [:!S8 :vk_none] [:!S9 :vk_none] [:!Scomma :vk_none] [:!Speriod :vk_none] [:!Sslash :vk_none]
-                   ; special key deadkeys with right shift
-                   [:!R1 :vk_none] [:!R2 :vk_none] [:!R3 :vk_none] [:!R4 :vk_none] [:!R5 :vk_none] [:!R6 :vk_none] [:!R7 :vk_none] [:!R8 :vk_none] [:!R9 :vk_none] [:!Rcomma :vk_none] [:!Rperiod :vk_none] [:!Rslash :vk_none]
-
-
                    [:c :!COc] ; center
                    [:f :!COf] ; fullscreen
 
@@ -192,63 +165,24 @@
 
                    [:i [["vim_navigation_mode" 0] ["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf20]]
                    ; [:left_command nil nil {:afterup [["vim_navigation_mode" 0] ["vim_mode" 1] ["vim_visual_mode" 0] :!SCOTf19] :held :left_command :repeat false :halt true :params{:alone 150 :held 200}}]
+
+                   [:a ["test-anykey-mode" 0] ["test-anykey-mode" 1]]
+                   [:b ["test-anykey-mode" 1]]
+                    :test-anykey-mode
+                    [:anykey :1]
                   ]}
 
         {:des "VIM: change mode"
            :rules [[:condi :!vim_in_mode :vim_change_mode]
-                    ; lowercase deadkeys
-                    [:a [["vim_change_mode" 0] ["vim_mode" 1]]] [:b [["vim_change_mode" 0] ["vim_mode" 1]]] [:d [["vim_change_mode" 0] ["vim_mode" 1]]] [:e [["vim_change_mode" 0] ["vim_mode" 1]]] [:f [["vim_change_mode" 0] ["vim_mode" 1]]] [:g [["vim_change_mode" 0] ["vim_mode" 1]]] [:h [["vim_change_mode" 0] ["vim_mode" 1]]] [:j [["vim_change_mode" 0] ["vim_mode" 1]]] [:k [["vim_change_mode" 0] ["vim_mode" 1]]] [:l [["vim_change_mode" 0] ["vim_mode" 1]]]
-                    [:m [["vim_change_mode" 0] ["vim_mode" 1]]] [:n [["vim_change_mode" 0] ["vim_mode" 1]]] [:o [["vim_change_mode" 0] ["vim_mode" 1]]] [:p [["vim_change_mode" 0] ["vim_mode" 1]]] [:q [["vim_change_mode" 0] ["vim_mode" 1]]] [:r [["vim_change_mode" 0] ["vim_mode" 1]]] [:t [["vim_change_mode" 0] ["vim_mode" 1]]] [:u [["vim_change_mode" 0] ["vim_mode" 1]]] [:v [["vim_change_mode" 0] ["vim_mode" 1]]] [:w [["vim_change_mode" 0] ["vim_mode" 1]]]
-                    [:x [["vim_change_mode" 0] ["vim_mode" 1]]] [:y [["vim_change_mode" 0] ["vim_mode" 1]]] [:z [["vim_change_mode" 0] ["vim_mode" 1]]]
-                    ; uppercase deadkeys with left shift
-                    [:!Sa [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Sb [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Sc [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Sd [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Se [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Sf [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Sg [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Sh [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Si [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Sj [["vim_change_mode" 0] ["vim_mode" 1]]]
-                    [:!Sk [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Sl [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Sm [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Sn [["vim_change_mode" 0] ["vim_mode" 1]]] [:!So [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Sp [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Sq [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Sr [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Ss [["vim_change_mode" 0] ["vim_mode" 1]]] [:!St [["vim_change_mode" 0] ["vim_mode" 1]]]
-                    [:!Su [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Sv [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Sw [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Sx [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Sy [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Sz [["vim_change_mode" 0] ["vim_mode" 1]]]
-                    ; uppercase deadkeys with right shift
-                    [:!Ra [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Rb [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Rc [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Rd [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Re [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Rf [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Rg [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Rh [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Ri [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Rj [["vim_change_mode" 0] ["vim_mode" 1]]]
-                    [:!Rk [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Rl [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Rm [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Rn [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Ro [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Rp [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Rq [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Rr [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Rs [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Rt [["vim_change_mode" 0] ["vim_mode" 1]]]
-                    [:!Ru [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Rv [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Rw [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Rx [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Ry [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Rz [["vim_change_mode" 0] ["vim_mode" 1]]]
-                    ; numbers deadkeys
-                    [:1 [["vim_change_mode" 0] ["vim_mode" 1]]] [:2 [["vim_change_mode" 0] ["vim_mode" 1]]] [:3 [["vim_change_mode" 0] ["vim_mode" 1]]] [:4 [["vim_change_mode" 0] ["vim_mode" 1]]] [:5 [["vim_change_mode" 0] ["vim_mode" 1]]] [:6 [["vim_change_mode" 0] ["vim_mode" 1]]] [:7 [["vim_change_mode" 0] ["vim_mode" 1]]] [:8 [["vim_change_mode" 0] ["vim_mode" 1]]] [:9 [["vim_change_mode" 0] ["vim_mode" 1]]]
-                    [:comma [["vim_change_mode" 0] ["vim_mode" 1]]] [:period [["vim_change_mode" 0] ["vim_mode" 1]]] [:slash [["vim_change_mode" 0] ["vim_mode" 1]]]
-                    ; special key deadkeys with left shift
-                    [:!S1 [["vim_change_mode" 0] ["vim_mode" 1]]] [:!S2 [["vim_change_mode" 0] ["vim_mode" 1]]] [:!S3 [["vim_change_mode" 0] ["vim_mode" 1]]] [:!S4 [["vim_change_mode" 0] ["vim_mode" 1]]] [:!S5 [["vim_change_mode" 0] ["vim_mode" 1]]] [:!S6 [["vim_change_mode" 0] ["vim_mode" 1]]] [:!S7 [["vim_change_mode" 0] ["vim_mode" 1]]] [:!S8 [["vim_change_mode" 0] ["vim_mode" 1]]] [:!S9 [["vim_change_mode" 0] ["vim_mode" 1]]]
-                    [:!Scomma [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Speriod [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Sslash [["vim_change_mode" 0] ["vim_mode" 1]]]
-                    ; special key deadkeys with right shift
-                    [:!R1 [["vim_change_mode" 0] ["vim_mode" 1]]] [:!R2 [["vim_change_mode" 0] ["vim_mode" 1]]] [:!R3 [["vim_change_mode" 0] ["vim_mode" 1]]] [:!R4 [["vim_change_mode" 0] ["vim_mode" 1]]] [:!R5 [["vim_change_mode" 0] ["vim_mode" 1]]] [:!R6 [["vim_change_mode" 0] ["vim_mode" 1]]] [:!R7 [["vim_change_mode" 0] ["vim_mode" 1]]] [:!R8 [["vim_change_mode" 0] ["vim_mode" 1]]] [:!R9 [["vim_change_mode" 0] ["vim_mode" 1]]]
-                    [:!Rcomma [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Rperiod [["vim_change_mode" 0] ["vim_mode" 1]]] [:!Rslash [["vim_change_mode" 0] ["vim_mode" 1]]]
-
-
                     [:i [["vim_from_change_mode" 1] ["vim_in_mode" 1]]]
                     [:c [:!Cleft_arrow :!SCright_arrow :delete_or_backspace ["vim_change_mode" 0] ["vim_in_mode" 0] :!SCOTf20]]
                     [:s [:!SCleft_arrow :!Cc :right_arrow :!SCright_arrow [:km "surroundWithChange"] ["vim_change_mode" 0] ["vim_in_mode" 0] :!SCOTf20]]
+
+                    [:any [["vim_change_mode" 0] ["vim_mode" 1]]]
                     ]}
 
         {:des "VIM: delete mode"
            :rules [[:condi :!vim_in_mode :vim_delete_mode]
-                   ; DEADKEYS
-                     ; lowercase deadkeys
-                     [:a [["vim_delete_mode" 0] ["vim_mode" 1]]] [:c [["vim_delete_mode" 0] ["vim_mode" 1]]] [:f [["vim_delete_mode" 0] ["vim_mode" 1]]] [:g [["vim_delete_mode" 0] ["vim_mode" 1]]] [:m [["vim_delete_mode" 0] ["vim_mode" 1]]] [:n [["vim_delete_mode" 0] ["vim_mode" 1]]] [:o [["vim_delete_mode" 0] ["vim_mode" 1]]] [:p [["vim_delete_mode" 0] ["vim_mode" 1]]] [:q [["vim_delete_mode" 0] ["vim_mode" 1]]] [:r [["vim_delete_mode" 0] ["vim_mode" 1]]]
-                     [:s [["vim_delete_mode" 0] ["vim_mode" 1]]] [:t [["vim_delete_mode" 0] ["vim_mode" 1]]] [:u [["vim_delete_mode" 0] ["vim_mode" 1]]] [:v [["vim_delete_mode" 0] ["vim_mode" 1]]] [:x [["vim_delete_mode" 0] ["vim_mode" 1]]] [:y [["vim_delete_mode" 0] ["vim_mode" 1]]] [:z [["vim_delete_mode" 0] ["vim_mode" 1]]]
-                     ; uppercase deadkeys with left shift
-                     [:!Sa [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Sb [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Sc [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Sd [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Se [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Sf [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Sg [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Sh [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Si [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Sj [["vim_delete_mode" 0] ["vim_mode" 1]]]
-                     [:!Sk [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Sl [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Sm [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Sn [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!So [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Sp [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Sq [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Sr [["vim_delete_mode" 0] ["vim_mode" 1]]]
-                     [:!Ss [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!St [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Su [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Sv [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Sw [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Sx [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Sy [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Sz [["vim_delete_mode" 0] ["vim_mode" 1]]]
-                     ; uppercase deadkeys with right shift
-                     [:!Ra [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Rb [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Rc [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Rd [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Re [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Rf [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Rg [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Rh [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Ri [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Rj [["vim_delete_mode" 0] ["vim_mode" 1]]]
-                     [:!Rk [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Rl [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Rm [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Rn [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Ro [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Rp [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Rq [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Rr [["vim_delete_mode" 0] ["vim_mode" 1]]]
-                     [:!Rs [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Rt [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Ru [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Rv [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Rw [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Rx [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Ry [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Rz [["vim_delete_mode" 0] ["vim_mode" 1]]]
-                     ; numbers deadkeys
-                     [:1 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:2 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:3 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:4 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:5 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:6 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:7 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:8 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:9 [["vim_delete_mode" 0] ["vim_mode" 1]]]
-                     [:comma [["vim_delete_mode" 0] ["vim_mode" 1]]] [:period [["vim_delete_mode" 0] ["vim_mode" 1]]] [:slash [["vim_delete_mode" 0] ["vim_mode" 1]]]
-                     ; special key deadkeys with left shift
-                     [:!S1 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!S2 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!S3 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!S4 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!S5 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!S6 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!S7 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!S8 [["vim_delete_mode" 0] ["vim_mode" 1]]]
-                     [:!S9 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Scomma [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Speriod [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Sslash [["vim_delete_mode" 0] ["vim_mode" 1]]]
-                     ; special key deadkeys with right shift
-                     [:!R1 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!R2 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!R3 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!R4 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!R5 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!R6 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!R7 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!R8 [["vim_delete_mode" 0] ["vim_mode" 1]]]
-                     [:!R9 [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Rcomma [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Rperiod [["vim_delete_mode" 0] ["vim_mode" 1]]] [:!Rslash [["vim_delete_mode" 0] ["vim_mode" 1]]]
-
-
                     [:b [:!SOleft_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0]]]
                     [:d [:!Cleft_arrow :!SCright_arrow :delete_or_backspace :delete_forward ["vim_delete_mode" 0] ["vim_in_mode" 0]]]
                     [:e [:!SOright_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0]]]
@@ -258,63 +192,22 @@
                     [:k [:!Sup_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0]]]
                     [:l [:!Sright_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0]]]
                     [:w [:!SOright_arrow :!Sright_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0]]]
+
+                    [:any [["vim_delete_mode" 0] ["vim_mode" 1]]]
                     ]}
 
         {:des "VIM: IN mode"
            :rules [:vim_in_mode
-                    ; lowercase deadkeys
-                    [:a [["vim_in_mode" 0] ["vim_mode" 1]]] [:b [["vim_in_mode" 0] ["vim_mode" 1]]] [:c [["vim_in_mode" 0] ["vim_mode" 1]]] [:d [["vim_in_mode" 0] ["vim_mode" 1]]] [:f [["vim_in_mode" 0] ["vim_mode" 1]]] [:g [["vim_in_mode" 0] ["vim_mode" 1]]] [:h [["vim_in_mode" 0] ["vim_mode" 1]]] [:i [["vim_in_mode" 0] ["vim_mode" 1]]] [:j [["vim_in_mode" 0] ["vim_mode" 1]]] [:k [["vim_in_mode" 0] ["vim_mode" 1]]] [:l [["vim_in_mode" 0] ["vim_mode" 1]]] [:m [["vim_in_mode" 0] ["vim_mode" 1]]]
-                    [:n [["vim_in_mode" 0] ["vim_mode" 1]]] [:o [["vim_in_mode" 0] ["vim_mode" 1]]] [:p [["vim_in_mode" 0] ["vim_mode" 1]]] [:q [["vim_in_mode" 0] ["vim_mode" 1]]] [:r [["vim_in_mode" 0] ["vim_mode" 1]]]
-                    [:s [["vim_in_mode" 0] ["vim_mode" 1]]] [:t [["vim_in_mode" 0] ["vim_mode" 1]]] [:u [["vim_in_mode" 0] ["vim_mode" 1]]] [:v [["vim_in_mode" 0] ["vim_mode" 1]]] [:x [["vim_in_mode" 0] ["vim_mode" 1]]] [:y [["vim_in_mode" 0] ["vim_mode" 1]]] [:z [["vim_in_mode" 0] ["vim_mode" 1]]]
-                    ; uppercase deadkeys with left shift
-                    [:!Sa [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Sb [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Sc [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Sd [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Se [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Sf [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Sg [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Sh [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Si [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Sj [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Sk [["vim_in_mode" 0] ["vim_mode" 1]]]
-                    [:!Sl [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Sm [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Sn [["vim_in_mode" 0] ["vim_mode" 1]]] [:!So [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Sp [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Sq [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Sr [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Ss [["vim_in_mode" 0] ["vim_mode" 1]]] [:!St [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Su [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Sv [["vim_in_mode" 0] ["vim_mode" 1]]]
-                    [:!Sw [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Sx [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Sy [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Sz [["vim_in_mode" 0] ["vim_mode" 1]]]
-                    ; uppercase deadkeys with right shift
-                    [:!Ra [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Rb [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Rc [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Rd [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Re [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Rf [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Rg [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Rh [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Ri [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Rj [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Rk [["vim_in_mode" 0] ["vim_mode" 1]]]
-                    [:!Rl [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Rm [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Rn [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Ro [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Rp [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Rq [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Rr [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Rs [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Rt [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Ru [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Rv [["vim_in_mode" 0] ["vim_mode" 1]]]
-                    [:!Rw [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Rx [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Ry [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Rz [["vim_in_mode" 0] ["vim_mode" 1]]]
-                    ; numbers deadkeys
-                    [:1 [["vim_in_mode" 0] ["vim_mode" 1]]] [:2 [["vim_in_mode" 0] ["vim_mode" 1]]] [:3 [["vim_in_mode" 0] ["vim_mode" 1]]] [:4 [["vim_in_mode" 0] ["vim_mode" 1]]] [:5 [["vim_in_mode" 0] ["vim_mode" 1]]] [:6 [["vim_in_mode" 0] ["vim_mode" 1]]] [:7 [["vim_in_mode" 0] ["vim_mode" 1]]] [:8 [["vim_in_mode" 0] ["vim_mode" 1]]] [:9 [["vim_in_mode" 0] ["vim_mode" 1]]]
-                    [:comma [["vim_in_mode" 0] ["vim_mode" 1]]] [:period [["vim_in_mode" 0] ["vim_mode" 1]]] [:slash [["vim_in_mode" 0] ["vim_mode" 1]]]
-                    ; special key deadkeys with left shift
-                    [:!S1 [["vim_in_mode" 0] ["vim_mode" 1]]] [:!S2 [["vim_in_mode" 0] ["vim_mode" 1]]] [:!S3 [["vim_in_mode" 0] ["vim_mode" 1]]] [:!S4 [["vim_in_mode" 0] ["vim_mode" 1]]] [:!S5 [["vim_in_mode" 0] ["vim_mode" 1]]] [:!S6 [["vim_in_mode" 0] ["vim_mode" 1]]] [:!S7 [["vim_in_mode" 0] ["vim_mode" 1]]] [:!S8 [["vim_in_mode" 0] ["vim_mode" 1]]] [:!S9 [["vim_in_mode" 0] ["vim_mode" 1]]]
-                    [:!Scomma [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Speriod [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Sslash [["vim_in_mode" 0] ["vim_mode" 1]]]
-                    ; special key deadkeys with right shift
-                    [:!R1 [["vim_in_mode" 0] ["vim_mode" 1]]] [:!R2 [["vim_in_mode" 0] ["vim_mode" 1]]] [:!R3 [["vim_in_mode" 0] ["vim_mode" 1]]] [:!R4 [["vim_in_mode" 0] ["vim_mode" 1]]] [:!R5 [["vim_in_mode" 0] ["vim_mode" 1]]] [:!R6 [["vim_in_mode" 0] ["vim_mode" 1]]] [:!R7 [["vim_in_mode" 0] ["vim_mode" 1]]] [:!R8 [["vim_in_mode" 0] ["vim_mode" 1]]] [:!R9 [["vim_in_mode" 0] ["vim_mode" 1]]]
-                    [:!Rcomma [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Rperiod [["vim_in_mode" 0] ["vim_mode" 1]]] [:!Rslash [["vim_in_mode" 0] ["vim_mode" 1]]]
-
                     [:e [:!Oleft_arrow :!SOright_arrow :delete_or_backspace ["vim_change_mode" 0] ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 0] ["vim_from_delete_mode" 0] :!SCOTf20] ["vim_from_delete_mode" 1]]
                     [:e [:!Oleft_arrow :!SOright_arrow :delete_or_backspace ["vim_change_mode" 0] ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 0] ["vim_from_change_mode" 0] :!SCOTf20] ["vim_from_change_mode" 1]]
                     [:w [:!Oleft_arrow :!SOright_arrow :!Sright_arrow :delete_or_backspace ["vim_change_mode" 0] ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 0] ["vim_from_delete_mode" 0] :!SCOTf20] ["vim_from_delete_mode" 1]]
                     [:w [:!Oleft_arrow :!SOright_arrow :!Sright_arrow :delete_or_backspace ["vim_change_mode" 0] ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 0] ["vim_from_change_mode" 0] :!SCOTf20] ["vim_from_change_mode" 1]]
+
+                    [:any [["vim_in_mode" 0] ["vim_mode" 1]]]
                     ]}
 
         {:des "VIM: YANK mode"
            :rules [:vim_yank_mode
-                   ; DEADKEYS
-                     ; lowercase deadkeys
-                     [:a [["vim_yank_mode" 0] ["vim_mode" 1]]] [:c [["vim_yank_mode" 0] ["vim_mode" 1]]] [:d [["vim_yank_mode" 0] ["vim_mode" 1]]] [:e [["vim_yank_mode" 0] ["vim_mode" 1]]] [:f [["vim_yank_mode" 0] ["vim_mode" 1]]] [:g [["vim_yank_mode" 0] ["vim_mode" 1]]] [:i [["vim_yank_mode" 0] ["vim_mode" 1]]] [:j [["vim_yank_mode" 0] ["vim_mode" 1]]] [:k [["vim_yank_mode" 0] ["vim_mode" 1]]] [:m [["vim_yank_mode" 0] ["vim_mode" 1]]] [:n [["vim_yank_mode" 0] ["vim_mode" 1]]]
-                     [:o [["vim_yank_mode" 0] ["vim_mode" 1]]] [:p [["vim_yank_mode" 0] ["vim_mode" 1]]] [:q [["vim_yank_mode" 0] ["vim_mode" 1]]] [:r [["vim_yank_mode" 0] ["vim_mode" 1]]] [:t [["vim_yank_mode" 0] ["vim_mode" 1]]] [:u [["vim_yank_mode" 0] ["vim_mode" 1]]] [:v [["vim_yank_mode" 0] ["vim_mode" 1]]] [:x [["vim_yank_mode" 0] ["vim_mode" 1]]] [:z [["vim_yank_mode" 0] ["vim_mode" 1]]]
-                     ; uppercase deadkeys with left shift
-                     [:!Sa [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Sb [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Sc [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Sd [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Se [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Sf [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Sg [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Sh [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Si [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Sj [["vim_yank_mode" 0] ["vim_mode" 1]]]
-                     [:!Sk [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Sl [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Sm [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Sn [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!So [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Sp [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Sq [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Sr [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Ss [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!St [["vim_yank_mode" 0] ["vim_mode" 1]]]
-                     [:!Su [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Sv [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Sw [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Sx [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Sy [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Sz [["vim_yank_mode" 0] ["vim_mode" 1]]]
-                     ; uppercase deadkeys with right shift
-                     [:!Ra [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Rb [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Rc [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Rd [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Re [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Rf [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Rg [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Rh [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Ri [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Rj [["vim_yank_mode" 0] ["vim_mode" 1]]]
-                     [:!Rk [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Rl [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Rm [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Rn [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Ro [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Rp [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Rq [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Rr [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Rs [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Rt [["vim_yank_mode" 0] ["vim_mode" 1]]]
-                     [:!Ru [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Rv [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Rw [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Rx [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Ry [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Rz [["vim_yank_mode" 0] ["vim_mode" 1]]]
-                     ; numbers deadkeys
-                     [:1 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:2 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:3 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:4 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:5 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:6 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:7 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:8 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:9 [["vim_yank_mode" 0] ["vim_mode" 1]]]
-                     [:comma [["vim_yank_mode" 0] ["vim_mode" 1]]] [:period [["vim_yank_mode" 0] ["vim_mode" 1]]] [:slash [["vim_yank_mode" 0] ["vim_mode" 1]]]
-                     ; special key deadkeys with left shift
-                     [:!S1 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!S2 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!S3 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!S4 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!S5 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!S6 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!S7 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!S8 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!S9 [["vim_yank_mode" 0] ["vim_mode" 1]]]
-                     [:!Scomma [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Speriod [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Sslash [["vim_yank_mode" 0] ["vim_mode" 1]]]
-                     ; special key deadkeys with right shift
-                     [:!R1 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!R2 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!R3 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!R4 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!R5 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!R6 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!R7 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!R8 [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!R9 [["vim_yank_mode" 0] ["vim_mode" 1]]]
-                     [:!Rcomma [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Rperiod [["vim_yank_mode" 0] ["vim_mode" 1]]] [:!Rslash [["vim_yank_mode" 0] ["vim_mode" 1]]]
-
-
                     [:w [:!SOright_arrow :!Cc :left_arrow ["vim_yank_mode" 0] ["vim_change_mode" 0] ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
                     [:b [:!SOleft_arrow :!Cc :right_arrow ["vim_yank_mode" 0] ["vim_change_mode" 0] ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
                     [:h [:!Sleft_arrow :!Cc :right_arrow ["vim_yank_mode" 0] ["vim_change_mode" 0] ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
@@ -324,63 +217,21 @@
                     [:s [:!Cleft_arrow :!SCright_arrow :!Cc ["vim_surround_mode" 0] ["vim_yank_mode" 0] :!SCOTf20 [:km "surroundWith"] ] ["vim_surround_mode" 1]]  ; double 's' to surround sentence with <char>
                     [:s ["vim_surround_mode" 1] nil {:delayed {:invoked ["vim_surround_mode" 0] :canceled ["vim_surround_mode" 0]}}]
 
+                    [:any [["vim_yank_mode" 0] ["vim_mode" 1]]]
                     ]}
 
         {:des "VIM: GO TO mode"
            :rules [:vim_go_to_mode
-                 ; DEADKEYS
-                   ; lowercase deadkeys
-                   [:a [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:b [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:c [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:d [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:e [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:f [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:h [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:i [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:j [["vim_go_to_mode" 0] ["vim_mode" 1]]]
-                   [:k [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:l [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:m [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:n [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:o [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:p [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:q [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:r [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:s [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:t [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:v [["vim_go_to_mode" 0] ["vim_mode" 1]]]
-                   [:w [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:x [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:y [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:z [["vim_go_to_mode" 0] ["vim_mode" 1]]]
-                   ; uppercase deadkeys with left shift
-                   [:!Sa [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Sb [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Sc [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Sd [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Se [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Sf [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Sg [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Sh [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Si [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Sj [["vim_go_to_mode" 0] ["vim_mode" 1]]]
-                   [:!Sk [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Sl [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Sm [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Sn [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!So [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Sp [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Sq [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Sr [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Ss [["vim_go_to_mode" 0] ["vim_mode" 1]]]
-                   [:!St [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Sv [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Sw [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Sx [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Sy [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Sz [["vim_go_to_mode" 0] ["vim_mode" 1]]]
-                   ; uppercase deadkeys with right shift
-                   [:!Ra [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Rb [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Rc [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Rd [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Re [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Rf [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Rg [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Rh [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Ri [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Rj [["vim_go_to_mode" 0] ["vim_mode" 1]]]
-                   [:!Rk [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Rl [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Rm [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Rn [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Ro [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Rp [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Rq [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Rr [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Rs [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Rt [["vim_go_to_mode" 0] ["vim_mode" 1]]]
-                   [:!Ru [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Rv [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Rw [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Rx [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Ry [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Rz [["vim_go_to_mode" 0] ["vim_mode" 1]]]
-                   ; numbers deadkeys
-                   [:1 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:2 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:3 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:4 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:5 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:6 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:7 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:8 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:9 [["vim_go_to_mode" 0] ["vim_mode" 1]]]
-                   [:comma [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:period [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:slash [["vim_go_to_mode" 0] ["vim_mode" 1]]]
-                   ; special key deadkeys with left shift
-                   [:!S1 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!S2 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!S3 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!S4 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!S5 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!S6 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!S7 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!S8 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!S9 [["vim_go_to_mode" 0] ["vim_mode" 1]]]
-                   [:!Scomma [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Speriod [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Sslash [["vim_go_to_mode" 0] ["vim_mode" 1]]]
-                   ; special key deadkeys with right shift
-                   [:!R1 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!R2 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!R3 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!R4 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!R5 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!R6 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!R7 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!R8 [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!R9 [["vim_go_to_mode" 0] ["vim_mode" 1]]]
-                   [:!Rcomma [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Rperiod [["vim_go_to_mode" 0] ["vim_mode" 1]]] [:!Rslash [["vim_go_to_mode" 0] ["vim_mode" 1]]]
 
                     [:g [:!Cup_arrow ["vim_go_to_mode" 0]]]
                     [:!Su [["vim_uppercase" 1] ["vim_movement_mode" 1]]]
                     [:u [["vim_lowercase" 1] ["vim_movement_mode" 1]]]
+
+                    [:any [["vim_go_to_mode" 0] ["vim_mode" 1]]]
                     ]}
 
         {:des "VIM: MOVEMENT mode"
            :rules [:vim_movement_mode
-                 ; DEADKEYS
-                   ; lowercase deadkeys
-                   [:a [["vim_movement_mode" 0] ["vim_mode" 1]]] [:c [["vim_movement_mode" 0] ["vim_mode" 1]]] [:d [["vim_movement_mode" 0] ["vim_mode" 1]]] [:f [["vim_movement_mode" 0] ["vim_mode" 1]]] [:g [["vim_movement_mode" 0] ["vim_mode" 1]]] [:h [["vim_movement_mode" 0] ["vim_mode" 1]]] [:i [["vim_movement_mode" 0] ["vim_mode" 1]]] [:j [["vim_movement_mode" 0] ["vim_mode" 1]]]
-                   [:k [["vim_movement_mode" 0] ["vim_mode" 1]]] [:l [["vim_movement_mode" 0] ["vim_mode" 1]]] [:m [["vim_movement_mode" 0] ["vim_mode" 1]]] [:n [["vim_movement_mode" 0] ["vim_mode" 1]]] [:o [["vim_movement_mode" 0] ["vim_mode" 1]]] [:p [["vim_movement_mode" 0] ["vim_mode" 1]]] [:q [["vim_movement_mode" 0] ["vim_mode" 1]]] [:r [["vim_movement_mode" 0] ["vim_mode" 1]]] [:s [["vim_movement_mode" 0] ["vim_mode" 1]]] [:t [["vim_movement_mode" 0] ["vim_mode" 1]]]
-                   [:u [["vim_movement_mode" 0] ["vim_mode" 1]]] [:v [["vim_movement_mode" 0] ["vim_mode" 1]]] [:x [["vim_movement_mode" 0] ["vim_mode" 1]]] [:y [["vim_movement_mode" 0] ["vim_mode" 1]]] [:z [["vim_movement_mode" 0] ["vim_mode" 1]]]
-                   ; uppercase deadkeys with left shift
-                   [:!Sa [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Sb [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Sc [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Sd [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Se [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Sf [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Sg [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Sh [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Si [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Sj [["vim_movement_mode" 0] ["vim_mode" 1]]]
-                   [:!Sk [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Sl [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Sm [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Sn [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!So [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Sp [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Sq [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Sr [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Ss [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!St [["vim_movement_mode" 0] ["vim_mode" 1]]]
-                   [:!Su [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Sv [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Sw [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Sx [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Sy [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Sz [["vim_movement_mode" 0] ["vim_mode" 1]]]
-                   ; uppercase deadkeys with right shift
-                   [:!Ra [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Rb [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Rc [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Rd [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Re [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Rf [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Rg [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Rh [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Ri [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Rj [["vim_movement_mode" 0] ["vim_mode" 1]]]
-                   [:!Rk [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Rl [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Rm [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Rn [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Ro [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Rp [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Rq [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Rr [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Rs [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Rt [["vim_movement_mode" 0] ["vim_mode" 1]]]
-                   [:!Ru [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Rv [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Rw [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Rx [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Ry [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Rz [["vim_movement_mode" 0] ["vim_mode" 1]]]
-                   ; numbers deadkeys
-                   [:1 [["vim_movement_mode" 0] ["vim_mode" 1]]] [:2 [["vim_movement_mode" 0] ["vim_mode" 1]]] [:3 [["vim_movement_mode" 0] ["vim_mode" 1]]] [:4 [["vim_movement_mode" 0] ["vim_mode" 1]]] [:5 [["vim_movement_mode" 0] ["vim_mode" 1]]] [:6 [["vim_movement_mode" 0] ["vim_mode" 1]]] [:7 [["vim_movement_mode" 0] ["vim_mode" 1]]] [:8 [["vim_movement_mode" 0] ["vim_mode" 1]]] [:9 [["vim_movement_mode" 0] ["vim_mode" 1]]]
-                   [:comma [["vim_movement_mode" 0] ["vim_mode" 1]]] [:period [["vim_movement_mode" 0] ["vim_mode" 1]]] [:slash [["vim_movement_mode" 0] ["vim_mode" 1]]]
-                   ; special key deadkeys with left shift
-                   [:!S1 [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!S2 [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!S3 [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!S5 [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!S6 [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!S7 [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!S8 [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!S9 [["vim_movement_mode" 0] ["vim_mode" 1]]]
-                   [:!Scomma [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Speriod [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Sslash [["vim_movement_mode" 0] ["vim_mode" 1]]]
-                   ; special key deadkeys with right shift
-                   [:!R1 [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!R2 [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!R3 [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!R5 [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!R6 [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!R7 [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!R8 [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!R9 [["vim_movement_mode" 0] ["vim_mode" 1]]]
-                   [:!Rcomma [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Rperiod [["vim_movement_mode" 0] ["vim_mode" 1]]] [:!Rslash [["vim_movement_mode" 0] ["vim_mode" 1]]]
-
 
                     [:w [["vim_movement_mode" 0] ["vim_uppercase" 0] ["vim_go_to_mode" 0] :!SOright_arrow :!Cc [:km "upperCaseClipboardContentsThenPaste"]] ["vim_uppercase" 1]]
                     [:e [["vim_movement_mode" 0] ["vim_uppercase" 0] ["vim_go_to_mode" 0] :!SOright_arrow :!Cc [:km "upperCaseClipboardContentsThenPaste"]] ["vim_uppercase" 1]]
@@ -393,28 +244,13 @@
                     [:b [["vim_movement_mode" 0] ["vim_lowercase" 0] ["vim_go_to_mode" 0] :!SOleft_arrow :!Cc [:km "lowercaseClipboardContentsThenPaste"]] ["vim_lowercase" 1]]
                     [:!S4 [["vim_movement_mode" 0] ["vim_lowercase" 0] ["vim_go_to_mode" 0] :!SCright_arrow :!Cc [:km "lowercaseClipboardContentsThenPaste"]] ["vim_lowercase" 1]]
                     [:!R4 [["vim_movement_mode" 0] ["vim_lowercase" 0] ["vim_go_to_mode" 0] :!SCright_arrow :!Cc [:km "lowercaseClipboardContentsThenPaste"]] ["vim_lowercase" 1]]
+
+                    [:any [["vim_movement_mode" 0] ["vim_mode" 1]]]
                     ]}
 
 
         {:des "vim mode"
            :rules [[:condi :vim_mode :!vim_replace_mode :!vim_replace_single_letter_mode]
-                  ; DEADKEYS
-                    ; lowercase deadkeys
-                    [:f :vk_none] [:m :vk_none] [:n :vk_none] [:q :vk_none] [:s :vk_none] [:t :vk_none] [:z :vk_none]
-                    ; uppercase deadkeys with left shift
-                    [:!Sb :vk_none] [:!Sc :vk_none] [:!Se :vk_none] [:!Sf :vk_none] [:!Sh :vk_none] [:!Sk :vk_none] [:!Sl :vk_none] [:!Sm :vk_none] [:!Sn :vk_none] [:!Sq :vk_none] [:!Ss :vk_none] [:!St :vk_none] [:!Su :vk_none] [:!Sw :vk_none] [:!Sz :vk_none]
-                    ; uppercase deadkeys with right shift
-                    [:!Rb :vk_none] [:!Rc :vk_none] [:!Re :vk_none] [:!Rf :vk_none] [:!Rh :vk_none] [:!Rk :vk_none] [:!Rl :vk_none] [:!Rm :vk_none] [:!Rn :vk_none] [:!Rq :vk_none] [:!Rs :vk_none] [:!Rt :vk_none] [:!Ru :vk_none] [:!Rw :vk_none] [:!Rz :vk_none]
-                    ; numbers deadkeys
-                    [:1 :vk_none] [:2 :vk_none] [:3 :vk_none] [:4 :vk_none] [:5 :vk_none] [:6 :vk_none] [:7 :vk_none] [:8 :vk_none] [:9 :vk_none] [:comma :vk_none] [:period :vk_none]
-                    ; special key deadkeys with left shift
-                    [:!S1 :vk_none] [:!S2 :vk_none] [:!S4 :vk_none] [:!S5 :vk_none] [:!S7 :vk_none] [:!S9 :vk_none] [:!Sslash :vk_none]
-                    ; special key deadkeys with right shift
-                    [:!R1 :vk_none] [:!R2 :vk_none] [:!R5 :vk_none] [:!R6 :vk_none] [:!R7 :vk_none] [:!R9 :vk_none] [:!Rcomma :vk_none] [:!Rperiod :vk_none] [:!Rslash :vk_none]
-                    ; DEAD KEYS (KEYS I PURPOSEFULLY WANT TO NOT WORK OR DO ANYTHING WHILE IN THIS MODE)
-                    [:left_arrow :vk_none] [:down_arrow :vk_none] [:up_arrow :vk_none] [:right_arrow :vk_none] [:spacebar :vk_none]
-                    ; ============================================================================================================
-
                     [:!Sgrave_accent_and_tilde [:km "tildeVimCommand"]]
                     [:!Rgrave_accent_and_tilde [:km "tildeVimCommand"]]
                     [:!S3 [:!Oleft_arrow :!SOright_arrow :!Cc [:km "findNext"]]] ; use '#' to find next occurence of word under the cursor
@@ -499,25 +335,11 @@
                     [:!Ty :!Cc]
                     [:y [["vim_yank_mode" 1]["vim_mode" 0]]]
 
+                    [:any :vk_none]
                     ]}
 
         {:des "visual BLOCK mode"
            :rules [:vim_visual_block_mode
-                 ; DEADKEYS
-                   ; lowercase deadkeys
-                   [:a :vk_none] [:b :vk_none] [:c :vk_none] [:e :vk_none] [:f :vk_none] [:h :vk_none] [:l :vk_none] [:m :vk_none] [:n :vk_none] [:o :vk_none] [:p :vk_none] [:q :vk_none] [:r :vk_none] [:s :vk_none] [:t :vk_none] [:u :vk_none] [:w :vk_none] [:z :vk_none]
-                   ; uppercase deadkeys with left shift
-                   [:!Sa :vk_none] [:!Sb :vk_none] [:!Sc :vk_none] [:!Sd :vk_none] [:!Se :vk_none] [:!Sf :vk_none] [:!Sh :vk_none] [:!Si :vk_none] [:!Sj :vk_none] [:!Sk :vk_none] [:!Sl :vk_none] [:!Sm :vk_none] [:!Sn :vk_none] [:!So :vk_none] [:!Sp :vk_none] [:!Sq :vk_none] [:!Sr :vk_none] [:!St :vk_none] [:!Su :vk_none] [:!Sv :vk_none] [:!Sw :vk_none] [:!Sy :vk_none] [:!Sz :vk_none]
-                   ; uppercase deadkeys with right shift
-                   [:!Ra :vk_none] [:!Rb :vk_none] [:!Rc :vk_none] [:!Rd :vk_none] [:!Re :vk_none] [:!Rf :vk_none] [:!Rh :vk_none] [:!Ri :vk_none] [:!Rj :vk_none] [:!Rk :vk_none] [:!Rl :vk_none] [:!Rm :vk_none] [:!Rn :vk_none] [:!Ro :vk_none] [:!Rp :vk_none] [:!Rq :vk_none] [:!Rr :vk_none] [:!Rt :vk_none] [:!Ru :vk_none] [:!Rv :vk_none] [:!Rw :vk_none] [:!Rx :vk_none] [:!Ry :vk_none] [:!Rz :vk_none]
-                   ; numbers deadkeys
-                   [:1 :vk_none] [:2 :vk_none] [:3 :vk_none] [:4 :vk_none] [:5 :vk_none] [:6 :vk_none] [:7 :vk_none] [:8 :vk_none] [:9 :vk_none] [:comma :vk_none] [:period :vk_none] [:slash :vk_none]
-                   ; special key deadkeys with left shift
-                   [:!S1 :vk_none] [:!S2 :vk_none] [:!S3 :vk_none] [:!S4 :vk_none] [:!S5 :vk_none] [:!S6 :vk_none] [:!S7 :vk_none] [:!S8 :vk_none] [:!S9 :vk_none] [:!Sslash :vk_none]
-                   ; special key deadkeys with right shift
-                   [:!R1 :vk_none] [:!R2 :vk_none] [:!R3 :vk_none] [:!R4 :vk_none] [:!R5 :vk_none] [:!R6 :vk_none] [:!R7 :vk_none] [:!R8 :vk_none] [:!R9 :vk_none] [:!Rcomma :vk_none] [:!Rperiod :vk_none] [:!Rslash :vk_none]
-                   ; =====================================================================================================================================
-
                     [:!Scomma [:!SCopen_bracket  ["vim_outdent_mode" 0] ["vim_mode" 1] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf19] ["vim_outdent_mode" 1]]  ; double > to outdent line or at least trigger SHIFT+CMD+[
                     [:!Scomma ["vim_outdent_mode" 1] nil {:delayed {:invoked ["vim_outdent_mode" 0] :canceled ["vim_outdent_mode" 0]}}]
                     [:!Speriod [:!SCclose_bracket  ["vim_indent_mode" 0] ["vim_mode" 1] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf19] ["vim_indent_mode" 1]]  ; double > to indent line or at least trigger SHIFT+CMD+]
@@ -537,26 +359,13 @@
                     [:x [:delete_forward :delete_forward ["vim_mode" 1] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf19]]
                     [:!Sx [:delete_or_backspace ["vim_mode" 1] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf19]]
                     [:y [["vim_mode" 1] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!Cc :!SCOTf19]]
+
+                    [:any :vk_none]
                     ]}
 
 
         {:des "visual mode"
            :rules [:vim_visual_mode
-                  ; DEADKEYS
-                    ; lowercase deadkeys
-                    [:a :vk_none] [:c :vk_none] [:d :vk_none] [:f :vk_none] [:m :vk_none] [:n :vk_none] [:o :vk_none] [:q :vk_none] [:r :vk_none] [:s :vk_none] [:t :vk_none] [:u :vk_none] [:z :vk_none]
-                    ; uppercase deadkeys with left shift
-                    [:!Sa :vk_none] [:!Sb :vk_none] [:!Sc :vk_none] [:!Sd :vk_none] [:!Se :vk_none] [:!Sf :vk_none] [:!Sh :vk_none] [:!Si :vk_none] [:!Sj :vk_none] [:!Sk :vk_none] [:!Sl :vk_none] [:!Sm :vk_none] [:!Sn :vk_none] [:!So :vk_none] [:!Sp :vk_none] [:!Sq :vk_none] [:!Sr :vk_none] [:!St :vk_none] [:!Su :vk_none] [:!Sw :vk_none] [:!Sy :vk_none] [:!Sz :vk_none]
-                    ; uppercase deadkeys with right shift
-                    [:!Ra :vk_none] [:!Rb :vk_none] [:!Rc :vk_none] [:!Rd :vk_none] [:!Re :vk_none] [:!Rf :vk_none] [:!Rh :vk_none] [:!Ri :vk_none] [:!Rj :vk_none] [:!Rk :vk_none] [:!Rl :vk_none] [:!Rm :vk_none] [:!Rn :vk_none] [:!Ro :vk_none] [:!Rp :vk_none] [:!Rq :vk_none] [:!Rr :vk_none] [:!Rt :vk_none] [:!Ru :vk_none] [:!Rw :vk_none] [:!Ry :vk_none] [:!Rz :vk_none]
-                    ; numbers deadkeys
-                    [:1 :vk_none] [:2 :vk_none] [:3 :vk_none] [:4 :vk_none] [:5 :vk_none] [:6 :vk_none] [:7 :vk_none] [:8 :vk_none] [:9 :vk_none] [:comma :vk_none] [:period :vk_none] [:slash :vk_none]
-                    ; special key deadkeys with left shift
-                    [:!S1 :vk_none] [:!S2 :vk_none] [:!S3 :vk_none] [:!S4 :vk_none] [:!S5 :vk_none] [:!S7 :vk_none] [:!S8 :vk_none] [:!S9 :vk_none] [:!Sslash :vk_none]
-                    ; special key deadkeys with right shift
-                    [:!R1 :vk_none] [:!R2 :vk_none] [:!R3 :vk_none] [:!R5 :vk_none] [:!R6 :vk_none] [:!R7 :vk_none] [:!R8 :vk_none] [:!R9 :vk_none] [:!Rcomma :vk_none] [:!Rperiod :vk_none] [:!Rslash :vk_none]
-                   ; =====================================================================================================================================
-
                     [:!Scomma [:!SCopen_bracket  ["vim_outdent_mode" 0] ["vim_mode" 1] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf19] ["vim_outdent_mode" 1]]  ; double > to outdent line or at least trigger SHIFT+CMD+[
                     [:!Scomma ["vim_outdent_mode" 1] nil {:delayed {:invoked ["vim_outdent_mode" 0] :canceled ["vim_outdent_mode" 0]}}]
                     [:!Speriod [:!SCclose_bracket  ["vim_indent_mode" 0] ["vim_mode" 1] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf19] ["vim_indent_mode" 1]]  ; double > to indent line or at least trigger SHIFT+CMD+]
@@ -604,25 +413,39 @@
                     [:!Tk :!CTup_arrow :Omnifocus]
                     [:!Th :!CTleft_arrow :Omnifocus]
                     [:!Tl :!CTright_arrow :Omnifocus]
+
+                    [:any :vk_none]
                     ]}
 
         {:des "VIM: Replace single letter mode"
            :rules [[:condi :vim_replace_single_letter_mode :vim_mode]
-                    [:a [:delete_forward :a] ["vim_replace_single_letter_mode" 0]] [:b [:delete_forward :b ["vim_replace_single_letter_mode" 0]]] [:c [:delete_forward :c ["vim_replace_single_letter_mode" 0]]] [:d [:delete_forward :d ["vim_replace_single_letter_mode" 0]]] [:e [:delete_forward :e ["vim_replace_single_letter_mode" 0]]] [:f [:delete_forward :f ["vim_replace_single_letter_mode" 0]]] [:g [:delete_forward :g ["vim_replace_single_letter_mode" 0]]] [:h [:delete_forward :h ["vim_replace_single_letter_mode" 0]]] [:i [:delete_forward :i ["vim_replace_single_letter_mode" 0]]] [:j [:delete_forward :j ["vim_replace_single_letter_mode" 0]]] [:k [:delete_forward :k ["vim_replace_single_letter_mode" 0]]] [:l [:delete_forward :l ["vim_replace_single_letter_mode" 0]]] [:m [:delete_forward :m ["vim_replace_single_letter_mode" 0]]]
-                    [:n [:delete_forward :n ["vim_replace_single_letter_mode" 0]]] [:o [:delete_forward :o ["vim_replace_single_letter_mode" 0]]] [:p [:delete_forward :p ["vim_replace_single_letter_mode" 0]]] [:q [:delete_forward :q ["vim_replace_single_letter_mode" 0]]] [:r [:delete_forward :r ["vim_replace_single_letter_mode" 0]]] [:s [:delete_forward :s ["vim_replace_single_letter_mode" 0]]] [:t [:delete_forward :t ["vim_replace_single_letter_mode" 0]]] [:u [:delete_forward :u ["vim_replace_single_letter_mode" 0]]] [:v [:delete_forward :v ["vim_replace_single_letter_mode" 0]]] [:w [:delete_forward :w ["vim_replace_single_letter_mode" 0]]] [:x [:delete_forward :x ["vim_replace_single_letter_mode" 0]]] [:y [:delete_forward :y ["vim_replace_single_letter_mode" 0]]] [:z [:delete_forward :z ["vim_replace_single_letter_mode" 0]]]
-                    [:!Sa [:delete_forward :!Sa ["vim_replace_single_letter_mode" 0]]] [:!Sb [:delete_forward :!Sb ["vim_replace_single_letter_mode" 0]]] [:!Sc [:delete_forward :!Sc ["vim_replace_single_letter_mode" 0]]] [:!Sd [:delete_forward :!Sd ["vim_replace_single_letter_mode" 0]]] [:!Se [:delete_forward :!Se ["vim_replace_single_letter_mode" 0]]] [:!Sf [:delete_forward :!Sf ["vim_replace_single_letter_mode" 0]]] [:!Sg [:delete_forward :!Sg ["vim_replace_single_letter_mode" 0]]] [:!Sh [:delete_forward :!Sh ["vim_replace_single_letter_mode" 0]]] [:!Si [:delete_forward :!Si ["vim_replace_single_letter_mode" 0]]] [:!Sj [:!Sdelete_forward :!Sj ["vim_replace_single_letter_mode" 0]]] [:!Sk [:delete_forward :!Sk ["vim_replace_single_letter_mode" 0]]] [:!Sl [:delete_forward :!Sl ["vim_replace_single_letter_mode" 0]]] [:!Sm [:delete_forward :!Sm ["vim_replace_single_letter_mode" 0]]]
-                    [:!Sn [:delete_forward :!Sn ["vim_replace_single_letter_mode" 0]]] [:!So [:delete_forward :!So ["vim_replace_single_letter_mode" 0]]] [:!Sp [:delete_forward :!Sp ["vim_replace_single_letter_mode" 0]]] [:!Sq [:delete_forward :!Sq ["vim_replace_single_letter_mode" 0]]] [:!Sr [:delete_forward :!Sr ["vim_replace_single_letter_mode" 0]]] [:!Ss [:delete_forward :!Ss ["vim_replace_single_letter_mode" 0]]] [:!St [:delete_forward :!St ["vim_replace_single_letter_mode" 0]]] [:!Su [:delete_forward :!Su ["vim_replace_single_letter_mode" 0]]] [:!Sv [:delete_forward :!Sv ["vim_replace_single_letter_mode" 0]]] [:!Sw [:delete_forward :!Sw ["vim_replace_single_letter_mode" 0]]] [:!Sx [:delete_forward :!Sx ["vim_replace_single_letter_mode" 0]]] [:!Sy [:delete_forward :!Sy ["vim_replace_single_letter_mode" 0]]] [:!Sz [:delete_forward :!Sz ["vim_replace_single_letter_mode" 0]]]
+                    [:a [:delete_forward :a] ["vim_replace_single_letter_mode" 0]] [:b [:delete_forward :b ["vim_replace_single_letter_mode" 0]]] [:c [:delete_forward :c ["vim_replace_single_letter_mode" 0]]] [:d [:delete_forward :d ["vim_replace_single_letter_mode" 0]]] [:e [:delete_forward :e ["vim_replace_single_letter_mode" 0]]] [:f [:delete_forward :f ["vim_replace_single_letter_mode" 0]]]
+                    [:g [:delete_forward :g ["vim_replace_single_letter_mode" 0]]] [:h [:delete_forward :h ["vim_replace_single_letter_mode" 0]]] [:i [:delete_forward :i ["vim_replace_single_letter_mode" 0]]] [:j [:delete_forward :j ["vim_replace_single_letter_mode" 0]]] [:k [:delete_forward :k ["vim_replace_single_letter_mode" 0]]] [:l [:delete_forward :l ["vim_replace_single_letter_mode" 0]]] [:m [:delete_forward :m ["vim_replace_single_letter_mode" 0]]]
+                    [:n [:delete_forward :n ["vim_replace_single_letter_mode" 0]]] [:o [:delete_forward :o ["vim_replace_single_letter_mode" 0]]] [:p [:delete_forward :p ["vim_replace_single_letter_mode" 0]]] [:q [:delete_forward :q ["vim_replace_single_letter_mode" 0]]] [:r [:delete_forward :r ["vim_replace_single_letter_mode" 0]]] [:s [:delete_forward :s ["vim_replace_single_letter_mode" 0]]] [:t [:delete_forward :t ["vim_replace_single_letter_mode" 0]]]
+                    [:u [:delete_forward :u ["vim_replace_single_letter_mode" 0]]] [:v [:delete_forward :v ["vim_replace_single_letter_mode" 0]]] [:w [:delete_forward :w ["vim_replace_single_letter_mode" 0]]] [:x [:delete_forward :x ["vim_replace_single_letter_mode" 0]]] [:y [:delete_forward :y ["vim_replace_single_letter_mode" 0]]] [:z [:delete_forward :z ["vim_replace_single_letter_mode" 0]]]
+                    [:!Sa [:delete_forward :!Sa ["vim_replace_single_letter_mode" 0]]] [:!Sb [:delete_forward :!Sb ["vim_replace_single_letter_mode" 0]]] [:!Sc [:delete_forward :!Sc ["vim_replace_single_letter_mode" 0]]] [:!Sd [:delete_forward :!Sd ["vim_replace_single_letter_mode" 0]]] [:!Se [:delete_forward :!Se ["vim_replace_single_letter_mode" 0]]] [:!Sf [:delete_forward :!Sf ["vim_replace_single_letter_mode" 0]]] [:!Sg [:delete_forward :!Sg ["vim_replace_single_letter_mode" 0]]]
+                    [:!Sh [:delete_forward :!Sh ["vim_replace_single_letter_mode" 0]]] [:!Si [:delete_forward :!Si ["vim_replace_single_letter_mode" 0]]] [:!Sj [:!Sdelete_forward :!Sj ["vim_replace_single_letter_mode" 0]]] [:!Sk [:delete_forward :!Sk ["vim_replace_single_letter_mode" 0]]] [:!Sl [:delete_forward :!Sl ["vim_replace_single_letter_mode" 0]]] [:!Sm [:delete_forward :!Sm ["vim_replace_single_letter_mode" 0]]]
+                    [:!Sn [:delete_forward :!Sn ["vim_replace_single_letter_mode" 0]]] [:!So [:delete_forward :!So ["vim_replace_single_letter_mode" 0]]] [:!Sp [:delete_forward :!Sp ["vim_replace_single_letter_mode" 0]]] [:!Sq [:delete_forward :!Sq ["vim_replace_single_letter_mode" 0]]] [:!Sr [:delete_forward :!Sr ["vim_replace_single_letter_mode" 0]]] [:!Ss [:delete_forward :!Ss ["vim_replace_single_letter_mode" 0]]] [:!St [:delete_forward :!St ["vim_replace_single_letter_mode" 0]]]
+                    [:!Su [:delete_forward :!Su ["vim_replace_single_letter_mode" 0]]] [:!Sv [:delete_forward :!Sv ["vim_replace_single_letter_mode" 0]]] [:!Sw [:delete_forward :!Sw ["vim_replace_single_letter_mode" 0]]] [:!Sx [:delete_forward :!Sx ["vim_replace_single_letter_mode" 0]]] [:!Sy [:delete_forward :!Sy ["vim_replace_single_letter_mode" 0]]] [:!Sz [:delete_forward :!Sz ["vim_replace_single_letter_mode" 0]]]
 
-                    [:!Ra [:delete_forward :!Ra ["vim_replace_single_letter_mode" 0]]] [:!Rb [:delete_forward :!Rb ["vim_replace_single_letter_mode" 0]]] [:!Rc [:delete_forward :!Rc ["vim_replace_single_letter_mode" 0]]] [:!Rd [:delete_forward :!Rd ["vim_replace_single_letter_mode" 0]]] [:!Re [:delete_forward :!Re ["vim_replace_single_letter_mode" 0]]] [:!Rf [:delete_forward :!Rf ["vim_replace_single_letter_mode" 0]]] [:!Rg [:delete_forward :!Rg ["vim_replace_single_letter_mode" 0]]] [:!Rh [:delete_forward :!Rh ["vim_replace_single_letter_mode" 0]]] [:!Ri [:delete_forward :!Ri ["vim_replace_single_letter_mode" 0]]] [:!Rj [:!Rdelete_forward :!Rj ["vim_replace_single_letter_mode" 0]]] [:!Rk [:delete_forward :!Rk ["vim_replace_single_letter_mode" 0]]] [:!Rl [:delete_forward :!Rl ["vim_replace_single_letter_mode" 0]]] [:!Rm [:delete_forward :!Rm ["vim_replace_single_letter_mode" 0]]]
-                    [:!Rn [:delete_forward :!Rn ["vim_replace_single_letter_mode" 0]]] [:!Ro [:delete_forward :!Ro ["vim_replace_single_letter_mode" 0]]] [:!Rp [:delete_forward :!Rp ["vim_replace_single_letter_mode" 0]]] [:!Rq [:delete_forward :!Rq ["vim_replace_single_letter_mode" 0]]] [:!Rr [:delete_forward :!Rr ["vim_replace_single_letter_mode" 0]]] [:!Rs [:delete_forward :!Rs ["vim_replace_single_letter_mode" 0]]] [:!Rt [:delete_forward :!Rt ["vim_replace_single_letter_mode" 0]]] [:!Ru [:delete_forward :!Ru ["vim_replace_single_letter_mode" 0]]] [:!Rv [:delete_forward :!Rv ["vim_replace_single_letter_mode" 0]]] [:!Rw [:delete_forward :!Rw ["vim_replace_single_letter_mode" 0]]] [:!Rx [:delete_forward :!Rx ["vim_replace_single_letter_mode" 0]]] [:!Ry [:delete_forward :!Ry ["vim_replace_single_letter_mode" 0]]] [:!Rz [:delete_forward :!Rz ["vim_replace_single_letter_mode" 0]]]
+                    [:!Ra [:delete_forward :!Ra ["vim_replace_single_letter_mode" 0]]] [:!Rb [:delete_forward :!Rb ["vim_replace_single_letter_mode" 0]]] [:!Rc [:delete_forward :!Rc ["vim_replace_single_letter_mode" 0]]] [:!Rd [:delete_forward :!Rd ["vim_replace_single_letter_mode" 0]]] [:!Re [:delete_forward :!Re ["vim_replace_single_letter_mode" 0]]] [:!Rf [:delete_forward :!Rf ["vim_replace_single_letter_mode" 0]]] [:!Rg [:delete_forward :!Rg ["vim_replace_single_letter_mode" 0]]]
+                    [:!Rh [:delete_forward :!Rh ["vim_replace_single_letter_mode" 0]]] [:!Ri [:delete_forward :!Ri ["vim_replace_single_letter_mode" 0]]] [:!Rj [:!Rdelete_forward :!Rj ["vim_replace_single_letter_mode" 0]]] [:!Rk [:delete_forward :!Rk ["vim_replace_single_letter_mode" 0]]] [:!Rl [:delete_forward :!Rl ["vim_replace_single_letter_mode" 0]]] [:!Rm [:delete_forward :!Rm ["vim_replace_single_letter_mode" 0]]]
+                    [:!Rn [:delete_forward :!Rn ["vim_replace_single_letter_mode" 0]]] [:!Ro [:delete_forward :!Ro ["vim_replace_single_letter_mode" 0]]] [:!Rp [:delete_forward :!Rp ["vim_replace_single_letter_mode" 0]]] [:!Rq [:delete_forward :!Rq ["vim_replace_single_letter_mode" 0]]] [:!Rr [:delete_forward :!Rr ["vim_replace_single_letter_mode" 0]]] [:!Rs [:delete_forward :!Rs ["vim_replace_single_letter_mode" 0]]] [:!Rt [:delete_forward :!Rt ["vim_replace_single_letter_mode" 0]]]
+                    [:!Ru [:delete_forward :!Ru ["vim_replace_single_letter_mode" 0]]] [:!Rv [:delete_forward :!Rv ["vim_replace_single_letter_mode" 0]]] [:!Rw [:delete_forward :!Rw ["vim_replace_single_letter_mode" 0]]] [:!Rx [:delete_forward :!Rx ["vim_replace_single_letter_mode" 0]]] [:!Ry [:delete_forward :!Ry ["vim_replace_single_letter_mode" 0]]] [:!Rz [:delete_forward :!Rz ["vim_replace_single_letter_mode" 0]]]
 
-                    [:grave_accent_and_tilde [:delete_forward :grave_accent_and_tilde ["vim_replace_single_letter_mode" 0]]] [:1 [:delete_forward :1 ["vim_replace_single_letter_mode" 0]]] [:2 [:delete_forward :2 ["vim_replace_single_letter_mode" 0]]] [:3 [:delete_forward :3 ["vim_replace_single_letter_mode" 0]]] [:4 [:delete_forward :4 ["vim_replace_single_letter_mode" 0]]] [:5 [:delete_forward :5 ["vim_replace_single_letter_mode" 0]]] [:6 [:delete_forward :6 ["vim_replace_single_letter_mode" 0]]] [:7 [:delete_forward :7 ["vim_replace_single_letter_mode" 0]]] [:8 [:delete_forward :8 ["vim_replace_single_letter_mode" 0]]] [:9 [:delete_forward :9 ["vim_replace_single_letter_mode" 0]]] [:0 [:delete_forward :0 ["vim_replace_single_letter_mode" 0]]]
-                    [:hyphen [:delete_forward :hyphen ["vim_replace_single_letter_mode" 0]]] [:equal_sign [:delete_forward :equal_sign ["vim_replace_single_letter_mode" 0]]] [:open_bracket [:delete_forward :open_bracket ["vim_replace_single_letter_mode" 0]]] [:close_bracket [:delete_forward :close_bracket ["vim_replace_single_letter_mode" 0]]] [:backslash [:delete_forward :backslash ["vim_replace_single_letter_mode" 0]]] [:semicolon [:delete_forward :semicolon ["vim_replace_single_letter_mode" 0]]] [:quote [:delete_forward :quote ["vim_replace_single_letter_mode" 0]]] [:comma [:delete_forward :comma ["vim_replace_single_letter_mode" 0] ]] [:period [:delete_forward :period ["vim_replace_single_letter_mode" 0]]] [:slash [:delete_forward :slash ["vim_replace_single_letter_mode" 0]]] [:spacebar [:delete_forward :spacebar ["vim_replace_single_letter_mode" 0]]]
+                    [:grave_accent_and_tilde [:delete_forward :grave_accent_and_tilde ["vim_replace_single_letter_mode" 0]]] [:1 [:delete_forward :1 ["vim_replace_single_letter_mode" 0]]] [:2 [:delete_forward :2 ["vim_replace_single_letter_mode" 0]]] [:3 [:delete_forward :3 ["vim_replace_single_letter_mode" 0]]] [:4 [:delete_forward :4 ["vim_replace_single_letter_mode" 0]]] [:5 [:delete_forward :5 ["vim_replace_single_letter_mode" 0]]] [:6 [:delete_forward :6 ["vim_replace_single_letter_mode" 0]]]
+                    [:7 [:delete_forward :7 ["vim_replace_single_letter_mode" 0]]] [:8 [:delete_forward :8 ["vim_replace_single_letter_mode" 0]]] [:9 [:delete_forward :9 ["vim_replace_single_letter_mode" 0]]] [:0 [:delete_forward :0 ["vim_replace_single_letter_mode" 0]]]
+                    [:hyphen [:delete_forward :hyphen ["vim_replace_single_letter_mode" 0]]] [:equal_sign [:delete_forward :equal_sign ["vim_replace_single_letter_mode" 0]]] [:open_bracket [:delete_forward :open_bracket ["vim_replace_single_letter_mode" 0]]] [:close_bracket [:delete_forward :close_bracket ["vim_replace_single_letter_mode" 0]]] [:backslash [:delete_forward :backslash ["vim_replace_single_letter_mode" 0]]] [:semicolon [:delete_forward :semicolon ["vim_replace_single_letter_mode" 0]]]
+                    [:quote [:delete_forward :quote ["vim_replace_single_letter_mode" 0]]] [:comma [:delete_forward :comma ["vim_replace_single_letter_mode" 0] ]] [:period [:delete_forward :period ["vim_replace_single_letter_mode" 0]]] [:slash [:delete_forward :slash ["vim_replace_single_letter_mode" 0]]] [:spacebar [:delete_forward :spacebar ["vim_replace_single_letter_mode" 0]]]
 
-                    [:!Sgrave_accent_and_tilde [:delete_forward :!Sgrave_accent_and_tilde ["vim_replace_single_letter_mode" 0]]] [:!S1 [:delete_forward :!S1 ["vim_replace_single_letter_mode" 0]]] [:!S2 [:delete_forward :!S2 ["vim_replace_single_letter_mode" 0]]] [:!S3 [:delete_forward :!S3 ["vim_replace_single_letter_mode" 0]]] [:!S4 [:delete_forward :!S4 ["vim_replace_single_letter_mode" 0]]] [:!S5 [:delete_forward :!S5 ["vim_replace_single_letter_mode" 0]]] [:!S6 [:delete_forward :!S6 ["vim_replace_single_letter_mode" 0]]] [:!S7 [:delete_forward :!S7 ["vim_replace_single_letter_mode" 0]]] [:!S8 [:delete_forward :!S8 ["vim_replace_single_letter_mode" 0]]] [:!S9 [:delete_forward :!S9 ["vim_replace_single_letter_mode" 0]]] [:!S0 [:delete_forward :!S0 ["vim_replace_single_letter_mode" 0]]]
-                    [:!Shyphen [:delete_forward :!Shyphen ["vim_replace_single_letter_mode" 0]]] [:!Sequal_sign [:delete_forward :!Sequal_sign ["vim_replace_single_letter_mode" 0]]] [:!Sopen_bracket [:delete_forward :!Sopen_bracket ["vim_replace_single_letter_mode" 0]]] [:!Sclose_bracket [:delete_forward :!Sclose_bracket ["vim_replace_single_letter_mode" 0]]] [:!Sbackslash [:delete_forward :!Sbackslash ["vim_replace_single_letter_mode" 0]]] [:!Ssemicolon [:delete_forward :!Ssemicolon ["vim_replace_single_letter_mode" 0]]] [:!Squote [:delete_forward :!Squote ["vim_replace_single_letter_mode" 0]]] [:!Scomma [:delete_forward :!Scomma ["vim_replace_single_letter_mode" 0] ]] [:!Speriod [:delete_forward :!Speriod ["vim_replace_single_letter_mode" 0]]] [:!Sslash [:delete_forward :!Sslash ["vim_replace_single_letter_mode" 0]]]
+                    [:!Sgrave_accent_and_tilde [:delete_forward :!Sgrave_accent_and_tilde ["vim_replace_single_letter_mode" 0]]] [:!S1 [:delete_forward :!S1 ["vim_replace_single_letter_mode" 0]]] [:!S2 [:delete_forward :!S2 ["vim_replace_single_letter_mode" 0]]] [:!S3 [:delete_forward :!S3 ["vim_replace_single_letter_mode" 0]]] [:!S4 [:delete_forward :!S4 ["vim_replace_single_letter_mode" 0]]] [:!S5 [:delete_forward :!S5 ["vim_replace_single_letter_mode" 0]]]
+                    [:!S6 [:delete_forward :!S6 ["vim_replace_single_letter_mode" 0]]] [:!S7 [:delete_forward :!S7 ["vim_replace_single_letter_mode" 0]]] [:!S8 [:delete_forward :!S8 ["vim_replace_single_letter_mode" 0]]] [:!S9 [:delete_forward :!S9 ["vim_replace_single_letter_mode" 0]]] [:!S0 [:delete_forward :!S0 ["vim_replace_single_letter_mode" 0]]]
+                    [:!Shyphen [:delete_forward :!Shyphen ["vim_replace_single_letter_mode" 0]]] [:!Sequal_sign [:delete_forward :!Sequal_sign ["vim_replace_single_letter_mode" 0]]] [:!Sopen_bracket [:delete_forward :!Sopen_bracket ["vim_replace_single_letter_mode" 0]]] [:!Sclose_bracket [:delete_forward :!Sclose_bracket ["vim_replace_single_letter_mode" 0]]] [:!Sbackslash [:delete_forward :!Sbackslash ["vim_replace_single_letter_mode" 0]]]
+                    [:!Ssemicolon [:delete_forward :!Ssemicolon ["vim_replace_single_letter_mode" 0]]] [:!Squote [:delete_forward :!Squote ["vim_replace_single_letter_mode" 0]]] [:!Scomma [:delete_forward :!Scomma ["vim_replace_single_letter_mode" 0] ]] [:!Speriod [:delete_forward :!Speriod ["vim_replace_single_letter_mode" 0]]] [:!Sslash [:delete_forward :!Sslash ["vim_replace_single_letter_mode" 0]]]
+
                     [:!Sspacebar [:delete_forward :!Sspacebar ["vim_replace_single_letter_mode" 0]]]
                     [:caps_lock ["vim_replace_mode" 0]]
+
                   ]}
 
         {:des "VIM: Replace mode"
@@ -639,6 +462,7 @@
 
                     [:!Sgrave_accent_and_tilde [:delete_forward :!Sgrave_accent_and_tilde]] [:!S1 [:delete_forward :!S1]] [:!S2 [:delete_forward :!S2]] [:!S3 [:delete_forward :!S3]] [:!S4 [:delete_forward :!S4]] [:!S5 [:delete_forward :!S5]] [:!S6 [:delete_forward :!S6]] [:!S7 [:delete_forward :!S7]] [:!S8 [:delete_forward :!S8]] [:!S9 [:delete_forward :!S9]] [:!S0 [:delete_forward :!S0]]
                     [:!Shyphen [:delete_forward :!Shyphen]] [:!Sequal_sign [:delete_forward :!Sequal_sign]] [:!Sopen_bracket [:delete_forward :!Sopen_bracket]] [:!Sclose_bracket [:delete_forward :!Sclose_bracket]] [:!Sbackslash [:delete_forward :!Sbackslash]] [:!Ssemicolon [:delete_forward :!Ssemicolon]] [:!Squote [:delete_forward :!Squote]] [:!Scomma [:delete_forward :!Scomma ]] [:!Speriod [:delete_forward :!Speriod]] [:!Sslash [:delete_forward :!Sslash]]
+
                     [:!Sspacebar [:delete_forward :!Sspacebar]]
                     [:caps_lock ["vim_replace_mode" 0]]
                   ]}
