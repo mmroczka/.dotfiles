@@ -108,6 +108,7 @@
       {:des "Left Shift + Left Cmd -> VIM Navigation mode"
                :rules [[:!Sleft_command :!Sleft_command nil {:alone [:!SCOTf17
                                                                      ["vim_navigation_mode" 1]
+                                                                     ["any_key_not_defined_above_while_in_navigation_mode" 1]
                                                                      ["vim_mode" 0]
                                                                      ["vim_visual_mode" 0]
                                                                      ["vim_visual_block_mode" 0]
@@ -116,9 +117,10 @@
                                                                      ["vim_go_to_visual_mode" 0]
                                                                     ]}]]}
 
-      {:des "Left cmd -> Simulatneously press j and q which triggers VimSpoon naviagtion in Hammerspoon"
+      {:des "Left cmd to trigger Vim Mode"
                :rules [[:condi :!vim_mode :!vim_navigation_mode]
                        [:left_command :left_command nil {:alone [["vim_mode" 1]
+                                                                 ["any_key_not_defined_above" 1]
                                                                  ["vim_visual_mode" 0]
                                                                  ["vim_visual_block_mode" 0]
                                                                  ["vim_delete_mode" 0]
@@ -138,7 +140,7 @@
                     ]}
 
         {:des "navigation mode"
-           :rules [[:condi :!vim_mode :vim_navigation_mode]
+           :rules [[:condi :vim_navigation_mode :any_key_not_defined_above_while_in_navigation_mode]
                    [:c :!COc] ; center
                    [:f :!COf] ; fullscreen
 
@@ -163,27 +165,25 @@
                    [:g :!SOTright_arrow nil {:held :!SOTright_arrow :params{:held 150}}] ; grow
                    [:s :!SOTleft_arrow] ; shrink
 
-                   [:i [["vim_navigation_mode" 0] ["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf20]]
+                   [:i [["vim_navigation_mode" 0] ["any_key_not_defined_above_while_in_navigation_mode" 0] :!SCOTf20]]
                    ; [:left_command nil nil {:afterup [["vim_navigation_mode" 0] ["vim_mode" 1] ["vim_visual_mode" 0] :!SCOTf19] :held :left_command :repeat false :halt true :params{:alone 150 :held 200}}]
 
-                   [:a ["test-anykey-mode" 0] ["test-anykey-mode" 1]]
-                   [:b ["test-anykey-mode" 1]]
-                    :test-anykey-mode
-                    [:anykey [["vim_navigation_mode" 0] ["vim_mode" 1]]]
+                    :any_key_not_defined_above_while_in_navigation_mode
+                    [:anykey :vk_none]
                   ]}
 
         {:des "VIM: change mode"
-           :rules [[:condi :!vim_in_mode :vim_change_mode]
-                    [:i [["vim_from_change_mode" 1] ["vim_in_mode" 1]]]
+           :rules [:vim_change_mode
+                    [:i [["vim_from_change_mode" 1] ["any_key_not_defined_above" 0] ["vim_in_mode" 1]]]
                     [:c [:!Cleft_arrow :!SCright_arrow :delete_or_backspace ["vim_change_mode" 0] ["vim_in_mode" 0] :!SCOTf20]]
                     [:s [:!SCleft_arrow :!Cc :right_arrow :!SCright_arrow [:km "surroundWithChange"] ["vim_change_mode" 0] ["vim_in_mode" 0] :!SCOTf20]]
 
-                    [:any [["vim_change_mode" 0] ["vim_mode" 1]]]
+                    [:condi :vim_change_mode :any_key_not_defined_above]
+                    [:anykey [["vim_change_mode" 0] ["vim_mode" 1] :t :e :s :t]]
                     ]}
 
         {:des "VIM: delete mode"
-           :rules [[:condi :!vim_in_mode :vim_delete_mode]
-
+           :rules [[:condi :vim_delete_mode :any_key_not_defined_above]
                     [:b [:!SOleft_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
                     [:d [:!Cleft_arrow :!SCright_arrow :delete_or_backspace :delete_forward ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
                     [:e [:!SOright_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
@@ -195,17 +195,19 @@
                     [:s [:!SCleft_arrow :!Cc :right_arrow :!SCright_arrow [:km "surroundWithDelete"] ["vim_delete_mode" 0] ["vim_in_mode" 0] :!SCOTf20]] ; delete surround character...
                     [:w [:!SOright_arrow :!Sright_arrow :delete_or_backspace ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 1]]]
 
-                    [:any [["vim_delete_mode" 0] ["vim_mode" 1]]]
+                    ; :any_key_not_defined_above
+                    ; [:anykey [["vim_delete_mode" 0] ["vim_mode" 1]]]
                     ]}
 
         {:des "VIM: IN mode"
-           :rules [:vim_in_mode
+           :rules [[:condi :vim_in_mode :any_key_not_defined_above]
                     [:e [:!Oleft_arrow :!SOright_arrow :delete_or_backspace ["vim_change_mode" 0] ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 0] ["vim_from_delete_mode" 0] :!SCOTf20] ["vim_from_delete_mode" 1]]
                     [:e [:!Oleft_arrow :!SOright_arrow :delete_or_backspace ["vim_change_mode" 0] ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 0] ["vim_from_change_mode" 0] :!SCOTf20] ["vim_from_change_mode" 1]]
                     [:w [:!Oleft_arrow :!SOright_arrow :!Sright_arrow :delete_or_backspace ["vim_change_mode" 0] ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 0] ["vim_from_delete_mode" 0] :!SCOTf20] ["vim_from_delete_mode" 1]]
                     [:w [:!Oleft_arrow :!SOright_arrow :!Sright_arrow :delete_or_backspace ["vim_change_mode" 0] ["vim_delete_mode" 0] ["vim_in_mode" 0] ["vim_mode" 0] ["vim_from_change_mode" 0] :!SCOTf20] ["vim_from_change_mode" 1]]
 
-                    [:any [["vim_in_mode" 0] ["vim_mode" 1]]]
+                    ; :any_key_not_defined_above
+                    ; [:anykey [["vim_in_mode" 0] ["vim_mode" 1]]]
                     ]}
 
         {:des "VIM: YANK mode"
@@ -219,7 +221,8 @@
                     [:s [:!Cleft_arrow :!SCright_arrow :!Cc ["vim_surround_mode" 0] ["vim_yank_mode" 0] :!SCOTf20 [:km "surroundWith"] ] ["vim_surround_mode" 1]]  ; double 's' to surround sentence with <char>
                     [:s ["vim_surround_mode" 1] nil {:delayed {:invoked ["vim_surround_mode" 0] :canceled ["vim_surround_mode" 0]}}]
 
-                    [:any [["vim_yank_mode" 0] ["vim_mode" 1]]]
+                    ; :any_key_not_defined_above
+                    ; [:anykey [["vim_yank_mode" 0] ["vim_mode" 1]]]
                     ]}
 
         {:des "VIM: GO TO mode"
@@ -229,11 +232,12 @@
                     [:!Su [["vim_uppercase" 1] ["vim_movement_mode" 1]]]
                     [:u [["vim_lowercase" 1] ["vim_movement_mode" 1]]]
 
-                    [:any [["vim_go_to_mode" 0] ["vim_mode" 1]]]
+                    ; :any_key_not_defined_above
+                    ; [:anykey [["vim_go_to_mode" 0] ["vim_mode" 1]]]
                     ]}
 
         {:des "VIM: MOVEMENT mode"
-           :rules [:vim_movement_mode
+           :rules [[:condi :vim_movement_mode :any_key_not_defined_above]
 
                     [:w [["vim_movement_mode" 0] ["vim_uppercase" 0] ["vim_go_to_mode" 0] :!SOright_arrow :!Cc [:km "upperCaseClipboardContentsThenPaste"]] ["vim_uppercase" 1]]
                     [:e [["vim_movement_mode" 0] ["vim_uppercase" 0] ["vim_go_to_mode" 0] :!SOright_arrow :!Cc [:km "upperCaseClipboardContentsThenPaste"]] ["vim_uppercase" 1]]
@@ -247,12 +251,13 @@
                     [:!S4 [["vim_movement_mode" 0] ["vim_lowercase" 0] ["vim_go_to_mode" 0] :!SCright_arrow :!Cc [:km "lowercaseClipboardContentsThenPaste"]] ["vim_lowercase" 1]]
                     [:!R4 [["vim_movement_mode" 0] ["vim_lowercase" 0] ["vim_go_to_mode" 0] :!SCright_arrow :!Cc [:km "lowercaseClipboardContentsThenPaste"]] ["vim_lowercase" 1]]
 
-                    [:any [["vim_movement_mode" 0] ["vim_mode" 1]]]
+                    ; :any_key_not_defined_above
+                    ; [:anykey [["vim_movement_mode" 0] ["vim_mode" 1]]]
                     ]}
 
 
         {:des "vim mode"
-           :rules [[:condi :vim_mode :!vim_replace_mode :!vim_replace_single_letter_mode]
+           :rules [:vim_mode
                     [:!Sgrave_accent_and_tilde [:km "tildeVimCommand"]]
                     [:!Rgrave_accent_and_tilde [:km "tildeVimCommand"]]
                     [:!S3 [:!Oleft_arrow :!SOright_arrow :!Cc [:km "findNext"]]] ; use '#' to find next occurence of word under the cursor
@@ -290,7 +295,7 @@
                     [:!Sg :!Cdown_arrow]
                     [:!Rg :!Cdown_arrow]
                     [:h :left_arrow]
-                    [:i [["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf20]]
+                    [:i [["vim_mode" 0] ["any_key_not_defined_above" 0] ["vim_visual_mode" 0] :!SCOTf20]]
                     [:!Si [:!Cleft_arrow ["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf20]]
                     [:!Ri [:!Cleft_arrow ["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf20]] ; make sure it works with right shift too
                     [:j :down_arrow]
@@ -337,37 +342,40 @@
                     [:!Ty :!Cc]
                     [:y [["vim_yank_mode" 1]["vim_mode" 0]]]
 
-                    [:any :vk_none]
+                    [:condi :vim_mode :any_key_not_defined_above]
+                    [:anykey :vk_none]
                     ]}
 
         {:des "visual BLOCK mode"
-           :rules [:vim_visual_block_mode
-                    [:!Scomma [:!SCopen_bracket  ["vim_outdent_mode" 0] ["vim_mode" 1] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf19] ["vim_outdent_mode" 1]]  ; double > to outdent line or at least trigger SHIFT+CMD+[
+           :rules [[:condi :vim_visual_block_mode :any_key_not_defined_above_while_in_visual_block_mode]
+                    [:!Scomma [:!SCopen_bracket  ["vim_outdent_mode" 0]
+                                                 ["any_key_not_defined_above_while_in_vim_mode" 1] ["any_key_not_defined_above_while_in_visual_block_mode" 0] ["vim_mode" 1] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf19] ["vim_outdent_mode" 1]]  ; double > to outdent line or at least trigger SHIFT+CMD+[
                     [:!Scomma ["vim_outdent_mode" 1] nil {:delayed {:invoked ["vim_outdent_mode" 0] :canceled ["vim_outdent_mode" 0]}}]
-                    [:!Speriod [:!SCclose_bracket  ["vim_indent_mode" 0] ["vim_mode" 1] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf19] ["vim_indent_mode" 1]]  ; double > to indent line or at least trigger SHIFT+CMD+]
+                    [:!Speriod [:!SCclose_bracket  ["vim_indent_mode" 0] ["any_key_not_defined_above_while_in_vim_mode" 1] ["vim_mode" 1] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf19] ["vim_indent_mode" 1]]  ; double > to indent line or at least trigger SHIFT+CMD+]
                     [:!Speriod ["vim_indent_mode" 1] nil {:delayed {:invoked ["vim_indent_mode" 0] :canceled ["vim_indent_mode" 0]}}]
                     [:d [["vim_mode" 1] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :delete_forward :delete_forward :!SCOTf19] ]
                     [:g [:!SCup_arrow ["vim_go_to_visual_mode" 0]] ["vim_go_to_visual_mode" 1]]  ; double tap g to jump to top of file
                     [:g ["vim_go_to_visual_mode" 1] nil {:delayed {:invoked ["vim_go_to_visual_mode" 0] :canceled ["vim_go_to_visual_mode" 0]}}]
                     [:!Sg :!SCdown_arrow]
                     [:!Rg :!SCdown_arrow]
-                    [:i [["vim_mode" 0] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf20]]
+                    [:i [["vim_mode" 0] ["vim_visual_mode" 0] ["any_key_not_defined_above_while_in_visual_block_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf20]]
                     [:j nil nil {:held :!Sdown_arrow :afterup [:!Sdown_arrow :!SCright_arrow] :params{:held 150}} ]
-                    [:!Ssemicolon [:!Cc ["vim_mode" 0] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf20 [:km "findAndReplaceClipboardContents"]]]
+                    [:!Ssemicolon [:!Cc ["vim_mode" 0] ["any_key_not_defined_above_while_in_visual_block_mode" 0] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf20 [:km "findAndReplaceClipboardContents"]]]
                     [:k nil nil {:held :!Sup_arrow :afterup [:!Sup_arrow :!SCright_arrow] :params{:held 150}}]
                     [:!Ss [:!Cc [:km "surroundWith"] ["vim_mode" 0] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf20]]
                     [:!Rs [:!Cc [:km "surroundWith"] ["vim_mode" 0] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf20]]
-                    [:v [["vim_mode" 0] ["vim_visual_mode" 1] ["vim_visual_block_mode" 0] :!SCOTf18]]
-                    [:x [:delete_forward :delete_forward ["vim_mode" 1] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf19]]
+                    [:v [["vim_mode" 0] ["any_key_not_defined_above_while_in_visual_mode" 1] ["vim_visual_mode" 1] ["vim_visual_block_mode" 0] ["any_key_not_defined_above_while_in_visual_block_mode" 0] :!SCOTf18]]
+                    [:x [:delete_forward :delete_forward ["vim_mode" 1] ["" 1] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf19]]
                     [:!Sx [:delete_or_backspace ["vim_mode" 1] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf19]]
                     [:y [["vim_mode" 1] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!Cc :!SCOTf19]]
 
-                    [:any :vk_none]
+                    ; :any_key_not_defined_above_while_in_visual_block_mode
+                    ; [:anykey :vk_none]
                     ]}
 
 
         {:des "visual mode"
-           :rules [:vim_visual_mode
+           :rules [[:condi :vim_visual_mode :any_key_not_defined_above]
                     [:!Scomma [:!SCopen_bracket  ["vim_outdent_mode" 0] ["vim_mode" 1] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf19] ["vim_outdent_mode" 1]]  ; double > to outdent line or at least trigger SHIFT+CMD+[
                     [:!Scomma ["vim_outdent_mode" 1] nil {:delayed {:invoked ["vim_outdent_mode" 0] :canceled ["vim_outdent_mode" 0]}}]
                     [:!Speriod [:!SCclose_bracket  ["vim_indent_mode" 0] ["vim_mode" 1] ["vim_visual_mode" 0] ["vim_visual_block_mode" 0] :!SCOTf19] ["vim_indent_mode" 1]]  ; double > to indent line or at least trigger SHIFT+CMD+]
@@ -416,7 +424,8 @@
                     [:!Th :!CTleft_arrow :Omnifocus]
                     [:!Tl :!CTright_arrow :Omnifocus]
 
-                    [:any :vk_none]
+                    ; :any_key_not_defined_above
+                    ; [:anykey :vk_none]
                     ]}
 
         {:des "VIM: Replace single letter mode"
