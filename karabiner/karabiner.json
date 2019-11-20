@@ -7818,6 +7818,162 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "left_shift"
+          },
+          "to" : [ {
+            "key_code" : "left_shift"
+          } ],
+          "conditions" : [ {
+            "name" : "any_key_not_defined_above",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "left_command"
+          },
+          "to" : [ {
+            "key_code" : "left_command"
+          } ],
+          "conditions" : [ {
+            "name" : "any_key_not_defined_above",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "left_option"
+          },
+          "to" : [ {
+            "key_code" : "left_option"
+          } ],
+          "conditions" : [ {
+            "name" : "any_key_not_defined_above",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "left_control"
+          },
+          "to" : [ {
+            "key_code" : "left_control"
+          } ],
+          "conditions" : [ {
+            "name" : "any_key_not_defined_above",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_shift"
+          },
+          "to" : [ {
+            "key_code" : "right_shift"
+          } ],
+          "conditions" : [ {
+            "name" : "any_key_not_defined_above",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_command"
+          },
+          "to" : [ {
+            "key_code" : "right_command"
+          } ],
+          "conditions" : [ {
+            "name" : "any_key_not_defined_above",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_option"
+          },
+          "to" : [ {
+            "key_code" : "right_option"
+          } ],
+          "conditions" : [ {
+            "name" : "any_key_not_defined_above",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_control"
+          },
+          "to" : [ {
+            "key_code" : "right_control"
+          } ],
+          "conditions" : [ {
+            "name" : "any_key_not_defined_above",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "modifiers" : {
+              "optional" : [ "any" ]
+            },
+            "any" : "key_code"
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "conditions" : [ {
+            "name" : "any_key_not_defined_above",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
         } ]
       }, {
         "description" : "visual BLOCK mode",

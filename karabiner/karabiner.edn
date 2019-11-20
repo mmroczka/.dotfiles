@@ -389,8 +389,16 @@
                     [:!Ty :!Cc]
                     [:y [["vim_yank_mode" 1]["vim_mode" 0]]]
 
-                    ; [:condi :vim_mode :any_key_not_defined_above]
-                    ; [:anykey :vk_none]
+                    [:condi :vim_mode :any_key_not_defined_above]
+                    [:left_shift :left_shift]
+                    [:left_command :left_command]
+                    [:left_option :left_option]
+                    [:left_control :left_control]
+                    [:right_shift :right_shift]
+                    [:right_command :right_command]
+                    [:right_option :right_option]
+                    [:right_control :right_control]
+                    [:anykey :vk_none]
                     ]}
 
         {:des "visual BLOCK mode"
