@@ -408,6 +408,7 @@
                     [:!Speriod [:!SCclose_bracket :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_indent_mode" 1]]  ; double > to indent line or at least trigger SHIFT+CMD+]
                     [:!Speriod ["vim_indent_mode" 1] nil {:delayed {:invoked ["vim_indent_mode" 0] :canceled ["vim_indent_mode" 0]}}]
                     [:d [:TURN_ON_VIM_AND_CLEAR_VARS :delete_forward :delete_forward] ]
+                    [:!Td [:!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow ]] ; go down 15 lines
                     [:g [:!SCup_arrow ["vim_go_to_visual_mode" 0]] ["vim_go_to_visual_mode" 1]]  ; double tap g to jump to top of file
                     [:g ["vim_go_to_visual_mode" 1] nil {:delayed {:invoked ["vim_go_to_visual_mode" 0] :canceled ["vim_go_to_visual_mode" 0]}}]
                     [:!Sg :!SCdown_arrow]
@@ -418,6 +419,7 @@
                     [:k nil nil {:held :!Sup_arrow :afterup [:!Sup_arrow :!SCright_arrow] :params{:held 150}}]
                     [:!Ss [:!Cc [:km "surroundWith"] :TURN_OFF_VIM]]
                     [:!Rs [:!Cc [:km "surroundWith"] :TURN_OFF_VIM]]
+                    [:!Tu [:!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow ]] ; go down 15 lines
                     [:v [["vim_mode" 0] ["vim_visual_mode" 1] ["vim_visual_block_mode" 0] :!SCOTf18]]
                     [:x [:delete_forward :delete_forward :TURN_ON_VIM_AND_CLEAR_VARS]]
                     [:!Sx [:delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
@@ -438,6 +440,7 @@
                     [:!R4 :!SCright_arrow]
                     [:!S6 :!SCleft_arrow]
                     [:b :!SOleft_arrow]
+                    [:!Td [:!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow ]] ; go down 15 lines
                     [:e :!SOright_arrow]
                     [:g [["vim_go_to_visual_mode" 1]]]
                     [:!Sg :!SCdown_arrow]
@@ -452,6 +455,7 @@
                     [:!Ss [:!Cc [:km "surroundWith"] :TURN_OFF_VIM]]
                     [:!Rs [:!Cc [:km "surroundWith"] :TURN_OFF_VIM]]
 
+                    [:!Tu [:!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow ]] ; go down 15 lines
                     [:v :TURN_ON_VIM_AND_CLEAR_VARS]
                     [:!Sv [["vim_mode" 0]
                            ["vim_visual_mode" 0]

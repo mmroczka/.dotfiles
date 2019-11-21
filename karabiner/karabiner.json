@@ -9477,6 +9477,65 @@
           "type" : "basic"
         }, {
           "from" : {
+            "key_code" : "d",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "vim_visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "g"
           },
           "to" : [ {
@@ -10067,6 +10126,65 @@
               "name" : "vim_uppercase_mode",
               "value" : 0
             }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "vim_visual_block_mode",
@@ -10960,6 +11078,65 @@
           "type" : "basic"
         }, {
           "from" : {
+            "key_code" : "d",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "down_arrow",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "vim_visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "e"
           },
           "to" : [ {
@@ -11530,6 +11707,65 @@
               "name" : "vim_uppercase_mode",
               "value" : 0
             }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "vim_visual_mode",
