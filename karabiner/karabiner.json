@@ -1487,7 +1487,7 @@
             }
           }, {
             "set_variable" : {
-              "name" : "any_key_not_defined_above_while_in_navigation_mode",
+              "name" : "any_key_not_defined_above",
               "value" : 1
             }
           }, {
@@ -1790,13 +1790,13 @@
             "key_code" : "c"
           },
           "to" : [ {
-            "key_code" : "c",
-            "modifiers" : [ "left_command", "left_option" ]
+            "key_code" : "f12",
+            "modifiers" : [ "left_control" ]
           } ],
           "conditions" : [ {
-            "name" : "any_key_not_defined_above_while_in_navigation_mode",
+            "name" : "vim_desktop_navigation_mode",
             "value" : 1,
-            "type" : "variable_if"
+            "type" : "variable_unless"
           }, {
             "name" : "vim_navigation_mode",
             "value" : 1,
@@ -1808,13 +1808,13 @@
             "key_code" : "f"
           },
           "to" : [ {
-            "key_code" : "f",
-            "modifiers" : [ "left_command", "left_option" ]
+            "key_code" : "f12",
+            "modifiers" : [ "left_command" ]
           } ],
           "conditions" : [ {
-            "name" : "any_key_not_defined_above_while_in_navigation_mode",
+            "name" : "vim_desktop_navigation_mode",
             "value" : 1,
-            "type" : "variable_if"
+            "type" : "variable_unless"
           }, {
             "name" : "vim_navigation_mode",
             "value" : 1,
@@ -1826,13 +1826,13 @@
             "key_code" : "h"
           },
           "to" : [ {
-            "key_code" : "left_arrow",
+            "key_code" : "f12",
             "modifiers" : [ "left_command", "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "any_key_not_defined_above_while_in_navigation_mode",
+            "name" : "vim_desktop_navigation_mode",
             "value" : 1,
-            "type" : "variable_if"
+            "type" : "variable_unless"
           }, {
             "name" : "vim_navigation_mode",
             "value" : 1,
@@ -1844,13 +1844,13 @@
             "key_code" : "j"
           },
           "to" : [ {
-            "key_code" : "down_arrow",
+            "key_code" : "f14",
             "modifiers" : [ "left_command", "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "any_key_not_defined_above_while_in_navigation_mode",
+            "name" : "vim_desktop_navigation_mode",
             "value" : 1,
-            "type" : "variable_if"
+            "type" : "variable_unless"
           }, {
             "name" : "vim_navigation_mode",
             "value" : 1,
@@ -1862,13 +1862,13 @@
             "key_code" : "k"
           },
           "to" : [ {
-            "key_code" : "up_arrow",
+            "key_code" : "f15",
             "modifiers" : [ "left_command", "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "any_key_not_defined_above_while_in_navigation_mode",
+            "name" : "vim_desktop_navigation_mode",
             "value" : 1,
-            "type" : "variable_if"
+            "type" : "variable_unless"
           }, {
             "name" : "vim_navigation_mode",
             "value" : 1,
@@ -1880,13 +1880,13 @@
             "key_code" : "l"
           },
           "to" : [ {
-            "key_code" : "right_arrow",
+            "key_code" : "f13",
             "modifiers" : [ "left_command", "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "any_key_not_defined_above_while_in_navigation_mode",
+            "name" : "vim_desktop_navigation_mode",
             "value" : 1,
-            "type" : "variable_if"
+            "type" : "variable_unless"
           }, {
             "name" : "vim_navigation_mode",
             "value" : 1,
@@ -1898,13 +1898,13 @@
             "key_code" : "o"
           },
           "to" : [ {
-            "key_code" : "left_arrow",
+            "key_code" : "f12",
             "modifiers" : [ "left_command", "left_control" ]
           } ],
           "conditions" : [ {
-            "name" : "any_key_not_defined_above_while_in_navigation_mode",
+            "name" : "vim_desktop_navigation_mode",
             "value" : 1,
-            "type" : "variable_if"
+            "type" : "variable_unless"
           }, {
             "name" : "vim_navigation_mode",
             "value" : 1,
@@ -1916,13 +1916,13 @@
             "key_code" : "p"
           },
           "to" : [ {
-            "key_code" : "right_arrow",
+            "key_code" : "f13",
             "modifiers" : [ "left_command", "left_control" ]
           } ],
           "conditions" : [ {
-            "name" : "any_key_not_defined_above_while_in_navigation_mode",
+            "name" : "vim_desktop_navigation_mode",
             "value" : 1,
-            "type" : "variable_if"
+            "type" : "variable_unless"
           }, {
             "name" : "vim_navigation_mode",
             "value" : 1,
@@ -1934,13 +1934,13 @@
             "key_code" : "period"
           },
           "to" : [ {
-            "key_code" : "left_arrow",
+            "key_code" : "f12",
             "modifiers" : [ "left_command", "left_control", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "any_key_not_defined_above_while_in_navigation_mode",
+            "name" : "vim_desktop_navigation_mode",
             "value" : 1,
-            "type" : "variable_if"
+            "type" : "variable_unless"
           }, {
             "name" : "vim_navigation_mode",
             "value" : 1,
@@ -1952,13 +1952,13 @@
             "key_code" : "slash"
           },
           "to" : [ {
-            "key_code" : "right_arrow",
+            "key_code" : "f13",
             "modifiers" : [ "left_command", "left_control", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "any_key_not_defined_above_while_in_navigation_mode",
+            "name" : "vim_desktop_navigation_mode",
             "value" : 1,
-            "type" : "variable_if"
+            "type" : "variable_unless"
           }, {
             "name" : "vim_navigation_mode",
             "value" : 1,
@@ -1970,13 +1970,13 @@
             "key_code" : "t"
           },
           "to" : [ {
-            "key_code" : "right_arrow",
+            "key_code" : "f13",
             "modifiers" : [ "left_command", "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "any_key_not_defined_above_while_in_navigation_mode",
+            "name" : "vim_desktop_navigation_mode",
             "value" : 1,
-            "type" : "variable_if"
+            "type" : "variable_unless"
           }, {
             "name" : "vim_navigation_mode",
             "value" : 1,
@@ -1991,13 +1991,13 @@
             }
           },
           "to" : [ {
-            "key_code" : "left_arrow",
+            "key_code" : "f12",
             "modifiers" : [ "left_command", "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "any_key_not_defined_above_while_in_navigation_mode",
+            "name" : "vim_desktop_navigation_mode",
             "value" : 1,
-            "type" : "variable_if"
+            "type" : "variable_unless"
           }, {
             "name" : "vim_navigation_mode",
             "value" : 1,
@@ -2012,13 +2012,13 @@
             }
           },
           "to" : [ {
-            "key_code" : "left_arrow",
+            "key_code" : "f12",
             "modifiers" : [ "left_command", "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "any_key_not_defined_above_while_in_navigation_mode",
+            "name" : "vim_desktop_navigation_mode",
             "value" : 1,
-            "type" : "variable_if"
+            "type" : "variable_unless"
           }, {
             "name" : "vim_navigation_mode",
             "value" : 1,
@@ -2030,13 +2030,13 @@
             "key_code" : "n"
           },
           "to" : [ {
-            "key_code" : "right_arrow",
+            "key_code" : "f13",
             "modifiers" : [ "left_command", "left_control", "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "any_key_not_defined_above_while_in_navigation_mode",
+            "name" : "vim_desktop_navigation_mode",
             "value" : 1,
-            "type" : "variable_if"
+            "type" : "variable_unless"
           }, {
             "name" : "vim_navigation_mode",
             "value" : 1,
@@ -2051,13 +2051,13 @@
             }
           },
           "to" : [ {
-            "key_code" : "left_arrow",
+            "key_code" : "f12",
             "modifiers" : [ "left_command", "left_control", "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "any_key_not_defined_above_while_in_navigation_mode",
+            "name" : "vim_desktop_navigation_mode",
             "value" : 1,
-            "type" : "variable_if"
+            "type" : "variable_unless"
           }, {
             "name" : "vim_navigation_mode",
             "value" : 1,
@@ -2072,13 +2072,13 @@
             }
           },
           "to" : [ {
-            "key_code" : "left_arrow",
+            "key_code" : "f12",
             "modifiers" : [ "left_command", "left_control", "left_option" ]
           } ],
           "conditions" : [ {
-            "name" : "any_key_not_defined_above_while_in_navigation_mode",
+            "name" : "vim_desktop_navigation_mode",
             "value" : 1,
-            "type" : "variable_if"
+            "type" : "variable_unless"
           }, {
             "name" : "vim_navigation_mode",
             "value" : 1,
@@ -2087,7 +2087,7 @@
           "type" : "basic"
         }, {
           "to_if_held_down" : [ {
-            "key_code" : "right_arrow",
+            "key_code" : "f13",
             "modifiers" : [ "left_control", "left_option", "left_shift" ]
           } ],
           "parameters" : {
@@ -2097,13 +2097,13 @@
             "key_code" : "g"
           },
           "to" : [ {
-            "key_code" : "right_arrow",
+            "key_code" : "f13",
             "modifiers" : [ "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "any_key_not_defined_above_while_in_navigation_mode",
+            "name" : "vim_desktop_navigation_mode",
             "value" : 1,
-            "type" : "variable_if"
+            "type" : "variable_unless"
           }, {
             "name" : "vim_navigation_mode",
             "value" : 1,
@@ -2115,13 +2115,39 @@
             "key_code" : "s"
           },
           "to" : [ {
-            "key_code" : "left_arrow",
+            "key_code" : "f12",
             "modifiers" : [ "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "any_key_not_defined_above_while_in_navigation_mode",
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_after_key_up" : [ {
+            "set_variable" : {
+              "name" : "vim_desktop_navigation_mode",
+              "value" : 0
+            }
+          } ],
+          "from" : {
+            "key_code" : "d"
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "vim_desktop_navigation_mode",
+              "value" : 1
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           }, {
             "name" : "vim_navigation_mode",
             "value" : 1,
@@ -2139,7 +2165,7 @@
             }
           }, {
             "set_variable" : {
-              "name" : "any_key_not_defined_above_while_in_navigation_mode",
+              "name" : "any_key_not_defined_above",
               "value" : 0
             }
           }, {
@@ -2147,7 +2173,145 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "any_key_not_defined_above_while_in_navigation_mode",
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l"
+          },
+          "to" : [ {
+            "key_code" : "f14",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_focus_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h"
+          },
+          "to" : [ {
+            "key_code" : "f14",
+            "modifiers" : [ "left_command", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_focus_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k"
+          },
+          "to" : [ {
+            "key_code" : "f15",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_focus_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_after_key_up" : [ {
+            "set_variable" : {
+              "name" : "vim_desktop_focus_mode",
+              "value" : 0
+            }
+          } ],
+          "from" : {
+            "key_code" : "f"
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "vim_desktop_focus_mode",
+              "value" : 1
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_focus_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"focus: screen 1\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_focus_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"focus: screen 2\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_focus_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_desktop_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {

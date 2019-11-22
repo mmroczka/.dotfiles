@@ -68,19 +68,64 @@ end
 hs.loadSpoon("Lunette")
 
 customBindings = {
+  center = {
+    {{"ctrl"}, "f12"},
+  },
+  fullScreen = {
+    {{"cmd"}, "f12"},
+  },
   leftHalf = {
-    {{"Q", "W"}, "E"},
-    {{"cmd", "alt"}, "left"},
+    {{"alt", "cmd"}, "f12"},
   },
   rightHalf = {
-    {{"A", "S"}, "D"},
+    {{"alt", "cmd"}, "f13"},
   },
-  undo = false,
-  redo = false
+  topHalf = {
+    {{"alt", "cmd"}, "f15"},
+  },
+  bottomHalf = {
+    {{"alt", "cmd"}, "f14"},
+  },
+  topLeft= {
+    {{"ctrl", "cmd"}, "f12"},
+  },
+  bottomLeft = {
+    {{"ctrl", "cmd", "shift"}, "f12"},
+  },
+  topRight = {
+    {{"ctrl", "cmd"}, "f13"},
+  },
+  bottomRight = {
+    {{"ctrl", "cmd", "shift"}, "f13"},
+  },
+  nextDisplay = {
+    {{"ctrl", "alt", "cmd"}, "f13"},
+  },
+  prevDisplay = {
+    {{"ctrl", "alt", "cmd"}, "f12"},
+  },
+  nextThird = {
+    {{"ctrl", "alt"}, "f13"},
+  },
+  prevThird = {
+    {{"ctrl", "alt"}, "f12"},
+  },
+  enlarge = {
+    {{"ctrl", "alt", "shift"}, "f13"},
+  },
+  shrink = {
+    {{"ctrl", "alt", "shift"}, "f12"},
+  },
+  undo = {
+    {{"alt"}, "f12"},
+  },
+  redo = {
+    {{"shift"}, "f12"},
+  }
 }
 
-spoon.Lunette:bindHotkeys()
--- spoon.Lunette:bindHotkeys(customBindings)
+-- spoon.Lunette:bindHotkeys()
+spoon.Lunette:bindHotkeys(customBindings)
 
 -- Bypass programs that won't let you paste into them by grabbing the clipboard's top contents and typing them "manually" with hammerspoon
 hs.hotkey.bind({"cmd", "ctrl"}, "V", function() hs.eventtap.keyStrokes(hs.pasteboard.getContents()) end)
