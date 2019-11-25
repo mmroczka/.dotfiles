@@ -359,6 +359,8 @@
                     [:b nil nil {:held :!Oleft_arrow :afterup [:!Oleft_arrow :left_arrow [:km "last_move_b"]] :params{:held 150}}]
                     [:!Tb :page_up]
                     [:c [["vim_change_mode" 1] ["vim_mode" 0]]] ; single tap c to enter change mode
+                    [:!Sc [:!SCright_arrow :delete_or_backspace :TURN_OFF_VIM]]
+                    [:!Rc [:!SCright_arrow :delete_or_backspace :TURN_OFF_VIM]] ; make above also work with right shift
                     [:d [["vim_delete_mode" 1] ["vim_mode" 0]]] ; single tap d to enter delete mode
                     [:!Sd [:!SCright_arrow :delete_or_backspace]]
                     [:!Rd [:!SCright_arrow :delete_or_backspace]] ; make above also work with right shift
