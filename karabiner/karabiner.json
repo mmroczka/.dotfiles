@@ -4669,6 +4669,143 @@
             "key_code" : "right_arrow",
             "modifiers" : [ "left_shift" ]
           }, {
+            "key_code" : "c",
+            "modifiers" : [ "left_command" ]
+          }, {
+            "key_code" : "left_arrow"
+          }, {
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "any_key_not_defined_above",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_indent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_lowercase_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_movement_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_outdent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_single_letter_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_uppercase_mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "any_key_not_defined_above",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_in_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_from_yank_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "w"
+          },
+          "to" : [ {
+            "key_code" : "left_arrow",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_option", "left_shift" ]
+          }, {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_shift" ]
+          }, {
             "key_code" : "delete_or_backspace"
           }, {
             "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
@@ -5194,6 +5331,32 @@
             "set_variable" : {
               "name" : "vim_uppercase_mode",
               "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_yank_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "i"
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "vim_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_yank_mode",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 1
             }
           } ],
           "conditions" : [ {

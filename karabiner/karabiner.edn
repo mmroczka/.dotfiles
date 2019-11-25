@@ -272,6 +272,7 @@
                     [:e [:!Oleft_arrow :!SOright_arrow :delete_or_backspace :TURN_OFF_VIM] ["vim_from_delete_mode" 1]]
                     [:e [:!Oleft_arrow :!SOright_arrow :delete_or_backspace :TURN_OFF_VIM] ["vim_from_change_mode" 1]]
                     [:w [:!Oleft_arrow :!SOright_arrow :!Sright_arrow :delete_or_backspace :TURN_OFF_VIM] ["vim_from_delete_mode" 1]]
+                    [:w [:!Oleft_arrow :!SOright_arrow :!Sright_arrow :!Cc :left_arrow :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_from_yank_mode" 1]]
                     [:w [:!Oleft_arrow :!SOright_arrow :!Sright_arrow :delete_or_backspace :TURN_OFF_VIM] ["vim_from_change_mode" 1]]
 
 
@@ -284,6 +285,7 @@
            :rules [:vim_yank_mode
                     [:w [:!SOright_arrow :!Cc :left_arrow :TURN_ON_VIM_AND_CLEAR_VARS]]
                     [:b [:!SOleft_arrow :!Cc :right_arrow :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:i [["vim_yank_mode" 0]["vim_from_yank_mode" 1] ["vim_in_mode" 1]]]
                     [:h [:!Sleft_arrow :!Cc :right_arrow  :TURN_ON_VIM_AND_CLEAR_VARS]]
                     [:l [:!Sright_arrow :!Cc :left_arrow  :TURN_ON_VIM_AND_CLEAR_VARS]]
                     [:y [:!Cleft_arrow :!CSright_arrow :!Cc :left_arrow :TURN_ON_VIM_AND_CLEAR_VARS]]
