@@ -301,6 +301,7 @@
 
                     [:g [:!Cup_arrow ["vim_go_to_mode" 0]]]
                     [:!Su [["vim_uppercase" 1] ["vim_movement_mode" 1]]]
+                    [:!Ru [["vim_uppercase" 1] ["vim_movement_mode" 1]]]
                     [:u [["vim_lowercase" 1] ["vim_movement_mode" 1]]]
 
                     [:condi :vim_in_mode :any_key_not_defined_above]
@@ -355,14 +356,14 @@
                     [:!Sa [:!Cright_arrow :TURN_OFF_VIM]]
                     [:!Ra [:!Cright_arrow :TURN_OFF_VIM]] ; make sure it works with right shift too
                     [:!Ta [:!SCright_arrow :!Cc [:km "incrementClipboardContentsFirstNumberThenPaste"]]]
-                    [:b [:!Oleft_arrow [:km "last_move_b"]]]
+                    [:b nil nil {:held :!Oleft_arrow :afterup [:!Oleft_arrow :left_arrow [:km "last_move_b"]] :params{:held 150}}]
                     [:!Tb :page_up]
                     [:c [["vim_change_mode" 1] ["vim_mode" 0]]] ; single tap c to enter change mode
                     [:d [["vim_delete_mode" 1] ["vim_mode" 0]]] ; single tap d to enter delete mode
                     [:!Sd [:!SCright_arrow :delete_or_backspace]]
                     [:!Rd [:!SCright_arrow :delete_or_backspace]] ; make above also work with right shift
                     [:!Td [:down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow ]] ; go down 15 lines
-                    [:e [:!Oright_arrow [:km "last_move_e"]]]
+                    [:e nil nil {:held :!Oright_arrow :afterup [:!Oright_arrow [:km "last_move_e"]] :params{:held 150}}]
                     [:!Tf :page_down]
 
                     [:g ["vim_go_to_mode" 1]]
