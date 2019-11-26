@@ -50,6 +50,8 @@
                                {:set ["vim_indent_mode" 0]}
                                {:set ["vim_from_delete_mode" 0]}
                                {:set ["vim_from_change_mode" 0]}
+                               {:set ["vim_from_yank_mode" 0]}
+                               {:set ["vim_from_surround_mode" 0]}
                                {:set ["vim_go_to_mode" 0]}
                                {:set ["vim_go_to_visual_mode" 0]}
                                {:set ["vim_lowercase_mode" 0]}
@@ -74,6 +76,8 @@
                                {:set ["vim_indent_mode" 0]}
                                {:set ["vim_from_delete_mode" 0]}
                                {:set ["vim_from_change_mode" 0]}
+                               {:set ["vim_from_yank_mode" 0]}
+                               {:set ["vim_from_surround_mode" 0]}
                                {:set ["vim_go_to_mode" 0]}
                                {:set ["vim_go_to_visual_mode" 0]}
                                {:set ["vim_lowercase_mode" 0]}
@@ -268,12 +272,14 @@
                     ]}
 
         {:des "VIM: IN mode"
-           :rules [[:condi :vim_in_mode :any_key_not_defined_above]
+           :rules [:vim_in_mode
                     [:e [:!Oleft_arrow :!SOright_arrow :delete_or_backspace :TURN_OFF_VIM] ["vim_from_delete_mode" 1]]
                     [:e [:!Oleft_arrow :!SOright_arrow :delete_or_backspace :TURN_OFF_VIM] ["vim_from_change_mode" 1]]
+                    [:e [:!Oleft_arrow :!SOright_arrow :!Cc :TURN_OFF_VIM [:km "surroundWith"] ] ["vim_from_surround_mode" 1]]
                     [:w [:!Oleft_arrow :!SOright_arrow :!Sright_arrow :delete_or_backspace :TURN_OFF_VIM] ["vim_from_delete_mode" 1]]
                     [:w [:!Oleft_arrow :!SOright_arrow :!Sright_arrow :!Cc :left_arrow :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_from_yank_mode" 1]]
                     [:w [:!Oleft_arrow :!SOright_arrow :!Sright_arrow :delete_or_backspace :TURN_OFF_VIM] ["vim_from_change_mode" 1]]
+                    [:w [:!Oleft_arrow :!SOright_arrow :!Cc :TURN_OFF_VIM [:km "surroundWith"] ] ["vim_from_surround_mode" 1]]
 
 
                     [:condi :vim_in_mode :any_key_not_defined_above]
@@ -281,7 +287,20 @@
                     [:anykey [["vim_in_mode" 0] ["vim_mode" 1]]]
                     ]}
 
-        {:des "VIM: YANK mode"
+        {:des "VIM: SURROUND mode"
+           :rules [:vim_surround_mode
+
+                    [:e [:!SOright_arrow :!Cc :TURN_OFF_VIM [:km "surroundWith"]]]  ; surround word from cursor
+                    [:w [:!SOright_arrow :!Cc :TURN_OFF_VIM [:km "surroundWith"]]]  ; surround word from cursor
+                    [:i [["vim_surround_mode" 0] ["vim_in_mode" 1] ["vim_from_surround_mode" 1]]]  ; surround word from cursor
+                    [:s [:!Cleft_arrow :!SCright_arrow :!Cc :TURN_OFF_VIM [:km "surroundWith"]]]  ; double 's' to surround sentence with <char>
+
+                    [:condi :vim_in_mode :any_key_not_defined_above]
+                    [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
+                    [:anykey [["vim_surround_mode" 0] ["vim_mode" 1]]]
+                    ]}
+
+        {:des "VIM: YANK/YOU mode"
            :rules [:vim_yank_mode
                     [:w [:!SOright_arrow :!Cc :left_arrow :TURN_ON_VIM_AND_CLEAR_VARS]]
                     [:b [:!SOleft_arrow :!Cc :right_arrow :TURN_ON_VIM_AND_CLEAR_VARS]]
@@ -290,8 +309,7 @@
                     [:l [:!Sright_arrow :!Cc :left_arrow  :TURN_ON_VIM_AND_CLEAR_VARS]]
                     [:y [:!Cleft_arrow :!CSright_arrow :!Cc :left_arrow :TURN_ON_VIM_AND_CLEAR_VARS]]
 
-                    [:s [:!Cleft_arrow :!SCright_arrow :!Cc :TURN_OFF_VIM [:km "surroundWith"] ] ["vim_surround_mode" 1]]  ; double 's' to surround sentence with <char>
-                    [:s ["vim_surround_mode" 1] nil {:delayed {:invoked ["vim_surround_mode" 0] :canceled ["vim_surround_mode" 0]}}]
+                    [:s [["vim_yank_mode" 0] ["vim_surround_mode" 1]]]
 
                     [:condi :vim_in_mode :any_key_not_defined_above]
                     [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
@@ -300,35 +318,33 @@
 
         {:des "VIM: GO TO mode"
            :rules [:vim_go_to_mode
-
                     [:g [:!Cup_arrow ["vim_go_to_mode" 0]]]
-                    [:!Su [["vim_uppercase" 1] ["vim_movement_mode" 1]]]
-                    [:!Ru [["vim_uppercase" 1] ["vim_movement_mode" 1]]]
-                    [:u [["vim_lowercase" 1] ["vim_movement_mode" 1]]]
+                    [:!Su [["vim_go_to_mode" 0] ["vim_uppercase_mode" 1] ["vim_movement_mode" 1]]]
+                    [:!Ru [["vim_go_to_mode" 0] ["vim_uppercase_mode" 1] ["vim_movement_mode" 1]]]
+                    [:u [["vim_go_to_mode" 0] ["vim_lowercase_mode" 1] ["vim_movement_mode" 1]]]
 
-                    [:condi :vim_in_mode :any_key_not_defined_above]
+                    [:condi :vim_go_to_mode :any_key_not_defined_above]
                     [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
-                    [:anykey [["vim_go_to_mode" 0] ["vim_mode" 1]]]
+                    [:anykey :TURN_ON_VIM_AND_CLEAR_VARS]
                     ]}
 
         {:des "VIM: MOVEMENT mode"
-           :rules [[:condi :vim_movement_mode :any_key_not_defined_above]
+           :rules [:vim_movement_mode
+                    [:w [["vim_movement_mode" 0] ["vim_uppercase_mode" 0] ["vim_go_to_mode" 0] :!SOright_arrow :!Cc [:km "uppercaseClipboardContentsThenPaste"]] ["vim_uppercase_mode" 1]]
+                    [:e [["vim_movement_mode" 0] ["vim_uppercase_mode" 0] ["vim_go_to_mode" 0] :!SOright_arrow :!Cc [:km "uppercaseClipboardContentsThenPaste"]] ["vim_uppercase_mode" 1]]
+                    [:b [["vim_movement_mode" 0] ["vim_uppercase_mode" 0] ["vim_go_to_mode" 0] :!SOleft_arrow :!Cc [:km "uppercaseClipboardContentsThenPaste"]] ["vim_uppercase_mode" 1]]
+                    [:!S4 [["vim_movement_mode" 0] ["vim_uppercase_mode" 0] ["vim_go_to_mode" 0] :!SCright_arrow :!Cc [:km "uppercaseClipboardContentsThenPaste"]] ["vim_uppercase_mode" 1]]
+                    [:!R4 [["vim_movement_mode" 0] ["vim_uppercase_mode" 0] ["vim_go_to_mode" 0] :!SCright_arrow :!Cc [:km "uppercaseClipboardContentsThenPaste"]] ["vim_uppercase_mode" 1]]
 
-                    [:w [["vim_movement_mode" 0] ["vim_uppercase" 0] ["vim_go_to_mode" 0] :!SOright_arrow :!Cc [:km "upperCaseClipboardContentsThenPaste"]] ["vim_uppercase" 1]]
-                    [:e [["vim_movement_mode" 0] ["vim_uppercase" 0] ["vim_go_to_mode" 0] :!SOright_arrow :!Cc [:km "upperCaseClipboardContentsThenPaste"]] ["vim_uppercase" 1]]
-                    [:b [["vim_movement_mode" 0] ["vim_uppercase" 0] ["vim_go_to_mode" 0] :!SOleft_arrow :!Cc [:km "upperCaseClipboardContentsThenPaste"]] ["vim_uppercase" 1]]
-                    [:!S4 [["vim_movement_mode" 0] ["vim_uppercase" 0] ["vim_go_to_mode" 0] :!SCright_arrow :!Cc [:km "upperCaseClipboardContentsThenPaste"]] ["vim_uppercase" 1]]
-                    [:!R4 [["vim_movement_mode" 0] ["vim_uppercase" 0] ["vim_go_to_mode" 0] :!SCright_arrow :!Cc [:km "upperCaseClipboardContentsThenPaste"]] ["vim_uppercase" 1]]
-
-                    [:w [["vim_movement_mode" 0] ["vim_lowercase" 0] ["vim_go_to_mode" 0] :!SOright_arrow :!Cc [:km "lowercaseClipboardContentsThenPaste"]] ["vim_lowercase" 1]]
-                    [:e [["vim_movement_mode" 0] ["vim_lowercase" 0] ["vim_go_to_mode" 0] :!SOright_arrow :!Cc [:km "lowercaseClipboardContentsThenPaste"]] ["vim_lowercase" 1]]
-                    [:b [["vim_movement_mode" 0] ["vim_lowercase" 0] ["vim_go_to_mode" 0] :!SOleft_arrow :!Cc [:km "lowercaseClipboardContentsThenPaste"]] ["vim_lowercase" 1]]
-                    [:!S4 [["vim_movement_mode" 0] ["vim_lowercase" 0] ["vim_go_to_mode" 0] :!SCright_arrow :!Cc [:km "lowercaseClipboardContentsThenPaste"]] ["vim_lowercase" 1]]
-                    [:!R4 [["vim_movement_mode" 0] ["vim_lowercase" 0] ["vim_go_to_mode" 0] :!SCright_arrow :!Cc [:km "lowercaseClipboardContentsThenPaste"]] ["vim_lowercase" 1]]
+                    [:w [["vim_movement_mode" 0] ["vim_lowercase_mode" 0] ["vim_go_to_mode" 0] :!SOright_arrow :!Cc [:km "lowercaseClipboardContentsThenPaste"]] ["vim_lowercase_mode" 1]]
+                    [:e [["vim_movement_mode" 0] ["vim_lowercase_mode" 0] ["vim_go_to_mode" 0] :!SOright_arrow :!Cc [:km "lowercaseClipboardContentsThenPaste"]] ["vim_lowercase_mode" 1]]
+                    [:b [["vim_movement_mode" 0] ["vim_lowercase_mode" 0] ["vim_go_to_mode" 0] :!SOleft_arrow :!Cc [:km "lowercaseClipboardContentsThenPaste"]] ["vim_lowercase_mode" 1]]
+                    [:!S4 [["vim_movement_mode" 0] ["vim_lowercase_mode" 0] ["vim_go_to_mode" 0] :!SCright_arrow :!Cc [:km "lowercaseClipboardContentsThenPaste"]] ["vim_lowercase_mode" 1]]
+                    [:!R4 [["vim_movement_mode" 0] ["vim_lowercase_mode" 0] ["vim_go_to_mode" 0] :!SCright_arrow :!Cc [:km "lowercaseClipboardContentsThenPaste"]] ["vim_lowercase_mode" 1]]
 
                     [:condi :vim_movement_mode :any_key_not_defined_above]
                     [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
-                    [:anykey [["vim_movement_mode" 0] ["vim_mode" 1]]]
+                    [:anykey :TURN_ON_VIM_AND_CLEAR_VARS]
                     ]}
 
 
@@ -357,8 +373,8 @@
                     [:a [:right_arrow :TURN_OFF_VIM]]
                     [:!Sa [:!Cright_arrow :TURN_OFF_VIM]]
                     [:!Ra [:!Cright_arrow :TURN_OFF_VIM]] ; make sure it works with right shift too
-                    [:!Ta [:!SCright_arrow :!Cc [:km "incrementClipboardContentsFirstNumberThenPaste"]]]
-                    [:b nil nil {:held :!Oleft_arrow :afterup [:!Oleft_arrow :left_arrow [:km "last_move_b"]] :params{:held 150}}]
+                    [:!Ta [:km "incrementClipboardContentsFirstNumberThenPaste"]]
+                    [:b nil nil {:held :!Oleft_arrow :afterup [:!Oleft_arrow [:km "last_move_b"]] :params{:held 150}}]
                     [:!Tb :page_up]
                     [:c [["vim_change_mode" 1] ["vim_mode" 0]]] ; single tap c to enter change mode
                     [:!Sc [:!SCright_arrow :delete_or_backspace :TURN_OFF_VIM]]
@@ -393,6 +409,7 @@
                     [:!Sr [:TURN_OFF_VIM ["vim_replace_mode" 1]]]
                     [:!Rr [:TURN_OFF_VIM ["vim_replace_mode" 1]]]
                     [:!Tr :!SCz]
+                    [:s [:delete_forward :TURN_OFF_VIM [:km "last_action_s"]]]
 
                     [:u :!Cz]
                     [:!Tu [:up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow ]] ; go up 15 lines
@@ -413,14 +430,14 @@
                     ]
                     [:w nil nil {:held :!Oright_arrow :afterup [:!Oright_arrow :right_arrow [:km "last_move_w"]] :params{:held 150}}]
                     [:x :delete_forward nil {:afterup [:km "last_action_x"]}]
-                    [:!Tx [:!SCright_arrow :!Cc [:km "decrementClipboardContentsFirstNumberThenPaste"]]]
+                    [:!Tx [:km "decrementClipboardContentsFirstNumberThenPaste"]]
                     [:!Sx [:delete_or_backspace [:km "last_action_capital_x"]]]
                     [:!Rx [:delete_or_backspace [:km "last_action_capital_x"]]]
                     [:!Sy [:!SCright_arrow :!Cc :left_arrow]]
                     [:!Ry [:!SCright_arrow :!Cc :left_arrow]]
 
                     [:!Ty :!Cc]
-                    [:y [["vim_yank_mode" 1]["vim_mode" 0]]]
+                    [:y [["vim_yank_mode" 1] ["vim_mode" 0]]]
                     [:return_or_enter :return_or_enter]
 
                     [:condi :vim_mode :any_key_not_defined_above]
@@ -430,7 +447,7 @@
 
         {:des "visual BLOCK mode"
            :rules [:vim_visual_block_mode
-                    [:!Scomma [:!SCopen_bracket  :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_outdent_mode" 1]]  ; double > to outdent line or at least trigger SHIFT+CMD+[
+                    [:!Scomma [:!SCopen_bracket :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_outdent_mode" 1]]  ; double > to outdent line or at least trigger SHIFT+CMD+[
                     [:!Scomma ["vim_outdent_mode" 1] nil {:delayed {:invoked ["vim_outdent_mode" 0] :canceled ["vim_outdent_mode" 0]}}]
                     [:!Speriod [:!SCclose_bracket :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_indent_mode" 1]]  ; double > to indent line or at least trigger SHIFT+CMD+]
                     [:!Speriod ["vim_indent_mode" 1] nil {:delayed {:invoked ["vim_indent_mode" 0] :canceled ["vim_indent_mode" 0]}}]
