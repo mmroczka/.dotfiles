@@ -34207,6 +34207,210 @@
           }
         } ]
       }, {
+        "description" : "Semicolon mode m -> Toggle Microphone",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "m",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"toggleMicrophoneIfPossible\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "semicolon_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 150
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "semicolon_mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"toggleMicrophoneIfPossible\"'"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "f24"
+            }, {
+              "key_code" : "m"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "semicolon_mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        } ]
+      }, {
+        "description" : "Semicolon mode v -> Toggle Video",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "v",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"toggleVideoIfPossible\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "semicolon_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 150
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "semicolon_mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"toggleVideoIfPossible\"'"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "f24"
+            }, {
+              "key_code" : "v"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "semicolon_mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        } ]
+      }, {
+        "description" : "Semicolon mode c -> Toggle Chat",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "c",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"toggleChatIfPossible\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "semicolon_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 150
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "semicolon_mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"toggleChatIfPossible\"'"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "f24"
+            }, {
+              "key_code" : "c"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "semicolon_mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        } ]
+      }, {
+        "description" : "Semicolon mode n -> New Google Meets",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "n",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: New Google Meets Meeting\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "semicolon_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 150
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "semicolon_mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: New Google Meets Meeting\"'"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "f24"
+            }, {
+              "key_code" : "n"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "semicolon_mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        } ]
+      }, {
         "description" : "GO TO Mode (f+g)",
         "manipulators" : [ {
           "from" : {

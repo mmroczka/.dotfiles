@@ -602,6 +602,10 @@
         {:des "Semicolon mode a -> Mute" :rules [:semicolon_mode [:##a :mute]]}
         {:des "Semicolon mode r -> Brightness Up" :rules [:semicolon_mode [:##r :display_brightness_increment]]}
         {:des "Semicolon mode e -> Brightness Down" :rules [:semicolon_mode [:##e :display_brightness_decrement]]}
+        {:des "Semicolon mode m -> Toggle Microphone" :rules [:semicolon_mode [:##m [:km "toggleMicrophoneIfPossible"]]]}
+        {:des "Semicolon mode v -> Toggle Video" :rules [:semicolon_mode [:##v [:km "toggleVideoIfPossible"]]]}
+        {:des "Semicolon mode c -> Toggle Chat" :rules [:semicolon_mode [:##c [:km "toggleChatIfPossible"]]]}
+        {:des "Semicolon mode n -> New Google Meets" :rules [:semicolon_mode [:##n [:km "open: New Google Meets Meeting"]]]}
 
         {:des "GO TO Mode (f+g)" :rules [[{:sim [:f :g]
                                      :simo {:interrupt true
