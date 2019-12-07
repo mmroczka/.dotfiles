@@ -24,6 +24,7 @@
     ~/.functions: functions
     ~/.gitignore_global: git/gitignore_global
     ~/.hammerspoon: hammerspoon
+    ~/.mackup.cfg: mackup.cfg
     ~/.npmrc: node/work_npmrc
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
