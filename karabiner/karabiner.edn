@@ -162,7 +162,7 @@
         {:des "Launch mode -> s (Open Snippets)" :rules [:launch_mode [:##s :!TSC2]]}
         {:des "Launch mode -> t (Open Teams)" :rules [:launch_mode [:##t [:km "open: Teams"]]]}
         {:des "Launch mode -> w (Open BitWarden)" :rules [:launch_mode [:##w [:km "open: BitWarden"]]]}
-        {:des "Launch mode -> z (Open Franz)" :rules [:launch_mode [:##z [:km "open: Franz"]]]}
+        {:des "Launch mode -> z (Open Slack)" :rules [:launch_mode [:##z [:km "open: Slack"]]]}
         {:des "Launch mode -> caps_lock (Open Franz)" :rules [:launch_mode [:##caps_lock [:km "open: Finder"]]]}
 
 
@@ -588,7 +588,7 @@
                  [:p [:km "open: Postman"]]
                  [:t [:km "open: Tower"]]
                  [:v [:km "open: VS Code"]]
-                 [:z [:km "open: Franz"]]
+                 [:z [:km "open: Slack"]]
                  ]}
 
         {:des "Semicolon Mode (;+')(global cross application shortcuts)" :rules [[{:sim [:semicolon :quote]

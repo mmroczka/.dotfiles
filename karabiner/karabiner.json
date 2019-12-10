@@ -1373,7 +1373,7 @@
           }
         } ]
       }, {
-        "description" : "Launch mode -> z (Open Franz)",
+        "description" : "Launch mode -> z (Open Slack)",
         "manipulators" : [ {
           "from" : {
             "key_code" : "z",
@@ -1382,7 +1382,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Franz\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Slack\"'"
           } ],
           "conditions" : [ {
             "name" : "launch_mode",
@@ -1401,7 +1401,7 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Franz\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Slack\"'"
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -33827,7 +33827,7 @@
             "key_code" : "z"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Franz\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Slack\"'"
           } ],
           "conditions" : [ {
             "name" : "programming_mode",
@@ -33846,7 +33846,7 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Franz\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Slack\"'"
           } ],
           "from" : {
             "simultaneous" : [ {
