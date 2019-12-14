@@ -12,6 +12,9 @@
   - if [[ ! -d ~/.config/nvim ]]  ; then mkdir ~/.config/nvim; fi
   - if [[ ! -d ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch ]]; then mkdir ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch; fi
 
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+
 - link:
     ~/.tmux.conf: tmux/tmux.conf
     ~/.tmux.conf.local: tmux/tmux.conf.local
@@ -32,11 +35,25 @@
     ~/.ideavimrc: vim/ideavimrc
     ~/.vrapperrc: vim/vrapperrc
     ~/Code/MacSettingsBackup: MacSettingsBackup
-    "~/Library/Application Support/Code/User/settings.json": vim/vs_code_vim_settings
-    "~/Library/Application\ Support/iterm2/Scripts/AutoLaunch/theme.py": iterm2/iterm2_theme.py
-    ~/Library/Preferences/com.googlecode.iterm2.plist: iterm2/iterm2_preferences.plist
     ~/.zshrc: zsh/zshrc
 
+- brewfile:
+    file: Brewfile
+    no-upgrade: true
+
+- link:
+    # vscode:
+    "~/Library/Application Support/Code/User/settings.json":
+        path: vim/vs_code_settings.json
+        create: true
+    "~/Library/Application Support/Code/User/keybindings.json":
+        path: vim/vs_code_keybindings.json
+        create: true
+
 - shell:
-    - [git submodule update --init --recursive, Installing submodules]
+    - [bash ./install_vscode_extensions.sh, Installing vscode extensions]
+
+# Cleaning up:
+- shell:
+  - [brew cleanup, Cleaning up]
 
