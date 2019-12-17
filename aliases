@@ -47,7 +47,8 @@ alias mpa='makana stop ahom'
 alias rm-containers='docker container rm $(docker container ls -aq)'
 alias rm-images='docker image prune -a'
 alias slack-dark-theme='cat ~/.slack_darkmode.js >> /Applications/Slack.app/Contents/Resources/app.asar.unpacked/src/static/ssb-interop.js'
-alias clr="source ~/.bashrc && clear" # make cool startup sign
+alias clr="source ~/.bashrc; clear" # make cool startup sign
+alias clear="source ~/.bashrc; clear" # make cool startup sign
 alias check="git ls-files -v|grep '^S'" # checks for any files flagged w/ --skip-worktree alias
 alias gitinfo='
 echo "Remotes";
