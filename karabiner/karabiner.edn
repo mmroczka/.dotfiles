@@ -588,7 +588,7 @@
                  [:p [:km "open: Postman"]]
                  [:t [:km "open: Tower"]]
                  [:v [:km "open: VS Code"]]
-                 [:z [:km "open: Slack"]]
+                 [:z [:km "open: Zeplin"]]
                  ]}
 
         {:des "Semicolon Mode (;+')(global cross application shortcuts)" :rules [[{:sim [:semicolon :quote]
