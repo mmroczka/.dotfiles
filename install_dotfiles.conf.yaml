@@ -27,14 +27,12 @@
     ~/.functions: functions
     ~/.gitignore_global: git/gitignore_global
     ~/.hammerspoon: hammerspoon
-    ~/.mackup.cfg: mackup.cfg
     ~/.npmrc: node/work_npmrc
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
     ~/.proxy_url: proxy_url
     ~/.ideavimrc: vim/ideavimrc
     ~/.vrapperrc: vim/vrapperrc
-    ~/Code/MacSettingsBackup: MacSettingsBackup
     ~/.zshrc: zsh/zshrc
 
 - brewfile:
