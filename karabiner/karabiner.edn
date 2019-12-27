@@ -52,6 +52,8 @@
                                {:set ["vim_from_change_mode" 0]}
                                {:set ["vim_from_yank_mode" 0]}
                                {:set ["vim_from_surround_mode" 0]}
+                               {:set ["vim_from_visual_mode" 0]}
+                               {:set ["vim_from_visual_block_mode" 0]}
                                {:set ["vim_go_to_mode" 0]}
                                {:set ["vim_go_to_visual_mode" 0]}
                                {:set ["vim_lowercase_mode" 0]}
@@ -78,6 +80,8 @@
                                {:set ["vim_from_change_mode" 0]}
                                {:set ["vim_from_yank_mode" 0]}
                                {:set ["vim_from_surround_mode" 0]}
+                               {:set ["vim_from_visual_mode" 0]}
+                               {:set ["vim_from_visual_block_mode" 0]}
                                {:set ["vim_go_to_mode" 0]}
                                {:set ["vim_go_to_visual_mode" 0]}
                                {:set ["vim_lowercase_mode" 0]}
@@ -318,6 +322,16 @@
 
         {:des "VIM: GO TO mode"
            :rules [:vim_go_to_mode
+                    [:g [:!SCup_arrow ["vim_go_to_mode" 0] ["vim_from_visual_block_mode" 0] ["vim_visual_block_mode" 1]] ["vim_from_visual_block_mode" 1]]
+                    [:!Su [["vim_go_to_mode" 0] ["vim_from_visual_block_mode" 0] :TURN_OFF_VIM [:km "uppercaseClipboardContentsThenPaste"] :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_from_visual_block_mode" 1]]
+                    [:!Ru [["vim_go_to_mode" 0] ["vim_from_visual_block_mode" 0] :TURN_OFF_VIM [:km "uppercaseClipboardContentsThenPaste"] :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_from_visual_block_mode" 1]]
+                    [:u [["vim_go_to_mode" 0] ["vim_from_visual_block_mode" 0] ["vim_movement_mode" 0] :TURN_OFF_VIM [:km "lowercaseClipboardContentsThenPaste"] :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_from_visual_block_mode" 1]]
+
+                    [:g [:!SCup_arrow ["vim_go_to_mode" 0] ["vim_from_visual_mode" 0] ["vim_visual_mode" 1]] ["vim_from_visual_mode" 1]]
+                    [:!Su [["vim_go_to_mode" 0] ["vim_from_visual_mode" 0] :TURN_OFF_VIM [:km "uppercaseClipboardContentsThenPaste"] :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_from_visual_mode" 1]]
+                    [:!Ru [["vim_go_to_mode" 0] ["vim_from_visual_mode" 0] :TURN_OFF_VIM [:km "uppercaseClipboardContentsThenPaste"] :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_from_visual_mode" 1]]
+                    [:u [["vim_go_to_mode" 0] ["vim_from_visual_mode" 0] ["vim_movement_mode" 0] :TURN_OFF_VIM [:km "lowercaseClipboardContentsThenPaste"] :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_from_visual_mode" 1]]
+
                     [:g [:!Cup_arrow ["vim_go_to_mode" 0]]]
                     [:!Su [["vim_go_to_mode" 0] ["vim_uppercase_mode" 1] ["vim_movement_mode" 1]]]
                     [:!Ru [["vim_go_to_mode" 0] ["vim_uppercase_mode" 1] ["vim_movement_mode" 1]]]
@@ -453,8 +467,9 @@
                     [:!Speriod ["vim_indent_mode" 1] nil {:delayed {:invoked ["vim_indent_mode" 0] :canceled ["vim_indent_mode" 0]}}]
                     [:d [:TURN_ON_VIM_AND_CLEAR_VARS :delete_forward :delete_forward] ]
                     [:!Td [:!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow ]] ; go down 15 lines
-                    [:g [:!SCup_arrow ["vim_go_to_visual_mode" 0]] ["vim_go_to_visual_mode" 1]]  ; double tap g to jump to top of file
-                    [:g ["vim_go_to_visual_mode" 1] nil {:delayed {:invoked ["vim_go_to_visual_mode" 0] :canceled ["vim_go_to_visual_mode" 0]}}]
+                    ; [:g [:!SCup_arrow ["vim_go_to_visual_mode" 0]] ["vim_go_to_visual_mode" 1]]  ; double tap g to jump to top of file
+                    ; [:g ["vim_go_to_visual_mode" 1] nil {:delayed {:invoked ["vim_go_to_visual_mode" 0] :canceled ["vim_go_to_visual_mode" 0]}}]
+                    [:g [["vim_go_to_mode" 1] ["vim_from_visual_block_mode" 1]]]
                     [:!Sg :!SCdown_arrow]
                     [:!Rg :!SCdown_arrow]
                     [:i :TURN_OFF_VIM]
@@ -486,7 +501,7 @@
                     [:b :!SOleft_arrow]
                     [:!Td [:!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow ]] ; go down 15 lines
                     [:e :!SOright_arrow]
-                    [:g [["vim_go_to_visual_mode" 1]]]
+                    [:g [["vim_go_to_mode" 1] ["vim_from_visual_mode" 1]]]
                     [:!Sg :!SCdown_arrow]
                     [:!Rg :!SCdown_arrow]
                     [:h :!Sleft_arrow]
