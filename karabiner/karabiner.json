@@ -1592,6 +1592,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -2398,6 +2408,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -2541,6 +2561,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -2675,6 +2705,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -2976,6 +3016,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -3111,6 +3161,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -3237,6 +3297,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -3371,6 +3441,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -3492,6 +3572,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -3636,6 +3726,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -3766,6 +3866,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -3892,6 +4002,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -4034,6 +4154,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -4163,6 +4293,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -4467,6 +4607,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -4600,6 +4750,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -4742,6 +4902,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -4880,6 +5050,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -5027,6 +5207,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -5167,6 +5357,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -5301,6 +5501,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -5609,6 +5819,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -5738,6 +5958,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -5900,6 +6130,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -6206,6 +6446,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -6335,6 +6585,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -6498,6 +6758,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -6627,6 +6897,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -6763,6 +7043,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -7021,6 +7311,1744 @@
       }, {
         "description" : "VIM: GO TO mode",
         "manipulators" : [ {
+          "from" : {
+            "key_code" : "g"
+          },
+          "to" : [ {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_command", "left_shift" ]
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_block_mode",
+              "value" : 1
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_go_to_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_from_visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f20",
+            "lazy" : true
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "any_key_not_defined_above",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_indent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_lowercase_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_movement_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_outdent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_single_letter_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_uppercase_mode",
+              "value" : 0
+            }
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"uppercaseClipboardContentsThenPaste\"'"
+          }, {
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "any_key_not_defined_above",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_indent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_lowercase_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_movement_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_outdent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_single_letter_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_uppercase_mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_go_to_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_from_visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f20",
+            "lazy" : true
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "any_key_not_defined_above",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_indent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_lowercase_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_movement_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_outdent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_single_letter_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_uppercase_mode",
+              "value" : 0
+            }
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"uppercaseClipboardContentsThenPaste\"'"
+          }, {
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "any_key_not_defined_above",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_indent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_lowercase_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_movement_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_outdent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_single_letter_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_uppercase_mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_go_to_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_from_visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u"
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_movement_mode",
+              "value" : 0
+            }
+          }, {
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f20",
+            "lazy" : true
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "any_key_not_defined_above",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_indent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_lowercase_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_movement_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_outdent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_single_letter_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_uppercase_mode",
+              "value" : 0
+            }
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"lowercaseClipboardContentsThenPaste\"'"
+          }, {
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "any_key_not_defined_above",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_indent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_lowercase_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_movement_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_outdent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_single_letter_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_uppercase_mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_go_to_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_from_visual_block_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "g"
+          },
+          "to" : [ {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_command", "left_shift" ]
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_mode",
+              "value" : 1
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_go_to_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_from_visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f20",
+            "lazy" : true
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "any_key_not_defined_above",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_indent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_lowercase_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_movement_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_outdent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_single_letter_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_uppercase_mode",
+              "value" : 0
+            }
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"uppercaseClipboardContentsThenPaste\"'"
+          }, {
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "any_key_not_defined_above",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_indent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_lowercase_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_movement_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_outdent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_single_letter_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_uppercase_mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_go_to_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_from_visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f20",
+            "lazy" : true
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "any_key_not_defined_above",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_indent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_lowercase_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_movement_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_outdent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_single_letter_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_uppercase_mode",
+              "value" : 0
+            }
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"uppercaseClipboardContentsThenPaste\"'"
+          }, {
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "any_key_not_defined_above",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_indent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_lowercase_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_movement_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_outdent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_single_letter_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_uppercase_mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_go_to_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_from_visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u"
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_movement_mode",
+              "value" : 0
+            }
+          }, {
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f20",
+            "lazy" : true
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "any_key_not_defined_above",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_indent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_lowercase_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_movement_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_outdent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_single_letter_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_uppercase_mode",
+              "value" : 0
+            }
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"lowercaseClipboardContentsThenPaste\"'"
+          }, {
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "any_key_not_defined_above",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_indent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_lowercase_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_movement_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_outdent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_single_letter_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_uppercase_mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "vim_go_to_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_from_visual_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
           "from" : {
             "key_code" : "g"
           },
@@ -7318,6 +9346,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -7985,6 +10023,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -8245,6 +10293,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -8557,6 +10615,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -8688,6 +10756,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -8815,6 +10893,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -9028,6 +11116,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -9157,6 +11255,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -9491,6 +11599,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -9622,6 +11740,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -9749,6 +11877,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -9964,6 +12102,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -10101,6 +12249,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -10234,6 +12392,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -10453,6 +12621,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -10582,6 +12760,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -10731,6 +12919,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -11373,6 +13571,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -11541,6 +13749,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -11703,6 +13921,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -11836,45 +14064,13 @@
             "key_code" : "g"
           },
           "to" : [ {
-            "key_code" : "up_arrow",
-            "modifiers" : [ "left_command", "left_shift" ]
-          }, {
             "set_variable" : {
-              "name" : "vim_go_to_visual_mode",
-              "value" : 0
+              "name" : "vim_go_to_mode",
+              "value" : 1
             }
-          } ],
-          "conditions" : [ {
-            "name" : "vim_visual_block_mode",
-            "value" : 1,
-            "type" : "variable_if"
           }, {
-            "name" : "vim_go_to_visual_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "to_delayed_action" : {
-            "to_if_invoked" : [ {
-              "set_variable" : {
-                "name" : "vim_go_to_visual_mode",
-                "value" : 0
-              }
-            } ],
-            "to_if_canceled" : [ {
-              "set_variable" : {
-                "name" : "vim_go_to_visual_mode",
-                "value" : 0
-              }
-            } ]
-          },
-          "from" : {
-            "key_code" : "g"
-          },
-          "to" : [ {
             "set_variable" : {
-              "name" : "vim_go_to_visual_mode",
+              "name" : "vim_from_visual_block_mode",
               "value" : 1
             }
           } ],
@@ -11974,6 +14170,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -12129,6 +14335,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -12292,6 +14508,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -12421,6 +14647,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -12642,6 +14878,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -12772,6 +15018,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -12893,6 +15149,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -13190,6 +15456,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -13354,6 +15630,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -13587,7 +15873,12 @@
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "vim_go_to_visual_mode",
+              "name" : "vim_go_to_mode",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
               "value" : 1
             }
           } ],
@@ -13701,6 +15992,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -13875,6 +16176,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -14008,6 +16319,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -14137,6 +16458,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -14321,6 +16652,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -14545,6 +16886,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -14671,6 +17022,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -14805,6 +17166,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -14926,6 +17297,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -15320,6 +17701,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -15445,6 +17836,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -15578,6 +17979,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -15703,6 +18114,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -15836,6 +18257,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -15961,6 +18392,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -16094,6 +18535,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -16219,6 +18670,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -16352,6 +18813,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -16477,6 +18948,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -16610,6 +19091,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -16735,6 +19226,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -16868,6 +19369,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -16993,6 +19504,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -17126,6 +19647,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -17251,6 +19782,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -17384,6 +19925,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -17509,6 +20060,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -17642,6 +20203,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -17767,6 +20338,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -17900,6 +20481,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -18025,6 +20616,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -18158,6 +20759,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -18287,6 +20898,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -18412,6 +21033,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -18549,6 +21180,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -18678,6 +21319,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -18815,6 +21466,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -18944,6 +21605,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -19081,6 +21752,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -19210,6 +21891,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -19347,6 +22038,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -19480,6 +22181,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -19609,6 +22320,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -19747,6 +22468,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -19876,6 +22607,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -20013,6 +22754,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -20142,6 +22893,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -20279,6 +23040,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -20408,6 +23179,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -20545,6 +23326,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -20674,6 +23465,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -20811,6 +23612,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -20940,6 +23751,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -21077,6 +23898,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -21206,6 +24037,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -21343,6 +24184,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -21472,6 +24323,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -21609,6 +24470,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -21738,6 +24609,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -21875,6 +24756,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -22004,6 +24895,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -22141,6 +25042,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -22270,6 +25181,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -22407,6 +25328,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -22536,6 +25467,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -22673,6 +25614,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -22802,6 +25753,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -22939,6 +25900,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -23068,6 +26039,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -23206,6 +26187,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -23335,6 +26326,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -23472,6 +26473,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -23601,6 +26612,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -23738,6 +26759,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -23867,6 +26898,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -24004,6 +27045,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -24133,6 +27184,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -24270,6 +27331,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -24399,6 +27470,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -24536,6 +27617,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -24665,6 +27756,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -24802,6 +27903,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -24931,6 +28042,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -25068,6 +28189,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -25197,6 +28328,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -25334,6 +28475,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -25459,6 +28610,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -25592,6 +28753,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -25717,6 +28888,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -25850,6 +29031,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -25975,6 +29166,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -26108,6 +29309,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -26233,6 +29444,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -26366,6 +29587,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -26491,6 +29722,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -26624,6 +29865,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -26749,6 +30000,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -26882,6 +30143,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -27007,6 +30278,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -27140,6 +30421,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -27265,6 +30556,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -27398,6 +30699,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -27523,6 +30834,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -27656,6 +30977,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -27781,6 +31112,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -27914,6 +31255,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -28043,6 +31394,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -28168,6 +31529,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -28305,6 +31676,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -28434,6 +31815,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -28571,6 +31962,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -28700,6 +32101,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -28837,6 +32248,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -28966,6 +32387,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -29103,6 +32534,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -29232,6 +32673,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -29369,6 +32820,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -29498,6 +32959,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -29635,6 +33106,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -29764,6 +33245,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -29901,6 +33392,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -30030,6 +33531,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -30167,6 +33678,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -30296,6 +33817,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -30433,6 +33964,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -30562,6 +34103,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -30699,6 +34250,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -30828,6 +34389,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -30965,6 +34536,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -31094,6 +34675,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -31219,6 +34810,16 @@
           }, {
             "set_variable" : {
               "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
               "value" : 0
             }
           }, {
@@ -33484,6 +37085,16 @@
             }
           }, {
             "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
               "name" : "vim_go_to_mode",
               "value" : 0
             }
@@ -33827,7 +37438,7 @@
             "key_code" : "z"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Slack\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Zeplin\"'"
           } ],
           "conditions" : [ {
             "name" : "programming_mode",
@@ -33846,7 +37457,7 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Slack\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Zeplin\"'"
           } ],
           "from" : {
             "simultaneous" : [ {

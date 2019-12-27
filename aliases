@@ -30,7 +30,26 @@ alias sohmyzsh="source ~/.oh-my-zsh"
 alias szsh="source ~/.zshrc"
 alias svimrc="source ~/.vimrc"
 
+<<<<<<< HEAD
 alias cat='bat'
+=======
+# GIT Specific
+alias git_fix_gitignore='git rm -r --cached .' # untracks all files by removing them from index. DOES NOT delete files. Use if trying to catch files in updated .gitignore
+alias check="git ls-files -v|grep '^S'" # checks for any files flagged w/ --skip-worktree alias
+alias gitinfo='
+echo "Remotes";
+echo "-------";
+git remote -v;
+echo
+echo "Branches";
+echo "-------";
+git branch;
+echo
+echo "Status"
+echo "-------";
+git status'
+
+>>>>>>> 8f5d09eeeb9074425652cbbf48e86ca00b6b2a68
 alias howto="cat ~/.aliases ~/.functions | grep $1"
 alias fz='vim $(fzf)'
 alias vi='vim'
@@ -48,21 +67,9 @@ alias mpa='makana stop ahom'
 alias rm-containers='docker container rm $(docker container ls -aq)'
 alias rm-images='docker image prune -a'
 alias slack-dark-theme='cat ~/.slack_darkmode.js >> /Applications/Slack.app/Contents/Resources/app.asar.unpacked/src/static/ssb-interop.js'
-alias clr="source ~/.bashrc && clear" # make cool startup sign
-alias check="git ls-files -v|grep '^S'" # checks for any files flagged w/ --skip-worktree alias
-alias gitinfo='
-echo "Remotes";
-echo "-------";
-git remote -v;
-echo
-echo "Branches";
-echo "-------";
-git branch;
-echo
-echo "Status"
-echo "-------";
-git status'
+alias clipboard='[[ -x `which xclip 2>/dev/null` ]] && cat << EOF | xclip -selection clipboard '
+alias clr="source ~/.bashrc; clear" # make cool startup sign
+alias clear="source ~/.bashrc; clear" # make cool startup sign
 unalias rg 2>/dev/null
 unalias z
 
-alias writeinclipboard='[[ -x `which xclip 2>/dev/null` ]] && cat << EOF | xclip -selection clipboard '
