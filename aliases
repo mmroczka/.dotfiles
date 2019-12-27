@@ -30,6 +30,7 @@ alias sohmyzsh="source ~/.oh-my-zsh"
 alias szsh="source ~/.zshrc"
 alias svimrc="source ~/.vimrc"
 
+alias cat='bat'
 alias howto="cat ~/.aliases ~/.functions | grep $1"
 alias fz='vim $(fzf)'
 alias vi='vim'
