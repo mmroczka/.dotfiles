@@ -377,7 +377,8 @@
                     [:period [:km "last_action_repeat"]]
                     [:semicolon [:km "last_move_repeat"]]
                     [:!R4 :!Cright_arrow]
-                    [:!S6 :!Cleft_arrow]
+                    [:!S7 :!Cleft_arrow]
+                    [:!R7 :!Cleft_arrow]
 
                     [:!Scomma [:!SCopen_bracket  ["vim_outdent_mode" 0]] ["vim_outdent_mode" 1]]  ; double > to outdent line or at least trigger SHIFT+CMD+[
                     [:!Scomma ["vim_outdent_mode" 1] nil {:delayed {:invoked ["vim_outdent_mode" 0] :canceled ["vim_outdent_mode" 0]}}]
@@ -497,7 +498,8 @@
                     [:!Speriod [:!SCclose_bracket :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_indent_mode" 1]]  ; double > to indent line or at least trigger SHIFT+CMD+]
                     [:!Speriod ["vim_indent_mode" 1] nil {:delayed {:invoked ["vim_indent_mode" 0] :canceled ["vim_indent_mode" 0]}}]
                     [:!R4 :!SCright_arrow]
-                    [:!S6 :!SCleft_arrow]
+                    [:!S7 :!SCleft_arrow]
+                    [:!R7 :!SCleft_arrow]
                     [:b :!SOleft_arrow]
                     [:!Td [:!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow ]] ; go down 15 lines
                     [:e :!SOright_arrow]

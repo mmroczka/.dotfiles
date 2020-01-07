@@ -36,7 +36,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle mafredri/zsh-async
 antigen bundle sindresorhus/pure
-antigen bundle rupa/z
+antigen bundle wting/autojump
 antigen bundle zdharma/zsh-diff-so-fancy
 antigen bundle paulirish/git-open
 antigen apply
@@ -103,10 +103,10 @@ pfind(){
     lsof -t -i :$1
 }
 
-j() {
-  [ $# -gt 0 ] && _z "$*" && return
-  cd "$(_z -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
-}
+# j() {
+  # [ $# -gt 0 ] && _z "$*" && return
+  # cd "$(_z -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
+# }
 
 
 # Install (one or multiple) selected application(s)
@@ -178,3 +178,5 @@ fi
 # Add docker autocompletion to bash
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
+# Add autojump support
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
