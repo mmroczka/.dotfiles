@@ -32,6 +32,9 @@ alias svimrc="source ~/.vimrc"
 
 # GIT Specific
 alias cat='bat'
+alias gpod='git push origin --delete ' # deletes a remote branch on github. -->  gpod branch_name
+alias gbm='git branch -m ' # renames your CURRENT local branch to a new name --> gbm new_name
+alias gbm='git branch -m ' # renames a branch you're NOT CURRENTLY ON to a new name --> gbm old_name new_name
 alias git_fix_gitignore='git rm -r --cached .' # untracks all files by removing them from index. DOES NOT delete files. Use if trying to catch files in updated .gitignore
 alias check="git ls-files -v|grep '^S'" # checks for any files flagged w/ --skip-worktree alias
 alias gitinfo='
