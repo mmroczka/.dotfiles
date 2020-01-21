@@ -1,0 +1,8 @@
+cs"' → change surround " to '. You can do tags too, like cs"<html> and change a tag with cst" (change tag to quote)
+ds" → delete surround ". You can do tags too using dst.
+ysiw" → add surround to word results in wrapping "" around current word
+ysiw] → add surround to word results in wrapping [] around current word. [ leaves space between it, ] doesn't leave space
+yss] → add surround [] to entire sentence.  [ leaves space between it, ] doesn't leave space
+S] → add surround VISUAL mode selection with []. [ leaves space between it, ] doesn't leave space
+gv → rehighlight/reselect last visual selection.
+sort visual selection by visually selecting something then typing :sort

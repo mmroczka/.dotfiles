@@ -51,6 +51,7 @@ echo "-------";
 git status'
 
 alias howto="cat ~/.aliases ~/.functions | grep $1"
+alias howvim="cat ~/.dotfiles/vim_commands | grep $1"
 alias fz='vim $(fzf)'
 alias vi='vim'
 alias rt='redis-cli ping' # test if redis is working
@@ -63,7 +64,7 @@ alias dcs='docker-compose stop'
 alias ms='makana start'
 alias mp='makana stop'
 alias msa='makana start ahom'
-alias mpa='makana stop ahom'
+alias mpa='makana stop ahom'JesusRocks
 alias rm-containers='docker container rm $(docker container ls -aq)'
 alias rm-images='docker image prune -a'
 alias clipboard='[[ -x `which xclip 2>/dev/null` ]] && cat << EOF | xclip -selection clipboard '
