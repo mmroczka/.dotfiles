@@ -6,3 +6,4 @@ yss] → add surround [] to entire sentence.  [ leaves space between it, ] doesn
 S] → add surround VISUAL mode selection with []. [ leaves space between it, ] doesn't leave space
 gv → rehighlight/reselect last visual selection.
 sort visual selection by visually selecting something then typing :sort
+gb → multicursor mode. repeatedly press gb to add a cursor under the current word. VS CODE ONLY
