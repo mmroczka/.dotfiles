@@ -1,7 +1,0 @@
-echo "Setting Mac Defaults"
-# Show hidden files on mac and reload finder so effect takes place
-defaults write com.apple.finder AppleShowAllFiles YES;
-killall Finder /System/Library/CoreServices/Finder.app
-# Set keys to repeat at a frequency much faster than the default
-defaults write -g InitialKeyRepeat -int 13
-defaults write -g KeyRepeat -int 3
