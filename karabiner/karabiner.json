@@ -1534,6 +1534,88 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Hyper+F to trigger Shortcat",
+        "manipulators" : [ {
+          "to_if_alone" : [ {
+            "set_variable" : {
+              "name" : "shortcat_mode",
+              "value" : 1
+            }
+          } ],
+          "from" : {
+            "key_code" : "f",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "SHORTCAT Mode commands",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "spacebar"
+          },
+          "to" : [ {
+            "key_code" : "left_control"
+          } ],
+          "conditions" : [ {
+            "name" : "shortcat_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "caps_lock"
+          },
+          "to" : [ {
+            "key_code" : "caps_lock"
+          }, {
+            "set_variable" : {
+              "name" : "shortcat_mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "shortcat_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "return_or_enter"
+          },
+          "to" : [ {
+            "key_code" : "return_or_enter"
+          }, {
+            "set_variable" : {
+              "name" : "shortcat_mode",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "shortcat_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Left cmd to trigger Vim Mode",
         "manipulators" : [ {
           "to_if_alone" : [ {
