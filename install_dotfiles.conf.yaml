@@ -1,0 +1,57 @@
+- defaults:
+    link:
+      relink: true
+      force: true
+
+- clean: ['~']
+
+- shell:
+  - if [[ ! -f zshrc_local ]]     ; then touch zshrc_local; fi
+  - if [[ ! -f proxy_url ]]       ; then touch proxy_url; echo "proxy_url=" > proxy_url; fi
+  - if [[ ! -d ~/.config ]]       ; then mkdir ~/.config; fi
+  - if [[ ! -d ~/.config/nvim ]]  ; then mkdir ~/.config/nvim; fi
+  - if [[ ! -d ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch ]]; then mkdir ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch; fi
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+
+- link:
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.tmux.conf.local: tmux/tmux.conf.local
+    ~/.bashrc: bash/bashrc
+    ~/.aliases: aliases
+    ~/.bash_profile: bash/bash_profile
+    ~/.config/antigen.zsh: antigen.zsh
+    ~/.config/karabiner: karabiner
+    ~/.config/karabiner.edn: karabiner/karabiner.edn
+    ~/.functions: functions
+    ~/.gitignore_global: git/gitignore_global
+    ~/.hammerspoon: hammerspoon
+    ~/.npmrc: node/work_npmrc
+    ~/.vim: vim
+    ~/.vimrc: vim/vimrc
+    ~/.proxy_url: proxy_url
+    ~/.ideavimrc: vim/ideavimrc
+    ~/.vrapperrc: vim/vrapperrc
+    ~/.zshrc: zsh/zshrc
+
+- brewfile:
+    file: Brewfile
+    no-upgrade: true
+
+- link:
+    # vscode:
+    "~/Library/Application Support/Code/User/settings.json":
+        path: vim/vs_code_settings.json
+        create: true
+    "~/Library/Application Support/Code/User/keybindings.json":
+        path: vim/vs_code_keybindings.json
+        create: true
+
+- shell:
+    - [bash ./install_vscode_extensions.sh, Installing vscode extensions]
+
+# Cleaning up:
+- shell:
+  - [brew cleanup, Cleaning up]
+

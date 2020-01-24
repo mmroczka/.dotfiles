@@ -1,0 +1,702 @@
+{:profiles
+ {:MrStark {:default true
+         :sim     50
+         :delay   300
+         :alone   300
+         :held    300}}
+ :devices {
+				; :macbook-internal [{:product_id 631 :vendor_id 1452}]
+				:uhk-keyboard [{:product_id 24866 :vendor_id 7504}]
+			}
+ :applications {
+                ; you can find these com.* package names using Karabiner Viewer tool installed by default with Karabiner
+                :vim-mode-disabled-application ["^com\\.apple\\.Terminal$",
+                                                "^com\\.googlecode\\.iterm2$",
+                                                "^org\\.vim\\."]
+                :Chromes                       ["^com\\.google\\.Chrome$", "^org\\.chromium\\.Chromium$", "^com\\.google\\.Chrome\\.canary$", "^com\\.brave\\.Browser"]
+                :Terminals                     ["^com\\.apple\\.Terminal$", "^com\\.googlecode\\.iterm2$", "^io\\.alacritty$"]
+                :Omnifocus                     ["^com\\.omnigroup\\.OmniFocus3$"]
+               }
+ :templates {
+             :alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
+             :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"
+             :btt "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"%s\"'"
+            }
+
+ :froms {
+         :anykey {:any :key_code :modi {:optional [:any]}}
+         :any_cmd_key {:any :key_code :modi {:mandatory [:left_command :right_command]}}
+        }
+ :tos {
+       :home_dir        [{:key :grave_accent_and_tilde :modi [:left_shift] :lazy true}
+                               {:key :slash}]
+
+        ; Here I'm trigger hammerspoon's flux module to dim my screen based on the mode I'm in.
+        ; SCOTf20 == vimMode dimmer off
+        ; SCOTf19 == vimMode dimmer (vim mode) blue on
+        ; SCOTf18 == vimMode dimmer red (visual mode) on
+        ; SCOTf17 == vimMode dimmer green (navigation mode) on
+        ; This is possible through the brilliant work of these folks:
+        ; https://github.com/dbalatero/VimMode.spoon
+        ; https://github.com/calvinwyoung/.dotfiles/blob/master/darwin/hammerspoon/flux.lua
+
+       :TURN_OFF_VIM [{:key :f20 :modi [:left_shift :left_option :left_command :left_control] :lazy true} ; CMD+SHIFT+CTRL+OPT+f20 toggles hammerspoon to restore screen to normal state
+                               {:set ["vim_mode" 0]}                                                 ; turn off vim mode
+                               {:set ["any_key_not_defined_above" 0]}                                ; turn off deadkey variable
+
+                               {:set ["vim_change_mode" 0]}
+                               {:set ["vim_delete_mode" 0]}
+                               {:set ["vim_in_mode" 0]}
+                               {:set ["vim_indent_mode" 0]}
+                               {:set ["vim_from_delete_mode" 0]}
+                               {:set ["vim_from_change_mode" 0]}
+                               {:set ["vim_from_yank_mode" 0]}
+                               {:set ["vim_from_surround_mode" 0]}
+                               {:set ["vim_from_visual_mode" 0]}
+                               {:set ["vim_from_visual_block_mode" 0]}
+                               {:set ["vim_go_to_mode" 0]}
+                               {:set ["vim_go_to_visual_mode" 0]}
+                               {:set ["vim_lowercase_mode" 0]}
+                               {:set ["vim_movement_mode" 0]}
+                               {:set ["vim_outdent_mode" 0]}
+                               {:set ["vim_surround_mode" 0]}
+                               {:set ["vim_replace_mode" 0]}
+                               {:set ["vim_replace_single_letter_mode" 0]}
+                               {:set ["vim_visual_mode" 0]}
+                               {:set ["vim_visual_block_mode" 0]}
+                               {:set ["vim_yank_mode" 0]}
+                               {:set ["vim_uppercase_mode" 0]}
+                               ]
+
+       :TURN_ON_VIM_AND_CLEAR_VARS [{:key :f19 :modi [:left_shift :left_option :left_command :left_control] :lazy true} ; CMD+SHIFT+CTRL+OPT+f19 toggles hammerspoon to toggle screen to blue state
+                               {:set ["vim_mode" 1]}                                                 ; turn on vim mode
+                               {:set ["any_key_not_defined_above" 1]}                                ; turn on deadkey variable
+
+                               {:set ["vim_change_mode" 0]}
+                               {:set ["vim_delete_mode" 0]}
+                               {:set ["vim_in_mode" 0]}
+                               {:set ["vim_indent_mode" 0]}
+                               {:set ["vim_from_delete_mode" 0]}
+                               {:set ["vim_from_change_mode" 0]}
+                               {:set ["vim_from_yank_mode" 0]}
+                               {:set ["vim_from_surround_mode" 0]}
+                               {:set ["vim_from_visual_mode" 0]}
+                               {:set ["vim_from_visual_block_mode" 0]}
+                               {:set ["vim_go_to_mode" 0]}
+                               {:set ["vim_go_to_visual_mode" 0]}
+                               {:set ["vim_lowercase_mode" 0]}
+                               {:set ["vim_movement_mode" 0]}
+                               {:set ["vim_outdent_mode" 0]}
+                               {:set ["vim_surround_mode" 0]}
+                               {:set ["vim_replace_mode" 0]}
+                               {:set ["vim_replace_single_letter_mode" 0]}
+                               {:set ["vim_visual_mode" 0]}
+                               {:set ["vim_visual_block_mode" 0]}
+                               {:set ["vim_yank_mode" 0]}
+                               {:set ["vim_uppercase_mode" 0]}
+                               ]
+       :TURN_ON_SHORTCAT [ {:set ["shortcat_mode" 1]} ]
+       :TURN_OFF_SHORTCAT [ {:set ["shortcat_mode" 0]} ]
+       }
+
+ :simlayers {:caps_lock-mode {:key :caps_lock}
+             :spacebar_mode {:key :spacebar}
+             :programming_mode {:key :period}
+
+             ; f24 is a key that isn't assigned to anything (effectively a dead key)
+             :semicolon_mode {:key :f24}
+             :change_mode {:key :f24}
+             :focus_mode {:key :f24}
+             :go_to_mode {:key :f24}
+             :launch_mode {:key :f24}
+             :window_manipulation_mode {:key :f24}
+             :utilities_mode {:key :f24}
+             :spacebar_command_mode {:key :f24}
+             }
+ :main [
+        {:des "Caps -> Hyper / Esc"
+         :rules [:!vim_replace_mode
+                 [:##caps_lock :!!CTOleft_shift nil {:alone :escape}]
+                ]}
+
+        {:des "FN from UHK" :rules [[:f23 :fn [:uhk-keyboard] ]]} ;* UHK FN as mac fn via UHK hardcoded f24 > fn in KE but only for uhk
+
+        {:des   "shift+cmd+l types javascript: and hits enter hack" ;; https://superuser.com/a/324267
+         :rules [ [:!CSl [:!Cl :j :a :v :a :s :c :r :i :p :t :!Ssemicolon :return_or_enter] :Chromes] ]}
+        ; {:des "Hold cmd+v for KM clipboard history"
+        ;  :rules [ [:!Cv nil nil {:alone :!Cv :held [:km "Activate Clipboard History Switcher"] :repeat false :halt true :params{:alone 150 :held 200}} ] ]}
+        {:des "Hold cmd+v for PASTE2 clipboard history"
+         :rules [ [:!Cv nil nil {:alone :!Cv :held :!TSz :repeat false :halt true :params{:alone 150 :held 200}} ] ]}
+        {:des "Right cmd -> Alfred"
+         :rules [[:right_command :right_command nil {:alone :!CTOSspacebar}]]}
+        {:des "Left option -> KM: If Exists Trigger Action Menu"
+         :rules [[:left_option :left_option nil {:alone [:km "If Exists Trigger Action Menu"]}]]}
+        {:des "Right option -> Cardhop"
+         :rules [[:right_option :right_option nil {:alone :!OCT1}]]}
+        {:des "Quit application by pressing ⌘q twice" :rules[ [:!C#Pq [:!Cq ["⌘q" 0]] ["⌘q" 1]]
+			[:!C#Pq ["⌘q" 1] nil {:delayed {:invoked ["⌘q" 0] :canceled ["⌘q" 0]}}] ]}
+        {:des "Double colon triggers emoji search" :rules[ [:!Ssemicolon [:delete_or_backspace :!TCspacebar ["emoji_mode" 0]] ["emoji_mode" 1]]
+			[:!Ssemicolon ["emoji_mode" 1] nil {:alone :!Ssemicolon :delayed {:invoked ["emoji_mode" 0] :canceled ["emoji_mode" 0]}}] ]}
+
+        {:des "spacebar_mode"
+         :rules [:spacebar_mode
+                 [:grave_accent_and_tilde :!Cgrave_accent_and_tilde]
+                 [:1 [:!COtab :!SCOtab :left_option]]
+                 [:2 :!CStab]
+                 [:3 :!Ctab]
+                 [:4 :!SCopen_bracket]
+                 [:5 :!SCclose_bracket]
+                 ]}
+
+        {:des "Launch mode (l+;)" :rules [[{:sim [:l :semicolon]
+                                     :simo {:interrupt true
+                                            :dorder :insensitive
+                                            :uorder :insensitive
+                                            :afterup {:set ["launch_mode" 0]}}} {:set ["launch_mode" 1]}]]}
+        {:des "Launch mode -> a (Open Activity Monitor)" :rules [:launch_mode [:##a [:km "open: Activity Monitor"]]]}
+        {:des "Launch mode -> b (Open BetterTouchTool)" :rules [:launch_mode [:##b [:km "open: BetterTouchTool"]]]}
+        {:des "Launch mode -> c (Open Chrome)" :rules [:launch_mode [:##c [:km "open: Chrome"]]]}
+        {:des "Launch mode -> d (Open Dash)" :rules [:launch_mode [:##d :!TSC1]]}
+        {:des "Launch mode -> f (Open Fantastical)" :rules [:launch_mode [:##f [:km "open: Fantastical"]]]}
+        {:des "Launch mode -> g (Open Messages)" :rules [:launch_mode [:##g [:km "open: Messages"]]]}
+        {:des "Launch mode -> h (Open Postman)" :rules [:launch_mode [:##h [:km "open: Postman"]]]}
+        {:des "Launch mode -> i (Open iTerm)" :rules [:launch_mode [:##i [:km "open: iTerm"]]]}
+        {:des "Launch mode -> k (Open Keyboard Maestro)" :rules [:launch_mode [:##k [:km "open: Keyboard Maestro"]]]}
+        {:des "Launch mode -> m (Open Omnifocus)" :rules [:launch_mode [:##m [:km "open: Omnifocus"]]]}
+        {:des "Launch mode -> n (Open Evernote)" :rules [:launch_mode [:##n [:km "open: Evernote"]]]}
+        {:des "Launch mode -> e (Open Editor)" :rules [:launch_mode [:##e [:km "open: Editor"]]]}
+        {:des "Launch mode -> s (Open Snippets)" :rules [:launch_mode [:##s :!TSC2]]}
+        {:des "Launch mode -> t (Open Teams)" :rules [:launch_mode [:##t [:km "open: Teams"]]]}
+        {:des "Launch mode -> w (Open BitWarden)" :rules [:launch_mode [:##w [:km "open: BitWarden"]]]}
+        {:des "Launch mode -> z (Open Slack)" :rules [:launch_mode [:##z [:km "open: Slack"]]]}
+        {:des "Launch mode -> caps_lock (Open Franz)" :rules [:launch_mode [:##caps_lock [:km "open: Finder"]]]}
+
+
+      {:des "Left Shift + Left Cmd -> VIM Navigation mode"
+               :rules [[:!Sleft_command :!Sleft_command nil {:alone [:!SCOTf17
+                                                                     ["vim_navigation_mode" 1]
+                                                                     ["any_key_not_defined_above" 1]
+                                                                     ["vim_mode" 0]
+                                                                     ["vim_visual_mode" 0]
+                                                                     ["vim_visual_block_mode" 0]
+                                                                     ["vim_delete_mode" 0]
+                                                                     ["vim_go_to_mode" 0]
+                                                                     ["vim_go_to_visual_mode" 0]
+                                                                    ]}]]}
+
+      {:des "Hyper+F to trigger Shortcat"
+               :rules [[:condi :!vim_mode :!vim_navigation_mode]
+                       [:!SCOTf :!SCspacebar nil {:alone :TURN_ON_SHORTCAT}]]}
+      {:des "SHORTCAT Mode commands"
+           :rules [[:condi :shortcat_mode]
+                   [:spacebar :left_control nil {:alone :spacebar}]
+                   [:caps_lock [:caps_lock :TURN_OFF_SHORTCAT]]
+                   [:return_or_enter [:return_or_enter :TURN_OFF_SHORTCAT]]
+                  ]}
+
+      {:des "Left cmd to trigger Vim Mode"
+               :rules [[:condi :!vim_mode :!vim_navigation_mode]
+                       [:left_command :left_command nil {:alone :TURN_ON_VIM_AND_CLEAR_VARS}]]}
+
+        {:des "VIM MODE APPLICATION OVERRIDE: Omnifocus"
+           :rules [[:condi :vim_mode :Omnifocus]
+;                   OMNIFOCUS SPECIFIC
+                    [:!Tj :!CTdown_arrow]
+                    [:!Tk :!CTup_arrow]
+                    [:!Th :!CTleft_arrow]
+                    [:!Tl :!CTright_arrow]
+                    [:!Tg :!COg]
+                    [:spacebar :spacebar :Omnifocus {:held :!COspacebar :repeat false :halt true :params{:alone 150 :held 200}}]
+                    ]}
+
+        {:des "navigation mode"
+           :rules [[:condi :vim_navigation_mode :!vim_desktop_navigation_mode]
+                   [:c :!Tf12] ; center
+                   [:f :!Cf12] ; fullscreen
+
+                   [:h :!COf12] ; left
+                   [:j :!COf14] ; down
+                   [:k :!COf15] ; up
+                   [:l :!COf13] ; right
+
+                   [:o :!CTf12] ; TOP left
+                   [:p :!CTf13] ; TOP right
+                   [:period :!SCTf12] ; BOTTOM left
+                   [:slash :!SCTf13] ; BOTTOM right
+
+                   [:t :!COf13] ; next third
+                   [:!St :!COf12] ; previous third
+                   [:!Rt :!COf12] ; previous third
+
+                   [:n :!COTf13] ; next display
+                   [:!Sn :!COTf12] ; previous display
+                   [:!Rn :!COTf12] ; previous display
+
+                   [:g :!SOTf13 nil {:held :!SOTf13 :params{:held 150}}] ; grow
+                   [:s :!SOTf12] ; shrink
+
+                   ; [:w :!Cf14] ; next third
+                   ; [:!Sw :!SCOf14] ; previous third
+                   ; [:!Rw :!COf14] ; previous third
+                   [:d ["vim_desktop_navigation_mode" 1] nil {:afterup ["vim_desktop_navigation_mode" 0] :repeat false :halt true}]
+
+
+                   [:i [["vim_navigation_mode" 0] ["any_key_not_defined_above" 0] :!SCOTf20]]
+                   ; [:left_command nil nil {:afterup [["vim_navigation_mode" 0] ["vim_mode" 1] ["vim_visual_mode" 0] :!SCOTf19] :held :left_command :repeat false :halt true :params{:alone 150 :held 200}}]
+
+                   [:condi :vim_navigation_mode :vim_desktop_navigation_mode :!vim_desktop_focus_mode]
+                   [:l :!Cf14] ;
+                   [:h :!SCOf14] ;
+                   [:k :!Cf15] ;
+                   [:f ["vim_desktop_focus_mode" 1] nil {:afterup ["vim_desktop_focus_mode" 0] :repeat false :halt true}]
+
+                   [:condi :vim_navigation_mode :vim_desktop_navigation_mode :vim_desktop_focus_mode]
+                   [:h [:km "focus: screen 1"]] ; focus on left montior
+                   [:l [:km "focus: screen 2"]] ; focus on right montior
+
+                    ; :any_key_not_defined_above_while_in_navigation_mode
+                    ; [:anykey :vk_none]
+                  ]}
+
+        {:des "VIM: change mode"
+           :rules [:vim_change_mode
+                    [:i [:TURN_ON_VIM_AND_CLEAR_VARS ["vim_from_change_mode" 1] ["vim_in_mode" 1]]]
+                    [:c [:!Cleft_arrow :!SCright_arrow :delete_or_backspace :TURN_OFF_VIM]]
+                    [:s [:!SCleft_arrow :!Cc :right_arrow :!SCright_arrow [:km "surroundWithChange"] :TURN_OFF_VIM]]
+
+                    [:condi :vim_change_mode :any_key_not_defined_above]
+                    [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
+                    [:anykey [["vim_change_mode" 0] ["vim_mode" 1]]]
+                    ]}
+
+        {:des "VIM: delete mode"
+           :rules [:vim_delete_mode
+                    [:b [:!SOleft_arrow :delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:d [:!Cleft_arrow :!SCright_arrow :delete_or_backspace :delete_forward :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:e [:!SOright_arrow :delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:h [:!Sleft_arrow :delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:i [:TURN_ON_VIM_AND_CLEAR_VARS ["vim_from_delete_mode" 1] ["vim_in_mode" 1]]]
+                    [:j [:!Sdown_arrow :delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:k [:!Sup_arrow :delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:l [:!Sright_arrow :delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:s [:!SCleft_arrow :!Cc :right_arrow :!SCright_arrow [:km "surroundWithDelete"] :TURN_OFF_VIM]] ; delete surround character...  TODO: FIX ME
+                    [:w [:!SOright_arrow :!Sright_arrow :delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
+
+                    [:condi :vim_delete_mode :any_key_not_defined_above]
+                    [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
+                    [:anykey [["vim_delete_mode" 0] ["vim_mode" 1]]]
+                    ]}
+
+        {:des "VIM: IN mode"
+           :rules [:vim_in_mode
+                    [:e [:!Oleft_arrow :!SOright_arrow :delete_or_backspace :TURN_OFF_VIM] ["vim_from_delete_mode" 1]]
+                    [:e [:!Oleft_arrow :!SOright_arrow :delete_or_backspace :TURN_OFF_VIM] ["vim_from_change_mode" 1]]
+                    [:e [:!Oleft_arrow :!SOright_arrow :!Cc :TURN_OFF_VIM [:km "surroundWith"] ] ["vim_from_surround_mode" 1]]
+                    [:w [:!Oleft_arrow :!SOright_arrow :!Sright_arrow :delete_or_backspace :TURN_OFF_VIM] ["vim_from_delete_mode" 1]]
+                    [:w [:!Oleft_arrow :!SOright_arrow :!Sright_arrow :!Cc :left_arrow :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_from_yank_mode" 1]]
+                    [:w [:!Oleft_arrow :!SOright_arrow :!Sright_arrow :delete_or_backspace :TURN_OFF_VIM] ["vim_from_change_mode" 1]]
+                    [:w [:!Oleft_arrow :!SOright_arrow :!Cc :TURN_OFF_VIM [:km "surroundWith"] ] ["vim_from_surround_mode" 1]]
+
+
+                    [:condi :vim_in_mode :any_key_not_defined_above]
+                    [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
+                    [:anykey [["vim_in_mode" 0] ["vim_mode" 1]]]
+                    ]}
+
+        {:des "VIM: SURROUND mode"
+           :rules [:vim_surround_mode
+
+                    [:e [:!SOright_arrow :!Cc :TURN_OFF_VIM [:km "surroundWith"]]]  ; surround word from cursor
+                    [:w [:!SOright_arrow :!Cc :TURN_OFF_VIM [:km "surroundWith"]]]  ; surround word from cursor
+                    [:i [["vim_surround_mode" 0] ["vim_in_mode" 1] ["vim_from_surround_mode" 1]]]  ; surround word from cursor
+                    [:s [:!Cleft_arrow :!SCright_arrow :!Cc :TURN_OFF_VIM [:km "surroundWith"]]]  ; double 's' to surround sentence with <char>
+
+                    [:condi :vim_in_mode :any_key_not_defined_above]
+                    [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
+                    [:anykey [["vim_surround_mode" 0] ["vim_mode" 1]]]
+                    ]}
+
+        {:des "VIM: YANK/YOU mode"
+           :rules [:vim_yank_mode
+                    [:w [:!SOright_arrow :!Cc :left_arrow :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:b [:!SOleft_arrow :!Cc :right_arrow :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:i [["vim_yank_mode" 0]["vim_from_yank_mode" 1] ["vim_in_mode" 1]]]
+                    [:h [:!Sleft_arrow :!Cc :right_arrow  :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:l [:!Sright_arrow :!Cc :left_arrow  :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:y [:!Cleft_arrow :!CSright_arrow :!Cc :left_arrow :TURN_ON_VIM_AND_CLEAR_VARS]]
+
+                    [:s [["vim_yank_mode" 0] ["vim_surround_mode" 1]]]
+
+                    [:condi :vim_in_mode :any_key_not_defined_above]
+                    [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
+                    [:anykey [["vim_yank_mode" 0] ["vim_mode" 1]]]
+                    ]}
+
+        {:des "VIM: GO TO mode"
+           :rules [:vim_go_to_mode
+                    [:g [:!SCup_arrow ["vim_go_to_mode" 0] ["vim_from_visual_block_mode" 0] ["vim_visual_block_mode" 1]] ["vim_from_visual_block_mode" 1]]
+                    [:!Su [["vim_go_to_mode" 0] ["vim_from_visual_block_mode" 0] :TURN_OFF_VIM [:km "uppercaseClipboardContentsThenPaste"] :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_from_visual_block_mode" 1]]
+                    [:!Ru [["vim_go_to_mode" 0] ["vim_from_visual_block_mode" 0] :TURN_OFF_VIM [:km "uppercaseClipboardContentsThenPaste"] :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_from_visual_block_mode" 1]]
+                    [:u [["vim_go_to_mode" 0] ["vim_from_visual_block_mode" 0] ["vim_movement_mode" 0] :TURN_OFF_VIM [:km "lowercaseClipboardContentsThenPaste"] :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_from_visual_block_mode" 1]]
+
+                    [:g [:!SCup_arrow ["vim_go_to_mode" 0] ["vim_from_visual_mode" 0] ["vim_visual_mode" 1]] ["vim_from_visual_mode" 1]]
+                    [:!Su [["vim_go_to_mode" 0] ["vim_from_visual_mode" 0] :TURN_OFF_VIM [:km "uppercaseClipboardContentsThenPaste"] :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_from_visual_mode" 1]]
+                    [:!Ru [["vim_go_to_mode" 0] ["vim_from_visual_mode" 0] :TURN_OFF_VIM [:km "uppercaseClipboardContentsThenPaste"] :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_from_visual_mode" 1]]
+                    [:u [["vim_go_to_mode" 0] ["vim_from_visual_mode" 0] ["vim_movement_mode" 0] :TURN_OFF_VIM [:km "lowercaseClipboardContentsThenPaste"] :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_from_visual_mode" 1]]
+
+                    [:g [:!Cup_arrow ["vim_go_to_mode" 0]]]
+                    [:!Su [["vim_go_to_mode" 0] ["vim_uppercase_mode" 1] ["vim_movement_mode" 1]]]
+                    [:!Ru [["vim_go_to_mode" 0] ["vim_uppercase_mode" 1] ["vim_movement_mode" 1]]]
+                    [:u [["vim_go_to_mode" 0] ["vim_lowercase_mode" 1] ["vim_movement_mode" 1]]]
+
+                    [:condi :vim_go_to_mode :any_key_not_defined_above]
+                    [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
+                    [:anykey :TURN_ON_VIM_AND_CLEAR_VARS]
+                    ]}
+
+        {:des "VIM: MOVEMENT mode"
+           :rules [:vim_movement_mode
+                    [:w [["vim_movement_mode" 0] ["vim_uppercase_mode" 0] ["vim_go_to_mode" 0] :!SOright_arrow :!Cc [:km "uppercaseClipboardContentsThenPaste"]] ["vim_uppercase_mode" 1]]
+                    [:e [["vim_movement_mode" 0] ["vim_uppercase_mode" 0] ["vim_go_to_mode" 0] :!SOright_arrow :!Cc [:km "uppercaseClipboardContentsThenPaste"]] ["vim_uppercase_mode" 1]]
+                    [:b [["vim_movement_mode" 0] ["vim_uppercase_mode" 0] ["vim_go_to_mode" 0] :!SOleft_arrow :!Cc [:km "uppercaseClipboardContentsThenPaste"]] ["vim_uppercase_mode" 1]]
+                    [:!S4 [["vim_movement_mode" 0] ["vim_uppercase_mode" 0] ["vim_go_to_mode" 0] :!SCright_arrow :!Cc [:km "uppercaseClipboardContentsThenPaste"]] ["vim_uppercase_mode" 1]]
+                    [:!R4 [["vim_movement_mode" 0] ["vim_uppercase_mode" 0] ["vim_go_to_mode" 0] :!SCright_arrow :!Cc [:km "uppercaseClipboardContentsThenPaste"]] ["vim_uppercase_mode" 1]]
+
+                    [:w [["vim_movement_mode" 0] ["vim_lowercase_mode" 0] ["vim_go_to_mode" 0] :!SOright_arrow :!Cc [:km "lowercaseClipboardContentsThenPaste"]] ["vim_lowercase_mode" 1]]
+                    [:e [["vim_movement_mode" 0] ["vim_lowercase_mode" 0] ["vim_go_to_mode" 0] :!SOright_arrow :!Cc [:km "lowercaseClipboardContentsThenPaste"]] ["vim_lowercase_mode" 1]]
+                    [:b [["vim_movement_mode" 0] ["vim_lowercase_mode" 0] ["vim_go_to_mode" 0] :!SOleft_arrow :!Cc [:km "lowercaseClipboardContentsThenPaste"]] ["vim_lowercase_mode" 1]]
+                    [:!S4 [["vim_movement_mode" 0] ["vim_lowercase_mode" 0] ["vim_go_to_mode" 0] :!SCright_arrow :!Cc [:km "lowercaseClipboardContentsThenPaste"]] ["vim_lowercase_mode" 1]]
+                    [:!R4 [["vim_movement_mode" 0] ["vim_lowercase_mode" 0] ["vim_go_to_mode" 0] :!SCright_arrow :!Cc [:km "lowercaseClipboardContentsThenPaste"]] ["vim_lowercase_mode" 1]]
+
+                    [:condi :vim_movement_mode :any_key_not_defined_above]
+                    [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
+                    [:anykey :TURN_ON_VIM_AND_CLEAR_VARS]
+                    ]}
+
+
+        {:des "vim mode"
+           :rules [:vim_mode
+                    [:!Sgrave_accent_and_tilde [:km "tildeVimCommand"]]
+                    [:!Rgrave_accent_and_tilde [:km "tildeVimCommand"]]
+                    [:!S3 [:!Oleft_arrow :!SOright_arrow :!Cc [:km "findNext"]]] ; use '#' to find next occurence of word under the cursor
+                    [:!R3 [:!Oleft_arrow :!SOright_arrow :!Cc [:km "findNext"]]] ; use '#' to find next occurence of word under the cursor
+
+                    [:!S8 [:!Oleft_arrow :!SOright_arrow :!Cc [:km "findPrevious"]]] ; use '*' to find the previous occurence of word under the cursor
+                    [:!R8 [:!Oleft_arrow :!SOright_arrow :!Cc [:km "findPrevious"]]] ; use '*' to find the previous occurence of word under the cursor
+
+                    ; [:left_command nil nil {:afterup [["vim_navigation_mode" 1] ["vim_mode" 0] ["vim_visual_mode" 0] :!SCOTf17] :held :left_command :repeat false :halt true :params{:alone 150 :held 200}}]
+                    [:slash [:TURN_OFF_VIM :!Cf]]
+                    [:period [:km "last_action_repeat"]]
+                    [:semicolon [:km "last_move_repeat"]]
+                    [:!R4 :!Cright_arrow]
+                    [:!S7 :!Cleft_arrow]
+                    [:!R7 :!Cleft_arrow]
+
+                    [:!Scomma [:!SCopen_bracket  ["vim_outdent_mode" 0]] ["vim_outdent_mode" 1]]  ; double > to outdent line or at least trigger SHIFT+CMD+[
+                    [:!Scomma ["vim_outdent_mode" 1] nil {:delayed {:invoked ["vim_outdent_mode" 0] :canceled ["vim_outdent_mode" 0]}}]
+                    [:!Speriod [:!SCclose_bracket  ["vim_indent_mode" 0]] ["vim_indent_mode" 1]]  ; double > to indent line or at least trigger SHIFT+CMD+]
+                    [:!Speriod ["vim_indent_mode" 1] nil {:delayed {:invoked ["vim_indent_mode" 0] :canceled ["vim_indent_mode" 0]}}]
+
+                    [:a [:right_arrow :TURN_OFF_VIM]]
+                    [:!Sa [:!Cright_arrow :TURN_OFF_VIM]]
+                    [:!Ra [:!Cright_arrow :TURN_OFF_VIM]] ; make sure it works with right shift too
+                    [:!Ta [:km "incrementClipboardContentsFirstNumberThenPaste"]]
+                    [:b nil nil {:held :!Oleft_arrow :afterup [:!Oleft_arrow [:km "last_move_b"]] :params{:held 150}}]
+                    [:!Tb :page_up]
+                    [:c [["vim_change_mode" 1] ["vim_mode" 0]]] ; single tap c to enter change mode
+                    [:!Sc [:!SCright_arrow :delete_or_backspace :TURN_OFF_VIM]]
+                    [:!Rc [:!SCright_arrow :delete_or_backspace :TURN_OFF_VIM]] ; make above also work with right shift
+                    [:d [["vim_delete_mode" 1] ["vim_mode" 0]]] ; single tap d to enter delete mode
+                    [:!Sd [:!SCright_arrow :delete_or_backspace]]
+                    [:!Rd [:!SCright_arrow :delete_or_backspace]] ; make above also work with right shift
+                    [:!Td [:down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow :down_arrow ]] ; go down 15 lines
+                    [:e nil nil {:held :!Oright_arrow :afterup [:!Oright_arrow [:km "last_move_e"]] :params{:held 150}}]
+                    [:!Tf :page_down]
+
+                    [:g ["vim_go_to_mode" 1]]
+
+                    [:!Sg :!Cdown_arrow]
+                    [:!Rg :!Cdown_arrow]
+                    [:h :left_arrow]
+                    [:i :TURN_OFF_VIM]
+                    [:!Si [:!Cleft_arrow :TURN_OFF_VIM]]
+                    [:!Ri [:!Cleft_arrow :TURN_OFF_VIM]] ; make sure it works with right shift too
+                    [:j :down_arrow]
+                    [:!Sj [:!Cright_arrow :right_arrow :delete_or_backspace]]
+                    [:!Rj [:!Cright_arrow :right_arrow :delete_or_backspace]]
+                    [:k :up_arrow]
+                    [:l :right_arrow]
+                    [:o [:!Cright_arrow :return_or_enter :TURN_OFF_VIM [:km "last_action_o"]]] ; add a line above yourself then drop into typing
+                    [:!So [:up_arrow :!Cright_arrow :return_or_enter :TURN_OFF_VIM [:km "last_action_capital_o"]]] ; add a line below yourself then drop into typing
+                    [:!Ro [:up_arrow :!Cright_arrow :return_or_enter :TURN_OFF_VIM [:km "last_action_capital_o"]]] ; add a line below yourself then drop into typing
+                    [:p [:!Cv [:km "last_action_p"]]]
+                    [:!Sp [:!Cright_arrow :return_or_enter :!Cv [:km "last_action_capital_p"]]]
+                    [:!Rp [:!Cright_arrow :return_or_enter :!Cv [:km "last_action_capital_p"]]]
+                    [:r [["vim_replace_single_letter_mode" 1] ["vim_mode" 0]]]
+                    [:!Sr [:TURN_OFF_VIM ["vim_replace_mode" 1]]]
+                    [:!Rr [:TURN_OFF_VIM ["vim_replace_mode" 1]]]
+                    [:!Tr :!SCz]
+                    [:s [:delete_forward :TURN_OFF_VIM [:km "last_action_s"]]]
+
+                    [:u :!Cz]
+                    [:!Tu [:up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow ]] ; go up 15 lines
+                    [:v [["vim_mode" 0] ["vim_visual_mode" 1] :!SCOTf18]]
+                    [:!Sv [["vim_mode" 0]
+                           ["vim_visual_mode" 0]
+                           ["vim_visual_block_mode" 1]
+                           :!SCOTf18 ; turn on Red Vim Dimmer
+                           :!Cleft_arrow ; go the very left of the line
+                           :!SCright_arrow] ; hold shift and go to very right of the line
+                    ]
+                    [:!Rv [["vim_mode" 0]
+                           ["vim_visual_mode" 0]
+                           ["vim_visual_block_mode" 1]
+                           :!SCOTf18 ; turn on Red Vim Dimmer
+                           :!Cleft_arrow ; go the very left of the line
+                           :!SCright_arrow] ; hold shift and go to very right of the line
+                    ]
+                    [:w nil nil {:held :!Oright_arrow :afterup [:!Oright_arrow :right_arrow [:km "last_move_w"]] :params{:held 150}}]
+                    [:x :delete_forward nil {:afterup [:km "last_action_x"]}]
+                    [:!Tx [:km "decrementClipboardContentsFirstNumberThenPaste"]]
+                    [:!Sx [:delete_or_backspace [:km "last_action_capital_x"]]]
+                    [:!Rx [:delete_or_backspace [:km "last_action_capital_x"]]]
+                    [:!Sy [:!SCright_arrow :!Cc :left_arrow]]
+                    [:!Ry [:!SCright_arrow :!Cc :left_arrow]]
+
+                    [:!Ty :!Cc]
+                    [:y [["vim_yank_mode" 1] ["vim_mode" 0]]]
+                    [:return_or_enter :return_or_enter]
+
+                    [:condi :vim_mode :any_key_not_defined_above]
+                    [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
+                    [:anykey :vk_none]
+                    ]}
+
+        {:des "visual BLOCK mode"
+           :rules [:vim_visual_block_mode
+                    [:!Scomma [:!SCopen_bracket :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_outdent_mode" 1]]  ; double > to outdent line or at least trigger SHIFT+CMD+[
+                    [:!Scomma ["vim_outdent_mode" 1] nil {:delayed {:invoked ["vim_outdent_mode" 0] :canceled ["vim_outdent_mode" 0]}}]
+                    [:!Speriod [:!SCclose_bracket :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_indent_mode" 1]]  ; double > to indent line or at least trigger SHIFT+CMD+]
+                    [:!Speriod ["vim_indent_mode" 1] nil {:delayed {:invoked ["vim_indent_mode" 0] :canceled ["vim_indent_mode" 0]}}]
+                    [:d [:TURN_ON_VIM_AND_CLEAR_VARS :delete_forward :delete_forward] ]
+                    [:!Td [:!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow ]] ; go down 15 lines
+                    ; [:g [:!SCup_arrow ["vim_go_to_visual_mode" 0]] ["vim_go_to_visual_mode" 1]]  ; double tap g to jump to top of file
+                    ; [:g ["vim_go_to_visual_mode" 1] nil {:delayed {:invoked ["vim_go_to_visual_mode" 0] :canceled ["vim_go_to_visual_mode" 0]}}]
+                    [:g [["vim_go_to_mode" 1] ["vim_from_visual_block_mode" 1]]]
+                    [:!Sg :!SCdown_arrow]
+                    [:!Rg :!SCdown_arrow]
+                    [:i :TURN_OFF_VIM]
+                    [:j nil nil {:held :!Sdown_arrow :afterup [:!Sdown_arrow :!SCright_arrow] :params{:held 150}} ]
+                    [:!Ssemicolon [:!Cc :TURN_OFF_VIM [:km "findAndReplaceClipboardContents"]]]
+                    [:k nil nil {:held :!Sup_arrow :afterup [:!Sup_arrow :!SCright_arrow] :params{:held 150}}]
+                    [:!Ss [:!Cc [:km "surroundWith"] :TURN_OFF_VIM]]
+                    [:!Rs [:!Cc [:km "surroundWith"] :TURN_OFF_VIM]]
+                    [:!Tu [:!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow ]] ; go down 15 lines
+                    [:v [["vim_mode" 0] ["vim_visual_mode" 1] ["vim_visual_block_mode" 0] :!SCOTf18]]
+                    [:x [:delete_forward :delete_forward :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:!Sx [:delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:y [:TURN_ON_VIM_AND_CLEAR_VARS :!Cc]]
+
+                    [:condi :vim_visual_block_mode :any_key_not_defined_above]
+                    [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
+                    [:anykey :vk_none]
+                    ]}
+
+
+        {:des "visual mode"
+           :rules [:vim_visual_mode
+                    [:!Scomma [:!SCopen_bracket :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_outdent_mode" 1]]  ; double > to outdent line or at least trigger SHIFT+CMD+[
+                    [:!Scomma ["vim_outdent_mode" 1] nil {:delayed {:invoked ["vim_outdent_mode" 0] :canceled ["vim_outdent_mode" 0]}}]
+                    [:!Speriod [:!SCclose_bracket :TURN_ON_VIM_AND_CLEAR_VARS] ["vim_indent_mode" 1]]  ; double > to indent line or at least trigger SHIFT+CMD+]
+                    [:!Speriod ["vim_indent_mode" 1] nil {:delayed {:invoked ["vim_indent_mode" 0] :canceled ["vim_indent_mode" 0]}}]
+                    [:!R4 :!SCright_arrow]
+                    [:!S7 :!SCleft_arrow]
+                    [:!R7 :!SCleft_arrow]
+                    [:b :!SOleft_arrow]
+                    [:!Td [:!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow :!Sdown_arrow ]] ; go down 15 lines
+                    [:e :!SOright_arrow]
+                    [:g [["vim_go_to_mode" 1] ["vim_from_visual_mode" 1]]]
+                    [:!Sg :!SCdown_arrow]
+                    [:!Rg :!SCdown_arrow]
+                    [:h :!Sleft_arrow]
+                    [:i :TURN_OFF_VIM]
+                    [:j :!Sdown_arrow]
+                    [:k :!Sup_arrow]
+                    [:l :!Sright_arrow]
+                    [:p [:!Cv :TURN_ON_VIM_AND_CLEAR_VARS]]
+
+                    [:!Ss [:!Cc [:km "surroundWith"] :TURN_OFF_VIM]]
+                    [:!Rs [:!Cc [:km "surroundWith"] :TURN_OFF_VIM]]
+
+                    [:!Tu [:!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow ]] ; go down 15 lines
+                    [:v :TURN_ON_VIM_AND_CLEAR_VARS]
+                    [:!Sv [["vim_mode" 0]
+                           ["vim_visual_mode" 0]
+                           ["vim_visual_block_mode" 1]
+                           :!SCOTf18 ; turn on Red Vim Dimmer
+                           :!Cleft_arrow ; go the very left of the line
+                           :!SCright_arrow] ; hold shift and go to very right of the line
+                    ]
+                    [:!Rv [["vim_mode" 0]
+                           ["vim_visual_mode" 0]
+                           ["vim_visual_block_mode" 1]
+                           :!SCOTf18 ; turn on Red Vim Dimmer
+                           :!Cleft_arrow ; go the very left of the line
+                           :!SCright_arrow] ; hold shift and go to very right of the line
+                    ]
+                    [:w [:!SOright_arrow :!Sright_arrow]]
+                    [:x [:delete_forward :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:!Sx [:delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:!Rx [:delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:y [:TURN_ON_VIM_AND_CLEAR_VARS :!Cc]]
+
+;                   OMNIFOCUS SPECIFIC
+                    [:!Tj :!CTdown_arrow :Omnifocus]
+                    [:!Tk :!CTup_arrow :Omnifocus]
+                    [:!Th :!CTleft_arrow :Omnifocus]
+                    [:!Tl :!CTright_arrow :Omnifocus]
+
+                    [:condi :vim_visual_mode :any_key_not_defined_above]
+                    [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
+                    [:anykey :vk_none]
+                    ]}
+
+        {:des "VIM: Replace single letter mode"
+           :rules [:vim_replace_single_letter_mode
+                    [:a [:delete_forward :a] :TURN_ON_VIM_AND_CLEAR_VARS] [:b [:delete_forward :b :TURN_ON_VIM_AND_CLEAR_VARS]] [:c [:delete_forward :c :TURN_ON_VIM_AND_CLEAR_VARS]] [:d [:delete_forward :d :TURN_ON_VIM_AND_CLEAR_VARS]] [:e [:delete_forward :e :TURN_ON_VIM_AND_CLEAR_VARS]] [:f [:delete_forward :f :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:g [:delete_forward :g :TURN_ON_VIM_AND_CLEAR_VARS]] [:h [:delete_forward :h :TURN_ON_VIM_AND_CLEAR_VARS]] [:i [:delete_forward :i :TURN_ON_VIM_AND_CLEAR_VARS]] [:j [:delete_forward :j :TURN_ON_VIM_AND_CLEAR_VARS]] [:k [:delete_forward :k :TURN_ON_VIM_AND_CLEAR_VARS]] [:l [:delete_forward :l :TURN_ON_VIM_AND_CLEAR_VARS]] [:m [:delete_forward :m :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:n [:delete_forward :n :TURN_ON_VIM_AND_CLEAR_VARS]] [:o [:delete_forward :o :TURN_ON_VIM_AND_CLEAR_VARS]] [:p [:delete_forward :p :TURN_ON_VIM_AND_CLEAR_VARS]] [:q [:delete_forward :q :TURN_ON_VIM_AND_CLEAR_VARS]] [:r [:delete_forward :r :TURN_ON_VIM_AND_CLEAR_VARS]] [:s [:delete_forward :s :TURN_ON_VIM_AND_CLEAR_VARS]] [:t [:delete_forward :t :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:u [:delete_forward :u :TURN_ON_VIM_AND_CLEAR_VARS]] [:v [:delete_forward :v :TURN_ON_VIM_AND_CLEAR_VARS]] [:w [:delete_forward :w :TURN_ON_VIM_AND_CLEAR_VARS]] [:x [:delete_forward :x :TURN_ON_VIM_AND_CLEAR_VARS]] [:y [:delete_forward :y :TURN_ON_VIM_AND_CLEAR_VARS]] [:z [:delete_forward :z :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:!Sa [:delete_forward :!Sa :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Sb [:delete_forward :!Sb :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Sc [:delete_forward :!Sc :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Sd [:delete_forward :!Sd :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Se [:delete_forward :!Se :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Sf [:delete_forward :!Sf :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Sg [:delete_forward :!Sg :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:!Sh [:delete_forward :!Sh :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Si [:delete_forward :!Si :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Sj [:!Sdelete_forward :!Sj :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Sk [:delete_forward :!Sk :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Sl [:delete_forward :!Sl :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Sm [:delete_forward :!Sm :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:!Sn [:delete_forward :!Sn :TURN_ON_VIM_AND_CLEAR_VARS]] [:!So [:delete_forward :!So :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Sp [:delete_forward :!Sp :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Sq [:delete_forward :!Sq :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Sr [:delete_forward :!Sr :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Ss [:delete_forward :!Ss :TURN_ON_VIM_AND_CLEAR_VARS]] [:!St [:delete_forward :!St :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:!Su [:delete_forward :!Su :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Sv [:delete_forward :!Sv :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Sw [:delete_forward :!Sw :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Sx [:delete_forward :!Sx :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Sy [:delete_forward :!Sy :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Sz [:delete_forward :!Sz :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:!Ra [:delete_forward :!Ra :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Rb [:delete_forward :!Rb :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Rc [:delete_forward :!Rc :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Rd [:delete_forward :!Rd :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Re [:delete_forward :!Re :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Rf [:delete_forward :!Rf :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Rg [:delete_forward :!Rg :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:!Rh [:delete_forward :!Rh :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Ri [:delete_forward :!Ri :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Rj [:!Rdelete_forward :!Rj :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Rk [:delete_forward :!Rk :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Rl [:delete_forward :!Rl :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Rm [:delete_forward :!Rm :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:!Rn [:delete_forward :!Rn :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Ro [:delete_forward :!Ro :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Rp [:delete_forward :!Rp :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Rq [:delete_forward :!Rq :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Rr [:delete_forward :!Rr :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Rs [:delete_forward :!Rs :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Rt [:delete_forward :!Rt :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:!Ru [:delete_forward :!Ru :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Rv [:delete_forward :!Rv :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Rw [:delete_forward :!Rw :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Rx [:delete_forward :!Rx :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Ry [:delete_forward :!Ry :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Rz [:delete_forward :!Rz :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:grave_accent_and_tilde [:delete_forward :grave_accent_and_tilde :TURN_ON_VIM_AND_CLEAR_VARS]] [:1 [:delete_forward :1 :TURN_ON_VIM_AND_CLEAR_VARS]] [:2 [:delete_forward :2 :TURN_ON_VIM_AND_CLEAR_VARS]] [:3 [:delete_forward :3 :TURN_ON_VIM_AND_CLEAR_VARS]] [:4 [:delete_forward :4 :TURN_ON_VIM_AND_CLEAR_VARS]] [:5 [:delete_forward :5 :TURN_ON_VIM_AND_CLEAR_VARS]] [:6 [:delete_forward :6 :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:7 [:delete_forward :7 :TURN_ON_VIM_AND_CLEAR_VARS]] [:8 [:delete_forward :8 :TURN_ON_VIM_AND_CLEAR_VARS]] [:9 [:delete_forward :9 :TURN_ON_VIM_AND_CLEAR_VARS]] [:0 [:delete_forward :0 :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:hyphen [:delete_forward :hyphen :TURN_ON_VIM_AND_CLEAR_VARS]] [:equal_sign [:delete_forward :equal_sign :TURN_ON_VIM_AND_CLEAR_VARS]] [:open_bracket [:delete_forward :open_bracket :TURN_ON_VIM_AND_CLEAR_VARS]] [:close_bracket [:delete_forward :close_bracket :TURN_ON_VIM_AND_CLEAR_VARS]] [:backslash [:delete_forward :backslash :TURN_ON_VIM_AND_CLEAR_VARS]] [:semicolon [:delete_forward :semicolon :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:quote [:delete_forward :quote :TURN_ON_VIM_AND_CLEAR_VARS]] [:comma [:delete_forward :comma :TURN_ON_VIM_AND_CLEAR_VARS ]] [:period [:delete_forward :period :TURN_ON_VIM_AND_CLEAR_VARS]] [:slash [:delete_forward :slash :TURN_ON_VIM_AND_CLEAR_VARS]] [:spacebar [:delete_forward :spacebar :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:!Sgrave_accent_and_tilde [:delete_forward :!Sgrave_accent_and_tilde :TURN_ON_VIM_AND_CLEAR_VARS]] [:!S1 [:delete_forward :!S1 :TURN_ON_VIM_AND_CLEAR_VARS]] [:!S2 [:delete_forward :!S2 :TURN_ON_VIM_AND_CLEAR_VARS]] [:!S3 [:delete_forward :!S3 :TURN_ON_VIM_AND_CLEAR_VARS]] [:!S4 [:delete_forward :!S4 :TURN_ON_VIM_AND_CLEAR_VARS]] [:!S5 [:delete_forward :!S5 :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:!S6 [:delete_forward :!S6 :TURN_ON_VIM_AND_CLEAR_VARS]] [:!S7 [:delete_forward :!S7 :TURN_ON_VIM_AND_CLEAR_VARS]] [:!S8 [:delete_forward :!S8 :TURN_ON_VIM_AND_CLEAR_VARS]] [:!S9 [:delete_forward :!S9 :TURN_ON_VIM_AND_CLEAR_VARS]] [:!S0 [:delete_forward :!S0 :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:!Shyphen [:delete_forward :!Shyphen :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Sequal_sign [:delete_forward :!Sequal_sign :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Sopen_bracket [:delete_forward :!Sopen_bracket :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Sclose_bracket [:delete_forward :!Sclose_bracket :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Sbackslash [:delete_forward :!Sbackslash :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:!Ssemicolon [:delete_forward :!Ssemicolon :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Squote [:delete_forward :!Squote :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Scomma [:delete_forward :!Scomma :TURN_ON_VIM_AND_CLEAR_VARS ]] [:!Speriod [:delete_forward :!Speriod :TURN_ON_VIM_AND_CLEAR_VARS]] [:!Sslash [:delete_forward :!Sslash :TURN_ON_VIM_AND_CLEAR_VARS]]
+
+                    [:!Sspacebar [:delete_forward :!Sspacebar :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:caps_lock :TURN_ON_VIM_AND_CLEAR_VARS]
+
+                  ]}
+
+        {:des "VIM: Replace mode"
+           :rules [:vim_replace_mode
+                    [:a [:delete_forward :a]] [:b [:delete_forward :b]] [:c [:delete_forward :c]] [:d [:delete_forward :d]] [:e [:delete_forward :e]] [:f [:delete_forward :f]] [:g [:delete_forward :g]] [:h [:delete_forward :h]] [:i [:delete_forward :i]] [:j [:delete_forward :j]] [:k [:delete_forward :k]] [:l [:delete_forward :l]] [:m [:delete_forward :m]]
+                    [:n [:delete_forward :n]] [:o [:delete_forward :o]] [:p [:delete_forward :p]] [:q [:delete_forward :q]] [:r [:delete_forward :r]] [:s [:delete_forward :s]] [:t [:delete_forward :t]] [:u [:delete_forward :u]] [:v [:delete_forward :v]] [:w [:delete_forward :w]] [:x [:delete_forward :x]] [:y [:delete_forward :y]] [:z [:delete_forward :z]]
+                    [:!Sa [:delete_forward :!Sa]] [:!Sb [:delete_forward :!Sb]] [:!Sc [:delete_forward :!Sc]] [:!Sd [:delete_forward :!Sd]] [:!Se [:delete_forward :!Se]] [:!Sf [:delete_forward :!Sf]] [:!Sg [:delete_forward :!Sg]] [:!Sh [:delete_forward :!Sh]] [:!Si [:delete_forward :!Si]] [:!Sj [:!Sdelete_forward :!Sj]] [:!Sk [:delete_forward :!Sk]] [:!Sl [:delete_forward :!Sl]] [:!Sm [:delete_forward :!Sm]]
+                    [:!Sn [:delete_forward :!Sn]] [:!So [:delete_forward :!So]] [:!Sp [:delete_forward :!Sp]] [:!Sq [:delete_forward :!Sq]] [:!Sr [:delete_forward :!Sr]] [:!Ss [:delete_forward :!Ss]] [:!St [:delete_forward :!St]] [:!Su [:delete_forward :!Su]] [:!Sv [:delete_forward :!Sv]] [:!Sw [:delete_forward :!Sw]] [:!Sx [:delete_forward :!Sx]] [:!Sy [:delete_forward :!Sy]] [:!Sz [:delete_forward :!Sz]]
+                    [:!Ra [:delete_forward :!Ra]] [:!Rb [:delete_forward :!Rb]] [:!Rc [:delete_forward :!Rc]] [:!Rd [:delete_forward :!Rd]] [:!Re [:delete_forward :!Re]] [:!Rf [:delete_forward :!Rf]] [:!Rg [:delete_forward :!Rg]] [:!Rh [:delete_forward :!Rh]] [:!Ri [:delete_forward :!Ri]] [:!Rj [:!Rdelete_forward :!Rj]] [:!Rk [:delete_forward :!Rk]] [:!Rl [:delete_forward :!Rl]] [:!Rm [:delete_forward :!Rm]]
+                    [:!Rn [:delete_forward :!Rn]] [:!Ro [:delete_forward :!Ro]] [:!Rp [:delete_forward :!Rp]] [:!Rq [:delete_forward :!Rq]] [:!Rr [:delete_forward :!Rr]] [:!Rs [:delete_forward :!Rs]] [:!Rt [:delete_forward :!Rt]] [:!Ru [:delete_forward :!Ru]] [:!Rv [:delete_forward :!Rv]] [:!Rw [:delete_forward :!Rw]] [:!Rx [:delete_forward :!Rx]] [:!Ry [:delete_forward :!Ry]] [:!Rz [:delete_forward :!Rz]]
+
+                    [:grave_accent_and_tilde [:delete_forward :grave_accent_and_tilde]] [:1 [:delete_forward :1]] [:2 [:delete_forward :2]] [:3 [:delete_forward :3]] [:4 [:delete_forward :4]] [:5 [:delete_forward :5]] [:6 [:delete_forward :6]] [:7 [:delete_forward :7]] [:8 [:delete_forward :8]] [:9 [:delete_forward :9]] [:0 [:delete_forward :0]]
+                    [:hyphen [:delete_forward :hyphen]] [:equal_sign [:delete_forward :equal_sign]] [:open_bracket [:delete_forward :open_bracket]] [:close_bracket [:delete_forward :close_bracket]] [:backslash [:delete_forward :backslash]] [:semicolon [:delete_forward :semicolon]] [:quote [:delete_forward :quote]] [:comma [:delete_forward :comma ]] [:period [:delete_forward :period]] [:slash [:delete_forward :slash]] [:spacebar [:delete_forward :spacebar]]
+
+                    [:!Sgrave_accent_and_tilde [:delete_forward :!Sgrave_accent_and_tilde]] [:!S1 [:delete_forward :!S1]] [:!S2 [:delete_forward :!S2]] [:!S3 [:delete_forward :!S3]] [:!S4 [:delete_forward :!S4]] [:!S5 [:delete_forward :!S5]] [:!S6 [:delete_forward :!S6]] [:!S7 [:delete_forward :!S7]] [:!S8 [:delete_forward :!S8]] [:!S9 [:delete_forward :!S9]] [:!S0 [:delete_forward :!S0]]
+                    [:!Shyphen [:delete_forward :!Shyphen]] [:!Sequal_sign [:delete_forward :!Sequal_sign]] [:!Sopen_bracket [:delete_forward :!Sopen_bracket]] [:!Sclose_bracket [:delete_forward :!Sclose_bracket]] [:!Sbackslash [:delete_forward :!Sbackslash]] [:!Ssemicolon [:delete_forward :!Ssemicolon]] [:!Squote [:delete_forward :!Squote]] [:!Scomma [:delete_forward :!Scomma ]] [:!Speriod [:delete_forward :!Speriod]] [:!Sslash [:delete_forward :!Sslash]]
+
+                    [:!Sspacebar [:delete_forward :!Sspacebar]]
+                    [:caps_lock [["vim_replace_mode" 0] :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    ]}
+
+
+        {:des "Programming Mode"
+         :rules [:programming_mode
+                 [:c [:km "open: Chrome"]]
+                 [:i [:km "open: iTerm"]]
+                 [:j [:km "open: IntelliJ"]]
+                 [:p [:km "open: Postman"]]
+                 [:t [:km "open: Tower"]]
+                 [:v [:km "open: VS Code"]]
+                 [:z [:km "open: Zeplin"]]
+                 ]}
+
+        {:des "Semicolon Mode (;+')(global cross application shortcuts)" :rules [[{:sim [:semicolon :quote]
+                                     :simo {:interrupt true
+                                            :dorder :insensitive
+                                            :uorder :insensitive
+                                            :afterup {:set ["semicolon_mode" 0]}}} {:set ["semicolon_mode" 1]}]]}
+        {:des "Semicolon mode f -> Volume Up" :rules [:semicolon_mode [:##f :volume_increment]]}
+        {:des "Semicolon mode d -> Volume Down" :rules [:semicolon_mode [:##d :volume_decrement]]}
+        {:des "Semicolon mode g -> Toggle Noizio on/off" :rules [:semicolon_mode [:##g :!OCT0]]}
+        {:des "Semicolon mode a -> Mute" :rules [:semicolon_mode [:##a :mute]]}
+        {:des "Semicolon mode r -> Brightness Up" :rules [:semicolon_mode [:##r :display_brightness_increment]]}
+        {:des "Semicolon mode e -> Brightness Down" :rules [:semicolon_mode [:##e :display_brightness_decrement]]}
+        {:des "Semicolon mode m -> Toggle Microphone" :rules [:semicolon_mode [:##m [:km "toggleMicrophoneIfPossible"]]]}
+        {:des "Semicolon mode v -> Toggle Video" :rules [:semicolon_mode [:##v [:km "toggleVideoIfPossible"]]]}
+        {:des "Semicolon mode c -> Toggle Chat" :rules [:semicolon_mode [:##c [:km "toggleChatIfPossible"]]]}
+        {:des "Semicolon mode n -> New Google Meets" :rules [:semicolon_mode [:##n [:km "open: New Google Meets Meeting"]]]}
+
+        {:des "GO TO Mode (f+g)" :rules [[{:sim [:f :g]
+                                     :simo {:interrupt true
+                                            :dorder :insensitive
+                                            :uorder :insensitive
+                                            :afterup {:set ["go_to_mode" 0]}}} {:set ["go_to_mode" 1]}]]}
+        {:des "GO TO mode A" :rules [:go_to_mode [:##a [:km "hotkey: go_to_mode+a"]]]}
+        {:des "GO TO mode B" :rules [:go_to_mode [:##b [:km "hotkey: go_to_mode+b"]]]}
+        {:des "GO TO mode C" :rules [:go_to_mode [:##c [:km "hotkey: go_to_mode+c"]]]}
+        {:des "GO TO mode D" :rules [:go_to_mode [:##d [:km "hotkey: go_to_mode+d"]]]}
+        {:des "GO TO mode E" :rules [:go_to_mode [:##e [:km "hotkey: go_to_mode+e"]]]}
+        {:des "GO TO mode F" :rules [:go_to_mode [:##f [:km "hotkey: go_to_mode+f"]]]}
+        {:des "GO TO mode G" :rules [:go_to_mode [:##g [:km "hotkey: go_to_mode+g"]]]}
+        {:des "GO TO mode H" :rules [:go_to_mode [:##h [:km "hotkey: go_to_mode+h"]]]}
+        {:des "GO TO mode I" :rules [:go_to_mode [:##i [:km "hotkey: go_to_mode+i"]]]}
+        {:des "GO TO mode J" :rules [:go_to_mode [:##j [:km "hotkey: go_to_mode+j"]]]}
+        {:des "GO TO mode K" :rules [:go_to_mode [:##k [:km "hotkey: go_to_mode+k"]]]}
+        {:des "GO TO mode L" :rules [:go_to_mode [:##l [:km "hotkey: go_to_mode+l"]]]}
+        {:des "GO TO mode M" :rules [:go_to_mode [:##m [:km "hotkey: go_to_mode+m"]]]}
+        {:des "GO TO mode N" :rules [:go_to_mode [:##n [:km "hotkey: go_to_mode+n"]]]}
+        {:des "GO TO mode O" :rules [:go_to_mode [:##o [:km "hotkey: go_to_mode+o"]]]}
+        {:des "GO TO mode P" :rules [:go_to_mode [:##p [:km "hotkey: go_to_mode+p"]]]}
+        {:des "GO TO mode Q" :rules [:go_to_mode [:##q [:km "hotkey: go_to_mode+q"]]]}
+        {:des "GO TO mode R" :rules [:go_to_mode [:##r [:km "hotkey: go_to_mode+r"]]]}
+        {:des "GO TO mode S" :rules [:go_to_mode [:##s [:km "hotkey: go_to_mode+s"]]]}
+        {:des "GO TO mode T" :rules [:go_to_mode [:##t [:km "hotkey: go_to_mode+t"]]]}
+        {:des "GO TO mode U" :rules [:go_to_mode [:##u [:km "hotkey: go_to_mode+u"]]]}
+        {:des "GO TO mode V" :rules [:go_to_mode [:##v [:km "hotkey: go_to_mode+v"]]]}
+        {:des "GO TO mode W" :rules [:go_to_mode [:##w [:km "hotkey: go_to_mode+w"]]]}
+        {:des "GO TO mode X" :rules [:go_to_mode [:##x [:km "hotkey: go_to_mode+x"]]]}
+        {:des "GO TO mode Y" :rules [:go_to_mode [:##y [:km "hotkey: go_to_mode+y"]]]}
+        {:des "GO TO mode Z" :rules [:go_to_mode [:##z [:km "hotkey: go_to_mode+z"]]]}
+
+        {:des "CHANGE Mode (x+c)" :rules [[{:sim [:x :c]
+                                     :simo {:interrupt true
+                                            :dorder :insensitive
+                                            :uorder :insensitive
+                                            :afterup {:set ["change_mode" 0]}}} {:set ["change_mode" 1]}]]}
+        {:des "CHANGE mode d" :rules [:change_mode [:##d [:km "hotkey: change_mode+d"]]]}
+        {:des "CHANGE mode e" :rules [:change_mode [:##e [:km "hotkey: change_mode+e"]]]}
+        {:des "CHANGE mode f" :rules [:change_mode [:##f [:km "hotkey: change_mode+f"]]]}
+        {:des "CHANGE mode n" :rules [:change_mode [:##n [:km "hotkey: change_mode+n"]]]}
+        {:des "CHANGE mode p" :rules [:change_mode [:##p [:km "hotkey: change_mode+p"]]]}
+        {:des "CHANGE mode r" :rules [:change_mode [:##r [:km "hotkey: change_mode+r"]]]}
+        {:des "CHANGE mode s" :rules [:change_mode [:##s [:km "hotkey: change_mode+s"]]]}
+        {:des "CHANGE mode t" :rules [:change_mode [:##t [:km "hotkey: change_mode+t"]]]}
+
+
+]
+:simlayer-threshold 150
+;; !  | means mandatory
+;; #  | means optional
+;; C  | left_command
+;; T  | left_control
+;; O  | left_option
+;; S  | left_shift
+;; F  | fn
+;; Q  | right_command
+;; W  | right_control
+;; E  | right_option
+;; R  | right_shift
+;; !! | mandatory command + control + optional + shift (hyper)
+;; ## | optional any
+}
+

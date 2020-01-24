@@ -1,0 +1,12 @@
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+	ignore = dirty
+[submodule "vim"]
+	path = vim
+	url = https://github.com/mmroczka/vim
+	ignore = dirty
+[submodule "hammerspoon/Spoons/VimMode.spoon"]
+	path = hammerspoon/Spoons/VimMode.spoon
+	url = https://github.com/mmroczka/VimMode.spoon
+	ignore = dirty

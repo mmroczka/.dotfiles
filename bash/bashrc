@@ -1,0 +1,14 @@
+echo " _       __     __                             __  ___        __  ___                      __        "
+echo "| |     / /__  / /________  ____ ___  ___     /  |/  /____   /  |/  /________  _________  / /______ _"
+echo "| | /| / / _ \\/ / ___/ __ \\/ __ \`__ \\/ _ \\   / /|_/ / ___/  / /|_/ / ___/ __ \\/ ___/_  / / //_/ __ \`/"
+echo "| |/ |/ /  __/ / /__/ /_/ / / / / / /  __/  / /  / / /     / /  / / /  / /_/ / /__  / /_/ ,< / /_/ / "
+echo "|__/|__/\\___/_/\\___/\\____/_/ /_/ /_/\\___/  /_/  /_/_(_)   /_/  /_/_/   \\____/\\___/ /___/_/|_|\\__,_/  "
+
+####### CUSTOM EXPORTS #######
+export JAVA_HOME=$(/usr/libexec/java_home)
+export M2_HOME=/Users/mikemroczka/apache-maven-3.1.1
+export PATH=$PATH:$M2_HOME/bin
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

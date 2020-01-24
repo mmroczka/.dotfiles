@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+RED=$(tput setaf 1)
+BLUE=$(tput setaf 4)
+NORMAL=$(tput sgr0)
+
+# Install Homebrew
+printf "\n%s\n" "${BLUE}This machine is missing Homebrew. Fixing now...${NORMAL}"
+which -s brew
+if [[ $? != 0 ]] ; then
+   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+
+# If this user's login shell is not already "zsh", attempt to switch.
+TEST_CURRENT_SHELL=$(expr "$SHELL" : '.*/\(.*\)')
+if [ "$TEST_CURRENT_SHELL" != "zsh" ]; then
+    printf "\n%s\n"  "${BLUE}Changing your default shell to zsh since it's not the 80's anymore and we aren't barbarians.${NORMAL}"
+    chsh -s $(grep /zsh$ /etc/shells | tail -1)
+    env zsh -l
+fi
+
+# Download latest copy of antigen file (if non exists currently)
+ANTIGEN=/antigen.zsh
+if test ! -f "$ANTIGEN"; then
+    printf "\n%s\n" "${BLUE}Installing antigen - the ZSH plugin manager.${NORMAL}"
+	curl -L git.io/antigen > antigen.zsh
+fi
+
+# Recursively add all submodules in this folder (add Spoons and separate Vim repo)
+git submodule update --init --recursive
+
+# Set up mac defaults (increase key repeat frequency)
+./mac_defaults
+
+printf "\n%s\n"  "${BLUE}Running dotfiles installation.${NORMAL}\n"
+# Symbolically link all dotfiles
+~/.dotfiles/install_dotfiles

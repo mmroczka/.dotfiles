@@ -1,0 +1,4 @@
+tags
+*.swp
+node/work_npmrc
+.DS_Store
