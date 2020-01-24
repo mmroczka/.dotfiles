@@ -1534,11 +1534,11 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Hyper+F to trigger Shortcat",
+        "description" : "Hyper+F to trigger VIMAC",
         "manipulators" : [ {
           "to_if_alone" : [ {
             "set_variable" : {
-              "name" : "shortcat_mode",
+              "name" : "vimac_mode",
               "value" : 1
             }
           } ],
@@ -1564,7 +1564,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "SHORTCAT Mode commands",
+        "description" : "VIMAC Mode commands",
         "manipulators" : [ {
           "to_if_alone" : [ {
             "key_code" : "spacebar"
@@ -1576,7 +1576,7 @@
             "key_code" : "left_control"
           } ],
           "conditions" : [ {
-            "name" : "shortcat_mode",
+            "name" : "vimac_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -1589,12 +1589,12 @@
             "key_code" : "caps_lock"
           }, {
             "set_variable" : {
-              "name" : "shortcat_mode",
+              "name" : "vimac_mode",
               "value" : 0
             }
           } ],
           "conditions" : [ {
-            "name" : "shortcat_mode",
+            "name" : "vimac_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -1607,12 +1607,12 @@
             "key_code" : "return_or_enter"
           }, {
             "set_variable" : {
-              "name" : "shortcat_mode",
+              "name" : "vimac_mode",
               "value" : 0
             }
           } ],
           "conditions" : [ {
-            "name" : "shortcat_mode",
+            "name" : "vimac_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],

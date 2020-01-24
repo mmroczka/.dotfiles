@@ -95,8 +95,8 @@
                                {:set ["vim_yank_mode" 0]}
                                {:set ["vim_uppercase_mode" 0]}
                                ]
-       :TURN_ON_SHORTCAT [ {:set ["shortcat_mode" 1]} ]
-       :TURN_OFF_SHORTCAT [ {:set ["shortcat_mode" 0]} ]
+       :TURN_ON_VIMAC [ {:set ["vimac_mode" 1]} ]
+       :TURN_OFF_VIMAC [ {:set ["vimac_mode" 0]} ]
        }
 
  :simlayers {:caps_lock-mode {:key :caps_lock}
@@ -184,14 +184,14 @@
                                                                      ["vim_go_to_visual_mode" 0]
                                                                     ]}]]}
 
-      {:des "Hyper+F to trigger Shortcat"
+      {:des "Hyper+F to trigger VIMAC"
                :rules [[:condi :!vim_mode :!vim_navigation_mode]
-                       [:!SCOTf :!SCspacebar nil {:alone :TURN_ON_SHORTCAT}]]}
-      {:des "SHORTCAT Mode commands"
-           :rules [[:condi :shortcat_mode]
+                       [:!SCOTf :!SCspacebar nil {:alone :TURN_ON_VIMAC}]]}
+      {:des "VIMAC Mode commands"
+           :rules [[:condi :vimac_mode]
                    [:spacebar :left_control nil {:alone :spacebar}]
-                   [:caps_lock [:caps_lock :TURN_OFF_SHORTCAT]]
-                   [:return_or_enter [:return_or_enter :TURN_OFF_SHORTCAT]]
+                   [:caps_lock [:caps_lock :TURN_OFF_VIMAC]]
+                   [:return_or_enter [:return_or_enter :TURN_OFF_VIMAC]]
                   ]}
 
       {:des "Left cmd to trigger Vim Mode"
