@@ -11,6 +11,7 @@
   - if [[ ! -d ~/.config ]]       ; then mkdir ~/.config; fi
   - if [[ ! -d ~/.config/nvim ]]  ; then mkdir ~/.config/nvim; fi
   - if [[ ! -d ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch ]]; then mkdir ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch; fi
+  - if [[ ! -d ~/Library/Script\ Libraries ]]; then mkdir ~/Library/Script\ Libraries; fi
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
@@ -46,6 +47,9 @@
         create: true
     "~/Library/Application Support/Code/User/keybindings.json":
         path: vim/vs_code_keybindings.json
+        create: true
+    "~/Library/Script Libraries/":
+        path: Library/Script Libraries
         create: true
 
 - shell:
