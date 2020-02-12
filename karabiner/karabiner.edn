@@ -16,6 +16,7 @@
                 :Chromes                       ["^com\\.google\\.Chrome$", "^org\\.chromium\\.Chromium$", "^com\\.google\\.Chrome\\.canary$", "^com\\.brave\\.Browser"]
                 :Terminals                     ["^com\\.apple\\.Terminal$", "^com\\.googlecode\\.iterm2$", "^io\\.alacritty$"]
                 :Omnifocus                     ["^com\\.omnigroup\\.OmniFocus3$"]
+                :PyCharm                       ["^com\\.jetbrains\\.pycharm$"]
                }
  :templates {
              :alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
@@ -139,7 +140,7 @@
 			[:!Ssemicolon ["emoji_mode" 1] nil {:alone :!Ssemicolon :delayed {:invoked ["emoji_mode" 0] :canceled ["emoji_mode" 0]}}] ]}
 
         {:des "spacebar_mode"
-         :rules [:spacebar_mode
+         :rules [[:condi :spacebar_mode]
                  [:grave_accent_and_tilde :!Cgrave_accent_and_tilde]
                  [:1 [:!COtab :!SCOtab :left_option]]
                  [:2 :!CStab]
@@ -262,7 +263,7 @@
            :rules [:vim_change_mode
                     [:i [:TURN_ON_VIM_AND_CLEAR_VARS ["vim_from_change_mode" 1] ["vim_in_mode" 1]]]
                     [:c [:!Cleft_arrow :!SCright_arrow :delete_or_backspace :TURN_OFF_VIM]]
-                    [:s [:!SCleft_arrow :!Cc :right_arrow :!SCright_arrow [:km "surroundWithChange"] :TURN_OFF_VIM]]
+                    [:s [[:km "surroundWithChange"] :TURN_OFF_VIM]]
 
                     [:condi :vim_change_mode :any_key_not_defined_above]
                     [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
