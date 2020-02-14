@@ -11,7 +11,7 @@
   - if [[ ! -d ~/.config ]]       ; then mkdir ~/.config; fi
   - if [[ ! -d ~/.config/nvim ]]  ; then mkdir ~/.config/nvim; fi
   - if [[ ! -d ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch ]]; then mkdir ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch; fi
-  - if [[ ! -d ~/Library/Script\ Libraries ]]; then mkdir ~/Library/Script\ Libraries; fi
+  - if [[ ! -d ~/Library/Script\ Libraries ]]; then ln -s ~/Dropbox/Unmovable\ Folder\ For\ Backups\ and\ Syncs/Script\ Libraries ~/Library/; fi
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
@@ -37,8 +37,7 @@
     ~/.zshrc: zsh/zshrc
 
 - brewfile:
-    file: Brewfile
-    no-upgrade: true
+  - file: Brewfile
 
 - link:
     # vscode:
@@ -48,14 +47,7 @@
     "~/Library/Application Support/Code/User/keybindings.json":
         path: vim/vs_code_keybindings.json
         create: true
-    "~/Library/Script Libraries/":
-        path: Library/Script Libraries
-        create: true
 
 - shell:
     - [bash ./install_vscode_extensions.sh, Installing vscode extensions]
-
-# Cleaning up:
-- shell:
-  - [brew cleanup, Cleaning up]
-
+    - [brew cleanup, Cleaning up]
