@@ -213,12 +213,12 @@
         {:des "navigation mode"
            :rules [[:condi :vim_navigation_mode :!vim_desktop_navigation_mode]
                    [:c :!Tf12] ; center
-                   [:f :!Cf12] ; fullscreen
+                   [:f [:km ["Window - Fullscreen"]]] ; fullscreen
 
-                   [:h :!COf12] ; left
-                   [:j :!COf14] ; down
-                   [:k :!COf15] ; up
-                   [:l :!COf13] ; right
+                   [:h [:km ["Window - Move Left"]]] ; left
+                   [:j [:km ["Window - Move Down"]]] ; down
+                   [:k [:km ["Window - Move Up"]]] ; up
+                   [:l [:km ["Window - Move Right"]]] ; right
 
                    [:o :!CTf12] ; TOP left
                    [:p :!CTf13] ; TOP right
@@ -229,7 +229,7 @@
                    [:!St :!COf12] ; previous third
                    [:!Rt :!COf12] ; previous third
 
-                   [:n :!COTf13] ; next display
+                   [:n [:km ["Window - Move to Next Monitor"]]] ; next display
                    [:!Sn :!COTf12] ; previous display
                    [:!Rn :!COTf12] ; previous display
 
