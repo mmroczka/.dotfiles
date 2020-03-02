@@ -2278,8 +2278,7 @@
               "value" : 0
             }
           }, {
-            "key_code" : "f20",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"vimMode INSERT\"'"
           } ],
           "conditions" : [ {
             "name" : "vim_desktop_navigation_mode",

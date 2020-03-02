@@ -242,7 +242,7 @@
                    [:d ["vim_desktop_navigation_mode" 1] nil {:afterup ["vim_desktop_navigation_mode" 0] :repeat false :halt true}]
 
 
-                   [:i [["vim_navigation_mode" 0] ["any_key_not_defined_above" 0] :!SCOTf20]]
+                   [:i [["vim_navigation_mode" 0] ["any_key_not_defined_above" 0] [:btt "vimMode INSERT"]]]
                    ; [:left_command nil nil {:afterup [["vim_navigation_mode" 0] ["vim_mode" 1] ["vim_visual_mode" 0] :!SCOTf19] :held :left_command :repeat false :halt true :params{:alone 150 :held 200}}]
 
                    [:condi :vim_navigation_mode :vim_desktop_navigation_mode :!vim_desktop_focus_mode]
