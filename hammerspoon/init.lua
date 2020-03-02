@@ -64,6 +64,7 @@ end
 -- require('windows')
 -- require('panes')
 
+flux.restoreScreen()
 
 hs.loadSpoon("Lunette")
 
