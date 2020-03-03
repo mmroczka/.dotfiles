@@ -1899,353 +1899,7 @@
             "key_code" : "c"
           },
           "to" : [ {
-            "key_code" : "f12",
-            "modifiers" : [ "left_control" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_desktop_navigation_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_navigation_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "f"
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Fullscreen\"'"
-          } ],
-          "conditions" : [ {
-            "name" : "vim_desktop_navigation_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_navigation_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "h"
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Move Left\"'"
-          } ],
-          "conditions" : [ {
-            "name" : "vim_desktop_navigation_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_navigation_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "j"
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Move Down\"'"
-          } ],
-          "conditions" : [ {
-            "name" : "vim_desktop_navigation_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_navigation_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "k"
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Move Up\"'"
-          } ],
-          "conditions" : [ {
-            "name" : "vim_desktop_navigation_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_navigation_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "l"
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Move Right\"'"
-          } ],
-          "conditions" : [ {
-            "name" : "vim_desktop_navigation_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_navigation_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "o"
-          },
-          "to" : [ {
-            "key_code" : "f12",
-            "modifiers" : [ "left_command", "left_control" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_desktop_navigation_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_navigation_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "p"
-          },
-          "to" : [ {
-            "key_code" : "f13",
-            "modifiers" : [ "left_command", "left_control" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_desktop_navigation_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_navigation_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "period"
-          },
-          "to" : [ {
-            "key_code" : "f12",
-            "modifiers" : [ "left_command", "left_control", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_desktop_navigation_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_navigation_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "slash"
-          },
-          "to" : [ {
-            "key_code" : "f13",
-            "modifiers" : [ "left_command", "left_control", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_desktop_navigation_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_navigation_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "t"
-          },
-          "to" : [ {
-            "key_code" : "f13",
-            "modifiers" : [ "left_command", "left_option" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_desktop_navigation_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_navigation_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "t",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "f12",
-            "modifiers" : [ "left_command", "left_option" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_desktop_navigation_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_navigation_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "t",
-            "modifiers" : {
-              "mandatory" : [ "right_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "f12",
-            "modifiers" : [ "left_command", "left_option" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_desktop_navigation_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_navigation_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "n"
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Move to Next Monitor\"'"
-          } ],
-          "conditions" : [ {
-            "name" : "vim_desktop_navigation_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_navigation_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "n",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "f12",
-            "modifiers" : [ "left_command", "left_control", "left_option" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_desktop_navigation_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_navigation_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "n",
-            "modifiers" : {
-              "mandatory" : [ "right_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "f12",
-            "modifiers" : [ "left_command", "left_control", "left_option" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_desktop_navigation_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_navigation_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "to_if_held_down" : [ {
-            "key_code" : "f13",
-            "modifiers" : [ "left_control", "left_option", "left_shift" ]
-          } ],
-          "parameters" : {
-            "basic.to_if_held_down_threshold_milliseconds" : 150
-          },
-          "from" : {
-            "key_code" : "g"
-          },
-          "to" : [ {
-            "key_code" : "f13",
-            "modifiers" : [ "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_desktop_navigation_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_navigation_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "s"
-          },
-          "to" : [ {
-            "key_code" : "f12",
-            "modifiers" : [ "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_desktop_navigation_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_navigation_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "to_after_key_up" : [ {
-            "set_variable" : {
-              "name" : "vim_desktop_navigation_mode",
-              "value" : 0
-            }
-          } ],
-          "from" : {
-            "key_code" : "d"
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "vim_desktop_navigation_mode",
-              "value" : 1
-            }
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Center\"'"
           } ],
           "conditions" : [ {
             "name" : "vim_desktop_navigation_mode",
@@ -2285,65 +1939,25 @@
           } ],
           "type" : "basic"
         }, {
+          "to_after_key_up" : [ {
+            "set_variable" : {
+              "name" : "vim_navigation_shrink_mode",
+              "value" : 0
+            }
+          } ],
           "from" : {
-            "key_code" : "l"
+            "key_code" : "s"
           },
           "to" : [ {
-            "key_code" : "f14",
-            "modifiers" : [ "left_command" ]
+            "set_variable" : {
+              "name" : "vim_navigation_shrink_mode",
+              "value" : 1
+            }
           } ],
           "conditions" : [ {
-            "name" : "vim_desktop_focus_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
             "name" : "vim_desktop_navigation_mode",
             "value" : 1,
-            "type" : "variable_if"
-          }, {
-            "name" : "vim_navigation_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "h"
-          },
-          "to" : [ {
-            "key_code" : "f14",
-            "modifiers" : [ "left_command", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_desktop_focus_mode",
-            "value" : 1,
             "type" : "variable_unless"
-          }, {
-            "name" : "vim_desktop_navigation_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          }, {
-            "name" : "vim_navigation_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "k"
-          },
-          "to" : [ {
-            "key_code" : "f15",
-            "modifiers" : [ "left_command" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_desktop_focus_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_desktop_navigation_mode",
-            "value" : 1,
-            "type" : "variable_if"
           }, {
             "name" : "vim_navigation_mode",
             "value" : 1,
@@ -2353,27 +1967,40 @@
         }, {
           "to_after_key_up" : [ {
             "set_variable" : {
-              "name" : "vim_desktop_focus_mode",
+              "name" : "vim_navigation_grow_mode",
               "value" : 0
             }
           } ],
           "from" : {
-            "key_code" : "f"
+            "key_code" : "g"
           },
           "to" : [ {
             "set_variable" : {
-              "name" : "vim_desktop_focus_mode",
+              "name" : "vim_navigation_grow_mode",
               "value" : 1
             }
           } ],
           "conditions" : [ {
-            "name" : "vim_desktop_focus_mode",
+            "name" : "vim_desktop_navigation_mode",
             "value" : 1,
             "type" : "variable_unless"
           }, {
-            "name" : "vim_desktop_navigation_mode",
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Fullscreen\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           }, {
             "name" : "vim_navigation_mode",
             "value" : 1,
@@ -2385,18 +2012,320 @@
             "key_code" : "h"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"focus: screen 1\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Left\"'"
           } ],
           "conditions" : [ {
-            "name" : "vim_desktop_focus_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          }, {
             "name" : "vim_desktop_navigation_mode",
             "value" : 1,
-            "type" : "variable_if"
+            "type" : "variable_unless"
           }, {
             "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_navigation_shrink_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_grow_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Bottom\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_navigation_shrink_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_grow_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Top\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_navigation_shrink_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_grow_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Right\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_navigation_shrink_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_grow_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Snap Left\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Snap Bottom\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Snap Top\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Snap Right\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Snap Left\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Snap Bottom\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Snap Top\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Snap Right\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Shrink Left\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_navigation_shrink_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Shrink Bottom\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_navigation_shrink_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Shrink Top\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_navigation_shrink_mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -2406,16 +2335,185 @@
             "key_code" : "l"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"focus: screen 2\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Shrink Right\"'"
           } ],
           "conditions" : [ {
-            "name" : "vim_desktop_focus_mode",
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "name" : "vim_desktop_navigation_mode",
+            "name" : "vim_navigation_shrink_mode",
             "value" : 1,
             "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Grow Left\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_navigation_grow_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Grow Bottom\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_navigation_grow_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Grow Top\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_navigation_grow_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Grow Right\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "vim_navigation_grow_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "o"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Snap Top Left\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "p"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Snap Top Right\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Snap Bottom Left\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "slash"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Snap Bottom Right\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_navigation_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "m"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Window - Next Monitor\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "vim_desktop_navigation_mode",
+            "value" : 1,
+            "type" : "variable_unless"
           }, {
             "name" : "vim_navigation_mode",
             "value" : 1,
