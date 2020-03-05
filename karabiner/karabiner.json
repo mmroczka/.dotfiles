@@ -655,7 +655,7 @@
           }
         } ]
       }, {
-        "description" : "Launch mode -> b (Open BetterTouchTool)",
+        "description" : "Launch mode -> b (Open Chrome)",
         "manipulators" : [ {
           "from" : {
             "key_code" : "b",
@@ -664,7 +664,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: BetterTouchTool\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Chrome\"'"
           } ],
           "conditions" : [ {
             "name" : "launch_mode",
@@ -683,117 +683,13 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: BetterTouchTool\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Chrome\"'"
           } ],
           "from" : {
             "simultaneous" : [ {
               "key_code" : "f24"
             }, {
               "key_code" : "b"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "launch_mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        } ]
-      }, {
-        "description" : "Launch mode -> c (Open Chrome)",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "c",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Chrome\"'"
-          } ],
-          "conditions" : [ {
-            "name" : "launch_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 150
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "launch_mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Chrome\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "f24"
-            }, {
-              "key_code" : "c"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "launch_mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        } ]
-      }, {
-        "description" : "Launch mode -> d (Open Dash)",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "d",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "1",
-            "modifiers" : [ "left_command", "left_control", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "launch_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 150
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "launch_mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "1",
-            "modifiers" : [ "left_command", "left_control", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "f24"
-            }, {
-              "key_code" : "d"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,
@@ -912,16 +808,16 @@
           }
         } ]
       }, {
-        "description" : "Launch mode -> h (Open Postman)",
+        "description" : "Launch mode -> r (Open Insomnia)",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "h",
+            "key_code" : "r",
             "modifiers" : {
               "optional" : [ "any" ]
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Postman\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Insomnia\"'"
           } ],
           "conditions" : [ {
             "name" : "launch_mode",
@@ -940,13 +836,13 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Postman\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Insomnia\"'"
           } ],
           "from" : {
             "simultaneous" : [ {
               "key_code" : "f24"
             }, {
-              "key_code" : "h"
+              "key_code" : "r"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,
@@ -963,10 +859,10 @@
           }
         } ]
       }, {
-        "description" : "Launch mode -> i (Open iTerm)",
+        "description" : "Launch mode -> t (Open iTerm)",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "i",
+            "key_code" : "t",
             "modifiers" : {
               "optional" : [ "any" ]
             }
@@ -997,7 +893,7 @@
             "simultaneous" : [ {
               "key_code" : "f24"
             }, {
-              "key_code" : "i"
+              "key_code" : "t"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,
@@ -1218,10 +1114,10 @@
           }
         } ]
       }, {
-        "description" : "Launch mode -> s (Open Snippets)",
+        "description" : "Launch mode -> i (Open Snippets)",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "s",
+            "key_code" : "i",
             "modifiers" : {
               "optional" : [ "any" ]
             }
@@ -1254,58 +1150,7 @@
             "simultaneous" : [ {
               "key_code" : "f24"
             }, {
-              "key_code" : "s"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "launch_mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        } ]
-      }, {
-        "description" : "Launch mode -> t (Open Teams)",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "t",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Teams\"'"
-          } ],
-          "conditions" : [ {
-            "name" : "launch_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 150
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "launch_mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Teams\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "f24"
-            }, {
-              "key_code" : "t"
+              "key_code" : "i"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,
@@ -1373,10 +1218,10 @@
           }
         } ]
       }, {
-        "description" : "Launch mode -> z (Open Slack)",
+        "description" : "Launch mode -> s (Open Slack)",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "z",
+            "key_code" : "s",
             "modifiers" : {
               "optional" : [ "any" ]
             }
@@ -1407,6 +1252,57 @@
             "simultaneous" : [ {
               "key_code" : "f24"
             }, {
+              "key_code" : "s"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "launch_mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        } ]
+      }, {
+        "description" : "Launch mode -> z (Open Zeplin)",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "z",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Zeplin\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "launch_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 150
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "launch_mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Zeplin\"'"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "f24"
+            }, {
               "key_code" : "z"
             } ],
             "simultaneous_options" : {
@@ -1424,7 +1320,7 @@
           }
         } ]
       }, {
-        "description" : "Launch mode -> caps_lock (Open Franz)",
+        "description" : "Launch mode -> caps_lock (Open Finder)",
         "manipulators" : [ {
           "from" : {
             "key_code" : "caps_lock",
@@ -37357,7 +37253,7 @@
         "description" : "Programming Mode",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "c"
+            "key_code" : "b"
           },
           "to" : [ {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Chrome\"'"
@@ -37385,7 +37281,7 @@
             "simultaneous" : [ {
               "key_code" : "period"
             }, {
-              "key_code" : "c"
+              "key_code" : "b"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,
@@ -37402,7 +37298,7 @@
           }
         }, {
           "from" : {
-            "key_code" : "i"
+            "key_code" : "t"
           },
           "to" : [ {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: iTerm\"'"
@@ -37430,7 +37326,52 @@
             "simultaneous" : [ {
               "key_code" : "period"
             }, {
-              "key_code" : "i"
+              "key_code" : "t"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "programming_mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        }, {
+          "from" : {
+            "key_code" : "r"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Insomnia\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "programming_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 150
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "programming_mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Insomnia\"'"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "period"
+            }, {
+              "key_code" : "r"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,
@@ -37492,97 +37433,7 @@
           }
         }, {
           "from" : {
-            "key_code" : "p"
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Postman\"'"
-          } ],
-          "conditions" : [ {
-            "name" : "programming_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 150
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "programming_mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Postman\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "period"
-            }, {
-              "key_code" : "p"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "programming_mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "t"
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Tower\"'"
-          } ],
-          "conditions" : [ {
-            "name" : "programming_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 150
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "programming_mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Tower\"'"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "period"
-            }, {
-              "key_code" : "t"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "programming_mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "v"
+            "key_code" : "e"
           },
           "to" : [ {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: VS Code\"'"
@@ -37610,7 +37461,7 @@
             "simultaneous" : [ {
               "key_code" : "period"
             }, {
-              "key_code" : "v"
+              "key_code" : "e"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,

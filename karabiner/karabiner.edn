@@ -155,22 +155,20 @@
                                             :uorder :insensitive
                                             :afterup {:set ["launch_mode" 0]}}} {:set ["launch_mode" 1]}]]}
         {:des "Launch mode -> a (Open Activity Monitor)" :rules [:launch_mode [:##a [:km "open: Activity Monitor"]]]}
-        {:des "Launch mode -> b (Open BetterTouchTool)" :rules [:launch_mode [:##b [:km "open: BetterTouchTool"]]]}
-        {:des "Launch mode -> c (Open Chrome)" :rules [:launch_mode [:##c [:km "open: Chrome"]]]}
-        {:des "Launch mode -> d (Open Dash)" :rules [:launch_mode [:##d :!TSC1]]}
+        {:des "Launch mode -> b (Open Chrome)" :rules [:launch_mode [:##b [:km "open: Chrome"]]]} ; B for Browser
         {:des "Launch mode -> f (Open Fantastical)" :rules [:launch_mode [:##f [:km "open: Fantastical"]]]}
         {:des "Launch mode -> g (Open Messages)" :rules [:launch_mode [:##g [:km "open: Messages"]]]}
-        {:des "Launch mode -> h (Open Postman)" :rules [:launch_mode [:##h [:km "open: Postman"]]]}
-        {:des "Launch mode -> i (Open iTerm)" :rules [:launch_mode [:##i [:km "open: iTerm"]]]}
+        {:des "Launch mode -> r (Open Insomnia)" :rules [:launch_mode [:##r [:km "open: Insomnia"]]]} ; R for Requests
+        {:des "Launch mode -> t (Open iTerm)" :rules [:launch_mode [:##t [:km "open: iTerm"]]]}
         {:des "Launch mode -> k (Open Keyboard Maestro)" :rules [:launch_mode [:##k [:km "open: Keyboard Maestro"]]]}
         {:des "Launch mode -> m (Open Omnifocus)" :rules [:launch_mode [:##m [:km "open: Omnifocus"]]]}
-        {:des "Launch mode -> n (Open Evernote)" :rules [:launch_mode [:##n [:km "open: Evernote"]]]}
+        {:des "Launch mode -> n (Open Evernote)" :rules [:launch_mode [:##n [:km "open: Evernote"]]]} ; N for Notes
         {:des "Launch mode -> e (Open Editor)" :rules [:launch_mode [:##e [:km "open: Editor"]]]}
-        {:des "Launch mode -> s (Open Snippets)" :rules [:launch_mode [:##s :!TSC2]]}
-        {:des "Launch mode -> t (Open Teams)" :rules [:launch_mode [:##t [:km "open: Teams"]]]}
+        {:des "Launch mode -> i (Open Snippets)" :rules [:launch_mode [:##i :!TSC2]]}
         {:des "Launch mode -> w (Open BitWarden)" :rules [:launch_mode [:##w [:km "open: BitWarden"]]]}
-        {:des "Launch mode -> z (Open Slack)" :rules [:launch_mode [:##z [:km "open: Slack"]]]}
-        {:des "Launch mode -> caps_lock (Open Franz)" :rules [:launch_mode [:##caps_lock [:km "open: Finder"]]]}
+        {:des "Launch mode -> s (Open Slack)" :rules [:launch_mode [:##s [:km "open: Slack"]]]}
+        {:des "Launch mode -> z (Open Zeplin)" :rules [:launch_mode [:##z [:km "open: Zeplin"]]]}
+        {:des "Launch mode -> caps_lock (Open Finder)" :rules [:launch_mode [:##caps_lock [:km "open: Finder"]]]}
 
 
       {:des "Left Shift + Left Cmd -> VIM Navigation mode"
@@ -622,12 +620,11 @@
 
         {:des "Programming Mode"
          :rules [:programming_mode
-                 [:c [:km "open: Chrome"]]
-                 [:i [:km "open: iTerm"]]
+                 [:b [:km "open: Chrome"]]   ; B for browser
+                 [:t [:km "open: iTerm"]]
+                 [:r [:km "open: Insomnia"]]; R for Requests as in GET/POST Requests
                  [:j [:km "open: IntelliJ"]]
-                 [:p [:km "open: Postman"]]
-                 [:t [:km "open: Tower"]]
-                 [:v [:km "open: VS Code"]]
+                 [:e [:km "open: VS Code"]] ; E for Editor
                  [:z [:km "open: Zeplin"]]
                  ]}
 
