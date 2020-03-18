@@ -49,28 +49,29 @@
 
                                {:set ["vim_change_mode" 0]}
                                {:set ["vim_delete_mode" 0]}
-                               {:set ["vim_in_mode" 0]}
-                               {:set ["vim_indent_mode" 0]}
-                               {:set ["vim_from_delete_mode" 0]}
-                               {:set ["vim_from_change_mode" 0]}
-                               {:set ["vim_from_yank_mode" 0]}
-                               {:set ["vim_from_surround_mode" 0]}
-                               {:set ["vim_from_visual_mode" 0]}
-                               {:set ["vim_from_visual_block_mode" 0]}
-                               {:set ["vim_go_to_mode" 0]}
-                               {:set ["vim_go_to_visual_mode" 0]}
-                               {:set ["vim_lowercase_mode" 0]}
-                               {:set ["vim_movement_mode" 0]}
-                               {:set ["vim_outdent_mode" 0]}
-                               {:set ["vim_surround_mode" 0]}
                                {:set ["vim_delete_till_mode" 0]}
                                {:set ["vim_find_char_mode" 0]}
+                               {:set ["vim_from_change_mode" 0]}
+                               {:set ["vim_from_delete_mode" 0]}
+                               {:set ["vim_from_surround_mode" 0]}
+                               {:set ["vim_from_visual_block_mode" 0]}
+                               {:set ["vim_from_visual_mode" 0]}
+                               {:set ["vim_from_yank_mode" 0]}
+                               {:set ["vim_go_to_mode" 0]}
+                               {:set ["vim_go_to_visual_mode" 0]}
+                               {:set ["vim_in_mode" 0]}
+                               {:set ["vim_indent_mode" 0]}
+                               {:set ["vim_lowercase_mode" 0]}
+                               {:set ["vim_movement_mode" 0]}
+                               {:set ["vim_notification_mode" 0]}
+                               {:set ["vim_outdent_mode" 0]}
                                {:set ["vim_replace_mode" 0]}
                                {:set ["vim_replace_single_letter_mode" 0]}
-                               {:set ["vim_visual_mode" 0]}
-                               {:set ["vim_visual_block_mode" 0]}
-                               {:set ["vim_yank_mode" 0]}
+                               {:set ["vim_surround_mode" 0]}
                                {:set ["vim_uppercase_mode" 0]}
+                               {:set ["vim_visual_block_mode" 0]}
+                               {:set ["vim_visual_mode" 0]}
+                               {:set ["vim_yank_mode" 0]}
                                ]
 
        :TURN_ON_VIM_AND_CLEAR_VARS [{:key :f19 :modi [:left_shift :left_option :left_command :left_control] :lazy true} ; CMD+SHIFT+CTRL+OPT+f19 toggles BetterTouchTool to toggle screen to blue state
@@ -79,28 +80,29 @@
 
                                {:set ["vim_change_mode" 0]}
                                {:set ["vim_delete_mode" 0]}
-                               {:set ["vim_in_mode" 0]}
-                               {:set ["vim_indent_mode" 0]}
-                               {:set ["vim_from_delete_mode" 0]}
-                               {:set ["vim_from_change_mode" 0]}
-                               {:set ["vim_from_yank_mode" 0]}
-                               {:set ["vim_from_surround_mode" 0]}
-                               {:set ["vim_from_visual_mode" 0]}
-                               {:set ["vim_from_visual_block_mode" 0]}
-                               {:set ["vim_go_to_mode" 0]}
-                               {:set ["vim_go_to_visual_mode" 0]}
-                               {:set ["vim_lowercase_mode" 0]}
-                               {:set ["vim_movement_mode" 0]}
-                               {:set ["vim_outdent_mode" 0]}
-                               {:set ["vim_surround_mode" 0]}
                                {:set ["vim_delete_till_mode" 0]}
                                {:set ["vim_find_char_mode" 0]}
+                               {:set ["vim_from_change_mode" 0]}
+                               {:set ["vim_from_delete_mode" 0]}
+                               {:set ["vim_from_surround_mode" 0]}
+                               {:set ["vim_from_visual_block_mode" 0]}
+                               {:set ["vim_from_visual_mode" 0]}
+                               {:set ["vim_from_yank_mode" 0]}
+                               {:set ["vim_go_to_mode" 0]}
+                               {:set ["vim_go_to_visual_mode" 0]}
+                               {:set ["vim_in_mode" 0]}
+                               {:set ["vim_indent_mode" 0]}
+                               {:set ["vim_lowercase_mode" 0]}
+                               {:set ["vim_movement_mode" 0]}
+                               {:set ["vim_notification_mode" 0]}
+                               {:set ["vim_outdent_mode" 0]}
                                {:set ["vim_replace_mode" 0]}
                                {:set ["vim_replace_single_letter_mode" 0]}
-                               {:set ["vim_visual_mode" 0]}
-                               {:set ["vim_visual_block_mode" 0]}
-                               {:set ["vim_yank_mode" 0]}
+                               {:set ["vim_surround_mode" 0]}
                                {:set ["vim_uppercase_mode" 0]}
+                               {:set ["vim_visual_block_mode" 0]}
+                               {:set ["vim_visual_mode" 0]}
+                               {:set ["vim_yank_mode" 0]}
                                ]
        :TURN_ON_VIMAC [ {:set ["vimac_mode" 1]} ]
        :TURN_OFF_VIMAC [ {:set ["vimac_mode" 0]} ]
@@ -283,7 +285,7 @@
 
                     [:condi :vim_change_mode :any_key_not_defined_above]
                     [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
-                    [:anykey [["vim_notification_mode" 0] :TURN_ON_VIM_AND_CLEAR_VARS]]
+                    [:anykey :TURN_ON_VIM_AND_CLEAR_VARS]
                     ]}
 
         {:des "VIM: change mode"
@@ -294,7 +296,7 @@
 
                     [:condi :vim_change_mode :any_key_not_defined_above]
                     [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
-                    [:anykey [["vim_change_mode" 0] ["vim_mode" 1]]]
+                    [:anykey :TURN_ON_VIM_AND_CLEAR_VARS]
                     ]}
 
         {:des "VIM: DELETE TILL mode"
@@ -447,7 +449,7 @@
 
                     [:condi :vim_in_mode :any_key_not_defined_above]
                     [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
-                    [:anykey [["vim_delete_till_mode" 0] ["vim_mode" 1]]]
+                    [:anykey :TURN_ON_VIM_AND_CLEAR_VARS]
                     ]}
 
 
@@ -467,7 +469,7 @@
 
                     [:condi :vim_delete_mode :any_key_not_defined_above]
                     [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
-                    [:anykey [["vim_delete_mode" 0] ["vim_mode" 1]]]
+                    [:anykey :TURN_ON_VIM_AND_CLEAR_VARS]
                     ]}
 
         {:des "VIM: IN mode"
@@ -483,7 +485,7 @@
 
                     [:condi :vim_in_mode :any_key_not_defined_above]
                     [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
-                    [:anykey [["vim_in_mode" 0] ["vim_mode" 1]]]
+                    [:anykey :TURN_ON_VIM_AND_CLEAR_VARS]
                     ]}
 
 
@@ -637,7 +639,7 @@
 
                     [:condi :vim_in_mode :any_key_not_defined_above]
                     [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
-                    [:anykey [["vim_find_char_mode" 0] ["vim_mode" 1]]]
+                    [:anykey :TURN_ON_VIM_AND_CLEAR_VARS]
                     ]}
 
         {:des "VIM: SURROUND mode"
@@ -650,14 +652,14 @@
 
                     [:condi :vim_in_mode :any_key_not_defined_above]
                     [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
-                    [:anykey [["vim_surround_mode" 0] ["vim_mode" 1]]]
+                    [:anykey :TURN_ON_VIM_AND_CLEAR_VARS]
                     ]}
 
         {:des "VIM: YANK/YOU mode"
            :rules [:vim_yank_mode
                     [:w [:!SOright_arrow :!Cc :left_arrow :TURN_ON_VIM_AND_CLEAR_VARS]]
                     [:b [:!SOleft_arrow :!Cc :right_arrow :TURN_ON_VIM_AND_CLEAR_VARS]]
-                    [:i [["vim_yank_mode" 0]["vim_from_yank_mode" 1] ["vim_in_mode" 1]]]
+                    [:i [["vim_yank_mode" 0] ["vim_from_yank_mode" 1] ["vim_in_mode" 1]]]
                     [:h [:!Sleft_arrow :!Cc :right_arrow  :TURN_ON_VIM_AND_CLEAR_VARS]]
                     [:l [:!Sright_arrow :!Cc :left_arrow  :TURN_ON_VIM_AND_CLEAR_VARS]]
                     [:y [:!Cleft_arrow :!CSright_arrow :!Cc :left_arrow :TURN_ON_VIM_AND_CLEAR_VARS]]
@@ -666,7 +668,7 @@
 
                     [:condi :vim_in_mode :any_key_not_defined_above]
                     [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
-                    [:anykey [["vim_yank_mode" 0] ["vim_mode" 1]]]
+                    [:anykey :TURN_ON_VIM_AND_CLEAR_VARS]
                     ]}
 
         {:des "VIM: GO TO mode"
