@@ -1,9 +1,12 @@
 local flux = require "flux"
+local inspect = require "inspect"
 local log = hs.logger.new('init.lua', 'debug')
 
 -- Use Control+` to reload Hammerspoon config
 hs.hotkey.bind({'ctrl'}, '`', nil, function()
   hs.reload()
+  hs.application.get("Hammerspoon"):selectMenuItem("Console...")
+  hs.application.launchOrFocus("Hammerspoon")
 end)
 
 keyUpDown = function(modifiers, key)
@@ -32,104 +35,101 @@ enableHotkeyForWindowsMatchingFilter = function(windowFilter, hotkey)
   end)
 end
 
--- Vim = require('vim_bindings')
--- local v = Vim:new()
--- v:start()
-
--- vim = hs.loadSpoon('VimMode')
-
-
--- hs.hotkey.bind({'ctrl'}, ';', function()
---   vim:enter()
--- end)
-
--- vim = hs.loadSpoon('VimMode')
--- vim:disableForApp('iTerm2')
--- below sequence is actually tied to left command single press through karabiner
--- vim:enableKeySequence('j', 'q')
--- vim:disableForApp('Code')
 local HYPER = {"ctrl", "option", "cmd", "shift"}
 
--- local configs = {
---     {HYPER, "f20", flux.restoreScreen},
--- 	{HYPER, "f19", flux.vimMode},
--- 	{HYPER, "f18", flux.visualMode},
--- 	{HYPER, "f17", flux.navigationMode}
--- }
-
--- for i, config in ipairs(configs) do
--- 	hs.hotkey.bind(table.unpack(config))
--- end
-
--- require('windows')
--- require('panes')
 
 flux.restoreScreen()
 
 hs.loadSpoon("Lunette")
 
-customBindings = {
-  center = {
-    {{"ctrl"}, "f12"},
-  },
-  fullScreen = {
-    {{"cmd"}, "f12"},
-  },
-  leftHalf = {
-    {{"alt", "cmd"}, "f12"},
-  },
-  rightHalf = {
-    {{"alt", "cmd"}, "f13"},
-  },
-  topHalf = {
-    {{"alt", "cmd"}, "f15"},
-  },
-  bottomHalf = {
-    {{"alt", "cmd"}, "f14"},
-  },
-  topLeft= {
-    {{"ctrl", "cmd"}, "f12"},
-  },
-  bottomLeft = {
-    {{"ctrl", "cmd", "shift"}, "f12"},
-  },
-  topRight = {
-    {{"ctrl", "cmd"}, "f13"},
-  },
-  bottomRight = {
-    {{"ctrl", "cmd", "shift"}, "f13"},
-  },
-  nextDisplay = {
-    {{"ctrl", "alt", "cmd"}, "f13"},
-  },
-  prevDisplay = {
-    {{"ctrl", "alt", "cmd"}, "f12"},
-  },
-  nextThird = {
-    {{"ctrl", "alt"}, "f13"},
-  },
-  prevThird = {
-    {{"ctrl", "alt"}, "f12"},
-  },
-  enlarge = {
-    {{"ctrl", "alt", "shift"}, "f13"},
-  },
-  shrink = {
-    {{"ctrl", "alt", "shift"}, "f12"},
-  },
-  undo = {
-    {{"alt"}, "f12"},
-  },
-  redo = {
-    {{"shift"}, "f12"},
-  }
-}
+spoon.Lunette:bindWebHooks()
 
--- spoon.Lunette:bindHotkeys()
-spoon.Lunette:bindHotkeys(customBindings)
+local HUD_TEXT = 'NORMAL'
+
+local c = require("hs.canvas")
+local NORMAL= c.new{x=1155,y=0,h=22,w=100}:appendElements( { action = "fill", fillColor = { red=.125, green=.464, blue=.968 }, type = "rectangle"}, { action = "clip", type="text", text="NORMAL", textSize=15, textAlignment="center", frame = { h = 22, w = 100, x = 0, y = 1 } })
+local INSERT = c.new{x=1155,y=0,h=22,w=100}:appendElements( { action = "fill", fillColor = { red=.40, green=.518, blue=.145 }, type = "rectangle"}, { action = "clip", type="text", text="INSERT", textSize=15, textAlignment="center", frame = { h = 22, w = 100, x = 0, y = 1 } })
+local VISUAL = c.new{x=1155,y=0,h=22,w=100}:appendElements( { action = "fill", fillColor = { red=.651, green=.188, blue=.369 }, type = "rectangle"}, { action = "clip", type="text", text="VISUAL", textSize=15, textAlignment="center", frame = { h = 22, w = 100, x = 0, y = 1 } })
+
+local function getTotalScreenNum()
+	local numScreens = 0
+	for i,v in ipairs(hs.screen.allScreens()) do
+		numScreens = numScreens + 1
+	end
+	return numScreens
+end
+
+local function buildHUDs()
+	local MODES = {}
+	local NORMALS = {}
+	local VISUALS = {}
+	local INSERTS = {}
+	local numOfEachHUDTOMake = getTotalScreenNum()
+
+	-- build MODES
+	if numOfEachHUDTOMake == 2 then
+		table.insert(NORMALS, c.new{x=1155,y=0,h=22,w=100}:appendElements( { action = "fill", fillColor = { red=.125, green=.464, blue=.968 }, type = "rectangle"}, { action = "clip", type="text", text="NORMAL", textSize=15, textAlignment="center", frame = { h = 22, w = 100, x = 0, y = 1 } }))
+		table.insert(NORMALS, c.new{x=-1455,y=0,h=22,w=100}:appendElements( { action = "fill", fillColor = { red=.125, green=.464, blue=.968 }, type = "rectangle"}, { action = "clip", type="text", text="NORMAL", textSize=15, textAlignment="center", frame = { h = 22, w = 100, x = 0, y = 1 } }))
+		table.insert(INSERTS, c.new{x=1155,y=0,h=22,w=100}:appendElements( { action = "fill", fillColor = { red=.40, green=.518, blue=.145 }, type = "rectangle"}, { action = "clip", type="text", text="INSERT", textSize=15, textAlignment="center", frame = { h = 22, w = 100, x = 0, y = 1 } }))
+		table.insert(INSERTS, c.new{x=-1455,y=0,h=22,w=100}:appendElements( { action = "fill", fillColor = { red=.40, green=.518, blue=.145 }, type = "rectangle"}, { action = "clip", type="text", text="INSERT", textSize=15, textAlignment="center", frame = { h = 22, w = 100, x = 0, y = 1 } }))
+	end
+
+	table.insert(MODES, NORMALS)
+	table.insert(MODES, INSERTS)
+	for i,mode in ipairs(MODES) do
+		for j,attr in ipairs(mode) do
+			for k,ele in ipairs(attr) do
+				print(inspect(ele))
+			end
+		end
+	end
+end
+
+hs.urlevent.bind('VIM_MODE', function(eventName, params)
+	if params["mode"] then
+		mode = params["mode"]
+		if mode ==  "NORMAL" then
+			for i,v in ipairs(hs.screen.allScreens()) do
+				print(inspect(i))
+				print(inspect(v))
+				hs.alert.show("NORMAL")
+			end
+			NORMAL:show()
+			VISUAL:hide()
+			INSERT:hide()
+		elseif mode ==  "VISUAL" then
+			for i,v in ipairs(hs.screen.allScreens()) do
+				print(inspect(i))
+				print(inspect(v))
+				hs.alert.show("VISUAL")
+			end
+			NORMAL:hide()
+			VISUAL:show()
+			INSERT:hide()
+		elseif mode ==  "INSERT" then
+			for i,v in ipairs(hs.screen.allScreens()) do
+				print(inspect("SCREEN " .. i))
+				print(inspect(v))
+				local mainRes = v:fullFrame()
+				print(inspect(mainRes))
+				hs.alert.show("INSERT", nil, v, 8)
+			end
+			NORMAL:hide()
+			VISUAL:hide()
+			INSERT:show()
+		else
+			hs.alert.show("WRONG PARAMETER IN URI")
+		end
+	end
+end)
+
+
+buildHUDs()
+
 
 -- Bypass programs that won't let you paste into them by grabbing the clipboard's top contents and typing them "manually" with hammerspoon
-hs.hotkey.bind({"cmd", "ctrl"}, "V", function() hs.eventtap.keyStrokes(hs.pasteboard.getContents()) end)
+-- hs.hotkey.bind({"cmd", "ctrl"}, "V", function() hs.eventtap.keyStrokes(hs.pasteboard.getContents()) end)
+
 
 -- automatic configuration reload
 hs.loadSpoon("ReloadConfiguration")

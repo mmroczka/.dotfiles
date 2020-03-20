@@ -20,6 +20,7 @@
                }
  :templates {
              :alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
+             :hs "open -g hammerspoon://%s"
              :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"
              :btt "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"%s\"'"
              :set_letterToFind_var "osascript -e 'tell application \"Keyboard Maestro Engine\" to setvariable \"letterToFind\" to \"%s\"'"
@@ -218,58 +219,45 @@
 
         {:des "navigation mode"
            :rules [[:condi :vim_navigation_mode :!vim_desktop_navigation_mode]
-                   [:c [:km ["Window - Center"]]] ; center
+                   [:c [:hs ["center"]]] ; center
                    [:i [["vim_navigation_mode" 0] ["any_key_not_defined_above" 0] [:btt "vimMode INSERT"]]]
 
-                   [:s ["vim_navigation_shrink_mode" 1] nil {:afterup ["vim_navigation_shrink_mode" 0] :repeat false :halt true}]
-                   [:g ["vim_navigation_grow_mode" 1] nil {:afterup ["vim_navigation_grow_mode" 0] :repeat false :halt true}]
-                   [:f [:km ["Window - Fullscreen"]]] ; fullscreen
+                   ; [:s ["vim_navigation_shrink_mode" 1] nil {:afterup ["vim_navigation_shrink_mode" 0] :repeat false :halt true}]
+                   ; [:g ["vim_navigation_grow_mode" 1] nil {:afterup ["vim_navigation_grow_mode" 0] :repeat false :halt true}]
+                   [:s [:hs ["shrink"]]]
+                   [:g [:hs ["enlarge"]]] ; g for grow
+                   [:f [:hs ["fullScreen"]]] ; fullscreen
 
-                   [:h [:km ["Window - Left"]] [:!vim_navigation_shrink_mode :!vim_navigation_grow_mode]] ; left
-                   [:j [:km ["Window - Bottom"]] [:!vim_navigation_shrink_mode :!vim_navigation_grow_mode]] ; down
-                   [:k [:km ["Window - Top"]] [:!vim_navigation_shrink_mode :!vim_navigation_grow_mode]] ; up
-                   [:l [:km ["Window - Right"]] [:!vim_navigation_shrink_mode :!vim_navigation_grow_mode]] ; right
+                   ; [:h [:hs ["Window - Left"]] [:!vim_navigation_shrink_mode :!vim_navigation_grow_mode]] ; left
+                   ; [:j [:hs ["Window - Bottom"]] [:!vim_navigation_shrink_mode :!vim_navigation_grow_mode]] ; down
+                   ; [:k [:hs ["Window - Top"]] [:!vim_navigation_shrink_mode :!vim_navigation_grow_mode]] ; up
+                   ; [:l [:hs ["Window - Right"]] [:!vim_navigation_shrink_mode :!vim_navigation_grow_mode]] ; right
 
-                   [:!Sh [:km ["Window - Snap Left"]]] ; left
-                   [:!Sj [:km ["Window - Snap Bottom"]]] ; down
-                   [:!Sk [:km ["Window - Snap Top"]]] ; up
-                   [:!Sl [:km ["Window - Snap Right"]]] ; right
-                   [:!Rh [:km ["Window - Snap Left"]]] ; left
-                   [:!Rj [:km ["Window - Snap Bottom"]]] ; down
-                   [:!Rk [:km ["Window - Snap Top"]]] ; up
-                   [:!Rl [:km ["Window - Snap Right"]]] ; right
+                   [:!Sh [:hs ["leftHalf"]]] ; left
+                   [:!Sj [:hs ["bottomHalf"]]] ; down
+                   [:!Sk [:hs ["topHalf"]]] ; up
+                   [:!Sl [:hs ["rightHalf"]]] ; right
+                   [:!Rh [:hs ["leftHalf"]]] ; left
+                   [:!Rj [:hs ["bottomHalf"]]] ; down
+                   [:!Rk [:hs ["topHalf"]]] ; up
+                   [:!Rl [:hs ["rightHalf"]]] ; right
 
-                   [:h [:km ["Window - Shrink Left"]] :vim_navigation_shrink_mode] ; left
-                   [:j [:km ["Window - Shrink Bottom"]] :vim_navigation_shrink_mode] ; down
-                   [:k [:km ["Window - Shrink Top"]] :vim_navigation_shrink_mode] ; up
-                   [:l [:km ["Window - Shrink Right"]] :vim_navigation_shrink_mode] ; right
+                   ; [:h [:km ["Window - Shrink Left"]] :vim_navigation_shrink_mode] ; left
+                   ; [:j [:km ["Window - Shrink Bottom"]] :vim_navigation_shrink_mode] ; down
+                   ; [:k [:km ["Window - Shrink Top"]] :vim_navigation_shrink_mode] ; up
+                   ; [:l [:km ["Window - Shrink Right"]] :vim_navigation_shrink_mode] ; right
 
-                   [:h [:km ["Window - Grow Left"]] [:vim_navigation_grow_mode]] ; left
-                   [:j [:km ["Window - Grow Bottom"]] [:vim_navigation_grow_mode]] ; down
-                   [:k [:km ["Window - Grow Top"]] [:vim_navigation_grow_mode]] ; up
-                   [:l [:km ["Window - Grow Right"]] [:vim_navigation_grow_mode]] ; right
+                   ; [:h [:km ["Window - Grow Left"]] [:vim_navigation_grow_mode]] ; left
+                   ; [:j [:km ["Window - Grow Bottom"]] [:vim_navigation_grow_mode]] ; down
+                   ; [:k [:km ["Window - Grow Top"]] [:vim_navigation_grow_mode]] ; up
+                   ; [:l [:km ["Window - Grow Right"]] [:vim_navigation_grow_mode]] ; right
 
-                   [:o [:km ["Window - Snap Top Left"]]] ; TOP left
-                   [:p [:km ["Window - Snap Top Right"]]] ; TOP right
-                   [:period [:km ["Window - Snap Bottom Left"]]] ; BOTTOM left
-                   [:slash [:km ["Window - Snap Bottom Right"]]] ; BOTTOM right
+                   [:o [:hs ["topLeft"]]] ; TOP left
+                   [:p [:hs ["topRight"]]] ; TOP right
+                   [:period [:hs ["bottomLeft"]]] ; BOTTOM left
+                   [:slash [:hs ["bottomRight"]]] ; BOTTOM right
 
-                   [:m [:km ["Window - Next Monitor"]]] ; next display
-
-                   ; [:d ["vim_desktop_navigation_mode" 1] nil {:afterup ["vim_desktop_navigation_mode" 0] :repeat false :halt true}]
-
-
-                   ; [:left_command nil nil {:afterup [["vim_navigation_mode" 0] ["vim_mode" 1] ["vim_visual_mode" 0] :!SCOTf19] :held :left_command :repeat false :halt true :params{:alone 150 :held 200}}]
-
-                   ; [:condi :vim_navigation_mode :vim_desktop_navigation_mode :!vim_desktop_focus_mode]
-                   ; [:l :!Cf14] ;
-                   ; [:h :!SCOf14] ;
-                   ; [:k :!Cf15] ;
-                   ; [:f ["vim_desktop_focus_mode" 1] nil {:afterup ["vim_desktop_focus_mode" 0] :repeat false :halt true}]
-
-                   ; [:condi :vim_navigation_mode :vim_desktop_navigation_mode :vim_desktop_focus_mode]
-                   ; [:h [:km "focus: screen 1"]] ; focus on left montior
-                   ; [:l [:km "focus: screen 2"]] ; focus on right montior
+                   [:m [:hs ["nextDisplay"]]] ; next Monitor
 
                     ; :any_key_not_defined_above_while_in_navigation_mode
                     ; [:anykey :vk_none]
