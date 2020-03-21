@@ -52,7 +52,7 @@ echo "-------";
 git status'
 # "git upstream" --> defined in git config and it automatically sets the set-upstream branch to your current branch if it doesn't exist yet
 
-alias howto="cat ~/.aliases ~/.functions | grep $1"
+alias howto="cat ~/.aliases ~/.functions ~/.commands | grep $1"
 alias howvim="cat ~/.dotfiles/vim_commands | grep $1"
 alias fz='vim $(fzf)'
 alias vi='vim'

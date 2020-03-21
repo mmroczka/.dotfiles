@@ -1,0 +1,4 @@
+grep 'some text' place_to_search
+grep -r pattern folder/to/search
+find / -iname "*.jpg"            // search by name and ignore case
+find . -name "*poster*"

@@ -26,6 +26,7 @@
     ~/.config/antigen.zsh: antigen.zsh
     ~/.config/karabiner: karabiner
     ~/.config/karabiner.edn: karabiner/karabiner.edn
+    ~/.commands: commands
     ~/.functions: functions
     ~/.gitignore_global: git/gitignore_global
     ~/.hammerspoon: hammerspoon
