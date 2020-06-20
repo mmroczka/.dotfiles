@@ -7,7 +7,9 @@
  :devices {
 				; :macbook-internal [{:product_id 631 :vendor_id 1452}]
 				:uhk-keyboard [{:product_id 24866 :vendor_id 7504}]
+                :dell-keyboard [{:product_id 8195 :vendor_id 16700}]
 			}
+
  :applications {
                 ; you can find these com.* package names using Karabiner Viewer tool installed by default with Karabiner
                 :vim-mode-disabled-application ["^com\\.apple\\.Terminal$",
@@ -16,7 +18,7 @@
                 :Chromes                       ["^com\\.google\\.Chrome$", "^org\\.chromium\\.Chromium$", "^com\\.google\\.Chrome\\.canary$", "^com\\.brave\\.Browser"]
                 :Terminals                     ["^com\\.apple\\.Terminal$", "^com\\.googlecode\\.iterm2$", "^io\\.alacritty$"]
                 :Omnifocus                     ["^com\\.omnigroup\\.OmniFocus3$"]
-                :PyCharm                       ["^com\\.jetbrains\\.pycharm$"]
+                :Jetbrains                     ["^com\\.jetbrains\\.pycharm$", "^com\\.jetbrains\\.intellij"]
                }
  :templates {
              :alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
@@ -34,15 +36,6 @@
  :tos {
        :home_dir        [{:key :grave_accent_and_tilde :modi [:left_shift] :lazy true}
                                {:key :slash}]
-
-        ; Here I'm trigger hammerspoon's flux module to dim my screen based on the mode I'm in.
-        ; SCOTf20 == vimMode dimmer off
-        ; SCOTf19 == vimMode dimmer (vim mode) blue on
-        ; SCOTf18 == vimMode dimmer red (visual mode) on
-        ; SCOTf17 == vimMode dimmer green (navigation mode) on
-        ; This is possible through the brilliant work of these folks:
-        ; https://github.com/dbalatero/VimMode.spoon
-        ; https://github.com/calvinwyoung/.dotfiles/blob/master/darwin/hammerspoon/flux.lua
 
        :TURN_OFF_VIM [{:key :f18 :modi [:left_shift :left_option :left_command :left_control] :lazy true} ; CMD+SHIFT+CTRL+OPT+f18 toggles BetterTouchTool to restore screen to normal state
                                {:set ["vim_mode" 0]}                                                 ; turn off vim mode
@@ -124,6 +117,14 @@
              :spacebar_command_mode {:key :f24}
              }
  :main [
+        {:des "Swap alt and windows keys on dell keyboard"
+         :rules [:dell-keyboard
+                 [:left_option :left_command]
+                 [:right_option :right_command]
+                 [:left_command :left_option]
+                 [:right_command :right_option]
+                ]}
+
         {:des "Caps -> Hyper / Esc"
          :rules [:!vim_replace_mode
                  [:##caps_lock :!!CTOleft_shift nil {:alone :escape}]
@@ -156,7 +157,44 @@
                  [:3 :!Ctab]
                  [:4 :!SCopen_bracket]
                  [:5 :!SCclose_bracket]
+
+                 ; [:t :!S9] ; (
+                 ; [:y :!S0] ; )
+
+                 ; [:r :open_bracket] ; [
+                 ; [:u :close_bracket] ; ]
+
+                 ; [:e :!Sopen_bracket] ; [
+                 ; [:i :!Sclose_bracket] ; ]
                  ]}
+
+        ; {:des "Activate space_mode by holding down spacebar"
+        ;  :rules [[:spacebar nil nil {:alone [:spacebar] :held ["space_mode" 1] :afterup {:set ["space_mode" 0]} :params {:alone 120 :held 50}}]
+
+        ;          :space_mode
+        ;          [:a :1]
+        ;          [:s :2]
+        ;          [:d :3]
+        ;          [:f :4]
+        ;          [:g :5]
+        ;          [:h :6]
+        ;          [:j :7]
+        ;          [:k :8]
+        ;          [:l :9]
+        ;          [:semicolon :0]
+
+        ;          [:t nil nil {:alone [:!S9] :held [:!S9 :!S0 :left_arrow] :repeat false :params {:held 120}}] ; (
+        ;          [:y :!S0] ; )
+
+        ;          [:r :open_bracket] ; [
+        ;          [:u :close_bracket] ; ]
+
+        ;          [:e :!Sopen_bracket] ; [
+        ;          [:i :!Sclose_bracket] ; ]
+
+        ;          [:condi :space_mode]
+        ;          [:anykey :vk_none]
+        ;          ]}
 
         {:des "Launch mode (l+;)" :rules [[{:sim [:l :semicolon]
                                      :simo {:interrupt true
@@ -164,8 +202,8 @@
                                             :uorder :insensitive
                                             :afterup {:set ["launch_mode" 0]}}} {:set ["launch_mode" 1]}]]}
         {:des "Launch mode -> a (Open Activity Monitor)" :rules [:launch_mode [:##a [:km "open: Activity Monitor"]]]}
-        {:des "Launch mode -> b (Open Chrome)" :rules [:launch_mode [:##b [:km "open: Chrome"]]]} ; B for Browser
-        {:des "Launch mode -> f (Open Fantastical)" :rules [:launch_mode [:##f [:km "open: Fantastical"]]]}
+        {:des "Launch mode -> b (Open Browser)" :rules [:launch_mode [:##b [:km "open: Browser"]]]} ; B for Browser
+        {:des "Launch mode -> c (Open Calendar)" :rules [:launch_mode [:##c [:km "open: Calendar"]]]}
         {:des "Launch mode -> g (Open Messages)" :rules [:launch_mode [:##g [:km "open: Messages"]]]}
         {:des "Launch mode -> r (Open Insomnia)" :rules [:launch_mode [:##r [:km "open: Insomnia"]]]} ; R for Requests
         {:des "Launch mode -> t (Open iTerm)" :rules [:launch_mode [:##t [:km "open: iTerm"]]]}
@@ -174,6 +212,7 @@
         {:des "Launch mode -> n (Open Evernote)" :rules [:launch_mode [:##n [:km "open: Evernote"]]]} ; N for Notes
         {:des "Launch mode -> e (Open Editor)" :rules [:launch_mode [:##e [:km "open: Editor"]]]}
         {:des "Launch mode -> i (Open Snippets)" :rules [:launch_mode [:##i :!TSC2]]}
+        {:des "Launch mode -> v (Open Video)" :rules [:launch_mode [:##v "open: Video"]]}
         {:des "Launch mode -> w (Open BitWarden)" :rules [:launch_mode [:##w [:km "open: BitWarden"]]]}
         {:des "Launch mode -> s (Open Slack)" :rules [:launch_mode [:##s [:km "open: Slack"]]]}
         {:des "Launch mode -> z (Open Zeplin)" :rules [:launch_mode [:##z [:km "open: Zeplin"]]]}
