@@ -32,6 +32,7 @@ alias svimrc="source ~/.vimrc"
 
 # GIT Specific
 alias cat='bat'
+alias gcu='git -c commit.gpgsign=false commit' # does a git commit that is specifically unsigned
 alias gpod='git push origin --delete ' # deletes a remote branch on github. -->  gpod branch_name
 alias gbm='git branch -m ' # renames your CURRENT local branch to a new name --> gbm new_name
 alias gbm='git branch -m ' # renames a branch you're NOT CURRENTLY ON to a new name --> gbm old_name new_name
