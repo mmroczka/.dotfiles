@@ -18,7 +18,8 @@
                 :Chromes                       ["^com\\.google\\.Chrome$", "^org\\.chromium\\.Chromium$", "^com\\.google\\.Chrome\\.canary$", "^com\\.brave\\.Browser"]
                 :Terminals                     ["^com\\.apple\\.Terminal$", "^com\\.googlecode\\.iterm2$", "^io\\.alacritty$"]
                 :Omnifocus                     ["^com\\.omnigroup\\.OmniFocus3$"]
-                :Jetbrains                     ["^com\\.jetbrains\\.pycharm$", "^com\\.jetbrains\\.intellij"]
+                :PyCharm                       ["^com\\.jetbrains\\.pycharm$"]
+                :Finder                       ["^com\\.apple\\.finder$"]
                }
  :templates {
              :alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
@@ -27,6 +28,7 @@
              :btt "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"%s\"'"
              :set_letterToFind_var "osascript -e 'tell application \"Keyboard Maestro Engine\" to setvariable \"letterToFind\" to \"%s\"'"
              :set_last_action_var "osascript -e 'tell application \"Keyboard Maestro Engine\" to setvariable \"last_action\" to \"%s\"'"
+             :open "open \"%s\""
             }
 
  :froms {
@@ -107,7 +109,7 @@
              :programming_mode {:key :period}
 
              ; f24 is a key that isn't assigned to anything (effectively a dead key)
-             :semicolon_mode {:key :f24}
+             :semicolon_mode {:key :semicolon}
              :change_mode {:key :f24}
              :focus_mode {:key :f24}
              :go_to_mode {:key :f24}
@@ -126,7 +128,7 @@
                 ]}
 
         {:des "Caps -> Hyper / Esc"
-         :rules [:!vim_replace_mode
+         :rules [[:condi :!vim_replace_mode :!launch_mode]
                  [:##caps_lock :!!CTOleft_shift nil {:alone :escape}]
                 ]}
 
@@ -136,6 +138,7 @@
          :rules [ [:!CSl [:!Cl :j :a :v :a :s :c :r :i :p :t :!Ssemicolon :return_or_enter] :Chromes] ]}
         ; {:des "Hold cmd+v for KM clipboard history"
         ;  :rules [ [:!Cv nil nil {:alone :!Cv :held [:km "Activate Clipboard History Switcher"] :repeat false :halt true :params{:alone 150 :held 200}} ] ]}
+
         {:des "Hold cmd+v for PASTE2 clipboard history"
          :rules [ [:!Cv nil nil {:alone :!Cv :held :!TSz :repeat false :halt true :params{:alone 150 :held 200}} ] ]}
         {:des "Right cmd -> Alfred"
@@ -200,23 +203,26 @@
                                      :simo {:interrupt true
                                             :dorder :insensitive
                                             :uorder :insensitive
-                                            :afterup {:set ["launch_mode" 0]}}} {:set ["launch_mode" 1]}]]}
-        {:des "Launch mode -> a (Open Activity Monitor)" :rules [:launch_mode [:##a [:km "open: Activity Monitor"]]]}
-        {:des "Launch mode -> b (Open Browser)" :rules [:launch_mode [:##b [:km "open: Browser"]]]} ; B for Browser
-        {:des "Launch mode -> c (Open Calendar)" :rules [:launch_mode [:##c [:km "open: Calendar"]]]}
-        {:des "Launch mode -> g (Open Messages)" :rules [:launch_mode [:##g [:km "open: Messages"]]]}
-        {:des "Launch mode -> r (Open Insomnia)" :rules [:launch_mode [:##r [:km "open: Insomnia"]]]} ; R for Requests
-        {:des "Launch mode -> t (Open iTerm)" :rules [:launch_mode [:##t [:km "open: iTerm"]]]}
-        {:des "Launch mode -> k (Open Keyboard Maestro)" :rules [:launch_mode [:##k [:km "open: Keyboard Maestro"]]]}
-        {:des "Launch mode -> m (Open Omnifocus)" :rules [:launch_mode [:##m [:km "open: Omnifocus"]]]}
-        {:des "Launch mode -> n (Open Evernote)" :rules [:launch_mode [:##n [:km "open: Evernote"]]]} ; N for Notes
-        {:des "Launch mode -> e (Open Editor)" :rules [:launch_mode [:##e [:km "open: Editor"]]]}
-        {:des "Launch mode -> i (Open Snippets)" :rules [:launch_mode [:##i :!TSC2]]}
-        {:des "Launch mode -> v (Open Video)" :rules [:launch_mode [:##v "open: Video"]]}
-        {:des "Launch mode -> w (Open BitWarden)" :rules [:launch_mode [:##w [:km "open: BitWarden"]]]}
-        {:des "Launch mode -> s (Open Slack)" :rules [:launch_mode [:##s [:km "open: Slack"]]]}
-        {:des "Launch mode -> z (Open Zeplin)" :rules [:launch_mode [:##z [:km "open: Zeplin"]]]}
-        {:des "Launch mode -> caps_lock (Open Finder)" :rules [:launch_mode [:##caps_lock [:km "open: Finder"]]]}
+                                            :afterup {:set ["launch_mode" 0]}}} {:set ["launch_mode" 1]}]
+                                          [:condi :launch_mode :!open_mode]
+                                          [:a [:km "open: Activity Monitor"]]
+                                          [:b [:km "open: Chrome"]]
+                                          [:f [:km "open: Fantastical"]]
+                                          [:g [:km "open: Messages"]]
+                                          [:r [:km "open: Insomnia"]]
+                                          [:t [:km "open: iTerm"]]
+                                          [:k [:km "open: Keyboard Maestro"]]
+                                          [:m [:km "open: Omnifocus"]]
+                                          [:n [:km "open: Evernote"]]
+                                          [:e [:km "open: Editor"]]
+                                          [:i :!TSC2]
+                                          [:w [:km "open: BitWarden"]]
+                                          [:s [:km "open: Slack"]]
+                                          [:z [:km "open: Zeplin"]]
+                                          [:caps_lock [:km "open: Finder"]]
+                                          [:k nil nil {:afterup ["open_mode" 0] :alone ["open_mode" 1] :held ["open_mode" 1] :repeat false}]
+
+                                          ]}
 
 
       {:des "Left Shift + Left Cmd -> VIM Navigation mode"
@@ -231,16 +237,6 @@
                                                                      ["vim_go_to_visual_mode" 0]
                                                                     ]}]]}
 
-      ; {:des "Hyper+F to trigger VIMAC"
-      ;          :rules [[:condi :!vim_mode :!vim_navigation_mode]
-      ;                  [:!SCOTf :!SCspacebar nil {:alone :TURN_ON_VIMAC}]]}
-      ; {:des "VIMAC Mode commands"
-      ;      :rules [[:condi :vimac_mode]
-      ;              [:spacebar :left_control nil {:alone :spacebar}]
-      ;              [:caps_lock [:caps_lock :TURN_OFF_VIMAC]]
-      ;              [:return_or_enter [:return_or_enter :TURN_OFF_VIMAC]]
-      ;             ]}
-
       {:des "Left cmd to trigger Vim Mode"
                :rules [[:condi :!vim_mode :!vim_navigation_mode]
                        [:left_command :left_command nil {:alone :TURN_ON_VIM_AND_CLEAR_VARS}]]}
@@ -254,6 +250,15 @@
                     [:!Tl :!CTright_arrow]
                     [:!Tg :!COg]
                     [:spacebar :spacebar :Omnifocus {:held :!COspacebar :repeat false :halt true :params{:alone 150 :held 200}}]
+                    ]}
+
+        {:des "VIM MODE APPLICATION OVERRIDE: Finder"
+           :rules [[:condi :vim_mode :Finder]
+;                   FINDER SPECIFIC
+                    [:x :!Cdelete_or_backspace]
+                    [:!Creturn_or_enter :!Cdown_arrow]
+                    [:!Cdelete_or_backspace :!Cup_arrow]
+                    [:spacebar :return_or_enter]
                     ]}
 
         {:des "navigation mode"
@@ -272,14 +277,10 @@
                    ; [:k [:hs ["Window - Top"]] [:!vim_navigation_shrink_mode :!vim_navigation_grow_mode]] ; up
                    ; [:l [:hs ["Window - Right"]] [:!vim_navigation_shrink_mode :!vim_navigation_grow_mode]] ; right
 
-                   [:!Sh [:hs ["leftHalf"]]] ; left
-                   [:!Sj [:hs ["bottomHalf"]]] ; down
-                   [:!Sk [:hs ["topHalf"]]] ; up
-                   [:!Sl [:hs ["rightHalf"]]] ; right
-                   [:!Rh [:hs ["leftHalf"]]] ; left
-                   [:!Rj [:hs ["bottomHalf"]]] ; down
-                   [:!Rk [:hs ["topHalf"]]] ; up
-                   [:!Rl [:hs ["rightHalf"]]] ; right
+                   [:h [:hs ["leftHalf"]]] ; left
+                   [:j [:hs ["bottomHalf"]]] ; down
+                   [:k [:hs ["topHalf"]]] ; up
+                   [:l [:hs ["rightHalf"]]] ; right
 
                    ; [:h [:km ["Window - Shrink Left"]] :vim_navigation_shrink_mode] ; left
                    ; [:j [:km ["Window - Shrink Bottom"]] :vim_navigation_shrink_mode] ; down
@@ -862,6 +863,7 @@
                     [:!Rs [:!Cc [:km "surroundWith"] :TURN_OFF_VIM]]
                     [:!Tu [:!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow ]] ; go down 15 lines
                     [:v [["vim_mode" 0] ["vim_visual_mode" 1] ["vim_visual_block_mode" 0] [:btt "vimMode VISUAL"]]]
+                    [:x :!Cdelete_or_backspace :Finder]
                     [:x [:delete_forward :delete_forward :TURN_ON_VIM_AND_CLEAR_VARS]]
                     [:!Sx [:delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
                     [:y [:TURN_ON_VIM_AND_CLEAR_VARS :!Cc]]
@@ -914,6 +916,7 @@
                            :!SCright_arrow] ; hold shift and go to very right of the line
                     ]
                     [:w [:!SOright_arrow :!Sright_arrow]]
+                    [:x :!Cdelete_or_backspace :Finder]
                     [:x [:delete_forward :TURN_ON_VIM_AND_CLEAR_VARS]]
                     [:!Sx [:delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
                     [:!Rx [:delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
