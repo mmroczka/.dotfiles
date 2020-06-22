@@ -206,9 +206,10 @@
                                             :afterup {:set ["launch_mode" 0]}}} {:set ["launch_mode" 1]}]
                                           [:condi :launch_mode :!open_mode]
                                           [:a [:km "open: Activity Monitor"]]
-                                          [:b [:km "open: Chrome"]]
-                                          [:f [:km "open: Fantastical"]]
+                                          [:b [:km "open: Browser"]]
+                                          [:c [:km "open: Calendar"]]
                                           [:g [:km "open: Messages"]]
+                                          [:h [:km "open: Hangouts"]] ; hangouts, meets, conference, meeting, etc
                                           [:r [:km "open: Insomnia"]]
                                           [:t [:km "open: iTerm"]]
                                           [:k [:km "open: Keyboard Maestro"]]
@@ -220,7 +221,7 @@
                                           [:s [:km "open: Slack"]]
                                           [:z [:km "open: Zeplin"]]
                                           [:caps_lock [:km "open: Finder"]]
-                                          [:k nil nil {:afterup ["open_mode" 0] :alone ["open_mode" 1] :held ["open_mode" 1] :repeat false}]
+                                          ; [:k nil nil {:afterup ["open_mode" 0] :alone ["open_mode" 1] :held ["open_mode" 1] :repeat false}]
 
                                           ]}
 
