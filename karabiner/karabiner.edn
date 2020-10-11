@@ -858,7 +858,7 @@
                     [:!Rg :!SCdown_arrow]
                     [:i :TURN_OFF_VIM]
                     [:j nil nil {:held :!Sdown_arrow :afterup [:!Sdown_arrow :!SCright_arrow] :params{:held 150}} ]
-                    [:!Ssemicolon [:!Cc :TURN_OFF_VIM [:km "findAndReplaceClipboardContents"]]]
+                    [:!Sr [:!Cc :TURN_OFF_VIM [:km "findAndReplaceClipboardContents"]]]
                     [:k nil nil {:held :!Sup_arrow :afterup [:!Sup_arrow :!SCright_arrow] :params{:held 150}}]
                     [:!Ss [:!Cc [:km "surroundWith"] :TURN_OFF_VIM]]
                     [:!Rs [:!Cc [:km "surroundWith"] :TURN_OFF_VIM]]

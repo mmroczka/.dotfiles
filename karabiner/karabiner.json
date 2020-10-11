@@ -43149,7 +43149,7 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "semicolon",
+            "key_code" : "r",
             "modifiers" : {
               "mandatory" : [ "left_shift" ]
             }
