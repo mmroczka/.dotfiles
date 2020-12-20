@@ -115,144 +115,11 @@
     "complex_modifications" : {
       "parameters" : {
         "basic.simultaneous_threshold_milliseconds" : 50,
-        "basic.to_delayed_action_delay_milliseconds" : 300,
+        "basic.to_delayed_action_delay_milliseconds" : 200,
         "basic.to_if_alone_timeout_milliseconds" : 300,
         "basic.to_if_held_down_threshold_milliseconds" : 300
       },
       "rules" : [ {
-        "description" : "Swap alt and windows keys on dell keyboard",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "left_option"
-          },
-          "to" : [ {
-            "key_code" : "left_command"
-          } ],
-          "conditions" : [ {
-            "identifiers" : [ {
-              "product_id" : 8195,
-              "vendor_id" : 16700
-            } ],
-            "type" : "device_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "right_option"
-          },
-          "to" : [ {
-            "key_code" : "right_command"
-          } ],
-          "conditions" : [ {
-            "identifiers" : [ {
-              "product_id" : 8195,
-              "vendor_id" : 16700
-            } ],
-            "type" : "device_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "left_command"
-          },
-          "to" : [ {
-            "key_code" : "left_option"
-          } ],
-          "conditions" : [ {
-            "identifiers" : [ {
-              "product_id" : 8195,
-              "vendor_id" : 16700
-            } ],
-            "type" : "device_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "right_command"
-          },
-          "to" : [ {
-            "key_code" : "right_option"
-          } ],
-          "conditions" : [ {
-            "identifiers" : [ {
-              "product_id" : 8195,
-              "vendor_id" : 16700
-            } ],
-            "type" : "device_if"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Caps -> Hyper / Esc",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "caps_lock",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "left_shift",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "launch_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_replace_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "f13",
-            "value" : 1,
-            "type" : "variable_if"
-          }, {
-            "name" : "escape_mode",
-            "value" : 0,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "to_if_alone" : [ {
-            "key_code" : "escape"
-          } ],
-          "to_delayed_action" : {
-            "to_if_invoked" : [ {
-              "set_variable" : {
-                "name" : "escape_mode",
-                "value" : 0
-              }
-            } ],
-            "to_if_canceled" : [ {
-              "set_variable" : {
-                "name" : "escape_mode",
-                "value" : 0
-              }
-            } ]
-          },
-          "from" : {
-            "key_code" : "caps_lock",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "left_shift",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "launch_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_replace_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
         "description" : "FN from UHK",
         "manipulators" : [ {
           "from" : {
@@ -1554,7 +1421,7 @@
             "key_code" : "n"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Evernote\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Notion\"'"
           } ],
           "conditions" : [ {
             "name" : "open_mode",
@@ -1577,7 +1444,7 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Evernote\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Notion\"'"
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -1633,57 +1500,6 @@
               "key_code" : "f24"
             }, {
               "key_code" : "e"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "launch_mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          }
-        }, {
-          "from" : {
-            "key_code" : "i"
-          },
-          "to" : [ {
-            "key_code" : "2",
-            "modifiers" : [ "left_command", "left_control", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "open_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "launch_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 150
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "launch_mode",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "2",
-            "modifiers" : [ "left_command", "left_control", "left_shift" ]
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "f24"
-            }, {
-              "key_code" : "i"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,
@@ -1954,155 +1770,197 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left cmd to trigger Vim Mode",
-        "manipulators" : [ {
-          "to_if_alone" : [ {
-            "key_code" : "f13"
-          } ],
-          "from" : {
-            "key_code" : "left_command"
-          },
-          "to" : [ {
-            "key_code" : "left_command"
-          } ],
-          "conditions" : [ {
-            "name" : "vim_navigation_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "vim_mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "VIM MODE APPLICATION OVERRIDE: Omnifocus",
+        "description" : "Caps -> Hyper / Esc",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "j",
+            "key_code" : "caps_lock",
             "modifiers" : {
-              "mandatory" : [ "left_control" ]
+              "optional" : [ "any" ]
             }
           },
           "to" : [ {
-            "key_code" : "down_arrow",
-            "modifiers" : [ "left_command", "left_control" ]
-          } ],
-          "conditions" : [ {
-            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
-            "type" : "frontmost_application_if"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
-            "name" : "vim_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "k",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 1
             }
-          },
-          "to" : [ {
-            "key_code" : "up_arrow",
-            "modifiers" : [ "left_command", "left_control" ]
-          } ],
-          "conditions" : [ {
-            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
-            "type" : "frontmost_application_if"
           }, {
-            "name" : "vim_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "h",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
+            "set_variable" : {
+              "name" : "any_key_not_defined_above",
+              "value" : 1
             }
-          },
-          "to" : [ {
-            "key_code" : "left_arrow",
-            "modifiers" : [ "left_command", "left_control" ]
-          } ],
-          "conditions" : [ {
-            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
-            "type" : "frontmost_application_if"
           }, {
-            "name" : "vim_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "l",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
+            "set_variable" : {
+              "name" : "vim_change_mode",
+              "value" : 0
             }
-          },
-          "to" : [ {
-            "key_code" : "right_arrow",
-            "modifiers" : [ "left_command", "left_control" ]
-          } ],
-          "conditions" : [ {
-            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
-            "type" : "frontmost_application_if"
           }, {
-            "name" : "vim_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "g",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
+            "set_variable" : {
+              "name" : "vim_delete_mode",
+              "value" : 0
             }
-          },
-          "to" : [ {
-            "key_code" : "g",
-            "modifiers" : [ "left_command", "left_option" ]
+          }, {
+            "set_variable" : {
+              "name" : "vim_delete_till_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_find_char_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_indent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_lowercase_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_movement_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_notification_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_outdent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_single_letter_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_uppercase_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "key_code" : "left_shift",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
-            "type" : "frontmost_application_if"
-          }, {
-            "name" : "vim_mode",
+            "name" : "escape_pressed_once",
             "value" : 1,
             "type" : "variable_if"
           } ],
           "type" : "basic"
         }, {
           "to_if_held_down" : [ {
-            "key_code" : "spacebar",
-            "modifiers" : [ "left_command", "left_option" ]
+            "key_code" : "escape"
           } ],
-          "parameters" : {
-            "basic.to_if_alone_timeout_milliseconds" : 150,
-            "basic.to_if_held_down_threshold_milliseconds" : 200
+          "to_delayed_action" : {
+            "to_if_invoked" : [ {
+              "set_variable" : {
+                "name" : "escape_pressed_once",
+                "value" : 0
+              }
+            }, {
+              "key_code" : "escape"
+            } ],
+            "to_if_canceled" : [ {
+              "set_variable" : {
+                "name" : "escape_pressed_once",
+                "value" : 0
+              }
+            } ]
           },
           "from" : {
-            "key_code" : "spacebar"
+            "key_code" : "caps_lock",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
           },
           "to" : [ {
-            "key_code" : "spacebar"
-          } ],
-          "conditions" : [ {
-            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
-            "type" : "frontmost_application_if"
+            "set_variable" : {
+              "name" : "escape_pressed_once",
+              "value" : 1
+            }
           }, {
-            "name" : "vim_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          }, {
-            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
-            "type" : "frontmost_application_if"
+            "key_code" : "left_shift",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "type" : "basic"
         } ]
@@ -46749,86 +46607,6 @@
             "name" : "vim_visual_mode",
             "value" : 1,
             "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "j",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "down_arrow",
-            "modifiers" : [ "left_command", "left_control" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_visual_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          }, {
-            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
-            "type" : "frontmost_application_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "k",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "up_arrow",
-            "modifiers" : [ "left_command", "left_control" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_visual_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          }, {
-            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
-            "type" : "frontmost_application_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "h",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "left_arrow",
-            "modifiers" : [ "left_command", "left_control" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_visual_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          }, {
-            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
-            "type" : "frontmost_application_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "l",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "right_arrow",
-            "modifiers" : [ "left_command", "left_control" ]
-          } ],
-          "conditions" : [ {
-            "name" : "vim_visual_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          }, {
-            "bundle_identifiers" : [ "^com\\.omnigroup\\.OmniFocus3$" ],
-            "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
         }, {
