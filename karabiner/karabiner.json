@@ -185,9 +185,52 @@
       }, {
         "description" : "Caps -> Hyper / Esc",
         "manipulators" : [ {
+          "from" : {
+            "key_code" : "caps_lock",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "left_shift",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "launch_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "vim_replace_mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "f13",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "name" : "escape_mode",
+            "value" : 0,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
           "to_if_alone" : [ {
             "key_code" : "escape"
           } ],
+          "to_delayed_action" : {
+            "to_if_invoked" : [ {
+              "set_variable" : {
+                "name" : "escape_mode",
+                "value" : 0
+              }
+            } ],
+            "to_if_canceled" : [ {
+              "set_variable" : {
+                "name" : "escape_mode",
+                "value" : 0
+              }
+            } ]
+          },
           "from" : {
             "key_code" : "caps_lock",
             "modifiers" : {
@@ -268,6 +311,295 @@
           "conditions" : [ {
             "bundle_identifiers" : [ "^com\\.google\\.Chrome$", "^org\\.chromium\\.Chromium$", "^com\\.google\\.Chrome\\.canary$", "^com\\.brave\\.Browser" ],
             "type" : "frontmost_application_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Only allow keys to use shift if it's the correct shift",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "a",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "b",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "c",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "d",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "e",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "g",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "i",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "m",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "n",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "o",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "p",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "q",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "r",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "t",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "v",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "w",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "x",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "y",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "z",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
           } ],
           "type" : "basic"
         } ]
@@ -1625,144 +1957,7 @@
         "description" : "Left cmd to trigger Vim Mode",
         "manipulators" : [ {
           "to_if_alone" : [ {
-            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
-            "key_code" : "f19",
-            "lazy" : true
-          }, {
-            "set_variable" : {
-              "name" : "vim_mode",
-              "value" : 1
-            }
-          }, {
-            "set_variable" : {
-              "name" : "any_key_not_defined_above",
-              "value" : 1
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_change_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_delete_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_delete_till_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_find_char_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_from_change_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_from_delete_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_from_surround_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_from_visual_block_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_from_visual_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_from_yank_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_go_to_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_go_to_visual_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_in_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_indent_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_lowercase_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_movement_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_notification_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_outdent_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_replace_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_replace_single_letter_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_surround_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_uppercase_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_visual_block_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_visual_mode",
-              "value" : 0
-            }
-          }, {
-            "set_variable" : {
-              "name" : "vim_yank_mode",
-              "value" : 0
-            }
+            "key_code" : "f13"
           } ],
           "from" : {
             "key_code" : "left_command"

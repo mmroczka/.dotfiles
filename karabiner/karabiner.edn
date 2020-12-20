@@ -129,7 +129,8 @@
 
         {:des "Caps -> Hyper / Esc"
          :rules [[:condi :!vim_replace_mode :!launch_mode]
-                 [:##caps_lock :!!CTOleft_shift nil {:alone :escape}]
+                 [:##caps_lock :!!CTOleft_shift [:f13 ["escape_mode" 0]] ["escape_mode" 1]]
+                 [:##caps_lock :!!CTOleft_shift nil {:alone :escape :delayed {:invoked ["escape_mode" 0] :canceled ["escape_mode" 0]}}]
                 ]}
 
         {:des "FN from UHK" :rules [[:f23 :fn [:uhk-keyboard] ]]} ;* UHK FN as mac fn via UHK hardcoded f24 > fn in KE but only for uhk
@@ -138,6 +139,44 @@
          :rules [ [:!CSl [:!Cl :j :a :v :a :s :c :r :i :p :t :!Ssemicolon :return_or_enter] :Chromes] ]}
         ; {:des "Hold cmd+v for KM clipboard history"
         ;  :rules [ [:!Cv nil nil {:alone :!Cv :held [:km "Activate Clipboard History Switcher"] :repeat false :halt true :params{:alone 150 :held 200}} ] ]}
+
+
+
+;; S  | left_shift
+;; F  | fn
+;; Q  | right_command
+;; W  | right_control
+;; E  | right_option
+;; R  | right_shift
+        {:des "Only allow keys to use shift if it's the correct shift"
+         :rules [
+                 [:!Sa :vk_none] ; a
+                 [:!Sb :vk_none] ; b
+                 [:!Sc :vk_none] ; c
+                 [:!Sd :vk_none] ; d
+                 [:!Se :vk_none] ; e
+                 [:!Sf :vk_none] ; f
+                 [:!Sg :vk_none] ; g
+                 [:!Rh :vk_none] ; h
+                 [:!Ri :vk_none] ; i
+                 [:!Rj :vk_none] ; j
+                 [:!Rk :vk_none] ; k
+                 [:!Rl :vk_none] ; l
+                 [:!Rm :vk_none] ; m
+                 [:!Rn :vk_none] ; n
+                 [:!Ro :vk_none] ; o
+                 [:!Rp :vk_none] ; p
+                 [:!Sq :vk_none] ; q
+                 [:!Sr :vk_none] ; r
+                 [:!Ss :vk_none] ; s
+                 [:!St :vk_none] ; t
+                 [:!Ru :vk_none] ; u
+                 [:!Sv :vk_none] ; v
+                 [:!Sw :vk_none] ; w
+                 [:!Sx :vk_none] ; x
+                 [:!Ry :vk_none] ; y
+                 [:!Sz :vk_none] ; z
+                 ]}
 
         {:des "Hold cmd+v for PASTE2 clipboard history"
          :rules [ [:!Cv nil nil {:alone :!Cv :held :!TSz :repeat false :halt true :params{:alone 150 :held 200}} ] ]}
@@ -240,7 +279,9 @@
 
       {:des "Left cmd to trigger Vim Mode"
                :rules [[:condi :!vim_mode :!vim_navigation_mode]
-                       [:left_command :left_command nil {:alone :TURN_ON_VIM_AND_CLEAR_VARS}]]}
+                       ;[:left_command :left_command nil {:alone :TURN_ON_VIM_AND_CLEAR_VARS}]]}
+                       [:left_command :left_command nil {:alone :f13}]]}
+
 
         {:des "VIM MODE APPLICATION OVERRIDE: Omnifocus"
            :rules [[:condi :vim_mode :Omnifocus]
