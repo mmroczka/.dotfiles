@@ -17,7 +17,6 @@
                                                 "^org\\.vim\\."]
                 :Chromes                       ["^com\\.google\\.Chrome$", "^org\\.chromium\\.Chromium$", "^com\\.google\\.Chrome\\.canary$", "^com\\.brave\\.Browser"]
                 :Terminals                     ["^com\\.apple\\.Terminal$", "^com\\.googlecode\\.iterm2$", "^io\\.alacritty$"]
-                :Omnifocus                     ["^com\\.omnigroup\\.OmniFocus3$"]
                 :PyCharm                       ["^com\\.jetbrains\\.pycharm$"]
                 :Finder                       ["^com\\.apple\\.finder$"]
                }
@@ -119,35 +118,14 @@
              :spacebar_command_mode {:key :f24}
              }
  :main [
-        {:des "Swap alt and windows keys on dell keyboard"
-         :rules [:dell-keyboard
-                 [:left_option :left_command]
-                 [:right_option :right_command]
-                 [:left_command :left_option]
-                 [:right_command :right_option]
-                ]}
-
-        {:des "Caps -> Hyper / Esc"
-         :rules [[:condi :!vim_replace_mode :!launch_mode]
-                 [:##caps_lock :!!CTOleft_shift [:f13 ["escape_mode" 0]] ["escape_mode" 1]]
-                 [:##caps_lock :!!CTOleft_shift nil {:alone :escape :delayed {:invoked ["escape_mode" 0] :canceled ["escape_mode" 0]}}]
-                ]}
 
         {:des "FN from UHK" :rules [[:f23 :fn [:uhk-keyboard] ]]} ;* UHK FN as mac fn via UHK hardcoded f24 > fn in KE but only for uhk
 
         {:des   "shift+cmd+l types javascript: and hits enter hack" ;; https://superuser.com/a/324267
          :rules [ [:!CSl [:!Cl :j :a :v :a :s :c :r :i :p :t :!Ssemicolon :return_or_enter] :Chromes] ]}
-        ; {:des "Hold cmd+v for KM clipboard history"
-        ;  :rules [ [:!Cv nil nil {:alone :!Cv :held [:km "Activate Clipboard History Switcher"] :repeat false :halt true :params{:alone 150 :held 200}} ] ]}
 
 
 
-;; S  | left_shift
-;; F  | fn
-;; Q  | right_command
-;; W  | right_control
-;; E  | right_option
-;; R  | right_shift
         {:des "Only allow keys to use shift if it's the correct shift"
          :rules [
                  [:!Sa :vk_none] ; a
@@ -199,44 +177,8 @@
                  [:3 :!Ctab]
                  [:4 :!SCopen_bracket]
                  [:5 :!SCclose_bracket]
-
-                 ; [:t :!S9] ; (
-                 ; [:y :!S0] ; )
-
-                 ; [:r :open_bracket] ; [
-                 ; [:u :close_bracket] ; ]
-
-                 ; [:e :!Sopen_bracket] ; [
-                 ; [:i :!Sclose_bracket] ; ]
                  ]}
 
-        ; {:des "Activate space_mode by holding down spacebar"
-        ;  :rules [[:spacebar nil nil {:alone [:spacebar] :held ["space_mode" 1] :afterup {:set ["space_mode" 0]} :params {:alone 120 :held 50}}]
-
-        ;          :space_mode
-        ;          [:a :1]
-        ;          [:s :2]
-        ;          [:d :3]
-        ;          [:f :4]
-        ;          [:g :5]
-        ;          [:h :6]
-        ;          [:j :7]
-        ;          [:k :8]
-        ;          [:l :9]
-        ;          [:semicolon :0]
-
-        ;          [:t nil nil {:alone [:!S9] :held [:!S9 :!S0 :left_arrow] :repeat false :params {:held 120}}] ; (
-        ;          [:y :!S0] ; )
-
-        ;          [:r :open_bracket] ; [
-        ;          [:u :close_bracket] ; ]
-
-        ;          [:e :!Sopen_bracket] ; [
-        ;          [:i :!Sclose_bracket] ; ]
-
-        ;          [:condi :space_mode]
-        ;          [:anykey :vk_none]
-        ;          ]}
 
         {:des "Launch mode (l+;)" :rules [[{:sim [:l :semicolon]
                                      :simo {:interrupt true
@@ -253,9 +195,8 @@
                                           [:t [:km "open: iTerm"]]
                                           [:k [:km "open: Keyboard Maestro"]]
                                           [:m [:km "open: Omnifocus"]]
-                                          [:n [:km "open: Evernote"]]
+                                          [:n [:km "open: Notion"]]
                                           [:e [:km "open: Editor"]]
-                                          [:i :!TSC2]
                                           [:w [:km "open: BitWarden"]]
                                           [:s [:km "open: Slack"]]
                                           [:z [:km "open: Zeplin"]]
@@ -283,16 +224,6 @@
                        [:left_command :left_command nil {:alone :f13}]]}
 
 
-        {:des "VIM MODE APPLICATION OVERRIDE: Omnifocus"
-           :rules [[:condi :vim_mode :Omnifocus]
-;                   OMNIFOCUS SPECIFIC
-                    [:!Tj :!CTdown_arrow]
-                    [:!Tk :!CTup_arrow]
-                    [:!Th :!CTleft_arrow]
-                    [:!Tl :!CTright_arrow]
-                    [:!Tg :!COg]
-                    [:spacebar :spacebar :Omnifocus {:held :!COspacebar :repeat false :halt true :params{:alone 150 :held 200}}]
-                    ]}
 
         {:des "VIM MODE APPLICATION OVERRIDE: Finder"
            :rules [[:condi :vim_mode :Finder]
@@ -964,11 +895,6 @@
                     [:!Rx [:delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
                     [:y [:TURN_ON_VIM_AND_CLEAR_VARS :!Cc]]
 
-;                   OMNIFOCUS SPECIFIC
-                    [:!Tj :!CTdown_arrow :Omnifocus]
-                    [:!Tk :!CTup_arrow :Omnifocus]
-                    [:!Th :!CTleft_arrow :Omnifocus]
-                    [:!Tl :!CTright_arrow :Omnifocus]
 
                     [:condi :vim_visual_mode :any_key_not_defined_above]
                     [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
