@@ -216,8 +216,11 @@
 
       {:des "Caps -> Hyper / Esc"
                :rules [
-                 [:##caps_lock [:TURN_ON_VIM_AND_CLEAR_VARS :!!CTOleft_shift] ["escape_pressed_once" 1]]
-                 [:##caps_lock [["escape_pressed_once" 1] :!!CTOleft_shift] nil {:held :escape :delayed {:invoked [["escape_pressed_once" 0] :escape] :canceled [["escape_pressed_once" 0]] :params{:alone 50 :held 100 :delay 100}}}]
+                 [:##caps_lock :TURN_ON_VIM_AND_CLEAR_VARS [["esc_first_mode" 1] ["escape_pressed_once" 1]]]
+                 [:##caps_lock :escape [["esc_first_mode" 0] ["escape_pressed_once" 1]]]
+                 [:##caps_lock [["escape_pressed_once" 1] :!!CTOleft_shift] ["esc_first_mode" 1] {:held [["esc_first_mode" 0] [:km ["Escape Second"]]] :delayed {:invoked [:escape ["escape_pressed_once" 0]] :canceled [["escape_pressed_once" 0]] :params{:alone 50 :held 100 :delay 100}}}]
+                 [:##caps_lock [["escape_pressed_once" 1] :!!CTOleft_shift] ["esc_first_mode" 0] {:held [["esc_first_mode" 1] [:km ["Escape First"]]] :delayed {:invoked [:TURN_ON_VIM_AND_CLEAR_VARS ["escape_pressed_once" 0]] :canceled [["escape_pressed_once" 0]] :params{:alone 50 :held 100 :delay 100}}}]
+                 [:##caps_lock [["escape_pressed_once" 1] :!!CTOleft_shift] nil {:held [["esc_first_mode" 1] [:km ["Escape Second"]]] :delayed {:invoked [:TURN_ON_VIM_AND_CLEAR_VARS ["escape_pressed_once" 0] ] :canceled [["escape_pressed_once" 0]] :params{:alone 50 :held 100 :delay 100}}}]
                ]}
 
 
