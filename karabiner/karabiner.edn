@@ -99,8 +99,6 @@
                                {:set ["vim_visual_mode" 0]}
                                {:set ["vim_yank_mode" 0]}
                                ]
-       :TURN_ON_VIMAC [ {:set ["vimac_mode" 1]} ]
-       :TURN_OFF_VIMAC [ {:set ["vimac_mode" 0]} ]
        }
 
  :simlayers {:caps_lock-mode {:key :caps_lock}
@@ -123,8 +121,6 @@
 
         {:des   "shift+cmd+l types javascript: and hits enter hack" ;; https://superuser.com/a/324267
          :rules [ [:!CSl [:!Cl :j :a :v :a :s :c :r :i :p :t :!Ssemicolon :return_or_enter] :Chromes] ]}
-
-
 
         {:des "Only allow keys to use shift if it's the correct shift"
          :rules [
@@ -218,22 +214,11 @@
                                                                      ["vim_go_to_visual_mode" 0]
                                                                     ]}]]}
 
-;       {:des "Left cmd to trigger Vim Mode"
-;                :rules [[:condi :!vim_mode :!vim_navigation_mode]
-;                        ;[:left_command :left_command nil {:alone :TURN_ON_VIM_AND_CLEAR_VARS}]]}
-;                        [:left_command :left_command nil {:alone :f13}]]}
-
       {:des "Caps -> Hyper / Esc"
                :rules [
                  [:##caps_lock [:TURN_ON_VIM_AND_CLEAR_VARS :!!CTOleft_shift] ["escape_pressed_once" 1]]
                  [:##caps_lock [["escape_pressed_once" 1] :!!CTOleft_shift] nil {:held :escape :delayed {:invoked [["escape_pressed_once" 0] :escape] :canceled [["escape_pressed_once" 0]] :params{:alone 50 :held 100 :delay 100}}}]
                ]}
-
-      ; {:tkkkes "Caps -> Hyper / Esc"
-      ;          :rules [
-      ;            [:##caps_lock [:TURN_ON_VIM_AND_CLEAR_VARS :!!CTOleft_shift] ["escape_pressed_once" 1]]
-      ;            [:##caps_lock [["escape_pressed_once" 1] :!!CTOleft_shift] nil {:alone :escape :delayed {:invoked ["escape_pressed_once" 0] :canceled ["escape_pressed_once" 0]} :params{:alone 100 :held 500}}]
-      ;          ]}
 
 
         {:des "VIM MODE APPLICATION OVERRIDE: Finder"
