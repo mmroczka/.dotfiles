@@ -38,7 +38,8 @@
        :home_dir        [{:key :grave_accent_and_tilde :modi [:left_shift] :lazy true}
                                {:key :slash}]
 
-       :TURN_OFF_VIM [{:key :f18 :modi [:left_shift :left_option :left_command :left_control] :lazy true} ; CMD+SHIFT+CTRL+OPT+f18 toggles BetterTouchTool to restore screen to normal state
+       :TURN_OFF_VIM [
+                               {:shell "open -g hammerspoon://exitVimSpoon"}
                                {:set ["vim_mode" 0]}                                                 ; turn off vim mode
                                {:set ["any_key_not_defined_above" 0]}                                ; turn off deadkey variable
 
@@ -69,7 +70,8 @@
                                {:set ["vim_yank_mode" 0]}
                                ]
 
-       :TURN_ON_VIM_AND_CLEAR_VARS [{:key :f19 :modi [:left_shift :left_option :left_command :left_control] :lazy true} ; CMD+SHIFT+CTRL+OPT+f19 toggles BetterTouchTool to toggle screen to blue state
+       :TURN_ON_VIM_AND_CLEAR_VARS [
+                               {:shell "open -g hammerspoon://enterVimSpoon"}
                                {:set ["vim_mode" 1]}                                                 ; turn on vim mode
                                {:set ["any_key_not_defined_above" 1]}                                ; turn on deadkey variable
 
@@ -203,7 +205,7 @@
 
 
       {:des "Left Shift + Left Cmd -> VIM Navigation mode"
-               :rules [[:!Sleft_command :!Sleft_command nil {:alone [[:btt "vimMode NAVIGATION"]
+               :rules [[:!Sleft_command :!Sleft_command nil {:alone [[:hs ["enterNavigationMode"]]
                                                                      ["vim_navigation_mode" 1]
                                                                      ["any_key_not_defined_above" 1]
                                                                      ["vim_mode" 0]
@@ -214,7 +216,7 @@
                                                                      ["vim_go_to_visual_mode" 0]
                                                                     ]}]]}
 
-      {:des "Caps -> Hyper / Esc"
+         {:des "Caps -> Hyper / Esc"
                :rules [
                  [:##caps_lock :TURN_ON_VIM_AND_CLEAR_VARS [["esc_first_mode" 1] ["escape_pressed_once" 1]]]
                  [:##caps_lock :escape [["esc_first_mode" 0] ["escape_pressed_once" 1]]]
@@ -224,7 +226,7 @@
                ]}
 
 
-        {:des "VIM MODE APPLICATION OVERRIDE: Finder"
+         {:des "VIM MODE APPLICATION OVERRIDE: Finder"
            :rules [[:condi :vim_mode :Finder]
 ;                   FINDER SPECIFIC
                     [:x :!Cdelete_or_backspace]
@@ -236,33 +238,17 @@
         {:des "navigation mode"
            :rules [[:condi :vim_navigation_mode :!vim_desktop_navigation_mode]
                    [:c [:hs ["center"]]] ; center
-                   [:i [["vim_navigation_mode" 0] ["any_key_not_defined_above" 0] [:btt "vimMode INSERT"]]]
+                   [:i [["vim_navigation_mode" 0] ["any_key_not_defined_above" 0] [:hs "exitVimSpoon"]]]
 
-                   ; [:s ["vim_navigation_shrink_mode" 1] nil {:afterup ["vim_navigation_shrink_mode" 0] :repeat false :halt true}]
-                   ; [:g ["vim_navigation_grow_mode" 1] nil {:afterup ["vim_navigation_grow_mode" 0] :repeat false :halt true}]
                    [:s [:hs ["shrink"]]]
                    [:g [:hs ["enlarge"]]] ; g for grow
                    [:f [:hs ["fullScreen"]]] ; fullscreen
 
-                   ; [:h [:hs ["Window - Left"]] [:!vim_navigation_shrink_mode :!vim_navigation_grow_mode]] ; left
-                   ; [:j [:hs ["Window - Bottom"]] [:!vim_navigation_shrink_mode :!vim_navigation_grow_mode]] ; down
-                   ; [:k [:hs ["Window - Top"]] [:!vim_navigation_shrink_mode :!vim_navigation_grow_mode]] ; up
-                   ; [:l [:hs ["Window - Right"]] [:!vim_navigation_shrink_mode :!vim_navigation_grow_mode]] ; right
 
                    [:h [:hs ["leftHalf"]]] ; left
                    [:j [:hs ["bottomHalf"]]] ; down
                    [:k [:hs ["topHalf"]]] ; up
                    [:l [:hs ["rightHalf"]]] ; right
-
-                   ; [:h [:km ["Window - Shrink Left"]] :vim_navigation_shrink_mode] ; left
-                   ; [:j [:km ["Window - Shrink Bottom"]] :vim_navigation_shrink_mode] ; down
-                   ; [:k [:km ["Window - Shrink Top"]] :vim_navigation_shrink_mode] ; up
-                   ; [:l [:km ["Window - Shrink Right"]] :vim_navigation_shrink_mode] ; right
-
-                   ; [:h [:km ["Window - Grow Left"]] [:vim_navigation_grow_mode]] ; left
-                   ; [:j [:km ["Window - Grow Bottom"]] [:vim_navigation_grow_mode]] ; down
-                   ; [:k [:km ["Window - Grow Top"]] [:vim_navigation_grow_mode]] ; up
-                   ; [:l [:km ["Window - Grow Right"]] [:vim_navigation_grow_mode]] ; right
 
                    [:o [:hs ["topLeft"]]] ; TOP left
                    [:p [:hs ["topRight"]]] ; TOP right
@@ -782,18 +768,18 @@
 
                     [:u :!Cz]
                     [:!Tu [:up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow :up_arrow ]] ; go up 15 lines
-                    [:v [["vim_mode" 0] ["vim_visual_mode" 1] [:btt "vimMode VISUAL"]]]
+                    [:v [["vim_mode" 0] ["vim_visual_mode" 1] [:hs ["enterVimSpoonVisualMode"]]]]
                     [:!Sv [["vim_mode" 0]
                            ["vim_visual_mode" 0]
                            ["vim_visual_block_mode" 1]
-                           [:btt "vimMode V-LINE"] ; turn on Red Vim Dimmer
+                           [:hs ["enterVimSpoonVisualBlockMode"]] ; turn on Red Vim Dimmer
                            :!Cleft_arrow ; go the very left of the line
                            :!SCright_arrow] ; hold shift and go to very right of the line
                     ]
                     [:!Rv [["vim_mode" 0]
                            ["vim_visual_mode" 0]
                            ["vim_visual_block_mode" 1]
-                           [:btt "vimMode V-LINE"] ; turn on Red Vim Dimmer
+                           [:hs ["enterVimSpoonVisualBlockMode"]] ; turn on Red Vim Dimmer
                            :!Cleft_arrow ; go the very left of the line
                            :!SCright_arrow] ; hold shift and go to very right of the line
                     ]
@@ -834,7 +820,7 @@
                     [:!Ss [:!Cc [:km "surroundWith"] :TURN_OFF_VIM]]
                     [:!Rs [:!Cc [:km "surroundWith"] :TURN_OFF_VIM]]
                     [:!Tu [:!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow :!Sup_arrow ]] ; go down 15 lines
-                    [:v [["vim_mode" 0] ["vim_visual_mode" 1] ["vim_visual_block_mode" 0] [:btt "vimMode VISUAL"]]]
+                    [:v [["vim_mode" 0] ["vim_visual_mode" 1] ["vim_visual_block_mode" 0] [:hs ["enterVimSpoonVisualMode"]]]]
                     [:x :!Cdelete_or_backspace :Finder]
                     [:x [:delete_forward :delete_forward :TURN_ON_VIM_AND_CLEAR_VARS]]
                     [:!Sx [:delete_or_backspace :TURN_ON_VIM_AND_CLEAR_VARS]]
@@ -876,14 +862,14 @@
                     [:!Sv [["vim_mode" 0]
                            ["vim_visual_mode" 0]
                            ["vim_visual_block_mode" 1]
-                           [:btt "vimMode V-LINE"]; turn on Red Vim Dimmer
+                           [:hs ["enterVimSpoonVisualBlockMode"]]; turn on Red Vim Dimmer
                            :!Cleft_arrow ; go the very left of the line
                            :!SCright_arrow] ; hold shift and go to very right of the line
                     ]
                     [:!Rv [["vim_mode" 0]
                            ["vim_visual_mode" 0]
                            ["vim_visual_block_mode" 1]
-                           [:btt "vimMode V-LINE"] ; turn on Red Vim Dimmer
+                           [:hs ["enterVimSpoonVisualBlockMode"]] ; turn on Red Vim Dimmer
                            :!Cleft_arrow ; go the very left of the line
                            :!SCright_arrow] ; hold shift and go to very right of the line
                     ]
