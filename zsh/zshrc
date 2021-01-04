@@ -171,6 +171,21 @@ if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
 fi
 
+xrdscp4() {
+	scp -i $KEYFILE ${1} centos@10.233.194.15:/home/centos
+	#scp -i ~/.ssh/troot-dev-vir512.key ${1} centos@${OS_ENV_4}:/home/centos
+}
+
+function xrdrel() {
+  cd ~/src/git.soma.salesforce.com/mmroczka/matlock/package
+  ./package-kdb.sh; ./package-ksm.sh; ./package-rad.sh; ./package-val.sh;
+  cd ~/src/git.soma.salesforce.com/mmroczka/matlock
+  xrdscp${1} matlock-val*.rpm
+  xrdscp${1} matlock-kdb*.rpm
+  xrdscp${1} matlock-ksm*.rpm
+  xrdscp${1} matlock-rad*.rpm
+}
+
 # GOLANG Development settings!
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/opt/go/libexec
@@ -191,6 +206,12 @@ function gulshan() {
     --load-triage \
     --triage-file ${REPONAME}/sfdc_metadata/cred_scan_triage/${BRANCH}/triage.yaml \
     --generate-triage-file ${REPONAME}/sfdc_metadata/cred_scan_triage/${BRANCH}/triage.yaml )
+}
+
+function exportvar(){
+	varName=${1}
+	varValue=${2}
+	sed -i -e "s/export $varName=.*/export $varName=$varValue/" ~/.zshrc
 }
 
 # Source makana if it exists
@@ -219,4 +240,10 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+export git_token=1948e552d9777ebbe2643e1bcba090520e1f214f
+export GPG_TTY=$(tty)
+export OSTACKDEVIP=10.233.197.81
+export FARIA=10.233.194.15
+export KEYFILE=~/.ssh/id_rsa
 

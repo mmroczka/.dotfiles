@@ -19,4 +19,32 @@ unskip() { # remove --skip-worktree flag from file
 	git update-index --no-skip-worktree "$@";  git status;
 }
 
+log_into_authrad() {
+	osascript -e 'tell application "Keyboard Maestro Engine" to do script "Log Into Authrad"'
+	osascript -e 'tell application "Keyboard Maestro Engine" to do script "Clear Screen"'
+}
 
+log_into_authrad2() {
+	osascript -e 'tell application "Keyboard Maestro Engine" to do script "Log Into Authrad2"'
+	osascript -e 'tell application "Keyboard Maestro Engine" to do script "Clear Screen"'
+}
+
+log_into_authval() {
+	osascript -e 'tell application "Keyboard Maestro Engine" to do script "Log Into Authval"'
+	osascript -e 'tell application "Keyboard Maestro Engine" to do script "Clear Screen"'
+}
+
+log_into_authval2() {
+	osascript -e 'tell application "Keyboard Maestro Engine" to do script "Log Into Authval2"'
+	osascript -e 'tell application "Keyboard Maestro Engine" to do script "Clear Screen"'
+}
+
+log_into_puppet_dev() {
+	osascript -e 'tell application "Keyboard Maestro Engine" to do script "Log Into Puppet Dev"'
+	osascript -e 'tell application "Keyboard Maestro Engine" to do script "Clear Screen"'
+}
+
+log_into_compute7() {
+	osascript -e 'tell application "Keyboard Maestro Engine" to do script "Log Into Compute 7"'
+	osascript -e 'tell application "Keyboard Maestro Engine" to do script "Clear Screen"'
+}
