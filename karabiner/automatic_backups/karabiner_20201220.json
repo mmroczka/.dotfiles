@@ -182,6 +182,295 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Only allow keys to use shift if it's the correct shift",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "a",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "b",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "c",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "d",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "e",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "g",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "i",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "m",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "n",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "o",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "p",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "q",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "r",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "t",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "v",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "w",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "x",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "y",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "z",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "vk_none"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Hold cmd+v for PASTE2 clipboard history",
         "manipulators" : [ {
           "to_if_alone" : [ {
@@ -249,7 +538,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Quit application by pressing left ⌘ + q twice",
+        "description" : "Quit application by pressing ⌘q twice",
         "manipulators" : [ {
           "from" : {
             "key_code" : "q",
@@ -292,61 +581,6 @@
             "key_code" : "q",
             "modifiers" : {
               "mandatory" : [ "left_command" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "⌘q",
-              "value" : 1
-            }
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Quit application by pressing right ⌘ + q twice",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "q",
-            "modifiers" : {
-              "mandatory" : [ "right_command" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "q",
-            "modifiers" : [ "left_command" ]
-          }, {
-            "set_variable" : {
-              "name" : "⌘q",
-              "value" : 0
-            }
-          } ],
-          "conditions" : [ {
-            "name" : "⌘q",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "to_delayed_action" : {
-            "to_if_invoked" : [ {
-              "set_variable" : {
-                "name" : "⌘q",
-                "value" : 0
-              }
-            } ],
-            "to_if_canceled" : [ {
-              "set_variable" : {
-                "name" : "⌘q",
-                "value" : 0
-              }
-            } ]
-          },
-          "from" : {
-            "key_code" : "q",
-            "modifiers" : {
-              "mandatory" : [ "right_command" ],
               "optional" : [ "caps_lock" ]
             }
           },
@@ -1481,7 +1715,7 @@
         "description" : "Left Shift + Left Cmd -> VIM Navigation mode",
         "manipulators" : [ {
           "to_if_alone" : [ {
-            "shell_command" : "open -g hammerspoon://enterNavigationMode"
+            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"vimMode NAVIGATION\"'"
           }, {
             "set_variable" : {
               "name" : "vim_navigation_mode",
@@ -1545,7 +1779,9 @@
             }
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -1681,416 +1917,28 @@
               "name" : "vim_yank_mode",
               "value" : 0
             }
+          }, {
+            "key_code" : "left_shift",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "esc_first_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          }, {
             "name" : "escape_pressed_once",
             "value" : 1,
             "type" : "variable_if"
           } ],
           "type" : "basic"
         }, {
-          "from" : {
-            "key_code" : "caps_lock",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
+          "to_if_held_down" : [ {
             "key_code" : "escape"
           } ],
-          "conditions" : [ {
-            "name" : "esc_first_mode",
-            "value" : 0,
-            "type" : "variable_if"
-          }, {
-            "name" : "escape_pressed_once",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "to_if_held_down" : [ {
-            "set_variable" : {
-              "name" : "esc_first_mode",
-              "value" : 0
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Escape Second\"'"
-          } ],
           "to_delayed_action" : {
             "to_if_invoked" : [ {
+              "set_variable" : {
+                "name" : "escape_pressed_once",
+                "value" : 0
+              }
+            }, {
               "key_code" : "escape"
-            }, {
-              "set_variable" : {
-                "name" : "escape_pressed_once",
-                "value" : 0
-              }
-            } ],
-            "to_if_canceled" : [ {
-              "set_variable" : {
-                "name" : "escape_pressed_once",
-                "value" : 0
-              }
-            } ]
-          },
-          "from" : {
-            "key_code" : "caps_lock",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "escape_pressed_once",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "left_shift",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "esc_first_mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "to_if_held_down" : [ {
-            "set_variable" : {
-              "name" : "esc_first_mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Escape First\"'"
-          } ],
-          "to_delayed_action" : {
-            "to_if_invoked" : [ {
-              "shell_command" : "open -g hammerspoon://enterVimSpoon"
-            }, {
-              "set_variable" : {
-                "name" : "vim_mode",
-                "value" : 1
-              }
-            }, {
-              "set_variable" : {
-                "name" : "any_key_not_defined_above",
-                "value" : 1
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_change_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_delete_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_delete_till_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_find_char_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_from_change_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_from_delete_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_from_surround_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_from_visual_block_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_from_visual_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_from_yank_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_go_to_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_go_to_visual_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_in_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_indent_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_lowercase_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_movement_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_notification_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_outdent_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_replace_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_replace_single_letter_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_surround_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_uppercase_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_visual_block_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_visual_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_yank_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "escape_pressed_once",
-                "value" : 0
-              }
-            } ],
-            "to_if_canceled" : [ {
-              "set_variable" : {
-                "name" : "escape_pressed_once",
-                "value" : 0
-              }
-            } ]
-          },
-          "from" : {
-            "key_code" : "caps_lock",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "escape_pressed_once",
-              "value" : 1
-            }
-          }, {
-            "key_code" : "left_shift",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "esc_first_mode",
-            "value" : 0,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "to_if_held_down" : [ {
-            "set_variable" : {
-              "name" : "esc_first_mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Escape Second\"'"
-          } ],
-          "to_delayed_action" : {
-            "to_if_invoked" : [ {
-              "shell_command" : "open -g hammerspoon://enterVimSpoon"
-            }, {
-              "set_variable" : {
-                "name" : "vim_mode",
-                "value" : 1
-              }
-            }, {
-              "set_variable" : {
-                "name" : "any_key_not_defined_above",
-                "value" : 1
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_change_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_delete_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_delete_till_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_find_char_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_from_change_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_from_delete_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_from_surround_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_from_visual_block_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_from_visual_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_from_yank_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_go_to_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_go_to_visual_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_in_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_indent_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_lowercase_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_movement_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_notification_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_outdent_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_replace_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_replace_single_letter_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_surround_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_uppercase_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_visual_block_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_visual_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "vim_yank_mode",
-                "value" : 0
-              }
-            }, {
-              "set_variable" : {
-                "name" : "escape_pressed_once",
-                "value" : 0
-              }
             } ],
             "to_if_canceled" : [ {
               "set_variable" : {
@@ -2226,7 +2074,7 @@
               "value" : 0
             }
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"vimMode INSERT\"'"
           } ],
           "conditions" : [ {
             "name" : "vim_desktop_navigation_mode",
@@ -2450,7 +2298,9 @@
             "key_code" : "i"
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -2603,7 +2453,9 @@
             "key_code" : "escape"
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -2934,7 +2786,9 @@
             "any" : "key_code"
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -3089,7 +2943,9 @@
             "key_code" : "i"
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -3255,7 +3111,9 @@
           }, {
             "key_code" : "delete_or_backspace"
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -3405,7 +3263,9 @@
           "to" : [ {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"surroundWithChange\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -3692,7 +3552,9 @@
             "any" : "key_code"
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -3856,7 +3718,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -4013,7 +3877,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -4170,7 +4036,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -4327,7 +4195,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -4484,7 +4354,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -4641,7 +4513,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -4798,7 +4672,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -4955,7 +4831,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -5112,7 +4990,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -5269,7 +5149,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -5426,7 +5308,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -5583,7 +5467,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -5740,7 +5626,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -5897,7 +5785,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -6054,7 +5944,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -6211,7 +6103,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -6368,7 +6262,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -6525,7 +6421,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -6682,7 +6580,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -6839,7 +6739,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -6996,7 +6898,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -7153,7 +7057,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -7310,7 +7216,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -7467,7 +7375,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -7624,7 +7534,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -7781,7 +7693,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -7938,7 +7852,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -8095,7 +8011,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -8252,7 +8170,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -8409,7 +8329,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -8566,7 +8488,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -8723,7 +8647,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -8880,7 +8806,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -9037,7 +8965,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -9194,7 +9124,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -9351,7 +9283,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -9508,7 +9442,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -9665,7 +9601,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -9822,7 +9760,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -9979,7 +9919,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -10136,7 +10078,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -10293,7 +10237,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -10450,7 +10396,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -10607,7 +10555,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -10764,7 +10714,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -10921,7 +10873,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -11078,7 +11032,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -11238,7 +11194,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -11398,7 +11356,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -11558,7 +11518,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -11718,7 +11680,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -11878,7 +11842,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -12038,7 +12004,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -12198,7 +12166,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -12358,7 +12328,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -12518,7 +12490,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -12678,7 +12652,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -12838,7 +12814,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -12998,7 +12976,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -13158,7 +13138,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -13318,7 +13300,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -13478,7 +13462,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -13638,7 +13624,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -13798,7 +13786,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -13958,7 +13948,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -14118,7 +14110,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -14278,7 +14272,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -14438,7 +14434,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -14598,7 +14596,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -14758,7 +14758,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -14918,7 +14920,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -15078,7 +15082,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -15238,7 +15244,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -15398,7 +15406,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -15558,7 +15568,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -15718,7 +15730,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -15878,7 +15892,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -16038,7 +16054,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -16198,7 +16216,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -16358,7 +16378,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -16518,7 +16540,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -16678,7 +16702,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -16838,7 +16864,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -16998,7 +17026,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -17158,7 +17188,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -17318,7 +17350,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -17478,7 +17512,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -17638,7 +17674,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -17798,7 +17836,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -17958,7 +17998,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -18118,7 +18160,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -18278,7 +18322,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -18438,7 +18484,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -18598,7 +18646,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -18758,7 +18808,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -18918,7 +18970,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -19078,7 +19132,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -19238,7 +19294,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -19398,7 +19456,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -19558,7 +19618,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -19718,7 +19780,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -19878,7 +19942,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -20038,7 +20104,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -20198,7 +20266,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -20358,7 +20428,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -20518,7 +20590,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -20678,7 +20752,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -20838,7 +20914,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -20998,7 +21076,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -21158,7 +21238,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -21318,7 +21400,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -21478,7 +21562,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -21638,7 +21724,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -21798,7 +21886,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -21958,7 +22048,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -22118,7 +22210,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -22278,7 +22372,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -22438,7 +22534,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -22598,7 +22696,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -22758,7 +22858,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -22918,7 +23020,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -23078,7 +23182,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -23238,7 +23344,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -23398,7 +23506,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -23558,7 +23668,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -23718,7 +23830,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -23878,7 +23992,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -24038,7 +24154,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -24198,7 +24316,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -24358,7 +24478,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -24518,7 +24640,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -24678,7 +24802,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -24838,7 +24964,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -24998,7 +25126,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -25158,7 +25288,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -25318,7 +25450,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -25478,7 +25612,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -25638,7 +25774,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -25798,7 +25936,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -25958,7 +26098,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -26118,7 +26260,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"deleteTill\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -26405,7 +26549,9 @@
             "any" : "key_code"
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -26565,7 +26711,9 @@
           }, {
             "key_code" : "delete_or_backspace"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -26725,7 +26873,9 @@
           }, {
             "key_code" : "delete_forward"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -26880,7 +27030,9 @@
           }, {
             "key_code" : "delete_or_backspace"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -27035,7 +27187,9 @@
           }, {
             "key_code" : "delete_or_backspace"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -27185,7 +27339,9 @@
             "key_code" : "i"
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -27348,7 +27504,9 @@
           }, {
             "key_code" : "delete_or_backspace"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -27503,7 +27661,9 @@
           }, {
             "key_code" : "delete_or_backspace"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -27658,7 +27818,9 @@
           }, {
             "key_code" : "delete_or_backspace"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -27821,7 +27983,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"surroundWithDelete\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -27998,7 +28162,9 @@
           }, {
             "key_code" : "delete_or_backspace"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -28287,7 +28453,9 @@
             "any" : "key_code"
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -28450,7 +28618,9 @@
           }, {
             "key_code" : "delete_or_backspace"
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -28610,7 +28780,9 @@
           }, {
             "key_code" : "delete_or_backspace"
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -28771,7 +28943,9 @@
             "key_code" : "c",
             "modifiers" : [ "left_command" ]
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -28936,7 +29110,9 @@
           }, {
             "key_code" : "delete_or_backspace"
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -29102,7 +29278,9 @@
           }, {
             "key_code" : "left_arrow"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -29265,7 +29443,9 @@
           }, {
             "key_code" : "delete_or_backspace"
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -29426,7 +29606,9 @@
             "key_code" : "c",
             "modifiers" : [ "left_command" ]
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -29719,7 +29901,9 @@
             "any" : "key_code"
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -33115,7 +33299,9 @@
             "any" : "key_code"
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -33276,7 +33462,9 @@
             "key_code" : "c",
             "modifiers" : [ "left_command" ]
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -33432,7 +33620,9 @@
             "key_code" : "c",
             "modifiers" : [ "left_command" ]
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -33617,7 +33807,9 @@
             "key_code" : "c",
             "modifiers" : [ "left_command" ]
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -33906,7 +34098,9 @@
             "any" : "key_code"
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -34069,7 +34263,9 @@
           }, {
             "key_code" : "left_arrow"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -34225,7 +34421,9 @@
           }, {
             "key_code" : "right_arrow"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -34407,7 +34605,9 @@
           }, {
             "key_code" : "right_arrow"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -34563,7 +34763,9 @@
           }, {
             "key_code" : "left_arrow"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -34722,7 +34924,9 @@
           }, {
             "key_code" : "left_arrow"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -35030,7 +35234,9 @@
             "any" : "key_code"
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -35231,7 +35437,9 @@
               "value" : 0
             }
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -35370,7 +35578,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"uppercaseClipboardContentsThenPaste\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -35535,7 +35745,9 @@
               "value" : 0
             }
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -35674,7 +35886,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"uppercaseClipboardContentsThenPaste\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -35841,7 +36055,9 @@
               "value" : 0
             }
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -35980,7 +36196,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"lowercaseClipboardContentsThenPaste\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -36178,7 +36396,9 @@
               "value" : 0
             }
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -36317,7 +36537,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"uppercaseClipboardContentsThenPaste\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -36482,7 +36704,9 @@
               "value" : 0
             }
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -36621,7 +36845,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"uppercaseClipboardContentsThenPaste\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -36788,7 +37014,9 @@
               "value" : 0
             }
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -36927,7 +37155,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"lowercaseClipboardContentsThenPaste\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -37321,7 +37551,9 @@
             "any" : "key_code"
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -38007,7 +38239,9 @@
             "any" : "key_code"
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -38294,7 +38528,9 @@
             "key_code" : "slash"
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -38642,7 +38878,9 @@
           "to" : [ {
             "key_code" : "right_arrow"
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -38796,7 +39034,9 @@
             "key_code" : "right_arrow",
             "modifiers" : [ "left_command" ]
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -38950,7 +39190,9 @@
             "key_code" : "right_arrow",
             "modifiers" : [ "left_command" ]
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -39182,7 +39424,9 @@
           }, {
             "key_code" : "delete_or_backspace"
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -39338,7 +39582,9 @@
           }, {
             "key_code" : "delete_or_backspace"
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -39711,7 +39957,9 @@
             "key_code" : "i"
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -39865,7 +40113,9 @@
             "key_code" : "left_arrow",
             "modifiers" : [ "left_command" ]
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -40019,7 +40269,9 @@
             "key_code" : "left_arrow",
             "modifiers" : [ "left_command" ]
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -40259,7 +40511,9 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -40418,7 +40672,9 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -40571,7 +40827,9 @@
           }, {
             "key_code" : "return_or_enter"
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -40731,7 +40989,9 @@
           }, {
             "key_code" : "return_or_enter"
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -40891,7 +41151,9 @@
           }, {
             "key_code" : "return_or_enter"
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -41129,7 +41391,9 @@
             }
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -41285,7 +41549,9 @@
             }
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -41457,7 +41723,9 @@
           "to" : [ {
             "key_code" : "delete_forward"
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -41675,7 +41943,7 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoonVisualMode"
+            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"vimMode VISUAL\"'"
           } ],
           "conditions" : [ {
             "name" : "vim_mode",
@@ -41706,7 +41974,7 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoonVisualBlockMode"
+            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"vimMode V-LINE\"'"
           }, {
             "key_code" : "left_arrow",
             "modifiers" : [ "left_command" ]
@@ -41743,7 +42011,7 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoonVisualBlockMode"
+            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"vimMode V-LINE\"'"
           }, {
             "key_code" : "left_arrow",
             "modifiers" : [ "left_command" ]
@@ -42115,7 +42383,9 @@
             "key_code" : "open_bracket",
             "modifiers" : [ "left_command", "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -42306,7 +42576,9 @@
             "key_code" : "close_bracket",
             "modifiers" : [ "left_command", "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -42491,7 +42763,9 @@
             "key_code" : "d"
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -42757,7 +43031,9 @@
             "key_code" : "i"
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -42935,7 +43211,9 @@
             "key_code" : "c",
             "modifiers" : [ "left_command" ]
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -43117,7 +43395,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"surroundWith\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -43273,7 +43553,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"surroundWith\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -43495,7 +43777,7 @@
               "value" : 0
             }
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoonVisualMode"
+            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"vimMode VISUAL\"'"
           } ],
           "conditions" : [ {
             "name" : "vim_visual_block_mode",
@@ -43529,7 +43811,9 @@
           }, {
             "key_code" : "delete_forward"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -43682,7 +43966,9 @@
           "to" : [ {
             "key_code" : "delete_or_backspace"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -43830,7 +44116,9 @@
             "key_code" : "y"
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -44146,7 +44434,9 @@
             "key_code" : "open_bracket",
             "modifiers" : [ "left_command", "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -44337,7 +44627,9 @@
             "key_code" : "close_bracket",
             "modifiers" : [ "left_command", "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -44729,7 +45021,9 @@
             "key_code" : "i"
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -44922,7 +45216,9 @@
             "key_code" : "v",
             "modifiers" : [ "left_command" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -45078,7 +45374,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"surroundWith\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -45234,7 +45532,9 @@
           }, {
             "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"surroundWith\"'"
           }, {
-            "shell_command" : "open -g hammerspoon://exitVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f18",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -45441,7 +45741,9 @@
             "key_code" : "v"
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -45607,7 +45909,7 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoonVisualBlockMode"
+            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"vimMode V-LINE\"'"
           }, {
             "key_code" : "left_arrow",
             "modifiers" : [ "left_command" ]
@@ -45644,7 +45946,7 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoonVisualBlockMode"
+            "shell_command" : "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"vimMode V-LINE\"'"
           }, {
             "key_code" : "left_arrow",
             "modifiers" : [ "left_command" ]
@@ -45699,7 +46001,9 @@
           "to" : [ {
             "key_code" : "delete_forward"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -45852,7 +46156,9 @@
           "to" : [ {
             "key_code" : "delete_or_backspace"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -46005,7 +46311,9 @@
           "to" : [ {
             "key_code" : "delete_or_backspace"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -46153,7 +46461,9 @@
             "key_code" : "y"
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -46486,7 +46796,9 @@
           }, {
             "key_code" : "b"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -46638,7 +46950,9 @@
           }, {
             "key_code" : "c"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -46790,7 +47104,9 @@
           }, {
             "key_code" : "d"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -46942,7 +47258,9 @@
           }, {
             "key_code" : "e"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -47094,7 +47412,9 @@
           }, {
             "key_code" : "f"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -47246,7 +47566,9 @@
           }, {
             "key_code" : "g"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -47398,7 +47720,9 @@
           }, {
             "key_code" : "h"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -47550,7 +47874,9 @@
           }, {
             "key_code" : "i"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -47702,7 +48028,9 @@
           }, {
             "key_code" : "j"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -47854,7 +48182,9 @@
           }, {
             "key_code" : "k"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -48006,7 +48336,9 @@
           }, {
             "key_code" : "l"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -48158,7 +48490,9 @@
           }, {
             "key_code" : "m"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -48310,7 +48644,9 @@
           }, {
             "key_code" : "n"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -48462,7 +48798,9 @@
           }, {
             "key_code" : "o"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -48614,7 +48952,9 @@
           }, {
             "key_code" : "p"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -48766,7 +49106,9 @@
           }, {
             "key_code" : "q"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -48918,7 +49260,9 @@
           }, {
             "key_code" : "r"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -49070,7 +49414,9 @@
           }, {
             "key_code" : "s"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -49222,7 +49568,9 @@
           }, {
             "key_code" : "t"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -49374,7 +49722,9 @@
           }, {
             "key_code" : "u"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -49526,7 +49876,9 @@
           }, {
             "key_code" : "v"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -49678,7 +50030,9 @@
           }, {
             "key_code" : "w"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -49830,7 +50184,9 @@
           }, {
             "key_code" : "x"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -49982,7 +50338,9 @@
           }, {
             "key_code" : "y"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -50134,7 +50492,9 @@
           }, {
             "key_code" : "z"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -50290,7 +50650,9 @@
             "key_code" : "a",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -50446,7 +50808,9 @@
             "key_code" : "b",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -50602,7 +50966,9 @@
             "key_code" : "c",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -50758,7 +51124,9 @@
             "key_code" : "d",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -50914,7 +51282,9 @@
             "key_code" : "e",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -51070,7 +51440,9 @@
             "key_code" : "f",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -51226,7 +51598,9 @@
             "key_code" : "g",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -51382,7 +51756,9 @@
             "key_code" : "h",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -51538,7 +51914,9 @@
             "key_code" : "i",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -51695,7 +52073,9 @@
             "key_code" : "j",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -51851,7 +52231,9 @@
             "key_code" : "k",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -52007,7 +52389,9 @@
             "key_code" : "l",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -52163,7 +52547,9 @@
             "key_code" : "m",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -52319,7 +52705,9 @@
             "key_code" : "n",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -52475,7 +52863,9 @@
             "key_code" : "o",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -52631,7 +53021,9 @@
             "key_code" : "p",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -52787,7 +53179,9 @@
             "key_code" : "q",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -52943,7 +53337,9 @@
             "key_code" : "r",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -53099,7 +53495,9 @@
             "key_code" : "s",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -53255,7 +53653,9 @@
             "key_code" : "t",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -53411,7 +53811,9 @@
             "key_code" : "u",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -53567,7 +53969,9 @@
             "key_code" : "v",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -53723,7 +54127,9 @@
             "key_code" : "w",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -53879,7 +54285,9 @@
             "key_code" : "x",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -54035,7 +54443,9 @@
             "key_code" : "y",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -54191,7 +54601,9 @@
             "key_code" : "z",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -54347,7 +54759,9 @@
             "key_code" : "a",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -54503,7 +54917,9 @@
             "key_code" : "b",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -54659,7 +55075,9 @@
             "key_code" : "c",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -54815,7 +55233,9 @@
             "key_code" : "d",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -54971,7 +55391,9 @@
             "key_code" : "e",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -55127,7 +55549,9 @@
             "key_code" : "f",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -55283,7 +55707,9 @@
             "key_code" : "g",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -55439,7 +55865,9 @@
             "key_code" : "h",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -55595,7 +56023,9 @@
             "key_code" : "i",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -55752,7 +56182,9 @@
             "key_code" : "j",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -55908,7 +56340,9 @@
             "key_code" : "k",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -56064,7 +56498,9 @@
             "key_code" : "l",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -56220,7 +56656,9 @@
             "key_code" : "m",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -56376,7 +56814,9 @@
             "key_code" : "n",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -56532,7 +56972,9 @@
             "key_code" : "o",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -56688,7 +57130,9 @@
             "key_code" : "p",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -56844,7 +57288,9 @@
             "key_code" : "q",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -57000,7 +57446,9 @@
             "key_code" : "r",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -57156,7 +57604,9 @@
             "key_code" : "s",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -57312,7 +57762,9 @@
             "key_code" : "t",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -57468,7 +57920,9 @@
             "key_code" : "u",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -57624,7 +58078,9 @@
             "key_code" : "v",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -57780,7 +58236,9 @@
             "key_code" : "w",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -57936,7 +58394,9 @@
             "key_code" : "x",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -58092,7 +58552,9 @@
             "key_code" : "y",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -58248,7 +58710,9 @@
             "key_code" : "z",
             "modifiers" : [ "right_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -58400,7 +58864,9 @@
           }, {
             "key_code" : "grave_accent_and_tilde"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -58552,7 +59018,9 @@
           }, {
             "key_code" : "1"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -58704,7 +59172,9 @@
           }, {
             "key_code" : "2"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -58856,7 +59326,9 @@
           }, {
             "key_code" : "3"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -59008,7 +59480,9 @@
           }, {
             "key_code" : "4"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -59160,7 +59634,9 @@
           }, {
             "key_code" : "5"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -59312,7 +59788,9 @@
           }, {
             "key_code" : "6"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -59464,7 +59942,9 @@
           }, {
             "key_code" : "7"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -59616,7 +60096,9 @@
           }, {
             "key_code" : "8"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -59768,7 +60250,9 @@
           }, {
             "key_code" : "9"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -59920,7 +60404,9 @@
           }, {
             "key_code" : "0"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -60072,7 +60558,9 @@
           }, {
             "key_code" : "hyphen"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -60224,7 +60712,9 @@
           }, {
             "key_code" : "equal_sign"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -60376,7 +60866,9 @@
           }, {
             "key_code" : "open_bracket"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -60528,7 +61020,9 @@
           }, {
             "key_code" : "close_bracket"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -60680,7 +61174,9 @@
           }, {
             "key_code" : "backslash"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -60832,7 +61328,9 @@
           }, {
             "key_code" : "semicolon"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -60984,7 +61482,9 @@
           }, {
             "key_code" : "quote"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -61136,7 +61636,9 @@
           }, {
             "key_code" : "comma"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -61288,7 +61790,9 @@
           }, {
             "key_code" : "period"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -61440,7 +61944,9 @@
           }, {
             "key_code" : "slash"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -61592,7 +62098,9 @@
           }, {
             "key_code" : "spacebar"
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -61748,7 +62256,9 @@
             "key_code" : "grave_accent_and_tilde",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -61904,7 +62414,9 @@
             "key_code" : "1",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -62060,7 +62572,9 @@
             "key_code" : "2",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -62216,7 +62730,9 @@
             "key_code" : "3",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -62372,7 +62888,9 @@
             "key_code" : "4",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -62528,7 +63046,9 @@
             "key_code" : "5",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -62684,7 +63204,9 @@
             "key_code" : "6",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -62840,7 +63362,9 @@
             "key_code" : "7",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -62996,7 +63520,9 @@
             "key_code" : "8",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -63152,7 +63678,9 @@
             "key_code" : "9",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -63308,7 +63836,9 @@
             "key_code" : "0",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -63464,7 +63994,9 @@
             "key_code" : "hyphen",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -63620,7 +64152,9 @@
             "key_code" : "equal_sign",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -63776,7 +64310,9 @@
             "key_code" : "open_bracket",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -63932,7 +64468,9 @@
             "key_code" : "close_bracket",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -64088,7 +64626,9 @@
             "key_code" : "backslash",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -64244,7 +64784,9 @@
             "key_code" : "semicolon",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -64400,7 +64942,9 @@
             "key_code" : "quote",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -64556,7 +65100,9 @@
             "key_code" : "comma",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -64712,7 +65258,9 @@
             "key_code" : "period",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -64868,7 +65416,9 @@
             "key_code" : "slash",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -65024,7 +65574,9 @@
             "key_code" : "spacebar",
             "modifiers" : [ "left_shift" ]
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -65172,7 +65724,9 @@
             "key_code" : "caps_lock"
           },
           "to" : [ {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -67456,7 +68010,9 @@
               "value" : 0
             }
           }, {
-            "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            "modifiers" : [ "left_shift", "left_option", "left_command", "left_control" ],
+            "key_code" : "f19",
+            "lazy" : true
           }, {
             "set_variable" : {
               "name" : "vim_mode",
@@ -67990,6 +68546,59 @@
               "key_code" : "semicolon"
             }, {
               "key_code" : "d"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "semicolon_mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        } ]
+      }, {
+        "description" : "Semicolon mode g -> Toggle Noizio on/off",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "g",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "0",
+            "modifiers" : [ "left_command", "left_control", "left_option" ]
+          } ],
+          "conditions" : [ {
+            "name" : "semicolon_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 150
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "semicolon_mode",
+              "value" : 1
+            }
+          }, {
+            "key_code" : "0",
+            "modifiers" : [ "left_command", "left_control", "left_option" ]
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "semicolon"
+            }, {
+              "key_code" : "g"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,
@@ -70155,295 +70764,6 @@
               } ]
             }
           }
-        } ]
-      }, {
-        "description" : "Only allow keys to use shift if it's the correct shift",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "a",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "b",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "c",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "d",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "e",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "f",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "g",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "h",
-            "modifiers" : {
-              "mandatory" : [ "right_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "i",
-            "modifiers" : {
-              "mandatory" : [ "right_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "j",
-            "modifiers" : {
-              "mandatory" : [ "right_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "k",
-            "modifiers" : {
-              "mandatory" : [ "right_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "l",
-            "modifiers" : {
-              "mandatory" : [ "right_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "m",
-            "modifiers" : {
-              "mandatory" : [ "right_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "n",
-            "modifiers" : {
-              "mandatory" : [ "right_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "o",
-            "modifiers" : {
-              "mandatory" : [ "right_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "p",
-            "modifiers" : {
-              "mandatory" : [ "right_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "q",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "r",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "s",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "t",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "u",
-            "modifiers" : {
-              "mandatory" : [ "right_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "v",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "w",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "x",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "y",
-            "modifiers" : {
-              "mandatory" : [ "right_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "z",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "vk_none"
-          } ],
-          "type" : "basic"
         } ]
       } ]
     },

@@ -5,3 +5,4 @@ To set up Mac environment, make sure ./setup_mac is an executable and then run i
 * iTerm2
 * dotfiles
 
+
