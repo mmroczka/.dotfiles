@@ -241,7 +241,6 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 
-export git_token=1948e552d9777ebbe2643e1bcba090520e1f214f
 export GPG_TTY=$(tty)
 export OSTACKDEVIP=10.233.197.81
 export FARIA=10.233.194.15
