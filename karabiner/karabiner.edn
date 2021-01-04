@@ -118,41 +118,11 @@
              :spacebar_command_mode {:key :f24}
              }
  :main [
-       
+
         {:des "FN from UHK" :rules [[:f23 :fn [:uhk-keyboard] ]]} ;* UHK FN as mac fn via UHK hardcoded f24 > fn in KE but only for uhk
 
         {:des   "shift+cmd+l types javascript: and hits enter hack" ;; https://superuser.com/a/324267
          :rules [ [:!CSl [:!Cl :j :a :v :a :s :c :r :i :p :t :!Ssemicolon :return_or_enter] :Chromes] ]}
-
-        {:des "Only allow keys to use shift if it's the correct shift"
-         :rules [
-                 [:!Sa :vk_none] ; a
-                 [:!Sb :vk_none] ; b
-                 [:!Sc :vk_none] ; c
-                 [:!Sd :vk_none] ; d
-                 [:!Se :vk_none] ; e
-                 [:!Sf :vk_none] ; f
-                 [:!Sg :vk_none] ; g
-                 [:!Rh :vk_none] ; h
-                 [:!Ri :vk_none] ; i
-                 [:!Rj :vk_none] ; j
-                 [:!Rk :vk_none] ; k
-                 [:!Rl :vk_none] ; l
-                 [:!Rm :vk_none] ; m
-                 [:!Rn :vk_none] ; n
-                 [:!Ro :vk_none] ; o
-                 [:!Rp :vk_none] ; p
-                 [:!Sq :vk_none] ; q
-                 [:!Sr :vk_none] ; r
-                 [:!Ss :vk_none] ; s
-                 [:!St :vk_none] ; t
-                 [:!Ru :vk_none] ; u
-                 [:!Sv :vk_none] ; v
-                 [:!Sw :vk_none] ; w
-                 [:!Sx :vk_none] ; x
-                 [:!Ry :vk_none] ; y
-                 [:!Sz :vk_none] ; z
-                 ]}
 
         {:des "Hold cmd+v for PASTE2 clipboard history"
          :rules [ [:!Cv nil nil {:alone :!Cv :held :!TSz :repeat false :halt true :params{:alone 150 :held 200}} ] ]}
@@ -162,8 +132,10 @@
          :rules [[:left_option :left_option nil {:alone [:km "If Exists Trigger Action Menu"]}]]}
         {:des "Right option -> Cardhop"
          :rules [[:right_option :right_option nil {:alone :!OCT1}]]}
-        {:des "Quit application by pressing ⌘q twice" :rules[ [:!C#Pq [:!Cq ["⌘q" 0]] ["⌘q" 1]]
+        {:des "Quit application by pressing left ⌘ + q twice" :rules[ [:!C#Pq [:!Cq ["⌘q" 0]] ["⌘q" 1]]
 			[:!C#Pq ["⌘q" 1] nil {:delayed {:invoked ["⌘q" 0] :canceled ["⌘q" 0]}}] ]}
+        {:des "Quit application by pressing right ⌘ + q twice" :rules[ [:!Q#Pq [:!Cq ["⌘q" 0]] ["⌘q" 1]]
+			[:!Q#Pq ["⌘q" 1] nil {:delayed {:invoked ["⌘q" 0] :canceled ["⌘q" 0]}}] ]}
         {:des "Double colon triggers emoji search" :rules[ [:!Ssemicolon [:delete_or_backspace :!TCspacebar ["emoji_mode" 0]] ["emoji_mode" 1]]
 			[:!Ssemicolon ["emoji_mode" 1] nil {:alone :!Ssemicolon :delayed {:invoked ["emoji_mode" 0] :canceled ["emoji_mode" 0]}}] ]}
 
@@ -951,7 +923,6 @@
                                             :afterup {:set ["semicolon_mode" 0]}}} {:set ["semicolon_mode" 1]}]]}
         {:des "Semicolon mode f -> Volume Up" :rules [:semicolon_mode [:##f :volume_increment]]}
         {:des "Semicolon mode d -> Volume Down" :rules [:semicolon_mode [:##d :volume_decrement]]}
-        {:des "Semicolon mode g -> Toggle Noizio on/off" :rules [:semicolon_mode [:##g :!OCT0]]}
         {:des "Semicolon mode a -> Mute" :rules [:semicolon_mode [:##a :mute]]}
         {:des "Semicolon mode r -> Brightness Up" :rules [:semicolon_mode [:##r :display_brightness_increment]]}
         {:des "Semicolon mode e -> Brightness Down" :rules [:semicolon_mode [:##e :display_brightness_decrement]]}
@@ -1005,6 +976,36 @@
         {:des "CHANGE mode r" :rules [:change_mode [:##r [:km "hotkey: change_mode+r"]]]}
         {:des "CHANGE mode s" :rules [:change_mode [:##s [:km "hotkey: change_mode+s"]]]}
         {:des "CHANGE mode t" :rules [:change_mode [:##t [:km "hotkey: change_mode+t"]]]}
+
+        {:des "Only allow keys to use shift if it's the correct shift"
+         :rules [
+                 [:!Sa :vk_none] ; a
+                 [:!Sb :vk_none] ; b
+                 [:!Sc :vk_none] ; c
+                 [:!Sd :vk_none] ; d
+                 [:!Se :vk_none] ; e
+                 [:!Sf :vk_none] ; f
+                 [:!Sg :vk_none] ; g
+                 [:!Rh :vk_none] ; h
+                 [:!Ri :vk_none] ; i
+                 [:!Rj :vk_none] ; j
+                 [:!Rk :vk_none] ; k
+                 [:!Rl :vk_none] ; l
+                 [:!Rm :vk_none] ; m
+                 [:!Rn :vk_none] ; n
+                 [:!Ro :vk_none] ; o
+                 [:!Rp :vk_none] ; p
+                 [:!Sq :vk_none] ; q
+                 [:!Sr :vk_none] ; r
+                 [:!Ss :vk_none] ; s
+                 [:!St :vk_none] ; t
+                 [:!Ru :vk_none] ; u
+                 [:!Sv :vk_none] ; v
+                 [:!Sw :vk_none] ; w
+                 [:!Sx :vk_none] ; x
+                 [:!Ry :vk_none] ; y
+                 [:!Sz :vk_none] ; z
+                 ]}
 
 
 ]
