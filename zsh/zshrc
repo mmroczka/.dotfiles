@@ -46,8 +46,8 @@ antigen apply
 export ZSH=/Users/$USER/.oh-my-zsh
 export PATH=$HOME/bin:/usr/local/bin:~/.composer/vendor/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
-export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 export PATH="/usr/local/opt/gettext/bin:$PATH"
+export PATH="/Applications/calibre.app/Contents/MacOS:$PATH"
 # export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # export VISUAL=nvim
 # export EDITOR="$VISUAL"
