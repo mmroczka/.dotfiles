@@ -3,6 +3,7 @@ tags
 node/work_npmrc
 .DS_Store
 hammerspoon/Spoons/Lunette.spoon
+hammerspoon/Spoons/VimSpoon.spoon
 karabiner/karabiner.json
 karabiner/automatic_backups/karabiner_20201112.json
 karabiner/karabiner.json
