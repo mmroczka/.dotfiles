@@ -12,6 +12,3 @@
 [submodule "dotbot-brew"]
 	path = dotbot-brew
 	url = https://github.com/d12frosted/dotbot-brew.git
-[submodule "hammerspoon/Spoons/Lunette"]
-	path = hammerspoon/Spoons/Lunette
-	url = git@personal.github.com:mmroczka/Lunette.git
