@@ -30,7 +30,8 @@
     ~/.functions: functions
     ~/.gitignore_global: git/gitignore_global
     ~/.hammerspoon: hammerspoon
-    ~/.hammerspoon/Spoons/Lunette.spoon: Spoons/Lunette/Spoons/Lunette.spoon
+    ~/.hammerspoon/Spoons/Lunette.spoon: hammerspoon/Spoons/Lunette/Spoons/Lunette.spoon
+    ~/.hammerspoon/Spoons/VimSpoon.spoon: hammerspoon/Spoons/VimSpoon/VimSpoon.spoon
     ~/.npmrc: node/work_npmrc
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
