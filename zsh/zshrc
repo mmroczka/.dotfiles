@@ -1,23 +1,23 @@
-source ~/.proxy_url
-# Turns Proxy on
-proxy() {
-    export HTTP_PROXY=$PROXY_URL
-    export HTTPS_PROXY=$PROXY_URL
-    export HTTP_PROXY=$PROXY_URL
-    export HTTPS_PROXY=$PROXY_URL
-    export NO_PROXY=.ge.com,localhost,127.0.0.1,204.130.41.105*
-	npm config set PROXY $PROXY_URL
-	npm config set HTTPS-PROXY $PROXY_URL
-}
+# source ~/.proxy_url
+# # Turns Proxy on
+# proxy() {
+#     export HTTP_PROXY=$PROXY_URL
+#     export HTTPS_PROXY=$PROXY_URL
+#     export HTTP_PROXY=$PROXY_URL
+#     export HTTPS_PROXY=$PROXY_URL
+#     export NO_PROXY=.ge.com,localhost,127.0.0.1,204.130.41.105*
+# 	npm config set PROXY $PROXY_URL
+# 	npm config set HTTPS-PROXY $PROXY_URL
+# }
 
-# Turns Proxy off
-noproxy() {
-    unset HTTP_PROXY
-    unset HTTPS_PROXY
-    unset HTTP_PROXY
-    unset HTTPS_PROXY
-    unset NO_PROXY
-}
+# # Turns Proxy off
+# noproxy() {
+#     unset HTTP_PROXY
+#     unset HTTPS_PROXY
+#     unset HTTP_PROXY
+#     unset HTTPS_PROXY
+#     unset NO_PROXY
+# }
 
 
 # Package Manager
@@ -53,6 +53,7 @@ export PATH="/Applications/calibre.app/Contents/MacOS:$PATH"
 # export EDITOR="$VISUAL"
 # export NVM_AUTO_USE=true
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 HYPHEN_INSENSITIVE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=white'
