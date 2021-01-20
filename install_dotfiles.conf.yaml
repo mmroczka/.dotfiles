@@ -29,6 +29,9 @@
     ~/.commands: commands
     ~/.functions: functions
     ~/.gitignore_global: git/gitignore_global
+    ~/.gitconfig: git/gitconfig
+    ~/.gitconfig_personal: git/gitconfig_personal
+    ~/.gitconfig_salesforce: git/gitconfig_salesforce
     ~/.hammerspoon: hammerspoon
     ~/.hammerspoon/Spoons/Lunette.spoon: hammerspoon/Spoons/Lunette/Spoons/Lunette.spoon
     ~/.hammerspoon/Spoons/VimSpoon.spoon: hammerspoon/Spoons/VimSpoon/VimSpoon.spoon
