@@ -188,26 +188,26 @@ function xrdrel() {
 }
 
 # GOLANG Development settings!
-export GOPATH=$HOME/go
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
-# export GOROOT=/usr/local/Cellar/
 # export GOPATH=$HOME/go
-export PATH=/usr/local/sbin:$PATH:$GOPATH/bin:$GOROOT/bin
-export GOBIN=$GOPATH/bin
-function gulshan() {
-  BRANCH=$(git rev-parse --abbrev-ref HEAD)
-  REPONAME=${PWD##*/}
-  mkdir -p ./sfdc_metadata/cred_scan_triage/${BRANCH}
-  touch ./sfdc_metadata/cred_scan_triage/${BRANCH}/triage.yaml
-  (cd ..; ~/grover scanLocalGitRepo \
-    --commit-depth 1 \
-    --repo-dir ${REPONAME} \
-    --load-triage \
-    --triage-file ${REPONAME}/sfdc_metadata/cred_scan_triage/${BRANCH}/triage.yaml \
-    --generate-triage-file ${REPONAME}/sfdc_metadata/cred_scan_triage/${BRANCH}/triage.yaml )
-}
+# export GOROOT=/usr/local/opt/go/libexec
+# export PATH=$PATH:$GOPATH/bin
+# export PATH=$PATH:$GOROOT/bin
+# # export GOROOT=/usr/local/Cellar/
+# # export GOPATH=$HOME/go
+# export PATH=/usr/local/sbin:$PATH:$GOPATH/bin:$GOROOT/bin
+# export GOBIN=$GOPATH/bin
+# function gulshan() {
+#   BRANCH=$(git rev-parse --abbrev-ref HEAD)
+#   REPONAME=${PWD##*/}
+#   mkdir -p ./sfdc_metadata/cred_scan_triage/${BRANCH}
+#   touch ./sfdc_metadata/cred_scan_triage/${BRANCH}/triage.yaml
+#   (cd ..; ~/grover scanLocalGitRepo \
+#     --commit-depth 1 \
+#     --repo-dir ${REPONAME} \
+#     --load-triage \
+#     --triage-file ${REPONAME}/sfdc_metadata/cred_scan_triage/${BRANCH}/triage.yaml \
+#     --generate-triage-file ${REPONAME}/sfdc_metadata/cred_scan_triage/${BRANCH}/triage.yaml )
+# }
 
 function exportvar(){
 	varName=${1}
@@ -243,7 +243,5 @@ unset __conda_setup
 
 
 export GPG_TTY=$(tty)
-export OSTACKDEVIP=10.233.197.81
-export FARIA=10.233.194.15
 export KEYFILE=~/.ssh/id_rsa
-
+source ~/Code/salesforce/makana-platform/bin/makana
