@@ -48,11 +48,14 @@ export PATH=$HOME/bin:/usr/local/bin:~/.composer/vendor/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 export PATH="/Applications/calibre.app/Contents/MacOS:$PATH"
-# export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # export VISUAL=nvim
 # export EDITOR="$VISUAL"
 # export NVM_AUTO_USE=true
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Add makana to PATH if it exists
+if [ -d ~/Code/salesforce/makana-platform/ ]; then
+    source $HOME/Code/salesforce/makana-platform/bin/makana > /dev/null 2>&1
+fi
 
 HYPHEN_INSENSITIVE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
@@ -153,7 +156,7 @@ cip() {
 
   if [[ $inst ]]; then
     for prog in $(echo $inst);
-    do; brew cask install $prog; done;
+    do; brew install --cask $prog; done;
   fi
 }
 
@@ -244,4 +247,3 @@ unset __conda_setup
 
 export GPG_TTY=$(tty)
 export KEYFILE=~/.ssh/id_rsa
-source ~/Code/salesforce/makana-platform/bin/makana

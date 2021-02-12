@@ -14,10 +14,13 @@
                 ; you can find these com.* package names using Karabiner Viewer tool installed by default with Karabiner
                 :vim-mode-disabled-application ["^com\\.apple\\.Terminal$",
                                                 "^com\\.googlecode\\.iterm2$",
-                                                "^org\\.vim\\."]
+                                                "^com\\.microsoft\\.VSCode$",
+                                                "^org\\.vim\\.",
+                                                ]
                 :Chromes                       ["^com\\.google\\.Chrome$", "^org\\.chromium\\.Chromium$", "^com\\.google\\.Chrome\\.canary$", "^com\\.brave\\.Browser"]
                 :Terminals                     ["^com\\.apple\\.Terminal$", "^com\\.googlecode\\.iterm2$", "^io\\.alacritty$"]
                 :PyCharm                       ["^com\\.jetbrains\\.pycharm$"]
+                :Notion                       ["^notion\\.id$"]
                 :Finder                       ["^com\\.apple\\.finder$"]
                }
  :templates {
@@ -39,7 +42,7 @@
                                {:key :slash}]
 
        :TURN_OFF_VIM [
-                               {:shell "open -g hammerspoon://exitVimSpoon"}
+                               {:shell "open -g hammerspoon://enterVimSpoonInsertMode"}
                                {:set ["vim_mode" 0]}                                                 ; turn off vim mode
                                {:set ["any_key_not_defined_above" 0]}                                ; turn off deadkey variable
 
@@ -126,6 +129,8 @@
 
         {:des "Hold cmd+v for PASTE2 clipboard history"
          :rules [ [:!Cv nil nil {:alone :!Cv :held :!TSz :repeat false :halt true :params{:alone 150 :held 200}} ] ]}
+        {:des "Hold cmd+c for PASTE2 clipboard stack"
+         :rules [ [:!Cc nil nil {:alone :!Cc :held :!TOSz :repeat false :halt true :params{:alone 150 :held 200}} ] ]}
         {:des "Right cmd -> Alfred"
          :rules [[:right_command :right_command nil {:alone :!CTOSspacebar}]]}
         {:des "Left option -> KM: If Exists Trigger Action Menu"
@@ -147,6 +152,11 @@
                  [:3 :!Ctab]
                  [:4 :!SCopen_bracket]
                  [:5 :!SCclose_bracket]
+
+                 [:7 :!SCOopen_bracket]
+                 [:8 :!SCOclose_bracket]
+                 [:9 :!COopen_bracket]
+                 [:0 :!COclose_bracket]
                 ]}
 
 
@@ -182,19 +192,35 @@
                                                                      ["any_key_not_defined_above" 1]
                                                                      ["vim_mode" 0]
                                                                      ["vim_visual_mode" 0]
-                                                                     ["vim_visual_block_mode" 0]
-                                                                     ["vim_delete_mode" 0]
-                                                                     ["vim_go_to_mode" 0]
+                                                                     ["vim_visual_block_mode" 0] ["vim_delete_mode" 0] ["vim_go_to_mode" 0]
                                                                      ["vim_go_to_visual_mode" 0]
                                                                     ]}]]}
 
+
+         {:des "Toggle Text-Edit mode and Code Mode"
+           :rules [[:grave_accent_and_tilde nil ["text_edit_mode" 0] {:alone :grave_accent_and_tilde :held [["text_edit_mode" 1] [:hs ["Text-EditMode"]]] :delayed {:params{:alone 50 :held 100 :delay 100}}}]
+                   [:grave_accent_and_tilde nil ["text_edit_mode" 1] {:alone :grave_accent_and_tilde :held [["text_edit_mode" 0] [:hs ["CodeMode"]]] :delayed {:params{:alone 50 :held 100 :delay 100}}}]
+                  ]}
+
+
          {:des "Caps -> Hyper / Esc"
                :rules [
-                 [:##caps_lock :TURN_ON_VIM_AND_CLEAR_VARS [["esc_first_mode" 1] ["escape_pressed_once" 1]]]
-                 [:##caps_lock :escape [["esc_first_mode" 0] ["escape_pressed_once" 1]]]
-                 [:##caps_lock [["escape_pressed_once" 1] :!!CTOleft_shift] ["esc_first_mode" 1] {:held [["esc_first_mode" 0] [:km ["Escape Second"]]] :delayed {:invoked [:escape ["escape_pressed_once" 0]] :canceled [["escape_pressed_once" 0]] :params{:alone 50 :held 100 :delay 100}}}]
-                 [:##caps_lock [["escape_pressed_once" 1] :!!CTOleft_shift] ["esc_first_mode" 0] {:held [["esc_first_mode" 1] [:km ["Escape First"]]] :delayed {:invoked [:TURN_ON_VIM_AND_CLEAR_VARS ["escape_pressed_once" 0]] :canceled [["escape_pressed_once" 0]] :params{:alone 50 :held 100 :delay 100}}}]
-                 [:##caps_lock [["escape_pressed_once" 1] :!!CTOleft_shift] nil {:held [["esc_first_mode" 1] [:km ["Escape Second"]]] :delayed {:invoked [:TURN_ON_VIM_AND_CLEAR_VARS ["escape_pressed_once" 0] ] :canceled [["escape_pressed_once" 0]] :params{:alone 50 :held 100 :delay 100}}}]
+                 ; if we are pressing capslock for the SECOND time...
+                        ; and esc_first is true...
+                 [:##caps_lock [:TURN_OFF_VIM :escape [:hs ["enterVimSpoonInsertMode"]]] :vim-mode-disabled-application]
+                 [:##caps_lock :escape [["escape_pressed_once" 1]]] ; ... then actually send escape regardless of whether you're entering text or not
+
+                 ; if we are pressing capslock for the FIRST time...
+                        ; and text_edit_mode is true...
+                 [:##caps_lock [["escape_pressed_once" 1] :!!CTOleft_shift] ["text_edit_mode" 1] {:delayed {:invoked [:TURN_ON_VIM_AND_CLEAR_VARS ["escape_pressed_once" 0]] :canceled [["escape_pressed_once" 0]] :params{:alone 25 :held 50 :delay 50}}}] ; make hyper key and send signal to drop into VIM mode for text editing
+
+                        ; ; and text_edit_mode is FALSE
+                 ; [:##caps_lock [["escape_pressed_once" 1] :!!CTOleft_shift] ["text_edit_mode" 0] {:delayed {:invoked [:escape ["escape_pressed_once" 0]] :canceled [["escape_pressed_once" 0]] :params{:alone 50 :held 100 :delay 100}}}] ; make hyper key and send escape when pressing capslock (used while in other IDEs and the terminal)
+
+
+                        ; ; and if for whatever reason text_edit_mode hasn't been set to true or false yet, just default it to the TRUE behavior
+                 ; [:##caps_lock [["escape_pressed_once" 1] :!!CTOleft_shift] nil {:delayed {:invoked [:TURN_ON_VIM_AND_CLEAR_VARS ["escape_pressed_once" 0] ] :canceled [["escape_pressed_once" 0]] :params{:alone 50 :held 100 :delay 100}}}]
+
                ]}
 
 
@@ -205,6 +231,15 @@
                     [:!Creturn_or_enter :!Cdown_arrow]
                     [:!Cdelete_or_backspace :!Cup_arrow]
                     [:spacebar :return_or_enter]
+                    ]}
+
+         {:des "VIM MODE APPLICATION OVERRIDE: Notion"
+           :rules [[:condi :vim_mode :Notion]
+;                   NOTION SPECIFIC
+                    [:!Tj :!SCdown_arrow]
+                    [:!Tk :!SCup_arrow]
+                    [:!Th :!Stab]
+                    [:!Tl :tab]
                     ]}
 
         {:des "navigation mode"

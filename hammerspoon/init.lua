@@ -24,3 +24,13 @@ hs.loadSpoon("ReloadConfiguration")
 spoon.ReloadConfiguration:start()
 
 hs.notify.new({title='Hammerspoon', informativeText='Welcome back, Mr. Mroczka. Keyboard shortcuts have been enabled. 💪'}):send()
+
+
+hs.urlevent.bind("CodeMode", function()
+	hs.notify.new({title='Hammerspoon', informativeText='Code Mode'}):send()
+end)
+
+hs.urlevent.bind("Text-EditMode", function()
+	hs.notify.new({title='Hammerspoon', informativeText='Text-Edit Mode'}):send()
+end)
+
