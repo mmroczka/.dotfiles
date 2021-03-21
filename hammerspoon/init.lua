@@ -23,6 +23,11 @@ v:start()
 hs.loadSpoon("ReloadConfiguration")
 spoon.ReloadConfiguration:start()
 
+hs.loadSpoon("MouseCircle")
+spoon.MouseCircle:bindHotkeys({
+    show = { { "alt" }, "f15" }
+})
+
 hs.notify.new({title='Hammerspoon', informativeText='Welcome back, Mr. Mroczka. Keyboard shortcuts have been enabled. 💪'}):send()
 
 

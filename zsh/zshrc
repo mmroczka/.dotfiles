@@ -247,3 +247,4 @@ unset __conda_setup
 
 export GPG_TTY=$(tty)
 export KEYFILE=~/.ssh/id_rsa
+export PATH="/usr/local/opt/node@14/bin:$PATH"
