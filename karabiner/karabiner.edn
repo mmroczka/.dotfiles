@@ -12,9 +12,11 @@
 
  :applications {
                 ; you can find these com.* package names using Karabiner Viewer tool installed by default with Karabiner
+                :vs-code                       ["^com\\.microsoft\\.VSCode$"]
                 :vim-mode-disabled-application ["^com\\.apple\\.Terminal$",
                                                 "^com\\.googlecode\\.iterm2$",
                                                 "^com\\.microsoft\\.VSCode$",
+                                                "^com\\.jetbrains\\.intellij$",
                                                 "^org\\.vim\\.",
                                                 ]
                 :Chromes                       ["^com\\.google\\.Chrome$", "^org\\.chromium\\.Chromium$", "^com\\.google\\.Chrome\\.canary$", "^com\\.brave\\.Browser"]
@@ -62,7 +64,6 @@
                                {:set ["vim_indent_mode" 0]}
                                {:set ["vim_lowercase_mode" 0]}
                                {:set ["vim_movement_mode" 0]}
-                               {:set ["vim_notification_mode" 0]}
                                {:set ["vim_outdent_mode" 0]}
                                {:set ["vim_replace_mode" 0]}
                                {:set ["vim_replace_single_letter_mode" 0]}
@@ -94,7 +95,6 @@
                                {:set ["vim_indent_mode" 0]}
                                {:set ["vim_lowercase_mode" 0]}
                                {:set ["vim_movement_mode" 0]}
-                               {:set ["vim_notification_mode" 0]}
                                {:set ["vim_outdent_mode" 0]}
                                {:set ["vim_replace_mode" 0]}
                                {:set ["vim_replace_single_letter_mode" 0]}
@@ -153,6 +153,7 @@
                  [:4 :!SCopen_bracket]
                  [:5 :!SCclose_bracket]
 
+                 [:6 ["text_edit_mode" 1]]
                  [:7 :!SCOopen_bracket]
                  [:8 :!SCOclose_bracket]
                  [:9 :!COopen_bracket]
@@ -173,10 +174,12 @@
                                           [:h [:km "open: Hangouts"]] ; hangouts, meets, conference, meeting, etc
                                           [:r [:km "open: Insomnia"]]
                                           [:t [:km "open: iTerm"]]
+                                          [:j [:km "open: IntelliJ"]]
                                           [:k [:km "open: Keyboard Maestro"]]
                                           [:m [:km "open: Omnifocus"]]
                                           [:n [:km "open: Notion"]]
                                           [:e [:km "open: Editor"]]
+                                          [:grave_accent_and_tilde [:km "Toggle Editor"]] ; toggles editor that opens between VS Code and IntelliJ
                                           [:w [:km "open: BitWarden"]]
                                           [:s [:km "open: Slack"]]
                                           [:z [:km "open: Zeplin"]]
@@ -207,8 +210,9 @@
                :rules [
                  ; if we are pressing capslock for the SECOND time...
                         ; and esc_first is true...
+                 [[:caps_lock :f] :!!CTOSf :vs-code]
                  [:##caps_lock [:TURN_OFF_VIM :escape [:hs ["enterVimSpoonInsertMode"]]] :vim-mode-disabled-application]
-                 [:##caps_lock :escape [["escape_pressed_once" 1]]] ; ... then actually send escape regardless of whether you're entering text or not
+                 [:##caps_lock :escape ["escape_pressed_once" 1]] ; ... then actually send escape regardless of whether you're entering text or not
 
                  ; if we are pressing capslock for the FIRST time...
                         ; and text_edit_mode is true...
@@ -245,12 +249,11 @@
         {:des "navigation mode"
            :rules [[:condi :vim_navigation_mode :!vim_desktop_navigation_mode]
                    [:c [:hs ["center"]]] ; center
-                   [:i [["vim_navigation_mode" 0] ["any_key_not_defined_above" 0] [:hs "exitVimSpoon"]]]
+                   [:i [["vim_navigation_mode" 0] ["any_key_not_defined_above" 0] [:hs "enterVimSpoonInsertMode"]]]
 
+                   [:f [:hs ["fullScreen"]]]
                    [:s [:hs ["shrink"]]]
-                   [:g [:hs ["enlarge"]]] ; g for grow
-                   [:f [:hs ["fullScreen"]]] ; fullscreen
-
+                   [:g [:hs ["enlarge"]]] ; g for grow [:f [:hs ["fullScreen"]]] ; fullscreen
 
                    [:h [:hs ["leftHalf"]]] ; left
                    [:j [:hs ["bottomHalf"]]] ; down
@@ -262,24 +265,12 @@
                    [:period [:hs ["bottomLeft"]]] ; BOTTOM left
                    [:slash [:hs ["bottomRight"]]] ; BOTTOM right
 
-                   [:m [:hs ["nextDisplay"]]] ; next Monitor
+                   [:m [:hs ["prevDisplay"]]] ; previous Monitor
+                   [:!Sm [:hs ["nextDisplay"]]] ; next Monitor
 
                     ; :any_key_not_defined_above_while_in_navigation_mode
                     ; [:anykey :vk_none]
                   ]}
-
-        {:des "VIM: notification mode"
-           :rules [:vim_notification_mode
-                    [:i [:TURN_ON_VIM_AND_CLEAR_VARS ["vim_notification_mode" 0]]]
-                    [:escape [:TURN_ON_VIM_AND_CLEAR_VARS ["vim_notification_mode" 0]]]
-                    [:c [:km ["notificationMode - clear notifications"]]]
-                    [:s [:km ["notificationMode - swipe down"]]]
-                    [:n [:km ["notificationMode - night shift"]]]
-
-                    [:condi :vim_change_mode :any_key_not_defined_above]
-                    [:left_shift :left_shift] [:left_command :left_command] [:left_option :left_option] [:left_control :left_control] [:right_shift :right_shift] [:right_command :right_command] [:right_option :right_option] [:right_control :right_control]
-                    [:anykey :TURN_ON_VIM_AND_CLEAR_VARS]
-                    ]}
 
         {:des "VIM: change mode"
            :rules [:vim_change_mode
@@ -759,8 +750,8 @@
                     [:!Rj [:!Cright_arrow :right_arrow :delete_or_backspace]]
                     [:k :up_arrow]
                     [:l :right_arrow]
-                    [:!Sn [:!SOgrave_accent_and_tilde ["vim_notification_mode" 1] :TURN_OFF_VIM]]
-                    [:!Rn [:!SOgrave_accent_and_tilde ["vim_notification_mode" 1] :TURN_OFF_VIM]]
+                    [:!Sn [:!SOgrave_accent_and_tilde :TURN_OFF_VIM]]
+                    [:!Rn [:!SOgrave_accent_and_tilde :TURN_OFF_VIM]]
                     [:o [:!Cright_arrow :return_or_enter :TURN_OFF_VIM [:set_last_action_var "o"]]] ; add a line above yourself then drop into typing
                     [:!So [:up_arrow :!Cright_arrow :return_or_enter :TURN_OFF_VIM [:set_last_action_var "O"]]] ; add a line below yourself then drop into typing
                     [:!Ro [:up_arrow :!Cright_arrow :return_or_enter :TURN_OFF_VIM [:set_last_action_var "O"]]] ; add a line below yourself then drop into typing
@@ -1012,35 +1003,35 @@
         {:des "CHANGE mode s" :rules [:change_mode [:##s [:km "hotkey: change_mode+s"]]]}
         {:des "CHANGE mode t" :rules [:change_mode [:##t [:km "hotkey: change_mode+t"]]]}
 
-        {:des "Only allow keys to use shift if it's the correct shift"
-         :rules [
-                 [:!Sa :vk_none] ; a
-                 [:!Sb :vk_none] ; b
-                 [:!Sc :vk_none] ; c
-                 [:!Sd :vk_none] ; d
-                 [:!Se :vk_none] ; e
-                 [:!Sf :vk_none] ; f
-                 [:!Sg :vk_none] ; g
-                 [:!Rh :vk_none] ; h
-                 [:!Ri :vk_none] ; i
-                 [:!Rj :vk_none] ; j
-                 [:!Rk :vk_none] ; k
-                 [:!Rl :vk_none] ; l
-                 [:!Rm :vk_none] ; m
-                 [:!Rn :vk_none] ; n
-                 [:!Ro :vk_none] ; o
-                 [:!Rp :vk_none] ; p
-                 [:!Sq :vk_none] ; q
-                 [:!Sr :vk_none] ; r
-                 [:!Ss :vk_none] ; s
-                 [:!St :vk_none] ; t
-                 [:!Ru :vk_none] ; u
-                 [:!Sv :vk_none] ; v
-                 [:!Sw :vk_none] ; w
-                 [:!Sx :vk_none] ; x
-                 [:!Ry :vk_none] ; y
-                 [:!Sz :vk_none] ; z
-                 ]}
+        ; {:des "Only allow keys to use shift if it's the correct shift"
+        ;  :rules [
+        ;          [:!Sa :vk_none] ; a
+        ;          [:!Sb :vk_none] ; b
+        ;          [:!Sc :vk_none] ; c
+        ;          [:!Sd :vk_none] ; d
+        ;          [:!Se :vk_none] ; e
+        ;          [:!Sf :vk_none] ; f
+        ;          [:!Sg :vk_none] ; g
+        ;          [:!Rh :vk_none] ; h
+        ;          [:!Ri :vk_none] ; i
+        ;          [:!Rj :vk_none] ; j
+        ;          [:!Rk :vk_none] ; k
+        ;          [:!Rl :vk_none] ; l
+        ;          [:!Rm :vk_none] ; m
+        ;          [:!Rn :vk_none] ; n
+        ;          [:!Ro :vk_none] ; o
+        ;          [:!Rp :vk_none] ; p
+        ;          [:!Sq :vk_none] ; q
+        ;          [:!Sr :vk_none] ; r
+        ;          [:!Ss :vk_none] ; s
+        ;          [:!St :vk_none] ; t
+        ;          [:!Ru :vk_none] ; u
+        ;          [:!Sv :vk_none] ; v
+        ;          [:!Sw :vk_none] ; w
+        ;          [:!Sx :vk_none] ; x
+        ;          [:!Ry :vk_none] ; y
+        ;          [:!Sz :vk_none] ; z
+        ;          ]}
 
 
 ]
