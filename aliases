@@ -10,7 +10,7 @@ alias llfu='exa -bghHliS --git'
 
 alias init-venv="python -m venv venv"
 alias activate="source venv/bin/activate"
-alias python="python3"
+# alias python="python3"
 alias pip="pip3"
 alias stop="pkill -f "
 
