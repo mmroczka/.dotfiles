@@ -1279,7 +1279,7 @@
             "key_code" : "r"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Insomnia\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: RunJS\"'"
           } ],
           "conditions" : [ {
             "name" : "open_mode",
@@ -1302,7 +1302,7 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: Insomnia\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: RunJS\"'"
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -1387,7 +1387,7 @@
             "key_code" : "j"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: IntelliJ\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: RunJS\"'"
           } ],
           "conditions" : [ {
             "name" : "open_mode",
@@ -1410,7 +1410,7 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: IntelliJ\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: RunJS\"'"
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -2197,7 +2197,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "^com\\.apple\\.Terminal$", "^com\\.googlecode\\.iterm2$", "^com\\.microsoft\\.VSCode$", "^com\\.jetbrains\\.intellij$", "^org\\.vim\\." ]
+            "bundle_identifiers" : [ "^com\\.apple\\.Terminal$", "^com\\.googlecode\\.iterm2$", "^com\\.microsoft\\.VSCode$", "^com\\.jetbrains\\.intellij$", "^com\\.jetbrains\\.pycharm$", "^me\\.lukehaas\\.runjs", "^org\\.vim\\." ]
           } ],
           "type" : "basic"
         }, {

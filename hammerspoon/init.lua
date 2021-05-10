@@ -30,6 +30,8 @@ spoon.MouseCircle:bindHotkeys({
 
 hs.notify.new({title='Hammerspoon', informativeText='Welcome back, Mr. Mroczka. Keyboard shortcuts have been enabled. 💪'}):send()
 
+hs.loadSpoon("AllBrightness")
+spoon.AllBrightness:start()
 
 hs.urlevent.bind("CodeMode", function()
 	hs.notify.new({title='Hammerspoon', informativeText='Code Mode'}):send()

@@ -48,3 +48,7 @@ log_into_compute7() {
 	osascript -e 'tell application "Keyboard Maestro Engine" to do script "Log Into Compute 7"'
 	osascript -e 'tell application "Keyboard Maestro Engine" to do script "Clear Screen"'
 }
+
+tailAll() {
+	tail -f -n 0 ~/Code/salesforce/makana-platform/var/log/service-*.log
+}

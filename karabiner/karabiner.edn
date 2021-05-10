@@ -17,6 +17,8 @@
                                                 "^com\\.googlecode\\.iterm2$",
                                                 "^com\\.microsoft\\.VSCode$",
                                                 "^com\\.jetbrains\\.intellij$",
+                                                "^com\\.jetbrains\\.pycharm$",
+                                                "^me\\.lukehaas\\.runjs",
                                                 "^org\\.vim\\.",
                                                 ]
                 :Chromes                       ["^com\\.google\\.Chrome$", "^org\\.chromium\\.Chromium$", "^com\\.google\\.Chrome\\.canary$", "^com\\.brave\\.Browser"]
@@ -172,9 +174,9 @@
                                           [:c [:km "open: Calendar"]]
                                           [:g [:km "open: Messages"]]
                                           [:h [:km "open: Hangouts"]] ; hangouts, meets, conference, meeting, etc
-                                          [:r [:km "open: Insomnia"]]
+                                          [:r [:km "open: RunJS"]]
                                           [:t [:km "open: iTerm"]]
-                                          [:j [:km "open: IntelliJ"]]
+                                          [:j [:km "open: RunJS"]]
                                           [:k [:km "open: Keyboard Maestro"]]
                                           [:m [:km "open: Omnifocus"]]
                                           [:n [:km "open: Notion"]]
@@ -216,7 +218,7 @@
 
                  ; if we are pressing capslock for the FIRST time...
                         ; and text_edit_mode is true...
-                 [:##caps_lock [["escape_pressed_once" 1] :!!CTOleft_shift] ["text_edit_mode" 1] {:delayed {:invoked [:TURN_ON_VIM_AND_CLEAR_VARS ["escape_pressed_once" 0]] :canceled [["escape_pressed_once" 0]] :params{:alone 25 :held 50 :delay 50}}}] ; make hyper key and send signal to drop into VIM mode for text editing
+                 [:##caps_lock [["escape_pressed_once" 1] :!!CTOleft_shift] ["text_edit_mode" 1] {:delayed {:invoked [:TURN_ON_VIM_AND_CLEAR_VARS ["escape_pressed_once" 0]] :canceled [["escape_pressed_once" 0]] :params{:alone 5 :held 50 :delay 5}}}] ; make hyper key and send signal to drop into VIM mode for text editing
 
                         ; ; and text_edit_mode is FALSE
                  ; [:##caps_lock [["escape_pressed_once" 1] :!!CTOleft_shift] ["text_edit_mode" 0] {:delayed {:invoked [:escape ["escape_pressed_once" 0]] :canceled [["escape_pressed_once" 0]] :params{:alone 50 :held 100 :delay 100}}}] ; make hyper key and send escape when pressing capslock (used while in other IDEs and the terminal)
