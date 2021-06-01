@@ -1,9 +1,12 @@
-Host github.com
- AddKeysToAgent yes
- UseKeychain yes
- IdentityFile ~/.ssh/id_rsa_personal
+Host personal.github.com
+  HostName github.com
+  IdentityFile ~/.ssh/personal_id_ed25519
+  IdentitiesOnly yes
+  PreferredAuthentications publickey
 
-Host github.build.ge.com
- AddKeysToAgent yes
- UseKeychain yes
- IdentityFile ~/.ssh/id_rsa_work
+Host github.com
+  HostName github.com
+  IdentityFile ~/.ssh/id_ed25519
+  IdentitiesOnly yes
+  PreferredAuthentications publickey
+
