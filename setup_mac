@@ -28,7 +28,7 @@ if test ! -f "$ANTIGEN"; then
 fi
 
 # Recursively add all submodules in this folder (add Spoons and separate Vim repo)
-git submodule update --init --recursive
+git submodule update --force --recursive --init --remote
 
 # Set up mac defaults (increase key repeat frequency)
 ./mac_defaults

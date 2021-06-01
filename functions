@@ -49,6 +49,93 @@ log_into_compute7() {
 	osascript -e 'tell application "Keyboard Maestro Engine" to do script "Clear Screen"'
 }
 
+# source ~/.proxy_url
+# # Turns Proxy on
+# proxy() {
+#     export HTTP_PROXY=$PROXY_URL
+#     export HTTPS_PROXY=$PROXY_URL
+#     export HTTP_PROXY=$PROXY_URL
+#     export HTTPS_PROXY=$PROXY_URL
+#     export NO_PROXY=.ge.com,localhost,127.0.0.1,204.130.41.105*
+# 	npm config set PROXY $PROXY_URL
+# 	npm config set HTTPS-PROXY $PROXY_URL
+# }
+
+# # Turns Proxy off
+# noproxy() {
+#     unset HTTP_PROXY
+#     unset HTTPS_PROXY
+#     unset HTTP_PROXY
+#     unset HTTPS_PROXY
+#     unset NO_PROXY
+# }
+
+
 tailAll() {
 	tail -f -n 0 ~/Code/salesforce/makana-platform/var/log/service-*.log
 }
+
+
+# Install (one or multiple) selected application(s)
+# using "brew search" as source input
+# mnemonic [B]rew [I]nstall [P]lugin
+bip() {
+  local inst=$(brew search | fzf -m)
+
+  if [[ $inst ]]; then
+    for prog in $(echo $inst);
+    do; brew install $prog; done;
+  fi
+}
+
+# Update (one or multiple) selected application(s)
+# mnemonic [B]rew [U]pdate [P]lugin
+bup() {
+  local upd=$(brew leaves | fzf -m)
+
+  if [[ $upd ]]; then
+    for prog in $(echo $upd);
+    do; brew upgrade $prog; done;
+  fi
+}
+
+# Delete (one or multiple) selected application(s)
+# mnemonic [B]rew [C]lean [P]lugin (e.g. uninstall)
+bcp() {
+  local uninst=$(brew leaves | fzf -m)
+
+  if [[ $uninst ]]; then
+    for prog in $(echo $uninst);
+    do; brew uninstall $prog; done;
+  fi
+}
+
+# Install (one or multiple) selected application(s)
+# using "brew search" as source input
+# mnemonic [C]ask [I]nstall [P]lugin
+cip() {
+  local inst=$(brew search --casks | fzf -m)
+
+  if [[ $inst ]]; then
+    for prog in $(echo $inst);
+    do; brew install --cask $prog; done;
+  fi
+}
+
+# Delete (one or multiple) selected application(s)
+# mnemonic [C]ask [C]lean [P]lugin (e.g. uninstall)
+ccp() {
+  local uninst=$(brew cask list | fzf -m)
+
+  if [[ $uninst ]]; then
+    for prog in $(echo $uninst);
+    do; brew cask uninstall $prog; done;
+  fi
+}
+
+function exportvar(){
+	varName=${1}
+	varValue=${2}
+	sed -i -e "s/export $varName=.*/export $varName=$varValue/" ~/.zshrc
+}
+

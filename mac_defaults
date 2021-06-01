@@ -5,3 +5,7 @@ killall Finder /System/Library/CoreServices/Finder.app
 # Set keys to repeat at a frequency much faster than the default
 defaults write -g InitialKeyRepeat -int 13
 defaults write -g KeyRepeat -int 3
+
+# vim for VS code settings
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+defaults delete -g ApplePressAndHoldEnabled

@@ -1,25 +1,3 @@
-# source ~/.proxy_url
-# # Turns Proxy on
-# proxy() {
-#     export HTTP_PROXY=$PROXY_URL
-#     export HTTPS_PROXY=$PROXY_URL
-#     export HTTP_PROXY=$PROXY_URL
-#     export HTTPS_PROXY=$PROXY_URL
-#     export NO_PROXY=.ge.com,localhost,127.0.0.1,204.130.41.105*
-# 	npm config set PROXY $PROXY_URL
-# 	npm config set HTTPS-PROXY $PROXY_URL
-# }
-
-# # Turns Proxy off
-# noproxy() {
-#     unset HTTP_PROXY
-#     unset HTTPS_PROXY
-#     unset HTTP_PROXY
-#     unset HTTPS_PROXY
-#     unset NO_PROXY
-# }
-
-
 # Package Manager
 source ~/.config/antigen.zsh
 antigen use oh-my-zsh
@@ -35,7 +13,7 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle mafredri/zsh-async
-antigen bundle sindresorhus/pure
+# antigen bundle sindresorhus/pure
 antigen bundle wting/autojump
 antigen bundle zdharma/zsh-diff-so-fancy
 antigen bundle paulirish/git-open
@@ -104,124 +82,9 @@ if [[ -f ~/.functions ]]; then
     source ~/.functions
 fi
 
-pfind(){
-    lsof -t -i :$1
-}
-
-# j() {
-  # [ $# -gt 0 ] && _z "$*" && return
-  # cd "$(_z -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
-# }
-
-
-# Install (one or multiple) selected application(s)
-# using "brew search" as source input
-# mnemonic [B]rew [I]nstall [P]lugin
-bip() {
-  local inst=$(brew search | fzf -m)
-
-  if [[ $inst ]]; then
-    for prog in $(echo $inst);
-    do; brew install $prog; done;
-  fi
-}
-
-# Update (one or multiple) selected application(s)
-# mnemonic [B]rew [U]pdate [P]lugin
-bup() {
-  local upd=$(brew leaves | fzf -m)
-
-  if [[ $upd ]]; then
-    for prog in $(echo $upd);
-    do; brew upgrade $prog; done;
-  fi
-}
-
-# Delete (one or multiple) selected application(s)
-# mnemonic [B]rew [C]lean [P]lugin (e.g. uninstall)
-bcp() {
-  local uninst=$(brew leaves | fzf -m)
-
-  if [[ $uninst ]]; then
-    for prog in $(echo $uninst);
-    do; brew uninstall $prog; done;
-  fi
-}
-
-# Install (one or multiple) selected application(s)
-# using "brew search" as source input
-# mnemonic [C]ask [I]nstall [P]lugin
-cip() {
-  local inst=$(brew search --casks | fzf -m)
-
-  if [[ $inst ]]; then
-    for prog in $(echo $inst);
-    do; brew install --cask $prog; done;
-  fi
-}
-
-# Delete (one or multiple) selected application(s)
-# mnemonic [C]ask [C]lean [P]lugin (e.g. uninstall)
-ccp() {
-  local uninst=$(brew cask list | fzf -m)
-
-  if [[ $uninst ]]; then
-    for prog in $(echo $uninst);
-    do; brew cask uninstall $prog; done;
-  fi
-}
-
 if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
 fi
-
-xrdscp4() {
-	scp -i $KEYFILE ${1} centos@10.233.194.15:/home/centos
-	#scp -i ~/.ssh/troot-dev-vir512.key ${1} centos@${OS_ENV_4}:/home/centos
-}
-
-function xrdrel() {
-  cd ~/src/git.soma.salesforce.com/mmroczka/matlock/package
-  ./package-kdb.sh; ./package-ksm.sh; ./package-rad.sh; ./package-val.sh;
-  cd ~/src/git.soma.salesforce.com/mmroczka/matlock
-  xrdscp${1} matlock-val*.rpm
-  xrdscp${1} matlock-kdb*.rpm
-  xrdscp${1} matlock-ksm*.rpm
-  xrdscp${1} matlock-rad*.rpm
-}
-
-# GOLANG Development settings!
-# export GOPATH=$HOME/go
-# export GOROOT=/usr/local/opt/go/libexec
-# export PATH=$PATH:$GOPATH/bin
-# export PATH=$PATH:$GOROOT/bin
-# # export GOROOT=/usr/local/Cellar/
-# # export GOPATH=$HOME/go
-# export PATH=/usr/local/sbin:$PATH:$GOPATH/bin:$GOROOT/bin
-# export GOBIN=$GOPATH/bin
-# function gulshan() {
-#   BRANCH=$(git rev-parse --abbrev-ref HEAD)
-#   REPONAME=${PWD##*/}
-#   mkdir -p ./sfdc_metadata/cred_scan_triage/${BRANCH}
-#   touch ./sfdc_metadata/cred_scan_triage/${BRANCH}/triage.yaml
-#   (cd ..; ~/grover scanLocalGitRepo \
-#     --commit-depth 1 \
-#     --repo-dir ${REPONAME} \
-#     --load-triage \
-#     --triage-file ${REPONAME}/sfdc_metadata/cred_scan_triage/${BRANCH}/triage.yaml \
-#     --generate-triage-file ${REPONAME}/sfdc_metadata/cred_scan_triage/${BRANCH}/triage.yaml )
-# }
-
-function exportvar(){
-	varName=${1}
-	varValue=${2}
-	sed -i -e "s/export $varName=.*/export $varName=$varValue/" ~/.zshrc
-}
-
-# Source makana if it exists
-# if [ -d ~/Code/salesforce/makana-platform/ ]; then
-#     source ~/Code/salesforce/makana-platform/bin/makana
-# fi
 
 # Add docker autocompletion to bash
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
@@ -229,23 +92,10 @@ function exportvar(){
 # Add autojump support
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-
 export GPG_TTY=$(tty)
 export KEYFILE=~/.ssh/id_rsa
 export PATH="/usr/local/opt/node@14/bin:$PATH"
 export PATH="$(yarn global bin):$PATH"
+
+autoload -U promptinit; promptinit
+prompt pure

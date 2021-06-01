@@ -2,7 +2,7 @@
 printf  "\n%s\n" "${BLUE}Updating Homebrew...${NORMAL}"
 brew update
 printf "\n%s\n" "${BLUE}Tapping caskroom/versions...${NORMAL}"
-brew tap caskroom/versions
+brew tap homebrew/cask-versions
 printf "\n%s\n" "${BLUE}Running brew bundle - installing brew packages...${NORMAL}"
 printf "\n%s\n" "${BLUE}$(cat Brewfile)${NORMAL}"
 brew bundle
