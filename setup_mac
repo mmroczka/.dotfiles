@@ -36,3 +36,8 @@ git submodule update --force --recursive --init --remote
 printf "\n%s\n"  "${BLUE}Running dotfiles installation.${NORMAL}\n"
 # Symbolically link all dotfiles
 ~/.dotfiles/install_dotfiles
+
+printf "\n%s\n"  "${BLUE}Changing brew to update automatically.${NORMAL}\n"
+# uses brew tap homebrew/autoupdate -> this command updates
+# brew every 12 hours and then runs a brew cleanup and sends me a notification that it happened
+brew autoupdate start 43200 --cleanup --enable-notification
