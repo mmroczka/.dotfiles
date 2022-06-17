@@ -162,6 +162,14 @@
                  [:0 :!COclose_bracket]
                 ]}
 
+        {:des "VIM MODE APPLICATION OVERRIDE: Notion"
+           :rules [[:condi :vim_mode :Notion]
+;                   NOTION SPECIFIC
+                    [:!Tj :!CSdown_arrow]
+                    [:!Tk :!CSup_arrow]
+                    [:!Tl :tab]
+                    [:!Th :!Stab]
+                    ]}
 
         {:des "Launch mode (l+;)" :rules [[{:sim [:l :semicolon]
                                      :simo {:interrupt true
