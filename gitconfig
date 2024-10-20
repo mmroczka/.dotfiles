@@ -3,7 +3,3 @@
 # Please adapt and uncomment the following lines:
 	name = Michael Mroczka
 	email = michael.mroczka@gmail.com
-[core]
-	excludesfile = /Users/michaelmroczka/.gitignore
-[push]
-	default = upstream

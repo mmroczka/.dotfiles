@@ -1,0 +1,54 @@
+#    Editor files    #
+######################
+.idea/
+.idea
+**/messages.json
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+# Widows
+Thumbs.db
+
+#       Node         #
+######################
+npm-debug.log
+
+
+# WebStorm
+.idea/
+out/
+
+# vi
+*~
+
+# General
+log/
+*.logn
+
+node_modules/
+*.iml
+/build
+annotation-generated-tst/
+annotation-generated-src/
+
+Brewfile.lock.json
+proxy_url
+zshrc_local
+
+.vscode/
+*.code-workspace
+
+# Build folders
+.classpath
+.factorypath
+.project
+.settings/
+workspace/
+.session.vim

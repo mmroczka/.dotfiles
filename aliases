@@ -1,0 +1,34 @@
+# Aliases
+# ls
+alias ls="eza --icons=always"
+alias ll="eza -l"
+alias lll="eza -l | less"
+alias lla="eza -la"
+alias llt="eza -T" # recurse into folder and create tree structure
+alias llfu="eza -bghHliS --git"
+
+# autojumping with zoxide
+alias cd="z"
+alias j="z"
+
+# PYTHON
+alias activate="source venv/bin/activate"
+
+# EDIT QUICKLY WITH NVIM
+alias vim="nvim"
+alias valias="nvim ~/.dotfiles/aliases"
+alias vfunctions="nvim ~/.dotfiles/functions"
+alias vkarabiner="nvim ~/.dotfiles/karabiner/karabiner.edn"
+alias vzsh="nvim ~/.zshrc"
+
+# SOURCE QUICKLY
+alias salias="source ~/.dotfiles/aliases"
+alias sfunctions="source ~/.dotfiles/functions"
+alias skarabiner="goku" # sources karabiner.edn -to-> karabiner.json
+alias szsh="source ~/.zshrc"
+alias svimrc="source ~/.vimrc"
+
+# MISC
+alias camera='sudo killall AppleCameraAssistant;sudo killall VDCAssistant'
+
+alias clear='clear && source ~/.zshrc'

@@ -1,0 +1,36 @@
+{:profiles
+ {:Default {:default true
+         :sim     50
+         :delay   500
+         :alone   500
+         :held    500}}
+ :templates {:alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
+             :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"
+             :btt "osascript -e 'tell application \"BetterTouchTool\" to trigger_named \"%s\"'"
+             }
+ :simlayers {:vi-mode {:key :spacebar}}
+ :main [
+        ; {:des "caps to escape"
+        ;  :rules [[:caps_lock :caps_lock nil {:held :escape}]]}
+
+        {:des "Right cmd -> Alfred"
+         :rules [[:right_command :right_command nil {:alone :!CTOSspacebar}]]}
+        {:des "Quit application by pressing ⌘q twice" :rules[ [:!C#Pq [:!Cq ["⌘q" 0]] ["⌘q" 1]]
+			[:!C#Pq ["⌘q" 1] nil {:delayed {:invoked ["⌘q" 0] :canceled ["⌘q" 0]}}] ]}
+
+        {:des "Vi Mode [spacebar as Trigger Key]"
+         :rules [[:##j :down_arrow :vi-mode]
+                 [:##k :up_arrow :vi-mode]
+                 [:##h :left_arrow :vi-mode]
+                 [:##l :right_arrow :vi-mode]
+                 [:##b :!Oleft_arrow :vi-mode]
+                 [:##e :!Oright_arrow :vi-mode]
+                 [:##u :!Cz :vi-mode]
+                 [:##r :!CSz :vi-mode]
+                 [:##a :!Cright_arrow :vi-mode]
+                 [:##i :!Cleft_arrow :vi-mode]
+                 [:##0 :!Ta :vi-mode]
+                 [:##4 :!Te :vi-mode]]}
+  ]
+  :simlayer-threshold 150
+}

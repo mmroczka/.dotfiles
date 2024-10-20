@@ -1,10 +1,27 @@
+- defaults:
+    link:
+      relink: true
+      force: true
+
 - clean: ['~']
 
+- create:
+    - ~/.config
+    - ~/.config/nvim/lua
+    # - ~/.ssh/config
+    - ~/.hammerspoon/Spoons
+
 - link:
-    ~/.profile: profile
+    ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
-    ~/.ssh/config:
-        path: ssh/config
+    ~/.gitignore: gitignore
+    ~/.config/karabiner: karabiner
+    ~/.hammerspoon: hammerspoon
+    ~/.aliases: aliases
+    ~/.wezterm.lua: wezterm.lua
+    ~/.p10k.zsh: p10k.zsh
+    ~/.config/fish/:
+        glob: true
+        path: fish/**
         create: true
-
-
+    ~/.config/nvim: nvim
