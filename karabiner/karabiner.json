@@ -2317,7 +2317,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "^com\\.apple\\.Terminal$", "^com\\.github\\.wez\\.wezterm$", "^com\\.googlecode\\.iterm2$", "^com\\.jetbrains\\.intellij$", "^com\\.jetbrains\\.pycharm$", "^com\\.microsoft\\.VSCode$", "^io\\.alacritty$", "^me\\.lukehaas\\.runjs", "^org\\.alacritty$", "^org\\.vim\\." ]
+            "bundle_identifiers" : [ "^com\\.apple\\.Terminal$", "^com\\.github\\.wez\\.wezterm$", "^com\\.googlecode\\.iterm2$", "^com\\.jetbrains\\.intellij$", "^com\\.jetbrains\\.pycharm$", "^com\\.microsoft\\.VSCode$", "^com\\.todesktop\\.230313mzl4w4u92$", "^io\\.alacritty$", "^me\\.lukehaas\\.runjs", "^org\\.alacritty$", "^org\\.vim\\." ]
           } ],
           "type" : "basic"
         }, {

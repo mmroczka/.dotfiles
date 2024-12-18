@@ -8,7 +8,33 @@ if status is-interactive
     # ======== SETTINGS ===========
     set -g fish_escape_delay_ms 10
     set -x EDITOR nvim
+    # PATHS
+    # AWS CLI Setup
+    set -U fish_user_paths /usr/local/Cellar/awscli/2.22.5/bin $fish_user_paths
 
+    # Emulates vim's cursor shape behavior
+    # Set the normal and visual mode cursors to a block
+    set fish_cursor_default block
+    # Set the insert mode cursor to a line
+    set fish_cursor_insert line
+    # Set the replace mode cursors to an underscore
+    set fish_cursor_replace_one underscore
+    set fish_cursor_replace underscore
+    # Set the external cursor to a line. The external cursor appears when a command is started.
+    # The cursor shape takes the value of fish_cursor_default when fish_cursor_external is not specified.
+    set fish_cursor_external line
+    # The following variable can be used to configure cursor shape in
+    # visual mode, but due to fish_cursor_default, is redundant here
+    set fish_cursor_visual block
+    set fish_vi_force_cursor 1
+
+    function extract_name
+        # Get the last command in history that starts with "aws s3 cp"
+        set last_command (history | grep -m 1 'aws s3 cp')
+        # Use regex to extract the object name from the path
+        # This assumes the object name is the last part of the local file path in the command
+        echo $last_command | string match -r 'aws s3 cp [^ ]+/([^ ]+)' --groups
+    end
     # ======== ALIASES ===========
     # ls
     alias ls="eza --icons=always"
@@ -29,6 +55,7 @@ if status is-interactive
     abbr -a vfunctions "nvim ~/.dotfiles/functions"
     abbr -a vkarabiner "nvim ~/.dotfiles/karabiner/karabiner.edn"
     abbr -a vzsh "nvim ~/.zshrc"
+    abbr -a upload --set-cursor "aws s3 cp % s3://iio-beyond-ctci-images/ --acl public-read && extract_name"
 
     # PYTHON
     abbr -a activate "source venv/bin/activate"
