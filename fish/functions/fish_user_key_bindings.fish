@@ -72,9 +72,11 @@ function fish_user_key_bindings
     bind --mode default \cq fzf_select_from_rerun_command_output
 
     if type -q fzf
-        bind \cr fzf_history_search
+        bind --mode insert \cr fzf_history_search
+        bind --mode default \cr fzf_history_search
     else
-        bind \cr history-search-backward
+        bind --mode insert \cr history-search-backward
+        bind --mode default \cr history-search-backward
     end
     # bind --mode insert \cp edit_command_buffer
     # bind --mode default \cp edit_command_buffer
