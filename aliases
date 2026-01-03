@@ -32,3 +32,15 @@ alias svimrc="source ~/.vimrc"
 alias camera='sudo killall AppleCameraAssistant;sudo killall VDCAssistant'
 
 alias clear='clear && source ~/.zshrc'
+
+# GIT
+alias gst='git status'
+alias ga='git --amend'
+alias gaa='git add --all'
+alias gco='git checkout'
+alias grhh='git reset HEAD --hard'
+alias gb='git checkout branch'
+alias gch='git diff-tree --no-commit-id -r --name-only'
+alias guc='git reset --soft HEAD^'
+alias gus='git reset HEAD --'
+alias gl="git log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"

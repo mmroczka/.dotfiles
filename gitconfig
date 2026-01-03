@@ -1,5 +1,25 @@
 # This is Git's per-user configuration file.
 [user]
 # Please adapt and uncomment the following lines:
-	name = Michael Mroczka
+	name = Mike Mroczka
 	email = michael.mroczka@gmail.com
+[blame]
+	ignoreRevsFile = .git-blame-ignore-revs
+[core]
+	excludesFile = /Users/michaelmroczka/.gitignore_global
+[pull]
+	rebase = true
+[alias]
+  a = commit --amend
+  s = status
+	cleanup = !git branch --merged | grep -vE \"^\\\\*|main|staging\" | xargs -r git branch -d
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/local/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/local/bin/gh auth git-credential
+[fetch]
+	prune = true
+[push]
+	autoSetupRemote = true
