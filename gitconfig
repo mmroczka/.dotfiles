@@ -13,7 +13,6 @@
   a = commit --amend
   s = status
   ga = add
-  gc = commit
 	cleanup = !git branch --merged | grep -vE \"^\\\\*|main|staging\" | xargs -r git branch -d
 [credential "https://github.com"]
 	helper = 
