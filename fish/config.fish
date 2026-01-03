@@ -56,9 +56,16 @@ if status is-interactive
     abbr -a vkarabiner "nvim ~/.dotfiles/karabiner/karabiner.edn"
     abbr -a vzsh "nvim ~/.zshrc"
     abbr -a upload --set-cursor "aws s3 cp % s3://iio-beyond-ctci-images/ --acl public-read && extract_name"
+    abbr -a run_cpp --set-cursor "g++ -std=c++17 -Wall -Wextra -o program % && ./program; rm program"
 
     # PYTHON
     abbr -a activate "source venv/bin/activate"
+
+    # Interviewing.io stuff
+    # fnm env --use-on-cd | source
+    fnm env | source
+    pyenv init - fish | source
+    alias brew="env PATH=(string replace (pyenv root)/shims '' \"\$PATH\") brew"
 
     # GIT
     abbr -a gl "git pull"
@@ -89,4 +96,11 @@ if status is-interactive
     zoxide init fish | source
     # fish shell cross-platform prompt
     starship init fish | source
+    # Set up fzf key bindings
+    fzf --fish | source
 end
+
+# Created by `pipx` on 2025-01-29 23:52:42
+set PATH $PATH /Users/michaelmroczka/.local/bin
+set -U fish_user_paths /usr/local/opt/openjdk/bin $fish_user_paths
+set -Ux CPPFLAGS -I/usr/local/opt/openjdk/include

@@ -1,5 +1,9 @@
 #! /usr/bin/env fish
 
+function fzf_history_search
+    commandline (history | fzf --tac +s --no-sort --reverse --query=(commandline) | string trim)
+end
+
 function fish_user_key_bindings
     fish_vi_key_bindings
     bind -e --mode default --user \eh
@@ -67,6 +71,11 @@ function fish_user_key_bindings
     bind --mode insert \cq fzf_select_from_rerun_command_output
     bind --mode default \cq fzf_select_from_rerun_command_output
 
-    bind --mode insert \cp edit_command_buffer
-    bind --mode default \cp edit_command_buffer
+    if type -q fzf
+        bind \cr fzf_history_search
+    else
+        bind \cr history-search-backward
+    end
+    # bind --mode insert \cp edit_command_buffer
+    # bind --mode default \cp edit_command_buffer
 end
