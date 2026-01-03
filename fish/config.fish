@@ -61,12 +61,6 @@ if status is-interactive
     # PYTHON
     abbr -a activate "source venv/bin/activate"
 
-    # Interviewing.io stuff
-    # fnm env --use-on-cd | source
-    fnm env | source
-    pyenv init - fish | source
-    alias brew="env PATH=(string replace (pyenv root)/shims '' \"\$PATH\") brew"
-
     # GIT
     abbr -a gl "git pull"
     abbr -a gp "git push"
@@ -99,8 +93,3 @@ if status is-interactive
     # Set up fzf key bindings
     fzf --fish | source
 end
-
-# Created by `pipx` on 2025-01-29 23:52:42
-set PATH $PATH /Users/michaelmroczka/.local/bin
-set -U fish_user_paths /usr/local/opt/openjdk/bin $fish_user_paths
-set -Ux CPPFLAGS -I/usr/local/opt/openjdk/include

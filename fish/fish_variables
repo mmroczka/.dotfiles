@@ -1,7 +1,5 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export CPPFLAGS:\x2dI/usr/local/opt/openjdk/include
-SETUVAR --export PYENV_ROOT:/Users/michaelmroczka/\x2epyenv
 SETUVAR __fish_initialized:3800
 SETUVAR _fisher_jorgebucaran_2F_autopair_2E_fish_files:\x7e/\x2econfig/fish/functions/_autopair_backspace\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_left\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_right\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_same\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_tab\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/autopair\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
@@ -48,4 +46,4 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3d2d3f76
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/usr/local/opt/openjdk/bin\x1e/usr/local/Cellar/awscli/2\x2e22\x2e5/bin\x1e/usr/local/opt/tcl\x2dtk\x408/bin
+SETUVAR fish_user_paths:/usr/local/Cellar/awscli/2\x2e22\x2e5/bin
