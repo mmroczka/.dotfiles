@@ -6120,7 +6120,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "if ($lastOperator == 1 && $lastMotion == 1) {\n\n    setVar count $lastCount\n    setVar operator 1\n\n    // simulate calling motion\n    while ($count > 0) {\n        tapKeySeq LSA-right LS-right\n        tapKey backspace\n        setVar count ($count - 1)\n    }\n\n    setVar operator 0\n}"
+          "command": "if ($lastOperator == 1) {\n    setVar count $lastCount\n\n    // WORD (1)\n    if ($lastMotion == 1) {\n        while ($count > 0) {\n            tapKeySeq LSA-right LS-right\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // BACK_WORD (2)\n    if ($lastMotion == 2) {\n        while ($count > 0) {\n            tapKeySeq LSA-left\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // END_WORD (3)\n    if ($lastMotion == 3) {\n        while ($count > 0) {\n            tapKeySeq LSA-right\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // LINE (4)\n    if ($lastMotion == 4) {\n        while ($count > 0) {\n            tapKey LG-left\n            tapKeySeq LSG-right\n            tapKey backspace\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // TO_EOL (5)\n    if ($lastMotion == 5) {\n        while ($count > 0) {\n            tapKeySeq LSG-right\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // DOWN (6)\n    if ($lastMotion == 6) {\n        while ($count > 0) {\n            tapKey LG-left\n            tapKeySeq LSG-right LS-down\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // UP (7)\n    if ($lastMotion == 7) {\n        while ($count > 0) {\n            tapKey up\n            tapKey LG-left\n            tapKeySeq LSG-right LS-down\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // LEFT (8)\n    if ($lastMotion == 8) {\n        while ($count > 0) {\n            tapKeySeq LS-left\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // RIGHT (9)\n    if ($lastMotion == 9) {\n        while ($count > 0) {\n            tapKeySeq LS-right\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n}"
         }
       ]
     },
@@ -6252,7 +6252,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "holdKey LA-left"
+          "command": "if ($operator == 1) {\n    if ($count == 0) { setVar count 1 }\n    setVar lastOperator 1\n    setVar lastMotion 2\n    setVar lastCount $count\n    while ($count > 0) {\n        tapKeySeq LSA-left\n        tapKey backspace\n        setVar count ($count - 1)\n    }\n    setVar operator 0\n    setVar count 0\n}\nelse {\n    if ($count > 0) {\n        setVar lastOperator 0\n        setVar lastMotion 2\n        setVar lastCount $count\n        while ($count > 0) {\n            tapKey LA-left\n            setVar count ($count - 1)\n        }\n        setVar count 0\n    }\n    else {\n        autoRepeat tapKey LA-left\n    }\n}"
         }
       ]
     },
@@ -6285,7 +6285,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "setVar operator 1 // enable Delete Mode"
+          "command": "noOp\n\n// Shift+d = D (delete to end of line)\nifShift final {\n    suppressMods {\n        if ($count == 0) { setVar count 1 }\n        setVar lastOperator 1\n        setVar lastMotion 5\n        setVar lastCount $count\n        while ($count > 0) {\n            tapKeySeq LSG-right\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n        setVar operator 0\n        setVar count 0\n    }\n}\n\n// dd = delete whole line (operator already pending)\nif ($operator == 1) {\n    if ($count == 0) { setVar count 1 }\n    setVar lastOperator 1\n    setVar lastMotion 4\n    setVar lastCount $count\n    while ($count > 0) {\n        tapKey LG-left\n        tapKeySeq LSG-right\n        tapKey backspace\n        tapKey backspace\n        setVar count ($count - 1)\n    }\n    setVar operator 0\n    setVar count 0\n}\nelse {\n    // First press: enter delete operator mode\n    setVar operator 1\n}"
         }
       ]
     },
@@ -6296,7 +6296,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "holdKey down"
+          "command": "if ($operator == 1) {\n    if ($count == 0) { setVar count 1 }\n    setVar lastOperator 1\n    setVar lastMotion 6\n    setVar lastCount $count\n    while ($count > 0) {\n        tapKey LG-left\n        tapKeySeq LSG-right LS-down\n        tapKey backspace\n        setVar count ($count - 1)\n    }\n    setVar operator 0\n    setVar count 0\n}\nelse {\n    if ($count > 0) {\n        setVar lastOperator 0\n        setVar lastMotion 6\n        setVar lastCount $count\n        while ($count > 0) {\n            tapKey down\n            setVar count ($count - 1)\n        }\n        setVar count 0\n    }\n    else {\n        autoRepeat tapKey down\n    }\n}"
         }
       ]
     },
@@ -6307,7 +6307,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "autoRepeat tapKey LA-right"
+          "command": "if ($operator == 1) {\n    if ($count == 0) { setVar count 1 }\n    setVar lastOperator 1\n    setVar lastMotion 3\n    setVar lastCount $count\n    while ($count > 0) {\n        tapKeySeq LSA-right\n        tapKey backspace\n        setVar count ($count - 1)\n    }\n    setVar operator 0\n    setVar count 0\n}\nelse {\n    if ($count > 0) {\n        setVar lastOperator 0\n        setVar lastMotion 3\n        setVar lastCount $count\n        while ($count > 0) {\n            tapKey LA-right\n            setVar count ($count - 1)\n        }\n        setVar count 0\n    }\n    else {\n        autoRepeat tapKey LA-right\n    }\n}"
         }
       ]
     },
@@ -6351,7 +6351,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "holdKey left"
+          "command": "if ($operator == 1) {\n    if ($count == 0) { setVar count 1 }\n    setVar lastOperator 1\n    setVar lastMotion 8\n    setVar lastCount $count\n    while ($count > 0) {\n        tapKeySeq LS-left\n        tapKey backspace\n        setVar count ($count - 1)\n    }\n    setVar operator 0\n    setVar count 0\n}\nelse {\n    if ($count > 0) {\n        setVar lastOperator 0\n        setVar lastMotion 8\n        setVar lastCount $count\n        while ($count > 0) {\n            tapKey left\n            setVar count ($count - 1)\n        }\n        setVar count 0\n    }\n    else {\n        autoRepeat tapKey left\n    }\n}"
         }
       ]
     },
@@ -6395,7 +6395,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "holdKey right"
+          "command": "if ($operator == 1) {\n    if ($count == 0) { setVar count 1 }\n    setVar lastOperator 1\n    setVar lastMotion 9\n    setVar lastCount $count\n    while ($count > 0) {\n        tapKeySeq LS-right\n        tapKey backspace\n        setVar count ($count - 1)\n    }\n    setVar operator 0\n    setVar count 0\n}\nelse {\n    if ($count > 0) {\n        setVar lastOperator 0\n        setVar lastMotion 9\n        setVar lastCount $count\n        while ($count > 0) {\n            tapKey right\n            setVar count ($count - 1)\n        }\n        setVar count 0\n    }\n    else {\n        autoRepeat tapKey right\n    }\n}"
         }
       ]
     },
@@ -6428,7 +6428,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "holdKey up"
+          "command": "if ($operator == 1) {\n    if ($count == 0) { setVar count 1 }\n    setVar lastOperator 1\n    setVar lastMotion 7\n    setVar lastCount $count\n    while ($count > 0) {\n        tapKey up\n        tapKey LG-left\n        tapKeySeq LSG-right LS-down\n        tapKey backspace\n        setVar count ($count - 1)\n    }\n    setVar operator 0\n    setVar count 0\n}\nelse {\n    if ($count > 0) {\n        setVar lastOperator 0\n        setVar lastMotion 7\n        setVar lastCount $count\n        while ($count > 0) {\n            tapKey up\n            setVar count ($count - 1)\n        }\n        setVar count 0\n    }\n    else {\n        autoRepeat tapKey up\n    }\n}"
         }
       ]
     },
@@ -6582,7 +6582,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "set autoRepeatDelay 120\nset autoRepeatRate 30\nset secondaryRole.defaultStrategy advanced\nset secondaryRole.advanced.timeout 200\nset secondaryRole.advanced.timeoutAction secondary\nset secondaryRole.advanced.safetyMargin 0\nset secondaryRole.advanced.triggerByRelease 0\nset secondaryRole.advanced.doubletapToPrimary 1\nset secondaryRole.advanced.doubletapTime 200\n\n// mode meanings:\n// 0 = NORMAL   (default; motions/operators/commands)\n// 1 = INSERT   (keys pass through as typing; Esc returns to NORMAL)\n// 2 = VISUAL   (selection mode; motions extend selection; operator acts on selection)\n// 3 = REPLACE  (optional later; like Vim R)\n// 4 = COMMAND  (optional later; \":\" / ex-like command entry)\nsetVar mode 0\n// operator meanings:\n// 0 = NONE\n// 1 = DELETE\nsetVar operator 0\n// tracks the number of times to do a change (supports multi-digit like 23dw)\nsetVar count 0\n\n// last executed change, used for the . key\nsetVar lastOperator 0\n// motion meanings:\n// 0 = NONE\n// 1 = WORD (w)\n// 2 = BACK_WORD (b)\n// 3 = END_WORD (e)\n// 4 = LINE (dd)\n// 5 = TO_EOL (D)\nsetVar lastMotion 0\nsetVar lastCount 0"
+          "command": "set autoRepeatDelay 120\nset autoRepeatRate 30\nset secondaryRole.defaultStrategy advanced\nset secondaryRole.advanced.timeout 200\nset secondaryRole.advanced.timeoutAction secondary\nset secondaryRole.advanced.safetyMargin 0\nset secondaryRole.advanced.triggerByRelease 0\nset secondaryRole.advanced.doubletapToPrimary 1\nset secondaryRole.advanced.doubletapTime 200\n\n// mode meanings:\n// 0 = NORMAL   (default; motions/operators/commands)\n// 1 = INSERT   (keys pass through as typing; Esc returns to NORMAL)\n// 2 = VISUAL   (selection mode; motions extend selection; operator acts on selection)\n// 3 = REPLACE  (optional later; like Vim R)\n// 4 = COMMAND  (optional later; \":\" / ex-like command entry)\nsetVar mode 0\n// operator meanings:\n// 0 = NONE\n// 1 = DELETE\nsetVar operator 0\n// tracks the number of times to do a change (supports multi-digit like 23dw)\nsetVar count 0\n\n// last executed change, used for the . key\nsetVar lastOperator 0\n// motion meanings:\n// 0 = NONE\n// 1 = WORD (w)\n// 2 = BACK_WORD (b)\n// 3 = END_WORD (e)\n// 4 = LINE (dd)\n// 5 = TO_EOL (D)\n// 6 = DOWN (j)\n// 7 = UP (k)\n// 8 = LEFT (h)\n// 9 = RIGHT (l)\nsetVar lastMotion 0\nsetVar lastCount 0"
         }
       ]
     },
