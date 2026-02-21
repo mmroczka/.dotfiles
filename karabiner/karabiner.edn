@@ -8,6 +8,7 @@
 				; :macbook-internal [{:product_id 631 :vendor_id 1452}]
 				:uhk-keyboard [{:product_id 24866 :vendor_id 7504}, {:product_id 24868 :vendor_id 7504}]
                 :dell-keyboard [{:product_id 8195 :vendor_id 16700}]
+                :naya-keyboard [{:product_id 100 :vendor_id 14289}]
 			}
 
  :applications {
@@ -49,69 +50,6 @@
        :home_dir        [{:key :grave_accent_and_tilde :modi [:left_shift] :lazy true}
                                {:key :slash}]
 
-       :TURN_OFF_VIM [
-                               {:shell "open -g hammerspoon://enterVimSpoonInsertMode"}
-                               {:set ["vim_mode" 0]}                                                 ; turn off vim mode
-                               {:set ["any_key_not_defined_above" 0]}                                ; turn off deadkey variable
-
-                               {:set ["vim_change_mode" 0]}
-                               {:set ["vim_delete_mode" 0]}
-                               {:set ["vim_delete_till_mode" 0]}
-                               {:set ["vim_find_char_mode" 0]}
-                               {:set ["vim_from_change_mode" 0]}
-                               {:set ["vim_from_delete_mode" 0]}
-                               {:set ["vim_from_surround_mode" 0]}
-                               {:set ["vim_from_visual_block_mode" 0]}
-                               {:set ["vim_from_visual_mode" 0]}
-                               {:set ["vim_from_yank_mode" 0]}
-                               {:set ["vim_go_to_mode" 0]}
-                               {:set ["vim_go_to_visual_mode" 0]}
-                               {:set ["vim_in_mode" 0]}
-                               {:set ["vim_indent_mode" 0]}
-                               {:set ["vim_lowercase_mode" 0]}
-                               {:set ["vim_movement_mode" 0]}
-                               {:set ["vim_outdent_mode" 0]}
-                               {:set ["vim_replace_mode" 0]}
-                               {:set ["vim_replace_single_letter_mode" 0]}
-                               {:set ["vim_surround_mode" 0]}
-                               {:set ["vim_uppercase_mode" 0]}
-                               {:set ["vim_visual_block_mode" 0]}
-                               {:set ["vim_visual_mode" 0]}
-                               {:set ["vim_yank_mode" 0]}
-                               ]
-
-       :TURN_ON_VIM_AND_CLEAR_VARS [
-                               {:shell "open -g hammerspoon://enterVimSpoon"}
-                               {:set ["vim_mode" 1]}                                                 ; turn on vim mode
-                               {:set ["any_key_not_defined_above" 1]}                                ; turn on deadkey variable
-
-                               {:set ["vim_change_mode" 0]}
-                               {:set ["vim_delete_mode" 0]}
-                               {:set ["vim_delete_till_mode" 0]}
-                               {:set ["vim_find_char_mode" 0]}
-                               {:set ["vim_from_change_mode" 0]}
-                               {:set ["vim_from_delete_mode" 0]}
-                               {:set ["vim_from_surround_mode" 0]}
-                               {:set ["vim_from_visual_block_mode" 0]}
-                               {:set ["vim_from_visual_mode" 0]}
-                               {:set ["vim_from_yank_mode" 0]}
-                               {:set ["vim_go_to_mode" 0]}
-                               {:set ["vim_go_to_visual_mode" 0]}
-                               {:set ["vim_in_mode" 0]}
-                               {:set ["vim_indent_mode" 0]}
-                               {:set ["vim_lowercase_mode" 0]}
-                               {:set ["vim_movement_mode" 0]}
-                               {:set ["vim_outdent_mode" 0]}
-                               {:set ["vim_replace_mode" 0]}
-                               {:set ["vim_replace_single_letter_mode" 0]}
-                               {:set ["vim_surround_mode" 0]}
-                               {:set ["vim_uppercase_mode" 0]}
-                               {:set ["vim_visual_block_mode" 0]}
-                               {:set ["vim_visual_mode" 0]}
-                               {:set ["vim_yank_mode" 0]}
-                               ]
-       }
-
  :simlayers {:caps_lock-mode {:key :caps_lock}
              :spacebar_mode {:key :spacebar}
              :programming_mode {:key :period}
@@ -128,41 +66,10 @@
              }
  :main [
 
-        {:des "FN from UHK" :rules [[:f23 :fn [:uhk-keyboard] ]]} ;* UHK FN as mac fn via UHK hardcoded f24 > fn in KE but only for uhk
+       {:des "FN from UHK" :rules [[:f23 :fn [:uhk-keyboard] ]]} ;* UHK FN as mac fn via UHK hardcoded f24 > fn in KE but only for uhk
 
-        {:des   "shift+cmd+l types javascript: and hits enter hack" ;; https://superuser.com/a/324267
-         :rules [ [:!CSl [:!Cl :j :a :v :a :s :c :r :i :p :t :!Ssemicolon :return_or_enter] :Chromes] ]}
-
-        {:des "Hold cmd+v for PASTE2 clipboard history"
-         :rules [ [:!Cv nil nil {:alone :!Cv :held :!TSz :repeat false :halt true :params{:alone 150 :held 200}} ] ]}
-        {:des "Hold cmd+c for PASTE2 clipboard stack"
-         :rules [ [:!Cc nil nil {:alone :!Cc :held :!TOSz :repeat false :halt true :params{:alone 150 :held 200}} ] ]}
-        {:des "Right cmd -> Alfred"
-         :rules [[:right_command :right_command nil {:alone :!CTOSspacebar}]]}
-        {:des "Left option -> KM: If Exists Trigger Action Menu"
-         :rules [[:left_option :left_option nil {:alone [:km "If Exists Trigger Action Menu"]}]]}
         {:des "Right option -> Cardhop"
          :rules [[:right_option :right_option nil {:alone :!OCT1}]]}
-        {:des "Quit application by pressing left ⌘ + q twice" :rules[ [:!C#Pq [:!Cq ["⌘q" 0]] ["⌘q" 1]]
-			[:!C#Pq ["⌘q" 1] nil {:delayed {:invoked ["⌘q" 0] :canceled ["⌘q" 0]}}] ]}
-        {:des "Quit application by pressing right ⌘ + q twice" :rules[ [:!Q#Pq [:!Cq ["⌘q" 0]] ["⌘q" 1]]
-          [:!Q#Pq ["⌘q" 1] nil {:delayed {:invoked ["⌘q" 0] :canceled ["⌘q" 0]}}] ]}
-
-        {:des "spacebar_mode"
-         :rules [[:condi :spacebar_mode]
-                 [:grave_accent_and_tilde :!Cgrave_accent_and_tilde]
-                 [:1 [:!COtab :!SCOtab :left_option]]
-                 [:2 :!TStab]
-                 [:3 :!Ttab]
-                 [:4 :!SCopen_bracket]
-                 [:5 :!SCclose_bracket]
-
-                 [:6 ["text_edit_mode" 1]]
-                 [:7 :!SCOopen_bracket]
-                 [:8 :!SCOclose_bracket]
-                 [:9 :!COopen_bracket]
-                 [:0 :!COclose_bracket]
-                ]}
 
         {:des "VIM MODE APPLICATION OVERRIDE: Notion"
            :rules [[:condi :vim_mode :Notion]
@@ -175,100 +82,6 @@
                     [:!Ti :!Cclose_bracket]
                     ]}
 
-        {:des "Launch mode (l+;)" :rules [[{:sim [:l :semicolon]
-                                     :simo {:interrupt true
-                                            :dorder :insensitive
-                                            :uorder :insensitive
-                                            :afterup {:set ["launch_mode" 0]}}} {:set ["launch_mode" 1]}]
-                                          [:condi :launch_mode :!open_mode]
-                                          [:a [:km "open: A"]]
-                                          [:b [:km "open: B"]]
-                                          [:c [:km "open: C"]]
-                                          [:d [:km "open: D"]]
-                                          [:f [:km "open: F"]]
-                                          [:g [:km "open: G"]]
-                                          [:h [:km "open: H"]] ; hangouts, meets, conference, meeting, etc
-                                          [:r [:km "open: R"]]
-                                          [:t [:km "open: T"]]
-                                          [:j [:km "open: J"]]
-                                          [:k [:km "open: K"]]
-                                          [:m [:km "open: M"]]
-                                          [:n [:km "open: N"]]
-                                          [:e [:km "open: E"]]
-                                          [:grave_accent_and_tilde [:km "Toggle Editor"]] ; toggles editor that opens between VS Code and IntelliJ
-                                          [:w [:km "open: W"]]
-                                          [:v [:km "open: V"]]
-                                          [:s [:km "open: S"]]
-                                          [:z [:km "open: Z"]]
-                                          [:caps_lock [:km "open: F"]]
-                                          ; [:k nil nil {:afterup ["open_mode" 0] :alone ["open_mode" 1] :held ["open_mode" 1] :repeat false}]
-
-                                          ]}
-
-
-      {:des "Left Shift + Left Cmd -> VIM Navigation mode"
-               :rules [[:!Sleft_command :!Sleft_command nil {:alone [[:hs ["enterNavigationMode"]]
-                                                                     ["vim_navigation_mode" 1]
-                                                                     ["any_key_not_defined_above" 1]
-                                                                     ["vim_mode" 0]
-                                                                     ["vim_visual_mode" 0]
-                                                                     ["vim_visual_block_mode" 0] ["vim_delete_mode" 0] ["vim_go_to_mode" 0]
-                                                                     ["vim_go_to_visual_mode" 0]
-                                                                    ]}]]}
-
-
-         {:des "Toggle Text-Edit mode and Code Mode"
-           :rules [[:grave_accent_and_tilde nil ["text_edit_mode" 0] {:alone :grave_accent_and_tilde :held [["text_edit_mode" 1] [:hs ["Text-EditMode"]]] :delayed {:params{:alone 50 :held 100 :delay 100}}}]
-                   [:grave_accent_and_tilde nil ["text_edit_mode" 1] {:alone :grave_accent_and_tilde :held [["text_edit_mode" 0] [:hs ["CodeMode"]]] :delayed {:params{:alone 50 :held 100 :delay 100}}}]
-                  ]}
-
-
-         {:des "Caps -> Hyper / Esc"
-               :rules [
-                 ; if we are pressing capslock for the SECOND time...
-                        ; and esc_first is true...
-                 [[:caps_lock :f] :!!CTOSf :vs-code]
-                 [:##caps_lock [:TURN_OFF_VIM :escape [:hs ["enterVimSpoonInsertMode"]]] :vim-mode-disabled-application]
-                 [:##caps_lock :escape ["escape_pressed_once" 1]] ; ... then actually send escape regardless of whether you're entering text or not
-
-                 ; if we are pressing capslock for the FIRST time...
-                        ; and text_edit_mode is true...
-                 [:##caps_lock [["escape_pressed_once" 1] :!!CTOleft_shift] ["text_edit_mode" 1] {:delayed {:invoked [:TURN_ON_VIM_AND_CLEAR_VARS ["escape_pressed_once" 0]] :canceled [["escape_pressed_once" 0]] :params{:alone 5 :held 50 :delay 5}}}] ; make hyper key and send signal to drop into VIM mode for text editing
-
-                        ; ; and text_edit_mode is FALSE
-                 ; [:##caps_lock [["escape_pressed_once" 1] :!!CTOleft_shift] ["text_edit_mode" 0] {:delayed {:invoked [:escape ["escape_pressed_once" 0]] :canceled [["escape_pressed_once" 0]] :params{:alone 50 :held 100 :delay 100}}}] ; make hyper key and send escape when pressing capslock (used while in other IDEs and the terminal)
-
-
-                        ; ; and if for whatever reason text_edit_mode hasn't been set to true or false yet, just default it to the TRUE behavior
-                 ; [:##caps_lock [["escape_pressed_once" 1] :!!CTOleft_shift] nil {:delayed {:invoked [:TURN_ON_VIM_AND_CLEAR_VARS ["escape_pressed_once" 0] ] :canceled [["escape_pressed_once" 0]] :params{:alone 50 :held 100 :delay 100}}}]
-
-               ]}
-
-        {:des "navigation mode"
-           :rules [[:condi :vim_navigation_mode :!vim_desktop_navigation_mode]
-                   [:c [:hs ["center"]]] ; center
-                   [:i [["vim_navigation_mode" 0] ["any_key_not_defined_above" 0] [:hs "enterVimSpoonInsertMode"]]]
-
-                   [:f [:hs ["fullScreen"]]]
-                   [:s [:hs ["shrink"]]]
-                   [:g [:hs ["enlarge"]]] ; g for grow [:f [:hs ["fullScreen"]]] ; fullscreen
-
-                   [:h [:hs ["leftHalf"]]] ; left
-                   [:j [:hs ["bottomHalf"]]] ; down
-                   [:k [:hs ["topHalf"]]] ; up
-                   [:l [:hs ["rightHalf"]]] ; right
-
-                   [:o [:hs ["topLeft"]]] ; TOP left
-                   [:p [:hs ["topRight"]]] ; TOP right
-                   [:period [:hs ["bottomLeft"]]] ; BOTTOM left
-                   [:slash [:hs ["bottomRight"]]] ; BOTTOM right
-
-                   [:m [:hs ["prevDisplay"]]] ; previous Monitor
-                   [:!Sm [:hs ["nextDisplay"]]] ; next Monitor
-
-                    ; :any_key_not_defined_above_while_in_navigation_mode
-                    ; [:anykey :vk_none]
-                  ]}
 
                 {:des "VIM: delete mode"
            :rules [:vim_delete_mode

@@ -29,6 +29,125 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "shift+cmd+l types javascript: and hits enter hack",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "l",
+            "modifiers" : [ "left_command" ]
+          }, {
+            "key_code" : "j"
+          }, {
+            "key_code" : "a"
+          }, {
+            "key_code" : "v"
+          }, {
+            "key_code" : "a"
+          }, {
+            "key_code" : "s"
+          }, {
+            "key_code" : "c"
+          }, {
+            "key_code" : "r"
+          }, {
+            "key_code" : "i"
+          }, {
+            "key_code" : "p"
+          }, {
+            "key_code" : "t"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "return_or_enter"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "^com\\.google\\.Chrome$", "^org\\.chromium\\.Chromium$", "^com\\.google\\.Chrome\\.canary$", "^com\\.brave\\.Browser" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Hold cmd+v for PASTE2 clipboard history",
+        "manipulators" : [ {
+          "to_if_alone" : [ {
+            "key_code" : "v",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "to_if_held_down" : [ {
+            "key_code" : "z",
+            "modifiers" : [ "left_control", "left_shift" ]
+          } ],
+          "parameters" : {
+            "basic.to_if_alone_timeout_milliseconds" : 150,
+            "basic.to_if_held_down_threshold_milliseconds" : 200
+          },
+          "from" : {
+            "key_code" : "v",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ]
+            }
+          },
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Hold cmd+c for PASTE2 clipboard stack",
+        "manipulators" : [ {
+          "to_if_alone" : [ {
+            "key_code" : "c",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "to_if_held_down" : [ {
+            "key_code" : "z",
+            "modifiers" : [ "left_control", "left_option", "left_shift" ]
+          } ],
+          "parameters" : {
+            "basic.to_if_alone_timeout_milliseconds" : 150,
+            "basic.to_if_held_down_threshold_milliseconds" : 200
+          },
+          "from" : {
+            "key_code" : "c",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ]
+            }
+          },
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right cmd -> Alfred",
+        "manipulators" : [ {
+          "to_if_alone" : [ {
+            "key_code" : "spacebar",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "from" : {
+            "key_code" : "right_command"
+          },
+          "to" : [ {
+            "key_code" : "right_command"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left option -> KM: If Exists Trigger Action Menu",
+        "manipulators" : [ {
+          "to_if_alone" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"If Exists Trigger Action Menu\"'"
+          } ],
+          "from" : {
+            "key_code" : "left_option"
+          },
+          "to" : [ {
+            "key_code" : "left_option"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Right option -> Cardhop",
         "manipulators" : [ {
           "to_if_alone" : [ {
@@ -40,6 +159,116 @@
           },
           "to" : [ {
             "key_code" : "right_option"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Quit application by pressing left ⌘ + q twice",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "q",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "q",
+            "modifiers" : [ "left_command" ]
+          }, {
+            "set_variable" : {
+              "name" : "⌘q",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "⌘q",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_delayed_action" : {
+            "to_if_invoked" : [ {
+              "set_variable" : {
+                "name" : "⌘q",
+                "value" : 0
+              }
+            } ],
+            "to_if_canceled" : [ {
+              "set_variable" : {
+                "name" : "⌘q",
+                "value" : 0
+              }
+            } ]
+          },
+          "from" : {
+            "key_code" : "q",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "⌘q",
+              "value" : 1
+            }
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Quit application by pressing right ⌘ + q twice",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "q",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "q",
+            "modifiers" : [ "left_command" ]
+          }, {
+            "set_variable" : {
+              "name" : "⌘q",
+              "value" : 0
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "⌘q",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_delayed_action" : {
+            "to_if_invoked" : [ {
+              "set_variable" : {
+                "name" : "⌘q",
+                "value" : 0
+              }
+            } ],
+            "to_if_canceled" : [ {
+              "set_variable" : {
+                "name" : "⌘q",
+                "value" : 0
+              }
+            } ]
+          },
+          "from" : {
+            "key_code" : "q",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "⌘q",
+              "value" : 1
+            }
           } ],
           "type" : "basic"
         } ]
@@ -1808,6 +2037,468 @@
             "value" : 1,
             "type" : "variable_unless"
           } ]
+        } ]
+      }, {
+        "description" : "Left Shift + Left Cmd -> VIM Navigation mode",
+        "manipulators" : [ {
+          "to_if_alone" : [ {
+            "shell_command" : "open -g hammerspoon://enterNavigationMode"
+          }, {
+            "set_variable" : {
+              "name" : "vim_navigation_mode",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "any_key_not_defined_above",
+              "value" : 1
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_visual_mode",
+              "value" : 0
+            }
+          } ],
+          "from" : {
+            "key_code" : "left_command",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "left_command",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Toggle Text-Edit mode and Code Mode",
+        "manipulators" : [ {
+          "to_if_alone" : [ {
+            "key_code" : "grave_accent_and_tilde"
+          } ],
+          "to_if_held_down" : [ {
+            "set_variable" : {
+              "name" : "text_edit_mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "open -g hammerspoon://Text-EditMode"
+          } ],
+          "from" : {
+            "key_code" : "grave_accent_and_tilde"
+          },
+          "conditions" : [ {
+            "name" : "text_edit_mode",
+            "value" : 0,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_if_alone" : [ {
+            "key_code" : "grave_accent_and_tilde"
+          } ],
+          "to_if_held_down" : [ {
+            "set_variable" : {
+              "name" : "text_edit_mode",
+              "value" : 0
+            }
+          }, {
+            "shell_command" : "open -g hammerspoon://CodeMode"
+          } ],
+          "from" : {
+            "key_code" : "grave_accent_and_tilde"
+          },
+          "conditions" : [ {
+            "name" : "text_edit_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Caps -> Hyper / Esc",
+        "manipulators" : [ {
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "caps_lock"
+            }, {
+              "key_code" : "f"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : false,
+              "key_down_order" : "insensitive",
+              "key_up_order" : "insensitive",
+              "key_up_when" : "any"
+            }
+          },
+          "to" : [ {
+            "key_code" : "f",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "^com\\.microsoft\\.VSCode$" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "caps_lock",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "open -g hammerspoon://enterVimSpoonInsertMode"
+          }, {
+            "set_variable" : {
+              "name" : "vim_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "any_key_not_defined_above",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_delete_till_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_find_char_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_change_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_delete_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_from_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_go_to_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_in_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_indent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_lowercase_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_movement_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_outdent_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_replace_single_letter_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_surround_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_uppercase_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_block_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_visual_mode",
+              "value" : 0
+            }
+          }, {
+            "set_variable" : {
+              "name" : "vim_yank_mode",
+              "value" : 0
+            }
+          }, {
+            "key_code" : "escape"
+          }, {
+            "shell_command" : "open -g hammerspoon://enterVimSpoonInsertMode"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "^com\\.apple\\.Terminal$", "^com\\.github\\.wez\\.wezterm$", "^com\\.googlecode\\.iterm2$", "^com\\.jetbrains\\.intellij$", "^com\\.jetbrains\\.pycharm$", "^com\\.microsoft\\.VSCode$", "^com\\.todesktop\\.230313mzl4w4u92$", "^io\\.alacritty$", "^me\\.lukehaas\\.runjs", "^org\\.alacritty$", "^org\\.vim\\." ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "caps_lock",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "escape"
+          } ],
+          "conditions" : [ {
+            "name" : "escape_pressed_once",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_delayed_action" : {
+            "to_if_invoked" : [ {
+              "shell_command" : "open -g hammerspoon://enterVimSpoon"
+            }, {
+              "set_variable" : {
+                "name" : "vim_mode",
+                "value" : 1
+              }
+            }, {
+              "set_variable" : {
+                "name" : "any_key_not_defined_above",
+                "value" : 1
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_change_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_delete_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_delete_till_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_find_char_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_from_change_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_from_delete_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_from_surround_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_from_visual_block_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_from_visual_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_from_yank_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_go_to_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_go_to_visual_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_in_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_indent_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_lowercase_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_movement_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_outdent_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_replace_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_replace_single_letter_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_surround_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_uppercase_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_visual_block_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_visual_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "vim_yank_mode",
+                "value" : 0
+              }
+            }, {
+              "set_variable" : {
+                "name" : "escape_pressed_once",
+                "value" : 0
+              }
+            } ],
+            "to_if_canceled" : [ {
+              "set_variable" : {
+                "name" : "escape_pressed_once",
+                "value" : 0
+              }
+            } ]
+          },
+          "from" : {
+            "key_code" : "caps_lock",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "escape_pressed_once",
+              "value" : 1
+            }
+          }, {
+            "key_code" : "left_shift",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "text_edit_mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
         } ]
       }, {
         "description" : "navigation mode",
@@ -16515,14 +17206,6 @@
         "vendor_id" : 7504
       },
       "manipulate_caps_lock_led" : false
-    }, {
-      "identifiers" : {
-        "is_keyboard" : true,
-        "is_pointing_device" : true,
-        "product_id" : 100,
-        "vendor_id" : 14289
-      },
-      "ignore" : false
     } ],
     "fn_function_keys" : [ {
       "from" : {
