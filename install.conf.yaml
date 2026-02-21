@@ -10,6 +10,8 @@
     - ~/.config/nvim/lua
     # - ~/.ssh/config
     - ~/.hammerspoon/Spoons
+    - ~/.config/sketchybar/plugins
+    - ~/.config/borders
 
 - link:
     ~/.zshrc: zshrc
@@ -25,3 +27,6 @@
         path: fish/**
         create: true
     ~/.config/nvim: nvim
+    ~/.aerospace.toml: aerospace.toml
+    ~/.config/sketchybar: sketchybar
+    ~/.config/borders/bordersrc: borders/bordersrc

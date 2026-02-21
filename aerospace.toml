@@ -1,0 +1,88 @@
+# Config version
+config-version = 2
+
+# Start AeroSpace at login
+start-at-login = true
+
+# Start borders with AeroSpace
+after-startup-command = ['exec-and-forget borders']
+
+# Normalizations
+enable-normalization-flatten-containers = false
+enable-normalization-opposite-orientation-for-nested-containers = false
+
+# Layout settings
+accordion-padding = 20
+default-root-container-layout = 'accordion'
+default-root-container-orientation = 'vertical'
+
+# Hooks for sketchybar integration
+exec-on-workspace-change = [
+  '/bin/bash',
+  '-c',
+  '/usr/local/bin/sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
+]
+
+# on-focus-changed = [
+#   'exec-and-forget /usr/local/bin/sketchybar --trigger aerospace_mode_changed',
+# ]
+# on-mode-changed = [
+#   'exec-and-forget /usr/local/bin/sketchybar --trigger aerospace_mode_changed',
+# ]
+
+# Key mapping
+[key-mapping]
+preset = 'qwerty'
+
+# Gaps between windows
+[gaps]
+inner.horizontal = 10
+inner.vertical = 10
+outer.left = 10
+outer.bottom = 10
+outer.top = 10        # 36px for SketchyBar + 8px padding
+outer.right = 10
+
+# Main binding mode - basic window movements
+[mode.main.binding]
+ctrl-cmd-h = 'focus left'
+ctrl-cmd-l = 'focus right'
+ctrl-cmd-j = 'focus down'
+ctrl-cmd-k = 'focus up'
+ctrl-cmd-shift-h = 'move left'
+ctrl-cmd-shift-j = 'move down'
+ctrl-cmd-shift-k = 'move up'
+ctrl-cmd-shift-l = 'move right'
+ctrl-shift-h = 'join-with left'
+ctrl-shift-j = 'join-with down'
+ctrl-shift-k = 'join-with up'
+ctrl-shift-l = 'join-with right'
+ctrl-cmd-minus = 'resize smart -50'
+ctrl-cmd-shift-equal = 'resize smart +50'
+ctrl-shift-equal = 'balance-sizes'
+ctrl-cmd-m = 'fullscreen'
+ctrl-cmd-enter = 'exec-and-forget open -n /Applications/WezTerm.app'
+ctrl-cmd-o = 'focus-back-and-forth'
+ctrl-cmd-slash = 'layout tiles accordion'
+# ctrl-cmd-r = 'mode resize'
+# ctrl-cmd-s = 'mode service'
+ctrl-cmd-comma = ['reload-config', 'mode main']
+
+# Workspace switching
+ctrl-cmd-1 = 'workspace 1'
+ctrl-cmd-2 = 'workspace 2'
+ctrl-cmd-3 = 'workspace 3'
+ctrl-cmd-4 = 'workspace 4'
+ctrl-cmd-5 = 'workspace 5'
+
+# Move window to workspace
+ctrl-cmd-shift-1 = 'move-node-to-workspace 1'
+ctrl-cmd-shift-2 = 'move-node-to-workspace 2'
+ctrl-cmd-shift-3 = 'move-node-to-workspace 3'
+ctrl-cmd-shift-4 = 'move-node-to-workspace 4'
+ctrl-cmd-shift-5 = 'move-node-to-workspace 5'
+
+# Make Finder float
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = "layout floating"
