@@ -1,0 +1,130 @@
+#!/bin/bash
+
+# Set CONFIG_DIR if not already set by SketchyBar
+CONFIG_DIR="${CONFIG_DIR:-$HOME/.config/sketchybar}"
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+
+# Load colors
+source "$CONFIG_DIR/colors.sh"
+
+##### Bar Appearance #####
+sketchybar --bar position=top height=36 blur_radius=30 color=$BAR_COLOR
+
+##### Changing Defaults #####
+default=(
+  padding_left=0
+  padding_right=0
+  icon.font="Hack Nerd Font:Regular:14.0"
+  label.font="SF Pro:Semibold:14.0"
+  icon.color=$WHITE
+  label.color=$WHITE
+  icon.padding_left=10
+  icon.padding_right=10
+  label.padding_left=0
+  label.padding_right=10
+  background.padding_left=4
+  background.padding_right=4
+)
+sketchybar --default "${default[@]}"
+
+# Register Aerospace events
+sketchybar --add event aerospace_workspace_change
+sketchybar --add event aerospace_mode_changed
+sketchybar --add event mode_resize
+sketchybar --add event mode_move
+sketchybar --add event mode_main
+
+# Simple workspace indicators - always show 1-5
+SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "0")
+
+for sid in 1 2 3 4 5; do
+  space_icon=""
+  case "$sid" in
+  a1) space_icon="↖" ;;
+  b1) space_icon="Q" ;;
+  b2) space_icon="W" ;;
+  b3) space_icon="E" ;;
+  b4) space_icon="R" ;;
+  *) space_icon="$sid" ;;
+  esac
+
+  sketchybar --add item space.$sid left \
+    --subscribe space.$sid aerospace_workspace_change \
+    --set space.$sid \
+    background.color=$TRANSPARENT \
+    background.corner_radius=5 \
+    background.height=25 \
+    background.drawing=off \
+    background.padding_left=6 \
+    background.padding_right=6 \
+    y_offset=1 \
+    icon="$space_icon" \
+    icon.font="SF Pro:Bold:16.0" \
+    icon.highlight_color=$ACCENT \
+    label.drawing=off \
+    click_script="aerospace workspace $sid" \
+    script="$CONFIG_DIR/plugins/aerospace.sh $sid"
+done
+
+##### Adding Left Items #####
+sketchybar --add item chevron left \
+  --set chevron icon= label.drawing=off \
+  --add item front_app left \
+  --set front_app icon.drawing=off label.drawing=on script="$PLUGIN_DIR/front_app.sh" \
+  --subscribe front_app front_app_switched \
+  --add item front_app_layout left \
+  --set front_app_layout \
+  icon.drawing=on \
+  icon.font="Hack Nerd Font:Regular:11.0" \
+  icon.color=$GREEN \
+  icon.padding_left=6 \
+  icon.padding_right=6 \
+  label.drawing=off \
+  background.drawing=on \
+  background.color=$GREY_TRANSP \
+  background.corner_radius=4 \
+  background.height=16 \
+  script="$PLUGIN_DIR/front_app.sh" \
+  --subscribe front_app_layout front_app_switched aerospace_mode_changed \
+  --add item aerospace_mode left \
+  --set aerospace_mode \
+  icon.drawing=off \
+  label.drawing=on \
+  label.font="SF Pro:Bold:14.0" \
+  label.color=$WHITE \
+  label.padding_left=8 \
+  label.padding_right=8 \
+  background.drawing=on \
+  background.color=$RED \
+  background.corner_radius=4 \
+  background.height=20 \
+  background.padding_left=4 \
+  background.padding_right=4 \
+  script="$PLUGIN_DIR/aerospace_mode.sh" \
+  --subscribe aerospace_mode mode_resize mode_move mode_main \
+  --add item workspace_layout left \
+  --set workspace_layout \
+  icon.drawing=off \
+  label.drawing=on \
+  label.font="SF Pro:Semibold:14.0" \
+  label.color=$WHITE \
+  label.padding_left=12 \
+  label.padding_right=12 \
+  background.drawing=on \
+  background.color=$GREY_TRANSP \
+  background.corner_radius=6 \
+  background.height=26 \
+  background.padding_left=6 \
+  background.padding_right=6 \
+  script="$PLUGIN_DIR/workspace_layout.sh" \
+  --subscribe workspace_layout aerospace_workspace_change aerospace_mode_changed front_app_switched
+
+##### Adding Right Items #####
+sketchybar --add item clock right \
+  --set clock update_freq=10 icon= script="$PLUGIN_DIR/clock.sh" \
+  --add item battery right \
+  --set battery update_freq=120 icon.drawing=on icon.font="Hack Nerd Font:Regular:14.0" script="$PLUGIN_DIR/battery.sh" \
+  --subscribe battery system_woke power_source_change
+
+##### Force all scripts to run the first time #####
+sketchybar --update
