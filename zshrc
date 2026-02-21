@@ -43,13 +43,21 @@ setopt hist_verify
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
-if [[ -f ~/.aliases ]]; then
-    source ~/.aliases
-fi
 
 if [[ -f ~/.functions ]]; then
     source ~/.functions
 fi
 
 # ---- Zoxide (better cd auto-jumping) ----
-eval "$(zoxide init zsh)"
+if [[ $- == *i* ]]; then
+  eval "$(zoxide init zsh)"
+fi
+export PATH="$HOME/.local/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/michaelmroczka/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

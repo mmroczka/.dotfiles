@@ -7,9 +7,11 @@ alias lla="eza -la"
 alias llt="eza -T" # recurse into folder and create tree structure
 alias llfu="eza -bghHliS --git"
 
-# autojumping with zoxide
-alias cd="z"
-alias j="z"
+# autojumping with zoxide (only in interactive shells where zoxide is loaded)
+if [[ $- == *i* ]]; then
+  alias cd="z"
+  alias j="z"
+fi
 
 # PYTHON
 alias activate="source venv/bin/activate"

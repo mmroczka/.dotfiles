@@ -93,3 +93,5 @@ if status is-interactive
     # Set up fzf key bindings
     fzf --fish | source
 end
+fish_add_path $HOME/.local/bin
+fish_add_path $HOME/.local/bin
