@@ -6293,7 +6293,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "// Ctrl+d = half page down\nifNotCtrl goTo afterCtrlD\nsetVar count 15\nctrlDLoop:\nsuppressMods tapKey down\nrepeatFor count ctrlDLoop\nfinal setVar count 0\nafterCtrlD:\nnoOp\n// Visual mode: delete selection\nif ($mode == 2 || $mode == 3) tapKey backspace\nif ($mode == 2 || $mode == 3) setVar operator 0\nif ($mode == 2 || $mode == 3) setVar count 0\nif ($mode == 2 || $mode == 3) set backlight.constantRgb.rgb 255 255 255\nif ($mode == 2 || $mode == 3) final setVar mode 0\n// Shift+D = delete to end of line\nifNotShift goTo afterShiftD\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 5\nsetVar lastCount $count\nshiftDLoop:\nsuppressMods tapKeySeq LSG-right\nsuppressMods tapKey backspace\nrepeatFor count shiftDLoop\nsetVar operator 0\nfinal setVar count 0\nafterShiftD:\n// First d press: enter operator mode (early exit)\nif ($operator == 0) final setVar operator 1\n// dd = delete whole line\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 4\nsetVar lastCount $count\nddLoop:\ntapKey LG-left\ntapKeySeq LSG-right\ntapKey backspace\ntapKey delete\nrepeatFor count ddLoop\nsetVar operator 0\nsetVar count 0"
+          "command": "// Ctrl+d = half page down\nifNotCtrl goTo afterCtrlD\nsetVar count 30\nctrlDLoop:\nsuppressMods tapKey down\nrepeatFor count ctrlDLoop\nfinal setVar count 0\nafterCtrlD:\nnoOp\n// Visual mode: delete selection\nif ($mode == 2 || $mode == 3) tapKey backspace\nif ($mode == 2 || $mode == 3) setVar operator 0\nif ($mode == 2 || $mode == 3) setVar count 0\nif ($mode == 2 || $mode == 3) set backlight.constantRgb.rgb 255 255 255\nif ($mode == 2 || $mode == 3) final setVar mode 0\n// Shift+D = delete to end of line\nifNotShift goTo afterShiftD\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 5\nsetVar lastCount $count\nshiftDLoop:\nsuppressMods tapKeySeq LSG-right\nsuppressMods tapKey backspace\nrepeatFor count shiftDLoop\nsetVar operator 0\nfinal setVar count 0\nafterShiftD:\n// First d press: enter operator mode (early exit)\nif ($operator == 0) final setVar operator 1\n// dd = delete whole line\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 4\nsetVar lastCount $count\nddLoop:\ntapKey LG-left\ntapKeySeq LSG-right\ntapKey backspace\ntapKey delete\nrepeatFor count ddLoop\nsetVar operator 0\nsetVar count 0"
         }
       ]
     },
@@ -6414,7 +6414,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "// Ctrl+u = half page up\nifNotCtrl goTo afterCtrlU\nsetVar count 15\nctrlULoop:\nsuppressMods tapKey up\nrepeatFor count ctrlULoop\nfinal setVar count 0\nafterCtrlU:\nifShift suppressMods final tapKey LSG-z\nsuppressMods tapKey LG-z"
+          "command": "// Ctrl+u = half page up\nifNotCtrl goTo afterCtrlU\nsetVar count 30\nctrlULoop:\nsuppressMods tapKey up\nrepeatFor count ctrlULoop\nfinal setVar count 0\nafterCtrlU:\nifShift suppressMods final tapKey LSG-z\nsuppressMods tapKey LG-z"
         }
       ]
     },
