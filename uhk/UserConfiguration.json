@@ -4000,24 +4000,24 @@
                   "keyActionType": "none"
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 80
+                  "keyActionType": "playMacro",
+                  "macroIndex": 56,
+                  "macroArguments": []
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 81
+                  "keyActionType": "playMacro",
+                  "macroIndex": 51,
+                  "macroArguments": []
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 82
+                  "keyActionType": "playMacro",
+                  "macroIndex": 63,
+                  "macroArguments": []
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 79
+                  "keyActionType": "playMacro",
+                  "macroIndex": 60,
+                  "macroArguments": []
                 },
                 {
                   "keyActionType": "none"
@@ -4043,7 +4043,9 @@
                   "macroArguments": []
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "playMacro",
+                  "macroIndex": 84,
+                  "macroArguments": []
                 },
                 {
                   "keyActionType": "keystroke",
@@ -4147,7 +4149,9 @@
                   "macroArguments": []
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "playMacro",
+                  "macroIndex": 85,
+                  "macroArguments": []
                 },
                 {
                   "keyActionType": "playMacro",
@@ -6131,7 +6135,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "setVar count ($count * 10 + 0)"
+          "command": "// If count > 0, append digit 0\nif ($count > 0) final setVar count ($count * 10 + 0)\n// V-LINE: no-op\nif ($mode == 3) final setVar count 0\n// VISUAL: extend selection to start of line\nif ($mode == 2) final suppressMods tapKey LSG-left\n// DELETE operator: select to start then delete\nif ($operator == 1) suppressMods tapKeySeq LSG-left\nif ($operator == 1) suppressMods tapKey backspace\nif ($operator == 1) setVar operator 0\nif ($operator == 1) final setVar count 0\n// NORMAL: go to start of line\nsuppressMods tapKey LG-left"
         }
       ]
     },
@@ -6175,7 +6179,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "setVar count ($count * 10 + 4)"
+          "command": "// $ (Shift+4): end of line\n// V-LINE: no-op\nifShift if ($mode == 3) final setVar count 0\n// VISUAL: extend selection to end of line\nifShift if ($mode == 2) setVar count 0\nifShift if ($mode == 2) final suppressMods tapKey LSG-right\n// DELETE operator + $: delete to end of line\nifShift if ($operator == 1) suppressMods tapKeySeq LSG-right\nifShift if ($operator == 1) suppressMods tapKey backspace\nifShift if ($operator == 1) setVar operator 0\nifShift if ($operator == 1) final setVar count 0\n// NORMAL $: go to end of line\nifShift final suppressMods tapKey LG-right\n// No shift: append digit 4\nsetVar count ($count * 10 + 4)"
         }
       ]
     },
@@ -6252,7 +6256,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "// VISUAL LINE mode: back motion is no-op\nif ($mode == 3) final setVar count 0\n// VISUAL mode: shift+motion to extend selection\nif ($mode == 2) final\n{\n    if ($count > 0)\n    {\n        while ($count > 0)\n        {\n            tapKey LSA-left\n            setVar count ($count - 1)\n        }\n        setVar count 0\n    }\n    else\n    {\n        autoRepeat tapKey LSA-left\n    }\n}\n// DELETE operator\nif ($operator == 1) final\n{\n    if ($count == 0)\n    {\n        setVar count 1\n    }\n    setVar lastOperator 1\n    setVar lastMotion 2\n    setVar lastCount $count\n    while ($count > 0)\n    {\n        tapKeySeq LSA-left\n        tapKey backspace\n        setVar count ($count - 1)\n    }\n    setVar operator 0\n    setVar count 0\n}\n// NORMAL motion\nif ($count > 0) final\n{\n    while ($count > 0)\n    {\n        tapKey LA-left\n        setVar count ($count - 1)\n    }\n    setVar count 0\n}\nautoRepeat tapKey LA-left"
+          "command": "// V-LINE: no-op\nif ($mode == 3) final setVar count 0\n// VISUAL: extend selection\nif ($mode == 2) setVar count 0\nif ($mode == 2) final autoRepeat tapKey LSA-left\n// NORMAL motion (early exit)\nif ($operator == 0 && $count == 0) final autoRepeat tapKey LA-left\n// DELETE operator\nif ($operator != 1) goTo countedMotion\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 2\nsetVar lastCount $count\ndeleteLoop:\ntapKeySeq LSA-left\ntapKey backspace\nrepeatFor count deleteLoop\nsetVar operator 0\nfinal setVar count 0\n// Counted NORMAL motion\ncountedMotion:\nif ($count == 0) final noOp\ncountLoop:\ntapKey LA-left\nrepeatFor count countLoop\nsetVar count 0"
         }
       ]
     },
@@ -6263,7 +6267,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "ifGesture w final {\n    tapKeySeq LSA-right\n    tapKey backspace\n    switchKeymap MIK\n}"
+          "command": "// C = change to end of line\nifShift final {\n    suppressMods tapKeySeq LSG-right\n    suppressMods tapKey backspace\n    switchKeymap MIK\n}\n// cc = change entire line\nifGesture c final {\n    suppressMods tapKey LG-left\n    suppressMods tapKeySeq LSG-right\n    suppressMods tapKey backspace\n    switchKeymap MIK\n}\n// cw = change word\nifGesture w final {\n    tapKeySeq LSA-right\n    tapKey backspace\n    switchKeymap MIK\n}"
         }
       ]
     },
@@ -6274,7 +6278,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "// give the modifier state one scan to settle\nnoOp\n\n// Visual mode: delete selection\nif ($mode == 2 || $mode == 3)\n{\n    tapKey backspace\n    setVar mode 0\n    setVar count 0\n    set backlight.constantRgb.rgb 255 192 32\n}\nelse\n{\n    // Shift held means Vim \"X\", delete left\n    ifShift final holdKey backspace\n    // otherwise Vim \"x\", delete right\n    holdKey delete\n}"
+          "command": "noOp\n// Visual mode: delete selection\nif ($mode == 2 || $mode == 3) tapKey backspace\nif ($mode == 2 || $mode == 3) setVar count 0\nif ($mode == 2 || $mode == 3) set backlight.constantRgb.rgb 255 255 255\nif ($mode == 2 || $mode == 3) final setVar mode 0\n// Shift held means Vim \"X\", delete left\nifShift final holdKey backspace\n// otherwise Vim \"x\", delete right\nholdKey delete"
         }
       ]
     },
@@ -6285,7 +6289,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "noOp\n\n// Visual mode: delete selection\nif ($mode == 2 || $mode == 3)\n{\n    tapKey backspace\n    setVar mode 0\n    setVar operator 0\n    setVar count 0\n    set backlight.constantRgb.rgb 255 192 32\n}\nelse\n{\n    // Shift+d = D (delete to end of line)\n    ifShift final\n    {\n        suppressMods\n        {\n            if ($count == 0)\n            {\n                setVar count 1\n            }\n            setVar lastOperator 1\n            setVar lastMotion 5\n            setVar lastCount $count\n            while ($count > 0)\n            {\n                tapKeySeq LSG-right\n                tapKey backspace\n                setVar count ($count - 1)\n            }\n            setVar operator 0\n            setVar count 0\n        }\n    }\n    // dd = delete whole line (operator already pending)\n    if ($operator == 1)\n    {\n        if ($count == 0)\n        {\n            setVar count 1\n        }\n        setVar lastOperator 1\n        setVar lastMotion 4\n        setVar lastCount $count\n        while ($count > 0)\n        {\n            tapKey LG-left\n            tapKeySeq LSG-right\n            tapKey backspace\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n        setVar operator 0\n        setVar count 0\n    }\n    else\n    {\n        // First press: enter delete operator mode\n        setVar operator 1\n    }\n}"
+          "command": "noOp\n// Visual mode: delete selection\nif ($mode == 2 || $mode == 3) tapKey backspace\nif ($mode == 2 || $mode == 3) setVar operator 0\nif ($mode == 2 || $mode == 3) setVar count 0\nif ($mode == 2 || $mode == 3) set backlight.constantRgb.rgb 255 255 255\nif ($mode == 2 || $mode == 3) final setVar mode 0\n// Shift+D = delete to end of line\nifNotShift goTo afterShiftD\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 5\nsetVar lastCount $count\nshiftDLoop:\nsuppressMods tapKeySeq LSG-right\nsuppressMods tapKey backspace\nrepeatFor count shiftDLoop\nsetVar operator 0\nfinal setVar count 0\nafterShiftD:\n// First d press: enter operator mode (early exit)\nif ($operator == 0) final setVar operator 1\n// dd = delete whole line\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 4\nsetVar lastCount $count\nddLoop:\ntapKey LG-left\ntapKeySeq LSG-right\ntapKey backspace\ntapKey delete\nrepeatFor count ddLoop\nsetVar operator 0\nsetVar count 0"
         }
       ]
     },
@@ -6296,7 +6300,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "// VISUAL modes: extend selection down\nif ($mode == 2 || $mode == 3) final\n{\n    if ($count > 0)\n    {\n        while ($count > 0)\n        {\n            tapKey LS-down\n            setVar count ($count - 1)\n        }\n        setVar count 0\n    }\n    else\n    {\n        autoRepeat tapKey LS-down\n    }\n}\n// DELETE operator\nif ($operator == 1) final\n{\n    if ($count == 0)\n    {\n        setVar count 1\n    }\n    setVar lastOperator 1\n    setVar lastMotion 6\n    setVar lastCount $count\n    while ($count > 0)\n    {\n        tapKey LG-left\n        tapKeySeq LSG-right LS-down\n        tapKey backspace\n        setVar count ($count - 1)\n    }\n    setVar operator 0\n    setVar count 0\n}\n// NORMAL motion\nif ($count > 0) final\n{\n    while ($count > 0)\n    {\n        tapKey down\n        setVar count ($count - 1)\n    }\n    setVar count 0\n}\nautoRepeat tapKey down"
+          "command": "// J = join lines (Shift+j)\nifShift final suppressMods tapKeySeq LG-right delete\n// VISUAL modes: extend selection down\nif ($mode == 2 || $mode == 3) setVar count 0\nif ($mode == 2 || $mode == 3) final autoRepeat tapKey LS-down\n// NORMAL motion (early exit)\nif ($operator == 0 && $count == 0) final autoRepeat tapKey down\n// DELETE operator\nif ($operator != 1) goTo countedMotion\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 6\nsetVar lastCount $count\ndeleteLoop:\ntapKey LG-left\ntapKeySeq LSG-right LS-down\ntapKey backspace\nrepeatFor count deleteLoop\nsetVar operator 0\nfinal setVar count 0\n// Counted NORMAL motion\ncountedMotion:\nif ($count == 0) final noOp\ncountLoop:\ntapKey down\nrepeatFor count countLoop\nsetVar count 0"
         }
       ]
     },
@@ -6307,7 +6311,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "// VISUAL LINE mode: end motion is no-op\nif ($mode == 3) final setVar count 0\n// VISUAL mode: shift+motion to extend selection\nif ($mode == 2) final\n{\n    if ($count > 0)\n    {\n        while ($count > 0)\n        {\n            tapKey LSA-right\n            setVar count ($count - 1)\n        }\n        setVar count 0\n    }\n    else\n    {\n        autoRepeat tapKey LSA-right\n    }\n}\n// DELETE operator\nif ($operator == 1) final\n{\n    if ($count == 0)\n    {\n        setVar count 1\n    }\n    setVar lastOperator 1\n    setVar lastMotion 3\n    setVar lastCount $count\n    while ($count > 0)\n    {\n        tapKeySeq LSA-right\n        tapKey backspace\n        setVar count ($count - 1)\n    }\n    setVar operator 0\n    setVar count 0\n}\n// NORMAL motion\nif ($count > 0) final\n{\n    while ($count > 0)\n    {\n        tapKey LA-right\n        setVar count ($count - 1)\n    }\n    setVar count 0\n}\nautoRepeat tapKey LA-right"
+          "command": "// V-LINE: no-op\nif ($mode == 3) final setVar count 0\n// VISUAL: extend selection\nif ($mode == 2) setVar count 0\nif ($mode == 2) final autoRepeat tapKey LSA-right\n// NORMAL motion (early exit)\nif ($operator == 0 && $count == 0) final autoRepeat tapKey LA-right\n// DELETE operator\nif ($operator != 1) goTo countedMotion\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 3\nsetVar lastCount $count\ndeleteLoop:\ntapKeySeq LSA-right\ntapKey backspace\nrepeatFor count deleteLoop\nsetVar operator 0\nfinal setVar count 0\n// Counted NORMAL motion\ncountedMotion:\nif ($count == 0) final noOp\ncountLoop:\ntapKey LA-right\nrepeatFor count countLoop\nsetVar count 0"
         }
       ]
     },
@@ -6318,7 +6322,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "// exit visual modes: deselect and return to normal\nif ($mode == 2 || $mode == 3)\n{\n    tapKey right\n    setVar mode 0\n    setVar operator 0\n    setVar count 0\n    set backlight.constantRgb.rgb 255 192 32\n}\nelse\n{\n    setVar operator 0\n    setVar count 0\n    setVar mode 0\n    tapKey escape\n}"
+          "command": "if ($mode == 2 || $mode == 3)\n{\n    tapKey right\n    setVar mode 0\n    setVar operator 0\n    setVar count 0\n    set backlight.constantRgb.rgb 255 255 255\n}\nelse\n{\n    setVar operator 0\n    setVar count 0\n    setVar mode 0\n    tapKey escape\n}"
         }
       ]
     },
@@ -6329,7 +6333,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "ifGesture timeoutIn 300 g final tapKey G-up\nifShift final tapKey G-down\nholdKey g"
+          "command": "// gg: jump to ggAction (gesture consumes keypress, so only check once)\nifGesture timeoutIn 300 g goTo ggAction\n// G in visual/visual-line: extend selection to bottom\nifShift if ($mode == 2 || $mode == 3) final suppressMods tapKey LSG-down\n// G in normal: go to bottom\nifShift final suppressMods tapKey G-down\nholdKey g\n// gg landed here\nggAction:\nif ($mode == 2 || $mode == 3) final suppressMods tapKey LSG-up\ntapKey G-up"
         }
       ]
     },
@@ -6351,7 +6355,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "// VISUAL LINE mode: left motion is no-op\nif ($mode == 3) final setVar count 0\n// VISUAL mode: extend selection left\nif ($mode == 2) final\n{\n    if ($count > 0)\n    {\n        while ($count > 0)\n        {\n            tapKey LS-left\n            setVar count ($count - 1)\n        }\n        setVar count 0\n    }\n    else\n    {\n        autoRepeat tapKey LS-left\n    }\n}\n// DELETE operator\nif ($operator == 1) final\n{\n    if ($count == 0)\n    {\n        setVar count 1\n    }\n    setVar lastOperator 1\n    setVar lastMotion 8\n    setVar lastCount $count\n    while ($count > 0)\n    {\n        tapKeySeq LS-left\n        tapKey backspace\n        setVar count ($count - 1)\n    }\n    setVar operator 0\n    setVar count 0\n}\n// NORMAL motion\nif ($count > 0) final\n{\n    while ($count > 0)\n    {\n        tapKey left\n        setVar count ($count - 1)\n    }\n    setVar count 0\n}\nautoRepeat tapKey left"
+          "command": "// V-LINE: no-op\nif ($mode == 3) final setVar count 0\n// VISUAL: extend selection left\nif ($mode == 2) setVar count 0\nif ($mode == 2) final autoRepeat tapKey LS-left\n// NORMAL motion (early exit)\nif ($operator == 0 && $count == 0) final autoRepeat tapKey left\n// DELETE operator\nif ($operator != 1) goTo countedMotion\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 8\nsetVar lastCount $count\ndeleteLoop:\ntapKeySeq LS-left\ntapKey backspace\nrepeatFor count deleteLoop\nsetVar operator 0\nfinal setVar count 0\n// Counted NORMAL motion\ncountedMotion:\nif ($count == 0) final noOp\ncountLoop:\ntapKey left\nrepeatFor count countLoop\nsetVar count 0"
         }
       ]
     },
@@ -6373,7 +6377,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "noOp\n\n// Visual mode: paste over selection\nif ($mode == 2 || $mode == 3)\n{\n    suppressMods\n    {\n        tapKey LG-v\n    }\n    setVar mode 0\n    setVar count 0\n    set backlight.constantRgb.rgb 255 192 32\n}\nelse\n{\n    ifShift final suppressMods\n    {\n        tapKey LG-v\n    }\n    suppressMods\n    {\n        tapKey right\n        tapKey LG-v\n    }\n}"
+          "command": "noOp\n// Visual mode: paste over selection\nif ($mode == 2 || $mode == 3) suppressMods tapKey LG-v\nif ($mode == 2 || $mode == 3) setVar count 0\nif ($mode == 2 || $mode == 3) set backlight.constantRgb.rgb 255 255 255\nif ($mode == 2 || $mode == 3) final setVar mode 0\n// Shift+P: paste before cursor\nifShift final suppressMods tapKey LG-v\n// normal paste\nsuppressMods tapKey LG-v"
         }
       ]
     },
@@ -6395,7 +6399,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "// VISUAL LINE mode: right motion is no-op\nif ($mode == 3) final setVar count 0\n// VISUAL mode: extend selection right\nif ($mode == 2) final\n{\n    if ($count > 0)\n    {\n        while ($count > 0)\n        {\n            tapKey LS-right\n            setVar count ($count - 1)\n        }\n        setVar count 0\n    }\n    else\n    {\n        autoRepeat tapKey LS-right\n    }\n}\n// DELETE operator\nif ($operator == 1) final\n{\n    if ($count == 0)\n    {\n        setVar count 1\n    }\n    setVar lastOperator 1\n    setVar lastMotion 9\n    setVar lastCount $count\n    while ($count > 0)\n    {\n        tapKeySeq LS-right\n        tapKey backspace\n        setVar count ($count - 1)\n    }\n    setVar operator 0\n    setVar count 0\n}\n// NORMAL motion\nif ($count > 0) final\n{\n    while ($count > 0)\n    {\n        tapKey right\n        setVar count ($count - 1)\n    }\n    setVar count 0\n}\nautoRepeat tapKey right"
+          "command": "// V-LINE: no-op\nif ($mode == 3) final setVar count 0\n// VISUAL: extend selection right\nif ($mode == 2) setVar count 0\nif ($mode == 2) final autoRepeat tapKey LS-right\n// NORMAL motion (early exit)\nif ($operator == 0 && $count == 0) final autoRepeat tapKey right\n// DELETE operator\nif ($operator != 1) goTo countedMotion\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 9\nsetVar lastCount $count\ndeleteLoop:\ntapKeySeq LS-right\ntapKey backspace\nrepeatFor count deleteLoop\nsetVar operator 0\nfinal setVar count 0\n// Counted NORMAL motion\ncountedMotion:\nif ($count == 0) final noOp\ncountLoop:\ntapKey right\nrepeatFor count countLoop\nsetVar count 0"
         }
       ]
     },
@@ -6428,7 +6432,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "// VISUAL modes: extend selection up\nif ($mode == 2 || $mode == 3) final\n{\n    if ($count > 0)\n    {\n        while ($count > 0)\n        {\n            tapKey LS-up\n            setVar count ($count - 1)\n        }\n        setVar count 0\n    }\n    else\n    {\n        autoRepeat tapKey LS-up\n    }\n}\n// DELETE operator\nif ($operator == 1) final\n{\n    if ($count == 0)\n    {\n        setVar count 1\n    }\n    setVar lastOperator 1\n    setVar lastMotion 7\n    setVar lastCount $count\n    while ($count > 0)\n    {\n        tapKey up\n        tapKey LG-left\n        tapKeySeq LSG-right LS-down\n        tapKey backspace\n        setVar count ($count - 1)\n    }\n    setVar operator 0\n    setVar count 0\n}\n// NORMAL motion\nif ($count > 0) final\n{\n    while ($count > 0)\n    {\n        tapKey up\n        setVar count ($count - 1)\n    }\n    setVar count 0\n}\nautoRepeat tapKey up"
+          "command": "// VISUAL modes: extend selection up\nif ($mode == 2 || $mode == 3) setVar count 0\nif ($mode == 2 || $mode == 3) final autoRepeat tapKey LS-up\n// NORMAL motion (early exit)\nif ($operator == 0 && $count == 0) final autoRepeat tapKey up\n// DELETE operator\nif ($operator != 1) goTo countedMotion\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 7\nsetVar lastCount $count\ndeleteLoop:\ntapKey up\ntapKey LG-left\ntapKeySeq LSG-right LS-down\ntapKey backspace\nrepeatFor count deleteLoop\nsetVar operator 0\nfinal setVar count 0\n// Counted NORMAL motion\ncountedMotion:\nif ($count == 0) final noOp\ncountLoop:\ntapKey up\nrepeatFor count countLoop\nsetVar count 0"
         }
       ]
     },
@@ -6439,7 +6443,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "noOp\n\n// Shift+V = visual-line mode\nifShift final\n{\n    if ($mode == 3)\n    {\n        // exit V-LINE: deselect, return to normal\n        suppressMods\n        {\n            tapKey right\n        }\n        setVar mode 0\n        setVar operator 0\n        setVar count 0\n        set backlight.constantRgb.rgb 255 192 32\n    }\n    else if ($mode == 2)\n    {\n        // switch from character visual to V-LINE\n        setVar mode 3\n        set backlight.constantRgb.rgb 255 0 0\n    }\n    else\n    {\n        // enter V-LINE from normal: select current line\n        suppressMods\n        {\n            tapKey LG-left\n            tapKeySeq LSG-right\n        }\n        setVar mode 3\n        setVar operator 0\n        setVar count 0\n        set backlight.constantRgb.rgb 255 0 0\n    }\n}\n\n// v = character visual mode\nif ($mode == 2)\n{\n    // exit visual: deselect, return to normal\n    tapKey right\n    setVar mode 0\n    setVar operator 0\n    setVar count 0\n    set backlight.constantRgb.rgb 255 192 32\n}\nelse if ($mode == 3)\n{\n    // switch from V-LINE to character visual\n    setVar mode 2\n    set backlight.constantRgb.rgb 255 128 0\n}\nelse\n{\n    // enter visual mode from normal\n    setVar mode 2\n    setVar operator 0\n    setVar count 0\n    set backlight.constantRgb.rgb 255 128 0\n}"
+          "command": "// Shift+V: exit V-LINE → NORMAL (suppressMods to release physical shift)\nifShift if ($mode == 3) suppressMods tapKey left\nifShift if ($mode == 3) setVar operator 0\nifShift if ($mode == 3) setVar count 0\nifShift if ($mode == 3) set backlight.constantRgb.rgb 255 255 255\nifShift if ($mode == 3) final setVar mode 0\n// Shift+V: VISUAL → V-LINE (deselect then select full line)\nifShift if ($mode == 2) suppressMods tapKey right\nifShift if ($mode == 2) suppressMods tapKey LG-left\nifShift if ($mode == 2) suppressMods tapKeySeq LSG-right\nifShift if ($mode == 2) setVar count 0\nifShift if ($mode == 2) set backlight.constantRgb.rgb 0 0 255\nifShift if ($mode == 2) final setVar mode 3\n// Shift+V: NORMAL → V-LINE (select current line)\nifShift suppressMods tapKey LG-left\nifShift suppressMods tapKeySeq LSG-right\nifShift setVar operator 0\nifShift setVar count 0\nifShift set backlight.constantRgb.rgb 0 0 255\nifShift final setVar mode 3\n// v: exit VISUAL → NORMAL\nif ($mode == 2) tapKey right\nif ($mode == 2) setVar operator 0\nif ($mode == 2) setVar count 0\nif ($mode == 2) set backlight.constantRgb.rgb 255 255 255\nif ($mode == 2) final setVar mode 0\n// v: V-LINE → VISUAL\nif ($mode == 3) setVar count 0\nif ($mode == 3) set backlight.constantRgb.rgb 255 0 0\nif ($mode == 3) final setVar mode 2\n// v: NORMAL → VISUAL\nsetVar mode 2\nsetVar operator 0\nsetVar count 0\nset backlight.constantRgb.rgb 255 0 0"
         }
       ]
     },
@@ -6560,7 +6564,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "// VISUAL LINE mode: word motion is no-op in V-LINE\nif ($mode == 3) final setVar count 0\n// VISUAL mode: shift+motion to extend selection\nif ($mode == 2) final\n{\n    if ($count > 0)\n    {\n        while ($count > 0)\n        {\n            tapKeySeq LSA-right LS-right\n            setVar count ($count - 1)\n        }\n        setVar count 0\n    }\n    else\n    {\n        autoRepeat tapKeySeq LSA-right LS-right\n    }\n}\n// DELETE operator\nif ($operator == 1) final\n{\n    if ($count == 0)\n    {\n        setVar count 1\n    }\n    setVar lastOperator 1\n    setVar lastMotion 1\n    setVar lastCount $count\n    while ($count > 0)\n    {\n        tapKeySeq LSA-right LS-right\n        tapKey backspace\n        setVar count ($count - 1)\n    }\n    setVar operator 0\n    setVar count 0\n}\n// NORMAL motion\nif ($count > 0) final\n{\n    while ($count > 0)\n    {\n        tapKeySeq LA-right right\n        setVar count ($count - 1)\n    }\n    setVar count 0\n}\nautoRepeat tapKeySeq LA-right right"
+          "command": "// V-LINE: no-op\nif ($mode == 3) final setVar count 0\n// VISUAL: extend selection word-right\nif ($mode == 2) setVar count 0\nif ($mode == 2) final autoRepeat tapKeySeq LSA-right LS-right\n// NORMAL motion (early exit)\nif ($operator == 0 && $count == 0) final autoRepeat tapKeySeq LA-right right\n// DELETE operator\nif ($operator != 1) goTo countedMotion\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 1\nsetVar lastCount $count\ndeleteLoop:\ntapKeySeq LSA-right LS-right\ntapKey backspace\nrepeatFor count deleteLoop\nsetVar operator 0\nfinal setVar count 0\n// Counted NORMAL motion\ncountedMotion:\nif ($count == 0) final noOp\ncountLoop:\ntapKeySeq LA-right right\nrepeatFor count countLoop\nsetVar count 0"
         }
       ]
     },
@@ -6571,7 +6575,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "noOp\n\n// Visual mode: yank selection, deselect\nif ($mode == 2 || $mode == 3)\n{\n    suppressMods\n    {\n        tapKey LG-c\n    }\n    tapKey right\n    setVar mode 0\n    setVar count 0\n    set backlight.constantRgb.rgb 255 192 32\n}\nelse\n{\n    // Shift + y  → copy from cursor to end of line, then restore cursor\n    ifShift final\n    {\n        suppressMods\n        {\n            tapKeySeq LSG-right\n            tapKey LG-c\n            tapKey left\n        }\n    }\n    // yy → copy full line\n    ifGesture y final\n    {\n        suppressMods\n        {\n            tapKey LG-left\n            tapKeySeq LSG-right\n            tapKey LG-c\n            tapKey LG-right\n        }\n    }\n    holdKey y\n}"
+          "command": "noOp\n// Visual mode: yank selection, deselect\nif ($mode == 2 || $mode == 3) suppressMods tapKey LG-c\nif ($mode == 2 || $mode == 3) tapKey left\nif ($mode == 2 || $mode == 3) setVar count 0\nif ($mode == 2 || $mode == 3) set backlight.constantRgb.rgb 255 255 255\nif ($mode == 2 || $mode == 3) final setVar mode 0\n// Shift+Y → copy from cursor to end of line, keep cursor in place\nifShift suppressMods tapKeySeq LSG-right\nifShift suppressMods tapKey LG-c\nifShift delayUntil 50\nifShift final suppressMods tapKey left\n// yy → copy full line\nifGesture y final\n{\n    suppressMods\n    {\n        tapKey LG-left\n        tapKeySeq LSG-right\n        tapKey LG-c\n        tapKey LG-right\n    }\n}\nholdKey y"
         }
       ]
     },
@@ -6690,6 +6694,28 @@
         {
           "macroActionType": "command",
           "command": "ifLayer fn2 {\n    untoggleLayer\n    set backlight.constantRgb.rgb 255 192 32\n    tapKey escape\n}\nelse {\n    toggleLayer fn2\n    set backlight.constantRgb.rgb 255 0 0\n}"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "[vim] search",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "setVar operator 0\nsetVar count 0\nsuppressMods tapKey LG-f\nswitchKeymap MIK"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "[vim] substitute",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "// S = substitute entire line (Shift+s)\nifShift setVar operator 0\nifShift setVar count 0\nifShift suppressMods tapKey LG-left\nifShift suppressMods tapKeySeq LSG-right\nifShift suppressMods tapKey backspace\nifShift final switchKeymap MIK\n// s = substitute character\nsetVar operator 0\nsetVar count 0\ntapKey delete\nswitchKeymap MIK"
         }
       ]
     }
