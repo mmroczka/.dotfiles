@@ -4035,7 +4035,9 @@
                   "keyActionType": "none"
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "playMacro",
+                  "macroIndex": 87,
+                  "macroArguments": []
                 },
                 {
                   "keyActionType": "playMacro",
@@ -6126,7 +6128,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "if ($lastOperator == 1) {\n    setVar count $lastCount\n\n    // WORD (1)\n    if ($lastMotion == 1) {\n        while ($count > 0) {\n            tapKeySeq LSA-right LS-right\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // BACK_WORD (2)\n    if ($lastMotion == 2) {\n        while ($count > 0) {\n            tapKeySeq LSA-left\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // END_WORD (3)\n    if ($lastMotion == 3) {\n        while ($count > 0) {\n            tapKeySeq LSA-right\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // LINE (4)\n    if ($lastMotion == 4) {\n        while ($count > 0) {\n            tapKey LG-left\n            tapKeySeq LSG-right\n            tapKey backspace\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // TO_EOL (5)\n    if ($lastMotion == 5) {\n        while ($count > 0) {\n            tapKeySeq LSG-right\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // DOWN (6)\n    if ($lastMotion == 6) {\n        while ($count > 0) {\n            tapKey LG-left\n            tapKeySeq LSG-right LS-down\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // UP (7)\n    if ($lastMotion == 7) {\n        while ($count > 0) {\n            tapKey up\n            tapKey LG-left\n            tapKeySeq LSG-right LS-down\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // LEFT (8)\n    if ($lastMotion == 8) {\n        while ($count > 0) {\n            tapKeySeq LS-left\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // RIGHT (9)\n    if ($lastMotion == 9) {\n        while ($count > 0) {\n            tapKeySeq LS-right\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n}"
+          "command": "// > in visual mode: indent selection\nifShift if ($mode == 2 || $mode == 3) final suppressMods tapKey LG-closingBracketAndClosingBrace\n// >> in normal mode: indent line\nifShift ifGesture $thisKeyId final suppressMods tapKey LG-closingBracketAndClosingBrace\n// dot repeat\nif ($lastOperator == 1) {\n    setVar count $lastCount\n\n    // WORD (1)\n    if ($lastMotion == 1) {\n        while ($count > 0) {\n            tapKeySeq LSA-right LS-right\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // BACK_WORD (2)\n    if ($lastMotion == 2) {\n        while ($count > 0) {\n            tapKeySeq LSA-left\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // END_WORD (3)\n    if ($lastMotion == 3) {\n        while ($count > 0) {\n            tapKeySeq LSA-right\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // LINE (4)\n    if ($lastMotion == 4) {\n        while ($count > 0) {\n            tapKey LG-left\n            tapKeySeq LSG-right\n            tapKey backspace\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // TO_EOL (5)\n    if ($lastMotion == 5) {\n        while ($count > 0) {\n            tapKeySeq LSG-right\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // DOWN (6)\n    if ($lastMotion == 6) {\n        while ($count > 0) {\n            tapKey LG-left\n            tapKeySeq LSG-right LS-down\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // UP (7)\n    if ($lastMotion == 7) {\n        while ($count > 0) {\n            tapKey up\n            tapKey LG-left\n            tapKeySeq LSG-right LS-down\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // LEFT (8)\n    if ($lastMotion == 8) {\n        while ($count > 0) {\n            tapKeySeq LS-left\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n    // RIGHT (9)\n    if ($lastMotion == 9) {\n        while ($count > 0) {\n            tapKeySeq LS-right\n            tapKey backspace\n            setVar count ($count - 1)\n        }\n    }\n}"
         }
       ]
     },
@@ -6258,7 +6260,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "// Ctrl+b = page up\nifCtrl final suppressMods tapKey pageUp\n// V-LINE: no-op\nif ($mode == 3) final setVar count 0\n// VISUAL: extend selection\nif ($mode == 2) setVar count 0\nif ($mode == 2) final autoRepeat tapKey LSA-left\n// NORMAL motion (early exit)\nif ($operator == 0 && $count == 0) final autoRepeat tapKey LA-left\n// DELETE operator\nif ($operator != 1) goTo countedMotion\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 2\nsetVar lastCount $count\ndeleteLoop:\ntapKeySeq LSA-left\ntapKey backspace\nrepeatFor count deleteLoop\nsetVar operator 0\nfinal setVar count 0\n// Counted NORMAL motion\ncountedMotion:\nif ($count == 0) final noOp\ncountLoop:\ntapKey LA-left\nrepeatFor count countLoop\nsetVar count 0"
+          "command": "// Ctrl+b = page up\nifCtrl final suppressMods tapKey pageUp\n// V-LINE: no-op\nif ($mode == 3) final setVar count 0\n// VISUAL: extend selection\nif ($mode == 2) setVar count 0\nif ($mode == 2) final autoRepeat tapKey LSA-left\n// NORMAL motion (early exit)\nif ($operator == 0 && $count == 0) final autoRepeat tapKey LA-left\n// DELETE operator\nif ($operator != 1) goTo afterDelete\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 2\nsetVar lastCount $count\ndeleteLoop:\ntapKeySeq LSA-left\ntapKey backspace\nrepeatFor count deleteLoop\nsetVar operator 0\nfinal setVar count 0\nafterDelete:\n// YANK operator\nif ($operator != 2) goTo countedMotion\nif ($count == 0) setVar count 1\nyankLoop:\nsuppressMods tapKey LSA-left\nrepeatFor count yankLoop\nsuppressMods tapKey LG-c\ndelayUntil 50\nsuppressMods tapKey left\nsetVar operator 0\nfinal setVar count 0\n// Counted NORMAL motion\ncountedMotion:\nif ($count == 0) final noOp\ncountLoop:\ntapKey LA-left\nrepeatFor count countLoop\nsetVar count 0"
         }
       ]
     },
@@ -6302,7 +6304,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "// J = join lines (Shift+j)\nifShift final suppressMods tapKeySeq LG-right delete\n// VISUAL modes: extend selection down\nif ($mode == 2 || $mode == 3) setVar count 0\nif ($mode == 2 || $mode == 3) final autoRepeat tapKey LS-down\n// NORMAL motion (early exit)\nif ($operator == 0 && $count == 0) final autoRepeat tapKey down\n// DELETE operator\nif ($operator != 1) goTo countedMotion\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 6\nsetVar lastCount $count\ndeleteLoop:\ntapKey LG-left\ntapKeySeq LSG-right LS-down\ntapKey backspace\nrepeatFor count deleteLoop\nsetVar operator 0\nfinal setVar count 0\n// Counted NORMAL motion\ncountedMotion:\nif ($count == 0) final noOp\ncountLoop:\ntapKey down\nrepeatFor count countLoop\nsetVar count 0"
+          "command": "// J = join lines (Shift+j)\nifShift final suppressMods tapKeySeq LG-right delete\n// VISUAL modes: extend selection down\nif ($mode == 2 || $mode == 3) setVar count 0\nif ($mode == 2 || $mode == 3) final autoRepeat tapKey LS-down\n// NORMAL motion (early exit)\nif ($operator == 0 && $count == 0) final autoRepeat tapKey down\n// DELETE operator\nif ($operator != 1) goTo afterDelete\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 6\nsetVar lastCount $count\ndeleteLoop:\ntapKey LG-left\ntapKeySeq LSG-right LS-down\ntapKey backspace\nrepeatFor count deleteLoop\nsetVar operator 0\nfinal setVar count 0\nafterDelete:\n// YANK operator\nif ($operator != 2) goTo countedMotion\nif ($count == 0) setVar count 1\nsuppressMods tapKey LG-left\nyankLoop:\nsuppressMods tapKey LS-down\nrepeatFor count yankLoop\nsuppressMods tapKeySeq LSG-right\nsuppressMods tapKey LG-c\ndelayUntil 50\nsuppressMods tapKey left\nsetVar operator 0\nfinal setVar count 0\n// Counted NORMAL motion\ncountedMotion:\nif ($count == 0) final noOp\ncountLoop:\ntapKey down\nrepeatFor count countLoop\nsetVar count 0"
         }
       ]
     },
@@ -6313,7 +6315,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "// V-LINE: no-op\nif ($mode == 3) final setVar count 0\n// VISUAL: extend selection\nif ($mode == 2) setVar count 0\nif ($mode == 2) final autoRepeat tapKey LSA-right\n// NORMAL motion (early exit)\nif ($operator == 0 && $count == 0) final autoRepeat tapKey LA-right\n// DELETE operator\nif ($operator != 1) goTo countedMotion\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 3\nsetVar lastCount $count\ndeleteLoop:\ntapKeySeq LSA-right\ntapKey backspace\nrepeatFor count deleteLoop\nsetVar operator 0\nfinal setVar count 0\n// Counted NORMAL motion\ncountedMotion:\nif ($count == 0) final noOp\ncountLoop:\ntapKey LA-right\nrepeatFor count countLoop\nsetVar count 0"
+          "command": "// V-LINE: no-op\nif ($mode == 3) final setVar count 0\n// VISUAL: extend selection\nif ($mode == 2) setVar count 0\nif ($mode == 2) final autoRepeat tapKey LSA-right\n// NORMAL motion (early exit)\nif ($operator == 0 && $count == 0) final autoRepeat tapKey LA-right\n// DELETE operator\nif ($operator != 1) goTo afterDelete\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 3\nsetVar lastCount $count\ndeleteLoop:\ntapKeySeq LSA-right\ntapKey backspace\nrepeatFor count deleteLoop\nsetVar operator 0\nfinal setVar count 0\nafterDelete:\n// YANK operator\nif ($operator != 2) goTo countedMotion\nif ($count == 0) setVar count 1\nyankLoop:\nsuppressMods tapKey LSA-right\nrepeatFor count yankLoop\nsuppressMods tapKey LG-c\ndelayUntil 50\nsuppressMods tapKey left\nsetVar operator 0\nfinal setVar count 0\n// Counted NORMAL motion\ncountedMotion:\nif ($count == 0) final noOp\ncountLoop:\ntapKey LA-right\nrepeatFor count countLoop\nsetVar count 0"
         }
       ]
     },
@@ -6357,7 +6359,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "// V-LINE: no-op\nif ($mode == 3) final setVar count 0\n// VISUAL: extend selection left\nif ($mode == 2) setVar count 0\nif ($mode == 2) final autoRepeat tapKey LS-left\n// NORMAL motion (early exit)\nif ($operator == 0 && $count == 0) final autoRepeat tapKey left\n// DELETE operator\nif ($operator != 1) goTo countedMotion\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 8\nsetVar lastCount $count\ndeleteLoop:\ntapKeySeq LS-left\ntapKey backspace\nrepeatFor count deleteLoop\nsetVar operator 0\nfinal setVar count 0\n// Counted NORMAL motion\ncountedMotion:\nif ($count == 0) final noOp\ncountLoop:\ntapKey left\nrepeatFor count countLoop\nsetVar count 0"
+          "command": "// V-LINE: no-op\nif ($mode == 3) final setVar count 0\n// VISUAL: extend selection left\nif ($mode == 2) setVar count 0\nif ($mode == 2) final autoRepeat tapKey LS-left\n// NORMAL motion (early exit)\nif ($operator == 0 && $count == 0) final autoRepeat tapKey left\n// DELETE operator\nif ($operator != 1) goTo afterDelete\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 8\nsetVar lastCount $count\ndeleteLoop:\ntapKeySeq LS-left\ntapKey backspace\nrepeatFor count deleteLoop\nsetVar operator 0\nfinal setVar count 0\nafterDelete:\n// YANK operator\nif ($operator != 2) goTo countedMotion\nif ($count == 0) setVar count 1\nyankLoop:\nsuppressMods tapKey LS-left\nrepeatFor count yankLoop\nsuppressMods tapKey LG-c\ndelayUntil 50\nsuppressMods tapKey right\nsetVar operator 0\nfinal setVar count 0\n// Counted NORMAL motion\ncountedMotion:\nif ($count == 0) final noOp\ncountLoop:\ntapKey left\nrepeatFor count countLoop\nsetVar count 0"
         }
       ]
     },
@@ -6379,7 +6381,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "noOp\n// Visual mode: paste over selection\nif ($mode == 2 || $mode == 3) suppressMods tapKey LG-v\nif ($mode == 2 || $mode == 3) setVar count 0\nif ($mode == 2 || $mode == 3) set backlight.constantRgb.rgb 255 255 255\nif ($mode == 2 || $mode == 3) final setVar mode 0\n// Shift+P: paste before cursor\nifShift final suppressMods tapKey LG-v\n// normal paste\nsuppressMods tapKey LG-v"
+          "command": "noOp\n// Visual mode: paste over selection\nif ($mode == 2 || $mode == 3) suppressMods tapKey LG-v\nif ($mode == 2 || $mode == 3) setVar count 0\nif ($mode == 2 || $mode == 3) set backlight.constantRgb.rgb 255 255 255\nif ($mode == 2 || $mode == 3) final setVar mode 0\n// Shift+P: go to end of line, new line, paste\nifShift suppressMods tapKey LG-right\nifShift suppressMods tapKey enter\nifShift final suppressMods tapKey LG-v\n// normal paste\nsuppressMods tapKey LG-v"
         }
       ]
     },
@@ -6401,7 +6403,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "// V-LINE: no-op\nif ($mode == 3) final setVar count 0\n// VISUAL: extend selection right\nif ($mode == 2) setVar count 0\nif ($mode == 2) final autoRepeat tapKey LS-right\n// NORMAL motion (early exit)\nif ($operator == 0 && $count == 0) final autoRepeat tapKey right\n// DELETE operator\nif ($operator != 1) goTo countedMotion\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 9\nsetVar lastCount $count\ndeleteLoop:\ntapKeySeq LS-right\ntapKey backspace\nrepeatFor count deleteLoop\nsetVar operator 0\nfinal setVar count 0\n// Counted NORMAL motion\ncountedMotion:\nif ($count == 0) final noOp\ncountLoop:\ntapKey right\nrepeatFor count countLoop\nsetVar count 0"
+          "command": "// V-LINE: no-op\nif ($mode == 3) final setVar count 0\n// VISUAL: extend selection right\nif ($mode == 2) setVar count 0\nif ($mode == 2) final autoRepeat tapKey LS-right\n// NORMAL motion (early exit)\nif ($operator == 0 && $count == 0) final autoRepeat tapKey right\n// DELETE operator\nif ($operator != 1) goTo afterDelete\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 9\nsetVar lastCount $count\ndeleteLoop:\ntapKeySeq LS-right\ntapKey backspace\nrepeatFor count deleteLoop\nsetVar operator 0\nfinal setVar count 0\nafterDelete:\n// YANK operator\nif ($operator != 2) goTo countedMotion\nif ($count == 0) setVar count 1\nyankLoop:\nsuppressMods tapKey LS-right\nrepeatFor count yankLoop\nsuppressMods tapKey LG-c\ndelayUntil 50\nsuppressMods tapKey left\nsetVar operator 0\nfinal setVar count 0\n// Counted NORMAL motion\ncountedMotion:\nif ($count == 0) final noOp\ncountLoop:\ntapKey right\nrepeatFor count countLoop\nsetVar count 0"
         }
       ]
     },
@@ -6434,7 +6436,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "// VISUAL modes: extend selection up\nif ($mode == 2 || $mode == 3) setVar count 0\nif ($mode == 2 || $mode == 3) final autoRepeat tapKey LS-up\n// NORMAL motion (early exit)\nif ($operator == 0 && $count == 0) final autoRepeat tapKey up\n// DELETE operator\nif ($operator != 1) goTo countedMotion\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 7\nsetVar lastCount $count\ndeleteLoop:\ntapKey up\ntapKey LG-left\ntapKeySeq LSG-right LS-down\ntapKey backspace\nrepeatFor count deleteLoop\nsetVar operator 0\nfinal setVar count 0\n// Counted NORMAL motion\ncountedMotion:\nif ($count == 0) final noOp\ncountLoop:\ntapKey up\nrepeatFor count countLoop\nsetVar count 0"
+          "command": "// VISUAL modes: extend selection up\nif ($mode == 2 || $mode == 3) setVar count 0\nif ($mode == 2 || $mode == 3) final autoRepeat tapKey LS-up\n// NORMAL motion (early exit)\nif ($operator == 0 && $count == 0) final autoRepeat tapKey up\n// DELETE operator\nif ($operator != 1) goTo afterDelete\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 7\nsetVar lastCount $count\ndeleteLoop:\ntapKey up\ntapKey LG-left\ntapKeySeq LSG-right LS-down\ntapKey backspace\nrepeatFor count deleteLoop\nsetVar operator 0\nfinal setVar count 0\nafterDelete:\n// YANK operator\nif ($operator != 2) goTo countedMotion\nif ($count == 0) setVar count 1\nsuppressMods tapKey LG-right\nyankLoop:\nsuppressMods tapKey LS-up\nrepeatFor count yankLoop\nsuppressMods tapKeySeq LSG-left\nsuppressMods tapKey LG-c\ndelayUntil 50\nsuppressMods tapKey left\nsetVar operator 0\nfinal setVar count 0\n// Counted NORMAL motion\ncountedMotion:\nif ($count == 0) final noOp\ncountLoop:\ntapKey up\nrepeatFor count countLoop\nsetVar count 0"
         }
       ]
     },
@@ -6566,7 +6568,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "// V-LINE: no-op\nif ($mode == 3) final setVar count 0\n// VISUAL: extend selection word-right\nif ($mode == 2) setVar count 0\nif ($mode == 2) final autoRepeat tapKeySeq LSA-right LS-right\n// NORMAL motion (early exit)\nif ($operator == 0 && $count == 0) final autoRepeat tapKeySeq LA-right right\n// DELETE operator\nif ($operator != 1) goTo countedMotion\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 1\nsetVar lastCount $count\ndeleteLoop:\ntapKeySeq LSA-right LS-right\ntapKey backspace\nrepeatFor count deleteLoop\nsetVar operator 0\nfinal setVar count 0\n// Counted NORMAL motion\ncountedMotion:\nif ($count == 0) final noOp\ncountLoop:\ntapKeySeq LA-right right\nrepeatFor count countLoop\nsetVar count 0"
+          "command": "// V-LINE: no-op\nif ($mode == 3) final setVar count 0\n// VISUAL: extend selection word-right\nif ($mode == 2) setVar count 0\nif ($mode == 2) final autoRepeat tapKeySeq LSA-right LS-right\n// NORMAL motion (early exit)\nif ($operator == 0 && $count == 0) final autoRepeat tapKeySeq LA-right right\n// DELETE operator\nif ($operator != 1) goTo afterDelete\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 1\nsetVar lastCount $count\ndeleteLoop:\ntapKeySeq LSA-right LS-right\ntapKey backspace\nrepeatFor count deleteLoop\nsetVar operator 0\nfinal setVar count 0\nafterDelete:\n// YANK operator\nif ($operator != 2) goTo countedMotion\nif ($count == 0) setVar count 1\nyankLoop:\nsuppressMods tapKeySeq LSA-right LS-right\nrepeatFor count yankLoop\nsuppressMods tapKey LG-c\ndelayUntil 50\nsuppressMods tapKey left\nsetVar operator 0\nfinal setVar count 0\n// Counted NORMAL motion\ncountedMotion:\nif ($count == 0) final noOp\ncountLoop:\ntapKeySeq LA-right right\nrepeatFor count countLoop\nsetVar count 0"
         }
       ]
     },
@@ -6577,7 +6579,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "noOp\n// Visual mode: yank selection, deselect\nif ($mode == 2 || $mode == 3) suppressMods tapKey LG-c\nif ($mode == 2 || $mode == 3) tapKey left\nif ($mode == 2 || $mode == 3) setVar count 0\nif ($mode == 2 || $mode == 3) set backlight.constantRgb.rgb 255 255 255\nif ($mode == 2 || $mode == 3) final setVar mode 0\n// Shift+Y → copy from cursor to end of line, keep cursor in place\nifShift suppressMods tapKeySeq LSG-right\nifShift suppressMods tapKey LG-c\nifShift delayUntil 50\nifShift final suppressMods tapKey left\n// yy → copy full line\nifGesture y final\n{\n    suppressMods\n    {\n        tapKey LG-left\n        tapKeySeq LSG-right\n        tapKey LG-c\n        tapKey LG-right\n    }\n}\nholdKey y"
+          "command": "noOp\n// Visual mode: yank selection, deselect\nif ($mode == 2 || $mode == 3) suppressMods tapKey LG-c\nif ($mode == 2 || $mode == 3) tapKey left\nif ($mode == 2 || $mode == 3) setVar count 0\nif ($mode == 2 || $mode == 3) set backlight.constantRgb.rgb 255 255 255\nif ($mode == 2 || $mode == 3) final setVar mode 0\n// Shift+Y → copy from cursor to end of line, keep cursor in place\nifShift suppressMods tapKeySeq LSG-right\nifShift suppressMods tapKey LG-c\nifShift delayUntil 50\nifShift final suppressMods tapKey left\n// yy → copy full line (second y press when operator already 2)\nif ($operator == 2) suppressMods tapKey LG-left\nif ($operator == 2) suppressMods tapKeySeq LSG-right\nif ($operator == 2) suppressMods tapKey LG-c\nif ($operator == 2) suppressMods tapKey LG-right\nif ($operator == 2) setVar count 0\nif ($operator == 2) final setVar operator 0\n// y + motion: set yank operator pending\nsetVar operator 2"
         }
       ]
     },
@@ -6588,7 +6590,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "set autoRepeatDelay 120\nset autoRepeatRate 30\nset secondaryRole.defaultStrategy advanced\nset secondaryRole.advanced.timeout 200\nset secondaryRole.advanced.timeoutAction secondary\nset secondaryRole.advanced.safetyMargin 0\nset secondaryRole.advanced.triggerByRelease 0\nset secondaryRole.advanced.doubletapToPrimary 1\nset secondaryRole.advanced.doubletapTime 200\n\n// mode meanings:\n// 0 = NORMAL   (default; motions/operators/commands)\n// 1 = INSERT   (keys pass through as typing; Esc returns to NORMAL)\n// 2 = VISUAL   (character selection; motions extend selection with Shift)\n// 3 = VISUAL LINE (full-line selection; j/k extend by line)\n// 4 = REPLACE  (optional later; like Vim R)\n// 5 = COMMAND  (optional later; \":\" / ex-like command entry)\nsetVar mode 0\n// operator meanings:\n// 0 = NONE\n// 1 = DELETE\nsetVar operator 0\n// tracks the number of times to do a change (supports multi-digit like 23dw)\nsetVar count 0\n\n// last executed change, used for the . key\nsetVar lastOperator 0\n// motion meanings:\n// 0 = NONE\n// 1 = WORD (w)\n// 2 = BACK_WORD (b)\n// 3 = END_WORD (e)\n// 4 = LINE (dd)\n// 5 = TO_EOL (D)\n// 6 = DOWN (j)\n// 7 = UP (k)\n// 8 = LEFT (h)\n// 9 = RIGHT (l)\nsetVar lastMotion 0\nsetVar lastCount 0"
+          "command": "set autoRepeatDelay 120\nset autoRepeatRate 30\nset secondaryRole.defaultStrategy advanced\nset secondaryRole.advanced.timeout 200\nset secondaryRole.advanced.timeoutAction secondary\nset secondaryRole.advanced.safetyMargin 0\nset secondaryRole.advanced.triggerByRelease 0\nset secondaryRole.advanced.doubletapToPrimary 1\nset secondaryRole.advanced.doubletapTime 200\n\n// mode meanings:\n// 0 = NORMAL   (default; motions/operators/commands)\n// 1 = INSERT   (keys pass through as typing; Esc returns to NORMAL)\n// 2 = VISUAL   (character selection; motions extend selection with Shift)\n// 3 = VISUAL LINE (full-line selection; j/k extend by line)\n// 4 = REPLACE  (optional later; like Vim R)\n// 5 = COMMAND  (optional later; \":\" / ex-like command entry)\nsetVar mode 0\n// operator meanings:\n// 0 = NONE\n// 1 = DELETE\n// 2 = YANK\nsetVar operator 0\n// tracks the number of times to do a change (supports multi-digit like 23dw)\nsetVar count 0\n\n// last executed change, used for the . key\nsetVar lastOperator 0\n// motion meanings:\n// 0 = NONE\n// 1 = WORD (w)\n// 2 = BACK_WORD (b)\n// 3 = END_WORD (e)\n// 4 = LINE (dd)\n// 5 = TO_EOL (D)\n// 6 = DOWN (j)\n// 7 = UP (k)\n// 8 = LEFT (h)\n// 9 = RIGHT (l)\nsetVar lastMotion 0\nsetVar lastCount 0"
         }
       ]
     },
@@ -6729,6 +6731,17 @@
         {
           "macroActionType": "command",
           "command": "// Ctrl+f = page down\nifCtrl final suppressMods tapKey pageDown"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "[vim] comma",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "// < in visual mode: outdent selection\nifShift if ($mode == 2 || $mode == 3) final suppressMods tapKey LG-openingBracketAndOpeningBrace\n// << in normal mode: outdent line\nifShift ifGesture $thisKeyId final suppressMods tapKey LG-openingBracketAndOpeningBrace"
         }
       ]
     }
