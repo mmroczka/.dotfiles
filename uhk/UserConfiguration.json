@@ -4159,7 +4159,9 @@
                   "macroArguments": []
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "playMacro",
+                  "macroIndex": 86,
+                  "macroArguments": []
                 },
                 {
                   "keyActionType": "playMacro",
@@ -6256,7 +6258,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "// V-LINE: no-op\nif ($mode == 3) final setVar count 0\n// VISUAL: extend selection\nif ($mode == 2) setVar count 0\nif ($mode == 2) final autoRepeat tapKey LSA-left\n// NORMAL motion (early exit)\nif ($operator == 0 && $count == 0) final autoRepeat tapKey LA-left\n// DELETE operator\nif ($operator != 1) goTo countedMotion\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 2\nsetVar lastCount $count\ndeleteLoop:\ntapKeySeq LSA-left\ntapKey backspace\nrepeatFor count deleteLoop\nsetVar operator 0\nfinal setVar count 0\n// Counted NORMAL motion\ncountedMotion:\nif ($count == 0) final noOp\ncountLoop:\ntapKey LA-left\nrepeatFor count countLoop\nsetVar count 0"
+          "command": "// Ctrl+b = page up\nifCtrl final suppressMods tapKey pageUp\n// V-LINE: no-op\nif ($mode == 3) final setVar count 0\n// VISUAL: extend selection\nif ($mode == 2) setVar count 0\nif ($mode == 2) final autoRepeat tapKey LSA-left\n// NORMAL motion (early exit)\nif ($operator == 0 && $count == 0) final autoRepeat tapKey LA-left\n// DELETE operator\nif ($operator != 1) goTo countedMotion\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 2\nsetVar lastCount $count\ndeleteLoop:\ntapKeySeq LSA-left\ntapKey backspace\nrepeatFor count deleteLoop\nsetVar operator 0\nfinal setVar count 0\n// Counted NORMAL motion\ncountedMotion:\nif ($count == 0) final noOp\ncountLoop:\ntapKey LA-left\nrepeatFor count countLoop\nsetVar count 0"
         }
       ]
     },
@@ -6289,7 +6291,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "noOp\n// Visual mode: delete selection\nif ($mode == 2 || $mode == 3) tapKey backspace\nif ($mode == 2 || $mode == 3) setVar operator 0\nif ($mode == 2 || $mode == 3) setVar count 0\nif ($mode == 2 || $mode == 3) set backlight.constantRgb.rgb 255 255 255\nif ($mode == 2 || $mode == 3) final setVar mode 0\n// Shift+D = delete to end of line\nifNotShift goTo afterShiftD\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 5\nsetVar lastCount $count\nshiftDLoop:\nsuppressMods tapKeySeq LSG-right\nsuppressMods tapKey backspace\nrepeatFor count shiftDLoop\nsetVar operator 0\nfinal setVar count 0\nafterShiftD:\n// First d press: enter operator mode (early exit)\nif ($operator == 0) final setVar operator 1\n// dd = delete whole line\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 4\nsetVar lastCount $count\nddLoop:\ntapKey LG-left\ntapKeySeq LSG-right\ntapKey backspace\ntapKey delete\nrepeatFor count ddLoop\nsetVar operator 0\nsetVar count 0"
+          "command": "// Ctrl+d = half page down\nifNotCtrl goTo afterCtrlD\nsetVar count 15\nctrlDLoop:\nsuppressMods tapKey down\nrepeatFor count ctrlDLoop\nfinal setVar count 0\nafterCtrlD:\nnoOp\n// Visual mode: delete selection\nif ($mode == 2 || $mode == 3) tapKey backspace\nif ($mode == 2 || $mode == 3) setVar operator 0\nif ($mode == 2 || $mode == 3) setVar count 0\nif ($mode == 2 || $mode == 3) set backlight.constantRgb.rgb 255 255 255\nif ($mode == 2 || $mode == 3) final setVar mode 0\n// Shift+D = delete to end of line\nifNotShift goTo afterShiftD\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 5\nsetVar lastCount $count\nshiftDLoop:\nsuppressMods tapKeySeq LSG-right\nsuppressMods tapKey backspace\nrepeatFor count shiftDLoop\nsetVar operator 0\nfinal setVar count 0\nafterShiftD:\n// First d press: enter operator mode (early exit)\nif ($operator == 0) final setVar operator 1\n// dd = delete whole line\nif ($count == 0) setVar count 1\nsetVar lastOperator 1\nsetVar lastMotion 4\nsetVar lastCount $count\nddLoop:\ntapKey LG-left\ntapKeySeq LSG-right\ntapKey backspace\ntapKey delete\nrepeatFor count ddLoop\nsetVar operator 0\nsetVar count 0"
         }
       ]
     },
@@ -6410,7 +6412,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "ifShift suppressMods final tapKey LSG-z\nsuppressMods tapKey LG-z"
+          "command": "// Ctrl+u = half page up\nifNotCtrl goTo afterCtrlU\nsetVar count 15\nctrlULoop:\nsuppressMods tapKey up\nrepeatFor count ctrlULoop\nfinal setVar count 0\nafterCtrlU:\nifShift suppressMods final tapKey LSG-z\nsuppressMods tapKey LG-z"
         }
       ]
     },
@@ -6716,6 +6718,17 @@
         {
           "macroActionType": "command",
           "command": "// S = substitute entire line (Shift+s)\nifShift setVar operator 0\nifShift setVar count 0\nifShift suppressMods tapKey LG-left\nifShift suppressMods tapKeySeq LSG-right\nifShift suppressMods tapKey backspace\nifShift final switchKeymap MIK\n// s = substitute character\nsetVar operator 0\nsetVar count 0\ntapKey delete\nswitchKeymap MIK"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "[vim] f",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "// Ctrl+f = page down\nifCtrl final suppressMods tapKey pageDown"
         }
       ]
     }
