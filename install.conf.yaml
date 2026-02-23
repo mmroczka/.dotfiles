@@ -12,6 +12,7 @@
     - ~/.hammerspoon/Spoons
     - ~/.config/sketchybar/plugins
     - ~/.config/borders
+    - ~/Library/Application Support/Übersicht/widgets
 
 - link:
     ~/.zshrc: zshrc
@@ -30,3 +31,4 @@
     ~/.aerospace.toml: aerospace.toml
     ~/.config/sketchybar: sketchybar
     ~/.config/borders/bordersrc: borders/bordersrc
+    ~/Library/Application Support/Übersicht/widgets/aerospace-workspaces.jsx: ubersicht/aerospace-workspaces.jsx

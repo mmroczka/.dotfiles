@@ -4,8 +4,8 @@ config-version = 2
 # Start AeroSpace at login
 start-at-login = true
 
-# Start borders with AeroSpace
-after-startup-command = ['exec-and-forget borders']
+# Start JankyBorders with AeroSpace for active window highlighting
+after-startup-command = ['exec-and-forget borders active_color=0xffff3333 inactive_color=0xff494d64 width=5.0']
 
 # Normalizations
 enable-normalization-flatten-containers = false
@@ -16,19 +16,12 @@ accordion-padding = 20
 default-root-container-layout = 'accordion'
 default-root-container-orientation = 'vertical'
 
-# Hooks for sketchybar integration
+# Hook to refresh Übersicht workspace widget on workspace change
 exec-on-workspace-change = [
   '/bin/bash',
   '-c',
-  '/usr/local/bin/sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
+  'osascript -e "tell application id \"tracesOf.Uebersicht\" to refresh widget id \"aerospace-workspaces-jsx\""',
 ]
-
-# on-focus-changed = [
-#   'exec-and-forget /usr/local/bin/sketchybar --trigger aerospace_mode_changed',
-# ]
-# on-mode-changed = [
-#   'exec-and-forget /usr/local/bin/sketchybar --trigger aerospace_mode_changed',
-# ]
 
 # Key mapping
 [key-mapping]
@@ -38,9 +31,9 @@ preset = 'qwerty'
 [gaps]
 inner.horizontal = 10
 inner.vertical = 10
-outer.left = 10
+outer.left = 42       # 40px for Übersicht sidebar + 2px for JankyBorders
 outer.bottom = 10
-outer.top = 10        # 36px for SketchyBar + 8px padding
+outer.top = 10
 outer.right = 10
 
 # Main binding mode - basic window movements
@@ -63,7 +56,7 @@ ctrl-shift-equal = 'balance-sizes'
 ctrl-cmd-m = 'fullscreen'
 ctrl-cmd-enter = 'exec-and-forget open -n /Applications/WezTerm.app'
 ctrl-cmd-o = 'focus-back-and-forth'
-ctrl-cmd-slash = 'layout tiles accordion'
+ctrl-cmd-slash = ['layout tiles accordion', 'exec-and-forget osascript -e "tell application id \"tracesOf.Uebersicht\" to refresh widget id \"aerospace-workspaces-jsx\""']
 # ctrl-cmd-r = 'mode resize'
 # ctrl-cmd-s = 'mode service'
 ctrl-cmd-comma = ['reload-config', 'mode main']
@@ -85,4 +78,9 @@ ctrl-cmd-shift-5 = 'move-node-to-workspace 5'
 # Make Finder float
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
+run = "layout floating"
+
+# Make Übersicht float
+[[on-window-detected]]
+if.app-id = 'tracesOf.Uebersicht'
 run = "layout floating"
