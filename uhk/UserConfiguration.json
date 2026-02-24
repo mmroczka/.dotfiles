@@ -264,34 +264,34 @@
               "id": 0,
               "keyActions": [
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 36
+                  "keyActionType": "playMacro",
+                  "macroIndex": 97,
+                  "macroArguments": []
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 37
+                  "keyActionType": "playMacro",
+                  "macroIndex": 98,
+                  "macroArguments": []
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 38
+                  "keyActionType": "playMacro",
+                  "macroIndex": 99,
+                  "macroArguments": []
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 39
+                  "keyActionType": "playMacro",
+                  "macroIndex": 100,
+                  "macroArguments": []
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 45
+                  "keyActionType": "playMacro",
+                  "macroIndex": 101,
+                  "macroArguments": []
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 46
+                  "keyActionType": "playMacro",
+                  "macroIndex": 102,
+                  "macroArguments": []
                 },
                 {
                   "keyActionType": "keystroke",
@@ -449,29 +449,29 @@
                   "macroArguments": []
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 31
+                  "keyActionType": "playMacro",
+                  "macroIndex": 92,
+                  "macroArguments": []
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 32
+                  "keyActionType": "playMacro",
+                  "macroIndex": 93,
+                  "macroArguments": []
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 33
+                  "keyActionType": "playMacro",
+                  "macroIndex": 94,
+                  "macroArguments": []
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 34
+                  "keyActionType": "playMacro",
+                  "macroIndex": 95,
+                  "macroArguments": []
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 35
+                  "keyActionType": "playMacro",
+                  "macroIndex": 96,
+                  "macroArguments": []
                 },
                 {
                   "keyActionType": "keystroke",
@@ -1558,7 +1558,9 @@
                   "keyActionType": "none"
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "playMacro",
+                  "macroIndex": 89,
+                  "macroArguments": []
                 },
                 {
                   "keyActionType": "none"
@@ -4084,7 +4086,9 @@
               "id": 1,
               "keyActions": [
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "playMacro",
+                  "macroIndex": 91,
+                  "macroArguments": []
                 },
                 {
                   "keyActionType": "playMacro",
@@ -4120,7 +4124,9 @@
                   "keyActionType": "none"
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "playMacro",
+                  "macroIndex": 90,
+                  "macroArguments": []
                 },
                 {
                   "keyActionType": "playMacro",
@@ -4483,7 +4489,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 73,
+                  "macroIndex": 89,
                   "macroArguments": []
                 },
                 {
@@ -5743,7 +5749,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "ifShift {\n    holdKey 1\n    exit\n}\n\nifPlaytime 200 {\n    tapKey f1\n    exit\n}\n\nifInterrupted {\n    tapKey f1\n    exit\n}\n\nholdKey 1"
+          "command": "ifShift final holdKey 1\ndelayUntilRelease\nifPlaytime 200 final tapKey f1\ntapKey 1"
         }
       ]
     },
@@ -6161,7 +6167,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "setVar count ($count * 10 + 2)"
+          "command": "ifShift final suppressMods playMacro q\nsetVar count ($count * 10 + 2)"
         }
       ]
     },
@@ -6447,7 +6453,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "// Shift+V: exit V-LINE → NORMAL (suppressMods to release physical shift)\nifShift if ($mode == 3) suppressMods tapKey left\nifShift if ($mode == 3) setVar operator 0\nifShift if ($mode == 3) setVar count 0\nifShift if ($mode == 3) set backlight.constantRgb.rgb 255 255 255\nifShift if ($mode == 3) final setVar mode 0\n// Shift+V: VISUAL → V-LINE (deselect then select full line)\nifShift if ($mode == 2) suppressMods tapKey right\nifShift if ($mode == 2) suppressMods tapKey LG-left\nifShift if ($mode == 2) suppressMods tapKeySeq LSG-right\nifShift if ($mode == 2) setVar count 0\nifShift if ($mode == 2) set backlight.constantRgb.rgb 0 0 255\nifShift if ($mode == 2) final setVar mode 3\n// Shift+V: NORMAL → V-LINE (select current line)\nifShift suppressMods tapKey LG-left\nifShift suppressMods tapKeySeq LSG-right\nifShift setVar operator 0\nifShift setVar count 0\nifShift set backlight.constantRgb.rgb 0 0 255\nifShift final setVar mode 3\n// v: exit VISUAL → NORMAL\nif ($mode == 2) tapKey right\nif ($mode == 2) setVar operator 0\nif ($mode == 2) setVar count 0\nif ($mode == 2) set backlight.constantRgb.rgb 255 255 255\nif ($mode == 2) final setVar mode 0\n// v: V-LINE → VISUAL\nif ($mode == 3) setVar count 0\nif ($mode == 3) set backlight.constantRgb.rgb 255 0 0\nif ($mode == 3) final setVar mode 2\n// v: NORMAL → VISUAL\nsetVar mode 2\nsetVar operator 0\nsetVar count 0\nset backlight.constantRgb.rgb 255 0 0"
+          "command": "// Shift+V: exit V-LINE \u2192 NORMAL (suppressMods to release physical shift)\nifShift if ($mode == 3) suppressMods tapKey left\nifShift if ($mode == 3) setVar operator 0\nifShift if ($mode == 3) setVar count 0\nifShift if ($mode == 3) set backlight.constantRgb.rgb 255 255 255\nifShift if ($mode == 3) final setVar mode 0\n// Shift+V: VISUAL \u2192 V-LINE (deselect then select full line)\nifShift if ($mode == 2) suppressMods tapKey right\nifShift if ($mode == 2) suppressMods tapKey LG-left\nifShift if ($mode == 2) suppressMods tapKeySeq LSG-right\nifShift if ($mode == 2) setVar count 0\nifShift if ($mode == 2) set backlight.constantRgb.rgb 0 0 255\nifShift if ($mode == 2) final setVar mode 3\n// Shift+V: NORMAL \u2192 V-LINE (select current line)\nifShift suppressMods tapKey LG-left\nifShift suppressMods tapKeySeq LSG-right\nifShift setVar operator 0\nifShift setVar count 0\nifShift set backlight.constantRgb.rgb 0 0 255\nifShift final setVar mode 3\n// v: exit VISUAL \u2192 NORMAL\nif ($mode == 2) tapKey right\nif ($mode == 2) setVar operator 0\nif ($mode == 2) setVar count 0\nif ($mode == 2) set backlight.constantRgb.rgb 255 255 255\nif ($mode == 2) final setVar mode 0\n// v: V-LINE \u2192 VISUAL\nif ($mode == 3) setVar count 0\nif ($mode == 3) set backlight.constantRgb.rgb 255 0 0\nif ($mode == 3) final setVar mode 2\n// v: NORMAL \u2192 VISUAL\nsetVar mode 2\nsetVar operator 0\nsetVar count 0\nset backlight.constantRgb.rgb 255 0 0"
         }
       ]
     },
@@ -6579,7 +6585,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "noOp\n// Visual mode: yank selection, deselect\nif ($mode == 2 || $mode == 3) suppressMods tapKey LG-c\nif ($mode == 2 || $mode == 3) tapKey left\nif ($mode == 2 || $mode == 3) setVar count 0\nif ($mode == 2 || $mode == 3) set backlight.constantRgb.rgb 255 255 255\nif ($mode == 2 || $mode == 3) final setVar mode 0\n// Shift+Y → copy from cursor to end of line, keep cursor in place\nifShift suppressMods tapKeySeq LSG-right\nifShift suppressMods tapKey LG-c\nifShift delayUntil 50\nifShift final suppressMods tapKey left\n// yy → copy full line (second y press when operator already 2)\nif ($operator == 2) suppressMods tapKey LG-left\nif ($operator == 2) suppressMods tapKeySeq LSG-right\nif ($operator == 2) suppressMods tapKey LG-c\nif ($operator == 2) suppressMods tapKey LG-right\nif ($operator == 2) setVar count 0\nif ($operator == 2) final setVar operator 0\n// y + motion: set yank operator pending\nsetVar operator 2"
+          "command": "noOp\n// Visual mode: yank selection, deselect\nif ($mode == 2 || $mode == 3) suppressMods tapKey LG-c\nif ($mode == 2 || $mode == 3) tapKey left\nif ($mode == 2 || $mode == 3) setVar count 0\nif ($mode == 2 || $mode == 3) set backlight.constantRgb.rgb 255 255 255\nif ($mode == 2 || $mode == 3) final setVar mode 0\n// Shift+Y \u2192 copy from cursor to end of line, keep cursor in place\nifShift suppressMods tapKeySeq LSG-right\nifShift suppressMods tapKey LG-c\nifShift delayUntil 50\nifShift final suppressMods tapKey left\n// yy \u2192 copy full line (second y press when operator already 2)\nif ($operator == 2) suppressMods tapKey LG-left\nif ($operator == 2) suppressMods tapKeySeq LSG-right\nif ($operator == 2) suppressMods tapKey LG-c\nif ($operator == 2) suppressMods tapKey LG-right\nif ($operator == 2) setVar count 0\nif ($operator == 2) final setVar operator 0\n// y + motion: set yank operator pending\nsetVar operator 2"
         }
       ]
     },
@@ -6753,6 +6759,160 @@
         {
           "macroActionType": "command",
           "command": "if ($altHeld == 1) releaseKey LA-\nif ($altHeld == 1) setVar altHeld 0"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "[fn2] x",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "ifShift tapKey LCSG-x\nifNotShift tapKey LCG-x"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "[vim] q",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "stopRecording\nstartRecording q"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "[vim] stopRecord",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "stopRecording"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "[dual] 2 and F2",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "ifShift final holdKey 2\ndelayUntilRelease\nifPlaytime 200 final tapKey f2\ntapKey 2"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "[dual] 3 and F3",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "ifShift final holdKey 3\ndelayUntilRelease\nifPlaytime 200 final tapKey f3\ntapKey 3"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "[dual] 4 and F4",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "ifShift final holdKey 4\ndelayUntilRelease\nifPlaytime 200 final tapKey f4\ntapKey 4"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "[dual] 5 and F5",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "ifShift final holdKey 5\ndelayUntilRelease\nifPlaytime 200 final tapKey f5\ntapKey 5"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "[dual] 6 and F6",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "ifShift final holdKey 6\ndelayUntilRelease\nifPlaytime 200 final tapKey f6\ntapKey 6"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "[dual] 7 and F7",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "ifShift final holdKey 7\ndelayUntilRelease\nifPlaytime 200 final tapKey f7\ntapKey 7"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "[dual] 8 and F8",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "ifShift final holdKey 8\ndelayUntilRelease\nifPlaytime 200 final tapKey f8\ntapKey 8"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "[dual] 9 and F9",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "ifShift final holdKey 9\ndelayUntilRelease\nifPlaytime 200 final tapKey f9\ntapKey 9"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "[dual] 0 and F10",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "ifShift final holdKey 0\ndelayUntilRelease\nifPlaytime 200 final tapKey f10\ntapKey 0"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "[dual] - and F11",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "ifShift final holdKey minusAndUnderscore\ndelayUntilRelease\nifPlaytime 200 final tapKey f11\ntapKey minusAndUnderscore"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "[dual] = and F12",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "ifShift final holdKey equalAndPlus\ndelayUntilRelease\nifPlaytime 200 final tapKey f12\ntapKey equalAndPlus"
         }
       ]
     }
