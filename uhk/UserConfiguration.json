@@ -6062,7 +6062,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "ifNotInterrupted pressKey LC-\ntapKey tab\ndelayUntilRelease"
+          "command": "setVar altHeld 1\npressKey LA-\ndelayUntil 100\ntapKey q"
         }
       ]
     },
@@ -6742,6 +6742,17 @@
         {
           "macroActionType": "command",
           "command": "// < in visual mode: outdent selection\nifShift if ($mode == 2 || $mode == 3) final suppressMods tapKey LG-openingBracketAndOpeningBrace\n// << in normal mode: outdent line\nifShift ifGesture $thisKeyId final suppressMods tapKey LG-openingBracketAndOpeningBrace"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": false,
+      "name": "$onLayerChange base",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "if ($altHeld == 1) releaseKey LA-\nif ($altHeld == 1) setVar altHeld 0"
         }
       ]
     }
