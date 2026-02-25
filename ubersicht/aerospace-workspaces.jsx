@@ -3,7 +3,8 @@ export const command =
   'focused=$($A list-workspaces --focused); ' +
   'occupied=$($A list-windows --all --format "%{workspace}" | sort -u | tr "\\n" ","); ' +
   'layout=$($A list-windows --workspace focused --format "%{workspace-root-container-layout}" | head -1); ' +
-  'echo "$focused|$occupied|$layout"';
+  'maximized=$($A list-windows --focused --format "%{window-is-fullscreen}" 2>/dev/null); ' +
+  'echo "$focused|$occupied|$layout|$maximized"';
 
 export const refreshFrequency = 10000;
 
@@ -24,6 +25,7 @@ export const render = ({ output }) => {
   const occupied = (parts[1] || "").split(",").filter(Boolean).map(Number);
   const layout = (parts[2] || "").trim();
   const layoutLabel = layout.includes("accordion") ? "A" : layout.includes("tiles") ? "T" : "";
+  const isMaximized = (parts[3] || "").trim() === "true";
 
   const container = {
     position: "fixed",
@@ -61,8 +63,17 @@ export const render = ({ output }) => {
     marginTop: 8,
   };
 
+  const maximizedLabel = {
+    color: "#ff3333",
+    fontSize: 16,
+    fontFamily: "-apple-system, sans-serif",
+    fontWeight: 700,
+    marginBottom: 8,
+  };
+
   return (
     <div style={container}>
+      {isMaximized && <div style={maximizedLabel}>M</div>}
       {WORKSPACES.map((ws) => (
         <div key={ws} style={dot(ws === focused, occupied.includes(ws))} />
       ))}
