@@ -32,3 +32,5 @@
     ~/.config/sketchybar: sketchybar
     ~/.config/borders/bordersrc: borders/bordersrc
     ~/Library/Application Support/Übersicht/widgets/aerospace-workspaces.jsx: ubersicht/aerospace-workspaces.jsx
+    ~/.tmux.conf: tmux.conf
+    ~/.tmux/plugins/tpm: tpm
