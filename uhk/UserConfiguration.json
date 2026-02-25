@@ -329,9 +329,9 @@
                   "scancode": 47
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 48
+                  "keyActionType": "playMacro",
+                  "macroIndex": 103,
+                  "macroArguments": []
                 },
                 {
                   "keyActionType": "keystroke",
@@ -6913,6 +6913,17 @@
         {
           "macroActionType": "command",
           "command": "ifShift final holdKey equalAndPlus\ndelayUntilRelease\nifPlaytime 200 final tapKey f12\ntapKey equalAndPlus"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "[gesture] ] big-O notation",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "ifGesture $thisKeyId $thisKeyId final write 'O(n^3)'\nifGesture $thisKeyId final write 'O(n^2)'\nholdKey closingBracketAndClosingBrace"
         }
       ]
     }
