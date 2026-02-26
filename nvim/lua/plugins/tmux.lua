@@ -7,7 +7,7 @@ return {
       },
       navigation = {
         enable_default_keybindings = true,
-        cycle_navigation = true,
+        cycle_navigation = false,
       },
       resize = {
         enable_default_keybindings = true,
