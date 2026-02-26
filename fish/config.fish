@@ -49,6 +49,9 @@ if status is-interactive
     abbr j z
     abbr cd z
 
+    # TMUX
+    abbr -a tw "tmux new-session -A -s work"
+
     # EDIT QUICKLY WITH NVIM
     abbr -a vim nvim
     abbr -a valias "nvim ~/.dotfiles/aliases"
