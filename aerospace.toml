@@ -4,8 +4,8 @@ config-version = 2
 # Start AeroSpace at login
 start-at-login = true
 
-# Start JankyBorders with AeroSpace for active window highlighting
-after-startup-command = ['exec-and-forget borders active_color=0xffff3333 inactive_color=0xff494d64 width=5.0']
+# JankyBorders is managed via `brew services start borders`
+# It reads config from ~/.config/borders/bordersrc
 
 # Normalizations
 enable-normalization-flatten-containers = false
@@ -85,3 +85,25 @@ run = "layout floating"
 [[on-window-detected]]
 if.app-id = 'tracesOf.Uebersicht'
 run = "layout floating"
+
+# Send Akiflow to workspace 4
+[[on-window-detected]]
+if.app-id = 'com.akiflow.akiflow'
+run = 'move-node-to-workspace 4'
+
+# Send communication apps to workspace 5
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap'
+run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
+if.app-id = 'com.hnc.Discord'
+run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'
+run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
+if.app-id = 'com.superhuman.electron'
+run = 'move-node-to-workspace 5'

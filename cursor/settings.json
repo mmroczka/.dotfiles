@@ -1,0 +1,297 @@
+{
+  "autopep8.args": ["--indent-size=2", "--max-line-length=80", "--ignore=E402"],
+  "C_Cpp.codeAnalysis.clangTidy.args": [
+    "-checks=bugprone-*",
+    "-warnings-as-errors=*"
+  ],
+  "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
+    "bugprone-easily-swappable-parameters"
+  ],
+  "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+  "editor.accessibilitySupport": "off",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 12,
+  "editor.fontWeight": "500",
+  "editor.formatOnSave": true,
+  "editor.lineNumbers": "on",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.quickSuggestions": {
+    "comments": "on",
+    "strings": "on",
+    "other": "on"
+  },
+  "editor.rulers": [80],
+  "editor.snippetSuggestions": "bottom",
+  "editor.suggestSelection": "first",
+  "files.associations": {
+    "*.js": "javascript",
+    "limits": "cpp",
+    "stdexcept": "cpp"
+  },
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.path": "/usr/local/bin/git",
+  "java.format.settings.url": ".vscode/java-formatter.xml",
+  "java.format.settings.profile": "GoogleStyle",
+  "java.project.sourcePaths": ["."],
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "terminal.integrated.scrollback": 10000,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.zoomLevel": 2,
+  "workbench.sideBar.location": "right",
+  "terminal.external.osxExec": "WezTerm.App",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.formatOnSave": true,
+    "editor.rulers": [80]
+  },
+  "[java]": {
+    "editor.formatOnSave": true,
+    "editor.rulers": [80],
+    "editor.defaultFormatter": "redhat.java",
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.rulers": [80]
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.autopep8",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.rulers": [80]
+  },
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "better-comments.multilineComments": true,
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "//",
+      "color": "#474747",
+      "strikethrough": true,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    }
+  ],
+  "vim.leader": " ",
+  "vim.autoindent": true,
+  "vim.hlsearch": true,
+  "vim.ignorecase": true,
+  "vim.visualstar": true,
+  "vim.incsearch": true,
+  "vim.smartcase": true,
+  "vim.foldfix": true,
+  "vim.replaceWithRegister": true,
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "r", "n"],
+      "commands": [
+        {
+          "command": "editor.action.changeAll"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": [
+        {
+          "command": "editor.action.quickFix"
+        }
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["g", "s"],
+      "after": ["#"]
+    },
+    {
+      "before": ["g", "n"],
+      "commands": [
+        {
+          "command": "editor.action.showHover"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "t"],
+      "commands": [
+        {
+          "command": "workbench.action.tasks.reRunTask"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "r", "a"],
+      "commands": [
+        {
+          "command": "extension.arrowFunctionConverter"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": [
+        {
+          "command": "editor.action.quickFix"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "r", "p"],
+      "commands": [
+        {
+          "command": "workbench.action.debug.run"
+        }
+      ]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["z", "a"],
+      "commands": ["editor.toggleFold"]
+    },
+    {
+      "before": ["Z", "Z"],
+      "commands": [":wq"]
+    },
+    {
+      "before": ["Q", "Q"],
+      "commands": [":q!"]
+    },
+    {
+      "before": ["<leader>", "r", "n"],
+      "commands": [
+        {
+          "command": "editor.action.changeAll"
+        }
+      ]
+    }
+  ],
+  "cSpell.userWords": [
+    "AIRTABLE",
+    "Creds",
+    "dataclasses",
+    "ENOTEMPTY",
+    "excludenonbookhard",
+    "flexlayout",
+    "GCAL",
+    "includenonbookhard",
+    "inngest",
+    "inorder",
+    "javac",
+    "keepends",
+    "kruskal",
+    "Kruskal's",
+    "LEETCODE",
+    "Multimap",
+    "Multiset",
+    "Multisource",
+    "neondatabase",
+    "popleft",
+    "quickselect",
+    "snowprints",
+    "sourcepath",
+    "subarray",
+    "subarrays",
+    "subgrid",
+    "subsubfolder",
+    "tabset",
+    "topo"
+  ],
+  "scm.workingSets.enabled": true,
+  "yaml.schemas": {
+    "file:///Users/michaelmroczka/.cursor/extensions/atlassian.atlascode-4.0.8-universal/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "atlascode.jira.jqlList": [
+    {
+      "id": "2061d540-1e1b-4543-871a-d120ef100c18",
+      "enabled": true,
+      "name": "My interviewing Issues",
+      "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+      "siteId": "31640726-587a-4a48-a959-b3063b806700",
+      "monitor": true
+    }
+  ],
+  "atlascode.bitbucket.enabled": false,
+  "atlascode.helpExplorerEnabled": false,
+  "gitlens.ai.model": "gitkraken",
+  "gitlens.ai.gitkraken.model": "gemini:gemini-2.0-flash",
+  "terminal.integrated.fontFamily": "MesloLGL Nerd Font",
+  "terminal.integrated.fontLigatures.enabled": true,
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "specstory.cloudSync.enabled": "always",
+  "specstory.derivedRules.enabled": false,
+  "gitlens.ai.largePromptWarningThreshold": 60000,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "pieces.OS.launchOnStartup": "Yes",
+  "pieces.cloudCapabilities": "Blended",
+  "pieces.telemetry": true,
+  "git.openRepositoryInParentFolders": "never",
+  "cursorUsage.pollMinutes": 15,
+  "claudeCode.preferredLocation": "panel",
+  "claudeCode.selectedModel": "claude-opus-4-5-20251101",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "accessibility.signals.voiceRecordingStarted": {
+    "sound": "auto"
+  },
+  "accessibility.signals.codeActionTriggered": {
+    "sound": "off"
+  },
+  "accessibility.signals.progress": {
+    "sound": "off",
+    "announcement": "auto"
+  },
+  "markdown.mermaid.enabled": true
+}

@@ -1,0 +1,124 @@
+[
+  // panel nav
+  // {
+  //   "command": "workbench.action.focusPanel",
+  //   "key": "ctrl+' '", // focus panel
+  //   "when": "!panelFocus"
+  // },
+  // nvim move lines around with vim-move
+  {
+    "args": "<A-j>",
+    "command": "editor.action.moveLinesDownAction",
+    "key": "alt+j",
+    "when": "editorTextFocus"
+  },
+  {
+    "args": "<A-k>",
+    "command": "editor.action.moveLinesUpAction",
+    "key": "alt+k",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+cmd+g",
+    "command": "-workbench.action.terminal.findPrevious",
+    "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+  },
+  {
+    "key": "shift+cmd+g",
+    "command": "-workbench.action.terminal.openDetectedLink",
+    "when": "accessibleViewIsShown && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal'"
+  },
+  {
+    "key": "shift+cmd+g",
+    "command": "-planEditor.findPrevious",
+    "when": "markdownPlanEditorActive"
+  },
+  {
+    "key": "shift+cmd+g",
+    "command": "-editor.action.previousMatchFindAction",
+    "when": "activeEditorIsReviewChanges || editorFocus"
+  },
+  {
+    "key": "shift+cmd+s",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "-workbench.view.scm",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "shift+cmd+s",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "-workbench.view.scm",
+    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "shift+cmd+s",
+    "command": "-workbench.action.files.saveAs"
+  },
+  {
+    "key": "shift+cmd+s",
+    "command": "-workbench.action.files.saveLocalFile",
+    "when": "remoteFileDialogVisible"
+  },
+  {
+    "key": "shift+cmd+h",
+    "command": "-workbench.action.replaceInFiles"
+  },
+  {
+    "key": "shift+cmd+h",
+    "command": "workbench.view.extension.gitlensInspect"
+  },
+  {
+    "key": "shift+cmd+h",
+    "command": "gitlens.showCommitDetailsView"
+  },
+  {
+    "key": "shift+cmd+g",
+    "command": "workbench.view.extension.gitlens"
+},
+{
+    "key": "shift+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+        "text": "\u001b\r"
+    },
+    "when": "terminalFocus"
+},
+{
+  "key": "cmd+n",
+  "command": "workbench.action.terminal.new",
+  "when": "terminalFocus"
+},
+{
+  "key": "cmd+w",
+  "command": "workbench.action.terminal.kill",
+  "when": "terminalFocus"
+},
+{
+  "key": "cmd+shift+up",
+  "command": "workbench.action.terminal.resizePaneUp",
+  "when": "terminalFocus"
+},
+{
+  "key": "cmd+shift+down",
+  "command": "workbench.action.terminal.resizePaneDown",
+  "when": "terminalFocus"
+},
+{
+  "key": "cmd+shift+m",
+  "command": "workbench.action.toggleMaximizedPanel",
+  "when": "terminalFocus"
+}
+  // {
+  //   "command": "workbench.action.focusActiveEditorGroup",
+  //   "key": "ctrl+' ctrl+'",
+  //   "when": "panelFocus"
+  // },
+]
